@@ -43,6 +43,7 @@ namespace BrawlTCG.UnityApp
         public RectTransform DragLayer;
 
         GameObject _highlight;
+        ScrollRect _forwardScroll; // non-draggable cards inside a scroll view pass drags to it
         Image _glow, _ring;
         RectTransform _face;
         int _statusCount;
@@ -120,8 +121,13 @@ namespace BrawlTCG.UnityApp
         public void OnBeginDrag(PointerEventData eventData)
         {
             _dragging = false;
+            _forwardScroll = null;
             if (eventData.button != PointerEventData.InputButton.Left || CanDrag == null || !CanDrag(this) || DragLayer == null)
+            {
+                _forwardScroll = GetComponentInParent<ScrollRect>();
+                if (_forwardScroll != null) _forwardScroll.OnBeginDrag(eventData);
                 return;
+            }
             _dragging = true;
             _originalParent = transform.parent;
             _originalSibling = transform.GetSiblingIndex();
@@ -136,6 +142,7 @@ namespace BrawlTCG.UnityApp
 
         public void OnDrag(PointerEventData eventData)
         {
+            if (_forwardScroll != null) { _forwardScroll.OnDrag(eventData); return; }
             if (!_dragging) return;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(DragLayer, eventData.position, eventData.pressEventCamera, out Vector2 local);
             transform.localPosition = local + _grabOffset;
@@ -143,6 +150,12 @@ namespace BrawlTCG.UnityApp
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            if (_forwardScroll != null)
+            {
+                _forwardScroll.OnEndDrag(eventData);
+                _forwardScroll = null;
+                return;
+            }
             if (!_dragging) return;
             _dragging = false;
             _group.blocksRaycasts = true;
