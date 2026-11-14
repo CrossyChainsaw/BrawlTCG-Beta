@@ -39,9 +39,13 @@ namespace BrawlTCG.UnityApp
         /// <summary>Called with the screen position where the card was released.</summary>
         public Action<CardView, Vector2> Dropped;
         public Action<CardView> Clicked;
+        public Action<CardView> DragStarted, DragEnded;
         public RectTransform DragLayer;
 
         GameObject _highlight;
+        Image _glow, _ring;
+        RectTransform _face;
+        int _statusCount;
         CanvasGroup _group;
         bool _dragging;
         Transform _originalParent;
@@ -58,31 +62,52 @@ namespace BrawlTCG.UnityApp
             rt.localScale = new Vector3(scale, scale, 1);
             var view = rt.gameObject.AddComponent<CardView>();
             view.Card = card;
-            view.FaceUp = faceUp && !tapped && card != null;
+            view.FaceUp = faceUp && card != null;
             view._group = rt.gameObject.AddComponent<CanvasGroup>();
 
             // Highlight (targeting) sits behind the card.
             view._highlight = UI.Rect("Highlight", rt).gameObject;
             UI.Place((RectTransform)view._highlight.transform, -22, -22, W + 44, H + 44);
-            var glow = view._highlight.AddComponent<Image>();
-            glow.sprite = Theme.Soft;
-            glow.color = new Color(1f, 0.82f, 0.3f, 0.95f);
-            glow.raycastTarget = false;
-            var ring = Theme.RoundedPanel(rt, Theme.Gold, -4, -4, W + 8, H + 8, 13, "HighlightRing", outline: true);
-            ring.raycastTarget = false;
-            ring.transform.SetParent(view._highlight.transform, true);
+            view._glow = view._highlight.AddComponent<Image>();
+            view._glow.sprite = Theme.Soft;
+            view._glow.raycastTarget = false;
+            view._ring = Theme.RoundedPanel(rt, Theme.Gold, -4, -4, W + 8, H + 8, 13, "HighlightRing", outline: true);
+            view._ring.raycastTarget = false;
+            view._ring.transform.SetParent(view._highlight.transform, true);
             view._highlight.SetActive(false);
 
             var face = UI.Place(UI.Rect("Face", rt), 0, 0, FW, FH);
             face.localScale = new Vector3(W / FW, H / FH, 1);
-            if (view.FaceUp) CardArt.PaintFront(face, card, detailed: scale >= 1.3f);
+            view._face = face;
+            if (view.FaceUp) CardArt.PaintFront(face, card, detailed: scale >= 1.3f, tapped: tapped);
             else CardArt.PaintBack(face, tapped);
             return view;
         }
 
-        public void SetHighlight(bool on)
+        /// <summary>Gold targeting highlight.</summary>
+        public void SetHighlight(bool on) => SetGlow(on ? Theme.Gold : (Color?)null);
+
+        /// <summary>Coloured glow + ring around the card (null removes it).</summary>
+        public void SetGlow(Color? color, float strength = 0.95f)
         {
-            if (_highlight != null) _highlight.SetActive(on);
+            if (_highlight == null) return;
+            _highlight.SetActive(color != null);
+            if (color == null) return;
+            Color c = color.Value;
+            _glow.color = new Color(c.r, c.g, c.b, strength);
+            _ring.color = c;
+        }
+
+        /// <summary>Small status tag stacked from the bottom-right of the art window ("ATTACKED", "CAN'T ATTACK"...).</summary>
+        public void AddStatus(string text, Color background, Color textColor)
+        {
+            if (_face == null || !FaceUp) return;
+            float w = 24 + text.Length * 11;
+            float y = 78 + 190 - 40 - _statusCount * 36;
+            var tag = Theme.RoundedPanel(_face, background, 300 - 26 - w, y, w, 30, 15, "Status " + text);
+            tag.raycastTarget = false;
+            Theme.Label(tag.transform, text, 16, textColor, 0, 0, w, 30, TextAnchor.MiddleCenter, display: true);
+            _statusCount++;
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -103,6 +128,7 @@ namespace BrawlTCG.UnityApp
             _originalLocalPosition = transform.localPosition;
             transform.SetParent(DragLayer, true);
             transform.SetAsLastSibling();
+            DragStarted?.Invoke(this);
             _group.blocksRaycasts = false;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(DragLayer, eventData.position, eventData.pressEventCamera, out Vector2 local);
             _grabOffset = (Vector2)transform.localPosition - local;
@@ -124,6 +150,7 @@ namespace BrawlTCG.UnityApp
             transform.SetParent(_originalParent, false);
             transform.SetSiblingIndex(_originalSibling);
             transform.localPosition = _originalLocalPosition;
+            DragEnded?.Invoke(this);
             Dropped?.Invoke(this, eventData.position);
         }
     }
@@ -139,7 +166,7 @@ namespace BrawlTCG.UnityApp
 
         public static Color Accent(Element e) => Color.Lerp(CardStyle.FrameColor(e), Color.white, 0.35f);
 
-        public static void PaintFront(RectTransform face, Card card, bool detailed = true)
+        public static void PaintFront(RectTransform face, Card card, bool detailed = true, bool tapped = false)
         {
             Color elem = CardStyle.FrameColor(card.Element);
             Color rim = Color.Lerp(elem, Color.white, 0.18f);
@@ -172,6 +199,7 @@ namespace BrawlTCG.UnityApp
 
             if (card is LegendCard legend) PaintLegendFooter(face, legend, accent, detailed);
             else PaintTextBox(face, card, accent);
+            if (tapped) PaintTappedOverlay(face);
         }
 
         static void PaintArtWindow(RectTransform face, Card card, Color elem, Color accent, bool cover)
@@ -365,6 +393,25 @@ namespace BrawlTCG.UnityApp
             t.resizeTextForBestFit = true;
             t.resizeTextMinSize = 9;
             t.resizeTextMaxSize = 18;
+        }
+
+        /// <summary>Tapped legends stay readable: dimmed, with a diagonal TAPPED ribbon.</summary>
+        static void PaintTappedOverlay(RectTransform face)
+        {
+            // Everything is clipped to the card shape so the diagonal ribbon stays inside the frame.
+            var clip = Theme.RoundedPanel(face, Color.white, 0, 0, FW, FH, 22, "TappedClip");
+            clip.raycastTarget = false;
+            clip.gameObject.AddComponent<Mask>().showMaskGraphic = false;
+            Quiet(UI.Panel(clip.transform, new Color(0.02f, 0.03f, 0.1f, 0.55f), 0, 0, FW, FH, "TappedDim"));
+            var band = UI.Panel(clip.transform, new Color(0.05f, 0.06f, 0.16f, 0.92f), 0, 0, FW + 80, 62, "TappedBand");
+            band.raycastTarget = false;
+            band.rectTransform.pivot = new Vector2(0.5f, 0.5f);
+            band.rectTransform.anchoredPosition = new Vector2(FW / 2, -FH / 2 + 20);
+            band.rectTransform.localRotation = Quaternion.Euler(0, 0, 14);
+            Quiet(UI.Panel(band.transform, Theme.Gold, 0, 0, FW + 80, 3, "Top"));
+            Quiet(UI.Panel(band.transform, Theme.Gold, 0, 59, FW + 80, 3, "Bottom"));
+            var label = Theme.Label(band.transform, "TAPPED", 36, Theme.Gold, 0, 0, FW + 80, 62, TextAnchor.MiddleCenter, display: true);
+            UI.Stretch(label.rectTransform);
         }
 
         public static void PaintBack(RectTransform face, bool tapped)
