@@ -26,6 +26,7 @@ namespace BrawlTCG.UnityApp
         Canvas _canvas;
         RectTransform _screenRoot;
         RectTransform _toastLayer;
+        RectTransform _backdrop;
         Image _background;
         GameObject _current;
         readonly List<(GameObject go, float until)> _toasts = new List<(GameObject, float)>();
@@ -78,6 +79,7 @@ namespace BrawlTCG.UnityApp
             canvasGo.AddComponent<GraphicRaycaster>();
 
             _background = UI.FullPanel(canvasGo.transform, Color.black, "Background");
+            _backdrop = UI.Stretch(UI.Rect("Backdrop", canvasGo.transform));
 
             _screenRoot = UI.Rect("Screen", canvasGo.transform);
             _screenRoot.anchorMin = _screenRoot.anchorMax = new Vector2(0.5f, 0.5f);
@@ -91,12 +93,16 @@ namespace BrawlTCG.UnityApp
         T Show<T>(string name, Color background) where T : Component
         {
             if (_current != null) Destroy(_current);
+            UI.Clear(_backdrop);
             ClearToasts();
             _background.color = background;
             var rt = UI.Stretch(UI.Rect(name, _screenRoot));
             _current = rt.gameObject;
             return _current.AddComponent<T>();
         }
+
+        /// <summary>Full-canvas layer behind the 1920x1080 screen area (for backgrounds on any aspect ratio). Cleared on screen change.</summary>
+        public RectTransform Backdrop => _backdrop;
 
         public void ShowMenu() => Show<MenuScreen>("Menu", UI.MenuPink).Build(this);
 
@@ -114,13 +120,18 @@ namespace BrawlTCG.UnityApp
                 Destroy(_toasts[0].go);
                 _toasts.RemoveAt(0);
             }
-            var panel = UI.Panel(_toastLayer, new Color(0, 0, 0, 0.85f), 0, 0, 640, 48, "Toast");
+            var panel = Theme.RoundedPanel(_toastLayer, new Color32(10, 14, 34, 235), 0, 0, 640, 52, 14, "Toast");
             panel.raycastTarget = false;
             var rt = panel.rectTransform;
             rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 1);
             rt.pivot = new Vector2(0.5f, 1);
-            var t = UI.Label(panel.transform, message, 20, Color.white, 0, 0, 640, 48, TextAnchor.MiddleCenter, FontStyle.Bold, bestFit: true);
-            UI.Stretch(t.rectTransform, 8);
+            var outline = Theme.RoundedPanel(panel.transform, new Color(1, 1, 1, 0.12f), 0, 0, 640, 52, 14, "Outline", outline: true);
+            outline.raycastTarget = false;
+            var accent = Theme.RoundedPanel(panel.transform, Theme.Gold, 10, 14, 5, 24, 3, "Accent");
+            accent.raycastTarget = false;
+            var t = UI.Label(panel.transform, message, 19, Theme.Text, 0, 0, 640, 52, TextAnchor.MiddleCenter, FontStyle.Bold, bestFit: true);
+            UI.Stretch(t.rectTransform, 10);
+            t.rectTransform.offsetMin = new Vector2(26, 8);
             _toasts.Add((panel.gameObject, Time.unscaledTime + seconds));
             LayoutToasts();
         }
@@ -130,7 +141,7 @@ namespace BrawlTCG.UnityApp
             for (int i = 0; i < _toasts.Count; i++)
             {
                 var rt = (RectTransform)_toasts[i].go.transform;
-                rt.anchoredPosition = new Vector2(0, -90 - i * 54);
+                rt.anchoredPosition = new Vector2(0, -28 - i * 60);
             }
         }
 
