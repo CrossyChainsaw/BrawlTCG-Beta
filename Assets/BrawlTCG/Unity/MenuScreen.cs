@@ -241,7 +241,7 @@ namespace BrawlTCG.UnityApp
         void FillShowcase(LegendCard featured, LegendCard left, LegendCard right)
         {
             UI.Clear(_showcase);
-            Color element = CardStyle.CardColor(featured.Element);
+            Color element = CardStyle.FrameColor(featured.Element);
 
             var glow = UI.Panel(_showcase, new Color(element.r, element.g, element.b, 0.55f), 90, 20, 720, 720, "Glow");
             glow.sprite = Theme.Soft;

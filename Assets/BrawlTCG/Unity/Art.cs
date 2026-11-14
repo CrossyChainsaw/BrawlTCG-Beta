@@ -21,6 +21,20 @@ namespace BrawlTCG.UnityApp
         }
 
         public static Texture2D CardBack => Get("BrawlLogo");
+
+        static readonly Dictionary<Weapon, Texture2D> WeaponCache = new Dictionary<Weapon, Texture2D>();
+
+        /// <summary>White weapon glyph (tint it), or null for Weapon.Any.</summary>
+        public static Texture2D Weapon(Weapon weapon)
+        {
+            if (weapon == Core.Weapon.Any) return null;
+            if (!WeaponCache.TryGetValue(weapon, out Texture2D tex))
+            {
+                tex = Resources.Load<Texture2D>("BrawlTCG/Icons/Weapon_" + weapon);
+                WeaponCache[weapon] = tex;
+            }
+            return tex;
+        }
     }
 
     public static class CardStyle
@@ -36,6 +50,22 @@ namespace BrawlTCG.UnityApp
                 case Element.Shadow: return new Color32(30, 30, 30, 255);
                 case Element.Wild: return new Color32(160, 82, 45, 255);    // Sienna
                 case Element.Arctic: return new Color32(224, 255, 255, 255); // LightCyan
+                default: return Color.gray;
+            }
+        }
+
+        /// <summary>Saturated element colour used for the polished card frames.</summary>
+        public static Color FrameColor(Element e)
+        {
+            switch (e)
+            {
+                case Element.Fire: return new Color32(222, 78, 40, 255);
+                case Element.Magic: return new Color32(160, 84, 232, 255);
+                case Element.Nature: return new Color32(40, 176, 116, 255);
+                case Element.Cosmic: return new Color32(70, 110, 240, 255);
+                case Element.Arctic: return new Color32(90, 196, 238, 255);
+                case Element.Wild: return new Color32(206, 134, 58, 255);
+                case Element.Shadow: return new Color32(122, 102, 158, 255);
                 default: return Color.gray;
             }
         }
