@@ -41,6 +41,42 @@ namespace BrawlTCG.UnityApp
         /// <summary>Thin circle with a gap, used as a loading spinner.</summary>
         public static Sprite Ring => _ring ??= MakeRing();
 
+        static Sprite _heart;
+        /// <summary>Anti-aliased heart shape (white, tint it).</summary>
+        public static Sprite Heart => _heart ??= MakeHeart();
+
+        static Sprite MakeHeart()
+        {
+            const int size = 128, ss = 4;
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp };
+            var px = new Color32[size * size];
+            for (int py = 0; py < size; py++)
+            for (int pxl = 0; pxl < size; pxl++)
+            {
+                int inside = 0;
+                for (int sy = 0; sy < ss; sy++)
+                for (int sx = 0; sx < ss; sx++)
+                {
+                    float u = (pxl + (sx + 0.5f) / ss) / size, v = (py + (sy + 0.5f) / ss) / size;
+                    float x = (u - 0.5f) * 2.45f, y = v * 2.45f - 1.12f;
+                    float a = x * x + y * y - 1;
+                    if (a * a * a - x * x * y * y * y <= 0) inside++;
+                }
+                px[py * size + pxl] = new Color32(255, 255, 255, (byte)(inside * 255 / (ss * ss)));
+            }
+            tex.SetPixels32(px);
+            tex.Apply();
+            return Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f));
+        }
+
+        public static Outline AddOutline(Graphic g, float size = 2, float alpha = 0.85f)
+        {
+            var o = g.gameObject.AddComponent<Outline>();
+            o.effectColor = new Color(0, 0, 0, alpha);
+            o.effectDistance = new Vector2(size, -size);
+            return o;
+        }
+
         const int Radius = 24;
 
         static Sprite MakeRounded(bool outline)

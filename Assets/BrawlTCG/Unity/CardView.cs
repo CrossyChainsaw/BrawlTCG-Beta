@@ -134,8 +134,6 @@ namespace BrawlTCG.UnityApp
         const float FW = 300, FH = 400;
 
         static readonly Color GemFill = new Color32(58, 46, 150, 255);
-        static readonly Color AtkColor = new Color32(240, 150, 40, 255);
-        static readonly Color HpColor = new Color32(214, 48, 64, 255);
         static readonly Color Buff = new Color32(140, 255, 160, 255);
         static readonly Color Debuff = new Color32(255, 150, 150, 255);
 
@@ -247,49 +245,82 @@ namespace BrawlTCG.UnityApp
             label.resizeTextMaxSize = 16;
         }
 
+        static readonly Color Damaged = new Color32(255, 214, 120, 255);
+
+        static Color AtkNumberColor(LegendCard l, Color normal) =>
+            l.Power > l.PrintedPower ? Buff : l.Power < l.PrintedPower ? Debuff : normal;
+
+        static Color HpNumberColor(LegendCard l, Color normal) =>
+            l.CurrentHP < l.BaseHealth ? Damaged : l.BaseHealth > l.PrintedHealth ? Buff : normal;
+
+        /// <summary>Legend footer: weapon icons, attack names (large cards) and the ATK / HP stat bar.</summary>
         static void PaintLegendFooter(RectTransform face, LegendCard legend, Color accent, bool detailed)
         {
-            // Weapon chips (bigger and centred when the attack line is left out at board size)
-            float chip = detailed ? 46 : 58;
-            float chipY = detailed ? 294 : 310;
+            WeaponChipsAndAttacks(face, legend, accent, detailed, 38, 286, 50, 292, new Rect(24, 326, FW - 48, 20));
+            PaintStatBar(face, legend, accent);
+        }
+
+        static void WeaponChipsAndAttacks(RectTransform face, LegendCard legend, Color accent, bool detailed,
+            float chipDetailed, float chipYDetailed, float chipCompact, float chipYCompact, Rect attackBox)
+        {
+            float chip = detailed ? chipDetailed : chipCompact;
+            float chipY = detailed ? chipYDetailed : chipYCompact;
             WeaponChip(face, legend.PrimaryWeapon, FW / 2 - chip - 6, chipY, chip, accent);
             WeaponChip(face, legend.SecondaryWeapon, FW / 2 + 6, chipY, chip, accent);
 
             // Attack names (only when the card is shown large enough to read them)
-            if (detailed)
-            {
+            if (!detailed) return;
             string attacks = legend.Attacks.Count == 0 ? "No attacks" : string.Join("  ·  ", legend.Attacks.Select(a => a.Name));
-            var atkText = Theme.Label(face, attacks, 15, Theme.TextDim, 90, 344, FW - 180, 46, TextAnchor.MiddleCenter);
+            var atkText = Theme.Label(face, attacks, 15, Theme.TextDim, attackBox.x, attackBox.y, attackBox.width, attackBox.height, TextAnchor.MiddleCenter);
             atkText.verticalOverflow = VerticalWrapMode.Truncate;
             atkText.resizeTextForBestFit = true;
             atkText.resizeTextMinSize = 9;
             atkText.resizeTextMaxSize = 15;
-            }
-
-            // ATK and HP badges
-            Color atkNumber = legend.Power > legend.PrintedPower ? Buff : legend.Power < legend.PrintedPower ? Debuff : Theme.Ink;
-            StatBadge(face, "ATK", legend.Power.ToString(), 12, FH - 84, AtkColor, Theme.Ink, atkNumber);
-
-            Color hpNumber = legend.CurrentHP < legend.BaseHealth ? new Color32(255, 214, 120, 255)
-                : legend.BaseHealth > legend.PrintedHealth ? Buff : Color.white;
-            string hpLabel = legend.CurrentHP < legend.BaseHealth ? $"HP /{legend.BaseHealth}" : "HP";
-            StatBadge(face, hpLabel, legend.CurrentHP.ToString(), FW - 12 - 76, FH - 84, HpColor, Color.white, hpNumber);
         }
 
-        static void StatBadge(RectTransform face, string label, string value, float x, float y, Color color, Color labelColor, Color valueColor)
+        /// <summary>ATK on the left, HP on the right; the red half drains as the legend takes damage.</summary>
+        static void PaintStatBar(RectTransform face, LegendCard legend, Color accent)
         {
-            var badge = Theme.RoundedPanel(face, color, x, y, 76, 72, 18, "Stat " + label);
-            badge.raycastTarget = false;
-            var clip = Theme.RoundedPanel(badge.transform, Color.white, 0, 0, 76, 72, 18, "Clip");
+            const float bx = 16, by = FH - 54, bw = FW - 32, bh = 40, half = (FW - 32) / 2;
+            var bar = Theme.RoundedPanel(face, new Color(0, 0, 0, 0.55f), bx, by, bw, bh, 14, "StatBar");
+            bar.raycastTarget = false;
+            var clip = Theme.RoundedPanel(bar.transform, Color.white, 0, 0, bw, bh, 14, "Clip");
             clip.raycastTarget = false;
             clip.gameObject.AddComponent<Mask>().showMaskGraphic = false;
-            var shine = UI.Panel(clip.transform, Color.white, 0, 0, 76, 36, "Shine");
-            shine.sprite = Theme.Gradient(false, 0f, 0.3f);
-            shine.raycastTarget = false;
-            Quiet(Theme.RoundedPanel(badge.transform, new Color(1, 1, 1, 0.45f), 0, 0, 76, 72, 18, "Line", outline: true));
-            Theme.Label(badge.transform, label, 13, labelColor, 0, 6, 76, 16, TextAnchor.MiddleCenter, display: true);
-            var number = Theme.Label(badge.transform, value, 38, valueColor, 0, 20, 76, 48, TextAnchor.MiddleCenter, display: true);
-            if (valueColor == Color.white || valueColor == Buff || valueColor == Debuff) Theme.AddShadow(number, 2, 0.6f);
+
+            // ATK half: warm gradient
+            var atkFill = UI.Panel(clip.transform, new Color32(226, 112, 28, 255), 0, 0, half, bh, "AtkFill");
+            atkFill.sprite = Theme.Gradient(true, 0.75f, 0.15f);
+            atkFill.raycastTarget = false;
+
+            // HP half: red fill that drains with damage
+            float ratio = legend.BaseHealth > 0 ? Mathf.Clamp01((float)legend.CurrentHP / legend.BaseHealth) : 0;
+            var hpTrack = UI.Panel(clip.transform, new Color(0.5f, 0.05f, 0.1f, 0.35f), half, 0, half, bh, "HpTrack");
+            hpTrack.raycastTarget = false;
+            var hpFill = UI.Panel(clip.transform, new Color32(214, 40, 62, 255), half, 0, half * ratio, bh, "HpFill");
+            hpFill.sprite = Theme.Gradient(true, 0.85f, 0.55f);
+            hpFill.raycastTarget = false;
+            var gloss = UI.Panel(clip.transform, Color.white, 0, 0, bw, bh / 2, "Gloss");
+            gloss.sprite = Theme.Gradient(false, 0f, 0.22f);
+            gloss.raycastTarget = false;
+            Quiet(UI.Panel(bar.transform, new Color(1, 1, 1, 0.35f), half - 1, 6, 2, bh - 12, "Divider"));
+            Quiet(Theme.RoundedPanel(bar.transform, new Color(accent.r, accent.g, accent.b, 0.8f), 0, 0, bw, bh, 14, "Line", outline: true));
+
+            // ATK content
+            Texture2D sword = Art.Weapon(Weapon.Sword);
+            if (sword != null) UI.Picture(bar.transform, sword, 12, 7, 26, 26, cover: false).color = Color.white;
+            var atk = Theme.Label(bar.transform, legend.Power.ToString(), 32, AtkNumberColor(legend, Color.white), 44, 0, 52, bh, TextAnchor.MiddleLeft, display: true);
+            Theme.AddOutline(atk, 1.5f, 0.6f);
+            Theme.Label(bar.transform, "ATK", 14, new Color(1, 1, 1, 0.75f), half - 46, 0, 40, bh, TextAnchor.MiddleRight, display: true);
+
+            // HP content
+            var heart = UI.Panel(bar.transform, Color.white, half + 12, 8, 26, 24, "Heart");
+            heart.sprite = Theme.Heart;
+            heart.raycastTarget = false;
+            bool hurt = legend.CurrentHP < legend.BaseHealth;
+            var hp = Theme.Label(bar.transform, legend.CurrentHP.ToString(), 32, HpNumberColor(legend, Color.white), half + 44, 0, 52, bh, TextAnchor.MiddleLeft, display: true);
+            Theme.AddOutline(hp, 1.5f, 0.6f);
+            Theme.Label(bar.transform, hurt ? "/" + legend.BaseHealth : "HP", hurt ? 18 : 14, new Color(1, 1, 1, 0.8f), bw - 56, 0, 46, bh, TextAnchor.MiddleRight, display: true);
         }
 
         static void WeaponChip(RectTransform face, Weapon weapon, float x, float y, float size, Color accent)
