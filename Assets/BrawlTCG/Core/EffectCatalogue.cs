@@ -117,7 +117,7 @@ namespace BrawlTCG.Core
             (target, card, game, played) => DisableNonCosmicAttacks(game));
 
         public static readonly Effect SilentGalaxy_WhilePlay = new Effect(
-            "Only Cosmic Legends can Attack",
+            "Only Cosmic legends can deal damage",
             (target, card, game, played) =>
             {
                 if (target is LegendCard legend && legend.Element != Element.Cosmic)

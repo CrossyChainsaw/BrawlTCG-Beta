@@ -390,7 +390,7 @@ namespace BrawlTCG.UnityApp
                     view.SetDimmed(true);
                     view.AddStatus("ATTACKED", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.Text);
                 }
-                else if (!legend.CanAttack) view.AddStatus("CAN'T ATTACK", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
+                else if (!legend.CanAttack) view.AddStatus("NO STRIKES", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
 
                 if (Targeting && IsValidAttackTarget(p, legend)) view.SetHighlight(true);
                 else if (legend == _targetAttacker) view.SetGlow(Color.white, 0.6f);
@@ -997,7 +997,7 @@ namespace BrawlTCG.UnityApp
         {
             if (legend.IsTapped) yield return "TAPPED  ·  skips its next attack";
             if (legend.IsBurned) yield return "BURNED  ·  -1 HP each turn";
-            if (!legend.CanAttack) yield return "CAN'T ATTACK RIGHT NOW";
+            if (!legend.CanAttack) yield return "SILENT GALAXY  ·  can't deal damage";
             if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer) yield return "ALREADY ATTACKED THIS TURN";
         }
 
@@ -1035,6 +1035,7 @@ namespace BrawlTCG.UnityApp
             var name = Theme.Label(rt, attack.Name, 22, new Color(1, 1, 1, alpha), ix + 6, 8, w - ix - 120, 30, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
             var tags = new List<string>();
+            if (attack.Kind != AttackKind.Strike) tags.Add(attack.Kind.ToString().ToUpperInvariant());
             if (attack.InstaEffect) tags.Add("INSTANT");
             if (attack.MultiHit) tags.Add("HITS ALL ENEMIES");
             if (attack.FriendlyFire) tags.Add("TARGETS YOUR LEGEND");
@@ -1053,7 +1054,7 @@ namespace BrawlTCG.UnityApp
             string damage;
             string damageSub = "DMG";
             if (attack.OneHitKO) { damage = "KO"; damageSub = ""; }
-            else if (attack.AttackModifier <= -1000) { damage = "—"; damageSub = "EFFECT"; }
+            else if (attack.Kind != AttackKind.Strike) { damage = "—"; damageSub = attack.Kind.ToString().ToUpperInvariant(); }
             else
             {
                 int baseDamage = Attack.CalculateBaseDamage(legend, attack);

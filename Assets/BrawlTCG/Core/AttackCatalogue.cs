@@ -62,7 +62,8 @@ namespace BrawlTCG.Core
 
         // ───────────── Tap out ─────────────
         public static readonly Attack Any_BlowAKiss = new Attack("Blow a Kiss", Status, Weapon.Any, 2,
-            (a, t, atk, g) => EffectCatalogue.TapLegendCard(t));
+            (a, t, atk, g) => EffectCatalogue.TapLegendCard(t),
+            kind: AttackKind.Hex);
         public static readonly Attack Any_Freeze = new Attack("Freeze", 0, Weapon.Any, 1,
             (a, t, atk, g) =>
             {
@@ -72,15 +73,20 @@ namespace BrawlTCG.Core
 
         // ───────────── Insta effects ─────────────
         public static readonly Attack Any_BurnForThreeCard = new Attack("Draw Three Cards", Status, Weapon.Any, 1,
-            (a, t, atk, g) => g.DrawCards(g.ActivePlayer, 3), weaponOneBurnAmount: 1, instaEffect: true);
+            (a, t, atk, g) => g.DrawCards(g.ActivePlayer, 3), weaponOneBurnAmount: 1, instaEffect: true,
+            kind: AttackKind.Draw);
         public static readonly Attack Any_CraftFireCard = new Attack("Craft Fire Card", Status, Weapon.Any, 1,
-            (a, t, atk, g) => g.GenerateRandomCards(1, Element.Fire), instaEffect: true);
+            (a, t, atk, g) => g.GenerateRandomCards(1, Element.Fire), instaEffect: true,
+            kind: AttackKind.Craft);
         public static readonly Attack Any_CraftCosmicCard = new Attack("Craft Cosmic Card", Status, Weapon.Any, 1,
-            (a, t, atk, g) => g.GenerateRandomCards(1, Element.Cosmic), instaEffect: true);
+            (a, t, atk, g) => g.GenerateRandomCards(1, Element.Cosmic), instaEffect: true,
+            kind: AttackKind.Craft);
         public static readonly Attack Any_CraftBattleCard = new Attack("Craft Battle Card", Status, Weapon.Any, 1,
-            (a, t, atk, g) => g.GenerateRandomCards(1, type: CardType.Battle), instaEffect: true);
+            (a, t, atk, g) => g.GenerateRandomCards(1, type: CardType.Battle), instaEffect: true,
+            kind: AttackKind.Craft);
         public static readonly Attack Any_GenerateAndPlayMatrix = new Attack("Set stage to Matrix", Status, Weapon.Any, 1,
-            (a, t, atk, g) => g.GenerateAndPlayStage(EffectCatalogue.MatrixId), instaEffect: true);
+            (a, t, atk, g) => g.GenerateAndPlayStage(EffectCatalogue.MatrixId), instaEffect: true,
+            kind: AttackKind.Set);
 
         // ───────────── Signature attacks ─────────────
         public static readonly Attack Arcadia_PinkRoses = new Attack("Pink Roses", 4, Weapon.Spear, 1, Default,
@@ -88,28 +94,35 @@ namespace BrawlTCG.Core
         public static readonly Attack Artemis_IronLady_MeltDown = new Attack("Meltdown", 7, Weapon.Scythe, 1, Default,
             weaponOneBurnAmount: 1, weaponTwo: Weapon.RocketLance, weaponTwoAmount: 1, weaponTwoBurnAmount: 1);
         public static readonly Attack Enchantress_CursePower = new Attack("Curse Att by 3", Status, Weapon.Any, 1,
-            (a, t, atk, g) => ModifyStat(t, Stat.Power, -3), weaponOneBurnAmount: 1);
+            (a, t, atk, g) => ModifyStat(t, Stat.Power, -3), weaponOneBurnAmount: 1,
+            kind: AttackKind.Hex);
         public static readonly Attack Enchantress_CurseHealth = new Attack("Curse HP by 4", Status, Weapon.Any, 1,
-            (a, t, atk, g) => ModifyStat(t, Stat.Health, -4), weaponOneBurnAmount: 1);
+            (a, t, atk, g) => ModifyStat(t, Stat.Health, -4), weaponOneBurnAmount: 1,
+            kind: AttackKind.Hex);
         public static readonly Attack Enchantress_EnchantPower = new Attack("Enchant Att by 3", Status, Weapon.Any, 1,
-            (a, t, atk, g) => ModifyStat(t, Stat.Power, 3), weaponOneBurnAmount: 1, friendlyFire: true);
+            (a, t, atk, g) => ModifyStat(t, Stat.Power, 3), weaponOneBurnAmount: 1, friendlyFire: true,
+            kind: AttackKind.Boost);
         public static readonly Attack Enchantress_EnchantHealth = new Attack("Enchant HP by 4", Status, Weapon.Any, 1,
-            (a, t, atk, g) => ModifyStat(t, Stat.Health, 4), weaponOneBurnAmount: 1, friendlyFire: true);
+            (a, t, atk, g) => ModifyStat(t, Stat.Health, 4), weaponOneBurnAmount: 1, friendlyFire: true,
+            kind: AttackKind.Boost);
         public static readonly Attack DeathCap_Storm = new Attack("Storm", 0, Weapon.Orb, 3, Default,
             weaponOneBurnAmount: 3, multiHit: true);
         public static readonly Attack Heatblast_Burn = new Attack("Burn", 0, Weapon.Blasters, 1,
             (a, t, atk, g) => DefaultAttack(a, t, atk, burn: true), weaponOneBurnAmount: 1);
         public static readonly Attack MasterThief_GrabBomb = new Attack("Craft Bouncy Bomb", Status, Weapon.Gauntlets, 1,
-            (a, t, atk, g) => g.GenerateCard(500), instaEffect: true);
+            (a, t, atk, g) => g.GenerateCard(500), instaEffect: true,
+            kind: AttackKind.Craft);
         public static readonly Attack PlagueKnight_GrabHealingPotion = new Attack("Craft Vial of Crows", Status, Weapon.Gauntlets, 1,
-            (a, t, atk, g) => g.GenerateCard(501), instaEffect: true);
+            (a, t, atk, g) => g.GenerateCard(501), instaEffect: true,
+            kind: AttackKind.Craft);
         public static readonly Attack Yumiko_GrabOrbs = new Attack("Craft 3 Orbs", Status, Weapon.Any, 1,
             (a, t, atk, g) =>
             {
                 g.GenerateCard(504);
                 g.GenerateCard(504);
                 g.GenerateCard(504);
-            }, instaEffect: true);
+            }, instaEffect: true,
+            kind: AttackKind.Craft);
         public static readonly Attack WuShang_DownSig = new Attack("Gauntlet Dsig", -2, Weapon.Gauntlets, 2, Default, multiHit: true);
         public static readonly Attack NinjaSpirit_PhantomSlash = new Attack("Phantom Slash", 0, Weapon.Sword, 0, Default);
         public static readonly Attack ForestSpirit_Explode = new Attack("Explode", 0, Weapon.Any, 0,
@@ -123,14 +136,18 @@ namespace BrawlTCG.Core
             {
                 if (t is LegendCard legend) legend.GainHealth(a.Power);
                 SelfDestruct(a);
-            }, friendlyFire: true);
+            }, friendlyFire: true,
+            kind: AttackKind.Boost);
         public static readonly Attack Jiro_SpawnAndPlayNinjaSpirit = new Attack("Summon Ninja Spirit", Status, Weapon.Sword, 1,
             (a, t, atk, g) => g.GenerateAndPlayLegend(5003), instaEffect: true,
-            precondition: (g, legend) => legend.Owner.PlayingField.Count >= Game.MaxLegendsOnField ? $"Already {Game.MaxLegendsOnField} Legends" : null);
+            precondition: (g, legend) => legend.Owner.PlayingField.Count >= Game.MaxLegendsOnField ? $"Already {Game.MaxLegendsOnField} Legends" : null,
+            kind: AttackKind.Summon);
         public static readonly Attack Ada_SpawnAndPlayAtlantis = new Attack("Set stage to Atlantis", Status, Weapon.Blasters, 1,
             (a, t, atk, g) => g.GenerateAndPlayStage(EffectCatalogue.AtlantisId), instaEffect: true,
-            weaponTwo: Weapon.Spear, weaponTwoAmount: 1);
+            weaponTwo: Weapon.Spear, weaponTwoAmount: 1,
+            kind: AttackKind.Set);
         public static readonly Attack Seven_CraftWeapons = new Attack("Craft 4 Random Weapons", Status, Weapon.Spear, 1,
-            (a, t, atk, g) => g.GenerateRandomWeaponCards(4), weaponOneBurnAmount: 1, instaEffect: true);
+            (a, t, atk, g) => g.GenerateRandomWeaponCards(4), weaponOneBurnAmount: 1, instaEffect: true,
+            kind: AttackKind.Craft);
     }
 }

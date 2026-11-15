@@ -368,7 +368,8 @@ namespace BrawlTCG.Core
             if (!legend.OnPlayingField) return "This legend is not on the playing field.";
             if (legend.IsTapped) return "This legend is tapped.";
             if (legend.AttackedThisTurn) return "This legend already attacked this turn";
-            if (!legend.CanAttack) return "This legend cannot attack right now";
+            // Silent Galaxy turns CanAttack off for non-Cosmic legends: they can't deal damage, but can still craft, set, summon...
+            if (!legend.CanAttack && attack.Kind == AttackKind.Strike) return "Silent Galaxy: only Cosmic legends can deal damage";
             if (!attack.MeetsWeaponRequirements(legend)) return "This legend does not have the required weapons.";
             string pre = attack.Precondition?.Invoke(this, legend);
             if (pre != null) return pre;

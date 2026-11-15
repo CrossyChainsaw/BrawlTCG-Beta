@@ -110,7 +110,7 @@ namespace BrawlTCG.UnityApp
             dim.raycastTarget = false;
         }
 
-        /// <summary>Small status tag stacked from the bottom-right of the art window ("ATTACKED", "CAN'T ATTACK"...).</summary>
+        /// <summary>Small status tag stacked from the bottom-right of the art window ("ATTACKED", "NO STRIKES"...).</summary>
         public void AddStatus(string text, Color background, Color textColor)
         {
             if (_face == null || !FaceUp) return;
