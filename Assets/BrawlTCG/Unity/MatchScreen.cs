@@ -591,9 +591,12 @@ namespace BrawlTCG.UnityApp
         void HandBadge(int count, float y)
         {
             const float w = 132, h = 30;
-            var pill = Quiet(Theme.RoundedPanel(_board, new Color(0.03f, 0.04f, 0.12f, 0.92f), 960 - w / 2, y, w, h, 15, "HandCount"));
-            Quiet(Theme.RoundedPanel(pill.transform, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.55f), 0, 0, w, h, 15, "Line", outline: true));
-            var label = Theme.Label(pill.transform, count == 1 ? "1 CARD" : $"{count} CARDS", 16, Theme.Gold, 0, 0, w, h, TextAnchor.MiddleCenter, display: true);
+            bool full = count >= 15; // a crowded hand turns the counter red
+            Color accent = full ? new Color32(255, 96, 96, 255) : Theme.Gold;
+            Color fill = full ? new Color(0.32f, 0.04f, 0.07f, 0.95f) : new Color(0.03f, 0.04f, 0.12f, 0.92f);
+            var pill = Quiet(Theme.RoundedPanel(_board, fill, 960 - w / 2, y, w, h, 15, "HandCount"));
+            Quiet(Theme.RoundedPanel(pill.transform, new Color(accent.r, accent.g, accent.b, full ? 0.9f : 0.55f), 0, 0, w, h, 15, "Line", outline: true));
+            var label = Theme.Label(pill.transform, count == 1 ? "1 CARD" : $"{count} CARDS", 16, full ? new Color32(255, 200, 200, 255) : Theme.Gold, 0, 0, w, h, TextAnchor.MiddleCenter, display: true);
             label.raycastTarget = false;
         }
 
