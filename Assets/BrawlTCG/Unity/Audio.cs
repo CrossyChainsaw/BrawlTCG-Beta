@@ -62,7 +62,7 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>Plays a cue. The same cue is not restarted within <paramref name="minGap"/> seconds (avoids stacking).</summary>
-        public static void Play(string cue, float volume = 1, float pitchJitter = 0.05f, float minGap = 0.04f)
+        public static void Play(string cue, float volume = 1, float pitchJitter = 0.05f, float minGap = 0.04f, float pitch = 1)
         {
             AudioClip[] clips = Clips(cue);
             if (clips.Length == 0) return;
@@ -74,7 +74,7 @@ namespace BrawlTCG.UnityApp
             _next = (_next + 1) % _pool.Length;
             src.clip = clips[UnityEngine.Random.Range(0, clips.Length)];
             src.volume = Volume * volume;
-            src.pitch = 1 + UnityEngine.Random.Range(-pitchJitter, pitchJitter);
+            src.pitch = pitch + UnityEngine.Random.Range(-pitchJitter, pitchJitter);
             src.Play();
         }
     }

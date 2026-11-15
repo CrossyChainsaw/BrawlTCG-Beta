@@ -506,7 +506,7 @@ namespace BrawlTCG.UnityApp
             switch (card)
             {
                 case LegendCard _:
-                    Sfx.Play("land_legend");
+                    Sfx.Play("land_legend", 0.45f, 0.03f, 0.04f, 0.88f); // the fitting thud, softened and a little deeper
                     Fx.Play(_fx, "Ring", at + new Vector2(0, 70), 420, 0, 30, tint);
                     Fx.Shockwave(_fx, at, tint, 460);
                     Fx.Glow(_fx, at, new Color(tint.r, tint.g, tint.b, 0.8f), 380, 0, 0.45f);
@@ -587,7 +587,7 @@ namespace BrawlTCG.UnityApp
             Vector2 at = AvatarCenter(loser.Index);
             Color white = new Color(1, 1, 1, 0.3f);
             Fx.Play(_fx, "KoMagic", at + new Vector2(0, -40), 520, delay, 30);
-            Sound("ko", delay + 0.1f, 0.8f);
+            Sound("game_over", delay + 0.1f, 0.9f);
             Fx.Play(_fx, "Explosion", at, 560, delay + 0.12f, 30);
             Fx.Flash(_top, white, 0.6f, delay + 0.12f);
             Fx.Shockwave(_fx, at, Theme.Gold, 1100, delay + 0.12f, 0.9f);
