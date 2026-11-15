@@ -80,6 +80,11 @@ Use **Open Decks Folder** in the menu to find it. Old `deckPlayer1.txt` / `deckP
 
 Stage start-of-turn effects still only affect the active player's legends. That is intended: each player's legends are hit once per round.
 
+### Rule changes
+
+- **Silent Galaxy** now reads "Only Cosmic legends can deal damage". Attacks have a category (Strike, Craft, Draw, Set, Summon, Boost, Hex), and the stage only blocks Strikes, so other legends can still craft, set stages, summon, buff and curse. In the original it blocked every attack.
+- Card text uses three keywords consistently: **Craft** (a card goes into your hand), **Set** (a stage is put into play) and **Summon** (a legend goes onto your field).
+
 ### New features
 
 - **END TURN button** (Space still works).

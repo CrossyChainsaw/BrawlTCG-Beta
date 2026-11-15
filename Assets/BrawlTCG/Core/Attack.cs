@@ -24,6 +24,9 @@ namespace BrawlTCG.Core
         public bool MultiHit { get; }
         /// <summary>Resolves immediately without a target.</summary>
         public bool InstaEffect { get; }
+
+        /// <summary>What kind of attack this is; Silent Galaxy only blocks <see cref="AttackKind.Strike"/>.</summary>
+        public AttackKind Kind { get; }
         /// <summary>Knocks out the target legend outright. Can never hit a player.</summary>
         public bool OneHitKO { get; }
         /// <summary>Optional extra requirement. Returns an error message when the attack cannot be used.</summary>
@@ -32,7 +35,7 @@ namespace BrawlTCG.Core
         public Attack(string name, int attackModifier, Weapon weaponOne, int weaponOneAmount, AttackAction execute,
             int weaponOneBurnAmount = 0, Weapon? weaponTwo = null, int weaponTwoAmount = 0, int weaponTwoBurnAmount = 0,
             bool friendlyFire = false, bool multiHit = false, bool instaEffect = false, bool oneHitKO = false,
-            Func<Game, LegendCard, string> precondition = null)
+            Func<Game, LegendCard, string> precondition = null, AttackKind kind = AttackKind.Strike)
         {
             Name = name;
             AttackModifier = attackModifier;
@@ -48,6 +51,7 @@ namespace BrawlTCG.Core
             InstaEffect = instaEffect;
             OneHitKO = oneHitKO;
             Precondition = precondition;
+            Kind = kind;
         }
 
         public void Execute(LegendCard attacker, object target, Game game) => _execute?.Invoke(attacker, target, this, game);

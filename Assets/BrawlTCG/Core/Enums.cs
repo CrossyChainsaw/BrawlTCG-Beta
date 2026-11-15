@@ -30,6 +30,25 @@ namespace BrawlTCG.Core
         Hammer,
     }
 
+    /// <summary>What an attack does. Only Strikes deal damage.</summary>
+    public enum AttackKind
+    {
+        /// <summary>Deals damage (the default for every attack with a damage modifier).</summary>
+        Strike,
+        /// <summary>Puts new cards into your hand.</summary>
+        Craft,
+        /// <summary>Draws cards from your deck.</summary>
+        Draw,
+        /// <summary>Puts a stage into play.</summary>
+        Set,
+        /// <summary>Puts a legend onto your field.</summary>
+        Summon,
+        /// <summary>Helps one of your own legends (buffs, healing).</summary>
+        Boost,
+        /// <summary>Targets an enemy legend without dealing damage (curses, tapping).</summary>
+        Hex,
+    }
+
     public enum Stat
     {
         Health,

@@ -366,6 +366,7 @@ namespace BrawlTCG.UnityApp
             var name = Theme.Label(rt, attack.Name, 18, Theme.Text, ix + 4, 4, w - ix - 70, 26, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
             var tags = new List<string>();
+            if (attack.Kind != AttackKind.Strike) tags.Add(attack.Kind.ToString().ToUpperInvariant());
             if (attack.InstaEffect) tags.Add("INSTANT");
             if (attack.MultiHit) tags.Add("HITS ALL");
             if (attack.FriendlyFire) tags.Add("ALLY");

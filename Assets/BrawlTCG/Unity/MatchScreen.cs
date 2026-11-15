@@ -384,8 +384,13 @@ namespace BrawlTCG.UnityApp
                 _legendViews.Add(view);
 
                 if (legend.IsTapped) { /* ribbon is painted on the card */ }
-                else if (legend.AttackedThisTurn && p == _game.ActivePlayer) view.AddStatus("ATTACKED", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.TextDim);
-                else if (!legend.CanAttack) view.AddStatus("CAN'T ATTACK", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
+                else if (legend.AttackedThisTurn && p == _game.ActivePlayer)
+                {
+                    // Used up for this turn: darkened so it reads at a glance.
+                    view.SetDimmed(true);
+                    view.AddStatus("ATTACKED", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.Text);
+                }
+                else if (!legend.CanAttack) view.AddStatus("NO STRIKES", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
 
                 if (Targeting && IsValidAttackTarget(p, legend)) view.SetHighlight(true);
                 else if (legend == _targetAttacker) view.SetGlow(Color.white, 0.6f);
@@ -590,6 +595,12 @@ namespace BrawlTCG.UnityApp
                 {
                     v.SetGlow(PlayableGlow, 0.5f);
                     v.gameObject.AddComponent<GlowPulse>();
+                }
+                else if (p == _game.ActivePlayer && p.PlayedEssenceCardThisTurn && p.Hand[i] is EssenceCard)
+                {
+                    // Only one Essence per turn: the rest are darkened until next turn.
+                    v.SetDimmed(true);
+                    v.AddStatus("1 PER TURN", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.Text);
                 }
             }
         }
@@ -843,11 +854,30 @@ namespace BrawlTCG.UnityApp
             return Bottom.Hand.Contains(c);
         }
 
+        const float DetailX = 1268, DetailY = 84;
+
+        /// <summary>Where the full-size preview of a mentioned card appears: left of the detail panel, near the thumbnail.</summary>
+        static Vector2 PeekSpot(float panelY) =>
+            new Vector2(DetailX - CardView.W * 1.9f - 24, Mathf.Clamp(DetailY + panelY - 150, 20, 1080 - CardView.H * 1.9f - 20));
+
+        /// <summary>A row of hoverable thumbnails for the cards in <paramref name="ids"/>; returns the y below it.</summary>
+        float PeekRow(Transform parent, int[] ids, float x, float y, float width, float scale)
+        {
+            float w = CardView.W * scale, h = CardView.H * scale, gap = 10;
+            int perRow = Mathf.Max(1, (int)((width + gap) / (w + gap)));
+            for (int i = 0; i < ids.Length; i++)
+            {
+                float px = x + (i % perRow) * (w + gap), py = y + (i / perRow) * (h + gap);
+                CardPeek.Create(parent, ids[i], px, py, scale, _drag, PeekSpot(py));
+            }
+            return y + ((ids.Length + perRow - 1) / perRow) * (h + gap);
+        }
+
         void OpenDetail(Card card)
         {
             UI.Clear(_detail);
             _detailCard = card;
-            const float X = 1268, Y = 84, W = 628, H = 916;
+            const float X = DetailX, Y = DetailY, W = 628, H = 916;
 
             var panel = Theme.GlassPanel(_detail, X, Y, W, H, 26, "DetailPanel");
             panel.color = new Color32(11, 14, 34, 255); // fully opaque: in linear colour space even 97% lets bright cards show through
@@ -899,7 +929,16 @@ namespace BrawlTCG.UnityApp
                 if (!string.IsNullOrWhiteSpace(effects))
                 {
                     Theme.Label(t, "ABILITIES", 16, Theme.Gold, 24, y + 4, 300, 22, display: true);
-                    var fx = Theme.Label(t, effects, 16, Theme.Text, 24, y + 30, W - 48, 60);
+                    int[] mentioned = CardReferences.For(card);
+                    float textW = W - 48;
+                    if (mentioned != null)
+                    {
+                        // Thumbnails of the mentioned cards sit at the right of the abilities text.
+                        float pw = (CardView.W * 0.3f + 10) * mentioned.Length;
+                        PeekRow(t, mentioned, W - 24 - pw + 10, y + 4, pw, 0.3f);
+                        textW -= pw + 8;
+                    }
+                    var fx = Theme.Label(t, effects, 16, Theme.Text, 24, y + 30, textW, 60);
                     fx.verticalOverflow = VerticalWrapMode.Truncate;
                     fx.resizeTextForBestFit = true;
                     fx.resizeTextMinSize = 11;
@@ -936,6 +975,13 @@ namespace BrawlTCG.UnityApp
                 desc.resizeTextForBestFit = true;
                 desc.resizeTextMinSize = 12;
                 desc.resizeTextMaxSize = 19;
+
+                int[] mentioned = CardReferences.For(card);
+                if (mentioned != null)
+                {
+                    Theme.Label(t, "MENTIONED CARDS  ·  hover to see", 15, Theme.Gold, ix, 530, iw, 22, display: true);
+                    PeekRow(t, mentioned, ix, 558, iw, 0.5f);
+                }
             }
         }
 
@@ -951,7 +997,7 @@ namespace BrawlTCG.UnityApp
         {
             if (legend.IsTapped) yield return "TAPPED  ·  skips its next attack";
             if (legend.IsBurned) yield return "BURNED  ·  -1 HP each turn";
-            if (!legend.CanAttack) yield return "CAN'T ATTACK RIGHT NOW";
+            if (!legend.CanAttack) yield return "SILENT GALAXY  ·  can't deal damage";
             if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer) yield return "ALREADY ATTACKED THIS TURN";
         }
 
@@ -989,6 +1035,7 @@ namespace BrawlTCG.UnityApp
             var name = Theme.Label(rt, attack.Name, 22, new Color(1, 1, 1, alpha), ix + 6, 8, w - ix - 120, 30, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
             var tags = new List<string>();
+            if (attack.Kind != AttackKind.Strike) tags.Add(attack.Kind.ToString().ToUpperInvariant());
             if (attack.InstaEffect) tags.Add("INSTANT");
             if (attack.MultiHit) tags.Add("HITS ALL ENEMIES");
             if (attack.FriendlyFire) tags.Add("TARGETS YOUR LEGEND");
@@ -1007,13 +1054,22 @@ namespace BrawlTCG.UnityApp
             string damage;
             string damageSub = "DMG";
             if (attack.OneHitKO) { damage = "KO"; damageSub = ""; }
-            else if (attack.AttackModifier <= -1000) { damage = "—"; damageSub = "EFFECT"; }
+            else if (attack.Kind != AttackKind.Strike) { damage = "—"; damageSub = attack.Kind.ToString().ToUpperInvariant(); }
             else
             {
                 int baseDamage = Attack.CalculateBaseDamage(legend, attack);
                 int bonus = Attack.CalculateElementalBonus(legend, attack);
                 damage = (baseDamage + bonus).ToString();
                 if (bonus > 0) damageSub = $"+{bonus} ELEMENT";
+            }
+            int[] mentioned = CardReferences.For(attack);
+            if (mentioned != null)
+            {
+                // The card this attack makes or sets, as a hoverable thumbnail where the damage would be.
+                float tw = CardView.W * 0.3f;
+                for (int m = 0; m < mentioned.Length; m++)
+                    CardPeek.Create(rt, mentioned[m], w - 14 - (m + 1) * (tw + 8) + 8, 7, 0.3f, _drag, PeekSpot(y + 7));
+                return;
             }
             Theme.Label(rt, damage, 36, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, alpha), w - 112, 4, 98, 44, TextAnchor.MiddleRight, display: true);
             Theme.Label(rt, damageSub, 12, new Color(1, 1, 1, 0.6f * alpha), w - 132, 46, 118, 18, TextAnchor.MiddleRight, display: true);

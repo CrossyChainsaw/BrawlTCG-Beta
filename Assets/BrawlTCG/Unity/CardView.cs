@@ -99,7 +99,18 @@ namespace BrawlTCG.UnityApp
             _ring.color = c;
         }
 
-        /// <summary>Small status tag stacked from the bottom-right of the art window ("ATTACKED", "CAN'T ATTACK"...).</summary>
+        /// <summary>Darkens the card to show it is used up for this turn. Call before <see cref="AddStatus"/> so tags stay bright.</summary>
+        public void SetDimmed(bool on)
+        {
+            if (_face == null) return;
+            Transform old = _face.Find("Dim");
+            if (old != null) Destroy(old.gameObject);
+            if (!on) return;
+            var dim = Theme.RoundedPanel(_face, new Color(0.02f, 0.03f, 0.09f, 0.74f), 0, 0, FW, FH, 22, "Dim");
+            dim.raycastTarget = false;
+        }
+
+        /// <summary>Small status tag stacked from the bottom-right of the art window ("ATTACKED", "NO STRIKES"...).</summary>
         public void AddStatus(string text, Color background, Color textColor)
         {
             if (_face == null || !FaceUp) return;
@@ -214,6 +225,7 @@ namespace BrawlTCG.UnityApp
 
             if (card is LegendCard legend) PaintLegendFooter(face, legend, accent, detailed);
             else PaintTextBox(face, card, accent);
+            TriggerIcons.Paint(face, card); // ability badges: when played / while in play / start of turn
             if (tapped) PaintTappedOverlay(face);
         }
 
@@ -244,7 +256,9 @@ namespace BrawlTCG.UnityApp
 
             if (card is LegendCard legend && legend.IsBurned)
             {
-                var burn = Theme.RoundedPanel(face, new Color32(255, 120, 30, 240), FW - 112, y + 10, 86, 30, 15, "Burned");
+                // Below the ability badges when the card has them.
+                float by = y + (TriggerIcons.Any(card) ? 30 : 10);
+                var burn = Theme.RoundedPanel(face, new Color32(255, 120, 30, 240), FW - 112, by, 86, 30, 15, "Burned");
                 burn.raycastTarget = false;
                 Theme.Label(burn.transform, "BURNED", 16, Theme.Ink, 0, 0, 86, 30, TextAnchor.MiddleCenter, display: true);
             }
