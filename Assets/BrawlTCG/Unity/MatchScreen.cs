@@ -386,9 +386,8 @@ namespace BrawlTCG.UnityApp
                 if (legend.IsTapped) { /* ribbon is painted on the card */ }
                 else if (legend.AttackedThisTurn && p == _game.ActivePlayer)
                 {
-                    // Used up for this turn: darkened so it reads at a glance.
+                    // Used up for this turn: darkened so it reads at a glance (no label needed).
                     view.SetDimmed(true);
-                    view.AddStatus("ATTACKED", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.Text);
                 }
                 else if (!legend.CanAttack) view.AddStatus("NO STRIKES", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
 
@@ -600,7 +599,11 @@ namespace BrawlTCG.UnityApp
                 {
                     // Only one Essence per turn: the rest are darkened until next turn.
                     v.SetDimmed(true);
-                    v.AddStatus("1 PER TURN", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.Text);
+                }
+                else if (showPlayable && p.Hand[i].Cost > p.Essence)
+                {
+                    // Can't afford it yet this turn.
+                    v.SetDimmed(true);
                 }
             }
         }
