@@ -542,6 +542,7 @@ namespace BrawlTCG.UnityApp
         {
             Player p = Top;
             int n = p.Hand.Count;
+            HandBadge(n, 84);
             if (n == 0) return;
             const float scale = 0.7f;
             float w = CardView.W * scale;
@@ -557,6 +558,7 @@ namespace BrawlTCG.UnityApp
         {
             Player p = Bottom;
             int n = p.Hand.Count;
+            HandBadge(n, BottomHand.y - 12);
             if (n == 0)
             {
                 Theme.Label(_board, "No cards in hand", 18, Theme.TextFaint, BottomHand.x, BottomHand.y + 90, BottomHand.width, 30, TextAnchor.MiddleCenter, display: true);
@@ -583,6 +585,16 @@ namespace BrawlTCG.UnityApp
                     v.gameObject.AddComponent<GlowPulse>();
                 }
             }
+        }
+
+        /// <summary>"7 CARDS" pill centred over a hand.</summary>
+        void HandBadge(int count, float y)
+        {
+            const float w = 132, h = 30;
+            var pill = Quiet(Theme.RoundedPanel(_board, new Color(0.03f, 0.04f, 0.12f, 0.92f), 960 - w / 2, y, w, h, 15, "HandCount"));
+            Quiet(Theme.RoundedPanel(pill.transform, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.55f), 0, 0, w, h, 15, "Line", outline: true));
+            var label = Theme.Label(pill.transform, count == 1 ? "1 CARD" : $"{count} CARDS", 16, Theme.Gold, 0, 0, w, h, TextAnchor.MiddleCenter, display: true);
+            label.raycastTarget = false;
         }
 
         /// <summary>Whether the hand card has at least one legal way to be played right now.</summary>
@@ -1183,29 +1195,41 @@ namespace BrawlTCG.UnityApp
     {
         RectTransform _rt;
         Vector2 _base;
-        int _sibling;
-        bool _over;
+        bool _over, _ready;
         float _t;
 
-        bool _ready;
+        void Start() => _rt = (RectTransform)transform;
 
-        void Start()
+        /// <summary>
+        /// Stacks the hand left-to-right in hand order (each card overlaps the one before it), with the hovered card,
+        /// if any, on top. Recomputed every time so hovering never leaves the order scrambled.
+        /// </summary>
+        static void Restack(Transform parent, HandHover hovered)
         {
-            _rt = (RectTransform)transform;
-            _sibling = transform.GetSiblingIndex();
+            if (parent == null) return;
+            var cards = new List<(int index, Transform t)>();
+            foreach (Transform child in parent)
+            {
+                if (child.GetComponent<HandHover>() == null) continue;
+                var view = child.GetComponent<CardView>();
+                cards.Add((view != null ? view.Index : 0, child));
+            }
+            cards.Sort((a, b) => a.index.CompareTo(b.index));
+            foreach (var c in cards) c.t.SetAsLastSibling();
+            if (hovered != null) hovered.transform.SetAsLastSibling();
         }
 
         public void OnPointerEnter(PointerEventData e)
         {
             if (e.dragging) return;
             _over = true;
-            transform.SetAsLastSibling();
+            Restack(transform.parent, this);
         }
 
         public void OnPointerExit(PointerEventData e)
         {
             _over = false;
-            if (transform.parent != null && _sibling < transform.parent.childCount) transform.SetSiblingIndex(_sibling);
+            Restack(transform.parent, null);
         }
 
         void Update()
@@ -1213,7 +1237,12 @@ namespace BrawlTCG.UnityApp
             if (_rt == null || transform.parent == null || transform.parent.name == "Drag") return;
             // Wait for a deal / slide animation to settle before taking over the position.
             if (GetComponent<CardFlight>() != null) { _ready = false; return; }
-            if (!_ready) { _base = _rt.anchoredPosition; _ready = true; }
+            if (!_ready)
+            {
+                _base = _rt.anchoredPosition;
+                _ready = true;
+                Restack(transform.parent, _over ? this : null); // flights lift cards to the top; put the hand back in order
+            }
             _t = Mathf.MoveTowards(_t, _over ? 1 : 0, Time.unscaledDeltaTime * 9);
             float e = Theme.EaseOut(_t);
             _rt.anchoredPosition = _base + new Vector2(0, 46 * e);
