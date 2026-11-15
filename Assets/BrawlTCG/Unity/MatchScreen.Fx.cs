@@ -164,10 +164,20 @@ namespace BrawlTCG.UnityApp
             else StartCoroutine(AfterRoutine(seconds, action));
         }
 
+        /// <summary>Attack sound of the attack's weapon (or the legend's main weapon for "any weapon" attacks).</summary>
+        static string WeaponCue(LegendCard attacker, Attack attack)
+        {
+            Weapon w = attack.WeaponOne != Weapon.Any ? attack.WeaponOne : attacker.PrimaryWeapon;
+            return "hit_" + w.ToString().ToLowerInvariant();
+        }
+
+        /// <summary>Plays a sound cue after a delay (in sync with the matching visual).</summary>
+        void Sound(string cue, float delay = 0, float volume = 1) => After(delay, () => Sfx.Play(cue, volume));
+
         void Shake(float amount, float delay = 0)
         {
             if (_shaker == null) return;
-            After(delay, () => { if (_shaker != null) _shaker.Add(amount); });
+            After(delay, () => { if (_shaker != null) _shaker.Add(amount * 0.5f); });
         }
 
         // ───────────── The diff ─────────────
@@ -198,9 +208,11 @@ namespace BrawlTCG.UnityApp
                     Fx.Glow(_fx, from, new Color(tint.r, tint.g, tint.b, 0.8f), 340, 0, 0.35f);
                     if (el == Element.Magic || el == Element.Cosmic)
                         Fx.Bolt(_fx, from, to, tint, impact - 0.1f, 0.42f, 8);
+                    if (el == Element.Magic || el == Element.Cosmic) Sound("bolt", impact - 0.1f);
                     bool mirror = UnityEngine.Random.value > 0.5f;
                     Fx.Play(_fx, "Slash", to, 250, impact - 0.03f, 36, null, UnityEngine.Random.Range(-35f, 35f), mirror);
                     Fx.Play(_fx, Fx.HitClip(el), to, 320, impact, 30);
+                    Sound(WeaponCue(s.Attacker, s.Attack), impact);
                     Fx.Glow(_fx, to, new Color(1, 1, 1, 0.9f), 260, impact, 0.25f);
                     Fx.Sparks(_fx, to, tint, 20, 620, impact);
                     Shake(0.38f, impact);
@@ -209,6 +221,7 @@ namespace BrawlTCG.UnityApp
                 {
                     // Instant attacks (crafting, drawing, summoning): a burst of power on the attacker.
                     impact = 0.18f;
+                    Sound("power");
                     Fx.Play(_fx, "Sparkle", from, 300, 0, 30, tint);
                     Fx.Shockwave(_fx, from, tint, 360, 0.05f);
                     Fx.Sparks(_fx, from, tint, 16, 420, 0.05f);
@@ -259,6 +272,7 @@ namespace BrawlTCG.UnityApp
                     // Drawn or generated into a hand: dealt from that player's deck.
                     var f = CardFlight.Begin(view, DeckCenter(after.Player), PileScale, impact + drawn++ * 0.09f)
                         .To(after.Center, after.Scale, 0.45f, 0, 70);
+                    Sound("card_draw", impact + (drawn - 1) * 0.09f, 0.7f);
                     if (after.FaceUp) f.Flip();
                 }
                 else if (after.Zone == BoardZone.PlayingField || after.Zone == BoardZone.Stacked || after.Zone == BoardZone.Stage)
@@ -341,6 +355,7 @@ namespace BrawlTCG.UnityApp
                     Fx.Float(_top, "-" + dealt, c + new Vector2(0, -20), DamageRed, 64, impact + 0.04f);
                     float ko = impact + 0.18f;
                     Fx.Play(_fx, Fx.KoClip(koEl), c + new Vector2(0, -70), 560, ko, 30);
+                    Sound("ko", ko);
                     Fx.Flash(_top, new Color(koTint.r, koTint.g, koTint.b, 0.1f), 0.4f, ko);
                     Fx.Shockwave(_fx, c, koTint, 620, ko, 0.6f);
                     Fx.Sparks(_fx, c, koTint, 42, 900, ko);
@@ -354,6 +369,7 @@ namespace BrawlTCG.UnityApp
                 if (dHp < 0)
                 {
                     if (!mainHit) { Fx.Play(_fx, hitClip, c, 280, impact); Shake(0.22f, impact); }
+                    if (!mainHit) Sound(s.Attack != null ? WeaponCue(s.Attacker, s.Attack) : "hit", impact, 0.8f);
                     CardHit.Apply(view, DamageRed, 1, impact);
                     Fx.Float(_top, dHp.ToString(), c + new Vector2(0, -10), DamageRed, 62, impact + 0.04f);
                 }
@@ -361,6 +377,7 @@ namespace BrawlTCG.UnityApp
                 {
                     CardHit.Apply(view, HealGreen, 0.25f, impact);
                     Fx.Play(_fx, "Sparkle", c, 280, impact, 30, HealGreen);
+                    Sound("heal", impact);
                     Fx.Glow(_fx, c, new Color(HealGreen.r, HealGreen.g, HealGreen.b, 0.7f), 320, impact, 0.6f);
                     Fx.Float(_top, "+" + dHp, c + new Vector2(0, -10), HealGreen, 62, impact + 0.04f);
                 }
@@ -369,6 +386,7 @@ namespace BrawlTCG.UnityApp
                     Color pc = dPow > 0 ? Theme.Gold : new Color32(200, 160, 255, 255);
                     Fx.Float(_top, (dPow > 0 ? "+" : "") + dPow + " ATK", c + new Vector2(0, 56), pc, 38, impact + 0.3f, 70);
                     if (dPow > 0) Fx.Glow(_fx, c, new Color(pc.r, pc.g, pc.b, 0.6f), 300, impact + 0.3f, 0.5f);
+                    Sound(dPow > 0 ? "buff" : "debuff", impact + 0.3f);
                 }
             }
 
@@ -383,6 +401,7 @@ namespace BrawlTCG.UnityApp
                 if (d < 0)
                 {
                     Fx.Play(_fx, "Explosion", avatar, 340, impact, 30);
+                    Sound("player_hit", impact);
                     Fx.Play(_fx, "Clash", new Vector2(r.center.x, r.y + 90), 300, impact + 0.05f, 30);
                     Fx.Float(_top, d.ToString(), numberAt, DamageRed, 80, impact + 0.05f, 70);
                     Fx.Flash(_top, new Color(0.9f, 0.1f, 0.15f, 0.09f), 0.4f, impact);
@@ -391,6 +410,7 @@ namespace BrawlTCG.UnityApp
                 else if (d > 0)
                 {
                     Fx.Play(_fx, "Sparkle", avatar, 260, impact, 30, HealGreen);
+                    Sound("heal", impact);
                     Fx.Float(_top, "+" + d, numberAt, HealGreen, 72, impact + 0.05f, 70);
                 }
             }
@@ -447,6 +467,8 @@ namespace BrawlTCG.UnityApp
                 Fx.Glow(_fx, Showcase, new Color(tint.r, tint.g, tint.b, 0.85f), 640, 0.3f, 0.6f);
                 Fx.Shockwave(_fx, Showcase, tint, 540, 0.32f);
                 var bg = Ghost(card, faceUp, startScale);
+                Sound("card_play");
+                Sound("battle_card", 0.3f);
                 CardFlight bf = CardFlight.Begin(bg, start, startScale).To(Showcase, 1.6f, 0.32f, 0.5f, 40).To(dest, destScale, 0.32f);
                 if (!startFaceUp && faceUp) bf.Flip();
                 Reveal(bf, real);
@@ -459,6 +481,7 @@ namespace BrawlTCG.UnityApp
                     Fx.Bolt(_fx, Showcase, target, tint, impact - 0.12f, 0.34f, 7);
                     if (friendly) Fx.Play(_fx, "Sparkle", target, 300, impact, 30, tint);
                     else Fx.Play(_fx, Fx.HitClip(battle.Element), target, 300, impact, 30);
+                    Sound(friendly ? "heal" : "hit", impact);
                 }
                 else
                 {
@@ -469,6 +492,7 @@ namespace BrawlTCG.UnityApp
             }
 
             var ghost = Ghost(card, faceUp, startScale);
+            if (!(card is EssenceCard)) Sound("card_play"); // essence only gets its chime on landing
             CardFlight f = CardFlight.Begin(ghost, start, startScale).To(dest, destScale, card is EssenceCard ? 0.45f : 0.36f, 0, 60);
             if (!startFaceUp && faceUp) f.Flip();
             f.Landed = () => Land(s, card, dest, player);
@@ -482,6 +506,7 @@ namespace BrawlTCG.UnityApp
             switch (card)
             {
                 case LegendCard _:
+                    Sfx.Play("land_legend", 0.45f, 0.03f, 0.04f, 0.88f); // the fitting thud, softened and a little deeper
                     Fx.Play(_fx, "Ring", at + new Vector2(0, 70), 420, 0, 30, tint);
                     Fx.Shockwave(_fx, at, tint, 460);
                     Fx.Glow(_fx, at, new Color(tint.r, tint.g, tint.b, 0.8f), 380, 0, 0.45f);
@@ -490,6 +515,7 @@ namespace BrawlTCG.UnityApp
                     Shake(0.32f);
                     break;
                 case WeaponCard weapon:
+                    Sfx.Play("equip");
                     Vector2 lc = s.PlayedOn != null && _layout.TryGetValue(s.PlayedOn, out Placement lp) ? lp.Center : at;
                     Fx.Play(_fx, "Slash", lc, 300, 0, 30, null, UnityEngine.Random.Range(-25f, 25f));
                     Fx.Play(_fx, "Sparkle", lc, 300, 0.05f, 30, Theme.Gold);
@@ -499,6 +525,7 @@ namespace BrawlTCG.UnityApp
                     Shake(0.15f);
                     break;
                 case StageCard _:
+                    Sfx.Play("ko", 0.6f, 0.03f, 0.04f, 0.9f); // a soft, deep boom (no musical stinger)
                     Fx.Flash(_top, new Color(tint.r, tint.g, tint.b, 0.18f), 0.6f);
                     Fx.Shockwave(_fx, at, tint, 900, 0, 0.8f);
                     Fx.Play(_fx, "Ring", at, 460, 0, 30, tint);
@@ -507,6 +534,7 @@ namespace BrawlTCG.UnityApp
                     Shake(0.45f);
                     break;
                 case EssenceCard _:
+                    Sfx.Play("essence");
                     Fx.Play(_fx, "Sparkle", at, 200, 0, 30, EssencePurple);
                     Fx.Glow(_fx, at, new Color(EssencePurple.r, EssencePurple.g, EssencePurple.b, 0.9f), 160, 0, 0.5f);
                     Fx.Sparks(_fx, at, EssencePurple, 14, 300, 0, 300);
@@ -524,12 +552,14 @@ namespace BrawlTCG.UnityApp
             bool mine = IsLocallyControlled(active.Index);
             string title = _hotSeat ? $"{active.Name.ToUpperInvariant()}'S TURN" : mine ? "YOUR TURN" : $"{active.Name.ToUpperInvariant()}'S TURN";
             Fx.Banner(_top, title, $"TURN {_game.TurnNumber}", mine ? Theme.Gold : new Color32(140, 170, 255, 255));
+            Sfx.Play("turn", mine ? 0.8f : 0.5f);
             if (!deal) return;
             int i = 0;
             foreach (Card c in Bottom.Hand)
             {
                 if (!_views.TryGetValue(c, out CardView view) || view == null || !_layout.TryGetValue(c, out Placement p)) continue;
                 CardFlight.Begin(view, DeckCenter(_viewer), PileScale, 0.35f + i++ * 0.07f).To(p.Center, p.Scale, 0.42f, 0, 70).Flip();
+                Sound("card_draw", 0.35f + (i - 1) * 0.07f, 0.6f);
             }
         }
 
@@ -542,6 +572,7 @@ namespace BrawlTCG.UnityApp
             LegendCard attacker = _targetAttacker;
             Color tint = _targetOwnSide ? HealGreen : Theme.Gold;
             _targetLine.Init(_fx, () => _layout.TryGetValue(attacker, out Placement p) ? p.Center : Showcase, tint);
+            Sfx.Play("aim", 0.6f);
         }
 
         void StopTargetLine()
@@ -556,6 +587,7 @@ namespace BrawlTCG.UnityApp
             Vector2 at = AvatarCenter(loser.Index);
             Color white = new Color(1, 1, 1, 0.3f);
             Fx.Play(_fx, "KoMagic", at + new Vector2(0, -40), 520, delay, 30);
+            Sound("ko", delay + 0.1f, 0.9f);
             Fx.Play(_fx, "Explosion", at, 560, delay + 0.12f, 30);
             Fx.Flash(_top, white, 0.6f, delay + 0.12f);
             Fx.Shockwave(_fx, at, Theme.Gold, 1100, delay + 0.12f, 0.9f);

@@ -104,11 +104,20 @@ namespace BrawlTCG.UnityApp
         /// <summary>Full-canvas layer behind the 1920x1080 screen area (for backgrounds on any aspect ratio). Cleared on screen change.</summary>
         public RectTransform Backdrop => _backdrop;
 
-        public void ShowMenu() => Show<MenuScreen>("Menu", UI.MenuPink).Build(this);
+        public void ShowMenu()
+        {
+            Show<MenuScreen>("Menu", UI.MenuPink).Build(this);
+        }
 
-        public void ShowDeckBuilder() => Show<DeckBuilderScreen>("DeckBuilder", new Color32(240, 240, 240, 255)).Build(this);
+        public void ShowDeckBuilder()
+        {
+            Show<DeckBuilderScreen>("DeckBuilder", new Color32(240, 240, 240, 255)).Build(this);
+        }
 
-        public void StartMatch(MatchSetup setup) => Show<MatchScreen>("Match", UI.GameBackground).Build(this, setup);
+        public void StartMatch(MatchSetup setup)
+        {
+            Show<MatchScreen>("Match", UI.GameBackground).Build(this, setup);
+        }
 
         // ───────────── Toasts (replace WinForms MessageBox pop-ups) ─────────────
 
