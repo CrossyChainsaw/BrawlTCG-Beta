@@ -40,7 +40,7 @@ namespace BrawlTCG.Core
 
         const int SpaceTimeExtraDrawnCards = 1;
         public static readonly Effect SpaceTime = new Effect(
-            $"Both players draw {SpaceTimeExtraDrawnCards} card",
+            $"Both players draw {SpaceTimeExtraDrawnCards} additional card",
             (target, card, game, played) =>
             {
                 game.DrawCards(game.ActivePlayer, SpaceTimeExtraDrawnCards, startTurn: true);
