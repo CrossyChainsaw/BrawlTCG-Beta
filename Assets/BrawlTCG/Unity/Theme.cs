@@ -285,9 +285,21 @@ namespace BrawlTCG.UnityApp
             _scale = scale;
         }
 
-        public void OnPointerEnter(PointerEventData e) => _over = true;
+        public void OnPointerEnter(PointerEventData e)
+        {
+            _over = true;
+            var sel = GetComponent<Selectable>();
+            if (sel == null || sel.IsInteractable()) Sfx.Play("ui_hover", 0.35f, 0.03f);
+        }
+
         public void OnPointerExit(PointerEventData e) { _over = false; _down = false; }
-        public void OnPointerDown(PointerEventData e) => _down = true;
+
+        public void OnPointerDown(PointerEventData e)
+        {
+            _down = true;
+            var sel = GetComponent<Selectable>();
+            if (sel == null || sel.IsInteractable()) Sfx.Play("ui_click", 0.7f, 0.03f);
+        }
         public void OnPointerUp(PointerEventData e) => _down = false;
 
         void OnDisable() { _over = _down = false; _t = 0; Apply(); }
