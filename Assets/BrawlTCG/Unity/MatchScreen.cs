@@ -377,8 +377,12 @@ namespace BrawlTCG.UnityApp
                 LegendCard legend = p.PlayingField[slot];
                 // Stacked weapon / battle cards peek out above the legend, first card closest to it.
                 int shown = Mathf.Min(legend.StackedCards.Count, 4);
+                bool spent = legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsTapped;
                 for (int k = shown - 1; k >= 0; k--)
-                    AddCard(legend.StackedCards[k], true, x, y - 14 * (k + 1), p, BoardZone.Stacked, k);
+                {
+                    CardView stacked = AddCard(legend.StackedCards[k], true, x, y - 14 * (k + 1), p, BoardZone.Stacked, k);
+                    if (spent) stacked.SetDimmed(true); // darkened together with their legend
+                }
 
                 CardView view = AddCard(legend, true, x, y, p, BoardZone.PlayingField, slot, tapped: legend.IsTapped);
                 _legendViews.Add(view);
@@ -386,9 +390,8 @@ namespace BrawlTCG.UnityApp
                 if (legend.IsTapped) { /* ribbon is painted on the card */ }
                 else if (legend.AttackedThisTurn && p == _game.ActivePlayer)
                 {
-                    // Used up for this turn: darkened so it reads at a glance.
+                    // Used up for this turn: darkened so it reads at a glance (no label needed).
                     view.SetDimmed(true);
-                    view.AddStatus("ATTACKED", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.Text);
                 }
                 else if (!legend.CanAttack) view.AddStatus("NO STRIKES", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
 
@@ -600,7 +603,17 @@ namespace BrawlTCG.UnityApp
                 {
                     // Only one Essence per turn: the rest are darkened until next turn.
                     v.SetDimmed(true);
-                    v.AddStatus("1 PER TURN", new Color(0.1f, 0.1f, 0.18f, 0.92f), Theme.Text);
+                }
+                else if (showPlayable && p.Hand[i].Cost > p.Essence)
+                {
+                    // Can't afford it yet this turn.
+                    v.SetDimmed(true);
+                }
+                else if (showPlayable && p.Hand[i] is WeaponCard)
+                {
+                    // Affordable, but none of your legends can carry this weapon (yet). The board is redrawn after
+                    // every move, so playing a fitting legend lights it up again.
+                    v.SetDimmed(true);
                 }
             }
         }
