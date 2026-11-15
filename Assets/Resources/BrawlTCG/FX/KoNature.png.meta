@@ -1,0 +1,3226 @@
+fileFormatVersion: 2
+guid: e017b5a8be96beb4296998b8e591d1bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6979615199578036126
+    second: KoNature_0
+  - first:
+      213: -6857734597347760871
+    second: KoNature_1
+  - first:
+      213: -6113832105054887899
+    second: KoNature_2
+  - first:
+      213: -4038470079337396057
+    second: KoNature_3
+  - first:
+      213: -596630478590300270
+    second: KoNature_4
+  - first:
+      213: 2923225290839312350
+    second: KoNature_5
+  - first:
+      213: 5411722811648830081
+    second: KoNature_6
+  - first:
+      213: 3955316713069453360
+    second: KoNature_7
+  - first:
+      213: -5371242330876855359
+    second: KoNature_8
+  - first:
+      213: -1041897993093966460
+    second: KoNature_9
+  - first:
+      213: 9092831845043686762
+    second: KoNature_10
+  - first:
+      213: 5564749168193079381
+    second: KoNature_11
+  - first:
+      213: -5172524360425944475
+    second: KoNature_12
+  - first:
+      213: 489030241347272090
+    second: KoNature_13
+  - first:
+      213: 293059954373342844
+    second: KoNature_14
+  - first:
+      213: 266150665872693446
+    second: KoNature_15
+  - first:
+      213: 6350838643613272849
+    second: KoNature_16
+  - first:
+      213: 9094223697203019340
+    second: KoNature_17
+  - first:
+      213: -6676187384763454232
+    second: KoNature_18
+  - first:
+      213: -5039586579816850652
+    second: KoNature_19
+  - first:
+      213: 900721824195581130
+    second: KoNature_20
+  - first:
+      213: -7468548745000104883
+    second: KoNature_21
+  - first:
+      213: 9186077110492267722
+    second: KoNature_22
+  - first:
+      213: -724607657190235315
+    second: KoNature_23
+  - first:
+      213: -4732383559992968875
+    second: KoNature_24
+  - first:
+      213: -5361369535111498593
+    second: KoNature_25
+  - first:
+      213: 4383888789498423132
+    second: KoNature_26
+  - first:
+      213: 8885861616765170549
+    second: KoNature_27
+  - first:
+      213: -7565850844691975758
+    second: KoNature_28
+  - first:
+      213: -4787218416414391900
+    second: KoNature_29
+  - first:
+      213: 3780191853754791486
+    second: KoNature_30
+  - first:
+      213: -7686797864891184853
+    second: KoNature_31
+  - first:
+      213: -6690726251001170731
+    second: KoNature_32
+  - first:
+      213: -432619025996531183
+    second: KoNature_33
+  - first:
+      213: 2067657396409298332
+    second: KoNature_34
+  - first:
+      213: -2540898554461894413
+    second: KoNature_35
+  - first:
+      213: -1186108056003856496
+    second: KoNature_36
+  - first:
+      213: -251747568522074129
+    second: KoNature_37
+  - first:
+      213: 1488549292157642250
+    second: KoNature_38
+  - first:
+      213: -7017146576126589485
+    second: KoNature_39
+  - first:
+      213: 5289710364982593125
+    second: KoNature_40
+  - first:
+      213: 3197729102034574533
+    second: KoNature_41
+  - first:
+      213: 8006833315429822388
+    second: KoNature_42
+  - first:
+      213: -843902946586092837
+    second: KoNature_43
+  - first:
+      213: 1366735301632564161
+    second: KoNature_44
+  - first:
+      213: -822001380829256268
+    second: KoNature_45
+  - first:
+      213: -1580171982886360221
+    second: KoNature_46
+  - first:
+      213: 7639935260317201230
+    second: KoNature_47
+  - first:
+      213: -5241796888573599461
+    second: KoNature_48
+  - first:
+      213: 8348527597435447211
+    second: KoNature_49
+  - first:
+      213: -6397814886375983253
+    second: KoNature_50
+  - first:
+      213: 3256320986247566388
+    second: KoNature_51
+  - first:
+      213: 2200071299993158481
+    second: KoNature_52
+  - first:
+      213: -979816057052362793
+    second: KoNature_53
+  - first:
+      213: 8499378145341131242
+    second: KoNature_54
+  - first:
+      213: 8154703829674149586
+    second: KoNature_55
+  - first:
+      213: -5971797013659429590
+    second: KoNature_56
+  - first:
+      213: 1738235862724306744
+    second: KoNature_57
+  - first:
+      213: 280430024010112489
+    second: KoNature_58
+  - first:
+      213: -7389368536826082251
+    second: KoNature_59
+  - first:
+      213: 2110704378684696242
+    second: KoNature_60
+  - first:
+      213: -1915336648939993360
+    second: KoNature_61
+  - first:
+      213: -6628554669935365713
+    second: KoNature_62
+  - first:
+      213: -4234519653413389207
+    second: KoNature_63
+  - first:
+      213: -5932131675549686901
+    second: KoNature_64
+  - first:
+      213: 4240510234536969501
+    second: KoNature_65
+  - first:
+      213: -4877012867335610560
+    second: KoNature_66
+  - first:
+      213: 5759179217231674767
+    second: KoNature_67
+  - first:
+      213: -4035735560509828773
+    second: KoNature_68
+  - first:
+      213: -6722331347006395528
+    second: KoNature_69
+  - first:
+      213: -8902752239616758293
+    second: KoNature_70
+  - first:
+      213: -5187022667022104983
+    second: KoNature_71
+  - first:
+      213: 1160559624310412543
+    second: KoNature_72
+  - first:
+      213: -7836399937160962671
+    second: KoNature_73
+  - first:
+      213: 3240359774700268417
+    second: KoNature_74
+  - first:
+      213: 4287017083615124538
+    second: KoNature_75
+  - first:
+      213: 9191686376093827183
+    second: KoNature_76
+  - first:
+      213: -2769341784313909244
+    second: KoNature_77
+  - first:
+      213: -4915896143982403325
+    second: KoNature_78
+  - first:
+      213: 8675848349985630806
+    second: KoNature_79
+  - first:
+      213: -2859616244886659689
+    second: KoNature_80
+  - first:
+      213: 7399617748714037756
+    second: KoNature_81
+  - first:
+      213: -448009457953629097
+    second: KoNature_82
+  - first:
+      213: 8666583743968108751
+    second: KoNature_83
+  - first:
+      213: -4802829842797235337
+    second: KoNature_84
+  - first:
+      213: 1234169518819780554
+    second: KoNature_85
+  - first:
+      213: 4253968232626851904
+    second: KoNature_86
+  - first:
+      213: -6116004515024375203
+    second: KoNature_87
+  - first:
+      213: 7760515791505987263
+    second: KoNature_88
+  - first:
+      213: 3587907123505183255
+    second: KoNature_89
+  - first:
+      213: 8537968313624597954
+    second: KoNature_90
+  - first:
+      213: 5079120236821928103
+    second: KoNature_91
+  - first:
+      213: -4120979357254512275
+    second: KoNature_92
+  - first:
+      213: -6702551227927307639
+    second: KoNature_93
+  - first:
+      213: 2577796582236583082
+    second: KoNature_94
+  - first:
+      213: -6739373874903515882
+    second: KoNature_95
+  - first:
+      213: 4855634506122467151
+    second: KoNature_96
+  - first:
+      213: -5226148494437369029
+    second: KoNature_97
+  - first:
+      213: -7872331160875058097
+    second: KoNature_98
+  - first:
+      213: 5051174792393235318
+    second: KoNature_99
+  - first:
+      213: -7136017219377697127
+    second: KoNature_100
+  - first:
+      213: 8099278604727949019
+    second: KoNature_101
+  - first:
+      213: 5387090134695040700
+    second: KoNature_102
+  - first:
+      213: -5034182273886461351
+    second: KoNature_103
+  - first:
+      213: -3751449427820091083
+    second: KoNature_104
+  - first:
+      213: 1463582685754114271
+    second: KoNature_105
+  - first:
+      213: -6523591316219172888
+    second: KoNature_106
+  - first:
+      213: -1948173209814496229
+    second: KoNature_107
+  - first:
+      213: -1521407874559857808
+    second: KoNature_108
+  - first:
+      213: 4481254552146557792
+    second: KoNature_109
+  - first:
+      213: -9016158504507606174
+    second: KoNature_110
+  - first:
+      213: -1593506544282943720
+    second: KoNature_111
+  - first:
+      213: 5849357903985853604
+    second: KoNature_112
+  - first:
+      213: -5055709980232090547
+    second: KoNature_113
+  - first:
+      213: -5717715140173092367
+    second: KoNature_114
+  - first:
+      213: -31223505074286192
+    second: KoNature_115
+  - first:
+      213: -439148098176158026
+    second: KoNature_116
+  - first:
+      213: -4507140983265659387
+    second: KoNature_117
+  - first:
+      213: 931739567415188609
+    second: KoNature_118
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KoNature_0
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 1497
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9714cf5b039cd060800000000000000
+      internalID: 6979615199578036126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_1
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 1271
+        width: 168
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9152e21b7be64d0a0800000000000000
+      internalID: -6857734597347760871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_2
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1476
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52023d9c71e472ba0800000000000000
+      internalID: -6113832105054887899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_3
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1470
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a80d0d0cd874f7c0800000000000000
+      internalID: -4038470079337396057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_4
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1486
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f2475adb758b7f0800000000000000
+      internalID: -596630478590300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_5
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1481
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed74ae20ae1619820800000000000000
+      internalID: 2923225290839312350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_6
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1475
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ae433893d4a1b40800000000000000
+      internalID: 5411722811648830081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_7
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1389
+        width: 7
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030aba8289b14e630800000000000000
+      internalID: 3955316713069453360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_8
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1382
+        width: 6
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb3b81ee838575b0800000000000000
+      internalID: -5371242330876855359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_9
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1261
+        width: 142
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4851175ab4f6a81f0800000000000000
+      internalID: -1041897993093966460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_10
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1259
+        width: 130
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d403e136a303e70800000000000000
+      internalID: 9092831845043686762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_11
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1410
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5588c4a92e5f93d40800000000000000
+      internalID: 5564749168193079381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_12
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1266
+        width: 146
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ac1c8df708738b0800000000000000
+      internalID: -5172524360425944475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_13
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 1411
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d7debd96269c600800000000000000
+      internalID: 489030241347272090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_14
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1266
+        width: 145
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76b05ec978211400800000000000000
+      internalID: 293059954373342844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_15
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 1389
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c85318de9e81b300800000000000000
+      internalID: 266150665872693446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_16
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1369
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b84622916b22850800000000000000
+      internalID: 6350838643613272849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_17
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 1376
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4eb9b3f44c253e70800000000000000
+      internalID: 9094223697203019340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_18
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ecea3d02fa6953a0800000000000000
+      internalID: -6676187384763454232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_19
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1335
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bd03fd4bacf0ab0800000000000000
+      internalID: -5039586579816850652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_20
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1332
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac49e941ab1008c00800000000000000
+      internalID: 900721824195581130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_21
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1327
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c449a8c726a5890800000000000000
+      internalID: -7468548745000104883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_22
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1339
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac40d3a46708b7f70800000000000000
+      internalID: 9186077110492267722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_23
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1270
+        width: 148
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43e5a7cc2da1f5f0800000000000000
+      internalID: -724607657190235315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_24
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1314
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55978b5b932335eb0800000000000000
+      internalID: -4732383559992968875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_25
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1323
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94f31640d69895b0800000000000000
+      internalID: -5361369535111498593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_26
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1329
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57eed090a3b6dc30800000000000000
+      internalID: 4383888789498423132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_27
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1315
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573f096af0ce05b70800000000000000
+      internalID: 8885861616765170549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_28
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1317
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1bb8a0eb2b00790800000000000000
+      internalID: -7565850844691975758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_29
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1309
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1896bc632609db0800000000000000
+      internalID: -4787218416414391900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_30
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1315
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3631e17670f57430800000000000000
+      internalID: 3780191853754791486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_31
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1307
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b290eea7112035590800000000000000
+      internalID: -7686797864891184853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_32
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1286
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4b1b77ce3c523a0800000000000000
+      internalID: -6690726251001170731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_33
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1284
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ab668b9470ff9f0800000000000000
+      internalID: -432619025996531183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_34
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1284
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d6f26727bc1bc10800000000000000
+      internalID: 2067657396409298332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_35
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1284
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8cefa1a3aecbcd0800000000000000
+      internalID: -2540898554461894413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_36
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1282
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09739a0e1091a8fe0800000000000000
+      internalID: -1186108056003856496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_37
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 1278
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe76c259bec918cf0800000000000000
+      internalID: -251747568522074129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_38
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1262
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0627bdc1b368a410800000000000000
+      internalID: 1488549292157642250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_39
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1018
+        width: 223
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d540211e561e9e90800000000000000
+      internalID: -7017146576126589485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_40
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1017
+        width: 270
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5664d750d83d86940800000000000000
+      internalID: 5289710364982593125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_41
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1019
+        width: 290
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc13be0dad906c20800000000000000
+      internalID: 3197729102034574533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_42
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1018
+        width: 301
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf25f57a7cfd1f60800000000000000
+      internalID: 8006833315429822388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_43
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1018
+        width: 301
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda94d3cdbad944f0800000000000000
+      internalID: -843902946586092837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_44
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1127
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb9bcbf38e97f210800000000000000
+      internalID: 1366735301632564161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_45
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1019
+        width: 306
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b5aaca691aa794f0800000000000000
+      internalID: -822001380829256268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_46
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1065
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ba80424f9121ae0800000000000000
+      internalID: -1580171982886360221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_47
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 875
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43303224a0860a60800000000000000
+      internalID: 7639935260317201230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_48
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 767
+        width: 306
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11a2d780856147b0800000000000000
+      internalID: -5241796888573599461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_49
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 768
+        width: 314
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba76fa21e9debd370800000000000000
+      internalID: 8348527597435447211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_50
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 768
+        width: 314
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b677ad602456637a0800000000000000
+      internalID: -6397814886375983253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_51
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 768
+        width: 316
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4349feb2fa6c03d20800000000000000
+      internalID: 3256320986247566388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_52
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 768
+        width: 316
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153cf9cd039388e10800000000000000
+      internalID: 2200071299993158481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_53
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 770
+        width: 319
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d78b26cc7ef662f0800000000000000
+      internalID: -979816057052362793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 518
+        width: 319
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9c6cc346bd3f570800000000000000
+      internalID: 8499378145341131242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_55
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 520
+        width: 321
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6ce387de35b2170800000000000000
+      internalID: 8154703829674149586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_56
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 520
+        width: 321
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25571a814aef1da0800000000000000
+      internalID: -5971797013659429590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_57
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 522
+        width: 318
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837e68dbe447f1810800000000000000
+      internalID: 1738235862724306744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_58
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 521
+        width: 317
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed1a7dfe9944e300800000000000000
+      internalID: 280430024010112489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_59
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 521
+        width: 268
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c88006770b37990800000000000000
+      internalID: -7389368536826082251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_60
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 633
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6ec5d037aba4d10800000000000000
+      internalID: 2110704378684696242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_61
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 639
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f605a6377b5b65e0800000000000000
+      internalID: -1915336648939993360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_62
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 603
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1fe34b5a4a204a0800000000000000
+      internalID: -6628554669935365713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_63
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 608
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c72e78fc6fb35c0800000000000000
+      internalID: -4234519653413389207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_64
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 614
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83a40ebba5dcada0800000000000000
+      internalID: -5932131675549686901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_65
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 578
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d150cf3579159da30800000000000000
+      internalID: 4240510234536969501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_66
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 589
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f937df2ae515cb0800000000000000
+      internalID: -4877012867335610560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_67
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 473
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8df7e01cf6bcef40800000000000000
+      internalID: 5759179217231674767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_68
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 491
+        width: 27
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b515664d3ef2ef7c0800000000000000
+      internalID: -4035735560509828773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_69
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 471
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87be53f914b75b2a0800000000000000
+      internalID: -6722331347006395528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_70
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 492
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed6452c102137480800000000000000
+      internalID: -8902752239616758293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 260
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9668f3acd5ef308b0800000000000000
+      internalID: -5187022667022104983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_72
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 272
+        width: 181
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff4dea354d22b1010800000000000000
+      internalID: 1160559624310412543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_73
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 271
+        width: 169
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d90a3b6c38f3390800000000000000
+      internalID: -7836399937160962671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_74
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 472
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b69730c0218fc20800000000000000
+      internalID: 3240359774700268417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_75
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 457
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c19eee25b8e7b30800000000000000
+      internalID: 4287017083615124538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_76
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 400
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60ced53f0e6f8f70800000000000000
+      internalID: 9191686376093827183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_77
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 406
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400b25cd1525199d0800000000000000
+      internalID: -2769341784313909244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_78
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 271
+        width: 169
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3016739a08a37cbb0800000000000000
+      internalID: -4915896143982403325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_79
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 272
+        width: 142
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a6d029b1ec66870800000000000000
+      internalID: 8675848349985630806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_80
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 273
+        width: 114
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d18991d2a9058d0800000000000000
+      internalID: -2859616244886659689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_81
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 377
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1a6c93329b0b660800000000000000
+      internalID: 7399617748714037756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_82
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 388
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c98aa85c958c9f0800000000000000
+      internalID: -448009457953629097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_83
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 378
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0e4636ff3e54870800000000000000
+      internalID: 8666583743968108751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_84
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 375
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773fc6754bbe85db0800000000000000
+      internalID: -4802829842797235337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_85
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 366
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac72ed173a6a02110800000000000000
+      internalID: 1234169518819780554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_86
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 374
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040158fa191290b30800000000000000
+      internalID: 4253968232626851904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_87
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 363
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52794d2c469f1ba0800000000000000
+      internalID: -6116004515024375203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_88
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 371
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb61682def3e2bb60800000000000000
+      internalID: 7760515791505987263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_89
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 370
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71abe9fe48ecac130800000000000000
+      internalID: 3587907123505183255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_90
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 354
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c59225f1f4fc7670800000000000000
+      internalID: 8537968313624597954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_91
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 351
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8d44fe1f8ac7640800000000000000
+      internalID: 5079120236821928103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_92
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 341
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d619024cb175fc6c0800000000000000
+      internalID: -4120979357254512275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_93
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 341
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ad88a7b21cbf2a0800000000000000
+      internalID: -6702551227927307639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_94
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 346
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa47d63755c26c320800000000000000
+      internalID: 2577796582236583082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_95
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 341
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61df3d1ea2fe872a0800000000000000
+      internalID: -6739373874903515882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_96
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 340
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f471f886bdda26340800000000000000
+      internalID: 4855634506122467151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_97
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 353
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b3e9532adf877b0800000000000000
+      internalID: -5226148494437369029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_98
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 344
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cbdc1c48cdfb290800000000000000
+      internalID: -7872331160875058097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_99
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 349
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b910f16b0691640800000000000000
+      internalID: 5051174792393235318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_100
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 331
+        width: 43
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99eebefa526c7fc90800000000000000
+      internalID: -7136017219377697127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_101
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 166
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd61bbbaafa666070800000000000000
+      internalID: 8099278604727949019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_102
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 186
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6528b7fe9c2ca40800000000000000
+      internalID: 5387090134695040700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_103
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 168
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952ed66e4edf22ab0800000000000000
+      internalID: -5034182273886461351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_104
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 142
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539e0f51f9c20fbc0800000000000000
+      internalID: -3751449427820091083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_105
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 22
+        width: 94
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd049c3c2b0bf4410800000000000000
+      internalID: 1463582685754114271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_106
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 142
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7eee8e24c8775a0800000000000000
+      internalID: -6523591316219172888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_107
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 148
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c031c99c2b6f4e0800000000000000
+      internalID: -1948173209814496229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_108
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 117
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ba06e499fd2eae0800000000000000
+      internalID: -1521407874559857808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_109
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 131
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b3cc0c54d903e30800000000000000
+      internalID: 4481254552146557792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_110
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 129
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26bf43c1c9b20e280800000000000000
+      internalID: -9016158504507606174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_111
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 132
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f31c0ad3ab2e9e0800000000000000
+      internalID: -1593506544282943720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_112
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 128
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4433fb5081d2150800000000000000
+      internalID: 5849357903985853604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_113
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 123
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c7edc2f8286d9b0800000000000000
+      internalID: -5055709980232090547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_114
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 100
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f92c1faf5896a0b0800000000000000
+      internalID: -5717715140173092367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_115
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 97
+        width: 62
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09197673362119ff0800000000000000
+      internalID: -31223505074286192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_116
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 22
+        width: 64
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6fb64a125d7e9f0800000000000000
+      internalID: -439148098176158026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_117
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 103
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50678d3d72b6371c0800000000000000
+      internalID: -4507140983265659387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoNature_118
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 23
+        width: 48
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c55f233343eec00800000000000000
+      internalID: 931739567415188609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      KoNature_0: 6979615199578036126
+      KoNature_1: -6857734597347760871
+      KoNature_10: 9092831845043686762
+      KoNature_100: -7136017219377697127
+      KoNature_101: 8099278604727949019
+      KoNature_102: 5387090134695040700
+      KoNature_103: -5034182273886461351
+      KoNature_104: -3751449427820091083
+      KoNature_105: 1463582685754114271
+      KoNature_106: -6523591316219172888
+      KoNature_107: -1948173209814496229
+      KoNature_108: -1521407874559857808
+      KoNature_109: 4481254552146557792
+      KoNature_11: 5564749168193079381
+      KoNature_110: -9016158504507606174
+      KoNature_111: -1593506544282943720
+      KoNature_112: 5849357903985853604
+      KoNature_113: -5055709980232090547
+      KoNature_114: -5717715140173092367
+      KoNature_115: -31223505074286192
+      KoNature_116: -439148098176158026
+      KoNature_117: -4507140983265659387
+      KoNature_118: 931739567415188609
+      KoNature_12: -5172524360425944475
+      KoNature_13: 489030241347272090
+      KoNature_14: 293059954373342844
+      KoNature_15: 266150665872693446
+      KoNature_16: 6350838643613272849
+      KoNature_17: 9094223697203019340
+      KoNature_18: -6676187384763454232
+      KoNature_19: -5039586579816850652
+      KoNature_2: -6113832105054887899
+      KoNature_20: 900721824195581130
+      KoNature_21: -7468548745000104883
+      KoNature_22: 9186077110492267722
+      KoNature_23: -724607657190235315
+      KoNature_24: -4732383559992968875
+      KoNature_25: -5361369535111498593
+      KoNature_26: 4383888789498423132
+      KoNature_27: 8885861616765170549
+      KoNature_28: -7565850844691975758
+      KoNature_29: -4787218416414391900
+      KoNature_3: -4038470079337396057
+      KoNature_30: 3780191853754791486
+      KoNature_31: -7686797864891184853
+      KoNature_32: -6690726251001170731
+      KoNature_33: -432619025996531183
+      KoNature_34: 2067657396409298332
+      KoNature_35: -2540898554461894413
+      KoNature_36: -1186108056003856496
+      KoNature_37: -251747568522074129
+      KoNature_38: 1488549292157642250
+      KoNature_39: -7017146576126589485
+      KoNature_4: -596630478590300270
+      KoNature_40: 5289710364982593125
+      KoNature_41: 3197729102034574533
+      KoNature_42: 8006833315429822388
+      KoNature_43: -843902946586092837
+      KoNature_44: 1366735301632564161
+      KoNature_45: -822001380829256268
+      KoNature_46: -1580171982886360221
+      KoNature_47: 7639935260317201230
+      KoNature_48: -5241796888573599461
+      KoNature_49: 8348527597435447211
+      KoNature_5: 2923225290839312350
+      KoNature_50: -6397814886375983253
+      KoNature_51: 3256320986247566388
+      KoNature_52: 2200071299993158481
+      KoNature_53: -979816057052362793
+      KoNature_54: 8499378145341131242
+      KoNature_55: 8154703829674149586
+      KoNature_56: -5971797013659429590
+      KoNature_57: 1738235862724306744
+      KoNature_58: 280430024010112489
+      KoNature_59: -7389368536826082251
+      KoNature_6: 5411722811648830081
+      KoNature_60: 2110704378684696242
+      KoNature_61: -1915336648939993360
+      KoNature_62: -6628554669935365713
+      KoNature_63: -4234519653413389207
+      KoNature_64: -5932131675549686901
+      KoNature_65: 4240510234536969501
+      KoNature_66: -4877012867335610560
+      KoNature_67: 5759179217231674767
+      KoNature_68: -4035735560509828773
+      KoNature_69: -6722331347006395528
+      KoNature_7: 3955316713069453360
+      KoNature_70: -8902752239616758293
+      KoNature_71: -5187022667022104983
+      KoNature_72: 1160559624310412543
+      KoNature_73: -7836399937160962671
+      KoNature_74: 3240359774700268417
+      KoNature_75: 4287017083615124538
+      KoNature_76: 9191686376093827183
+      KoNature_77: -2769341784313909244
+      KoNature_78: -4915896143982403325
+      KoNature_79: 8675848349985630806
+      KoNature_8: -5371242330876855359
+      KoNature_80: -2859616244886659689
+      KoNature_81: 7399617748714037756
+      KoNature_82: -448009457953629097
+      KoNature_83: 8666583743968108751
+      KoNature_84: -4802829842797235337
+      KoNature_85: 1234169518819780554
+      KoNature_86: 4253968232626851904
+      KoNature_87: -6116004515024375203
+      KoNature_88: 7760515791505987263
+      KoNature_89: 3587907123505183255
+      KoNature_9: -1041897993093966460
+      KoNature_90: 8537968313624597954
+      KoNature_91: 5079120236821928103
+      KoNature_92: -4120979357254512275
+      KoNature_93: -6702551227927307639
+      KoNature_94: 2577796582236583082
+      KoNature_95: -6739373874903515882
+      KoNature_96: 4855634506122467151
+      KoNature_97: -5226148494437369029
+      KoNature_98: -7872331160875058097
+      KoNature_99: 5051174792393235318
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

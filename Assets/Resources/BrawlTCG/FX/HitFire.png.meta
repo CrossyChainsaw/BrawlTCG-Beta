@@ -1,0 +1,1796 @@
+fileFormatVersion: 2
+guid: cacbee075cc308046ae483e919574391
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8874269692277038336
+    second: HitFire_0
+  - first:
+      213: -1376420419157536772
+    second: HitFire_1
+  - first:
+      213: 6660203942946578812
+    second: HitFire_2
+  - first:
+      213: -3074370589170660602
+    second: HitFire_3
+  - first:
+      213: -5123009256144014470
+    second: HitFire_4
+  - first:
+      213: 4750201040287301298
+    second: HitFire_5
+  - first:
+      213: -8869153318036311232
+    second: HitFire_6
+  - first:
+      213: 6112830872094446596
+    second: HitFire_7
+  - first:
+      213: 6313672084612944144
+    second: HitFire_8
+  - first:
+      213: -6029138846004177017
+    second: HitFire_9
+  - first:
+      213: 3841858383196425748
+    second: HitFire_10
+  - first:
+      213: -3404401104490043481
+    second: HitFire_11
+  - first:
+      213: 2468902731935041331
+    second: HitFire_12
+  - first:
+      213: 6475099124770861309
+    second: HitFire_13
+  - first:
+      213: 4636283849605141575
+    second: HitFire_14
+  - first:
+      213: 6494953707270138866
+    second: HitFire_15
+  - first:
+      213: -8488913473033067025
+    second: HitFire_16
+  - first:
+      213: 4546404153612874661
+    second: HitFire_17
+  - first:
+      213: -112845193689803594
+    second: HitFire_18
+  - first:
+      213: -6582224885065540262
+    second: HitFire_19
+  - first:
+      213: 5959591674177201334
+    second: HitFire_20
+  - first:
+      213: 7780227089052637079
+    second: HitFire_21
+  - first:
+      213: -7419559045432570632
+    second: HitFire_22
+  - first:
+      213: 553327696267902449
+    second: HitFire_23
+  - first:
+      213: 5199462393094525403
+    second: HitFire_24
+  - first:
+      213: -6435007020265776487
+    second: HitFire_25
+  - first:
+      213: -5281011760724011989
+    second: HitFire_26
+  - first:
+      213: -9203056022021263703
+    second: HitFire_27
+  - first:
+      213: -5328438075158743118
+    second: HitFire_28
+  - first:
+      213: -5343322250238311199
+    second: HitFire_29
+  - first:
+      213: 5778453493414553707
+    second: HitFire_30
+  - first:
+      213: 147066817024108269
+    second: HitFire_31
+  - first:
+      213: -1744143411590503450
+    second: HitFire_32
+  - first:
+      213: 2960054255896776164
+    second: HitFire_33
+  - first:
+      213: -3093217182381396335
+    second: HitFire_34
+  - first:
+      213: -1663082567375092486
+    second: HitFire_35
+  - first:
+      213: -4029352806114703922
+    second: HitFire_36
+  - first:
+      213: 5699599172179597594
+    second: HitFire_37
+  - first:
+      213: 799142814486444625
+    second: HitFire_38
+  - first:
+      213: 8393616353276335066
+    second: HitFire_39
+  - first:
+      213: 8040488600037656487
+    second: HitFire_40
+  - first:
+      213: -5796435316091556653
+    second: HitFire_41
+  - first:
+      213: 1139007517694418678
+    second: HitFire_42
+  - first:
+      213: -1640655455907355870
+    second: HitFire_43
+  - first:
+      213: 1942208556507731001
+    second: HitFire_44
+  - first:
+      213: 5563935820103704597
+    second: HitFire_45
+  - first:
+      213: -75709667483244127
+    second: HitFire_46
+  - first:
+      213: -8739362680540203135
+    second: HitFire_47
+  - first:
+      213: -6576318802327856972
+    second: HitFire_48
+  - first:
+      213: 6297344295539377895
+    second: HitFire_49
+  - first:
+      213: 2361286969640021929
+    second: HitFire_50
+  - first:
+      213: 7782466735766207920
+    second: HitFire_51
+  - first:
+      213: 7639948865566331645
+    second: HitFire_52
+  - first:
+      213: -933234489095024384
+    second: HitFire_53
+  - first:
+      213: -7638841989847786485
+    second: HitFire_54
+  - first:
+      213: -6634066037459799879
+    second: HitFire_55
+  - first:
+      213: 7080133037256134475
+    second: HitFire_56
+  - first:
+      213: 2342271993474310525
+    second: HitFire_57
+  - first:
+      213: -1614637722133498872
+    second: HitFire_58
+  - first:
+      213: -4470173265716202031
+    second: HitFire_59
+  - first:
+      213: 621115750252820692
+    second: HitFire_60
+  - first:
+      213: 5643048532643363928
+    second: HitFire_61
+  - first:
+      213: 6298735158023932644
+    second: HitFire_62
+  - first:
+      213: 4509432746735723595
+    second: HitFire_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HitFire_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 137
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d1039644db72b70800000000000000
+      internalID: 8874269692277038336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 417
+        width: 146
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff458edbe8f5ece0800000000000000
+      internalID: -1376420419157536772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 489
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71acf6e23ccd6c50800000000000000
+      internalID: 6660203942946578812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_3
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 438
+        width: 133
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b0394ec34a555d0800000000000000
+      internalID: -3074370589170660602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_4
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 493
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a737f72793a67e8b0800000000000000
+      internalID: -5123009256144014470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 440
+        width: 138
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bef302bdaa1ce140800000000000000
+      internalID: 4750201040287301298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_6
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 451
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043f7fb4c007ae480800000000000000
+      internalID: -8869153318036311232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_7
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 418
+        width: 54
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4041b3f7a4325d450800000000000000
+      internalID: 6112830872094446596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_8
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 431
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01197a74f4bae9750800000000000000
+      internalID: 6313672084612944144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_9
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 420
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787996ec922345ca0800000000000000
+      internalID: -6029138846004177017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_10
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 405
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e87cf28d5015530800000000000000
+      internalID: 3841858383196425748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_11
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 399
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a76ce59b3321c0d0800000000000000
+      internalID: -3404401104490043481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_12
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 399
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337caf134fd434220800000000000000
+      internalID: 2468902731935041331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_13
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 240
+        width: 138
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0f861f85c2cd950800000000000000
+      internalID: 6475099124770861309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_14
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 365
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744589dd893675040800000000000000
+      internalID: 4636283849605141575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_15
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 373
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb617a2cf5b22a50800000000000000
+      internalID: 6494953707270138866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_16
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 365
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe526d62c22513a80800000000000000
+      internalID: -8488913473033067025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_17
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 373
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3b4756d72181f30800000000000000
+      internalID: 4546404153612874661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_18
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 267
+        width: 126
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4528be4e71f6ef0800000000000000
+      internalID: -112845193689803594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_19
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 375
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d9ee5575d37a4a0800000000000000
+      internalID: -6582224885065540262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_20
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 373
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b425b96d09b4b250800000000000000
+      internalID: 5959591674177201334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_21
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 248
+        width: 124
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7979adae05be8fb60800000000000000
+      internalID: 7780227089052637079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_22
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 361
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc84f2db5e680990800000000000000
+      internalID: -7419559045432570632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_23
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 248
+        width: 124
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdfe6cab90dda700800000000000000
+      internalID: 553327696267902449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_24
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 361
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1d663af73382840800000000000000
+      internalID: 5199462393094525403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_25
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 293
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ad9ed853342b6a0800000000000000
+      internalID: -6435007020265776487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_26
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 298
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24926b98c316b6b0800000000000000
+      internalID: -5281011760724011989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_27
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 267
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae276fce4d284080800000000000000
+      internalID: -9203056022021263703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_28
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 298
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b73f7a4dc59d06b0800000000000000
+      internalID: -5328438075158743118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_29
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 267
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4ca1a39b4b8d5b0800000000000000
+      internalID: -5343322250238311199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_30
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 277
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68e61236d0313050800000000000000
+      internalID: 5778453493414553707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_31
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 267
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de628faad7c7a0200800000000000000
+      internalID: 147066817024108269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_32
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 231
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e36fcadece8bc7e0800000000000000
+      internalID: -1744143411590503450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_33
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 220
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed4c96a9a9341920800000000000000
+      internalID: 2960054255896776164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_34
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 220
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ea5077c5fa215d0800000000000000
+      internalID: -3093217182381396335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_35
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 232
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af48673673b8be8e0800000000000000
+      internalID: -1663082567375092486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_36
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 220
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec54fc4a8fcd418c0800000000000000
+      internalID: -4029352806114703922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_37
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 232
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1910e3df3b091f40800000000000000
+      internalID: 5699599172179597594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_38
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 218
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a354ed720271b00800000000000000
+      internalID: 799142814486444625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_39
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 199
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad312fd1a9d1c7470800000000000000
+      internalID: 8393616353276335066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_40
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 202
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a782d908cd859f60800000000000000
+      internalID: 8040488600037656487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_41
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 202
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc65d47accee8fa0800000000000000
+      internalID: -5796435316091556653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_42
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 216
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fedca87d419ecf00800000000000000
+      internalID: 1139007517694418678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_43
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 175
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223e5df2e883b39e0800000000000000
+      internalID: -1640655455907355870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_44
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 173
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9341e52546c14fa10800000000000000
+      internalID: 1942208556507731001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_45
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 184
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5106a5e3622173d40800000000000000
+      internalID: 5563935820103704597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_46
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 172
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a92993657603fef0800000000000000
+      internalID: -75709667483244127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_47
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 67
+        width: 126
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1877817f1fb87b680800000000000000
+      internalID: -8739362680540203135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_48
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 115
+        width: 113
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8968164e83cb4a0800000000000000
+      internalID: -6576318802327856972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_49
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 158
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e605f3a549a46750800000000000000
+      internalID: 6297344295539377895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_50
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 136
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9afe62efcf9f4c020800000000000000
+      internalID: 2361286969640021929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_51
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 134
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd73ad4340e00c60800000000000000
+      internalID: 7782466735766207920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_52
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 121
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df2da3ad30d860a60800000000000000
+      internalID: 7639948865566331645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_53
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 77
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00119593d2c7c03f0800000000000000
+      internalID: -933234489095024384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_54
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 103
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0cd8cbbea16df590800000000000000
+      internalID: -7638841989847786485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_55
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 80
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b0b9b476101fe3a0800000000000000
+      internalID: -6634066037459799879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_56
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 91
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fc8283c7fa14260800000000000000
+      internalID: 7080133037256134475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_57
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 104
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d71e16ad7fb618020800000000000000
+      internalID: 2342271993474310525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_58
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 102
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8047943eb87a799e0800000000000000
+      internalID: -1614637722133498872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_59
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 87
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5b98c4911c6f1c0800000000000000
+      internalID: -4470173265716202031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_60
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 67
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8383aeb75ae9800800000000000000
+      internalID: 621115750252820692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_61
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 18
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c3f760eb2205e40800000000000000
+      internalID: 5643048532643363928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_62
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 16
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eac74c014a996750800000000000000
+      internalID: 6298735158023932644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitFire_63
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 22
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4462bfe039b49e30800000000000000
+      internalID: 4509432746735723595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HitFire_0: 8874269692277038336
+      HitFire_1: -1376420419157536772
+      HitFire_10: 3841858383196425748
+      HitFire_11: -3404401104490043481
+      HitFire_12: 2468902731935041331
+      HitFire_13: 6475099124770861309
+      HitFire_14: 4636283849605141575
+      HitFire_15: 6494953707270138866
+      HitFire_16: -8488913473033067025
+      HitFire_17: 4546404153612874661
+      HitFire_18: -112845193689803594
+      HitFire_19: -6582224885065540262
+      HitFire_2: 6660203942946578812
+      HitFire_20: 5959591674177201334
+      HitFire_21: 7780227089052637079
+      HitFire_22: -7419559045432570632
+      HitFire_23: 553327696267902449
+      HitFire_24: 5199462393094525403
+      HitFire_25: -6435007020265776487
+      HitFire_26: -5281011760724011989
+      HitFire_27: -9203056022021263703
+      HitFire_28: -5328438075158743118
+      HitFire_29: -5343322250238311199
+      HitFire_3: -3074370589170660602
+      HitFire_30: 5778453493414553707
+      HitFire_31: 147066817024108269
+      HitFire_32: -1744143411590503450
+      HitFire_33: 2960054255896776164
+      HitFire_34: -3093217182381396335
+      HitFire_35: -1663082567375092486
+      HitFire_36: -4029352806114703922
+      HitFire_37: 5699599172179597594
+      HitFire_38: 799142814486444625
+      HitFire_39: 8393616353276335066
+      HitFire_4: -5123009256144014470
+      HitFire_40: 8040488600037656487
+      HitFire_41: -5796435316091556653
+      HitFire_42: 1139007517694418678
+      HitFire_43: -1640655455907355870
+      HitFire_44: 1942208556507731001
+      HitFire_45: 5563935820103704597
+      HitFire_46: -75709667483244127
+      HitFire_47: -8739362680540203135
+      HitFire_48: -6576318802327856972
+      HitFire_49: 6297344295539377895
+      HitFire_5: 4750201040287301298
+      HitFire_50: 2361286969640021929
+      HitFire_51: 7782466735766207920
+      HitFire_52: 7639948865566331645
+      HitFire_53: -933234489095024384
+      HitFire_54: -7638841989847786485
+      HitFire_55: -6634066037459799879
+      HitFire_56: 7080133037256134475
+      HitFire_57: 2342271993474310525
+      HitFire_58: -1614637722133498872
+      HitFire_59: -4470173265716202031
+      HitFire_6: -8869153318036311232
+      HitFire_60: 621115750252820692
+      HitFire_61: 5643048532643363928
+      HitFire_62: 6298735158023932644
+      HitFire_63: 4509432746735723595
+      HitFire_7: 6112830872094446596
+      HitFire_8: 6313672084612944144
+      HitFire_9: -6029138846004177017
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

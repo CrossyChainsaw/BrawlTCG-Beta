@@ -1,0 +1,6632 @@
+fileFormatVersion: 2
+guid: 531f321582c776a44b31e7eb2fab4151
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2625289841188000737
+    second: HitArctic_0
+  - first:
+      213: -124537825983864407
+    second: HitArctic_1
+  - first:
+      213: 6663724481513659010
+    second: HitArctic_2
+  - first:
+      213: 7590204126482143467
+    second: HitArctic_3
+  - first:
+      213: 2661816149061147073
+    second: HitArctic_4
+  - first:
+      213: 2424305935226293268
+    second: HitArctic_5
+  - first:
+      213: 864552097506761320
+    second: HitArctic_6
+  - first:
+      213: 4528409995713736144
+    second: HitArctic_7
+  - first:
+      213: 5926268021674281016
+    second: HitArctic_8
+  - first:
+      213: 261024371973496577
+    second: HitArctic_9
+  - first:
+      213: -7718194353963530381
+    second: HitArctic_10
+  - first:
+      213: 532379355558281608
+    second: HitArctic_11
+  - first:
+      213: 6744796878967505536
+    second: HitArctic_12
+  - first:
+      213: -7280577635740388985
+    second: HitArctic_13
+  - first:
+      213: -6287558876437679249
+    second: HitArctic_14
+  - first:
+      213: 7214984973169516874
+    second: HitArctic_15
+  - first:
+      213: -3263190128263656489
+    second: HitArctic_16
+  - first:
+      213: 6938823447240561509
+    second: HitArctic_17
+  - first:
+      213: -1907486097387037915
+    second: HitArctic_18
+  - first:
+      213: -341627519524547012
+    second: HitArctic_19
+  - first:
+      213: -6714718530502629401
+    second: HitArctic_20
+  - first:
+      213: 6914504141334351081
+    second: HitArctic_21
+  - first:
+      213: 5229316339869302399
+    second: HitArctic_22
+  - first:
+      213: 6229420101787418957
+    second: HitArctic_23
+  - first:
+      213: -8070440151070183010
+    second: HitArctic_24
+  - first:
+      213: 1587173870664038554
+    second: HitArctic_25
+  - first:
+      213: -1011478789650967521
+    second: HitArctic_26
+  - first:
+      213: 8745429507978807881
+    second: HitArctic_27
+  - first:
+      213: -3931746838706842589
+    second: HitArctic_28
+  - first:
+      213: -2982789565185681507
+    second: HitArctic_29
+  - first:
+      213: -7812038032011950583
+    second: HitArctic_30
+  - first:
+      213: 2014491729935410267
+    second: HitArctic_31
+  - first:
+      213: -2622697671254309517
+    second: HitArctic_32
+  - first:
+      213: -6370669428465143802
+    second: HitArctic_33
+  - first:
+      213: 5266718494777906036
+    second: HitArctic_34
+  - first:
+      213: 3137395363281071306
+    second: HitArctic_35
+  - first:
+      213: -3264504512228591917
+    second: HitArctic_36
+  - first:
+      213: -5345770131548738483
+    second: HitArctic_37
+  - first:
+      213: 2179985529698831315
+    second: HitArctic_38
+  - first:
+      213: -2401782654818822415
+    second: HitArctic_39
+  - first:
+      213: -4676268587729760119
+    second: HitArctic_40
+  - first:
+      213: -8277679837787073077
+    second: HitArctic_41
+  - first:
+      213: -408458125092867019
+    second: HitArctic_42
+  - first:
+      213: -3468384590153770752
+    second: HitArctic_43
+  - first:
+      213: -2383850871093485237
+    second: HitArctic_44
+  - first:
+      213: -8553473061293635495
+    second: HitArctic_45
+  - first:
+      213: -334031194467261739
+    second: HitArctic_46
+  - first:
+      213: 4941805389862912187
+    second: HitArctic_47
+  - first:
+      213: 8577485593840056370
+    second: HitArctic_48
+  - first:
+      213: 7557072326259593857
+    second: HitArctic_49
+  - first:
+      213: -8509669929717753672
+    second: HitArctic_50
+  - first:
+      213: -6654962163084952248
+    second: HitArctic_51
+  - first:
+      213: 2912917395870093970
+    second: HitArctic_52
+  - first:
+      213: 1163364240877990608
+    second: HitArctic_53
+  - first:
+      213: 8460407251344993734
+    second: HitArctic_54
+  - first:
+      213: -1477849664549760869
+    second: HitArctic_55
+  - first:
+      213: -6563984208081176479
+    second: HitArctic_56
+  - first:
+      213: 6557448383113954929
+    second: HitArctic_57
+  - first:
+      213: 8200627146629615000
+    second: HitArctic_58
+  - first:
+      213: -8170768460389726273
+    second: HitArctic_59
+  - first:
+      213: -2102982744101792290
+    second: HitArctic_60
+  - first:
+      213: -404048586284721705
+    second: HitArctic_61
+  - first:
+      213: 4063795050627818378
+    second: HitArctic_62
+  - first:
+      213: -8584992391202102187
+    second: HitArctic_63
+  - first:
+      213: 124425386801010157
+    second: HitArctic_64
+  - first:
+      213: 2531794842004445510
+    second: HitArctic_65
+  - first:
+      213: 6801783673586871707
+    second: HitArctic_66
+  - first:
+      213: 2535677678633762683
+    second: HitArctic_67
+  - first:
+      213: -7347291599573679298
+    second: HitArctic_68
+  - first:
+      213: -409076662692668180
+    second: HitArctic_69
+  - first:
+      213: 7787247025748494857
+    second: HitArctic_70
+  - first:
+      213: -5097726346710016383
+    second: HitArctic_71
+  - first:
+      213: -4516677369402279900
+    second: HitArctic_72
+  - first:
+      213: -4183723827835048068
+    second: HitArctic_73
+  - first:
+      213: 1125219403960165030
+    second: HitArctic_74
+  - first:
+      213: -2324878948422176652
+    second: HitArctic_75
+  - first:
+      213: -5273815190051360286
+    second: HitArctic_76
+  - first:
+      213: 7763280581842182888
+    second: HitArctic_77
+  - first:
+      213: 7456024043990999165
+    second: HitArctic_78
+  - first:
+      213: 8340154161292376144
+    second: HitArctic_79
+  - first:
+      213: 4705771126368878017
+    second: HitArctic_80
+  - first:
+      213: 1466751083706496989
+    second: HitArctic_81
+  - first:
+      213: 8843220990037917843
+    second: HitArctic_82
+  - first:
+      213: -2259962442143953861
+    second: HitArctic_83
+  - first:
+      213: 1323424146291637420
+    second: HitArctic_84
+  - first:
+      213: 7281927097888802670
+    second: HitArctic_85
+  - first:
+      213: -668759626040828447
+    second: HitArctic_86
+  - first:
+      213: 3139227331881631583
+    second: HitArctic_87
+  - first:
+      213: -7254845534907001552
+    second: HitArctic_88
+  - first:
+      213: 6858550330300273733
+    second: HitArctic_89
+  - first:
+      213: -8768355703817475481
+    second: HitArctic_90
+  - first:
+      213: -2978157595283033818
+    second: HitArctic_91
+  - first:
+      213: 5870078308892743817
+    second: HitArctic_92
+  - first:
+      213: -5252792174664220299
+    second: HitArctic_93
+  - first:
+      213: -4835435866738037170
+    second: HitArctic_94
+  - first:
+      213: 7717987830063398833
+    second: HitArctic_95
+  - first:
+      213: -8614913609197649642
+    second: HitArctic_96
+  - first:
+      213: 6612972070404336718
+    second: HitArctic_97
+  - first:
+      213: 7390076463692687620
+    second: HitArctic_98
+  - first:
+      213: -2230549085332012667
+    second: HitArctic_99
+  - first:
+      213: -7591396222778828747
+    second: HitArctic_100
+  - first:
+      213: 4272893628704031376
+    second: HitArctic_101
+  - first:
+      213: -5183673879454489687
+    second: HitArctic_102
+  - first:
+      213: 940637145720301069
+    second: HitArctic_103
+  - first:
+      213: 5542018518189600648
+    second: HitArctic_104
+  - first:
+      213: 6559513945709351671
+    second: HitArctic_105
+  - first:
+      213: -3986899313062131843
+    second: HitArctic_106
+  - first:
+      213: -6498331455793739184
+    second: HitArctic_107
+  - first:
+      213: 7405389265957482298
+    second: HitArctic_108
+  - first:
+      213: 2911183542020312218
+    second: HitArctic_109
+  - first:
+      213: -6366535361367049141
+    second: HitArctic_110
+  - first:
+      213: 6998027617725806488
+    second: HitArctic_111
+  - first:
+      213: 7009094797764731870
+    second: HitArctic_112
+  - first:
+      213: 2504305176834794306
+    second: HitArctic_113
+  - first:
+      213: -7798658361500601365
+    second: HitArctic_114
+  - first:
+      213: -9114256581146991815
+    second: HitArctic_115
+  - first:
+      213: 5011637517869254735
+    second: HitArctic_116
+  - first:
+      213: 7326402757893843710
+    second: HitArctic_117
+  - first:
+      213: -3423021636545941439
+    second: HitArctic_118
+  - first:
+      213: 4160052032064061563
+    second: HitArctic_119
+  - first:
+      213: -4970531398810592444
+    second: HitArctic_120
+  - first:
+      213: 3705219751192253235
+    second: HitArctic_121
+  - first:
+      213: 5066589482935369985
+    second: HitArctic_122
+  - first:
+      213: 27736608286173820
+    second: HitArctic_123
+  - first:
+      213: -221495853109043899
+    second: HitArctic_124
+  - first:
+      213: 5988060444115163408
+    second: HitArctic_125
+  - first:
+      213: -1071017313205871416
+    second: HitArctic_126
+  - first:
+      213: -1461571549480623453
+    second: HitArctic_127
+  - first:
+      213: -7048568556322414920
+    second: HitArctic_128
+  - first:
+      213: 7266511152307961152
+    second: HitArctic_129
+  - first:
+      213: 6148663656717741588
+    second: HitArctic_130
+  - first:
+      213: 8711029317288160717
+    second: HitArctic_131
+  - first:
+      213: -1581385403747400123
+    second: HitArctic_132
+  - first:
+      213: 5478670094066703948
+    second: HitArctic_133
+  - first:
+      213: 1039182614183046383
+    second: HitArctic_134
+  - first:
+      213: 8271168305553714230
+    second: HitArctic_135
+  - first:
+      213: 6691108481226559774
+    second: HitArctic_136
+  - first:
+      213: -6985840898761269584
+    second: HitArctic_137
+  - first:
+      213: 7448707605081216080
+    second: HitArctic_138
+  - first:
+      213: -2899607269589104407
+    second: HitArctic_139
+  - first:
+      213: 3055235358969769315
+    second: HitArctic_140
+  - first:
+      213: -6596562939832106395
+    second: HitArctic_141
+  - first:
+      213: 4469361731742602169
+    second: HitArctic_142
+  - first:
+      213: 2344800614361463654
+    second: HitArctic_143
+  - first:
+      213: 3505297548708289751
+    second: HitArctic_144
+  - first:
+      213: 2153976245326920686
+    second: HitArctic_145
+  - first:
+      213: 5201255720381908340
+    second: HitArctic_146
+  - first:
+      213: 6894386468907406363
+    second: HitArctic_147
+  - first:
+      213: 3327756440606282306
+    second: HitArctic_148
+  - first:
+      213: -8726527438748878744
+    second: HitArctic_149
+  - first:
+      213: -5818171036851057376
+    second: HitArctic_150
+  - first:
+      213: -1448007475625892918
+    second: HitArctic_151
+  - first:
+      213: 6629909571145724690
+    second: HitArctic_152
+  - first:
+      213: 3244622352110145422
+    second: HitArctic_153
+  - first:
+      213: 1998439491621051703
+    second: HitArctic_154
+  - first:
+      213: 6139271653149640375
+    second: HitArctic_155
+  - first:
+      213: -2158724164298925342
+    second: HitArctic_156
+  - first:
+      213: -4462195451114634891
+    second: HitArctic_157
+  - first:
+      213: 3798695821269086949
+    second: HitArctic_158
+  - first:
+      213: -3587757169615001282
+    second: HitArctic_159
+  - first:
+      213: -1440072076544879702
+    second: HitArctic_160
+  - first:
+      213: 6201923006168485705
+    second: HitArctic_161
+  - first:
+      213: 4606140982774368487
+    second: HitArctic_162
+  - first:
+      213: -8515833430105336753
+    second: HitArctic_163
+  - first:
+      213: -4250693099474071009
+    second: HitArctic_164
+  - first:
+      213: -5799904630497405806
+    second: HitArctic_165
+  - first:
+      213: 5788670817457679530
+    second: HitArctic_166
+  - first:
+      213: 3669392199371815040
+    second: HitArctic_167
+  - first:
+      213: 4224561520720422626
+    second: HitArctic_168
+  - first:
+      213: 1332100659583904093
+    second: HitArctic_169
+  - first:
+      213: 3305574767989011919
+    second: HitArctic_170
+  - first:
+      213: 5111732599236944043
+    second: HitArctic_171
+  - first:
+      213: -6951588633736099941
+    second: HitArctic_172
+  - first:
+      213: 7820381442628752992
+    second: HitArctic_173
+  - first:
+      213: -1226370436687356086
+    second: HitArctic_174
+  - first:
+      213: 3045685873616735520
+    second: HitArctic_175
+  - first:
+      213: 2506796156547121860
+    second: HitArctic_176
+  - first:
+      213: 8192463631546297003
+    second: HitArctic_177
+  - first:
+      213: -904702354841317937
+    second: HitArctic_178
+  - first:
+      213: -7344095196060069544
+    second: HitArctic_179
+  - first:
+      213: -5717599475179537045
+    second: HitArctic_180
+  - first:
+      213: 7101470874299956856
+    second: HitArctic_181
+  - first:
+      213: -5219814432842402765
+    second: HitArctic_182
+  - first:
+      213: 4732160539672025157
+    second: HitArctic_183
+  - first:
+      213: 7129440806089474239
+    second: HitArctic_184
+  - first:
+      213: 5550110574624326572
+    second: HitArctic_185
+  - first:
+      213: 1626453144059332287
+    second: HitArctic_186
+  - first:
+      213: 1359235244487186141
+    second: HitArctic_187
+  - first:
+      213: 6930538153352253095
+    second: HitArctic_188
+  - first:
+      213: -5114385151875241048
+    second: HitArctic_189
+  - first:
+      213: 2383625483870708387
+    second: HitArctic_190
+  - first:
+      213: -2038294318134201298
+    second: HitArctic_191
+  - first:
+      213: 5133655757724521529
+    second: HitArctic_192
+  - first:
+      213: 3040815948419645085
+    second: HitArctic_193
+  - first:
+      213: -4528695299207763983
+    second: HitArctic_194
+  - first:
+      213: 5259451231616669274
+    second: HitArctic_195
+  - first:
+      213: -6863244732444176362
+    second: HitArctic_196
+  - first:
+      213: -6149931657423794234
+    second: HitArctic_197
+  - first:
+      213: 5986145203965840272
+    second: HitArctic_198
+  - first:
+      213: -7498983947405587764
+    second: HitArctic_199
+  - first:
+      213: -5739271870946584816
+    second: HitArctic_200
+  - first:
+      213: -4753004261037943631
+    second: HitArctic_201
+  - first:
+      213: 8085513282522687849
+    second: HitArctic_202
+  - first:
+      213: -2388404065180298776
+    second: HitArctic_203
+  - first:
+      213: -7908668430988147912
+    second: HitArctic_204
+  - first:
+      213: 211123658128266589
+    second: HitArctic_205
+  - first:
+      213: -8559392342949468268
+    second: HitArctic_206
+  - first:
+      213: 1945301211864501711
+    second: HitArctic_207
+  - first:
+      213: -7530174769918235234
+    second: HitArctic_208
+  - first:
+      213: 3813413258057891449
+    second: HitArctic_209
+  - first:
+      213: 4406625626679641606
+    second: HitArctic_210
+  - first:
+      213: 6131649166359279714
+    second: HitArctic_211
+  - first:
+      213: 3252592045541923130
+    second: HitArctic_212
+  - first:
+      213: 7819852649062468320
+    second: HitArctic_213
+  - first:
+      213: -8592471930763889287
+    second: HitArctic_214
+  - first:
+      213: -1077621090718478045
+    second: HitArctic_215
+  - first:
+      213: -2879715998943184590
+    second: HitArctic_216
+  - first:
+      213: -536773563628105122
+    second: HitArctic_217
+  - first:
+      213: 2146473529777171155
+    second: HitArctic_218
+  - first:
+      213: -7534903618342761498
+    second: HitArctic_219
+  - first:
+      213: -4021339307447479849
+    second: HitArctic_220
+  - first:
+      213: -3107741094422910962
+    second: HitArctic_221
+  - first:
+      213: 1715480776836158507
+    second: HitArctic_222
+  - first:
+      213: 2202366721172596003
+    second: HitArctic_223
+  - first:
+      213: -4444358092662466459
+    second: HitArctic_224
+  - first:
+      213: 2371184131417653944
+    second: HitArctic_225
+  - first:
+      213: 8951036357137509265
+    second: HitArctic_226
+  - first:
+      213: 9072174568710414827
+    second: HitArctic_227
+  - first:
+      213: 6441868318168779404
+    second: HitArctic_228
+  - first:
+      213: 2136604880237389586
+    second: HitArctic_229
+  - first:
+      213: -8368138572555842636
+    second: HitArctic_230
+  - first:
+      213: 4095343189839966172
+    second: HitArctic_231
+  - first:
+      213: -851790083247929498
+    second: HitArctic_232
+  - first:
+      213: -2701484194819385754
+    second: HitArctic_233
+  - first:
+      213: -6670271415759286729
+    second: HitArctic_234
+  - first:
+      213: -5554406910019384550
+    second: HitArctic_235
+  - first:
+      213: 202206022510687665
+    second: HitArctic_236
+  - first:
+      213: -3292268531006757760
+    second: HitArctic_237
+  - first:
+      213: 711809173844102099
+    second: HitArctic_238
+  - first:
+      213: -4067482165656954226
+    second: HitArctic_239
+  - first:
+      213: -6768678567435401876
+    second: HitArctic_240
+  - first:
+      213: 7753837016730650596
+    second: HitArctic_241
+  - first:
+      213: -719408416524753659
+    second: HitArctic_242
+  - first:
+      213: -6906478505039184899
+    second: HitArctic_243
+  - first:
+      213: 2988703322509648154
+    second: HitArctic_244
+  - first:
+      213: 2415141640146261836
+    second: HitArctic_245
+  - first:
+      213: -8000018452893837748
+    second: HitArctic_246
+  - first:
+      213: 4394218839452703882
+    second: HitArctic_247
+  - first:
+      213: -7971764781667518089
+    second: HitArctic_248
+  - first:
+      213: -5495092182734106624
+    second: HitArctic_249
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HitArctic_0
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 578
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c2c8f7cc8119bd0800000000000000
+      internalID: -2625289841188000737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_1
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 607
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1e121d18d854ef0800000000000000
+      internalID: -124537825983864407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_2
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 599
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a12b92c1e4a7c50800000000000000
+      internalID: 6663724481513659010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_3
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 601
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be81cab3072d55960800000000000000
+      internalID: 7590204126482143467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_4
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 454
+        width: 169
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c910364faba0f420800000000000000
+      internalID: 2661816149061147073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 585
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41cc800576dd4a120800000000000000
+      internalID: 2424305935226293268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_6
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 563
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a95b55d818ffb00800000000000000
+      internalID: 864552097506761320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_7
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 590
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd68d706e428de30800000000000000
+      internalID: 4528409995713736144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_8
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 536
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83807a3fd555e3250800000000000000
+      internalID: 5926268021674281016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_9
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 590
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f133988485f9300800000000000000
+      internalID: 261024371973496577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_10
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 590
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3770498b02773e490800000000000000
+      internalID: -7718194353963530381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_11
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 584
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8818dc50434636700800000000000000
+      internalID: 532379355558281608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_12
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 579
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0828505a6055a9d50800000000000000
+      internalID: 6744796878967505536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_13
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 527
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7817a06e63136fa90800000000000000
+      internalID: -7280577635740388985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_14
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 571
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63f399c38a1eb8a0800000000000000
+      internalID: -6287558876437679249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_15
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 571
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41ec814b96c02460800000000000000
+      internalID: 7214984973169516874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_16
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 576
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db88421ed1d6b2d0800000000000000
+      internalID: -3263190128263656489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_17
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 573
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563dceb6927ab4060800000000000000
+      internalID: 6938823447240561509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_18
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 569
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bdf3f208f3785e0800000000000000
+      internalID: -1907486097387037915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_19
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 559
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36dd3db49b424bf0800000000000000
+      internalID: -341627519524547012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_20
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 546
+        width: 58
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e768a6921780d2a0800000000000000
+      internalID: -6714718530502629401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_21
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 571
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec8336c1e045ff50800000000000000
+      internalID: 6914504141334351081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_22
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 567
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e3e084183429840800000000000000
+      internalID: 5229316339869302399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_23
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 568
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4187b3e398537650800000000000000
+      internalID: 6229420101787418957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_24
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 536
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91796e0179000090800000000000000
+      internalID: -8070440151070183010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_25
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 559
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9836b5e936c60610800000000000000
+      internalID: 1587173870664038554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_26
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 554
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14130d566186f1f0800000000000000
+      internalID: -1011478789650967521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_27
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 562
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94acb4f5dc10e5970800000000000000
+      internalID: 8745429507978807881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_28
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 561
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3241d1cd411af69c0800000000000000
+      internalID: -3931746838706842589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_29
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 446
+        width: 193
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d979d57a1b00b96d0800000000000000
+      internalID: -2982789565185681507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_30
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 557
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9060612ccc0169390800000000000000
+      internalID: -7812038032011950583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_31
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 560
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5423cd1e89e4fb10800000000000000
+      internalID: 2014491729935410267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_32
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 532
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37584a71d5e4a9bd0800000000000000
+      internalID: -2622697671254309517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_33
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 547
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600f4e678e5d697a0800000000000000
+      internalID: -6370669428465143802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_34
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 550
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47397351194271940800000000000000
+      internalID: 5266718494777906036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_35
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 542
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc6354d5744a8b20800000000000000
+      internalID: 3137395363281071306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_36
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 539
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d674f4317622b2d0800000000000000
+      internalID: -3264504512228591917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_37
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 529
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ce422736200d5b0800000000000000
+      internalID: -5345770131548738483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_38
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 444
+        width: 128
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbc0390a4dd04e10800000000000000
+      internalID: 2179985529698831315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_39
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 536
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f654df86672baed0800000000000000
+      internalID: -2401782654818822415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_40
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 538
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980dc02de7e8a1fb0800000000000000
+      internalID: -4676268587729760119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_41
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 430
+        width: 161
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5d9486b06cf1d80800000000000000
+      internalID: -8277679837787073077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_42
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 514
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534b734df7dd45af0800000000000000
+      internalID: -408458125092867019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_43
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 529
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009127f6792dddfc0800000000000000
+      internalID: -3468384590153770752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_44
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 516
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41a7fe434cdaeed0800000000000000
+      internalID: -2383850871093485237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_45
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 496
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95848b9a195fb4980800000000000000
+      internalID: -8553473061293635495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_46
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 516
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d221edf5684d5bf0800000000000000
+      internalID: -334031194467261739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_47
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 495
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0c3ebb1d1d49440800000000000000
+      internalID: 4941805389862912187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_48
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 479
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 238fddeb3b9590770800000000000000
+      internalID: 8577485593840056370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_49
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 489
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18253acdd3d10e860800000000000000
+      internalID: 7557072326259593857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_50
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 494
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8995bf84497e980800000000000000
+      internalID: -8509669929717753672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_51
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 467
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84df7a31c23d4a3a0800000000000000
+      internalID: -6654962163084952248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_52
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 462
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29294e030f2cc6820800000000000000
+      internalID: 2912917395870093970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_53
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 473
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2bce10d99152010800000000000000
+      internalID: 1163364240877990608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_54
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 476
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdae87e197696570800000000000000
+      internalID: 8460407251344993734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_55
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 455
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90d4116f8f9d7be0800000000000000
+      internalID: -1477849664549760869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_56
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 461
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1683c06e32b08e4a0800000000000000
+      internalID: -6563984208081176479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_57
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 467
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1768774cf8cb00b50800000000000000
+      internalID: 6557448383113954929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_58
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 465
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d884ae0fa7ec170800000000000000
+      internalID: 8200627146629615000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_59
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 451
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7418830699b9e80800000000000000
+      internalID: -8170768460389726273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_60
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 451
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed559091654b0d2e0800000000000000
+      internalID: -2102982744101792290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_61
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 442
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9108693f7846af0800000000000000
+      internalID: -404048586284721705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_62
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 444
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8369a05110856830800000000000000
+      internalID: 4063795050627818378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_63
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 428
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554a7fac7eafbd880800000000000000
+      internalID: -8584992391202102187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_64
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 406
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de59055ea3c0ab100800000000000000
+      internalID: 124425386801010157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_65
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 411
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64957d9aefdb22320800000000000000
+      internalID: 2531794842004445510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_66
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 412
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d6237b63ac46e50800000000000000
+      internalID: 6801783673586871707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_67
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 391
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f3ad30a69803320800000000000000
+      internalID: 2535677678633762683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_68
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 391
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e330332c73d290a90800000000000000
+      internalID: -7347291599573679298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_69
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 390
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec1d4251faa25af0800000000000000
+      internalID: -409076662692668180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_70
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 375
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ac4fb49ebd11c60800000000000000
+      internalID: 7787247025748494857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_71
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 361
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e133685ec3149b0800000000000000
+      internalID: -5097726346710016383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_72
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 373
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4283bb7ecd98151c0800000000000000
+      internalID: -4516677369402279900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_73
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 359
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7fed8b485d60f5c0800000000000000
+      internalID: -4183723827835048068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_74
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 368
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a22c6316159d9f00800000000000000
+      internalID: 1125219403960165030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_75
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 363
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47033850aee5cbfd0800000000000000
+      internalID: -2324878948422176652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_76
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 357
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1fde9c605afc6b0800000000000000
+      internalID: -5273815190051360286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_77
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 353
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2246cbe86bcbb60800000000000000
+      internalID: 7763280581842182888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_78
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 352
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d70ead24d5e197760800000000000000
+      internalID: 7456024043990999165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_79
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 362
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058f3db850e2eb370800000000000000
+      internalID: 8340154161292376144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_80
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 362
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cdb18d38e14e4140800000000000000
+      internalID: 4705771126368878017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_81
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 359
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7be36e652fa5410800000000000000
+      internalID: 1466751083706496989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_82
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 357
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3900d7513ae69ba70800000000000000
+      internalID: 8843220990037917843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_83
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 348
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c0946f12003a0e0800000000000000
+      internalID: -2259962442143953861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_84
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 354
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac33eecf3fbd5210800000000000000
+      internalID: 1323424146291637420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_85
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 366
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6704fd3d1a9e0560800000000000000
+      internalID: 7281927097888802670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_86
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed96b1d9a618b6f0800000000000000
+      internalID: -668759626040828447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_87
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 348
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f700240a6c09b20800000000000000
+      internalID: 3139227331881631583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_88
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 344
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0351a8f7c6c915b90800000000000000
+      internalID: -7254845534907001552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_89
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 343
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5449fafef277e2f50800000000000000
+      internalID: 6858550330300273733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_90
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 340
+        width: 50
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a60b1b1fa805680800000000000000
+      internalID: -8768355703817475481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_91
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 343
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621f50032757ba6d0800000000000000
+      internalID: -2978157595283033818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_92
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 348
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9881745fe15b67150800000000000000
+      internalID: 5870078308892743817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_93
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 339
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571003ef8555a17b0800000000000000
+      internalID: -5252792174664220299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_94
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 342
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e65ecc2b415ecb0800000000000000
+      internalID: -4835435866738037170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_95
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 331
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf77bf2a0dcb1b60800000000000000
+      internalID: 7717987830063398833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_96
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 342
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 611881957bda17880800000000000000
+      internalID: -8614913609197649642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_97
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 331
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ca70e9f0ff5cb50800000000000000
+      internalID: 6612972070404336718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_98
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 350
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409a061b363de8660800000000000000
+      internalID: 7390076463692687620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_99
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 348
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58186b2cc6f7b01e0800000000000000
+      internalID: -2230549085332012667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_100
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 347
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53896083b51f5a690800000000000000
+      internalID: -7591396222778828747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_101
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 334
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0920fe5dd1e5c4b30800000000000000
+      internalID: 4272893628704031376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_102
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 355
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3e4a72214ef08b0800000000000000
+      internalID: -5183673879454489687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_103
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 345
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0622351080dd0d00800000000000000
+      internalID: 940637145720301069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_104
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 324
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fe35bba7439ec40800000000000000
+      internalID: 5542018518189600648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_105
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 338
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f21a390e23180b50800000000000000
+      internalID: 6559513945709351671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_106
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 332
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77cea1c230bba8c0800000000000000
+      internalID: -3986899313062131843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_107
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 324
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05acaa878f941d5a0800000000000000
+      internalID: -6498331455793739184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_108
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 332
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fe2ec4d4a35c660800000000000000
+      internalID: 7405389265957482298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_109
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 322
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c8512e10a966820800000000000000
+      internalID: 2911183542020312218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_110
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 332
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cf0c7f1d585a7a0800000000000000
+      internalID: -6366535361367049141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_111
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 326
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8977bea8a0dfd1160800000000000000
+      internalID: 6998027617725806488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_112
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 320
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed32ec1359e454160800000000000000
+      internalID: 7009094797764731870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_113
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 316
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243e86a3a4411c220800000000000000
+      internalID: 2504305176834794306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_114
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 309
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3702e0a8995c390800000000000000
+      internalID: -7798658361500601365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_115
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 298
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933a7f8cde7a38180800000000000000
+      internalID: -9114256581146991815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_116
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 314
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f480e9b05c9ec8540800000000000000
+      internalID: 5011637517869254735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_117
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 306
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa64b9cd7c9ca560800000000000000
+      internalID: 7326402757893843710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_118
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 314
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 140f33f15fbfe70d0800000000000000
+      internalID: -3423021636545941439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_119
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 294
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70025248497bb930800000000000000
+      internalID: 4160052032064061563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_120
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 322
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b18fc1700250bb0800000000000000
+      internalID: -4970531398810592444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_121
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 318
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333539c8bb59b6330800000000000000
+      internalID: 3705219751192253235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_122
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 321
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101c7117a44205640800000000000000
+      internalID: 5066589482935369985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_123
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 311
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7aeb2c5c4a826000800000000000000
+      internalID: 27736608286173820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_124
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 318
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d9634f1b61decf0800000000000000
+      internalID: -221495853109043899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_125
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 315
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0195d017f3dd91350800000000000000
+      internalID: 5988060444115163408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_126
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 303
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc121a9d6bf221f0800000000000000
+      internalID: -1071017313205871416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_127
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 310
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2e3636b6477bbe0800000000000000
+      internalID: -1461571549480623453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_128
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 299
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be1a613e347e2e90800000000000000
+      internalID: -7048568556322414920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_129
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 311
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04dfab5b465d7d460800000000000000
+      internalID: 7266511152307961152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_130
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 306
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ee30ec401745550800000000000000
+      internalID: 6148663656717741588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_131
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 302
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd69f4d20bc3e870800000000000000
+      internalID: 8711029317288160717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_132
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 304
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54606a49a5acd0ae0800000000000000
+      internalID: -1581385403747400123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_133
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 299
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ed66e5c65280c40800000000000000
+      internalID: 5478670094066703948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_134
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 281
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec642fe41beb6e00800000000000000
+      internalID: 1039182614183046383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_135
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 304
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63caff950c719c270800000000000000
+      internalID: 8271168305553714230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_136
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 287
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11dc1176b79bdc50800000000000000
+      internalID: 6691108481226559774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_137
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 292
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be50f317be4d0f90800000000000000
+      internalID: -6985840898761269584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_138
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 299
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054dd941a102f5760800000000000000
+      internalID: 7448707605081216080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_139
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 284
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e840041d8682c7d0800000000000000
+      internalID: -2899607269589104407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_140
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 279
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d2b942f50666a20800000000000000
+      internalID: 3055235358969769315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_141
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 286
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5620dc0d4fc4474a0800000000000000
+      internalID: -6596562939832106395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_142
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 283
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b31e39b0dc560e30800000000000000
+      internalID: 4469361731742602169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_143
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 290
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bf1284cb76a8020800000000000000
+      internalID: 2344800614361463654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_144
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 282
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc1ec67c8155a030800000000000000
+      internalID: 3505297548708289751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_145
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 280
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb375d9bf574ed10800000000000000
+      internalID: 2153976245326920686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_146
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 287
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475055f25829e2840800000000000000
+      internalID: 5201255720381908340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_147
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 293
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b145c7727f7cdaf50800000000000000
+      internalID: 6894386468907406363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_148
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 276
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2421b5df9d09e2e20800000000000000
+      internalID: 3327756440606282306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_149
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 283
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8687ca2978525e680800000000000000
+      internalID: -8726527438748878744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_150
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 278
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02dc60a9444b14fa0800000000000000
+      internalID: -5818171036851057376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_151
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 232
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3653f6fd4a7ebe0800000000000000
+      internalID: -1448007475625892918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_152
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 244
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2137a11d0ab220c50800000000000000
+      internalID: 6629909571145724690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_153
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 271
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f41d7a6d6370d20800000000000000
+      internalID: 3244622352110145422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_154
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 278
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d5f232122ebbb10800000000000000
+      internalID: 1998439491621051703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_155
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 273
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b60c919a03133550800000000000000
+      internalID: 6139271653149640375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_156
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 281
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea19ea5fcbaa02e0800000000000000
+      internalID: -2158724164298925342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_157
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 253
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571c2f101e81312c0800000000000000
+      internalID: -4462195451114634891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_158
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2318c19bda7b430800000000000000
+      internalID: 3798695821269086949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_159
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 257
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39acbcecd9b53ec0800000000000000
+      internalID: -3587757169615001282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_160
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 270
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa355928316d30ce0800000000000000
+      internalID: -1440072076544879702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_161
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 266
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fcefa6d18a11650800000000000000
+      internalID: 6201923006168485705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_162
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 264
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e882a7c1dc4cef30800000000000000
+      internalID: 4606140982774368487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_163
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 262
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44dc283d9ea1d980800000000000000
+      internalID: -8515833430105336753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_164
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12d4aca5218205c0800000000000000
+      internalID: -4250693099474071009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_165
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 267
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2941f00c779928fa0800000000000000
+      internalID: -5799904630497405806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_166
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 264
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac2c34507d755050800000000000000
+      internalID: 5788670817457679530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_167
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 262
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088752993cc4ce230800000000000000
+      internalID: 3669392199371815040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_168
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 247
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e623560258a0aa30800000000000000
+      internalID: 4224561520720422626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_169
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 243
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59ef8bfd729c7210800000000000000
+      internalID: 1332100659583904093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_170
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 252
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5ba70ecb2cfdd20800000000000000
+      internalID: 3305574767989011919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_171
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 257
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba06d4447b580f640800000000000000
+      internalID: 5111732599236944043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_172
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 244
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97448df7fef68f90800000000000000
+      internalID: -6951588633736099941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_173
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 248
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06691f7ec73978c60800000000000000
+      internalID: 7820381442628752992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_174
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 241
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f953ed59e0bfee0800000000000000
+      internalID: -1226370436687356086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_175
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 245
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02dc9525a23744a20800000000000000
+      internalID: 3045685873616735520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_176
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 252
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c24e43a2dde9c220800000000000000
+      internalID: 2506796156547121860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_177
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 245
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baaaf91744a71b170800000000000000
+      internalID: 8192463631546297003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_178
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 240
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd4938600ad173f0800000000000000
+      internalID: -904702354841317937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_179
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 242
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851df227458841a90800000000000000
+      internalID: -7344095196060069544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_180
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 254
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6db6f9029107a0b0800000000000000
+      internalID: -5717599475179537045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_181
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 251
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e7e6d822e7d8260800000000000000
+      internalID: 7101470874299956856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_182
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 237
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334b8f8dd6e7f87b0800000000000000
+      internalID: -5219814432842402765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_183
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 234
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548954350f20ca140800000000000000
+      internalID: 4732160539672025157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_184
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 246
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb04326c3acd0f260800000000000000
+      internalID: 7129440806089474239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_185
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 238
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca34f907924f50d40800000000000000
+      internalID: 5550110574624326572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_186
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 224
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb649776482529610800000000000000
+      internalID: 1626453144059332287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_187
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 230
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd699d9d049fcd210800000000000000
+      internalID: 1359235244487186141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_188
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 238
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae4adc1bb73e2060800000000000000
+      internalID: 6930538153352253095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_189
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 235
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aba1f13dcd0609b0800000000000000
+      internalID: -5114385151875241048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_190
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 238
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2aea3afb6541120800000000000000
+      internalID: 2383625483870708387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_191
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 240
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24f9e3fd1686b3e0800000000000000
+      internalID: -2038294318134201298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_192
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 234
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9341f4e56b86e3740800000000000000
+      internalID: 5133655757724521529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_193
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 246
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e35e08ef5233a20800000000000000
+      internalID: 3040815948419645085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_194
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 238
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f76db29e97d621c0800000000000000
+      internalID: -4528695299207763983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_195
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 243
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56900687035df840800000000000000
+      internalID: 5259451231616669274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_196
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 231
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6101814674bd0c0a0800000000000000
+      internalID: -6863244732444176362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_197
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf4356cdbd07aaa0800000000000000
+      internalID: -6149931657423794234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_198
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 237
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09bca48d85f031350800000000000000
+      internalID: 5986145203965840272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_199
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca8886c4d14ee790800000000000000
+      internalID: -7498983947405587764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_200
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 227
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01756de24a20a50b0800000000000000
+      internalID: -5739271870946584816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_201
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 229
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b45aec9ecfe90eb0800000000000000
+      internalID: -4753004261037943631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_202
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 233
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969a777dd73853070800000000000000
+      internalID: 8085513282522687849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_203
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 233
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e154d2382faaded0800000000000000
+      internalID: -2388404065180298776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_204
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 232
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8330b94c6f3ce3290800000000000000
+      internalID: -7908668430988147912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_205
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 215
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d559a6639df0ee200800000000000000
+      internalID: 211123658128266589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_206
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 228
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4976c41830ee63980800000000000000
+      internalID: -8559392342949468268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_207
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 222
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd025245291ffa10800000000000000
+      internalID: 1945301211864501711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_208
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 220
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d2a6e71f17f7790800000000000000
+      internalID: -7530174769918235234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_209
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 229
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e3e446727fbe430800000000000000
+      internalID: 3813413258057891449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_210
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 217
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6068f5009aa772d30800000000000000
+      internalID: 4406625626679641606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_211
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 211
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2683a201e6ef71550800000000000000
+      internalID: 6131649166359279714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_212
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 219
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3999c18b37832d20800000000000000
+      internalID: 3252592045541923130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_213
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 219
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea044f8d82b58c60800000000000000
+      internalID: 7819852649062468320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_214
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 217
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975bd48cd4861c880800000000000000
+      internalID: -8592471930763889287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_215
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 146
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3219145d3558b01f0800000000000000
+      internalID: -1077621090718478045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_216
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 130
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2397bfc6e813908d0800000000000000
+      internalID: -2879715998943184590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_217
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 131
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52502fa94ffc88f0800000000000000
+      internalID: -536773563628105122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_218
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 119
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3daa5268d4ec9cd10800000000000000
+      internalID: 2146473529777171155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_219
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 135
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ebcfdba415ae6790800000000000000
+      internalID: -7534903618342761498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_220
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 116
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d11742b4355138c0800000000000000
+      internalID: -4021339307447479849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_221
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 110
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08e90da0f51fd4d0800000000000000
+      internalID: -3107741094422910962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_222
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 121
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2494527dac9ec710800000000000000
+      internalID: 1715480776836158507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_223
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 113
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32562a04dd0609e10800000000000000
+      internalID: 2202366721172596003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_224
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 109
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5689838acd77252c0800000000000000
+      internalID: -4444358092662466459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_225
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 109
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2413a876328e020800000000000000
+      internalID: 2371184131417653944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_226
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 104
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ba9c66428783c70800000000000000
+      internalID: 8951036357137509265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_227
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 106
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1215c24b6d6ed70800000000000000
+      internalID: 9072174568710414827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_228
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 108
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a0b4ada1d166950800000000000000
+      internalID: 6441868318168779404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_229
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 97
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2176aef71deb6ad10800000000000000
+      internalID: 2136604880237389586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_230
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 88
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb8097fd466edb80800000000000000
+      internalID: -8368138572555842636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_231
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 85
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfe9bfdee495d830800000000000000
+      internalID: 4095343189839966172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_232
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 84
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6678ec8ae65dd24f0800000000000000
+      internalID: -851790083247929498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_233
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 58
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66655791076628ad0800000000000000
+      internalID: -2701484194819385754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_234
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 92
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ec93cec7f6e63a0800000000000000
+      internalID: -6670271415759286729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_235
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 83
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1bc1560858cae2b0800000000000000
+      internalID: -5554406910019384550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_236
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 70
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5b13f5e416ec200800000000000000
+      internalID: 202206022510687665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_237
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 81
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0842528d6338f42d0800000000000000
+      internalID: -3292268531006757760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_238
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 68
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db87da1caad0e900800000000000000
+      internalID: 711809173844102099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_239
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 59
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ad7c155866d87c0800000000000000
+      internalID: -4067482165656954226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_240
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 53
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65863574b2d012a0800000000000000
+      internalID: -6768678567435401876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_241
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 54
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e741846fa92b9b60800000000000000
+      internalID: 7753837016730650596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_242
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 44
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505ad945bd52406f0800000000000000
+      internalID: -719408416524753659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_243
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 38
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbb44a44624720a0800000000000000
+      internalID: -6906478505039184899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_244
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11a73546d10a7920800000000000000
+      internalID: 2988703322509648154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_245
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 26
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c471c27968e448120800000000000000
+      internalID: 2415141640146261836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_246
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 31
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4651be5a993af090800000000000000
+      internalID: -8000018452893837748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_247
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 10
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c58eeb0c66bfc30800000000000000
+      internalID: 4394218839452703882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_248
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 5
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779fcb3da2a9e5190800000000000000
+      internalID: -7971764781667518089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitArctic_249
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 17
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0009b1826c28db3b0800000000000000
+      internalID: -5495092182734106624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HitArctic_0: -2625289841188000737
+      HitArctic_1: -124537825983864407
+      HitArctic_10: -7718194353963530381
+      HitArctic_100: -7591396222778828747
+      HitArctic_101: 4272893628704031376
+      HitArctic_102: -5183673879454489687
+      HitArctic_103: 940637145720301069
+      HitArctic_104: 5542018518189600648
+      HitArctic_105: 6559513945709351671
+      HitArctic_106: -3986899313062131843
+      HitArctic_107: -6498331455793739184
+      HitArctic_108: 7405389265957482298
+      HitArctic_109: 2911183542020312218
+      HitArctic_11: 532379355558281608
+      HitArctic_110: -6366535361367049141
+      HitArctic_111: 6998027617725806488
+      HitArctic_112: 7009094797764731870
+      HitArctic_113: 2504305176834794306
+      HitArctic_114: -7798658361500601365
+      HitArctic_115: -9114256581146991815
+      HitArctic_116: 5011637517869254735
+      HitArctic_117: 7326402757893843710
+      HitArctic_118: -3423021636545941439
+      HitArctic_119: 4160052032064061563
+      HitArctic_12: 6744796878967505536
+      HitArctic_120: -4970531398810592444
+      HitArctic_121: 3705219751192253235
+      HitArctic_122: 5066589482935369985
+      HitArctic_123: 27736608286173820
+      HitArctic_124: -221495853109043899
+      HitArctic_125: 5988060444115163408
+      HitArctic_126: -1071017313205871416
+      HitArctic_127: -1461571549480623453
+      HitArctic_128: -7048568556322414920
+      HitArctic_129: 7266511152307961152
+      HitArctic_13: -7280577635740388985
+      HitArctic_130: 6148663656717741588
+      HitArctic_131: 8711029317288160717
+      HitArctic_132: -1581385403747400123
+      HitArctic_133: 5478670094066703948
+      HitArctic_134: 1039182614183046383
+      HitArctic_135: 8271168305553714230
+      HitArctic_136: 6691108481226559774
+      HitArctic_137: -6985840898761269584
+      HitArctic_138: 7448707605081216080
+      HitArctic_139: -2899607269589104407
+      HitArctic_14: -6287558876437679249
+      HitArctic_140: 3055235358969769315
+      HitArctic_141: -6596562939832106395
+      HitArctic_142: 4469361731742602169
+      HitArctic_143: 2344800614361463654
+      HitArctic_144: 3505297548708289751
+      HitArctic_145: 2153976245326920686
+      HitArctic_146: 5201255720381908340
+      HitArctic_147: 6894386468907406363
+      HitArctic_148: 3327756440606282306
+      HitArctic_149: -8726527438748878744
+      HitArctic_15: 7214984973169516874
+      HitArctic_150: -5818171036851057376
+      HitArctic_151: -1448007475625892918
+      HitArctic_152: 6629909571145724690
+      HitArctic_153: 3244622352110145422
+      HitArctic_154: 1998439491621051703
+      HitArctic_155: 6139271653149640375
+      HitArctic_156: -2158724164298925342
+      HitArctic_157: -4462195451114634891
+      HitArctic_158: 3798695821269086949
+      HitArctic_159: -3587757169615001282
+      HitArctic_16: -3263190128263656489
+      HitArctic_160: -1440072076544879702
+      HitArctic_161: 6201923006168485705
+      HitArctic_162: 4606140982774368487
+      HitArctic_163: -8515833430105336753
+      HitArctic_164: -4250693099474071009
+      HitArctic_165: -5799904630497405806
+      HitArctic_166: 5788670817457679530
+      HitArctic_167: 3669392199371815040
+      HitArctic_168: 4224561520720422626
+      HitArctic_169: 1332100659583904093
+      HitArctic_17: 6938823447240561509
+      HitArctic_170: 3305574767989011919
+      HitArctic_171: 5111732599236944043
+      HitArctic_172: -6951588633736099941
+      HitArctic_173: 7820381442628752992
+      HitArctic_174: -1226370436687356086
+      HitArctic_175: 3045685873616735520
+      HitArctic_176: 2506796156547121860
+      HitArctic_177: 8192463631546297003
+      HitArctic_178: -904702354841317937
+      HitArctic_179: -7344095196060069544
+      HitArctic_18: -1907486097387037915
+      HitArctic_180: -5717599475179537045
+      HitArctic_181: 7101470874299956856
+      HitArctic_182: -5219814432842402765
+      HitArctic_183: 4732160539672025157
+      HitArctic_184: 7129440806089474239
+      HitArctic_185: 5550110574624326572
+      HitArctic_186: 1626453144059332287
+      HitArctic_187: 1359235244487186141
+      HitArctic_188: 6930538153352253095
+      HitArctic_189: -5114385151875241048
+      HitArctic_19: -341627519524547012
+      HitArctic_190: 2383625483870708387
+      HitArctic_191: -2038294318134201298
+      HitArctic_192: 5133655757724521529
+      HitArctic_193: 3040815948419645085
+      HitArctic_194: -4528695299207763983
+      HitArctic_195: 5259451231616669274
+      HitArctic_196: -6863244732444176362
+      HitArctic_197: -6149931657423794234
+      HitArctic_198: 5986145203965840272
+      HitArctic_199: -7498983947405587764
+      HitArctic_2: 6663724481513659010
+      HitArctic_20: -6714718530502629401
+      HitArctic_200: -5739271870946584816
+      HitArctic_201: -4753004261037943631
+      HitArctic_202: 8085513282522687849
+      HitArctic_203: -2388404065180298776
+      HitArctic_204: -7908668430988147912
+      HitArctic_205: 211123658128266589
+      HitArctic_206: -8559392342949468268
+      HitArctic_207: 1945301211864501711
+      HitArctic_208: -7530174769918235234
+      HitArctic_209: 3813413258057891449
+      HitArctic_21: 6914504141334351081
+      HitArctic_210: 4406625626679641606
+      HitArctic_211: 6131649166359279714
+      HitArctic_212: 3252592045541923130
+      HitArctic_213: 7819852649062468320
+      HitArctic_214: -8592471930763889287
+      HitArctic_215: -1077621090718478045
+      HitArctic_216: -2879715998943184590
+      HitArctic_217: -536773563628105122
+      HitArctic_218: 2146473529777171155
+      HitArctic_219: -7534903618342761498
+      HitArctic_22: 5229316339869302399
+      HitArctic_220: -4021339307447479849
+      HitArctic_221: -3107741094422910962
+      HitArctic_222: 1715480776836158507
+      HitArctic_223: 2202366721172596003
+      HitArctic_224: -4444358092662466459
+      HitArctic_225: 2371184131417653944
+      HitArctic_226: 8951036357137509265
+      HitArctic_227: 9072174568710414827
+      HitArctic_228: 6441868318168779404
+      HitArctic_229: 2136604880237389586
+      HitArctic_23: 6229420101787418957
+      HitArctic_230: -8368138572555842636
+      HitArctic_231: 4095343189839966172
+      HitArctic_232: -851790083247929498
+      HitArctic_233: -2701484194819385754
+      HitArctic_234: -6670271415759286729
+      HitArctic_235: -5554406910019384550
+      HitArctic_236: 202206022510687665
+      HitArctic_237: -3292268531006757760
+      HitArctic_238: 711809173844102099
+      HitArctic_239: -4067482165656954226
+      HitArctic_24: -8070440151070183010
+      HitArctic_240: -6768678567435401876
+      HitArctic_241: 7753837016730650596
+      HitArctic_242: -719408416524753659
+      HitArctic_243: -6906478505039184899
+      HitArctic_244: 2988703322509648154
+      HitArctic_245: 2415141640146261836
+      HitArctic_246: -8000018452893837748
+      HitArctic_247: 4394218839452703882
+      HitArctic_248: -7971764781667518089
+      HitArctic_249: -5495092182734106624
+      HitArctic_25: 1587173870664038554
+      HitArctic_26: -1011478789650967521
+      HitArctic_27: 8745429507978807881
+      HitArctic_28: -3931746838706842589
+      HitArctic_29: -2982789565185681507
+      HitArctic_3: 7590204126482143467
+      HitArctic_30: -7812038032011950583
+      HitArctic_31: 2014491729935410267
+      HitArctic_32: -2622697671254309517
+      HitArctic_33: -6370669428465143802
+      HitArctic_34: 5266718494777906036
+      HitArctic_35: 3137395363281071306
+      HitArctic_36: -3264504512228591917
+      HitArctic_37: -5345770131548738483
+      HitArctic_38: 2179985529698831315
+      HitArctic_39: -2401782654818822415
+      HitArctic_4: 2661816149061147073
+      HitArctic_40: -4676268587729760119
+      HitArctic_41: -8277679837787073077
+      HitArctic_42: -408458125092867019
+      HitArctic_43: -3468384590153770752
+      HitArctic_44: -2383850871093485237
+      HitArctic_45: -8553473061293635495
+      HitArctic_46: -334031194467261739
+      HitArctic_47: 4941805389862912187
+      HitArctic_48: 8577485593840056370
+      HitArctic_49: 7557072326259593857
+      HitArctic_5: 2424305935226293268
+      HitArctic_50: -8509669929717753672
+      HitArctic_51: -6654962163084952248
+      HitArctic_52: 2912917395870093970
+      HitArctic_53: 1163364240877990608
+      HitArctic_54: 8460407251344993734
+      HitArctic_55: -1477849664549760869
+      HitArctic_56: -6563984208081176479
+      HitArctic_57: 6557448383113954929
+      HitArctic_58: 8200627146629615000
+      HitArctic_59: -8170768460389726273
+      HitArctic_6: 864552097506761320
+      HitArctic_60: -2102982744101792290
+      HitArctic_61: -404048586284721705
+      HitArctic_62: 4063795050627818378
+      HitArctic_63: -8584992391202102187
+      HitArctic_64: 124425386801010157
+      HitArctic_65: 2531794842004445510
+      HitArctic_66: 6801783673586871707
+      HitArctic_67: 2535677678633762683
+      HitArctic_68: -7347291599573679298
+      HitArctic_69: -409076662692668180
+      HitArctic_7: 4528409995713736144
+      HitArctic_70: 7787247025748494857
+      HitArctic_71: -5097726346710016383
+      HitArctic_72: -4516677369402279900
+      HitArctic_73: -4183723827835048068
+      HitArctic_74: 1125219403960165030
+      HitArctic_75: -2324878948422176652
+      HitArctic_76: -5273815190051360286
+      HitArctic_77: 7763280581842182888
+      HitArctic_78: 7456024043990999165
+      HitArctic_79: 8340154161292376144
+      HitArctic_8: 5926268021674281016
+      HitArctic_80: 4705771126368878017
+      HitArctic_81: 1466751083706496989
+      HitArctic_82: 8843220990037917843
+      HitArctic_83: -2259962442143953861
+      HitArctic_84: 1323424146291637420
+      HitArctic_85: 7281927097888802670
+      HitArctic_86: -668759626040828447
+      HitArctic_87: 3139227331881631583
+      HitArctic_88: -7254845534907001552
+      HitArctic_89: 6858550330300273733
+      HitArctic_9: 261024371973496577
+      HitArctic_90: -8768355703817475481
+      HitArctic_91: -2978157595283033818
+      HitArctic_92: 5870078308892743817
+      HitArctic_93: -5252792174664220299
+      HitArctic_94: -4835435866738037170
+      HitArctic_95: 7717987830063398833
+      HitArctic_96: -8614913609197649642
+      HitArctic_97: 6612972070404336718
+      HitArctic_98: 7390076463692687620
+      HitArctic_99: -2230549085332012667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

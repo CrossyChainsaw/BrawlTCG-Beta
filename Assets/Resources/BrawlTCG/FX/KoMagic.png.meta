@@ -1,0 +1,5514 @@
+fileFormatVersion: 2
+guid: d1ade348dabcd2146acb1d9b2c8a5e21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3510389281777670818
+    second: KoMagic_0
+  - first:
+      213: -324115303592393756
+    second: KoMagic_1
+  - first:
+      213: 8949797125914957468
+    second: KoMagic_2
+  - first:
+      213: 2474813328876373691
+    second: KoMagic_3
+  - first:
+      213: -2936390449953251876
+    second: KoMagic_4
+  - first:
+      213: 5742194663022964736
+    second: KoMagic_5
+  - first:
+      213: -914123166255886624
+    second: KoMagic_6
+  - first:
+      213: 2475217653130480668
+    second: KoMagic_7
+  - first:
+      213: -7720369688571605827
+    second: KoMagic_8
+  - first:
+      213: -7451119246251206407
+    second: KoMagic_9
+  - first:
+      213: -6085744703477980962
+    second: KoMagic_10
+  - first:
+      213: 5651488628153807092
+    second: KoMagic_11
+  - first:
+      213: -1510018661116569608
+    second: KoMagic_12
+  - first:
+      213: -3660894408840178601
+    second: KoMagic_13
+  - first:
+      213: -8107979697829132681
+    second: KoMagic_14
+  - first:
+      213: -7894991697669922984
+    second: KoMagic_15
+  - first:
+      213: 1182010188632746121
+    second: KoMagic_16
+  - first:
+      213: -5135539771951221927
+    second: KoMagic_17
+  - first:
+      213: -9150289783758858983
+    second: KoMagic_18
+  - first:
+      213: 6465751310931439798
+    second: KoMagic_19
+  - first:
+      213: -7642478270586918643
+    second: KoMagic_20
+  - first:
+      213: 7319907297146111505
+    second: KoMagic_21
+  - first:
+      213: 3040500253353452784
+    second: KoMagic_22
+  - first:
+      213: 2271516232952834407
+    second: KoMagic_23
+  - first:
+      213: -3131353111021925260
+    second: KoMagic_24
+  - first:
+      213: -3110334801752244820
+    second: KoMagic_25
+  - first:
+      213: -961815704608591965
+    second: KoMagic_26
+  - first:
+      213: -489518898409677221
+    second: KoMagic_27
+  - first:
+      213: 4881913740536811077
+    second: KoMagic_28
+  - first:
+      213: -8237500629928178719
+    second: KoMagic_29
+  - first:
+      213: 2904676879689561378
+    second: KoMagic_30
+  - first:
+      213: 1942129259354741536
+    second: KoMagic_31
+  - first:
+      213: 8401215028859137519
+    second: KoMagic_32
+  - first:
+      213: 6182827065702705523
+    second: KoMagic_33
+  - first:
+      213: -1090714397764860019
+    second: KoMagic_34
+  - first:
+      213: -3105523714379194634
+    second: KoMagic_35
+  - first:
+      213: -944818446230653387
+    second: KoMagic_36
+  - first:
+      213: 4889319917692427555
+    second: KoMagic_37
+  - first:
+      213: -3222617113218350162
+    second: KoMagic_38
+  - first:
+      213: 8221870078149448750
+    second: KoMagic_39
+  - first:
+      213: -6442615796341701085
+    second: KoMagic_40
+  - first:
+      213: 2778281134983500777
+    second: KoMagic_41
+  - first:
+      213: -4425316864543439734
+    second: KoMagic_42
+  - first:
+      213: 6884533163318508989
+    second: KoMagic_43
+  - first:
+      213: 3129317245190389269
+    second: KoMagic_44
+  - first:
+      213: -5484994749333209106
+    second: KoMagic_45
+  - first:
+      213: -6931462616002194751
+    second: KoMagic_46
+  - first:
+      213: 2338470668034416368
+    second: KoMagic_47
+  - first:
+      213: -5968718695451538501
+    second: KoMagic_48
+  - first:
+      213: -8566721623806166883
+    second: KoMagic_49
+  - first:
+      213: 957243884828285765
+    second: KoMagic_50
+  - first:
+      213: 6703278345029356351
+    second: KoMagic_51
+  - first:
+      213: -5286131939083251872
+    second: KoMagic_52
+  - first:
+      213: -5961658039804489755
+    second: KoMagic_53
+  - first:
+      213: 7927917420740893255
+    second: KoMagic_54
+  - first:
+      213: 780734282290220234
+    second: KoMagic_55
+  - first:
+      213: 6832095611209493160
+    second: KoMagic_56
+  - first:
+      213: -5456907635060114196
+    second: KoMagic_57
+  - first:
+      213: -8687069919846140594
+    second: KoMagic_58
+  - first:
+      213: 7154577182724236936
+    second: KoMagic_59
+  - first:
+      213: 1262216183270052848
+    second: KoMagic_60
+  - first:
+      213: 147729076535040341
+    second: KoMagic_61
+  - first:
+      213: 9037610354299308655
+    second: KoMagic_62
+  - first:
+      213: -1615923064089541644
+    second: KoMagic_63
+  - first:
+      213: 1324826862567920811
+    second: KoMagic_64
+  - first:
+      213: 3084542436168734919
+    second: KoMagic_65
+  - first:
+      213: -6414218596330285246
+    second: KoMagic_66
+  - first:
+      213: 4720320892719683072
+    second: KoMagic_67
+  - first:
+      213: -5635518516094927213
+    second: KoMagic_68
+  - first:
+      213: 6521493776858611568
+    second: KoMagic_69
+  - first:
+      213: 730636066096369559
+    second: KoMagic_70
+  - first:
+      213: 8203373818870175755
+    second: KoMagic_71
+  - first:
+      213: -6170943335705907672
+    second: KoMagic_72
+  - first:
+      213: 6422101122857161869
+    second: KoMagic_73
+  - first:
+      213: -2945126758929185094
+    second: KoMagic_74
+  - first:
+      213: 4507352209913170297
+    second: KoMagic_75
+  - first:
+      213: 3365819661767230163
+    second: KoMagic_76
+  - first:
+      213: -4567208024788920599
+    second: KoMagic_77
+  - first:
+      213: 6444537631840814546
+    second: KoMagic_78
+  - first:
+      213: 8545977448139232112
+    second: KoMagic_79
+  - first:
+      213: 2838110307830604047
+    second: KoMagic_80
+  - first:
+      213: 2803504876865026346
+    second: KoMagic_81
+  - first:
+      213: -5959263061077721204
+    second: KoMagic_82
+  - first:
+      213: 971553066772385948
+    second: KoMagic_83
+  - first:
+      213: -1904036066406765990
+    second: KoMagic_84
+  - first:
+      213: -3636871020607354144
+    second: KoMagic_85
+  - first:
+      213: 6077325980356294410
+    second: KoMagic_86
+  - first:
+      213: 8681760101884889576
+    second: KoMagic_87
+  - first:
+      213: 5768726881003513389
+    second: KoMagic_88
+  - first:
+      213: -6592643708052860942
+    second: KoMagic_89
+  - first:
+      213: 5702125833115119281
+    second: KoMagic_90
+  - first:
+      213: 3828568138722665486
+    second: KoMagic_91
+  - first:
+      213: -3630139940854764320
+    second: KoMagic_92
+  - first:
+      213: 2019140989699459912
+    second: KoMagic_93
+  - first:
+      213: 3094963647772133453
+    second: KoMagic_94
+  - first:
+      213: -934276789272927753
+    second: KoMagic_95
+  - first:
+      213: 7610508329330754803
+    second: KoMagic_96
+  - first:
+      213: 5747101456938807915
+    second: KoMagic_97
+  - first:
+      213: -2156801911970891630
+    second: KoMagic_98
+  - first:
+      213: -7428003043075690231
+    second: KoMagic_99
+  - first:
+      213: 2438682921687547197
+    second: KoMagic_100
+  - first:
+      213: 1811068358097394056
+    second: KoMagic_101
+  - first:
+      213: 8222961203738223162
+    second: KoMagic_102
+  - first:
+      213: 4542000769727678919
+    second: KoMagic_103
+  - first:
+      213: 7805082980693677252
+    second: KoMagic_104
+  - first:
+      213: 9195291019224139498
+    second: KoMagic_105
+  - first:
+      213: 1993053589472386352
+    second: KoMagic_106
+  - first:
+      213: -801998805109080287
+    second: KoMagic_107
+  - first:
+      213: -5774079059921080719
+    second: KoMagic_108
+  - first:
+      213: -7308004043254607290
+    second: KoMagic_109
+  - first:
+      213: -8159932990911489744
+    second: KoMagic_110
+  - first:
+      213: 7885249187332438288
+    second: KoMagic_111
+  - first:
+      213: -6484492178474400892
+    second: KoMagic_112
+  - first:
+      213: -3126728381420874788
+    second: KoMagic_113
+  - first:
+      213: -676505572866686198
+    second: KoMagic_114
+  - first:
+      213: -7786933219235017439
+    second: KoMagic_115
+  - first:
+      213: -1440804982691470431
+    second: KoMagic_116
+  - first:
+      213: 1733126508605548423
+    second: KoMagic_117
+  - first:
+      213: -7752745511671301147
+    second: KoMagic_118
+  - first:
+      213: -7381604072239181670
+    second: KoMagic_119
+  - first:
+      213: -7957619320099851133
+    second: KoMagic_120
+  - first:
+      213: -318021629977508938
+    second: KoMagic_121
+  - first:
+      213: -2501109261550110387
+    second: KoMagic_122
+  - first:
+      213: -7322746826558530673
+    second: KoMagic_123
+  - first:
+      213: 3868467846928467909
+    second: KoMagic_124
+  - first:
+      213: 4374474560679025113
+    second: KoMagic_125
+  - first:
+      213: -3023879278530628680
+    second: KoMagic_126
+  - first:
+      213: -753753976942881621
+    second: KoMagic_127
+  - first:
+      213: 1800378489759777838
+    second: KoMagic_128
+  - first:
+      213: 1549324435519568702
+    second: KoMagic_129
+  - first:
+      213: -2066180445461967526
+    second: KoMagic_130
+  - first:
+      213: -1501264082293529740
+    second: KoMagic_131
+  - first:
+      213: 4419802121525309069
+    second: KoMagic_132
+  - first:
+      213: 9152929024396241991
+    second: KoMagic_133
+  - first:
+      213: -7083198721848888337
+    second: KoMagic_134
+  - first:
+      213: -5745620647660443643
+    second: KoMagic_135
+  - first:
+      213: 1754735746063567912
+    second: KoMagic_136
+  - first:
+      213: 2048404285623772060
+    second: KoMagic_137
+  - first:
+      213: -4039346707497690959
+    second: KoMagic_138
+  - first:
+      213: -1225033926535653508
+    second: KoMagic_139
+  - first:
+      213: -4079512002731859814
+    second: KoMagic_140
+  - first:
+      213: -343965042090290160
+    second: KoMagic_141
+  - first:
+      213: -8507065823681605401
+    second: KoMagic_142
+  - first:
+      213: 7175605736345843855
+    second: KoMagic_143
+  - first:
+      213: 1159968181212033328
+    second: KoMagic_144
+  - first:
+      213: 5060823292237699470
+    second: KoMagic_145
+  - first:
+      213: -8189287315183163221
+    second: KoMagic_146
+  - first:
+      213: -7751494896432277161
+    second: KoMagic_147
+  - first:
+      213: 1048586709987663911
+    second: KoMagic_148
+  - first:
+      213: 2491072375586478270
+    second: KoMagic_149
+  - first:
+      213: 6814604291119541346
+    second: KoMagic_150
+  - first:
+      213: -7283402526462258365
+    second: KoMagic_151
+  - first:
+      213: -7992119871186665776
+    second: KoMagic_152
+  - first:
+      213: 2522887414376363648
+    second: KoMagic_153
+  - first:
+      213: -4976924863635735411
+    second: KoMagic_154
+  - first:
+      213: -126166237219467161
+    second: KoMagic_155
+  - first:
+      213: 7099236319650624094
+    second: KoMagic_156
+  - first:
+      213: 5867281949556784099
+    second: KoMagic_157
+  - first:
+      213: 1980379842144000044
+    second: KoMagic_158
+  - first:
+      213: -7651518161086735014
+    second: KoMagic_159
+  - first:
+      213: -6792574371251502922
+    second: KoMagic_160
+  - first:
+      213: 6854704224363031772
+    second: KoMagic_161
+  - first:
+      213: -1276281065829898760
+    second: KoMagic_162
+  - first:
+      213: -8675466119577509924
+    second: KoMagic_163
+  - first:
+      213: -2059349327900458826
+    second: KoMagic_164
+  - first:
+      213: 7600346106146909860
+    second: KoMagic_165
+  - first:
+      213: 3988300584300811692
+    second: KoMagic_166
+  - first:
+      213: -1413020135945329501
+    second: KoMagic_167
+  - first:
+      213: 6788439908999806016
+    second: KoMagic_168
+  - first:
+      213: -2620526560544554950
+    second: KoMagic_169
+  - first:
+      213: 3069798960633623019
+    second: KoMagic_170
+  - first:
+      213: -7839256078922054380
+    second: KoMagic_171
+  - first:
+      213: 5634586595604529274
+    second: KoMagic_172
+  - first:
+      213: 3180623087165682128
+    second: KoMagic_173
+  - first:
+      213: -9185638923202251803
+    second: KoMagic_174
+  - first:
+      213: -4892952758199202091
+    second: KoMagic_175
+  - first:
+      213: 5345487562728798673
+    second: KoMagic_176
+  - first:
+      213: -6142716011776402763
+    second: KoMagic_177
+  - first:
+      213: -114017531521279920
+    second: KoMagic_178
+  - first:
+      213: -6570088813413359174
+    second: KoMagic_179
+  - first:
+      213: 2468583079494836634
+    second: KoMagic_180
+  - first:
+      213: 3872659191290533581
+    second: KoMagic_181
+  - first:
+      213: -1026458555102979883
+    second: KoMagic_182
+  - first:
+      213: -8342400142816862085
+    second: KoMagic_183
+  - first:
+      213: 8719776775345317795
+    second: KoMagic_184
+  - first:
+      213: 7459954560822942902
+    second: KoMagic_185
+  - first:
+      213: -3408190271942521662
+    second: KoMagic_186
+  - first:
+      213: 1006291167358350431
+    second: KoMagic_187
+  - first:
+      213: -3992869441943588378
+    second: KoMagic_188
+  - first:
+      213: -5982127112026205661
+    second: KoMagic_189
+  - first:
+      213: 1768956125758463473
+    second: KoMagic_190
+  - first:
+      213: -2693838144891122508
+    second: KoMagic_191
+  - first:
+      213: 3619737924344709294
+    second: KoMagic_192
+  - first:
+      213: 5199683377313609487
+    second: KoMagic_193
+  - first:
+      213: 7825612869976990914
+    second: KoMagic_194
+  - first:
+      213: -1069308724256369175
+    second: KoMagic_195
+  - first:
+      213: -2268165452492878326
+    second: KoMagic_196
+  - first:
+      213: 951471524364075281
+    second: KoMagic_197
+  - first:
+      213: 3068170036156507754
+    second: KoMagic_198
+  - first:
+      213: -1021735875423610961
+    second: KoMagic_199
+  - first:
+      213: -7950224821523830748
+    second: KoMagic_200
+  - first:
+      213: 62024669097529177
+    second: KoMagic_201
+  - first:
+      213: 7289843978724727699
+    second: KoMagic_202
+  - first:
+      213: -697991801465803994
+    second: KoMagic_203
+  - first:
+      213: -6680666622507265376
+    second: KoMagic_204
+  - first:
+      213: -360999586058163541
+    second: KoMagic_205
+  - first:
+      213: -6360116503354912378
+    second: KoMagic_206
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KoMagic_0
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 1282
+        width: 208
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa52b3f37867b030800000000000000
+      internalID: 3510389281777670818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_1
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 1569
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e38b1f39d2808bf0800000000000000
+      internalID: -324115303592393756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_2
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 1569
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9619f56111143c70800000000000000
+      internalID: 8949797125914957468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1310
+        width: 173
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb604194c9d485220800000000000000
+      internalID: 2474813328876373691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1310
+        width: 219
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdddfa48178df37d0800000000000000
+      internalID: -2936390449953251876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_5
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1310
+        width: 219
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000b0a06f9f50bf40800000000000000
+      internalID: 5742194663022964736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_6
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1305
+        width: 226
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eecc52d2d16053f0800000000000000
+      internalID: -914123166255886624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_7
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1437
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c4e9c575db95220800000000000000
+      internalID: 2475217653130480668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_8
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1429
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc0ff92cacbbd490800000000000000
+      internalID: -7720369688571605827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_9
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 1283
+        width: 226
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8de14f58e489890800000000000000
+      internalID: -7451119246251206407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_10
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1283
+        width: 226
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0ea739f671b8ba0800000000000000
+      internalID: -6085744703477980962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_11
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1407
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f07445e6fe1e6e40800000000000000
+      internalID: 5651488628153807092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_12
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1406
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f79fe337065b0be0800000000000000
+      internalID: -1510018661116569608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_13
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1409
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7541ed07ee3e13dc0800000000000000
+      internalID: -3660894408840178601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_14
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1409
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776c0d83c6baa7f80800000000000000
+      internalID: -8107979697829132681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_15
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1254
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85fd9b361ea5f6290800000000000000
+      internalID: -7894991697669922984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_16
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1241
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988e8560108576010800000000000000
+      internalID: 1182010188632746121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 959
+        width: 220
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953f4f269c5eab8b0800000000000000
+      internalID: -5135539771951221927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_18
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1231
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915da270ce3a30180800000000000000
+      internalID: -9150289783758858983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_19
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1218
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0b51e6f86fab950800000000000000
+      internalID: 6465751310931439798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_20
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1097
+        width: 59
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d096606218670f590800000000000000
+      internalID: -7642478270586918643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_21
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1216
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1160f2b77e8859560800000000000000
+      internalID: 7319907297146111505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_22
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1222
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f42e940fd6023a20800000000000000
+      internalID: 3040500253353452784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_23
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1196
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769efa69afb068f10800000000000000
+      internalID: 2271516232952834407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_24
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1201
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c4937afe23b84d0800000000000000
+      internalID: -3131353111021925260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_25
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1198
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cadb5012afed5d4d0800000000000000
+      internalID: -3110334801752244820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_26
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1174
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afa96b66b1f6a2f0800000000000000
+      internalID: -961815704608591965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_27
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 964
+        width: 207
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e537dc721e439f0800000000000000
+      internalID: -489518898409677221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_28
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1175
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e8bc87eaa00c340800000000000000
+      internalID: 4881913740536811077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_29
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1135
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb031c32d48ead80800000000000000
+      internalID: -8237500629928178719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_30
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 1180
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225bf218b3c7f4820800000000000000
+      internalID: 2904676879689561378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_31
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1136
+        width: 62
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b5bb38544d3fa10800000000000000
+      internalID: 1942129259354741536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_32
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1120
+        width: 181
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed62d4ae8c179470800000000000000
+      internalID: 8401215028859137519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_33
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 1184
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37961ee4570ddc550800000000000000
+      internalID: 6182827065702705523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_34
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1113
+        width: 189
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8742d9b8010dd0f0800000000000000
+      internalID: -1090714397764860019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_35
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1110
+        width: 183
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe50e2b2a6f6e4d0800000000000000
+      internalID: -3105523714379194634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_36
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1162
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5367f2701a453e2f0800000000000000
+      internalID: -944818446230653387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_37
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1162
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d9c477f8a5ad340800000000000000
+      internalID: 4889319917692427555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_38
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1164
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea386874fc6f643d0800000000000000
+      internalID: -3222617113218350162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_39
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1169
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24d2855643f91270800000000000000
+      internalID: 8221870078149448750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_40
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1126
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3268bb2511b3796a0800000000000000
+      internalID: -6442615796341701085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_41
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1153
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e35cd8e8ff6e8620800000000000000
+      internalID: 2778281134983500777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_42
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 991
+        width: 197
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84c75e02cd1692c0800000000000000
+      internalID: -4425316864543439734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_43
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1144
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbdfefbaf66ca8f50800000000000000
+      internalID: 6884533163318508989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_44
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1017
+        width: 199
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51eb31564719d6b20800000000000000
+      internalID: 3129317245190389269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_45
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1134
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef7c13165261e3b0800000000000000
+      internalID: -5484994749333209106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_46
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 986
+        width: 198
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c21a47a97f7ecf90800000000000000
+      internalID: -6931462616002194751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_47
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 1099
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe9cddceaae37020800000000000000
+      internalID: 2338470668034416368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_48
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1101
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbc06958f9da2da0800000000000000
+      internalID: -5968718695451538501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_49
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 973
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9830635214ec1980800000000000000
+      internalID: -8566721623806166883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_50
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1119
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54bda96dd30d84d00800000000000000
+      internalID: 957243884828285765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_51
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1123
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b0b0aa324d60d50800000000000000
+      internalID: 6703278345029356351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_52
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1109
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f881f2203e3a6b0800000000000000
+      internalID: -5286131939083251872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_53
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1100
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef0a19599fe34da0800000000000000
+      internalID: -5961658039804489755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_54
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 993
+        width: 196
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a54e7e3ee950e60800000000000000
+      internalID: 7927917420740893255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_55
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 1079
+        width: 48
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: accc0e771b9b5da00800000000000000
+      internalID: 780734282290220234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_56
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 959
+        width: 54
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aaa5a9a2ca70de50800000000000000
+      internalID: 6832095611209493160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_57
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 971
+        width: 38
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecff18fa6b2544b0800000000000000
+      internalID: -5456907635060114196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_58
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 978
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45f6981fe3517780800000000000000
+      internalID: -8687069919846140594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_59
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 971
+        width: 38
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886a4668a0a2a4360800000000000000
+      internalID: 7154577182724236936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_60
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 973
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f39f816eea448110800000000000000
+      internalID: 1262216183270052848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_61
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 978
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5591ed9ffc6dc0200800000000000000
+      internalID: 147729076535040341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_62
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 983
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a0762ebba0c6d70800000000000000
+      internalID: 9037610354299308655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_63
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 973
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f30594e8861399e0800000000000000
+      internalID: -1615923064089541644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_64
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 968
+        width: 68
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba49144230bb26210800000000000000
+      internalID: 1324826862567920811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_65
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 975
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8947ac00f7eca20800000000000000
+      internalID: 3084542436168734919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_66
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 970
+        width: 86
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247570eab2e1cf6a0800000000000000
+      internalID: -6414218596330285246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_67
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 967
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0065964b7d2f18140800000000000000
+      internalID: 4720320892719683072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_68
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 964
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e760394cd9ac1b0800000000000000
+      internalID: -5635518516094927213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_69
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 964
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ff396a900018a50800000000000000
+      internalID: 6521493776858611568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_70
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 965
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f43cb81adb32a00800000000000000
+      internalID: 730636066096369559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_71
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 953
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b081f71660d38d170800000000000000
+      internalID: 8203373818870175755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_72
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 955
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e6f223bb76c5aa0800000000000000
+      internalID: -6170943335705907672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_73
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 938
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84d98b02f2ef1950800000000000000
+      internalID: 6422101122857161869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_74
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 653
+        width: 209
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6478311dec027d0800000000000000
+      internalID: -2945126758929185094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_75
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 948
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979427534f45d8e30800000000000000
+      internalID: 4507352209913170297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_76
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 943
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d249a5462bc5be20800000000000000
+      internalID: 3365819661767230163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_77
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 943
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e69423ef740e90c0800000000000000
+      internalID: -4567208024788920599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_78
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 865
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5428fd4d89f6950800000000000000
+      internalID: 6444537631840814546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_79
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 872
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07396d6e539699670800000000000000
+      internalID: 8545977448139232112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_80
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 865
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f012e9bb94ef26720800000000000000
+      internalID: 2838110307830604047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_81
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 872
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a297d97f4dc08e620800000000000000
+      internalID: 2803504876865026346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_82
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 866
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ffa59c1d17c4da0800000000000000
+      internalID: -5959263061077721204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_83
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 654
+        width: 198
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90d861ed56ab7d00800000000000000
+      internalID: 971553066772385948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_84
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 657
+        width: 220
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5aea4e19418395e0800000000000000
+      internalID: -1904036066406765990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_85
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 657
+        width: 220
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea49c2631d378dc0800000000000000
+      internalID: -3636871020607354144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_86
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 856
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07b363b7cff65450800000000000000
+      internalID: 6077325980356294410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_87
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 788
+        width: 192
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e9020290decb7870800000000000000
+      internalID: 8681760101884889576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_88
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 856
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d262674c882ae0050800000000000000
+      internalID: 5768726881003513389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_89
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 788
+        width: 192
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff8bc21a793284a0800000000000000
+      internalID: -6592643708052860942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_90
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 858
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bea76beb35022f40800000000000000
+      internalID: 5702125833115119281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_91
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 786
+        width: 137
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0461f2007ec12530800000000000000
+      internalID: 3828568138722665486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_92
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 820
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ece46405f62f9dc0800000000000000
+      internalID: -3630139940854764320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 837
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b8772480e650c10800000000000000
+      internalID: 2019140989699459912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_94
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 837
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4884323a0583fa20800000000000000
+      internalID: 3094963647772133453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_95
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 840
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1ae7dc538c803f0800000000000000
+      internalID: -934276789272927753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_96
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 845
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f449e9d005fd9960800000000000000
+      internalID: 7610508329330754803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_97
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 709
+        width: 199
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62b7fc535ec1cf40800000000000000
+      internalID: 5747101456938807915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_98
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 709
+        width: 199
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298771a96108112e0800000000000000
+      internalID: -2156801911970891630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_99
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 826
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901f3fa669e6ae890800000000000000
+      internalID: -7428003043075690231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_100
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 826
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d7ff25231f7d120800000000000000
+      internalID: 2438682921687547197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_101
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 783
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88958548315322910800000000000000
+      internalID: 1811068358097394056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_102
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 783
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32a2aec5a3dd1270800000000000000
+      internalID: 8222961203738223162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_103
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 781
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c94b21b2ad680f30800000000000000
+      internalID: 4542000769727678919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_104
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 725
+        width: 198
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c491ba2e99315c60800000000000000
+      internalID: 7805082980693677252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_105
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 788
+        width: 110
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6c137967c3c9f70800000000000000
+      internalID: 9195291019224139498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_106
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 780
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d91d21eafb8ab10800000000000000
+      internalID: 1993053589472386352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_107
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 655
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f7f2ff55abed4f0800000000000000
+      internalID: -801998805109080287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_108
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 704
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ee168ffa95edfa0800000000000000
+      internalID: -5774079059921080719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_109
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 655
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642d0b8ca01c49a90800000000000000
+      internalID: -7308004043254607290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_110
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 704
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039dabd8d2812ce80800000000000000
+      internalID: -8159932990911489744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_111
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 705
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0193368ab580e6d60800000000000000
+      internalID: 7885249187332438288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_112
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 711
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4830c3158b47206a0800000000000000
+      internalID: -6484492178474400892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_113
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 702
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3d64c6a11ab94d0800000000000000
+      internalID: -3126728381420874788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_114
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 702
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0385b804c19c96f0800000000000000
+      internalID: -676505572866686198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_115
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 653
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12dcec97e714fe390800000000000000
+      internalID: -7786933219235017439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_116
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 665
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3ef00808b310ce0800000000000000
+      internalID: -1440804982691470431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_117
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 665
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7872f38806d4d0810800000000000000
+      internalID: 1733126508605548423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_118
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 672
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebf3de6807b86490800000000000000
+      internalID: -7752745511671301147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_119
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 655
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a905b99a4364f8990800000000000000
+      internalID: -7381604072239181670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_120
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 655
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384b9afb36bd09190800000000000000
+      internalID: -7957619320099851133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_121
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 607
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3cc423309269bf0800000000000000
+      internalID: -318021629977508938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_122
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 338
+        width: 226
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49bdd8c0664a4dd0800000000000000
+      internalID: -2501109261550110387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_123
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 340
+        width: 218
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b1cde0f80606a90800000000000000
+      internalID: -7322746826558530673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 225
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c70131c20f8fa530800000000000000
+      internalID: 3868467846928467909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_125
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 589
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9914c9f6145bc30800000000000000
+      internalID: 4374474560679025113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_126
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 337
+        width: 138
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3748f31d50906d0800000000000000
+      internalID: -3023879278530628680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_127
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 338
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4184460c02a85f0800000000000000
+      internalID: -753753976942881621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_128
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 557
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24c26792ba3cf810800000000000000
+      internalID: 1800378489759777838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_129
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 549
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bf9fc8d5e408510800000000000000
+      internalID: 1549324435519568702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_130
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 507
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d816af4d37353e0800000000000000
+      internalID: -2066180445461967526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_131
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 528
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47367dc65407a2be0800000000000000
+      internalID: -1501264082293529740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_132
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 517
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ea807cc9a465d30800000000000000
+      internalID: 4419802121525309069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_133
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 514
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c2081147cb50f70800000000000000
+      internalID: 9152929024396241991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_134
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 522
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe332b67a4c63bd90800000000000000
+      internalID: -7083198721848888337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_135
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 518
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508ac0a66747340b0800000000000000
+      internalID: -5745620647660443643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_136
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 457
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c8cc23dd21a5810800000000000000
+      internalID: 1754735746063567912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_137
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 457
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c932ef848d46d6c10800000000000000
+      internalID: 2048404285623772060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_138
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 458
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8d4f6229b51f7c0800000000000000
+      internalID: -4039346707497690959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_139
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 496
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c775a03622ecffee0800000000000000
+      internalID: -1225033926535653508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_140
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 472
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90a93c9279a267c0800000000000000
+      internalID: -4079512002731859814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_141
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 485
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0145e0bdd9df93bf0800000000000000
+      internalID: -343965042090290160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_142
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 493
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0979aa4b4d0f980800000000000000
+      internalID: -8507065823681605401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_143
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 478
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f883623366fd49360800000000000000
+      internalID: 7175605736345843855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_144
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 486
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03136ef3ae8091010800000000000000
+      internalID: 1159968181212033328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_145
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 472
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e89d9dc88f7ab3640800000000000000
+      internalID: 5060823292237699470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_146
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 436
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba825e6539ec95e80800000000000000
+      internalID: -8189287315183163221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_147
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 447
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75996ebf5782d6490800000000000000
+      internalID: -7751494896432277161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_148
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 455
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720a20d9e045d8e00800000000000000
+      internalID: 1048586709987663911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_149
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 451
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8de989021129220800000000000000
+      internalID: 2491072375586478270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_150
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 448
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c68095f76529e50800000000000000
+      internalID: 6814604291119541346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_151
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 452
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343d806cdf72cea90800000000000000
+      internalID: -7283402526462258365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_152
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 420
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0def39b3259461190800000000000000
+      internalID: -7992119871186665776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_153
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 425
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086f43e8cb8130320800000000000000
+      internalID: 2522887414376363648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_154
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 436
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8cbe2594396eeab0800000000000000
+      internalID: -4976924863635735411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_155
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 438
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760d2e7c974cf3ef0800000000000000
+      internalID: -126166237219467161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_156
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 446
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52b351c1dd858260800000000000000
+      internalID: 7099236319650624094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_157
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 437
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ebb460d8d5cc6150800000000000000
+      internalID: 5867281949556784099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_158
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 437
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28565359f8bb7b10800000000000000
+      internalID: 1980379842144000044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_159
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 430
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d99ff95c850d590800000000000000
+      internalID: -7651518161086735014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_160
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 418
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0c123199debb1a0800000000000000
+      internalID: -6792574371251502922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_161
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 433
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc278d9c2dc02f50800000000000000
+      internalID: 6854704224363031772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_162
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 410
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5e6a5f12db94ee0800000000000000
+      internalID: -1276281065829898760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_163
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 426
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf55a1678d8a9780800000000000000
+      internalID: -8675466119577509924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_164
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 419
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0cd0a72b8bb63e0800000000000000
+      internalID: -2059349327900458826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_165
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 403
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aee8e2e38ad97960800000000000000
+      internalID: 7600346106146909860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_166
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 346
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca59bb0204a495730800000000000000
+      internalID: 3988300584300811692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_167
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 409
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a421804ca1f36ce0800000000000000
+      internalID: -1413020135945329501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_168
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 336
+        width: 49
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cb40b6122653e50800000000000000
+      internalID: 6788439908999806016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_169
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 335
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3004423af402abd0800000000000000
+      internalID: -2620526560544554950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_170
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 338
+        width: 52
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be13e64e3ed1a9a20800000000000000
+      internalID: 3069798960633623019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_171
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 338
+        width: 56
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4158780612e553390800000000000000
+      internalID: -7839256078922054380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_172
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 342
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a708f27c7a2123e40800000000000000
+      internalID: 5634586595604529274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_173
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 392
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1baea98d7d32c20800000000000000
+      internalID: 3180623087165682128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_174
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 366
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e33783211e068080800000000000000
+      internalID: -9185638923202251803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_175
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 384
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dec4c0f36db81cb0800000000000000
+      internalID: -4892952758199202091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_176
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 374
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9f7bfdd9cfe2a40800000000000000
+      internalID: 5345487562728798673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_177
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 334
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba96f13550b0caa0800000000000000
+      internalID: -6142716011776402763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_178
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 341
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058d18fb8adea6ef0800000000000000
+      internalID: -114017531521279920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_179
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 208
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1aab5b80b52d4a0800000000000000
+      internalID: -6570088813413359174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_180
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 138
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9164df4b3b224220800000000000000
+      internalID: 2468583079494836634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_181
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 138
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6160924037eb530800000000000000
+      internalID: 3872659191290533581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_182
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 158
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d81d6ee16941c1f0800000000000000
+      internalID: -1026458555102979883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_183
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 167
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70ab312547d93c80800000000000000
+      internalID: -8342400142816862085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_184
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 192
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7a82f17ced20970800000000000000
+      internalID: 8719776775345317795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_185
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 139
+        width: 34
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc18660625178760800000000000000
+      internalID: 7459954560822942902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_186
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 194
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc8ce9410da3b0d0800000000000000
+      internalID: -3408190271942521662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_187
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 180
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54f1033c7017fd00800000000000000
+      internalID: 1006291167358350431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_188
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 171
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1b07ec56a7698c0800000000000000
+      internalID: -3992869441943588378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_189
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 174
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322d17616173bfca0800000000000000
+      internalID: -5982127112026205661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_190
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 171
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd951b59389c8810800000000000000
+      internalID: 1768956125758463473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_191
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 182
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc0e53da709d9ad0800000000000000
+      internalID: -2693838144891122508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_192
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 152
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea08398c674eb3230800000000000000
+      internalID: 3619737924344709294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_193
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 140
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07f7498b7cf82840800000000000000
+      internalID: 5199683377313609487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_194
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 143
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c424b081792a9c60800000000000000
+      internalID: 7825612869976990914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_195
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 126
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e51977716d0921f0800000000000000
+      internalID: -1069308724256369175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_196
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 133
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e4958c98bd580e0800000000000000
+      internalID: -2268165452492878326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_197
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 113
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111ce9f6f4e443d00800000000000000
+      internalID: 951471524364075281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_198
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 39
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a662b9b5464549a20800000000000000
+      internalID: 3068170036156507754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_199
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 69
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa75a1b72a012d1f0800000000000000
+      internalID: -1021735875423610961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_200
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 39
+        width: 84
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428249c95a02ba190800000000000000
+      internalID: -7950224821523830748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_201
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 28
+        width: 100
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f8ed0ab1b5cd000800000000000000
+      internalID: 62024669097529177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_202
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 65
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b58e3b97aba2560800000000000000
+      internalID: 7289843978724727699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_203
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 28
+        width: 99
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bee79972c3056f0800000000000000
+      internalID: -697991801465803994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_204
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 65
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a255ae3a118943a0800000000000000
+      internalID: -6680666622507265376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_205
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 29
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baaa0f40ac87dfaf0800000000000000
+      internalID: -360999586058163541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoMagic_206
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 44
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6815e6fccb35cb7a0800000000000000
+      internalID: -6360116503354912378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      KoMagic_0: 3510389281777670818
+      KoMagic_1: -324115303592393756
+      KoMagic_10: -6085744703477980962
+      KoMagic_100: 2438682921687547197
+      KoMagic_101: 1811068358097394056
+      KoMagic_102: 8222961203738223162
+      KoMagic_103: 4542000769727678919
+      KoMagic_104: 7805082980693677252
+      KoMagic_105: 9195291019224139498
+      KoMagic_106: 1993053589472386352
+      KoMagic_107: -801998805109080287
+      KoMagic_108: -5774079059921080719
+      KoMagic_109: -7308004043254607290
+      KoMagic_11: 5651488628153807092
+      KoMagic_110: -8159932990911489744
+      KoMagic_111: 7885249187332438288
+      KoMagic_112: -6484492178474400892
+      KoMagic_113: -3126728381420874788
+      KoMagic_114: -676505572866686198
+      KoMagic_115: -7786933219235017439
+      KoMagic_116: -1440804982691470431
+      KoMagic_117: 1733126508605548423
+      KoMagic_118: -7752745511671301147
+      KoMagic_119: -7381604072239181670
+      KoMagic_12: -1510018661116569608
+      KoMagic_120: -7957619320099851133
+      KoMagic_121: -318021629977508938
+      KoMagic_122: -2501109261550110387
+      KoMagic_123: -7322746826558530673
+      KoMagic_124: 3868467846928467909
+      KoMagic_125: 4374474560679025113
+      KoMagic_126: -3023879278530628680
+      KoMagic_127: -753753976942881621
+      KoMagic_128: 1800378489759777838
+      KoMagic_129: 1549324435519568702
+      KoMagic_13: -3660894408840178601
+      KoMagic_130: -2066180445461967526
+      KoMagic_131: -1501264082293529740
+      KoMagic_132: 4419802121525309069
+      KoMagic_133: 9152929024396241991
+      KoMagic_134: -7083198721848888337
+      KoMagic_135: -5745620647660443643
+      KoMagic_136: 1754735746063567912
+      KoMagic_137: 2048404285623772060
+      KoMagic_138: -4039346707497690959
+      KoMagic_139: -1225033926535653508
+      KoMagic_14: -8107979697829132681
+      KoMagic_140: -4079512002731859814
+      KoMagic_141: -343965042090290160
+      KoMagic_142: -8507065823681605401
+      KoMagic_143: 7175605736345843855
+      KoMagic_144: 1159968181212033328
+      KoMagic_145: 5060823292237699470
+      KoMagic_146: -8189287315183163221
+      KoMagic_147: -7751494896432277161
+      KoMagic_148: 1048586709987663911
+      KoMagic_149: 2491072375586478270
+      KoMagic_15: -7894991697669922984
+      KoMagic_150: 6814604291119541346
+      KoMagic_151: -7283402526462258365
+      KoMagic_152: -7992119871186665776
+      KoMagic_153: 2522887414376363648
+      KoMagic_154: -4976924863635735411
+      KoMagic_155: -126166237219467161
+      KoMagic_156: 7099236319650624094
+      KoMagic_157: 5867281949556784099
+      KoMagic_158: 1980379842144000044
+      KoMagic_159: -7651518161086735014
+      KoMagic_16: 1182010188632746121
+      KoMagic_160: -6792574371251502922
+      KoMagic_161: 6854704224363031772
+      KoMagic_162: -1276281065829898760
+      KoMagic_163: -8675466119577509924
+      KoMagic_164: -2059349327900458826
+      KoMagic_165: 7600346106146909860
+      KoMagic_166: 3988300584300811692
+      KoMagic_167: -1413020135945329501
+      KoMagic_168: 6788439908999806016
+      KoMagic_169: -2620526560544554950
+      KoMagic_17: -5135539771951221927
+      KoMagic_170: 3069798960633623019
+      KoMagic_171: -7839256078922054380
+      KoMagic_172: 5634586595604529274
+      KoMagic_173: 3180623087165682128
+      KoMagic_174: -9185638923202251803
+      KoMagic_175: -4892952758199202091
+      KoMagic_176: 5345487562728798673
+      KoMagic_177: -6142716011776402763
+      KoMagic_178: -114017531521279920
+      KoMagic_179: -6570088813413359174
+      KoMagic_18: -9150289783758858983
+      KoMagic_180: 2468583079494836634
+      KoMagic_181: 3872659191290533581
+      KoMagic_182: -1026458555102979883
+      KoMagic_183: -8342400142816862085
+      KoMagic_184: 8719776775345317795
+      KoMagic_185: 7459954560822942902
+      KoMagic_186: -3408190271942521662
+      KoMagic_187: 1006291167358350431
+      KoMagic_188: -3992869441943588378
+      KoMagic_189: -5982127112026205661
+      KoMagic_19: 6465751310931439798
+      KoMagic_190: 1768956125758463473
+      KoMagic_191: -2693838144891122508
+      KoMagic_192: 3619737924344709294
+      KoMagic_193: 5199683377313609487
+      KoMagic_194: 7825612869976990914
+      KoMagic_195: -1069308724256369175
+      KoMagic_196: -2268165452492878326
+      KoMagic_197: 951471524364075281
+      KoMagic_198: 3068170036156507754
+      KoMagic_199: -1021735875423610961
+      KoMagic_2: 8949797125914957468
+      KoMagic_20: -7642478270586918643
+      KoMagic_200: -7950224821523830748
+      KoMagic_201: 62024669097529177
+      KoMagic_202: 7289843978724727699
+      KoMagic_203: -697991801465803994
+      KoMagic_204: -6680666622507265376
+      KoMagic_205: -360999586058163541
+      KoMagic_206: -6360116503354912378
+      KoMagic_21: 7319907297146111505
+      KoMagic_22: 3040500253353452784
+      KoMagic_23: 2271516232952834407
+      KoMagic_24: -3131353111021925260
+      KoMagic_25: -3110334801752244820
+      KoMagic_26: -961815704608591965
+      KoMagic_27: -489518898409677221
+      KoMagic_28: 4881913740536811077
+      KoMagic_29: -8237500629928178719
+      KoMagic_3: 2474813328876373691
+      KoMagic_30: 2904676879689561378
+      KoMagic_31: 1942129259354741536
+      KoMagic_32: 8401215028859137519
+      KoMagic_33: 6182827065702705523
+      KoMagic_34: -1090714397764860019
+      KoMagic_35: -3105523714379194634
+      KoMagic_36: -944818446230653387
+      KoMagic_37: 4889319917692427555
+      KoMagic_38: -3222617113218350162
+      KoMagic_39: 8221870078149448750
+      KoMagic_4: -2936390449953251876
+      KoMagic_40: -6442615796341701085
+      KoMagic_41: 2778281134983500777
+      KoMagic_42: -4425316864543439734
+      KoMagic_43: 6884533163318508989
+      KoMagic_44: 3129317245190389269
+      KoMagic_45: -5484994749333209106
+      KoMagic_46: -6931462616002194751
+      KoMagic_47: 2338470668034416368
+      KoMagic_48: -5968718695451538501
+      KoMagic_49: -8566721623806166883
+      KoMagic_5: 5742194663022964736
+      KoMagic_50: 957243884828285765
+      KoMagic_51: 6703278345029356351
+      KoMagic_52: -5286131939083251872
+      KoMagic_53: -5961658039804489755
+      KoMagic_54: 7927917420740893255
+      KoMagic_55: 780734282290220234
+      KoMagic_56: 6832095611209493160
+      KoMagic_57: -5456907635060114196
+      KoMagic_58: -8687069919846140594
+      KoMagic_59: 7154577182724236936
+      KoMagic_6: -914123166255886624
+      KoMagic_60: 1262216183270052848
+      KoMagic_61: 147729076535040341
+      KoMagic_62: 9037610354299308655
+      KoMagic_63: -1615923064089541644
+      KoMagic_64: 1324826862567920811
+      KoMagic_65: 3084542436168734919
+      KoMagic_66: -6414218596330285246
+      KoMagic_67: 4720320892719683072
+      KoMagic_68: -5635518516094927213
+      KoMagic_69: 6521493776858611568
+      KoMagic_7: 2475217653130480668
+      KoMagic_70: 730636066096369559
+      KoMagic_71: 8203373818870175755
+      KoMagic_72: -6170943335705907672
+      KoMagic_73: 6422101122857161869
+      KoMagic_74: -2945126758929185094
+      KoMagic_75: 4507352209913170297
+      KoMagic_76: 3365819661767230163
+      KoMagic_77: -4567208024788920599
+      KoMagic_78: 6444537631840814546
+      KoMagic_79: 8545977448139232112
+      KoMagic_8: -7720369688571605827
+      KoMagic_80: 2838110307830604047
+      KoMagic_81: 2803504876865026346
+      KoMagic_82: -5959263061077721204
+      KoMagic_83: 971553066772385948
+      KoMagic_84: -1904036066406765990
+      KoMagic_85: -3636871020607354144
+      KoMagic_86: 6077325980356294410
+      KoMagic_87: 8681760101884889576
+      KoMagic_88: 5768726881003513389
+      KoMagic_89: -6592643708052860942
+      KoMagic_9: -7451119246251206407
+      KoMagic_90: 5702125833115119281
+      KoMagic_91: 3828568138722665486
+      KoMagic_92: -3630139940854764320
+      KoMagic_93: 2019140989699459912
+      KoMagic_94: 3094963647772133453
+      KoMagic_95: -934276789272927753
+      KoMagic_96: 7610508329330754803
+      KoMagic_97: 5747101456938807915
+      KoMagic_98: -2156801911970891630
+      KoMagic_99: -7428003043075690231
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

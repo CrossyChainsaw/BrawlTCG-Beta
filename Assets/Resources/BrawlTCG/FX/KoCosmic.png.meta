@@ -1,0 +1,5488 @@
+fileFormatVersion: 2
+guid: c6a779aae2c7eb942aba9080cc5968f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4806287576279545604
+    second: KoCosmic_0
+  - first:
+      213: -2390675446566247187
+    second: KoCosmic_1
+  - first:
+      213: -4269706992529282792
+    second: KoCosmic_2
+  - first:
+      213: -6832978645216398324
+    second: KoCosmic_3
+  - first:
+      213: -8515400531775320647
+    second: KoCosmic_4
+  - first:
+      213: 2941054157750147283
+    second: KoCosmic_5
+  - first:
+      213: 5008612133060819026
+    second: KoCosmic_6
+  - first:
+      213: -3232982006412065486
+    second: KoCosmic_7
+  - first:
+      213: 7521810987275133288
+    second: KoCosmic_8
+  - first:
+      213: -9032470253957890821
+    second: KoCosmic_9
+  - first:
+      213: -8417034950223174187
+    second: KoCosmic_10
+  - first:
+      213: -800070561732266448
+    second: KoCosmic_11
+  - first:
+      213: -5679674549735874980
+    second: KoCosmic_12
+  - first:
+      213: 1051453354005572239
+    second: KoCosmic_13
+  - first:
+      213: -4408539296157829308
+    second: KoCosmic_14
+  - first:
+      213: -5229347737970033123
+    second: KoCosmic_15
+  - first:
+      213: -5475402675283172111
+    second: KoCosmic_16
+  - first:
+      213: 110783537110301724
+    second: KoCosmic_17
+  - first:
+      213: -8094734274641412209
+    second: KoCosmic_18
+  - first:
+      213: -7688999051523262522
+    second: KoCosmic_19
+  - first:
+      213: -4081107405209919057
+    second: KoCosmic_20
+  - first:
+      213: -5059995129986168691
+    second: KoCosmic_21
+  - first:
+      213: 986864478616840264
+    second: KoCosmic_22
+  - first:
+      213: -8808142133140916485
+    second: KoCosmic_23
+  - first:
+      213: -1482600975964068430
+    second: KoCosmic_24
+  - first:
+      213: -5579151224534030800
+    second: KoCosmic_25
+  - first:
+      213: -7663379570000641737
+    second: KoCosmic_26
+  - first:
+      213: -5116415412535066845
+    second: KoCosmic_27
+  - first:
+      213: 5973172491739378004
+    second: KoCosmic_28
+  - first:
+      213: 4801582898614541934
+    second: KoCosmic_29
+  - first:
+      213: -7153715739593559390
+    second: KoCosmic_30
+  - first:
+      213: 3244422834047681194
+    second: KoCosmic_31
+  - first:
+      213: -1730067374435964538
+    second: KoCosmic_32
+  - first:
+      213: 4633521196373181694
+    second: KoCosmic_33
+  - first:
+      213: -5233347306884351545
+    second: KoCosmic_34
+  - first:
+      213: 6653129787883835511
+    second: KoCosmic_35
+  - first:
+      213: 5568572277008051770
+    second: KoCosmic_36
+  - first:
+      213: -7432368892467293700
+    second: KoCosmic_37
+  - first:
+      213: 5667423905398089341
+    second: KoCosmic_38
+  - first:
+      213: 2871616207311444553
+    second: KoCosmic_39
+  - first:
+      213: -9045283657706772664
+    second: KoCosmic_40
+  - first:
+      213: -930871972538483254
+    second: KoCosmic_41
+  - first:
+      213: 7458667103068569523
+    second: KoCosmic_42
+  - first:
+      213: -5725894480172943589
+    second: KoCosmic_43
+  - first:
+      213: 6888974473989039677
+    second: KoCosmic_44
+  - first:
+      213: 7744022842876399780
+    second: KoCosmic_45
+  - first:
+      213: 930221468940418805
+    second: KoCosmic_46
+  - first:
+      213: 965079205549887350
+    second: KoCosmic_47
+  - first:
+      213: 997943333711664555
+    second: KoCosmic_48
+  - first:
+      213: 7436167948593667383
+    second: KoCosmic_49
+  - first:
+      213: 9098201782067748730
+    second: KoCosmic_50
+  - first:
+      213: -7389447907641625268
+    second: KoCosmic_51
+  - first:
+      213: -9027658429143340379
+    second: KoCosmic_52
+  - first:
+      213: 6446787610043106513
+    second: KoCosmic_53
+  - first:
+      213: 4669415252847652501
+    second: KoCosmic_54
+  - first:
+      213: -7933928034210096909
+    second: KoCosmic_55
+  - first:
+      213: 3698201667576538546
+    second: KoCosmic_56
+  - first:
+      213: -1813447600275109234
+    second: KoCosmic_57
+  - first:
+      213: 3862140393005883512
+    second: KoCosmic_58
+  - first:
+      213: -8671807762544634566
+    second: KoCosmic_59
+  - first:
+      213: 2049434289755709868
+    second: KoCosmic_60
+  - first:
+      213: 3894998182756168044
+    second: KoCosmic_61
+  - first:
+      213: -1468452169489637979
+    second: KoCosmic_62
+  - first:
+      213: 6500387026127295624
+    second: KoCosmic_63
+  - first:
+      213: -7312109322324174963
+    second: KoCosmic_64
+  - first:
+      213: 8241685085787308711
+    second: KoCosmic_65
+  - first:
+      213: -5176168999994196043
+    second: KoCosmic_66
+  - first:
+      213: -3028326150433814328
+    second: KoCosmic_67
+  - first:
+      213: 2238198647255388140
+    second: KoCosmic_68
+  - first:
+      213: 6387907355990225379
+    second: KoCosmic_69
+  - first:
+      213: -8278648799329928060
+    second: KoCosmic_70
+  - first:
+      213: 2664928389587004570
+    second: KoCosmic_71
+  - first:
+      213: 8204125415496176934
+    second: KoCosmic_72
+  - first:
+      213: 8012470015717267104
+    second: KoCosmic_73
+  - first:
+      213: -8371373615041386108
+    second: KoCosmic_74
+  - first:
+      213: 3206472445729044538
+    second: KoCosmic_75
+  - first:
+      213: 5719021699913062004
+    second: KoCosmic_76
+  - first:
+      213: 8590345651591180846
+    second: KoCosmic_77
+  - first:
+      213: -135434416863909837
+    second: KoCosmic_78
+  - first:
+      213: 2112632970782474172
+    second: KoCosmic_79
+  - first:
+      213: 5958691422966491866
+    second: KoCosmic_80
+  - first:
+      213: 1059088996609507938
+    second: KoCosmic_81
+  - first:
+      213: 3399152379100718136
+    second: KoCosmic_82
+  - first:
+      213: 8628765496064068288
+    second: KoCosmic_83
+  - first:
+      213: -7938644306316718173
+    second: KoCosmic_84
+  - first:
+      213: -4342077673206834551
+    second: KoCosmic_85
+  - first:
+      213: 7040568484820103750
+    second: KoCosmic_86
+  - first:
+      213: 770488342275228251
+    second: KoCosmic_87
+  - first:
+      213: -8198708302097601451
+    second: KoCosmic_88
+  - first:
+      213: -3117888350506445041
+    second: KoCosmic_89
+  - first:
+      213: 5739412725969250494
+    second: KoCosmic_90
+  - first:
+      213: -3791701438793148984
+    second: KoCosmic_91
+  - first:
+      213: 5534892618054763905
+    second: KoCosmic_92
+  - first:
+      213: -8702900877819752116
+    second: KoCosmic_93
+  - first:
+      213: -7081682312267502321
+    second: KoCosmic_94
+  - first:
+      213: 7624823614905487673
+    second: KoCosmic_95
+  - first:
+      213: 4517293506148296629
+    second: KoCosmic_96
+  - first:
+      213: 3352935977853803859
+    second: KoCosmic_97
+  - first:
+      213: -290345407811285081
+    second: KoCosmic_98
+  - first:
+      213: -4594727643615125229
+    second: KoCosmic_99
+  - first:
+      213: -6513133630676536197
+    second: KoCosmic_100
+  - first:
+      213: 998146040637295885
+    second: KoCosmic_101
+  - first:
+      213: -4531250518866715243
+    second: KoCosmic_102
+  - first:
+      213: 588259772650031085
+    second: KoCosmic_103
+  - first:
+      213: -5032033909220055376
+    second: KoCosmic_104
+  - first:
+      213: 989040359279394181
+    second: KoCosmic_105
+  - first:
+      213: 7021905138996045152
+    second: KoCosmic_106
+  - first:
+      213: 4054685376889408282
+    second: KoCosmic_107
+  - first:
+      213: 879626885729651717
+    second: KoCosmic_108
+  - first:
+      213: 3356294525625263277
+    second: KoCosmic_109
+  - first:
+      213: -3375603844659876666
+    second: KoCosmic_110
+  - first:
+      213: 3165741571846508923
+    second: KoCosmic_111
+  - first:
+      213: -5646352452056990971
+    second: KoCosmic_112
+  - first:
+      213: 7049151841714893133
+    second: KoCosmic_113
+  - first:
+      213: -5488887646139217158
+    second: KoCosmic_114
+  - first:
+      213: 685256021331926866
+    second: KoCosmic_115
+  - first:
+      213: -2884847928177921967
+    second: KoCosmic_116
+  - first:
+      213: -8368103761805026919
+    second: KoCosmic_117
+  - first:
+      213: 700446887207564529
+    second: KoCosmic_118
+  - first:
+      213: 7884744962142909800
+    second: KoCosmic_119
+  - first:
+      213: -662660076973180191
+    second: KoCosmic_120
+  - first:
+      213: 2717775331889499039
+    second: KoCosmic_121
+  - first:
+      213: -1490971910524368498
+    second: KoCosmic_122
+  - first:
+      213: -7234359019530288466
+    second: KoCosmic_123
+  - first:
+      213: 4946880838054912070
+    second: KoCosmic_124
+  - first:
+      213: -2653889780251110930
+    second: KoCosmic_125
+  - first:
+      213: -192302922575236562
+    second: KoCosmic_126
+  - first:
+      213: 3537067678786622248
+    second: KoCosmic_127
+  - first:
+      213: -6890491376842370654
+    second: KoCosmic_128
+  - first:
+      213: 5065202599449257322
+    second: KoCosmic_129
+  - first:
+      213: 5886202446709590752
+    second: KoCosmic_130
+  - first:
+      213: 1272818948234715375
+    second: KoCosmic_131
+  - first:
+      213: 8548102060660301806
+    second: KoCosmic_132
+  - first:
+      213: -2025792472870641946
+    second: KoCosmic_133
+  - first:
+      213: 4417084718520747002
+    second: KoCosmic_134
+  - first:
+      213: -2783960749279745262
+    second: KoCosmic_135
+  - first:
+      213: -7231706755441204923
+    second: KoCosmic_136
+  - first:
+      213: -4202335455017302256
+    second: KoCosmic_137
+  - first:
+      213: 1392787081817183143
+    second: KoCosmic_138
+  - first:
+      213: 8934879207622733447
+    second: KoCosmic_139
+  - first:
+      213: -9157584583142242775
+    second: KoCosmic_140
+  - first:
+      213: 3619262625504164486
+    second: KoCosmic_141
+  - first:
+      213: 4793187619983472799
+    second: KoCosmic_142
+  - first:
+      213: -8106143064510342265
+    second: KoCosmic_143
+  - first:
+      213: -799646399926724831
+    second: KoCosmic_144
+  - first:
+      213: -2509361463200649288
+    second: KoCosmic_145
+  - first:
+      213: -4923715063935413653
+    second: KoCosmic_146
+  - first:
+      213: 6668892330919989071
+    second: KoCosmic_147
+  - first:
+      213: -8728826627929564680
+    second: KoCosmic_148
+  - first:
+      213: 1228049599280195594
+    second: KoCosmic_149
+  - first:
+      213: -2477394735414372196
+    second: KoCosmic_150
+  - first:
+      213: -8290923412645831825
+    second: KoCosmic_151
+  - first:
+      213: -3586247567081980937
+    second: KoCosmic_152
+  - first:
+      213: 6974055073406129985
+    second: KoCosmic_153
+  - first:
+      213: 4275384100680010847
+    second: KoCosmic_154
+  - first:
+      213: -1820133072375317103
+    second: KoCosmic_155
+  - first:
+      213: -8415574885688793689
+    second: KoCosmic_156
+  - first:
+      213: -7550085236878949064
+    second: KoCosmic_157
+  - first:
+      213: -4492633883507089927
+    second: KoCosmic_158
+  - first:
+      213: 6035104567483627736
+    second: KoCosmic_159
+  - first:
+      213: 5325157374129145557
+    second: KoCosmic_160
+  - first:
+      213: -419285520937112363
+    second: KoCosmic_161
+  - first:
+      213: 8984049236878129072
+    second: KoCosmic_162
+  - first:
+      213: -6096330606122114350
+    second: KoCosmic_163
+  - first:
+      213: 2171039665326643354
+    second: KoCosmic_164
+  - first:
+      213: 8952457957343167785
+    second: KoCosmic_165
+  - first:
+      213: -8405433738904339231
+    second: KoCosmic_166
+  - first:
+      213: 6672108773198697740
+    second: KoCosmic_167
+  - first:
+      213: 4123262172189462144
+    second: KoCosmic_168
+  - first:
+      213: -704478800459740474
+    second: KoCosmic_169
+  - first:
+      213: 148176192531800345
+    second: KoCosmic_170
+  - first:
+      213: -114274914714277530
+    second: KoCosmic_171
+  - first:
+      213: 2031735656870802608
+    second: KoCosmic_172
+  - first:
+      213: -7544823293465405394
+    second: KoCosmic_173
+  - first:
+      213: 3261297294217519528
+    second: KoCosmic_174
+  - first:
+      213: -2228015913785565362
+    second: KoCosmic_175
+  - first:
+      213: 7438516684277710510
+    second: KoCosmic_176
+  - first:
+      213: 6253997658724725704
+    second: KoCosmic_177
+  - first:
+      213: 8778922033828093226
+    second: KoCosmic_178
+  - first:
+      213: -1445173020439188174
+    second: KoCosmic_179
+  - first:
+      213: 8343180444889169014
+    second: KoCosmic_180
+  - first:
+      213: 8060360316151950822
+    second: KoCosmic_181
+  - first:
+      213: -8578430254204343235
+    second: KoCosmic_182
+  - first:
+      213: -6964299923836138764
+    second: KoCosmic_183
+  - first:
+      213: -8911016208764060715
+    second: KoCosmic_184
+  - first:
+      213: -3932096060120930191
+    second: KoCosmic_185
+  - first:
+      213: -2611763945167593634
+    second: KoCosmic_186
+  - first:
+      213: 3890123632694447283
+    second: KoCosmic_187
+  - first:
+      213: 9032118965542991192
+    second: KoCosmic_188
+  - first:
+      213: -475956026369374618
+    second: KoCosmic_189
+  - first:
+      213: -37685707681482979
+    second: KoCosmic_190
+  - first:
+      213: 6497309520713532049
+    second: KoCosmic_191
+  - first:
+      213: -9055871657386043097
+    second: KoCosmic_192
+  - first:
+      213: 4894426455960481154
+    second: KoCosmic_193
+  - first:
+      213: 4323488489381651827
+    second: KoCosmic_194
+  - first:
+      213: -4747673685224517528
+    second: KoCosmic_195
+  - first:
+      213: 1838150017213481971
+    second: KoCosmic_196
+  - first:
+      213: 2384944388664616701
+    second: KoCosmic_197
+  - first:
+      213: 3704474421697394386
+    second: KoCosmic_198
+  - first:
+      213: -9024957163572760748
+    second: KoCosmic_199
+  - first:
+      213: 3714181276362054427
+    second: KoCosmic_200
+  - first:
+      213: -1988976447852010944
+    second: KoCosmic_201
+  - first:
+      213: -6352775406388556513
+    second: KoCosmic_202
+  - first:
+      213: 1601713197512941398
+    second: KoCosmic_203
+  - first:
+      213: -7269227421822024637
+    second: KoCosmic_204
+  - first:
+      213: -1387473698039141721
+    second: KoCosmic_205
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KoCosmic_0
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1440
+        width: 172
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf80c770ae2ac4db0800000000000000
+      internalID: -4806287576279545604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1440
+        width: 172
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4ab22095d92ded0800000000000000
+      internalID: -2390675446566247187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_2
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1439
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8196a47bc14feb4c0800000000000000
+      internalID: -4269706992529282792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_3
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1521
+        width: 15
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04fb06ff126c21a0800000000000000
+      internalID: -6832978645216398324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_4
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1483
+        width: 14
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd0c57355833d980800000000000000
+      internalID: -8515400531775320647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_5
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 1439
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d812e19c29b0d820800000000000000
+      internalID: 2941054157750147283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_6
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1521
+        width: 15
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2583dc0c23a228540800000000000000
+      internalID: 5008612133060819026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_7
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1483
+        width: 14
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23544968ef32223d0800000000000000
+      internalID: -3232982006412065486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_8
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1440
+        width: 147
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8612a2c9d37d26860800000000000000
+      internalID: 7521810987275133288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_9
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1322
+        width: 13
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfcbe8cf82836a280800000000000000
+      internalID: -9032470253957890821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_10
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1343
+        width: 11
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d566e1ee4fa03b80800000000000000
+      internalID: -8417034950223174187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_11
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1391
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03673b4201495e4f0800000000000000
+      internalID: -800070561732266448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_12
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1383
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e9a27d61ebd21b0800000000000000
+      internalID: -5679674549735874980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_13
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1199
+        width: 279
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a256f2143879e00800000000000000
+      internalID: 1051453354005572239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_14
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1199
+        width: 238
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447792a1ed8b1d2c0800000000000000
+      internalID: -4408539296157829308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_15
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1199
+        width: 236
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ebd4740ff9d67b0800000000000000
+      internalID: -5229347737970033123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_16
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4e589d6467304b0800000000000000
+      internalID: -5475402675283172111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_17
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1200
+        width: 205
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1cbb604a05998100800000000000000
+      internalID: 110783537110301724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_18
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1329
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fb1d0a01ab9af80800000000000000
+      internalID: -8094734274641412209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_19
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1303
+        width: 10
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7f3a7c9103b4590800000000000000
+      internalID: -7688999051523262522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_20
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 1288
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa12f36007efc57c0800000000000000
+      internalID: -4081107405209919057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_21
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1295
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d88c7fffc3947c9b0800000000000000
+      internalID: -5059995129986168691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_22
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1200
+        width: 190
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8486861c30c02bd00800000000000000
+      internalID: 986864478616840264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_23
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1302
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6fbfeb56133c580800000000000000
+      internalID: -8808142133140916485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_24
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1313
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5a30c744ebc6be0800000000000000
+      internalID: -1482600975964068430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_25
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1241
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036a679558fd292b0800000000000000
+      internalID: -5579151224534030800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_26
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1247
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731402722e436a590800000000000000
+      internalID: -7663379570000641737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_27
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1236
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f738c4a47def8b0800000000000000
+      internalID: -5116415412535066845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_28
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1239
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451b248ebb8f4e250800000000000000
+      internalID: 5973172491739378004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_29
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1132
+        width: 46
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e9287d436a2a240800000000000000
+      internalID: 4801582898614541934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_30
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1166
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2b765df65e8bc90800000000000000
+      internalID: -7153715739593559390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_31
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1167
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa2049cb061860d20800000000000000
+      internalID: 3244422834047681194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_32
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1146
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6896045a3e09df7e0800000000000000
+      internalID: -1730067374435964538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_33
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1154
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef401198af29d4040800000000000000
+      internalID: 4633521196373181694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_34
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1149
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c939e21a5a6f57b0800000000000000
+      internalID: -5233347306884351545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_35
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 962
+        width: 174
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770d263da4aa45c50800000000000000
+      internalID: 6653129787883835511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_36
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 962
+        width: 174
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e272d7bfa874d40800000000000000
+      internalID: 5568572277008051770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1077
+        width: 57
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1d2d4eedbead890800000000000000
+      internalID: -7432368892467293700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_38
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 963
+        width: 176
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d766fc0c30cb6ae40800000000000000
+      internalID: 5667423905398089341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_39
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1070
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a9d00e9b70ad720800000000000000
+      internalID: 2871616207311444553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_40
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1101
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847edb1ff62b87280800000000000000
+      internalID: -9045283657706772664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_41
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 963
+        width: 176
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdf9797fd0e413f0800000000000000
+      internalID: -930871972538483254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_42
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 963
+        width: 169
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf3b486632828760800000000000000
+      internalID: 7458667103068569523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_43
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1132
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17fbefae498980b0800000000000000
+      internalID: -5725894480172943589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_44
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1115
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36a9d4e8cd8a9f50800000000000000
+      internalID: 6888974473989039677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_45
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1122
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0982afebb487b60800000000000000
+      internalID: 7744022842876399780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_46
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1089
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5feb2aa5f7fc8ec00800000000000000
+      internalID: 930221468940418805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_47
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1106
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fcaea9c66a46d00800000000000000
+      internalID: 965079205549887350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_48
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1101
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba55ad7bc2869dd00800000000000000
+      internalID: 997943333711664555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_49
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1082
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d121ac953923760800000000000000
+      internalID: 7436167948593667383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_50
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1083
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f59f2015e434e70800000000000000
+      internalID: 9098201782067748730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_51
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 1095
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4574ca6748637990800000000000000
+      internalID: -7389447907641625268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_52
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1050
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aaa9514d7057b280800000000000000
+      internalID: -9027658429143340379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_53
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1053
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d4420fbc27977950800000000000000
+      internalID: 6446787610043106513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_54
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1052
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e66cece681dc040800000000000000
+      internalID: 4669415252847652501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_55
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1054
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8d4671d7605e190800000000000000
+      internalID: -7933928034210096909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_56
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1073
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b528af92d6a25330800000000000000
+      internalID: 3698201667576538546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_57
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1065
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a41def30755d6e0800000000000000
+      internalID: -1813447600275109234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_58
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1063
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870adc59934199530800000000000000
+      internalID: 3862140393005883512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_59
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1073
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a355d0109cc87a780800000000000000
+      internalID: -8671807762544634566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_60
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1060
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1e46fc0ad017c10800000000000000
+      internalID: 2049434289755709868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_61
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1054
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6139fbe530dd0630800000000000000
+      internalID: 3894998182756168044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_62
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1055
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad1be338820f9be0800000000000000
+      internalID: -1468452169489637979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_63
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1055
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88410ea4f83063a50800000000000000
+      internalID: 6500387026127295624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_64
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1018
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d879b04005b268a90800000000000000
+      internalID: -7312109322324174963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_65
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1019
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2ccf05be8506270800000000000000
+      internalID: 8241685085787308711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_66
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1012
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bff4f118bd8a28b0800000000000000
+      internalID: -5176168999994196043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_67
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1007
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c8cd53396939f5d0800000000000000
+      internalID: -3028326150433814328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_68
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1005
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cefca6aafcdaf0f10800000000000000
+      internalID: 2238198647255388140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_69
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1005
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1f6eb45e766a850800000000000000
+      internalID: 6387907355990225379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_70
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 996
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48cb9b777c45c1d80800000000000000
+      internalID: -8278648799329928060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_71
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 988
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9cef2d304abbf420800000000000000
+      internalID: 2664928389587004570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_72
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 985
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625576b1998ead170800000000000000
+      internalID: 8204125415496176934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_73
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 974
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6db440703023f60800000000000000
+      internalID: 8012470015717267104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_74
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 998
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4896161fc08e2db80800000000000000
+      internalID: -8371373615041386108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_75
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 984
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38f1c563bdaf7c20800000000000000
+      internalID: 3206472445729044538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_76
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 975
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47691167feb0e5f40800000000000000
+      internalID: 5719021699913062004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_77
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 984
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22f9e44bd9073770800000000000000
+      internalID: 8590345651591180846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_78
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 975
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338e67c8d17de1ef0800000000000000
+      internalID: -135434416863909837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_79
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 975
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf74446e74915d10800000000000000
+      internalID: 2112632970782474172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_80
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 975
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adaa518574681b250800000000000000
+      internalID: 5958691422966491866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_81
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 759
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2624f64c4d3a2be00800000000000000
+      internalID: 1059088996609507938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_82
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 721
+        width: 175
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834e8bd44173c2f20800000000000000
+      internalID: 3399152379100718136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_83
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 765
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cacb0360888fb770800000000000000
+      internalID: 8628765496064068288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_84
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 759
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af80db601544d190800000000000000
+      internalID: -7938644306316718173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_85
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 721
+        width: 175
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a1a5d8c57ddb3c0800000000000000
+      internalID: -4342077673206834551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_86
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 765
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64233820cbf15b160800000000000000
+      internalID: 7040568484820103750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_87
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 723
+        width: 177
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5205e8a01351ba00800000000000000
+      internalID: 770488342275228251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_88
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 765
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c2d64ec36583e80800000000000000
+      internalID: -8198708302097601451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_89
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 723
+        width: 177
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f071cb280190bb4d0800000000000000
+      internalID: -3117888350506445041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_90
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 765
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8e0ce277d76af40800000000000000
+      internalID: 5739412725969250494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_91
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 723
+        width: 178
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5956671ab216bc0800000000000000
+      internalID: -3791701438793148984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_92
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 747
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1850611d283efcc40800000000000000
+      internalID: 5534892618054763905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_93
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 744
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c415e16f2c5193780800000000000000
+      internalID: -8702900877819752116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_94
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 751
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0de025157fc8bd90800000000000000
+      internalID: -7081682312267502321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_95
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 747
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93193710ea0d0d960800000000000000
+      internalID: 7624823614905487673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_96
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 744
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7e52c9286a0be30800000000000000
+      internalID: 4517293506148296629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_97
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 751
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d5a9ad185088e20800000000000000
+      internalID: 3352935977853803859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_98
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 737
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af0e31d36c78fbf0800000000000000
+      internalID: -290345407811285081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_99
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 741
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31127a25d8f3c30c0800000000000000
+      internalID: -4594727643615125229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_100
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 736
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74ffd09873bc95a0800000000000000
+      internalID: -6513133630676536197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_101
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 737
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d062a19802add00800000000000000
+      internalID: 998146040637295885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_102
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 741
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d15a229a3cd11c0800000000000000
+      internalID: -4531250518866715243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_103
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 736
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de70570852be92800800000000000000
+      internalID: 588259772650031085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_104
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 483
+        width: 178
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6e73702df9a2ab0800000000000000
+      internalID: -5032033909220055376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_105
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 489
+        width: 177
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d7f5377f6c9bd00800000000000000
+      internalID: 989040359279394181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_106
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 674
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06569503581d27160800000000000000
+      internalID: 7021905138996045152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_107
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 489
+        width: 177
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1bc67d1ed2254830800000000000000
+      internalID: 4054685376889408282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_108
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 674
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c8ccafdff053c00800000000000000
+      internalID: 879626885729651717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_109
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 495
+        width: 168
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da46b71b614f39e20800000000000000
+      internalID: 3356294525625263277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_110
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 676
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccea9020327721d0800000000000000
+      internalID: -3375603844659876666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_111
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 495
+        width: 168
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b711990df29feeb20800000000000000
+      internalID: 3165741571846508923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_112
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 676
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50bbc7a4c5024a1b0800000000000000
+      internalID: -5646352452056990971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_113
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 502
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41f435804e93d160800000000000000
+      internalID: 7049151841714893133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_114
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 502
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa87d764cd83d3b0800000000000000
+      internalID: -5488887646139217158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_115
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 484
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fdfa388b4828900800000000000000
+      internalID: 685256021331926866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_116
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 484
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150fee90816f6f7d0800000000000000
+      internalID: -2884847928177921967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_117
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 268
+        width: 144
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999500af6f58edb80800000000000000
+      internalID: -8368103761805026919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_118
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 295
+        width: 135
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4f8089bbc78b900800000000000000
+      internalID: 700446887207564529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_119
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 407
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865341594cd3c6d60800000000000000
+      internalID: 7884744962142909800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_120
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 413
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea3e21cb22cdc6f0800000000000000
+      internalID: -662660076973180191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_121
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 415
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9bc794d34a77b520800000000000000
+      internalID: 2717775331889499039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_122
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 424
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e890c1762f00f4be0800000000000000
+      internalID: -1490971910524368498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_123
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 427
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2014f0dc46a9b90800000000000000
+      internalID: -7234359019530288466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_124
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 429
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640237a99e9d6a440800000000000000
+      internalID: 4946880838054912070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_125
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 407
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1d7174e4d7b2bd0800000000000000
+      internalID: -2653889780251110930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_126
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 415
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2232a2c28dc45df0800000000000000
+      internalID: -192302922575236562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_127
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 411
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823979c4050361130800000000000000
+      internalID: 3537067678786622248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_128
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 416
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a11b63a99e0060a0800000000000000
+      internalID: -6890491376842370654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_129
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 416
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65ee877de63b4640800000000000000
+      internalID: 5065202599449257322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_130
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 374
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea092850fdffa150800000000000000
+      internalID: 5886202446709590752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_131
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 345
+        width: 95
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0aae8f616f9a110800000000000000
+      internalID: 1272818948234715375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_132
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 382
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef117dc885f0a670800000000000000
+      internalID: 8548102060660301806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_133
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 376
+        width: 72
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee92e1aa70f2e3e0800000000000000
+      internalID: -2025792472870641946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_134
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 386
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af34c361623ac4d30800000000000000
+      internalID: 4417084718520747002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_135
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 388
+        width: 61
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bec86d2726d59d0800000000000000
+      internalID: -2783960749279745262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_136
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 382
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541622a6501d3ab90800000000000000
+      internalID: -7231706755441204923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_137
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 389
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0170aa82b2e4ea5c0800000000000000
+      internalID: -4202335455017302256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_138
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 378
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3577bb87c245310800000000000000
+      internalID: 1392787081817183143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_139
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 377
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e6061ec411ffb70800000000000000
+      internalID: 8934879207622733447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_140
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 367
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92686313759b9e080800000000000000
+      internalID: -9157584583142242775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_141
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 371
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68af506ae243a3230800000000000000
+      internalID: 3619262625504164486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_142
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 360
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f983ae6beb2d48240800000000000000
+      internalID: 4793187619983472799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_143
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 353
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b5d5db4d1318f80800000000000000
+      internalID: -8106143064510342265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_144
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 365
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127927206d517e4f0800000000000000
+      internalID: -799646399926724831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_145
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 356
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bfeedc5b05fc2dd0800000000000000
+      internalID: -2509361463200649288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_146
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 299
+        width: 63
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62d3ee7c337babb0800000000000000
+      internalID: -4923715063935413653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_147
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 305
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f00dddd3aac8c50800000000000000
+      internalID: 6668892330919989071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_148
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 332
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f99940ed6afcd680800000000000000
+      internalID: -8728826627929564680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_149
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 346
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0828a3aa98ea0110800000000000000
+      internalID: 1228049599280195594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_150
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 338
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98143b2d968e9dd0800000000000000
+      internalID: -2477394735414372196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_151
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 324
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b96495519b0fc80800000000000000
+      internalID: -8290923412645831825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_152
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 347
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb3877a6d61b3ec0800000000000000
+      internalID: -3586247567081980937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_153
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 279
+        width: 63
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147126e9322d8c060800000000000000
+      internalID: 6974055073406129985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_154
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 304
+        width: 58
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c82670037355b30800000000000000
+      internalID: 4275384100680010847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_155
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 299
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19df0293d969db6e0800000000000000
+      internalID: -1820133072375317103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_156
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 307
+        width: 54
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a522d5aa3fd53b80800000000000000
+      internalID: -8415574885688793689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_157
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 311
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835c8e7aa75b83790800000000000000
+      internalID: -7550085236878949064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_158
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 310
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd1da33945f6a1c0800000000000000
+      internalID: -4492633883507089927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_159
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 308
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8f237f0aff0c350800000000000000
+      internalID: 6035104567483627736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_160
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 317
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6050afa62c6e940800000000000000
+      internalID: 5325157374129145557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_161
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 308
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc24194a066e2af0800000000000000
+      internalID: -419285520937112363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_162
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 319
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b77db07e21cdac70800000000000000
+      internalID: 8984049236878129072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_163
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 309
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2efbc0d9b756ba0800000000000000
+      internalID: -6096330606122114350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_164
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 284
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98d31da215112e10800000000000000
+      internalID: 2171039665326643354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_165
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 288
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9250f0e74158d3c70800000000000000
+      internalID: 8952457957343167785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_166
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 303
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ecf5816c86e95b80800000000000000
+      internalID: -8405433738904339231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_167
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 291
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0596413497189c50800000000000000
+      internalID: 6672108773198697740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_168
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 294
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e88218915c83930800000000000000
+      internalID: 4123262172189462144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_169
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 277
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cacdc273403936f0800000000000000
+      internalID: -704478800459740474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_170
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 276
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9112708467d6e0200800000000000000
+      internalID: 148176192531800345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_171
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 280
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669a7bd02930a6ef0800000000000000
+      internalID: -114274914714277530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_172
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 284
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b47749b0dc223c10800000000000000
+      internalID: 2031735656870802608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_173
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 283
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28d6e350376b4790800000000000000
+      internalID: -7544823293465405394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_174
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 289
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a127c82c94724d20800000000000000
+      internalID: 3261297294217519528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_175
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 280
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fd4e8b45f7411e0800000000000000
+      internalID: -2228015913785565362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_176
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 291
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae703e638bea3760800000000000000
+      internalID: 7438516684277710510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_177
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 283
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3796a4cb9aac650800000000000000
+      internalID: 6253997658724725704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_178
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 259
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d5c29b31ff4d970800000000000000
+      internalID: 8778922033828093226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_179
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 266
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d6eb57bc6b1fbe0800000000000000
+      internalID: -1445173020439188174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_180
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 280
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cba9a196ee8c370800000000000000
+      internalID: 8343180444889169014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_181
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 274
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed64ed70072cdf60800000000000000
+      internalID: 8060360316151950822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_182
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 278
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cafaf522b43f880800000000000000
+      internalID: -8578430254204343235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_183
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 263
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa87722e16d95f90800000000000000
+      internalID: -6964299923836138764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_184
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 267
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbbed088f5b55480800000000000000
+      internalID: -8911016208764060715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_185
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 191
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17867c967736e69c0800000000000000
+      internalID: -3932096060120930191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_186
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 191
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fdc13978621cbd0800000000000000
+      internalID: -2611763945167593634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_187
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 192
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bcca1b45de7cf530800000000000000
+      internalID: 3890123632694447283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_188
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 193
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855324e4858885d70800000000000000
+      internalID: 9032118965542991192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_189
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 162
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6660c8704801569f0800000000000000
+      internalID: -475956026369374618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_190
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 154
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17398c6c0d1a7ff0800000000000000
+      internalID: -37685707681482979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_191
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 164
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192c4e9b5941b2a50800000000000000
+      internalID: 6497309520713532049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_192
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 162
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7291af925b4135280800000000000000
+      internalID: -9055871657386043097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_193
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 157
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d6cce0eee7ce340800000000000000
+      internalID: 4894426455960481154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_194
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 123
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3756510dfdd100c30800000000000000
+      internalID: 4323488489381651827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_195
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 128
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86019b200ffdc1eb0800000000000000
+      internalID: -4747673685224517528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_196
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 105
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f343e3a3bb628910800000000000000
+      internalID: 1838150017213481971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_197
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 91
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df66a671946091120800000000000000
+      internalID: 2384944388664616701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_198
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 108
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d63bc00cdfe86330800000000000000
+      internalID: 3704474421697394386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_199
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 103
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fe028a649e0c280800000000000000
+      internalID: -9024957163572760748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_200
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 86
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b97f8313c6b8330800000000000000
+      internalID: 3714181276362054427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_201
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 88
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042a92f657cb564e0800000000000000
+      internalID: -1988976447852010944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_202
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 94
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d4f542d6866d7a0800000000000000
+      internalID: -6352775406388556513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_203
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 90
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f50d9baad6a3610800000000000000
+      internalID: 1601713197512941398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_204
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 71
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34405c28c248e1b90800000000000000
+      internalID: -7269227421822024637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoCosmic_205
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 78
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaed25d504bebce0800000000000000
+      internalID: -1387473698039141721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      KoCosmic_0: -4806287576279545604
+      KoCosmic_1: -2390675446566247187
+      KoCosmic_10: -8417034950223174187
+      KoCosmic_100: -6513133630676536197
+      KoCosmic_101: 998146040637295885
+      KoCosmic_102: -4531250518866715243
+      KoCosmic_103: 588259772650031085
+      KoCosmic_104: -5032033909220055376
+      KoCosmic_105: 989040359279394181
+      KoCosmic_106: 7021905138996045152
+      KoCosmic_107: 4054685376889408282
+      KoCosmic_108: 879626885729651717
+      KoCosmic_109: 3356294525625263277
+      KoCosmic_11: -800070561732266448
+      KoCosmic_110: -3375603844659876666
+      KoCosmic_111: 3165741571846508923
+      KoCosmic_112: -5646352452056990971
+      KoCosmic_113: 7049151841714893133
+      KoCosmic_114: -5488887646139217158
+      KoCosmic_115: 685256021331926866
+      KoCosmic_116: -2884847928177921967
+      KoCosmic_117: -8368103761805026919
+      KoCosmic_118: 700446887207564529
+      KoCosmic_119: 7884744962142909800
+      KoCosmic_12: -5679674549735874980
+      KoCosmic_120: -662660076973180191
+      KoCosmic_121: 2717775331889499039
+      KoCosmic_122: -1490971910524368498
+      KoCosmic_123: -7234359019530288466
+      KoCosmic_124: 4946880838054912070
+      KoCosmic_125: -2653889780251110930
+      KoCosmic_126: -192302922575236562
+      KoCosmic_127: 3537067678786622248
+      KoCosmic_128: -6890491376842370654
+      KoCosmic_129: 5065202599449257322
+      KoCosmic_13: 1051453354005572239
+      KoCosmic_130: 5886202446709590752
+      KoCosmic_131: 1272818948234715375
+      KoCosmic_132: 8548102060660301806
+      KoCosmic_133: -2025792472870641946
+      KoCosmic_134: 4417084718520747002
+      KoCosmic_135: -2783960749279745262
+      KoCosmic_136: -7231706755441204923
+      KoCosmic_137: -4202335455017302256
+      KoCosmic_138: 1392787081817183143
+      KoCosmic_139: 8934879207622733447
+      KoCosmic_14: -4408539296157829308
+      KoCosmic_140: -9157584583142242775
+      KoCosmic_141: 3619262625504164486
+      KoCosmic_142: 4793187619983472799
+      KoCosmic_143: -8106143064510342265
+      KoCosmic_144: -799646399926724831
+      KoCosmic_145: -2509361463200649288
+      KoCosmic_146: -4923715063935413653
+      KoCosmic_147: 6668892330919989071
+      KoCosmic_148: -8728826627929564680
+      KoCosmic_149: 1228049599280195594
+      KoCosmic_15: -5229347737970033123
+      KoCosmic_150: -2477394735414372196
+      KoCosmic_151: -8290923412645831825
+      KoCosmic_152: -3586247567081980937
+      KoCosmic_153: 6974055073406129985
+      KoCosmic_154: 4275384100680010847
+      KoCosmic_155: -1820133072375317103
+      KoCosmic_156: -8415574885688793689
+      KoCosmic_157: -7550085236878949064
+      KoCosmic_158: -4492633883507089927
+      KoCosmic_159: 6035104567483627736
+      KoCosmic_16: -5475402675283172111
+      KoCosmic_160: 5325157374129145557
+      KoCosmic_161: -419285520937112363
+      KoCosmic_162: 8984049236878129072
+      KoCosmic_163: -6096330606122114350
+      KoCosmic_164: 2171039665326643354
+      KoCosmic_165: 8952457957343167785
+      KoCosmic_166: -8405433738904339231
+      KoCosmic_167: 6672108773198697740
+      KoCosmic_168: 4123262172189462144
+      KoCosmic_169: -704478800459740474
+      KoCosmic_17: 110783537110301724
+      KoCosmic_170: 148176192531800345
+      KoCosmic_171: -114274914714277530
+      KoCosmic_172: 2031735656870802608
+      KoCosmic_173: -7544823293465405394
+      KoCosmic_174: 3261297294217519528
+      KoCosmic_175: -2228015913785565362
+      KoCosmic_176: 7438516684277710510
+      KoCosmic_177: 6253997658724725704
+      KoCosmic_178: 8778922033828093226
+      KoCosmic_179: -1445173020439188174
+      KoCosmic_18: -8094734274641412209
+      KoCosmic_180: 8343180444889169014
+      KoCosmic_181: 8060360316151950822
+      KoCosmic_182: -8578430254204343235
+      KoCosmic_183: -6964299923836138764
+      KoCosmic_184: -8911016208764060715
+      KoCosmic_185: -3932096060120930191
+      KoCosmic_186: -2611763945167593634
+      KoCosmic_187: 3890123632694447283
+      KoCosmic_188: 9032118965542991192
+      KoCosmic_189: -475956026369374618
+      KoCosmic_19: -7688999051523262522
+      KoCosmic_190: -37685707681482979
+      KoCosmic_191: 6497309520713532049
+      KoCosmic_192: -9055871657386043097
+      KoCosmic_193: 4894426455960481154
+      KoCosmic_194: 4323488489381651827
+      KoCosmic_195: -4747673685224517528
+      KoCosmic_196: 1838150017213481971
+      KoCosmic_197: 2384944388664616701
+      KoCosmic_198: 3704474421697394386
+      KoCosmic_199: -9024957163572760748
+      KoCosmic_2: -4269706992529282792
+      KoCosmic_20: -4081107405209919057
+      KoCosmic_200: 3714181276362054427
+      KoCosmic_201: -1988976447852010944
+      KoCosmic_202: -6352775406388556513
+      KoCosmic_203: 1601713197512941398
+      KoCosmic_204: -7269227421822024637
+      KoCosmic_205: -1387473698039141721
+      KoCosmic_21: -5059995129986168691
+      KoCosmic_22: 986864478616840264
+      KoCosmic_23: -8808142133140916485
+      KoCosmic_24: -1482600975964068430
+      KoCosmic_25: -5579151224534030800
+      KoCosmic_26: -7663379570000641737
+      KoCosmic_27: -5116415412535066845
+      KoCosmic_28: 5973172491739378004
+      KoCosmic_29: 4801582898614541934
+      KoCosmic_3: -6832978645216398324
+      KoCosmic_30: -7153715739593559390
+      KoCosmic_31: 3244422834047681194
+      KoCosmic_32: -1730067374435964538
+      KoCosmic_33: 4633521196373181694
+      KoCosmic_34: -5233347306884351545
+      KoCosmic_35: 6653129787883835511
+      KoCosmic_36: 5568572277008051770
+      KoCosmic_37: -7432368892467293700
+      KoCosmic_38: 5667423905398089341
+      KoCosmic_39: 2871616207311444553
+      KoCosmic_4: -8515400531775320647
+      KoCosmic_40: -9045283657706772664
+      KoCosmic_41: -930871972538483254
+      KoCosmic_42: 7458667103068569523
+      KoCosmic_43: -5725894480172943589
+      KoCosmic_44: 6888974473989039677
+      KoCosmic_45: 7744022842876399780
+      KoCosmic_46: 930221468940418805
+      KoCosmic_47: 965079205549887350
+      KoCosmic_48: 997943333711664555
+      KoCosmic_49: 7436167948593667383
+      KoCosmic_5: 2941054157750147283
+      KoCosmic_50: 9098201782067748730
+      KoCosmic_51: -7389447907641625268
+      KoCosmic_52: -9027658429143340379
+      KoCosmic_53: 6446787610043106513
+      KoCosmic_54: 4669415252847652501
+      KoCosmic_55: -7933928034210096909
+      KoCosmic_56: 3698201667576538546
+      KoCosmic_57: -1813447600275109234
+      KoCosmic_58: 3862140393005883512
+      KoCosmic_59: -8671807762544634566
+      KoCosmic_6: 5008612133060819026
+      KoCosmic_60: 2049434289755709868
+      KoCosmic_61: 3894998182756168044
+      KoCosmic_62: -1468452169489637979
+      KoCosmic_63: 6500387026127295624
+      KoCosmic_64: -7312109322324174963
+      KoCosmic_65: 8241685085787308711
+      KoCosmic_66: -5176168999994196043
+      KoCosmic_67: -3028326150433814328
+      KoCosmic_68: 2238198647255388140
+      KoCosmic_69: 6387907355990225379
+      KoCosmic_7: -3232982006412065486
+      KoCosmic_70: -8278648799329928060
+      KoCosmic_71: 2664928389587004570
+      KoCosmic_72: 8204125415496176934
+      KoCosmic_73: 8012470015717267104
+      KoCosmic_74: -8371373615041386108
+      KoCosmic_75: 3206472445729044538
+      KoCosmic_76: 5719021699913062004
+      KoCosmic_77: 8590345651591180846
+      KoCosmic_78: -135434416863909837
+      KoCosmic_79: 2112632970782474172
+      KoCosmic_8: 7521810987275133288
+      KoCosmic_80: 5958691422966491866
+      KoCosmic_81: 1059088996609507938
+      KoCosmic_82: 3399152379100718136
+      KoCosmic_83: 8628765496064068288
+      KoCosmic_84: -7938644306316718173
+      KoCosmic_85: -4342077673206834551
+      KoCosmic_86: 7040568484820103750
+      KoCosmic_87: 770488342275228251
+      KoCosmic_88: -8198708302097601451
+      KoCosmic_89: -3117888350506445041
+      KoCosmic_9: -9032470253957890821
+      KoCosmic_90: 5739412725969250494
+      KoCosmic_91: -3791701438793148984
+      KoCosmic_92: 5534892618054763905
+      KoCosmic_93: -8702900877819752116
+      KoCosmic_94: -7081682312267502321
+      KoCosmic_95: 7624823614905487673
+      KoCosmic_96: 4517293506148296629
+      KoCosmic_97: 3352935977853803859
+      KoCosmic_98: -290345407811285081
+      KoCosmic_99: -4594727643615125229
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

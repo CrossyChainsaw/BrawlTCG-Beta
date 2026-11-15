@@ -157,6 +157,11 @@ namespace BrawlTCG.Core
         readonly int _basePower;
         readonly Attack[] _attacks;
 
+        /// <summary>The power printed on the card (before buffs / debuffs).</summary>
+        public int PrintedPower => _basePower;
+        /// <summary>The health printed on the card (before buffs / debuffs).</summary>
+        public int PrintedHealth => _baseHealth;
+
         public int BaseHealth { get; internal set; }
         public int CurrentHP { get; internal set; }
         public int Power { get; internal set; }

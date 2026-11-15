@@ -1,0 +1,3564 @@
+fileFormatVersion: 2
+guid: 12799e8cc1e0fd445ab5785ca47f2b0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3521109179424066251
+    second: Clash_0
+  - first:
+      213: 5712615959944672034
+    second: Clash_1
+  - first:
+      213: -4074977221370052731
+    second: Clash_2
+  - first:
+      213: 1877887574552081072
+    second: Clash_3
+  - first:
+      213: 6638147171995750185
+    second: Clash_4
+  - first:
+      213: 6484479001380348784
+    second: Clash_5
+  - first:
+      213: 6740889512961956279
+    second: Clash_6
+  - first:
+      213: 3733677583662466024
+    second: Clash_7
+  - first:
+      213: -2777465921537862591
+    second: Clash_8
+  - first:
+      213: -8156867932378109605
+    second: Clash_9
+  - first:
+      213: -929674192543313087
+    second: Clash_10
+  - first:
+      213: 8764631786878442827
+    second: Clash_11
+  - first:
+      213: 6696598336065696221
+    second: Clash_12
+  - first:
+      213: 6748835374851043479
+    second: Clash_13
+  - first:
+      213: 8842555122940950676
+    second: Clash_14
+  - first:
+      213: -2954520749966380498
+    second: Clash_15
+  - first:
+      213: -6207546373437147104
+    second: Clash_16
+  - first:
+      213: 8614196159504647970
+    second: Clash_17
+  - first:
+      213: 3871328195706302467
+    second: Clash_18
+  - first:
+      213: 127231808249463732
+    second: Clash_19
+  - first:
+      213: 3834210558796838323
+    second: Clash_20
+  - first:
+      213: 803335177922021418
+    second: Clash_21
+  - first:
+      213: -4582670189315012035
+    second: Clash_22
+  - first:
+      213: 1378943352909957023
+    second: Clash_23
+  - first:
+      213: -1773543121983912734
+    second: Clash_24
+  - first:
+      213: -8967192743628217238
+    second: Clash_25
+  - first:
+      213: -2906717513336068773
+    second: Clash_26
+  - first:
+      213: 1979452257788854161
+    second: Clash_27
+  - first:
+      213: -9157030838072468792
+    second: Clash_28
+  - first:
+      213: -8013467760794437177
+    second: Clash_29
+  - first:
+      213: 7517968197666445296
+    second: Clash_30
+  - first:
+      213: -1832445391700853859
+    second: Clash_31
+  - first:
+      213: 2065427283837262109
+    second: Clash_32
+  - first:
+      213: -210563846321611051
+    second: Clash_33
+  - first:
+      213: 6199246328434527567
+    second: Clash_34
+  - first:
+      213: -4006762138773162121
+    second: Clash_35
+  - first:
+      213: 4794177589541851805
+    second: Clash_36
+  - first:
+      213: -4629120927930755901
+    second: Clash_37
+  - first:
+      213: 3768290512318147138
+    second: Clash_38
+  - first:
+      213: 4426864350109499735
+    second: Clash_39
+  - first:
+      213: -5033594946128013674
+    second: Clash_40
+  - first:
+      213: -2477619411256353889
+    second: Clash_41
+  - first:
+      213: -4893032853270056217
+    second: Clash_42
+  - first:
+      213: -7297170094228237700
+    second: Clash_43
+  - first:
+      213: -7684635741393840328
+    second: Clash_44
+  - first:
+      213: -530170206232808596
+    second: Clash_45
+  - first:
+      213: 1833642252161481092
+    second: Clash_46
+  - first:
+      213: -2977245140135337035
+    second: Clash_47
+  - first:
+      213: -4000164234365224608
+    second: Clash_48
+  - first:
+      213: 5444166586327858928
+    second: Clash_49
+  - first:
+      213: 6295289013868470365
+    second: Clash_50
+  - first:
+      213: 1517124493869542812
+    second: Clash_51
+  - first:
+      213: 2886722741218635916
+    second: Clash_52
+  - first:
+      213: -3008579917297191970
+    second: Clash_53
+  - first:
+      213: 8918770957794004838
+    second: Clash_54
+  - first:
+      213: 258282180496490844
+    second: Clash_55
+  - first:
+      213: -3673071081200646754
+    second: Clash_56
+  - first:
+      213: -2615684217737535306
+    second: Clash_57
+  - first:
+      213: -5504006003180705953
+    second: Clash_58
+  - first:
+      213: -5243203704036535789
+    second: Clash_59
+  - first:
+      213: 6526681513921967597
+    second: Clash_60
+  - first:
+      213: 9125505905923304478
+    second: Clash_61
+  - first:
+      213: -7969909481210008746
+    second: Clash_62
+  - first:
+      213: 1440308215914575371
+    second: Clash_63
+  - first:
+      213: 2003882001759257574
+    second: Clash_64
+  - first:
+      213: 5790783330057300871
+    second: Clash_65
+  - first:
+      213: 32289254148475724
+    second: Clash_66
+  - first:
+      213: -8793000074693880180
+    second: Clash_67
+  - first:
+      213: -3440011274350177242
+    second: Clash_68
+  - first:
+      213: -3378224942707490214
+    second: Clash_69
+  - first:
+      213: -3264680378704463258
+    second: Clash_70
+  - first:
+      213: 2656821443778551067
+    second: Clash_71
+  - first:
+      213: -1891011522734594500
+    second: Clash_72
+  - first:
+      213: -5067230037290839754
+    second: Clash_73
+  - first:
+      213: 1603845309240053256
+    second: Clash_74
+  - first:
+      213: 5815163751627163486
+    second: Clash_75
+  - first:
+      213: -6735363059081335604
+    second: Clash_76
+  - first:
+      213: 1281826856006098009
+    second: Clash_77
+  - first:
+      213: 8531968130422090422
+    second: Clash_78
+  - first:
+      213: 997157696151782628
+    second: Clash_79
+  - first:
+      213: 8839056118075705225
+    second: Clash_80
+  - first:
+      213: 1968009596416319403
+    second: Clash_81
+  - first:
+      213: 1524689129227239532
+    second: Clash_82
+  - first:
+      213: -4197457070678469841
+    second: Clash_83
+  - first:
+      213: 2064820052121165485
+    second: Clash_84
+  - first:
+      213: 3509076380809889739
+    second: Clash_85
+  - first:
+      213: -3133597147109359146
+    second: Clash_86
+  - first:
+      213: -796250426352598478
+    second: Clash_87
+  - first:
+      213: 3388984878975731634
+    second: Clash_88
+  - first:
+      213: -2406308862889507741
+    second: Clash_89
+  - first:
+      213: 1681740354244235637
+    second: Clash_90
+  - first:
+      213: 347543697738176720
+    second: Clash_91
+  - first:
+      213: 4482140941028495304
+    second: Clash_92
+  - first:
+      213: 7123142452379287162
+    second: Clash_93
+  - first:
+      213: 6311840475669132936
+    second: Clash_94
+  - first:
+      213: -7978269203433320505
+    second: Clash_95
+  - first:
+      213: 3689588854290929732
+    second: Clash_96
+  - first:
+      213: 8988601029159719893
+    second: Clash_97
+  - first:
+      213: 8511172771402179252
+    second: Clash_98
+  - first:
+      213: -4316813026291350642
+    second: Clash_99
+  - first:
+      213: 5787329922937784902
+    second: Clash_100
+  - first:
+      213: 8510540581392347013
+    second: Clash_101
+  - first:
+      213: 3682027445514840564
+    second: Clash_102
+  - first:
+      213: 8227188206834200751
+    second: Clash_103
+  - first:
+      213: 8246604620762386823
+    second: Clash_104
+  - first:
+      213: 6336980740705264480
+    second: Clash_105
+  - first:
+      213: -6261660678959199976
+    second: Clash_106
+  - first:
+      213: -3087177608822724454
+    second: Clash_107
+  - first:
+      213: 159676581304447480
+    second: Clash_108
+  - first:
+      213: -3292302433359916525
+    second: Clash_109
+  - first:
+      213: 3628835277357455283
+    second: Clash_110
+  - first:
+      213: -1539851929393103519
+    second: Clash_111
+  - first:
+      213: -2562969786619800771
+    second: Clash_112
+  - first:
+      213: 2770436279343951203
+    second: Clash_113
+  - first:
+      213: 552063979787521813
+    second: Clash_114
+  - first:
+      213: 7729669178320766629
+    second: Clash_115
+  - first:
+      213: 547161101348685491
+    second: Clash_116
+  - first:
+      213: 100274458924348645
+    second: Clash_117
+  - first:
+      213: 8000152493916852746
+    second: Clash_118
+  - first:
+      213: 4248373380345456440
+    second: Clash_119
+  - first:
+      213: -8310119813365936614
+    second: Clash_120
+  - first:
+      213: 1638213863386513420
+    second: Clash_121
+  - first:
+      213: -1687835140298226657
+    second: Clash_122
+  - first:
+      213: 6210148899462699211
+    second: Clash_123
+  - first:
+      213: -5903343093539723242
+    second: Clash_124
+  - first:
+      213: -2055608099539842526
+    second: Clash_125
+  - first:
+      213: 5209677600335173136
+    second: Clash_126
+  - first:
+      213: -4216222531989240518
+    second: Clash_127
+  - first:
+      213: 4442584276295505606
+    second: Clash_128
+  - first:
+      213: 8049129631312824055
+    second: Clash_129
+  - first:
+      213: 8970129149278696216
+    second: Clash_130
+  - first:
+      213: -2897739628407601329
+    second: Clash_131
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Clash_0
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 484
+        width: 258
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca40fe942e7dd030800000000000000
+      internalID: 3521109179424066251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_1
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 710
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223bab6e2f9474f40800000000000000
+      internalID: 5712615959944672034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_2
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 682
+        width: 9
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ffd6caec5c277c0800000000000000
+      internalID: -4074977221370052731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_3
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 699
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2fb41bcc89f0a10800000000000000
+      internalID: 1877887574552081072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_4
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 485
+        width: 165
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f0299beaf6f1c50800000000000000
+      internalID: 6638147171995750185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_5
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 675
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07361c6ab4f7df950800000000000000
+      internalID: 6484479001380348784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 479
+        width: 206
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9d04a1c437c8d50800000000000000
+      internalID: 6740889512961956279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_7
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 667
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e34a000bffa0d330800000000000000
+      internalID: 3733677583662466024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_8
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 659
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1449bf2c5757479d0800000000000000
+      internalID: -2777465921537862591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_9
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 609
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59e3da15dbfcce80800000000000000
+      internalID: -8156867932378109605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_10
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 613
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1439b9c5f322913f0800000000000000
+      internalID: -929674192543313087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_11
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 617
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d9cf35c2a32a970800000000000000
+      internalID: 8764631786878442827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_12
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 485
+        width: 236
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1faa0e4b81fec50800000000000000
+      internalID: 6696598336065696221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 251
+        width: 256
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790369d340ea8ad50800000000000000
+      internalID: 6748835374851043479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_14
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 261
+        width: 220
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498b4b1d80117ba70800000000000000
+      internalID: 8842555122940950676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_15
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 412
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22bbb8180f6ff6d0800000000000000
+      internalID: -2954520749966380498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_16
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 393
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028b38c567d5ad9a0800000000000000
+      internalID: -6207546373437147104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_17
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 368
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2270fc064c5cb8770800000000000000
+      internalID: 8614196159504647970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_18
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 404
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300370a9b78b9b530800000000000000
+      internalID: 3871328195706302467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_19
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 412
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b307dec7a404c100800000000000000
+      internalID: 127231808249463732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_20
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 393
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5332f403ad53530800000000000000
+      internalID: 3834210558796838323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_21
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 368
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a280e9b8615062b00800000000000000
+      internalID: 803335177922021418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_22
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 404
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a4b1b2eb51760c0800000000000000
+      internalID: -4582670189315012035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_23
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 330
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97859b6cadf22310800000000000000
+      internalID: 1378943352909957023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_24
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 381
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4cf4c5deb1367e0800000000000000
+      internalID: -1773543121983912734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_25
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 387
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64649bb5b12e8380800000000000000
+      internalID: -8967192743628217238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_26
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 376
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55623372d349a7d0800000000000000
+      internalID: -2906717513336068773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_27
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 330
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f7953475d687b10800000000000000
+      internalID: 1979452257788854161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_28
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 381
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca946308f0bbe080800000000000000
+      internalID: -9157030838072468792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_29
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 387
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c97dca57817ac090800000000000000
+      internalID: -8013467760794437177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_30
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 376
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7979e6e30355860800000000000000
+      internalID: 7517968197666445296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_31
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 374
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b7e5dff98d196e0800000000000000
+      internalID: -1832445391700853859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_32
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 374
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19158aeb2fd9ac10800000000000000
+      internalID: 2065427283837262109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_33
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ded5712c4de31df0800000000000000
+      internalID: -210563846321611051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_34
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 290
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d0c71d0b5280650800000000000000
+      internalID: 6199246328434527567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_35
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 374
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777f0f2401f1568c0800000000000000
+      internalID: -4006762138773162121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_36
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 374
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d92d7c6fd17588240800000000000000
+      internalID: 4794177589541851805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_37
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 374
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c45c5cca0f02cfb0800000000000000
+      internalID: -4629120927930755901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_38
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24aa2357148ab4430800000000000000
+      internalID: 3768290512318147138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_39
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 290
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7510e110ca16f6d30800000000000000
+      internalID: 4426864350109499735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_40
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 374
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69696dcc014152ab0800000000000000
+      internalID: -5033594946128013674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_41
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 361
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9bd37fb54abd9dd0800000000000000
+      internalID: -2477619411256353889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_42
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 352
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2b58a5b84781cb0800000000000000
+      internalID: -4893032853270056217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_43
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 352
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c721ceb167e3bba90800000000000000
+      internalID: -7297170094228237700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_44
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 344
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83713f51280ba5590800000000000000
+      internalID: -7684635741393840328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_45
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 361
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c637ff2a10574a8f0800000000000000
+      internalID: -530170206232808596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_46
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 361
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4897b3dc9e7627910800000000000000
+      internalID: 1833642252161481092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_47
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 352
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3a9f4b153bea6d0800000000000000
+      internalID: -2977245140135337035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_48
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 352
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069307792df8c78c0800000000000000
+      internalID: -4000164234365224608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_49
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 344
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe7f147aa09d8b40800000000000000
+      internalID: 5444166586327858928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_50
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 361
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50ac06110c5d5750800000000000000
+      internalID: 6295289013868470365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_51
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 296
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d632960b8ed0510800000000000000
+      internalID: 1517124493869542812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_52
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 343
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80f063e903bf0820800000000000000
+      internalID: 2886722741218635916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_53
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 348
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3702f51806f36d0800000000000000
+      internalID: -3008579917297191970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_54
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 348
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66fc164bee6d5cb70800000000000000
+      internalID: 8918770957794004838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_55
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 296
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c518e44564a959300800000000000000
+      internalID: 258282180496490844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_56
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 343
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95864aff41a60dc0800000000000000
+      internalID: -3673071081200646754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_57
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 348
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0a82dff0933bbd0800000000000000
+      internalID: -2615684217737535306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_58
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 348
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57ebca93b7dd93b0800000000000000
+      internalID: -5504006003180705953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_59
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 339
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312d3e7c2066c37b0800000000000000
+      internalID: -5243203704036535789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_60
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 339
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de57d6fc14e639a50800000000000000
+      internalID: 6526681513921967597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_61
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 326
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ca94eb54f44ae70800000000000000
+      internalID: 9125505905923304478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_62
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 326
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ba570ad81356190800000000000000
+      internalID: -7969909481210008746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_63
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 326
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b063aa8f0b00df310800000000000000
+      internalID: 1440308215914575371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_64
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 326
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3c8a640183fcb10800000000000000
+      internalID: 2003882001759257574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_65
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 326
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ba15ff1cefc5050800000000000000
+      internalID: 5790783330057300871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_66
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 326
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b0593d7e6b27000800000000000000
+      internalID: 32289254148475724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_67
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 255
+        width: 79
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8653e5f40df8f580800000000000000
+      internalID: -8793000074693880180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_68
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 316
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624d401d8ff9240d0800000000000000
+      internalID: -3440011274350177242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_69
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 316
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a524e8e20522e11d0800000000000000
+      internalID: -3378224942707490214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_70
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 255
+        width: 79
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66af12a1e7681b2d0800000000000000
+      internalID: -3264680378704463258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_71
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 316
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d9f04d60deed420800000000000000
+      internalID: 2656821443778551067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_72
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 316
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36eb310a07c1c5e0800000000000000
+      internalID: -1891011522734594500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_73
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 302
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6311710e0259da9b0800000000000000
+      internalID: -5067230037290839754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_74
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 299
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e0eebafc0024610800000000000000
+      internalID: 1603845309240053256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_75
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 302
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57077e3f9c93b050800000000000000
+      internalID: 5815163751627163486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_76
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 299
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc2b26bbfe2782a0800000000000000
+      internalID: -6735363059081335604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_77
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 281
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c9ccfebb6f9c110800000000000000
+      internalID: 1281826856006098009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_78
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 283
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba23c07fc3a76670800000000000000
+      internalID: 8531968130422090422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_79
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 281
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e48c2834ad96dd00800000000000000
+      internalID: 997157696151782628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_80
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 284
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98745a345b2aaaa70800000000000000
+      internalID: 8839056118075705225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_81
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 289
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf54fc0d46cf4b10800000000000000
+      internalID: 1968009596416319403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_82
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 283
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c604d745fa8c82510800000000000000
+      internalID: 1524689129227239532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_83
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 281
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2312468803afb5c0800000000000000
+      internalID: -4197457070678469841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_84
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 284
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae19c3c5e6b7ac10800000000000000
+      internalID: 2064820052121165485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_85
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 289
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc703ef506eb2b030800000000000000
+      internalID: 3509076380809889739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_86
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 240
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d18e594ff93384d0800000000000000
+      internalID: -3133597147109359146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_87
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 240
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2320009b47623f4f0800000000000000
+      internalID: -796250426352598478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_88
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 253
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7c484bac7180f20800000000000000
+      internalID: 3388984878975731634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_89
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 253
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364c89f96d21b9ed0800000000000000
+      internalID: -2406308862889507741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_90
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 243
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571da2321fdb65710800000000000000
+      internalID: 1681740354244235637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_91
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 253
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d81c97d629b2d400800000000000000
+      internalID: 347543697738176720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_92
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 243
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf0d3f3073c33e30800000000000000
+      internalID: 4482140941028495304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_93
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 243
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e7296025c7ad260800000000000000
+      internalID: 7123142452379287162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_94
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 253
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886f0379879289750800000000000000
+      internalID: 6311840475669132936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_95
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 243
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cf0bee1e6e774190800000000000000
+      internalID: -7978269203433320505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_96
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 166
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4485043c38d043330800000000000000
+      internalID: 3689588854290929732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_97
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 132
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d396ca230dedbc70800000000000000
+      internalID: 8988601029159719893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_98
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 168
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2676d9a82cd1670800000000000000
+      internalID: 8511172771402179252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_99
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 166
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83002e8c699714c0800000000000000
+      internalID: -4316813026291350642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_100
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 132
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a02bef6e9b05050800000000000000
+      internalID: 5787329922937784902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_101
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 168
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fef6861938b1670800000000000000
+      internalID: 8510540581392347013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_102
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 135
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9a6271470391330800000000000000
+      internalID: 3682027445514840564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_103
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 120
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0b2a8a518dc2270800000000000000
+      internalID: 8227188206834200751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_104
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 142
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78113afc533d17270800000000000000
+      internalID: 8246604620762386823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_105
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 141
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063aa3ea86a71f750800000000000000
+      internalID: 6336980740705264480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_106
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 135
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8190b96c9cc1a19a0800000000000000
+      internalID: -6261660678959199976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_107
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 120
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98e49342542825d0800000000000000
+      internalID: -3087177608822724454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_108
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 142
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1b9933109473200800000000000000
+      internalID: 159676581304447480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_109
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 141
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3129d6651646f42d0800000000000000
+      internalID: -3292302433359916525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_110
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 84
+        width: 17
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b71c4755763c5230800000000000000
+      internalID: 3628835277357455283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_111
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 108
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16df2d524d851aae0800000000000000
+      internalID: -1539851929393103519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_112
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 114
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33d77aee808e6cd0800000000000000
+      internalID: -2562969786619800771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_113
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 84
+        width: 17
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36da62f1e11927620800000000000000
+      internalID: 2770436279343951203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_114
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 108
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f0680c34359a700800000000000000
+      internalID: 552063979787521813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_115
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 114
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a648150a2d454b60800000000000000
+      internalID: 7729669178320766629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_116
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 103
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6ccc86f18e79700800000000000000
+      internalID: 547161101348685491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_117
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 32
+        width: 37
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4fa30d61f346100800000000000000
+      internalID: 100274458924348645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_118
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 103
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a029edc7e40460f60800000000000000
+      internalID: 8000152493916852746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_119
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 32
+        width: 37
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83767b0a41145fa30800000000000000
+      internalID: 4248373380345456440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_120
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 46
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e43630f068cac80800000000000000
+      internalID: -8310119813365936614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_121
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 87
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00064144da1cb610800000000000000
+      internalID: 1638213863386513420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_122
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 86
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f144a17e1ea9398e0800000000000000
+      internalID: -1687835140298226657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_123
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 46
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8d1c27581ee2650800000000000000
+      internalID: 6210148899462699211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_124
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 87
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6182f42dbbc131ea0800000000000000
+      internalID: -5903343093539723242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_125
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 86
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a038513530973e0800000000000000
+      internalID: -2055608099539842526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_126
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 74
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 016994aec2e7c4840800000000000000
+      internalID: 5209677600335173136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_127
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 74
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3588c612f7fc75c0800000000000000
+      internalID: -4216222531989240518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_128
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 62
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c654598cda37ad30800000000000000
+      internalID: 4442584276295505606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_129
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 62
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6c879e0c044bf60800000000000000
+      internalID: 8049129631312824055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_130
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 35
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813322c7fec4c7c70800000000000000
+      internalID: 8970129149278696216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clash_131
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 35
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47413d292929c7d0800000000000000
+      internalID: -2897739628407601329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Clash_0: 3521109179424066251
+      Clash_1: 5712615959944672034
+      Clash_10: -929674192543313087
+      Clash_100: 5787329922937784902
+      Clash_101: 8510540581392347013
+      Clash_102: 3682027445514840564
+      Clash_103: 8227188206834200751
+      Clash_104: 8246604620762386823
+      Clash_105: 6336980740705264480
+      Clash_106: -6261660678959199976
+      Clash_107: -3087177608822724454
+      Clash_108: 159676581304447480
+      Clash_109: -3292302433359916525
+      Clash_11: 8764631786878442827
+      Clash_110: 3628835277357455283
+      Clash_111: -1539851929393103519
+      Clash_112: -2562969786619800771
+      Clash_113: 2770436279343951203
+      Clash_114: 552063979787521813
+      Clash_115: 7729669178320766629
+      Clash_116: 547161101348685491
+      Clash_117: 100274458924348645
+      Clash_118: 8000152493916852746
+      Clash_119: 4248373380345456440
+      Clash_12: 6696598336065696221
+      Clash_120: -8310119813365936614
+      Clash_121: 1638213863386513420
+      Clash_122: -1687835140298226657
+      Clash_123: 6210148899462699211
+      Clash_124: -5903343093539723242
+      Clash_125: -2055608099539842526
+      Clash_126: 5209677600335173136
+      Clash_127: -4216222531989240518
+      Clash_128: 4442584276295505606
+      Clash_129: 8049129631312824055
+      Clash_13: 6748835374851043479
+      Clash_130: 8970129149278696216
+      Clash_131: -2897739628407601329
+      Clash_14: 8842555122940950676
+      Clash_15: -2954520749966380498
+      Clash_16: -6207546373437147104
+      Clash_17: 8614196159504647970
+      Clash_18: 3871328195706302467
+      Clash_19: 127231808249463732
+      Clash_2: -4074977221370052731
+      Clash_20: 3834210558796838323
+      Clash_21: 803335177922021418
+      Clash_22: -4582670189315012035
+      Clash_23: 1378943352909957023
+      Clash_24: -1773543121983912734
+      Clash_25: -8967192743628217238
+      Clash_26: -2906717513336068773
+      Clash_27: 1979452257788854161
+      Clash_28: -9157030838072468792
+      Clash_29: -8013467760794437177
+      Clash_3: 1877887574552081072
+      Clash_30: 7517968197666445296
+      Clash_31: -1832445391700853859
+      Clash_32: 2065427283837262109
+      Clash_33: -210563846321611051
+      Clash_34: 6199246328434527567
+      Clash_35: -4006762138773162121
+      Clash_36: 4794177589541851805
+      Clash_37: -4629120927930755901
+      Clash_38: 3768290512318147138
+      Clash_39: 4426864350109499735
+      Clash_4: 6638147171995750185
+      Clash_40: -5033594946128013674
+      Clash_41: -2477619411256353889
+      Clash_42: -4893032853270056217
+      Clash_43: -7297170094228237700
+      Clash_44: -7684635741393840328
+      Clash_45: -530170206232808596
+      Clash_46: 1833642252161481092
+      Clash_47: -2977245140135337035
+      Clash_48: -4000164234365224608
+      Clash_49: 5444166586327858928
+      Clash_5: 6484479001380348784
+      Clash_50: 6295289013868470365
+      Clash_51: 1517124493869542812
+      Clash_52: 2886722741218635916
+      Clash_53: -3008579917297191970
+      Clash_54: 8918770957794004838
+      Clash_55: 258282180496490844
+      Clash_56: -3673071081200646754
+      Clash_57: -2615684217737535306
+      Clash_58: -5504006003180705953
+      Clash_59: -5243203704036535789
+      Clash_6: 6740889512961956279
+      Clash_60: 6526681513921967597
+      Clash_61: 9125505905923304478
+      Clash_62: -7969909481210008746
+      Clash_63: 1440308215914575371
+      Clash_64: 2003882001759257574
+      Clash_65: 5790783330057300871
+      Clash_66: 32289254148475724
+      Clash_67: -8793000074693880180
+      Clash_68: -3440011274350177242
+      Clash_69: -3378224942707490214
+      Clash_7: 3733677583662466024
+      Clash_70: -3264680378704463258
+      Clash_71: 2656821443778551067
+      Clash_72: -1891011522734594500
+      Clash_73: -5067230037290839754
+      Clash_74: 1603845309240053256
+      Clash_75: 5815163751627163486
+      Clash_76: -6735363059081335604
+      Clash_77: 1281826856006098009
+      Clash_78: 8531968130422090422
+      Clash_79: 997157696151782628
+      Clash_8: -2777465921537862591
+      Clash_80: 8839056118075705225
+      Clash_81: 1968009596416319403
+      Clash_82: 1524689129227239532
+      Clash_83: -4197457070678469841
+      Clash_84: 2064820052121165485
+      Clash_85: 3509076380809889739
+      Clash_86: -3133597147109359146
+      Clash_87: -796250426352598478
+      Clash_88: 3388984878975731634
+      Clash_89: -2406308862889507741
+      Clash_9: -8156867932378109605
+      Clash_90: 1681740354244235637
+      Clash_91: 347543697738176720
+      Clash_92: 4482140941028495304
+      Clash_93: 7123142452379287162
+      Clash_94: 6311840475669132936
+      Clash_95: -7978269203433320505
+      Clash_96: 3689588854290929732
+      Clash_97: 8988601029159719893
+      Clash_98: 8511172771402179252
+      Clash_99: -4316813026291350642
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
