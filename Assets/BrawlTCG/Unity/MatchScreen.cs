@@ -75,6 +75,7 @@ namespace BrawlTCG.UnityApp
             _detail = UI.Stretch(UI.Rect("Detail", transform));
             _drag = UI.Stretch(UI.Rect("Drag", transform));
             _overlay = UI.Stretch(UI.Rect("Overlay", transform));
+            _menu = UI.Stretch(UI.Rect("OptionsMenu", transform));
 
             _game.Notification += OnNotification;
             _game.Start();
@@ -153,13 +154,19 @@ namespace BrawlTCG.UnityApp
             var mouse = Mouse.current;
             bool typing = UI.IsTyping();
 
-            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && CanAct)
+            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !OptionsOpen && CanAct)
                 Submit(GameCommand.EndTurn(_game.ActiveIndex));
 
-            if ((kb != null && kb.escapeKey.wasPressedThisFrame) || (mouse != null && mouse.rightButton.wasPressedThisFrame))
+            // Esc steps back: closes the options menu, cancels targeting, closes the card detail, or opens the options.
+            // Right-click does the same except opening the options.
+            bool esc = kb != null && kb.escapeKey.wasPressedThisFrame;
+            bool right = mouse != null && mouse.rightButton.wasPressedThisFrame;
+            if (esc || right)
             {
-                if (Targeting) { CancelTargeting(); Refresh(); }
-                else CloseDetail();
+                if (OptionsOpen) { if (esc) CloseOptions(); }
+                else if (Targeting) { CancelTargeting(); Refresh(); }
+                else if (_detailCard != null) CloseDetail();
+                else if (esc) OpenOptions();
             }
         }
 
@@ -625,7 +632,7 @@ namespace BrawlTCG.UnityApp
 
         void DrawCorner()
         {
-            Theme.Ghost(_board, "LEAVE", 1772, 20, 124, 44, LeaveClicked, 18);
+            GearButton(_board, 1840, 20, 56);
             var help = Theme.GlassPanel(_board, 1508, 884, 388, 176, 20, "Help");
             help.raycastTarget = false;
             Theme.Label(help.transform, "HOW TO PLAY", 15, Theme.Gold, 20, 14, 340, 20, display: true);
@@ -1168,20 +1175,6 @@ namespace BrawlTCG.UnityApp
         {
             _net?.Send(Protocol.Quit);
             EndMatch("Out of sync", "The game went out of sync and was stopped.\n" + reason);
-        }
-
-        void LeaveClicked()
-        {
-            if (_ended || _game.IsOver)
-            {
-                LeaveMatch();
-                return;
-            }
-            var dim = ShowOverlay(0.7f);
-            var box = Dialog(dim, "LEAVE MATCH?", _hotSeat ? "The current game will be lost." : "Your opponent will be told that you left.");
-            Theme.Ghost(box, "STAY", 120, 300, 260, 70, CloseOverlay, 26);
-            var leave = Theme.Cta(box, "LEAVE", 420, 300, 260, 70, LeaveMatch, 28);
-            leave.GetComponent<HoverFx>().Init(leave.GetComponent<Image>(), new Color32(230, 90, 90, 255), new Color32(250, 120, 120, 255), 1.025f);
         }
 
         void LeaveMatch()
