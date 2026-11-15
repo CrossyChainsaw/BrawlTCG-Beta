@@ -93,7 +93,7 @@ namespace BrawlTCG.UnityApp
         float _fade = 1;
         readonly Dictionary<Track, AudioClip> _clips = new Dictionary<Track, AudioClip>();
         AudioClip[] _voices = Array.Empty<AudioClip>();
-        float _nextVoice;
+        float _nextVoice, _barSeconds = 2.5f;
 
         public static float Volume
         {
@@ -112,9 +112,14 @@ namespace BrawlTCG.UnityApp
                     _instance = go.AddComponent<Music>();
                     _instance._a = go.AddComponent<AudioSource>();
                     _instance._b = go.AddComponent<AudioSource>();
-                    _instance._voice = go.AddComponent<AudioSource>();
                     foreach (var s in new[] { _instance._a, _instance._b }) { s.loop = true; s.playOnAwake = false; s.volume = 0; }
+                    // Voices sit in a big hall so a few crowd recordings sound like a war band.
+                    var voiceGo = new GameObject("Voices");
+                    voiceGo.transform.SetParent(go.transform);
+                    _instance._voice = voiceGo.AddComponent<AudioSource>();
                     _instance._voice.playOnAwake = false;
+                    var hall = voiceGo.AddComponent<AudioReverbFilter>();
+                    hall.reverbPreset = AudioReverbPreset.Concerthall;
                 }
                 return _instance;
             }
@@ -132,8 +137,10 @@ namespace BrawlTCG.UnityApp
             if (track == Track.None) { _a.Stop(); }
             else
             {
+                DafSynth.Pattern pattern = track == Track.Battle ? DafSynth.Battle : DafSynth.Menu;
+                _barSeconds = 240f / pattern.Bpm;
                 if (!_clips.TryGetValue(track, out AudioClip clip))
-                    _clips[track] = clip = DafSynth.Render(track == Track.Battle ? DafSynth.Battle : DafSynth.Menu);
+                    _clips[track] = clip = DafSynth.Render(pattern);
                 _a.clip = clip;
                 _a.volume = 0;
                 _a.Play();
@@ -151,20 +158,24 @@ namespace BrawlTCG.UnityApp
             _b.volume = v * (1 - _fade);
             if (_fade >= 1 && _b.isPlaying) _b.Stop();
 
-            // Occasional chant / roar layered over the drums.
-            if (_voices.Length > 0 && _current != Track.None && Time.unscaledTime >= _nextVoice && !_voice.isPlaying)
+            // Crowd chants / roars layered over the drums, always starting on a bar line.
+            if (_voices.Length > 0 && _current != Track.None && _a.isPlaying && _a.clip != null
+                && Time.unscaledTime >= _nextVoice && !_voice.isPlaying)
             {
+                float t = (float)_a.timeSamples / _a.clip.frequency;
+                float wait = Mathf.Ceil(t / _barSeconds + 0.001f) * _barSeconds - t;
                 _voice.clip = _voices[UnityEngine.Random.Range(0, _voices.Length)];
-                _voice.volume = v * 0.8f;
-                _voice.Play();
-                _nextVoice = Time.unscaledTime + _voice.clip.length + UnityEngine.Random.Range(8f, 18f);
+                _voice.volume = v * 0.75f;
+                _voice.PlayScheduled(AudioSettings.dspTime + wait);
+                // Next one a few bars after this ends.
+                _nextVoice = Time.unscaledTime + wait + _voice.clip.length + _barSeconds * UnityEngine.Random.Range(1, 4);
             }
         }
     }
 
     /// <summary>
-    /// Renders a looping daf rhythm. Strokes: D = dum (deep centre hit), T = tek (rim), K = ka (light rim),
-    /// B = big low war-drum accent, . = rest. One character per 16th note.
+    /// Renders a looping daf rhythm with an optional hand-clap layer. Strokes: D = dum (deep centre hit), T = tek (rim),
+    /// K = ka (light rim), B = big low war-drum accent, C = group clap, c = soft clap, . = rest. One character per 16th note.
     /// </summary>
     public static class DafSynth
     {
@@ -173,6 +184,8 @@ namespace BrawlTCG.UnityApp
             public float Bpm;
             public string[] Bars;
             public float Reverb;
+            /// <summary>Optional second layer (claps), same bar layout as <see cref="Bars"/>.</summary>
+            public string[] Claps;
         }
 
         /// <summary>Marching war rhythm with a big accent every four bars.</summary>
@@ -184,6 +197,12 @@ namespace BrawlTCG.UnityApp
             {
                 "B...T.K.D...T...", "D...T.K.D.D.T...", "D...T.K.D...T.KT", "D.D.T...D.KTT.KT",
                 "B...T.K.D...T...", "D...T.K.D.D.T...", "D..KT.K.D..KT.K.", "B.D.T.D.B.D.TTTT",
+            },
+            // Viking-clap feel: claps join in the second half and build into the turnaround.
+            Claps = new[]
+            {
+                "................", "................", "....c.......c...", "....c.......c...",
+                "....C.......C...", "....C.......C...", "....C.......C.C.", "C...C...C.C.CCCC",
             },
         };
 
@@ -207,9 +226,12 @@ namespace BrawlTCG.UnityApp
             int length = Mathf.CeilToInt(steps * step * Rate);
             var buf = new float[length];
             var rng = new System.Random(7);
+            for (int layer = 0; layer < 2; layer++)
             for (int bar = 0; bar < p.Bars.Length; bar++)
             {
-                string s = p.Bars[bar];
+                string[] bars = layer == 0 ? p.Bars : p.Claps;
+                if (bars == null || bar >= bars.Length) continue;
+                string s = bars[bar];
                 for (int i = 0; i < 16 && i < s.Length; i++)
                 {
                     int at = (int)(((bar * 16) + i) * step * Rate);
@@ -222,6 +244,8 @@ namespace BrawlTCG.UnityApp
                         case 'B': Dum(buf, at, vel, 1.7f, rng); break;
                         case 'T': Tek(buf, at, vel * 0.8f, rng); break;
                         case 'K': Tek(buf, at, vel * 0.45f, rng); break;
+                        case 'C': Clap(buf, at, vel * 0.75f, rng); break;
+                        case 'c': Clap(buf, at, vel * 0.4f, rng); break;
                     }
                 }
             }
@@ -268,6 +292,32 @@ namespace BrawlTCG.UnityApp
                 lp += (noise - lp) * 0.35f; // soften the noise
                 float crack = lp * Mathf.Exp(-t * 70);
                 buf[k] += (tone * 0.55f + crack * 0.8f) * vel;
+            }
+        }
+
+        /// <summary>A group hand clap: several clappers, each a few quick filtered noise bursts, slightly out of sync.</summary>
+        static void Clap(float[] buf, int at, float vel, System.Random rng)
+        {
+            for (int person = 0; person < 6; person++)
+            {
+                int start = at + rng.Next(0, Rate / 40); // up to 25 ms apart
+                float gain = vel * (0.6f + (float)rng.NextDouble() * 0.4f);
+                float centre = 1100 + (float)rng.NextDouble() * 900; // each pair of hands sounds a bit different
+                float f = 2 * Mathf.Sin(Mathf.PI * centre / Rate);
+                float low = 0, band = 0;
+                int n = (int)(Rate * 0.12f);
+                for (int i = 0; i < n; i++)
+                {
+                    float t = (float)i / Rate;
+                    // Three short bursts (the "flam" of a real clap), then a short room tail.
+                    float env = t < 0.03f ? Mathf.Exp(-(t % 0.01f) * 600) : Mathf.Exp(-(t - 0.03f) * 45) * 0.6f;
+                    float noise = (float)rng.NextDouble() * 2 - 1;
+                    low += f * band;
+                    float high = noise - low - 0.6f * band;
+                    band += f * high;
+                    int k = ((start + i) % buf.Length + buf.Length) % buf.Length;
+                    buf[k] += band * env * gain * 0.5f;
+                }
             }
         }
 
