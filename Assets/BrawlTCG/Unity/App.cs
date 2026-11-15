@@ -106,19 +106,16 @@ namespace BrawlTCG.UnityApp
 
         public void ShowMenu()
         {
-            Music.Play(Music.Track.Menu);
             Show<MenuScreen>("Menu", UI.MenuPink).Build(this);
         }
 
         public void ShowDeckBuilder()
         {
-            Music.Play(Music.Track.Menu);
             Show<DeckBuilderScreen>("DeckBuilder", new Color32(240, 240, 240, 255)).Build(this);
         }
 
         public void StartMatch(MatchSetup setup)
         {
-            Music.Play(Music.Track.Battle);
             Show<MatchScreen>("Match", UI.GameBackground).Build(this, setup);
         }
 

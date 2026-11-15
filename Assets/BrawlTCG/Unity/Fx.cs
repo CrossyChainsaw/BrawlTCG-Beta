@@ -507,12 +507,14 @@ namespace BrawlTCG.UnityApp
         }
     }
 
+    /// <summary>A calm banner: a band wipes in from the left, the title fades in with a slow drift, then it wipes away.</summary>
     public sealed class TurnBanner : MonoBehaviour
     {
-        RectTransform _band, _title, _streak;
-        CanvasGroup _group;
+        RectTransform _wipe, _content, _edge;
+        CanvasGroup _group, _titleGroup;
+        RectTransform _title;
         float _delay, _t;
-        const float Life = 1.6f;
+        const float Life = 2.1f, In = 0.55f, Out = 0.5f, W = 1920, H = 220;
 
         public void Init(string title, string subtitle, Color color, float delay)
         {
@@ -522,31 +524,40 @@ namespace BrawlTCG.UnityApp
             _group.interactable = false;
             _group.alpha = 0;
 
-            var band = UI.Panel(transform, new Color(0.02f, 0.03f, 0.1f, 1f), 0, 40, 1920, 140, "Band");
+            // The wipe is a clipping window that grows from the left and later shrinks to the right;
+            // the content inside is counter-moved so it stays put while the window travels.
+            _wipe = UI.Place(UI.Rect("Wipe", transform), 0, 0, 0, H);
+            _wipe.gameObject.AddComponent<RectMask2D>();
+            _content = UI.Place(UI.Rect("Content", _wipe), 0, 0, W, H);
+
+            var band = UI.Panel(_content, new Color(0.02f, 0.03f, 0.1f, 0.94f), 0, 40, W, 140, "Band");
             band.raycastTarget = false;
-            _band = band.rectTransform;
-            foreach (float y in new[] { 0f, 137f })
+            foreach (float y in new[] { 0f, 138f })
             {
-                var edge = UI.Panel(band.transform, color, 0, y, 960, 3, "Edge");
-                edge.sprite = Theme.Gradient(true, 0f, 1f);
+                var edge = UI.Panel(band.transform, color, 0, y, W / 2, 2, "Line");
+                edge.sprite = Theme.Gradient(true, 0f, 0.8f);
                 edge.raycastTarget = false;
-                var edge2 = UI.Panel(band.transform, color, 960, y, 960, 3, "Edge");
-                edge2.sprite = Theme.Gradient(true, 1f, 0f);
+                var edge2 = UI.Panel(band.transform, color, W / 2, y, W / 2, 2, "Line");
+                edge2.sprite = Theme.Gradient(true, 0.8f, 0f);
                 edge2.raycastTarget = false;
             }
-            var streak = UI.Panel(band.transform, new Color(color.r, color.g, color.b, 0.5f), -500, 0, 420, 140, "Streak");
-            streak.sprite = Theme.Soft;
-            streak.raycastTarget = false;
-            _streak = streak.rectTransform;
 
-            var t = Theme.Label(transform, title, 76, color, 0, 44, 1920, 100, TextAnchor.MiddleCenter, display: true);
-            Theme.AddShadow(t, 4, 0.8f);
-            _title = t.rectTransform;
-            _title.pivot = new Vector2(0.5f, 0.5f);
-            _title.anchoredPosition = new Vector2(960, -100);
+            var titleRt = UI.Place(UI.Rect("Title", _content), 0, 44, W, 100);
+            _titleGroup = titleRt.gameObject.AddComponent<CanvasGroup>();
+            var t = Theme.Label(titleRt, title, 64, color, 0, 0, W, 100, TextAnchor.MiddleCenter, display: true);
+            Theme.AddShadow(t, 3, 0.6f);
+            _title = titleRt;
             if (!string.IsNullOrEmpty(subtitle))
-                Theme.Label(transform, subtitle, 22, Theme.TextDim, 0, 138, 1920, 34, TextAnchor.MiddleCenter, display: true);
+                Theme.Label(titleRt, subtitle, 20, Theme.TextDim, 0, 92, W, 32, TextAnchor.MiddleCenter, display: true);
+
+            // A soft light on the leading edge of the wipe.
+            var glow = UI.Panel(transform, new Color(color.r, color.g, color.b, 0.35f), 0, 40, 90, 140, "Edge");
+            glow.sprite = Theme.Soft;
+            glow.raycastTarget = false;
+            _edge = glow.rectTransform;
         }
+
+        static float Smooth(float k) { k = Mathf.Clamp01(k); return k * k * (3 - 2 * k); }
 
         void Update()
         {
@@ -554,15 +565,27 @@ namespace BrawlTCG.UnityApp
             if (_delay > 0) { _delay -= dt; return; }
             _t += dt;
             if (_t >= Life) { Destroy(gameObject); return; }
-            float inK = Theme.EaseOut(_t / 0.25f);
-            float outK = _t > Life - 0.35f ? (_t - (Life - 0.35f)) / 0.35f : 0;
-            _group.alpha = inK * (1 - outK);
-            _band.localScale = new Vector3(1, Mathf.Lerp(0.2f, 1, inK), 1);
-            float slide = (1 - inK) * -260 + outK * 260;
-            float punch = _t < 0.25f ? Mathf.Lerp(1.6f, 1f, inK) : 1;
-            _title.anchoredPosition = new Vector2(960 + slide, -100);
-            _title.localScale = new Vector3(punch, punch, 1);
-            _streak.anchoredPosition = new Vector2(Mathf.Lerp(-500, 2000, _t / Life), 0);
+            _group.alpha = 1;
+
+            float left = 0, right;
+            if (_t < In) right = W * Smooth(_t / In);
+            else
+            {
+                right = W;
+                float k = Smooth((_t - (Life - Out)) / Out);
+                left = W * k;
+            }
+            _wipe.anchoredPosition = new Vector2(left, 0);
+            _wipe.sizeDelta = new Vector2(Mathf.Max(0, right - left), H);
+            _content.anchoredPosition = new Vector2(-left, 0);
+
+            bool moving = _t < In || _t > Life - Out;
+            float edgeX = _t < In ? right : left;
+            _edge.anchoredPosition = new Vector2(edgeX - 45, -40);
+            _edge.gameObject.SetActive(moving && edgeX > 0 && edgeX < W);
+
+            _titleGroup.alpha = Smooth((_t - 0.2f) / 0.5f);
+            _title.anchoredPosition = new Vector2(-24 + 48 * (_t / Life), -44);
         }
     }
 

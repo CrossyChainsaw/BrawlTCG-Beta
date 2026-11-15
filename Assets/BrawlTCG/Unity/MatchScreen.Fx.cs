@@ -164,13 +164,20 @@ namespace BrawlTCG.UnityApp
             else StartCoroutine(AfterRoutine(seconds, action));
         }
 
+        /// <summary>Attack sound of the attack's weapon (or the legend's main weapon for "any weapon" attacks).</summary>
+        static string WeaponCue(LegendCard attacker, Attack attack)
+        {
+            Weapon w = attack.WeaponOne != Weapon.Any ? attack.WeaponOne : attacker.PrimaryWeapon;
+            return "hit_" + w.ToString().ToLowerInvariant();
+        }
+
         /// <summary>Plays a sound cue after a delay (in sync with the matching visual).</summary>
         void Sound(string cue, float delay = 0, float volume = 1) => After(delay, () => Sfx.Play(cue, volume));
 
         void Shake(float amount, float delay = 0)
         {
             if (_shaker == null) return;
-            After(delay, () => { if (_shaker != null) _shaker.Add(amount); });
+            After(delay, () => { if (_shaker != null) _shaker.Add(amount * 0.5f); });
         }
 
         // ───────────── The diff ─────────────
@@ -205,8 +212,7 @@ namespace BrawlTCG.UnityApp
                     bool mirror = UnityEngine.Random.value > 0.5f;
                     Fx.Play(_fx, "Slash", to, 250, impact - 0.03f, 36, null, UnityEngine.Random.Range(-35f, 35f), mirror);
                     Fx.Play(_fx, Fx.HitClip(el), to, 320, impact, 30);
-                    Sound("swing", impact * 0.4f, 0.8f);
-                    Sound("hit_" + el.ToString().ToLowerInvariant(), impact);
+                    Sound(WeaponCue(s.Attacker, s.Attack), impact);
                     Fx.Glow(_fx, to, new Color(1, 1, 1, 0.9f), 260, impact, 0.25f);
                     Fx.Sparks(_fx, to, tint, 20, 620, impact);
                     Shake(0.38f, impact);
@@ -363,7 +369,7 @@ namespace BrawlTCG.UnityApp
                 if (dHp < 0)
                 {
                     if (!mainHit) { Fx.Play(_fx, hitClip, c, 280, impact); Shake(0.22f, impact); }
-                    if (!mainHit) Sound(source != null ? "hit_" + source.Value.ToString().ToLowerInvariant() : "hit", impact, 0.8f);
+                    if (!mainHit) Sound(s.Attack != null ? WeaponCue(s.Attacker, s.Attack) : "hit", impact, 0.8f);
                     CardHit.Apply(view, DamageRed, 1, impact);
                     Fx.Float(_top, dHp.ToString(), c + new Vector2(0, -10), DamageRed, 62, impact + 0.04f);
                 }
@@ -475,7 +481,7 @@ namespace BrawlTCG.UnityApp
                     Fx.Bolt(_fx, Showcase, target, tint, impact - 0.12f, 0.34f, 7);
                     if (friendly) Fx.Play(_fx, "Sparkle", target, 300, impact, 30, tint);
                     else Fx.Play(_fx, Fx.HitClip(battle.Element), target, 300, impact, 30);
-                    Sound(friendly ? "heal" : "hit_" + battle.Element.ToString().ToLowerInvariant(), impact);
+                    Sound(friendly ? "heal" : "hit", impact);
                 }
                 else
                 {
@@ -546,7 +552,7 @@ namespace BrawlTCG.UnityApp
             bool mine = IsLocallyControlled(active.Index);
             string title = _hotSeat ? $"{active.Name.ToUpperInvariant()}'S TURN" : mine ? "YOUR TURN" : $"{active.Name.ToUpperInvariant()}'S TURN";
             Fx.Banner(_top, title, $"TURN {_game.TurnNumber}", mine ? Theme.Gold : new Color32(140, 170, 255, 255));
-            Sfx.Play(mine ? "turn_mine" : "turn_theirs");
+            Sfx.Play("turn", mine ? 0.8f : 0.5f);
             if (!deal) return;
             int i = 0;
             foreach (Card c in Bottom.Hand)
@@ -581,8 +587,7 @@ namespace BrawlTCG.UnityApp
             Vector2 at = AvatarCenter(loser.Index);
             Color white = new Color(1, 1, 1, 0.3f);
             Fx.Play(_fx, "KoMagic", at + new Vector2(0, -40), 520, delay, 30);
-            Sound("ko", delay + 0.1f);
-            Sound("game_over", delay + 0.5f);
+            Sound("ko", delay + 0.1f, 0.8f);
             Fx.Play(_fx, "Explosion", at, 560, delay + 0.12f, 30);
             Fx.Flash(_top, white, 0.6f, delay + 0.12f);
             Fx.Shockwave(_fx, at, Theme.Gold, 1100, delay + 0.12f, 0.9f);
