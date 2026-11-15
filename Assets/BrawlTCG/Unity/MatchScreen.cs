@@ -377,8 +377,12 @@ namespace BrawlTCG.UnityApp
                 LegendCard legend = p.PlayingField[slot];
                 // Stacked weapon / battle cards peek out above the legend, first card closest to it.
                 int shown = Mathf.Min(legend.StackedCards.Count, 4);
+                bool spent = legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsTapped;
                 for (int k = shown - 1; k >= 0; k--)
-                    AddCard(legend.StackedCards[k], true, x, y - 14 * (k + 1), p, BoardZone.Stacked, k);
+                {
+                    CardView stacked = AddCard(legend.StackedCards[k], true, x, y - 14 * (k + 1), p, BoardZone.Stacked, k);
+                    if (spent) stacked.SetDimmed(true); // darkened together with their legend
+                }
 
                 CardView view = AddCard(legend, true, x, y, p, BoardZone.PlayingField, slot, tapped: legend.IsTapped);
                 _legendViews.Add(view);
