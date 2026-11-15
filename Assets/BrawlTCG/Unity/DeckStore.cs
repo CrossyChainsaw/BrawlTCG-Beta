@@ -56,26 +56,29 @@ namespace BrawlTCG.UnityApp
             if (File.Exists(path)) File.Delete(path);
         }
 
-        /// <summary>Creates two ready-to-play decks on first launch so a match can be started right away.</summary>
+        /// <summary>
+        /// Hands out every starter deck (one per element) once. A starter that was already given is never recreated,
+        /// so deleting one keeps it deleted; an existing deck with the same name is never overwritten.
+        /// </summary>
         public static void EnsureStarterDecks()
         {
             Directory.CreateDirectory(Folder);
-            if (Directory.GetFiles(Folder, "*.txt").Length > 0) return;
-
-            Save("Starter - Fire", Build(
-                (0, 14), (2004, 2), (2005, 3), (2006, 2), (2001, 2), (2007, 2),
-                (25003, 4), (24000, 4), (15000, 3), (23000, 2), (508, 2)));
-            Save("Starter - Nature", Build(
-                (0, 14), (1000, 3), (1003, 2), (1007, 2), (1008, 2), (1001, 2),
-                (24001, 4), (13000, 3), (18000, 3), (19000, 2), (501, 2), (101, 1)));
-        }
-
-        static List<int> Build(params (int id, int count)[] entries)
-        {
-            var ids = new List<int>();
-            foreach (var (id, count) in entries)
-                ids.AddRange(Enumerable.Repeat(id, count));
-            return ids;
+            string ledger = Path.Combine(Folder, ".starters"); // not a .txt, so it never shows up as a deck
+            var given = new HashSet<string>(File.Exists(ledger) ? File.ReadAllLines(ledger) : Array.Empty<string>());
+            bool firstLaunch = !File.Exists(ledger) && Directory.GetFiles(Folder, "*.txt").Length == 0;
+            bool changed = false;
+            foreach (StarterDecks.Starter s in StarterDecks.All)
+            {
+                if (given.Contains(s.Name)) continue;
+                // Before the ledger existed only Fire and Nature were handed out (on first launch). If the player
+                // already had decks back then and deleted those two, don't bring them back.
+                bool legacy = s.Name == "Starter - Fire" || s.Name == "Starter - Nature";
+                bool hadDecksBefore = !firstLaunch && !File.Exists(ledger);
+                if (!Exists(s.Name) && !(legacy && hadDecksBefore)) Save(s.Name, s.Cards);
+                given.Add(s.Name);
+                changed = true;
+            }
+            if (changed) File.WriteAllLines(ledger, given.OrderBy(n => n));
         }
     }
 }
