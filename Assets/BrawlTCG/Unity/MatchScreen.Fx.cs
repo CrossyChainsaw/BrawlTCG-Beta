@@ -492,7 +492,7 @@ namespace BrawlTCG.UnityApp
             }
 
             var ghost = Ghost(card, faceUp, startScale);
-            Sound("card_play");
+            if (!(card is EssenceCard)) Sound("card_play"); // essence only gets its chime on landing
             CardFlight f = CardFlight.Begin(ghost, start, startScale).To(dest, destScale, card is EssenceCard ? 0.45f : 0.36f, 0, 60);
             if (!startFaceUp && faceUp) f.Flip();
             f.Landed = () => Land(s, card, dest, player);
@@ -525,7 +525,7 @@ namespace BrawlTCG.UnityApp
                     Shake(0.15f);
                     break;
                 case StageCard _:
-                    Sfx.Play("stage");
+                    Sfx.Play("ko", 0.6f, 0.03f, 0.04f, 0.9f); // a soft, deep boom (no musical stinger)
                     Fx.Flash(_top, new Color(tint.r, tint.g, tint.b, 0.18f), 0.6f);
                     Fx.Shockwave(_fx, at, tint, 900, 0, 0.8f);
                     Fx.Play(_fx, "Ring", at, 460, 0, 30, tint);
@@ -587,7 +587,7 @@ namespace BrawlTCG.UnityApp
             Vector2 at = AvatarCenter(loser.Index);
             Color white = new Color(1, 1, 1, 0.3f);
             Fx.Play(_fx, "KoMagic", at + new Vector2(0, -40), 520, delay, 30);
-            Sound("game_over", delay + 0.1f, 0.9f);
+            Sound("ko", delay + 0.1f, 0.9f);
             Fx.Play(_fx, "Explosion", at, 560, delay + 0.12f, 30);
             Fx.Flash(_top, white, 0.6f, delay + 0.12f);
             Fx.Shockwave(_fx, at, Theme.Gold, 1100, delay + 0.12f, 0.9f);
