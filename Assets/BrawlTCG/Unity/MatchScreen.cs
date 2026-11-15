@@ -609,10 +609,11 @@ namespace BrawlTCG.UnityApp
                     // Can't afford it yet this turn.
                     v.SetDimmed(true);
                 }
-                else if (showPlayable && p.Hand[i] is WeaponCard)
+                else if (showPlayable && (p.Hand[i] is WeaponCard || p.Hand[i] is BattleCard { TargetRequired: true }))
                 {
-                    // Affordable, but none of your legends can carry this weapon (yet). The board is redrawn after
-                    // every move, so playing a fitting legend lights it up again.
+                    // Affordable, but nothing to put it on (yet): no legend that can carry this weapon, or no legend
+                    // on the side this battle card targets (yours for heals/boosts, the enemy's for damage/taps).
+                    // The board is redrawn after every move, so a fitting legend lights it up again.
                     v.SetDimmed(true);
                 }
             }
