@@ -1,0 +1,7906 @@
+fileFormatVersion: 2
+guid: 7daf2ab783d9387469d236fa58f6c7a0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3631649321041387403
+    second: HitWild_0
+  - first:
+      213: -312098987317443778
+    second: HitWild_1
+  - first:
+      213: -6343319803633060227
+    second: HitWild_2
+  - first:
+      213: 517549852245832920
+    second: HitWild_3
+  - first:
+      213: -8798456797830391002
+    second: HitWild_4
+  - first:
+      213: 3052903412243141816
+    second: HitWild_5
+  - first:
+      213: 2394338054751293003
+    second: HitWild_6
+  - first:
+      213: -1773230791740529239
+    second: HitWild_7
+  - first:
+      213: -5234924048154316609
+    second: HitWild_8
+  - first:
+      213: -368400297134147440
+    second: HitWild_9
+  - first:
+      213: -4159014358549113682
+    second: HitWild_10
+  - first:
+      213: 5522765318450470165
+    second: HitWild_11
+  - first:
+      213: 3589178363651277145
+    second: HitWild_12
+  - first:
+      213: -8833785984910493871
+    second: HitWild_13
+  - first:
+      213: 4971675879285113847
+    second: HitWild_14
+  - first:
+      213: 1443006719147244215
+    second: HitWild_15
+  - first:
+      213: -7346228972013084313
+    second: HitWild_16
+  - first:
+      213: 4602500622315597476
+    second: HitWild_17
+  - first:
+      213: -8955728635245656733
+    second: HitWild_18
+  - first:
+      213: -3320408479561088669
+    second: HitWild_19
+  - first:
+      213: 2175791235315848034
+    second: HitWild_20
+  - first:
+      213: 6891484186399324458
+    second: HitWild_21
+  - first:
+      213: -8980390921557863765
+    second: HitWild_22
+  - first:
+      213: -6260008486775716933
+    second: HitWild_23
+  - first:
+      213: 8383971290925387292
+    second: HitWild_24
+  - first:
+      213: 6062912156323006923
+    second: HitWild_25
+  - first:
+      213: -1391700749272038200
+    second: HitWild_26
+  - first:
+      213: -1725872685439955077
+    second: HitWild_27
+  - first:
+      213: -7667213393041292778
+    second: HitWild_28
+  - first:
+      213: -8148875706801348663
+    second: HitWild_29
+  - first:
+      213: -4114598240956677242
+    second: HitWild_30
+  - first:
+      213: -4589292864353596854
+    second: HitWild_31
+  - first:
+      213: 1917324215847361242
+    second: HitWild_32
+  - first:
+      213: -2544768310508147666
+    second: HitWild_33
+  - first:
+      213: 6802943798035734972
+    second: HitWild_34
+  - first:
+      213: 9020496809131345504
+    second: HitWild_35
+  - first:
+      213: -4162213304157839753
+    second: HitWild_36
+  - first:
+      213: 4597176188422186976
+    second: HitWild_37
+  - first:
+      213: -8873830815338291469
+    second: HitWild_38
+  - first:
+      213: 757315409421102239
+    second: HitWild_39
+  - first:
+      213: -7489553372342193969
+    second: HitWild_40
+  - first:
+      213: -8290953150749988321
+    second: HitWild_41
+  - first:
+      213: 2486225940459165088
+    second: HitWild_42
+  - first:
+      213: -5109326464555184489
+    second: HitWild_43
+  - first:
+      213: 5843873633032082583
+    second: HitWild_44
+  - first:
+      213: 6530855828792409605
+    second: HitWild_45
+  - first:
+      213: -3861040112103426052
+    second: HitWild_46
+  - first:
+      213: -8749602949109507122
+    second: HitWild_47
+  - first:
+      213: 390554313808709188
+    second: HitWild_48
+  - first:
+      213: -8590001605938493149
+    second: HitWild_49
+  - first:
+      213: -3947987495414765941
+    second: HitWild_50
+  - first:
+      213: -9196727019452571423
+    second: HitWild_51
+  - first:
+      213: -325133201544409041
+    second: HitWild_52
+  - first:
+      213: -2021089014507800976
+    second: HitWild_53
+  - first:
+      213: -1901999847395142177
+    second: HitWild_54
+  - first:
+      213: -1581161530080579244
+    second: HitWild_55
+  - first:
+      213: 3254579584576357062
+    second: HitWild_56
+  - first:
+      213: -5241595807845858890
+    second: HitWild_57
+  - first:
+      213: -3432948891736497438
+    second: HitWild_58
+  - first:
+      213: -6051754615633575200
+    second: HitWild_59
+  - first:
+      213: 2192720365680187179
+    second: HitWild_60
+  - first:
+      213: -380362754571082126
+    second: HitWild_61
+  - first:
+      213: 2551783931500192877
+    second: HitWild_62
+  - first:
+      213: -8696324814843177649
+    second: HitWild_63
+  - first:
+      213: 6894393569135268211
+    second: HitWild_64
+  - first:
+      213: -4011703382292821754
+    second: HitWild_65
+  - first:
+      213: -8949316091790734214
+    second: HitWild_66
+  - first:
+      213: 3688321168004077709
+    second: HitWild_67
+  - first:
+      213: -4536454537059467396
+    second: HitWild_68
+  - first:
+      213: 3978625906666642330
+    second: HitWild_69
+  - first:
+      213: -9155529088460000319
+    second: HitWild_70
+  - first:
+      213: -5883001570414944734
+    second: HitWild_71
+  - first:
+      213: -3245769661819088666
+    second: HitWild_72
+  - first:
+      213: -4355497258565321341
+    second: HitWild_73
+  - first:
+      213: -3640710741723141265
+    second: HitWild_74
+  - first:
+      213: 985303430197015454
+    second: HitWild_75
+  - first:
+      213: 1393359114904779879
+    second: HitWild_76
+  - first:
+      213: -3981161000155595969
+    second: HitWild_77
+  - first:
+      213: 351337419584847991
+    second: HitWild_78
+  - first:
+      213: -4556081259792623191
+    second: HitWild_79
+  - first:
+      213: 9082387057412463156
+    second: HitWild_80
+  - first:
+      213: 2618768194446068362
+    second: HitWild_81
+  - first:
+      213: -8043827671693221296
+    second: HitWild_82
+  - first:
+      213: -612624284914683364
+    second: HitWild_83
+  - first:
+      213: -4797210199252048684
+    second: HitWild_84
+  - first:
+      213: -3601685995777821611
+    second: HitWild_85
+  - first:
+      213: -2176590695586040817
+    second: HitWild_86
+  - first:
+      213: 6189997403054140356
+    second: HitWild_87
+  - first:
+      213: 5801070132217710945
+    second: HitWild_88
+  - first:
+      213: 1224841570047324499
+    second: HitWild_89
+  - first:
+      213: -2428220573455658156
+    second: HitWild_90
+  - first:
+      213: 7263687967509959877
+    second: HitWild_91
+  - first:
+      213: -3572337825497763802
+    second: HitWild_92
+  - first:
+      213: -7321586474867469003
+    second: HitWild_93
+  - first:
+      213: -742326326880873225
+    second: HitWild_94
+  - first:
+      213: -9046767388575436682
+    second: HitWild_95
+  - first:
+      213: 5481091797238977275
+    second: HitWild_96
+  - first:
+      213: 5016508019360092897
+    second: HitWild_97
+  - first:
+      213: 5087520907538967449
+    second: HitWild_98
+  - first:
+      213: -1145091503057276620
+    second: HitWild_99
+  - first:
+      213: 8555290234775583584
+    second: HitWild_100
+  - first:
+      213: -6441443979520383245
+    second: HitWild_101
+  - first:
+      213: -1740878883253742405
+    second: HitWild_102
+  - first:
+      213: 7502629295446806120
+    second: HitWild_103
+  - first:
+      213: -6881573931264071569
+    second: HitWild_104
+  - first:
+      213: -8919527254061457770
+    second: HitWild_105
+  - first:
+      213: 4312829020478963285
+    second: HitWild_106
+  - first:
+      213: 8562805470302294859
+    second: HitWild_107
+  - first:
+      213: 1165805012308578074
+    second: HitWild_108
+  - first:
+      213: 2082021834796236502
+    second: HitWild_109
+  - first:
+      213: -8369799204316163560
+    second: HitWild_110
+  - first:
+      213: -9128022405208361899
+    second: HitWild_111
+  - first:
+      213: -672558832834537685
+    second: HitWild_112
+  - first:
+      213: 2875694683186066692
+    second: HitWild_113
+  - first:
+      213: 1089583175887804958
+    second: HitWild_114
+  - first:
+      213: -375038451294028884
+    second: HitWild_115
+  - first:
+      213: 3260080286059970985
+    second: HitWild_116
+  - first:
+      213: 299132429271438566
+    second: HitWild_117
+  - first:
+      213: 4267802831359448771
+    second: HitWild_118
+  - first:
+      213: -706904991957563226
+    second: HitWild_119
+  - first:
+      213: 1825468528221280129
+    second: HitWild_120
+  - first:
+      213: 3362504413613513411
+    second: HitWild_121
+  - first:
+      213: -8079828983905941167
+    second: HitWild_122
+  - first:
+      213: 2445975111421074556
+    second: HitWild_123
+  - first:
+      213: -6385414619148869240
+    second: HitWild_124
+  - first:
+      213: -2693769660633076155
+    second: HitWild_125
+  - first:
+      213: -5830243432254178950
+    second: HitWild_126
+  - first:
+      213: 3174391874448325362
+    second: HitWild_127
+  - first:
+      213: 151514026853858396
+    second: HitWild_128
+  - first:
+      213: 4036664273862836720
+    second: HitWild_129
+  - first:
+      213: 8095235448830600637
+    second: HitWild_130
+  - first:
+      213: -5067799636130110036
+    second: HitWild_131
+  - first:
+      213: -2965149156819238688
+    second: HitWild_132
+  - first:
+      213: 887799013839054691
+    second: HitWild_133
+  - first:
+      213: 2134366052975304751
+    second: HitWild_134
+  - first:
+      213: -2538961921783464352
+    second: HitWild_135
+  - first:
+      213: 1854741976173362852
+    second: HitWild_136
+  - first:
+      213: 8493375090484747421
+    second: HitWild_137
+  - first:
+      213: 526761976476858224
+    second: HitWild_138
+  - first:
+      213: -6256153457264924438
+    second: HitWild_139
+  - first:
+      213: -7147573468795781257
+    second: HitWild_140
+  - first:
+      213: -1712525937272412199
+    second: HitWild_141
+  - first:
+      213: -6470515191875103311
+    second: HitWild_142
+  - first:
+      213: 3815323230214672151
+    second: HitWild_143
+  - first:
+      213: 3702024903170564985
+    second: HitWild_144
+  - first:
+      213: -2711462665046608499
+    second: HitWild_145
+  - first:
+      213: 1791594444052105964
+    second: HitWild_146
+  - first:
+      213: -3302204966269681732
+    second: HitWild_147
+  - first:
+      213: 3199683543218615967
+    second: HitWild_148
+  - first:
+      213: -6137911414654276657
+    second: HitWild_149
+  - first:
+      213: 4952500206156341598
+    second: HitWild_150
+  - first:
+      213: 3988201771090026301
+    second: HitWild_151
+  - first:
+      213: -5650963402402073967
+    second: HitWild_152
+  - first:
+      213: 5456539172681396133
+    second: HitWild_153
+  - first:
+      213: -5889215932697917177
+    second: HitWild_154
+  - first:
+      213: 5433601440701504314
+    second: HitWild_155
+  - first:
+      213: 4504400659970854807
+    second: HitWild_156
+  - first:
+      213: 778643523341333174
+    second: HitWild_157
+  - first:
+      213: -4059049870300692730
+    second: HitWild_158
+  - first:
+      213: -2136948266833603180
+    second: HitWild_159
+  - first:
+      213: -586815657270540165
+    second: HitWild_160
+  - first:
+      213: 398213210042275398
+    second: HitWild_161
+  - first:
+      213: 5048543445193688262
+    second: HitWild_162
+  - first:
+      213: -7297870197465737324
+    second: HitWild_163
+  - first:
+      213: 812832955717417652
+    second: HitWild_164
+  - first:
+      213: 5984999341116020382
+    second: HitWild_165
+  - first:
+      213: 9084977491619325677
+    second: HitWild_166
+  - first:
+      213: 6779035519671736469
+    second: HitWild_167
+  - first:
+      213: -7847166543528475614
+    second: HitWild_168
+  - first:
+      213: -1877655801525228973
+    second: HitWild_169
+  - first:
+      213: 740759517182786474
+    second: HitWild_170
+  - first:
+      213: -3437252910495518632
+    second: HitWild_171
+  - first:
+      213: -7165584126474382378
+    second: HitWild_172
+  - first:
+      213: -8733032892329335222
+    second: HitWild_173
+  - first:
+      213: 4576138114392071917
+    second: HitWild_174
+  - first:
+      213: -5117602520995331550
+    second: HitWild_175
+  - first:
+      213: 8764324068854425328
+    second: HitWild_176
+  - first:
+      213: 2636302945388078799
+    second: HitWild_177
+  - first:
+      213: 3383007069115617844
+    second: HitWild_178
+  - first:
+      213: 7512695911286262059
+    second: HitWild_179
+  - first:
+      213: 6142553085685362144
+    second: HitWild_180
+  - first:
+      213: 7182907742242313741
+    second: HitWild_181
+  - first:
+      213: 6000610099377439624
+    second: HitWild_182
+  - first:
+      213: -9046905613758570840
+    second: HitWild_183
+  - first:
+      213: -2615844860098896359
+    second: HitWild_184
+  - first:
+      213: 2018932725948871214
+    second: HitWild_185
+  - first:
+      213: -4307420971011431564
+    second: HitWild_186
+  - first:
+      213: 2100663749229976428
+    second: HitWild_187
+  - first:
+      213: 4654649116080010239
+    second: HitWild_188
+  - first:
+      213: -8014593195089889076
+    second: HitWild_189
+  - first:
+      213: -4181296654507577712
+    second: HitWild_190
+  - first:
+      213: -5022224662214011574
+    second: HitWild_191
+  - first:
+      213: 8061864993254330399
+    second: HitWild_192
+  - first:
+      213: 13244637870595414
+    second: HitWild_193
+  - first:
+      213: 8145219439901132588
+    second: HitWild_194
+  - first:
+      213: -573647833239023760
+    second: HitWild_195
+  - first:
+      213: -4936206176075545156
+    second: HitWild_196
+  - first:
+      213: 838222819362550520
+    second: HitWild_197
+  - first:
+      213: -1625675487766437728
+    second: HitWild_198
+  - first:
+      213: -5584347602324267959
+    second: HitWild_199
+  - first:
+      213: 2431450943500838917
+    second: HitWild_200
+  - first:
+      213: 8703281855238583667
+    second: HitWild_201
+  - first:
+      213: 4407456455284278464
+    second: HitWild_202
+  - first:
+      213: -1097371083133891407
+    second: HitWild_203
+  - first:
+      213: -5596667068570996766
+    second: HitWild_204
+  - first:
+      213: -4914268569579716244
+    second: HitWild_205
+  - first:
+      213: -2920203777541532864
+    second: HitWild_206
+  - first:
+      213: -863410694842671292
+    second: HitWild_207
+  - first:
+      213: 8026629517095271443
+    second: HitWild_208
+  - first:
+      213: 3813778604161850867
+    second: HitWild_209
+  - first:
+      213: -8238080356247123715
+    second: HitWild_210
+  - first:
+      213: -3340428466994045822
+    second: HitWild_211
+  - first:
+      213: 4383566010201406135
+    second: HitWild_212
+  - first:
+      213: -4984478076611082213
+    second: HitWild_213
+  - first:
+      213: 1109847768022828398
+    second: HitWild_214
+  - first:
+      213: 4759490255002340787
+    second: HitWild_215
+  - first:
+      213: -868083199732205959
+    second: HitWild_216
+  - first:
+      213: -8710183229916548808
+    second: HitWild_217
+  - first:
+      213: 6819037593282322920
+    second: HitWild_218
+  - first:
+      213: 3662883716465356115
+    second: HitWild_219
+  - first:
+      213: 6034994822796635700
+    second: HitWild_220
+  - first:
+      213: -6023891732442312619
+    second: HitWild_221
+  - first:
+      213: 2950203315122088781
+    second: HitWild_222
+  - first:
+      213: -7497456265903502360
+    second: HitWild_223
+  - first:
+      213: 3681971611732418337
+    second: HitWild_224
+  - first:
+      213: -3347498561280615496
+    second: HitWild_225
+  - first:
+      213: 6769187289348009019
+    second: HitWild_226
+  - first:
+      213: -5785541847113062302
+    second: HitWild_227
+  - first:
+      213: -2373517373433276110
+    second: HitWild_228
+  - first:
+      213: 8812634458918991594
+    second: HitWild_229
+  - first:
+      213: 6404840642275654160
+    second: HitWild_230
+  - first:
+      213: 3148725996536731950
+    second: HitWild_231
+  - first:
+      213: -2882393216656989288
+    second: HitWild_232
+  - first:
+      213: 5825331971701807741
+    second: HitWild_233
+  - first:
+      213: -7606419579346607887
+    second: HitWild_234
+  - first:
+      213: -8875468927448426183
+    second: HitWild_235
+  - first:
+      213: 8653220968268434497
+    second: HitWild_236
+  - first:
+      213: 6024632454215863737
+    second: HitWild_237
+  - first:
+      213: -1405705515471551497
+    second: HitWild_238
+  - first:
+      213: -1082351114715084468
+    second: HitWild_239
+  - first:
+      213: 1656424822399236107
+    second: HitWild_240
+  - first:
+      213: -3232463691523378330
+    second: HitWild_241
+  - first:
+      213: 5058615039148254185
+    second: HitWild_242
+  - first:
+      213: 6176871998163803309
+    second: HitWild_243
+  - first:
+      213: -6538415871754097353
+    second: HitWild_244
+  - first:
+      213: -2955990732359520692
+    second: HitWild_245
+  - first:
+      213: 110724014333674156
+    second: HitWild_246
+  - first:
+      213: -5860154025796152397
+    second: HitWild_247
+  - first:
+      213: 6176014191694387180
+    second: HitWild_248
+  - first:
+      213: 7943785915851340383
+    second: HitWild_249
+  - first:
+      213: -7463142089162349372
+    second: HitWild_250
+  - first:
+      213: -1114485728913387806
+    second: HitWild_251
+  - first:
+      213: 3142697285935759811
+    second: HitWild_252
+  - first:
+      213: -65058925805337515
+    second: HitWild_253
+  - first:
+      213: 1997404771883548578
+    second: HitWild_254
+  - first:
+      213: -7863466153949165005
+    second: HitWild_255
+  - first:
+      213: -3639523343819506138
+    second: HitWild_256
+  - first:
+      213: -1043614923082196875
+    second: HitWild_257
+  - first:
+      213: -7090230675922339617
+    second: HitWild_258
+  - first:
+      213: 6543369215270111126
+    second: HitWild_259
+  - first:
+      213: -4489636327786127448
+    second: HitWild_260
+  - first:
+      213: 7812941829918167793
+    second: HitWild_261
+  - first:
+      213: 7201054667622654483
+    second: HitWild_262
+  - first:
+      213: 6349698810163474202
+    second: HitWild_263
+  - first:
+      213: -8123045410020683486
+    second: HitWild_264
+  - first:
+      213: -7337326074087070769
+    second: HitWild_265
+  - first:
+      213: -5420142483596940458
+    second: HitWild_266
+  - first:
+      213: -6384731277096487037
+    second: HitWild_267
+  - first:
+      213: -2995981502202359843
+    second: HitWild_268
+  - first:
+      213: 2743119285257979758
+    second: HitWild_269
+  - first:
+      213: 6509544335647444465
+    second: HitWild_270
+  - first:
+      213: 6882645601469631698
+    second: HitWild_271
+  - first:
+      213: -290273342172672955
+    second: HitWild_272
+  - first:
+      213: -3454942448440674021
+    second: HitWild_273
+  - first:
+      213: 9124529290814485583
+    second: HitWild_274
+  - first:
+      213: -5824995126169182346
+    second: HitWild_275
+  - first:
+      213: -2762562907347705532
+    second: HitWild_276
+  - first:
+      213: -1614850780382206080
+    second: HitWild_277
+  - first:
+      213: -8925925244995276065
+    second: HitWild_278
+  - first:
+      213: 4117298809312016147
+    second: HitWild_279
+  - first:
+      213: 8930536621795030988
+    second: HitWild_280
+  - first:
+      213: 3829919814314064056
+    second: HitWild_281
+  - first:
+      213: -782257341708163966
+    second: HitWild_282
+  - first:
+      213: 897671046036211940
+    second: HitWild_283
+  - first:
+      213: -7968983755257143085
+    second: HitWild_284
+  - first:
+      213: 8876101355918485395
+    second: HitWild_285
+  - first:
+      213: 9140791972730468691
+    second: HitWild_286
+  - first:
+      213: -5870379587529245916
+    second: HitWild_287
+  - first:
+      213: -5752924203499750096
+    second: HitWild_288
+  - first:
+      213: 3443207753538659868
+    second: HitWild_289
+  - first:
+      213: 3233224038085027246
+    second: HitWild_290
+  - first:
+      213: 5065699951361036928
+    second: HitWild_291
+  - first:
+      213: -7534452699059281113
+    second: HitWild_292
+  - first:
+      213: 3404901816535894855
+    second: HitWild_293
+  - first:
+      213: 4117597681190048726
+    second: HitWild_294
+  - first:
+      213: 6574725012229326587
+    second: HitWild_295
+  - first:
+      213: -2800624438569129389
+    second: HitWild_296
+  - first:
+      213: -1703527628466078797
+    second: HitWild_297
+  - first:
+      213: -6854884026651633606
+    second: HitWild_298
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HitWild_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 829
+        width: 129
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5702a8e0f2ac99dc0800000000000000
+      internalID: -3631649321041387403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 829
+        width: 129
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e334f26ef933babf0800000000000000
+      internalID: -312098987317443778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_2
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 935
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7630c73f3008f7a0800000000000000
+      internalID: -6343319803633060227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_3
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 807
+        width: 141
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d43ba839d4be2700800000000000000
+      internalID: 517549852245832920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_4
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 935
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bd2b9982a95e580800000000000000
+      internalID: -8798456797830391002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_5
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 807
+        width: 141
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4945c7a771e5a20800000000000000
+      internalID: 3052903412243141816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 715
+        width: 9
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e86a966c56a3120800000000000000
+      internalID: 2394338054751293003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_7
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 715
+        width: 9
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a565896df73467e0800000000000000
+      internalID: -1773230791740529239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_8
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 732
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0bc936050d957b0800000000000000
+      internalID: -5234924048154316609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_9
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 718
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098bb22b1ed23eaf0800000000000000
+      internalID: -368400297134147440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_10
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 746
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea45eeee9763846c0800000000000000
+      internalID: -4159014358549113682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_11
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 743
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d5618dbcdc4ac40800000000000000
+      internalID: 5522765318450470165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 695
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951c3f894b25fc130800000000000000
+      internalID: 3589178363651277145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 704
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157f59b3376186580800000000000000
+      internalID: -8833785984910493871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_14
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 720
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f3ca230fd0fef440800000000000000
+      internalID: 4971675879285113847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_15
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 695
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7baf54737f6960410800000000000000
+      internalID: 1443006719147244215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_16
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 704
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7612a740ca3fc0a90800000000000000
+      internalID: -7346228972013084313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_17
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 720
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aea2af4eed5fdf30800000000000000
+      internalID: 4602500622315597476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_18
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 713
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3658367714cd6b380800000000000000
+      internalID: -8955728635245656733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_19
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 726
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3610192841a8be1d0800000000000000
+      internalID: -3320408479561088669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_20
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 708
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263d866c996f13e10800000000000000
+      internalID: 2175791235315848034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_21
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 727
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29bd89da5873af50800000000000000
+      internalID: 6891484186399324458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_22
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 717
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba29668790e3f5380800000000000000
+      internalID: -8980390921557863765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_23
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 726
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb38dceb27bff19a0800000000000000
+      internalID: -6260008486775716933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_24
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 717
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e4eaa0879d95470800000000000000
+      internalID: 8383971290925387292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 710
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9c706cb7ac32450800000000000000
+      internalID: 6062912156323006923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_26
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 708
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4cef5ca8faface0800000000000000
+      internalID: -1391700749272038200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 691
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f4dc8cfe77c08e0800000000000000
+      internalID: -1725872685439955077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_28
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 695
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61208aaaa06989590800000000000000
+      internalID: -7667213393041292778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_29
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 710
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf9b4128b069ee80800000000000000
+      internalID: -8148875706801348663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_30
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 708
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 683845e23b206e6c0800000000000000
+      internalID: -4114598240956677242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_31
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 691
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a08f9747e8f40c0800000000000000
+      internalID: -4589292864353596854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_32
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 695
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada16d44734bb9a10800000000000000
+      internalID: 1917324215847361242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_33
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 712
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cad7054ba2facd0800000000000000
+      internalID: -2544768310508147666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_34
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 706
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1eddc3759e86e50800000000000000
+      internalID: 6802943798035734972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_35
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 705
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06681d52e0e3f2d70800000000000000
+      internalID: 9020496809131345504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_36
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 686
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e544e5d09dc36c0800000000000000
+      internalID: -4162213304157839753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_37
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 705
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7e9c0f2637ccf30800000000000000
+      internalID: 4597176188422186976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_38
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 707
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe98d693e1d9d480800000000000000
+      internalID: -8873830815338291469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_39
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 713
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c69793a56828a00800000000000000
+      internalID: 757315409421102239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_40
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 658
+        width: 71
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0f633a3e2cf0890800000000000000
+      internalID: -7489553372342193969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_41
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 687
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a2428690e90fc80800000000000000
+      internalID: -8290953150749988321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_42
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 658
+        width: 71
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a51e6cf159d08220800000000000000
+      internalID: 2486225940459165088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_43
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 687
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e8fae96a60819b0800000000000000
+      internalID: -5109326464555184489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_44
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 695
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79416296b1c991150800000000000000
+      internalID: 5843873633032082583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_45
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 692
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ef57a36c242aa50800000000000000
+      internalID: 6530855828792409605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_46
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 687
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf77a868974da6ac0800000000000000
+      internalID: -3861040112103426052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_47
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 680
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb1e94a97a239680800000000000000
+      internalID: -8749602949109507122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_48
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 691
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446801444178b6500800000000000000
+      internalID: 390554313808709188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_49
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 699
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329400a1d0f2ac880800000000000000
+      internalID: -8590001605938493149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_50
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 694
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b866e1e4a4ee539c0800000000000000
+      internalID: -3947987495414765941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_51
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 698
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0ea4d8089ae5080800000000000000
+      internalID: -9196727019452571423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_52
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 680
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2092496315ec7bf0800000000000000
+      internalID: -325133201544409041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_53
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 679
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07671dedf36a3f3e0800000000000000
+      internalID: -2021089014507800976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_54
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 679
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd55a2d473dba95e0800000000000000
+      internalID: -1901999847395142177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_55
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 688
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451b80b37f59e0ae0800000000000000
+      internalID: -1581161530080579244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_56
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 682
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c289ef73e69a2d20800000000000000
+      internalID: 3254579584576357062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_57
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 685
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1cb29426c1247b0800000000000000
+      internalID: -5241595807845858890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_58
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 687
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2a9f7eb27bb50d0800000000000000
+      internalID: -3432948891736497438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_59
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 662
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2845b9d39d30ca0800000000000000
+      internalID: -6051754615633575200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_60
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 689
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27d1281e8b1e6e10800000000000000
+      internalID: 2192720365680187179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_61
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 687
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2766008071ea8baf0800000000000000
+      internalID: -380362754571082126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_62
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 682
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d646e9c37f1c96320800000000000000
+      internalID: 2551783931500192877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_63
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 687
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f459bdfe7a2705780800000000000000
+      internalID: -8696324814843177649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_64
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 677
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3719b0e4c6ecdaf50800000000000000
+      internalID: 6894393569135268211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_65
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 677
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609043a57019358c0800000000000000
+      internalID: -4011703382292821754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_66
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 680
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c40261e64adc380800000000000000
+      internalID: -8949316091790734214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_67
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 676
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d88df6c8f8c8f2330800000000000000
+      internalID: 3688321168004077709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_68
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 673
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f7cda32a64b01c0800000000000000
+      internalID: -4536454537059467396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_69
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 680
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b1805be2be63730800000000000000
+      internalID: 3978625906666642330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_70
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 678
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3f5975dc601f080800000000000000
+      internalID: -9155529088460000319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_71
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 675
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e1a5ebd316b5ea0800000000000000
+      internalID: -5883001570414944734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_72
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 670
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0988c70b5b4f2d0800000000000000
+      internalID: -3245769661819088666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_73
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 653
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38db60bd15a2e83c0800000000000000
+      internalID: -4355497258565321341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_74
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 661
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ba4a5aed8997dc0800000000000000
+      internalID: -3640710741723141265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_75
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 666
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93fdd8df308cad00800000000000000
+      internalID: 985303430197015454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_76
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 667
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76cb3709bb4365310800000000000000
+      internalID: 1393359114904779879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_77
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 651
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b3618d92310c8c0800000000000000
+      internalID: -3981161000155595969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_78
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 624
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77048aa858330e400800000000000000
+      internalID: 351337419584847991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_79
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 639
+        width: 49
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a91f3ebb3c85c0c0800000000000000
+      internalID: -4556081259792623191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_80
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 655
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43adcad78ee1b0e70800000000000000
+      internalID: 9082387057412463156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_81
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 651
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a8c0b4ccbb75420800000000000000
+      internalID: 2618768194446068362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_82
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 624
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052a442c9559e5090800000000000000
+      internalID: -8043827671693221296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_83
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 639
+        width: 49
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12f1ec65758f77f0800000000000000
+      internalID: -612624284914683364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_84
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 655
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d463b09db2ec6db0800000000000000
+      internalID: -4797210199252048684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_85
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 646
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554f92d5bad340ec0800000000000000
+      internalID: -3601685995777821611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_86
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 635
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f047c206b423bc1e0800000000000000
+      internalID: -2176590695586040817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_87
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 642
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbe1a197d947e550800000000000000
+      internalID: 6189997403054140356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_88
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 651
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16907f3cc8a818050800000000000000
+      internalID: 5801070132217710945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_89
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 648
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3517dc02be28ff010800000000000000
+      internalID: 1224841570047324499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_90
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 637
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45351e2f04a3d4ed0800000000000000
+      internalID: -2428220573455658156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_91
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 637
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4d5b6c8bdcdc460800000000000000
+      internalID: 7263687967509959877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_92
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 636
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620b38dbca18c6ec0800000000000000
+      internalID: -3572337825497763802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_93
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 638
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 535583d74ef746a90800000000000000
+      internalID: -7321586474867469003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_94
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 626
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f458d2832ab2b5f0800000000000000
+      internalID: -742326326880873225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_95
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 634
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6707f5eedfc637280800000000000000
+      internalID: -9046767388575436682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_96
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 645
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf29cb313ffb01c40800000000000000
+      internalID: 5481091797238977275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_97
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 636
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e25bda07773e9540800000000000000
+      internalID: 5016508019360092897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_98
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 639
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bab318f418a9640800000000000000
+      internalID: 5087520907538967449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_99
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 614
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431f3fc4851db10f0800000000000000
+      internalID: -1145091503057276620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_100
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 635
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bba22042f7ab670800000000000000
+      internalID: 8555290234775583584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_101
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 614
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6eb1034d46b96a0800000000000000
+      internalID: -6441443979520383245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_102
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 635
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb49ea611e727d7e0800000000000000
+      internalID: -1740878883253742405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_103
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 635
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ecb84f791be1860800000000000000
+      internalID: 7502629295446806120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_104
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 614
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68aa6b38fcbf70a0800000000000000
+      internalID: -6881573931264071569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_105
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 635
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e50495839773480800000000000000
+      internalID: -8919527254061457770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_106
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 633
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ef4aec42f3adb30800000000000000
+      internalID: 4312829020478963285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_107
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 621
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b43d322253235d670800000000000000
+      internalID: 8562805470302294859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_108
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 617
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1fc5046b75cd2010800000000000000
+      internalID: 1165805012308578074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_109
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 632
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6def2a5e3d3d4ec10800000000000000
+      internalID: 2082021834796236502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_110
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 634
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812536108ff78db80800000000000000
+      internalID: -8369799204316163560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_111
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 617
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554bfbb1cffb25180800000000000000
+      internalID: -9128022405208361899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_112
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 605
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27985e0e479aa6f0800000000000000
+      internalID: -672558832834537685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_113
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 610
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405f8c9041588e720800000000000000
+      internalID: 2875694683186066692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_114
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 595
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ad808202afe1f00800000000000000
+      internalID: 1089583175887804958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_115
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 614
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cabb18df3889bcaf0800000000000000
+      internalID: -375038451294028884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_116
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 617
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1cbdd5fb12e3d20800000000000000
+      internalID: 3260080286059970985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_117
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 605
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4168b0c5bb62400800000000000000
+      internalID: 299132429271438566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_118
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 610
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6169630184a3b30800000000000000
+      internalID: 4267802831359448771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_119
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 595
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a84b68b7a19036f0800000000000000
+      internalID: -706904991957563226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_120
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 614
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187d84564fd555910800000000000000
+      internalID: 1825468528221280129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_121
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 616
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cadd19e2f30aae20800000000000000
+      internalID: 3362504413613513411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_122
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 604
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1598160195eaedf80800000000000000
+      internalID: -8079828983905941167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_123
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 612
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c13bd8769d1f120800000000000000
+      internalID: 2445975111421074556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_124
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 616
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881ab0a3c337267a0800000000000000
+      internalID: -6385414619148869240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_125
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 610
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ead3f04cecd9ad0800000000000000
+      internalID: -2693769660633076155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_126
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 602
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a797f620d70d61fa0800000000000000
+      internalID: -5830243432254178950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_127
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 605
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2faf0665794bd0c20800000000000000
+      internalID: 3174391874448325362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_128
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 602
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cfc1564394a1200800000000000000
+      internalID: 151514026853858396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_129
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 605
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1ca1915cc150830800000000000000
+      internalID: 4036664273862836720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_130
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 601
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5a2b410cd085070800000000000000
+      internalID: 8095235448830600637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_131
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 604
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca56c9fc41f8ba9b0800000000000000
+      internalID: -5067799636130110036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_132
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 580
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e08db94d8ca9d6d0800000000000000
+      internalID: -2965149156819238688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_133
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 599
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367a1d3df78125c00800000000000000
+      internalID: 887799013839054691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_134
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 600
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f20ee38ed9ace9d10800000000000000
+      internalID: 2134366052975304751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_135
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 603
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e7ad9859bc3ccd0800000000000000
+      internalID: -2538961921783464352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_136
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 599
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aeb1df100e5db910800000000000000
+      internalID: 1854741976173362852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_137
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 586
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c9e7c15a78ed570800000000000000
+      internalID: 8493375090484747421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_138
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 592
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077f5190a3f6f4700800000000000000
+      internalID: 526761976476858224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_139
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 588
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8646fb39dad29a0800000000000000
+      internalID: -6256153457264924438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_140
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 591
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77fbb62bcc7becc90800000000000000
+      internalID: -7147573468795781257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_141
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 593
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d72c30cbb2eb38e0800000000000000
+      internalID: -1712525937272412199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_142
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 568
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5148a17bc1436a0800000000000000
+      internalID: -6470515191875103311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_143
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 586
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71fcd307340c2f430800000000000000
+      internalID: 3815323230214672151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_144
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 592
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973a127090c306330800000000000000
+      internalID: 3702024903170564985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_145
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 588
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85b9247213fe5ad0800000000000000
+      internalID: -2711462665046608499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_146
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 591
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea0a4397a50dd810800000000000000
+      internalID: 1791594444052105964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_147
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 593
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbff6f934163c22d0800000000000000
+      internalID: -3302204966269681732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_148
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 568
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96753bda3f876c20800000000000000
+      internalID: 3199683543218615967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_149
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 584
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb67b2a612c1daa0800000000000000
+      internalID: -6137911414654276657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_150
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 586
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e516ff1b2b0dab440800000000000000
+      internalID: 4952500206156341598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_151
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 590
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f97626160f85730800000000000000
+      internalID: 3988201771090026301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_152
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 589
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1927711c9beb391b0800000000000000
+      internalID: -5650963402402073967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_153
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 568
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5afada2b77589bb40800000000000000
+      internalID: 5456539172681396133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_154
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 591
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70948f5cf4d454ea0800000000000000
+      internalID: -5889215932697917177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_155
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 570
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b501cc8b7086b40800000000000000
+      internalID: 5433601440701504314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_156
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 569
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f099fe888d28e30800000000000000
+      internalID: 4504400659970854807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_157
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 554
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b23b67b82c4eca00800000000000000
+      internalID: 778643523341333174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_158
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 570
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60fb12316ab5ba7c0800000000000000
+      internalID: -4059049870300692730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_159
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 569
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4951ff39fd80852e0800000000000000
+      internalID: -2136948266833603180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_160
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 554
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7880cfc4463bd7f0800000000000000
+      internalID: -586815657270540165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_161
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 584
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64610710eccb68500800000000000000
+      internalID: 398213210042275398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_162
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 582
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c485ebd387001640800000000000000
+      internalID: 5048543445193688262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_163
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 581
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497152f98b1c8ba90800000000000000
+      internalID: -7297870197465737324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_164
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 583
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba74434443c74b00800000000000000
+      internalID: 812832955717417652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_165
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 571
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96da2cd03dfe0350800000000000000
+      internalID: 5984999341116020382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_166
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 571
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6a364f4e2541e70800000000000000
+      internalID: 9084977491619325677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_167
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 566
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5981ac563e8f31e50800000000000000
+      internalID: 6779035519671736469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_168
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 573
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224c7afca93491390800000000000000
+      internalID: -7847166543528475614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_169
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 556
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a23ab2ff931f5e0800000000000000
+      internalID: -1877655801525228973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_170
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 547
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab7bad2bd4b74a00800000000000000
+      internalID: 740759517182786474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_171
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 571
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850bcb270bc6c40d0800000000000000
+      internalID: -3437252910495518632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_172
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 544
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3115da33bbe8c90800000000000000
+      internalID: -7165584126474382378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_173
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 560
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4668e0aad80ec680800000000000000
+      internalID: -8733032892329335222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_174
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 555
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee177f9e55b18f30800000000000000
+      internalID: 4576138114392071917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_175
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 551
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2220e621f9f9af8b0800000000000000
+      internalID: -5117602520995331550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_176
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 561
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f669742e4221a970800000000000000
+      internalID: 8764324068854425328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_177
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 544
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc62c24af87069420800000000000000
+      internalID: 2636302945388078799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_178
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 560
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4329543610bd2fe20800000000000000
+      internalID: 3383007069115617844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_179
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 555
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b294fb99025724860800000000000000
+      internalID: 7512695911286262059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_180
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 551
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed614e9c7bbe3550800000000000000
+      internalID: 6142553085685362144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_181
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 561
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0691cee880dea360800000000000000
+      internalID: 7182907742242313741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_182
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 555
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8838301c713764350800000000000000
+      internalID: 6000610099377439624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_183
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 544
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aede6fd64fe27280800000000000000
+      internalID: -9046905613758570840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_184
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 563
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e164685f6a2bbd0800000000000000
+      internalID: -2615844860098896359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_185
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 543
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22f7931e90b40c10800000000000000
+      internalID: 2018932725948871214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_186
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 558
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473abc4d277f834c0800000000000000
+      internalID: -4307420971011431564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_187
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 548
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b9465dc8e072d10800000000000000
+      internalID: 2100663749229976428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_188
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 541
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3f80ea5b2a89040800000000000000
+      internalID: 4654649116080010239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_189
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 549
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc87763c3f176c090800000000000000
+      internalID: -8014593195089889076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_190
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 551
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09eeb8f98dc09f5c0800000000000000
+      internalID: -4181296654507577712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_191
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 545
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45178257497d4ab0800000000000000
+      internalID: -5022224662214011574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_192
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 553
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10d41e6f7f71ef60800000000000000
+      internalID: 8061864993254330399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_193
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 540
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d947f8ded0f2000800000000000000
+      internalID: 13244637870595414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_194
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 530
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27c9e4ece1a90170800000000000000
+      internalID: 8145219439901132588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_195
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 533
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f8d91c55ef908f0800000000000000
+      internalID: -573647833239023760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_196
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 488
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb58de0d2a21f7bb0800000000000000
+      internalID: -4936206176075545156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_197
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 488
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f23bbe8637f1ab00800000000000000
+      internalID: 838222819362550520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_198
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 489
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a02f9fc1c07079e0800000000000000
+      internalID: -1625675487766437728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_199
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 489
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c582d51796082b0800000000000000
+      internalID: -5584347602324267959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_200
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 511
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508e72030cf3eb120800000000000000
+      internalID: 2431450943500838917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_201
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 449
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37539914cb448c870800000000000000
+      internalID: 8703281855238583667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_202
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 461
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4c83c5b4e6a2d30800000000000000
+      internalID: 4407456455284278464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_203
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 453
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bcc40360da55c0f0800000000000000
+      internalID: -1097371083133891407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_204
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 449
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efe2bb14f4a452b0800000000000000
+      internalID: -5596667068570996766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_205
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 461
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61855bd5c20dcbb0800000000000000
+      internalID: -4914268569579716244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_206
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 453
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04312efd22a5977d0800000000000000
+      internalID: -2920203777541532864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_207
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 453
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f11ae2c8c8404f0800000000000000
+      internalID: -863410694842671292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_208
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 453
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31cf026d401546f60800000000000000
+      internalID: 8026629517095271443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_209
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 438
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd5d092f634de430800000000000000
+      internalID: 3813778604161850867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_210
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 446
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df844ce20957cad80800000000000000
+      internalID: -8238080356247123715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_211
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 435
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c9733f10a64a1d0800000000000000
+      internalID: -3340428466994045822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_212
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 441
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7baf787af0e85dc30800000000000000
+      internalID: 4383566010201406135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_213
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 438
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18cfd4299393dab0800000000000000
+      internalID: -4984478076611082213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_214
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 446
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65c2cf2aa8f66f00800000000000000
+      internalID: 1109847768022828398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_215
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 435
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd09598b2b1d0240800000000000000
+      internalID: 4759490255002340787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_216
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 441
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9763a7cdde2f3f3f0800000000000000
+      internalID: -868083199732205959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_217
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 435
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831724c30863f1780800000000000000
+      internalID: -8710183229916548808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_218
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 433
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1a0a1ff8612ae50800000000000000
+      internalID: 6819037593282322920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_219
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 433
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35dea75555d25d230800000000000000
+      internalID: 3662883716465356115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_220
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 435
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e6d1a01db90c350800000000000000
+      internalID: 6034994822796635700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_221
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 433
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5501d52a266d66ca0800000000000000
+      internalID: -6023891732442312619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_222
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 433
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b2805c84a31f820800000000000000
+      internalID: 2950203315122088781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_223
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 424
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb8bc7df3fa3f790800000000000000
+      internalID: -7497456265903502360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_224
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 420
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f12664cadf81330800000000000000
+      internalID: 3681971611732418337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_225
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 420
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbdcb85bcb4b81d0800000000000000
+      internalID: -3347498561280615496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_226
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 427
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c6da799fbf0fd50800000000000000
+      internalID: 6769187289348009019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_227
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 424
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2682ba9d750a5bfa0800000000000000
+      internalID: -5785541847113062302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_228
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 420
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2399a4836829f0fd0800000000000000
+      internalID: -2373517373433276110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_229
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 420
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6bb3b5954cc4a70800000000000000
+      internalID: 8812634458918991594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_230
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 427
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a33dd31a092e850800000000000000
+      internalID: 6404840642275654160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_231
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 395
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e291c967c9582bb20800000000000000
+      internalID: 3148725996536731950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_232
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 411
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8932a2a14aeaff7d0800000000000000
+      internalID: -2882393216656989288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_233
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 413
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a1308709cb7d050800000000000000
+      internalID: 5825331971701807741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_234
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 395
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f0287071b1907690800000000000000
+      internalID: -7606419579346607887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_235
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 411
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9395b64e80004d480800000000000000
+      internalID: -8875468927448426183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_236
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 413
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c0a98bf9a661870800000000000000
+      internalID: 8653220968268434497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_237
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 386
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd83d71c4bcb9350800000000000000
+      internalID: 6024632454215863737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_238
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 393
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f3c28b084eed7ce0800000000000000
+      internalID: -1405705515471551497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_239
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 385
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49c82d4567baf0f0800000000000000
+      internalID: -1082351114715084468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_240
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 386
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08fe30999dccf610800000000000000
+      internalID: 1656424822399236107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_241
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 393
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663b66d166bf323d0800000000000000
+      internalID: -3232463691523378330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_242
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 385
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e361ef839fc33640800000000000000
+      internalID: 5058615039148254185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_243
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 383
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac5c991b58a8b550800000000000000
+      internalID: 6176871998163803309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_244
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 382
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d225a1861e245a0800000000000000
+      internalID: -6538415871754097353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_245
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 383
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e2d5627163af6d0800000000000000
+      internalID: -2955990732359520692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_246
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 382
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2c67687ee598100800000000000000
+      internalID: 110724014333674156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_247
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3585346fc8caea0800000000000000
+      internalID: -5860154025796152397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_248
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 375
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce717b77f2c95b550800000000000000
+      internalID: 6176014191694387180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_249
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 379
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5af116d33ffd3e60800000000000000
+      internalID: 7943785915851340383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_250
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 380
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c42633bfc79d6890800000000000000
+      internalID: -7463142089162349372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_251
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 347
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee00e4622d8880f0800000000000000
+      internalID: -1114485728913387806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_252
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c109c4e78a1d9b20800000000000000
+      internalID: 3142697285935759811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_253
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 375
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55487ed604dd81ff0800000000000000
+      internalID: -65058925805337515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_254
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 379
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aff9ccae0538bb10800000000000000
+      internalID: 1997404771883548578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_255
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 380
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a8d86023b5fd290800000000000000
+      internalID: -7863466153949165005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_256
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 347
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e75e34dc0dd7dc0800000000000000
+      internalID: -3639523343819506138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_257
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 359
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578936bb1c55481f0800000000000000
+      internalID: -1043614923082196875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_258
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 353
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8321214c07a9d90800000000000000
+      internalID: -7090230675922339617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_259
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 359
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697c66e02a7beca50800000000000000
+      internalID: 6543369215270111126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_260
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 353
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af5e970c8b91b1c0800000000000000
+      internalID: -4489636327786127448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_261
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 341
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2101713352d6c60800000000000000
+      internalID: 7812941829918167793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_262
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 341
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31221df31194fe360800000000000000
+      internalID: 7201054667622654483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_263
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 343
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1fa38afc69ae1850800000000000000
+      internalID: 6349698810163474202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_264
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 345
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2219951cc35254f80800000000000000
+      internalID: -8123045410020683486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_265
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 346
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc324d87fc49c2a90800000000000000
+      internalID: -7337326074087070769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_266
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 340
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b6339d029c7c4b0800000000000000
+      internalID: -5420142483596940458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_267
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 343
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38776523bb0e467a0800000000000000
+      internalID: -6384731277096487037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_268
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 345
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf469772b22c66d0800000000000000
+      internalID: -2995981502202359843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_269
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 346
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67435ec474811620800000000000000
+      internalID: 2743119285257979758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_270
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 340
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd0cef851c865a50800000000000000
+      internalID: 6509544335647444465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_271
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 324
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc808e65b1148f50800000000000000
+      internalID: 6882645601469631698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_272
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 325
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c4808eeedb8fbf0800000000000000
+      internalID: -290273342172672955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_273
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 331
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b197641f5249d00d0800000000000000
+      internalID: -3454942448440674021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_274
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 324
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44f4a1db07d0ae70800000000000000
+      internalID: 9124529290814485583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_275
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 325
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fdd4e7bc5792fa0800000000000000
+      internalID: -5824995126169182346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_276
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 331
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441aed52ca769a9d0800000000000000
+      internalID: -2762562907347705532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_277
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 322
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0876e0665c5e699e0800000000000000
+      internalID: -1614850780382206080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_278
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 305
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd27d50084eb02480800000000000000
+      internalID: -8925925244995276065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_279
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 322
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3177e23e375932930800000000000000
+      internalID: 4117298809312016147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_280
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 305
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7b5b3ddb3afeb70800000000000000
+      internalID: 8930536621795030988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_281
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b87b6287cb962530800000000000000
+      internalID: 3829919814314064056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_282
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2842b80a71dd425f0800000000000000
+      internalID: -782257341708163966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_283
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 304
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e844207f0b257c00800000000000000
+      internalID: 897671046036211940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_284
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 304
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d02a0ffe7b786190800000000000000
+      internalID: -7968983755257143085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_285
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 304
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39762e5d72f3e2b70800000000000000
+      internalID: 8876101355918485395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_286
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 301
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35977548edd9ade70800000000000000
+      internalID: 9140791972730468691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_287
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 304
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b7d942ed8388ea0800000000000000
+      internalID: -5870379587529245916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_288
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 301
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d76aecae18920b0800000000000000
+      internalID: -5752924203499750096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_289
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 293
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16ea8d753bb8cf20800000000000000
+      internalID: 3443207753538659868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_290
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 286
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5ef4dd128bedc20800000000000000
+      internalID: 3233224038085027246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_291
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 276
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082969b344bfc4640800000000000000
+      internalID: 5065699951361036928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_292
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 295
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723a69f703f307790800000000000000
+      internalID: -7534452699059281113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_293
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 293
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74b44b58924a04f20800000000000000
+      internalID: 3404901816535894855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_294
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 286
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d31e4b6645a42930800000000000000
+      internalID: 4117597681190048726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_295
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 276
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf60ec1709d1e3b50800000000000000
+      internalID: 6574725012229326587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_296
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 295
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a2fc559ee2229d0800000000000000
+      internalID: -2800624438569129389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_297
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 283
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb3738c5aadb58e0800000000000000
+      internalID: -1703527628466078797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitWild_298
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 283
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a381ee6eb4f8ed0a0800000000000000
+      internalID: -6854884026651633606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HitWild_0: -3631649321041387403
+      HitWild_1: -312098987317443778
+      HitWild_10: -4159014358549113682
+      HitWild_100: 8555290234775583584
+      HitWild_101: -6441443979520383245
+      HitWild_102: -1740878883253742405
+      HitWild_103: 7502629295446806120
+      HitWild_104: -6881573931264071569
+      HitWild_105: -8919527254061457770
+      HitWild_106: 4312829020478963285
+      HitWild_107: 8562805470302294859
+      HitWild_108: 1165805012308578074
+      HitWild_109: 2082021834796236502
+      HitWild_11: 5522765318450470165
+      HitWild_110: -8369799204316163560
+      HitWild_111: -9128022405208361899
+      HitWild_112: -672558832834537685
+      HitWild_113: 2875694683186066692
+      HitWild_114: 1089583175887804958
+      HitWild_115: -375038451294028884
+      HitWild_116: 3260080286059970985
+      HitWild_117: 299132429271438566
+      HitWild_118: 4267802831359448771
+      HitWild_119: -706904991957563226
+      HitWild_12: 3589178363651277145
+      HitWild_120: 1825468528221280129
+      HitWild_121: 3362504413613513411
+      HitWild_122: -8079828983905941167
+      HitWild_123: 2445975111421074556
+      HitWild_124: -6385414619148869240
+      HitWild_125: -2693769660633076155
+      HitWild_126: -5830243432254178950
+      HitWild_127: 3174391874448325362
+      HitWild_128: 151514026853858396
+      HitWild_129: 4036664273862836720
+      HitWild_13: -8833785984910493871
+      HitWild_130: 8095235448830600637
+      HitWild_131: -5067799636130110036
+      HitWild_132: -2965149156819238688
+      HitWild_133: 887799013839054691
+      HitWild_134: 2134366052975304751
+      HitWild_135: -2538961921783464352
+      HitWild_136: 1854741976173362852
+      HitWild_137: 8493375090484747421
+      HitWild_138: 526761976476858224
+      HitWild_139: -6256153457264924438
+      HitWild_14: 4971675879285113847
+      HitWild_140: -7147573468795781257
+      HitWild_141: -1712525937272412199
+      HitWild_142: -6470515191875103311
+      HitWild_143: 3815323230214672151
+      HitWild_144: 3702024903170564985
+      HitWild_145: -2711462665046608499
+      HitWild_146: 1791594444052105964
+      HitWild_147: -3302204966269681732
+      HitWild_148: 3199683543218615967
+      HitWild_149: -6137911414654276657
+      HitWild_15: 1443006719147244215
+      HitWild_150: 4952500206156341598
+      HitWild_151: 3988201771090026301
+      HitWild_152: -5650963402402073967
+      HitWild_153: 5456539172681396133
+      HitWild_154: -5889215932697917177
+      HitWild_155: 5433601440701504314
+      HitWild_156: 4504400659970854807
+      HitWild_157: 778643523341333174
+      HitWild_158: -4059049870300692730
+      HitWild_159: -2136948266833603180
+      HitWild_16: -7346228972013084313
+      HitWild_160: -586815657270540165
+      HitWild_161: 398213210042275398
+      HitWild_162: 5048543445193688262
+      HitWild_163: -7297870197465737324
+      HitWild_164: 812832955717417652
+      HitWild_165: 5984999341116020382
+      HitWild_166: 9084977491619325677
+      HitWild_167: 6779035519671736469
+      HitWild_168: -7847166543528475614
+      HitWild_169: -1877655801525228973
+      HitWild_17: 4602500622315597476
+      HitWild_170: 740759517182786474
+      HitWild_171: -3437252910495518632
+      HitWild_172: -7165584126474382378
+      HitWild_173: -8733032892329335222
+      HitWild_174: 4576138114392071917
+      HitWild_175: -5117602520995331550
+      HitWild_176: 8764324068854425328
+      HitWild_177: 2636302945388078799
+      HitWild_178: 3383007069115617844
+      HitWild_179: 7512695911286262059
+      HitWild_18: -8955728635245656733
+      HitWild_180: 6142553085685362144
+      HitWild_181: 7182907742242313741
+      HitWild_182: 6000610099377439624
+      HitWild_183: -9046905613758570840
+      HitWild_184: -2615844860098896359
+      HitWild_185: 2018932725948871214
+      HitWild_186: -4307420971011431564
+      HitWild_187: 2100663749229976428
+      HitWild_188: 4654649116080010239
+      HitWild_189: -8014593195089889076
+      HitWild_19: -3320408479561088669
+      HitWild_190: -4181296654507577712
+      HitWild_191: -5022224662214011574
+      HitWild_192: 8061864993254330399
+      HitWild_193: 13244637870595414
+      HitWild_194: 8145219439901132588
+      HitWild_195: -573647833239023760
+      HitWild_196: -4936206176075545156
+      HitWild_197: 838222819362550520
+      HitWild_198: -1625675487766437728
+      HitWild_199: -5584347602324267959
+      HitWild_2: -6343319803633060227
+      HitWild_20: 2175791235315848034
+      HitWild_200: 2431450943500838917
+      HitWild_201: 8703281855238583667
+      HitWild_202: 4407456455284278464
+      HitWild_203: -1097371083133891407
+      HitWild_204: -5596667068570996766
+      HitWild_205: -4914268569579716244
+      HitWild_206: -2920203777541532864
+      HitWild_207: -863410694842671292
+      HitWild_208: 8026629517095271443
+      HitWild_209: 3813778604161850867
+      HitWild_21: 6891484186399324458
+      HitWild_210: -8238080356247123715
+      HitWild_211: -3340428466994045822
+      HitWild_212: 4383566010201406135
+      HitWild_213: -4984478076611082213
+      HitWild_214: 1109847768022828398
+      HitWild_215: 4759490255002340787
+      HitWild_216: -868083199732205959
+      HitWild_217: -8710183229916548808
+      HitWild_218: 6819037593282322920
+      HitWild_219: 3662883716465356115
+      HitWild_22: -8980390921557863765
+      HitWild_220: 6034994822796635700
+      HitWild_221: -6023891732442312619
+      HitWild_222: 2950203315122088781
+      HitWild_223: -7497456265903502360
+      HitWild_224: 3681971611732418337
+      HitWild_225: -3347498561280615496
+      HitWild_226: 6769187289348009019
+      HitWild_227: -5785541847113062302
+      HitWild_228: -2373517373433276110
+      HitWild_229: 8812634458918991594
+      HitWild_23: -6260008486775716933
+      HitWild_230: 6404840642275654160
+      HitWild_231: 3148725996536731950
+      HitWild_232: -2882393216656989288
+      HitWild_233: 5825331971701807741
+      HitWild_234: -7606419579346607887
+      HitWild_235: -8875468927448426183
+      HitWild_236: 8653220968268434497
+      HitWild_237: 6024632454215863737
+      HitWild_238: -1405705515471551497
+      HitWild_239: -1082351114715084468
+      HitWild_24: 8383971290925387292
+      HitWild_240: 1656424822399236107
+      HitWild_241: -3232463691523378330
+      HitWild_242: 5058615039148254185
+      HitWild_243: 6176871998163803309
+      HitWild_244: -6538415871754097353
+      HitWild_245: -2955990732359520692
+      HitWild_246: 110724014333674156
+      HitWild_247: -5860154025796152397
+      HitWild_248: 6176014191694387180
+      HitWild_249: 7943785915851340383
+      HitWild_25: 6062912156323006923
+      HitWild_250: -7463142089162349372
+      HitWild_251: -1114485728913387806
+      HitWild_252: 3142697285935759811
+      HitWild_253: -65058925805337515
+      HitWild_254: 1997404771883548578
+      HitWild_255: -7863466153949165005
+      HitWild_256: -3639523343819506138
+      HitWild_257: -1043614923082196875
+      HitWild_258: -7090230675922339617
+      HitWild_259: 6543369215270111126
+      HitWild_26: -1391700749272038200
+      HitWild_260: -4489636327786127448
+      HitWild_261: 7812941829918167793
+      HitWild_262: 7201054667622654483
+      HitWild_263: 6349698810163474202
+      HitWild_264: -8123045410020683486
+      HitWild_265: -7337326074087070769
+      HitWild_266: -5420142483596940458
+      HitWild_267: -6384731277096487037
+      HitWild_268: -2995981502202359843
+      HitWild_269: 2743119285257979758
+      HitWild_27: -1725872685439955077
+      HitWild_270: 6509544335647444465
+      HitWild_271: 6882645601469631698
+      HitWild_272: -290273342172672955
+      HitWild_273: -3454942448440674021
+      HitWild_274: 9124529290814485583
+      HitWild_275: -5824995126169182346
+      HitWild_276: -2762562907347705532
+      HitWild_277: -1614850780382206080
+      HitWild_278: -8925925244995276065
+      HitWild_279: 4117298809312016147
+      HitWild_28: -7667213393041292778
+      HitWild_280: 8930536621795030988
+      HitWild_281: 3829919814314064056
+      HitWild_282: -782257341708163966
+      HitWild_283: 897671046036211940
+      HitWild_284: -7968983755257143085
+      HitWild_285: 8876101355918485395
+      HitWild_286: 9140791972730468691
+      HitWild_287: -5870379587529245916
+      HitWild_288: -5752924203499750096
+      HitWild_289: 3443207753538659868
+      HitWild_29: -8148875706801348663
+      HitWild_290: 3233224038085027246
+      HitWild_291: 5065699951361036928
+      HitWild_292: -7534452699059281113
+      HitWild_293: 3404901816535894855
+      HitWild_294: 4117597681190048726
+      HitWild_295: 6574725012229326587
+      HitWild_296: -2800624438569129389
+      HitWild_297: -1703527628466078797
+      HitWild_298: -6854884026651633606
+      HitWild_3: 517549852245832920
+      HitWild_30: -4114598240956677242
+      HitWild_31: -4589292864353596854
+      HitWild_32: 1917324215847361242
+      HitWild_33: -2544768310508147666
+      HitWild_34: 6802943798035734972
+      HitWild_35: 9020496809131345504
+      HitWild_36: -4162213304157839753
+      HitWild_37: 4597176188422186976
+      HitWild_38: -8873830815338291469
+      HitWild_39: 757315409421102239
+      HitWild_4: -8798456797830391002
+      HitWild_40: -7489553372342193969
+      HitWild_41: -8290953150749988321
+      HitWild_42: 2486225940459165088
+      HitWild_43: -5109326464555184489
+      HitWild_44: 5843873633032082583
+      HitWild_45: 6530855828792409605
+      HitWild_46: -3861040112103426052
+      HitWild_47: -8749602949109507122
+      HitWild_48: 390554313808709188
+      HitWild_49: -8590001605938493149
+      HitWild_5: 3052903412243141816
+      HitWild_50: -3947987495414765941
+      HitWild_51: -9196727019452571423
+      HitWild_52: -325133201544409041
+      HitWild_53: -2021089014507800976
+      HitWild_54: -1901999847395142177
+      HitWild_55: -1581161530080579244
+      HitWild_56: 3254579584576357062
+      HitWild_57: -5241595807845858890
+      HitWild_58: -3432948891736497438
+      HitWild_59: -6051754615633575200
+      HitWild_6: 2394338054751293003
+      HitWild_60: 2192720365680187179
+      HitWild_61: -380362754571082126
+      HitWild_62: 2551783931500192877
+      HitWild_63: -8696324814843177649
+      HitWild_64: 6894393569135268211
+      HitWild_65: -4011703382292821754
+      HitWild_66: -8949316091790734214
+      HitWild_67: 3688321168004077709
+      HitWild_68: -4536454537059467396
+      HitWild_69: 3978625906666642330
+      HitWild_7: -1773230791740529239
+      HitWild_70: -9155529088460000319
+      HitWild_71: -5883001570414944734
+      HitWild_72: -3245769661819088666
+      HitWild_73: -4355497258565321341
+      HitWild_74: -3640710741723141265
+      HitWild_75: 985303430197015454
+      HitWild_76: 1393359114904779879
+      HitWild_77: -3981161000155595969
+      HitWild_78: 351337419584847991
+      HitWild_79: -4556081259792623191
+      HitWild_8: -5234924048154316609
+      HitWild_80: 9082387057412463156
+      HitWild_81: 2618768194446068362
+      HitWild_82: -8043827671693221296
+      HitWild_83: -612624284914683364
+      HitWild_84: -4797210199252048684
+      HitWild_85: -3601685995777821611
+      HitWild_86: -2176590695586040817
+      HitWild_87: 6189997403054140356
+      HitWild_88: 5801070132217710945
+      HitWild_89: 1224841570047324499
+      HitWild_9: -368400297134147440
+      HitWild_90: -2428220573455658156
+      HitWild_91: 7263687967509959877
+      HitWild_92: -3572337825497763802
+      HitWild_93: -7321586474867469003
+      HitWild_94: -742326326880873225
+      HitWild_95: -9046767388575436682
+      HitWild_96: 5481091797238977275
+      HitWild_97: 5016508019360092897
+      HitWild_98: 5087520907538967449
+      HitWild_99: -1145091503057276620
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

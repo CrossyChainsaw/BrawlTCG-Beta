@@ -129,6 +129,8 @@ namespace BrawlTCG.UnityApp
                 return;
             }
             _dragging = true;
+            var flight = GetComponent<CardFlight>();
+            if (flight != null) flight.Complete();
             _originalParent = transform.parent;
             _originalSibling = transform.GetSiblingIndex();
             _originalLocalPosition = transform.localPosition;

@@ -1,0 +1,2706 @@
+fileFormatVersion: 2
+guid: 40c8b149ec9ab7f4685b3200aa1a37e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8878816866411505106
+    second: HitBig_0
+  - first:
+      213: -7137214067385452324
+    second: HitBig_1
+  - first:
+      213: 2922418432749317231
+    second: HitBig_2
+  - first:
+      213: 1164198699576244987
+    second: HitBig_3
+  - first:
+      213: -1206647718866749449
+    second: HitBig_4
+  - first:
+      213: 4358750091273980257
+    second: HitBig_5
+  - first:
+      213: -4045477598199197085
+    second: HitBig_6
+  - first:
+      213: -958650440498658005
+    second: HitBig_7
+  - first:
+      213: 7838933282535287904
+    second: HitBig_8
+  - first:
+      213: -365485895055108702
+    second: HitBig_9
+  - first:
+      213: -7560522600093788629
+    second: HitBig_10
+  - first:
+      213: 568943513940915416
+    second: HitBig_11
+  - first:
+      213: 8361653516449427176
+    second: HitBig_12
+  - first:
+      213: -6867808345627614224
+    second: HitBig_13
+  - first:
+      213: -404354647453509820
+    second: HitBig_14
+  - first:
+      213: 6801716816580462295
+    second: HitBig_15
+  - first:
+      213: 2917044365648112799
+    second: HitBig_16
+  - first:
+      213: -47657131004456605
+    second: HitBig_17
+  - first:
+      213: 4610737000539107922
+    second: HitBig_18
+  - first:
+      213: 4328717399239355126
+    second: HitBig_19
+  - first:
+      213: -6161006826095798529
+    second: HitBig_20
+  - first:
+      213: 6457843976240774107
+    second: HitBig_21
+  - first:
+      213: 7223014710253796847
+    second: HitBig_22
+  - first:
+      213: -1413895126499253803
+    second: HitBig_23
+  - first:
+      213: 2556585224925925325
+    second: HitBig_24
+  - first:
+      213: 8655107288977519517
+    second: HitBig_25
+  - first:
+      213: -3965705101912447530
+    second: HitBig_26
+  - first:
+      213: 147345685969214103
+    second: HitBig_27
+  - first:
+      213: 147921863562889697
+    second: HitBig_28
+  - first:
+      213: 8208315082611465660
+    second: HitBig_29
+  - first:
+      213: 4759704543780352348
+    second: HitBig_30
+  - first:
+      213: 6387690898009535950
+    second: HitBig_31
+  - first:
+      213: -2192188495976968979
+    second: HitBig_32
+  - first:
+      213: -6020409540794540193
+    second: HitBig_33
+  - first:
+      213: -3321582063849589684
+    second: HitBig_34
+  - first:
+      213: 5207439642325507665
+    second: HitBig_35
+  - first:
+      213: -8619646619227238502
+    second: HitBig_36
+  - first:
+      213: -4765480153071723780
+    second: HitBig_37
+  - first:
+      213: 1076235486850062033
+    second: HitBig_38
+  - first:
+      213: 371793199853533259
+    second: HitBig_39
+  - first:
+      213: -400036454345303361
+    second: HitBig_40
+  - first:
+      213: 7531530009889141963
+    second: HitBig_41
+  - first:
+      213: -5569542120277607126
+    second: HitBig_42
+  - first:
+      213: -1590831577385923371
+    second: HitBig_43
+  - first:
+      213: 8334652582039583051
+    second: HitBig_44
+  - first:
+      213: 2734138741487577903
+    second: HitBig_45
+  - first:
+      213: -8853696932339400036
+    second: HitBig_46
+  - first:
+      213: -1841554907201631399
+    second: HitBig_47
+  - first:
+      213: -340296330999159635
+    second: HitBig_48
+  - first:
+      213: 393475196900652031
+    second: HitBig_49
+  - first:
+      213: -7351378747147860908
+    second: HitBig_50
+  - first:
+      213: -3000452103700982549
+    second: HitBig_51
+  - first:
+      213: 6199974966206646969
+    second: HitBig_52
+  - first:
+      213: 6357880152460799157
+    second: HitBig_53
+  - first:
+      213: -8431092966732723584
+    second: HitBig_54
+  - first:
+      213: 6982116978205047358
+    second: HitBig_55
+  - first:
+      213: -3248794410687946424
+    second: HitBig_56
+  - first:
+      213: -2797065891532731224
+    second: HitBig_57
+  - first:
+      213: -5558016077065459962
+    second: HitBig_58
+  - first:
+      213: 6608027367229455911
+    second: HitBig_59
+  - first:
+      213: -884324232421164648
+    second: HitBig_60
+  - first:
+      213: 6060337971873961387
+    second: HitBig_61
+  - first:
+      213: 9098573562161056703
+    second: HitBig_62
+  - first:
+      213: 8110502703066480324
+    second: HitBig_63
+  - first:
+      213: -4042897731411453060
+    second: HitBig_64
+  - first:
+      213: -3059178827097747605
+    second: HitBig_65
+  - first:
+      213: -3881912167147793765
+    second: HitBig_66
+  - first:
+      213: 8676092805588411041
+    second: HitBig_67
+  - first:
+      213: -1426303822353036679
+    second: HitBig_68
+  - first:
+      213: -5646528528786817884
+    second: HitBig_69
+  - first:
+      213: 2977907359164379044
+    second: HitBig_70
+  - first:
+      213: -8247416299226032138
+    second: HitBig_71
+  - first:
+      213: 1163330920789391333
+    second: HitBig_72
+  - first:
+      213: -2590473550834216210
+    second: HitBig_73
+  - first:
+      213: 5936068007830531652
+    second: HitBig_74
+  - first:
+      213: -4558315359334482737
+    second: HitBig_75
+  - first:
+      213: 7068136111512235065
+    second: HitBig_76
+  - first:
+      213: 5253843154275997326
+    second: HitBig_77
+  - first:
+      213: -981367380131577367
+    second: HitBig_78
+  - first:
+      213: -4605061468232902635
+    second: HitBig_79
+  - first:
+      213: 7537222991863559625
+    second: HitBig_80
+  - first:
+      213: 6845310058209925980
+    second: HitBig_81
+  - first:
+      213: -645306853387273504
+    second: HitBig_82
+  - first:
+      213: 1935589713006966147
+    second: HitBig_83
+  - first:
+      213: 997584508798177696
+    second: HitBig_84
+  - first:
+      213: 5077955364495309864
+    second: HitBig_85
+  - first:
+      213: 8131012896024026921
+    second: HitBig_86
+  - first:
+      213: -8070629940865303298
+    second: HitBig_87
+  - first:
+      213: 5881780940920414196
+    second: HitBig_88
+  - first:
+      213: 7916935505190013540
+    second: HitBig_89
+  - first:
+      213: 7866207825258970887
+    second: HitBig_90
+  - first:
+      213: -7968610994251173490
+    second: HitBig_91
+  - first:
+      213: 6734714194697753468
+    second: HitBig_92
+  - first:
+      213: 3294644967503115199
+    second: HitBig_93
+  - first:
+      213: 8644736348956060755
+    second: HitBig_94
+  - first:
+      213: -6227054830923026
+    second: HitBig_95
+  - first:
+      213: -4592647655088192699
+    second: HitBig_96
+  - first:
+      213: -6529104773568952581
+    second: HitBig_97
+  - first:
+      213: -8321372664201578595
+    second: HitBig_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HitBig_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 562
+        width: 147
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a9bcb1a1b18c480800000000000000
+      internalID: -8878816866411505106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 553
+        width: 167
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8b19bce9583fc90800000000000000
+      internalID: -7137214067385452324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 585
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ca319b4148e8820800000000000000
+      internalID: 2922418432749317231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_3
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 528
+        width: 212
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfab6309c80182010800000000000000
+      internalID: 1164198699576244987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 585
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f779e3fa40214fe0800000000000000
+      internalID: -1206647718866749449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_5
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 528
+        width: 212
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16946174d146d7c30800000000000000
+      internalID: 4358750091273980257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 439
+        width: 23
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362598cee839bd7c0800000000000000
+      internalID: -4045477598199197085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 422
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b254e46e08032b2f0800000000000000
+      internalID: -958650440498658005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_8
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 439
+        width: 23
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ca08bb94c79cc60800000000000000
+      internalID: 7838933282535287904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_9
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 422
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a513dec3888deaf0800000000000000
+      internalID: -365485895055108702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_10
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 484
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26d819a0c0a31790800000000000000
+      internalID: -7560522600093788629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_11
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 472
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4f5bd8c1b45e700800000000000000
+      internalID: 568943513940915416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_12
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 464
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee2dde329f8a0470800000000000000
+      internalID: 8361653516449427176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_13
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 484
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3276562b4a0b0a0800000000000000
+      internalID: -6867808345627614224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_14
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 472
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447514b2791736af0800000000000000
+      internalID: -404354647453509820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_15
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 464
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6441b586d846e50800000000000000
+      internalID: 6801716816580462295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_16
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 421
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ca288356c6b7820800000000000000
+      internalID: 2917044365648112799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_17
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 450
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36117738710b65ff0800000000000000
+      internalID: -47657131004456605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_18
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 428
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25232ed8fd0acff30800000000000000
+      internalID: 4610737000539107922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_19
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 404
+        width: 109
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fae6b24a81b21c30800000000000000
+      internalID: 4328717399239355126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_20
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 421
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff69dcf1fe4bf7aa0800000000000000
+      internalID: -6161006826095798529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_21
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 450
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb3aba91eede9950800000000000000
+      internalID: 6457843976240774107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_22
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 428
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed391c1c9d4d3460800000000000000
+      internalID: 7223014710253796847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_23
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 404
+        width: 109
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d12b53afd5d06ce0800000000000000
+      internalID: -1413895126499253803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_24
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 442
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfc8b977b0da7320800000000000000
+      internalID: 2556585224925925325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_25
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 442
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93366cf83e1d1870800000000000000
+      internalID: 8655107288977519517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_26
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 442
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5ed84983cf6f8c0800000000000000
+      internalID: -3965705101912447530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_27
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 442
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a9167ee1a7b0200800000000000000
+      internalID: 147345685969214103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_28
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 427
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e90e24b6268d0200800000000000000
+      internalID: 147921863562889697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_29
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 427
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd998ff31bc9e170800000000000000
+      internalID: 8208315082611465660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_30
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 376
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5137d7801edd0240800000000000000
+      internalID: 4759704543780352348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_31
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 364
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5bade3703a5a850800000000000000
+      internalID: 6387690898009535950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_32
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 386
+        width: 79
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec48987d28c391e0800000000000000
+      internalID: -2192188495976968979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_33
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 376
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f919e8b65337ca0800000000000000
+      internalID: -6020409540794540193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_34
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 364
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44bfef16be57e1d0800000000000000
+      internalID: -3321582063849589684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_35
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 386
+        width: 79
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e5916b3ca844840800000000000000
+      internalID: 5207439642325507665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_36
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 383
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f4093911dd06880800000000000000
+      internalID: -8619646619227238502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_37
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 370
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa5cf3ac0d9dddb0800000000000000
+      internalID: -4765480153071723780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 383
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d61e50297e8fee00800000000000000
+      internalID: 1076235486850062033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_39
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 370
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48fc2702ffd82500800000000000000
+      internalID: 371793199853533259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_40
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 377
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba9a89d6f8c27af0800000000000000
+      internalID: -400036454345303361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_41
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 377
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4f2a6e3ae558860800000000000000
+      internalID: 7531530009889141963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 315
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2df64743f205b2b0800000000000000
+      internalID: -5569542120277607126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_43
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 343
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc0074eb1b3ce9e0800000000000000
+      internalID: -1590831577385923371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_44
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 343
+        width: 82
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49f2ce4d52aaa370800000000000000
+      internalID: 8334652582039583051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_45
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 315
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b200503bc91f520800000000000000
+      internalID: 2734138741487577903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_46
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 343
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92c1f68c89512580800000000000000
+      internalID: -8853696932339400036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_47
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 343
+        width: 82
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b8ed1a19b7176e0800000000000000
+      internalID: -1841554907201631399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_48
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 325
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da42d683a46074bf0800000000000000
+      internalID: -340296330999159635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_49
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 354
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3b03b5b97e57500800000000000000
+      internalID: 393475196900652031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_50
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 343
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45445ee8af7aaf990800000000000000
+      internalID: -7351378747147860908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_51
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 325
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4545175b04c56d0800000000000000
+      internalID: -3000452103700982549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_52
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 354
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bacf05026cba0650800000000000000
+      internalID: 6199974966206646969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_53
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 343
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcaeeb205abb3850800000000000000
+      internalID: 6357880152460799157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_54
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 289
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a0a99dd9dbefa80800000000000000
+      internalID: -8431092966732723584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_55
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 258
+        width: 27
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ab22a166675e060800000000000000
+      internalID: 6982116978205047358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_56
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 266
+        width: 41
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841aba242b6f9e2d0800000000000000
+      internalID: -3248794410687946424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_57
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 325
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac84d12463de29d0800000000000000
+      internalID: -2797065891532731224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_58
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 289
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6076a9653d5fdd2b0800000000000000
+      internalID: -5558016077065459962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_59
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 258
+        width: 27
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e75c131ed64bb50800000000000000
+      internalID: 6608027367229455911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_60
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 266
+        width: 41
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8993444cbcf3ab3f0800000000000000
+      internalID: -884324232421164648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_61
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 325
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba5db50c645aa1450800000000000000
+      internalID: 6060337971873961387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_62
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 313
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbce5fc270a44e70800000000000000
+      internalID: 9098573562161056703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_63
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 313
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce7f16bc3b4e8070800000000000000
+      internalID: 8110502703066480324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_64
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 266
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bdcf7feedb4e7c0800000000000000
+      internalID: -4042897731411453060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_65
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 287
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f4172a01d9b85d0800000000000000
+      internalID: -3059178827097747605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_66
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 266
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9293e3837da02ac0800000000000000
+      internalID: -3881912167147793765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_67
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 287
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a26b63507ca76870800000000000000
+      internalID: 8676092805588411041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_68
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 285
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a8ddefa30c43ce0800000000000000
+      internalID: -1426303822353036679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_69
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 287
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac7d8b383083a1b0800000000000000
+      internalID: -5646528528786817884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_70
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 292
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afa30d27f6a35920800000000000000
+      internalID: 2977907359164379044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_71
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 285
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f79dd1929a4b8d80800000000000000
+      internalID: -8247416299226032138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_72
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 287
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e731e11f4bf42010800000000000000
+      internalID: 1163330920789391333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_73
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 292
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee25b7ac70acc0cd0800000000000000
+      internalID: -2590473550834216210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_74
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 255
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44eac490766216250800000000000000
+      internalID: 5936068007830531652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_75
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 263
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc39a8e45c9db0c0800000000000000
+      internalID: -4558315359334482737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_76
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 255
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c2cc64850171260800000000000000
+      internalID: 7068136111512235065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_77
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 263
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e861d34438669e840800000000000000
+      internalID: 5253843154275997326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_78
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 230
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e10a19319b7162f0800000000000000
+      internalID: -981367380131577367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_79
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 218
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51893294ef88710c0800000000000000
+      internalID: -4605061468232902635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_80
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 210
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c53fee8068999860800000000000000
+      internalID: 7537222991863559625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_81
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 188
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bd20dda3d6ffe50800000000000000
+      internalID: 6845310058209925980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_82
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 188
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaf9b8f5d86b07f0800000000000000
+      internalID: -645306853387273504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_83
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 174
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3853eaab6989cda10800000000000000
+      internalID: 1935589713006966147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_84
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 126
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a1195843d128dd00800000000000000
+      internalID: 997584508798177696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_85
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 116
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c3806ff75887640800000000000000
+      internalID: 5077955364495309864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_86
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 126
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92fd1a3262927d070800000000000000
+      internalID: 8131012896024026921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_87
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 116
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc771d24dc5fff80800000000000000
+      internalID: -8070629940865303298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_88
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 100
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff593e4a9840a150800000000000000
+      internalID: 5881780940920414196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_89
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 89
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a478075ea9edd60800000000000000
+      internalID: 7916935505190013540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f75f117526a2d60800000000000000
+      internalID: 7866207825258970887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_91
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 67
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81f26e258ec96190800000000000000
+      internalID: -7968610994251173490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_92
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 68
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c739db6c0e2867d50800000000000000
+      internalID: 6734714194697753468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_93
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 68
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb33d05642ee8bd20800000000000000
+      internalID: 3294644967503115199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_94
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 30
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35cee6858e548f770800000000000000
+      internalID: 8644736348956060755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_95
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 33
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee25ec0d680e9eff0800000000000000
+      internalID: -6227054830923026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_96
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 37
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54300f36a43a340c0800000000000000
+      internalID: -4592647655088192699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_97
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf68d161dc5f365a0800000000000000
+      internalID: -6529104773568952581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitBig_98
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 9
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d977e9286ab848c80800000000000000
+      internalID: -8321372664201578595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HitBig_0: -8878816866411505106
+      HitBig_1: -7137214067385452324
+      HitBig_10: -7560522600093788629
+      HitBig_11: 568943513940915416
+      HitBig_12: 8361653516449427176
+      HitBig_13: -6867808345627614224
+      HitBig_14: -404354647453509820
+      HitBig_15: 6801716816580462295
+      HitBig_16: 2917044365648112799
+      HitBig_17: -47657131004456605
+      HitBig_18: 4610737000539107922
+      HitBig_19: 4328717399239355126
+      HitBig_2: 2922418432749317231
+      HitBig_20: -6161006826095798529
+      HitBig_21: 6457843976240774107
+      HitBig_22: 7223014710253796847
+      HitBig_23: -1413895126499253803
+      HitBig_24: 2556585224925925325
+      HitBig_25: 8655107288977519517
+      HitBig_26: -3965705101912447530
+      HitBig_27: 147345685969214103
+      HitBig_28: 147921863562889697
+      HitBig_29: 8208315082611465660
+      HitBig_3: 1164198699576244987
+      HitBig_30: 4759704543780352348
+      HitBig_31: 6387690898009535950
+      HitBig_32: -2192188495976968979
+      HitBig_33: -6020409540794540193
+      HitBig_34: -3321582063849589684
+      HitBig_35: 5207439642325507665
+      HitBig_36: -8619646619227238502
+      HitBig_37: -4765480153071723780
+      HitBig_38: 1076235486850062033
+      HitBig_39: 371793199853533259
+      HitBig_4: -1206647718866749449
+      HitBig_40: -400036454345303361
+      HitBig_41: 7531530009889141963
+      HitBig_42: -5569542120277607126
+      HitBig_43: -1590831577385923371
+      HitBig_44: 8334652582039583051
+      HitBig_45: 2734138741487577903
+      HitBig_46: -8853696932339400036
+      HitBig_47: -1841554907201631399
+      HitBig_48: -340296330999159635
+      HitBig_49: 393475196900652031
+      HitBig_5: 4358750091273980257
+      HitBig_50: -7351378747147860908
+      HitBig_51: -3000452103700982549
+      HitBig_52: 6199974966206646969
+      HitBig_53: 6357880152460799157
+      HitBig_54: -8431092966732723584
+      HitBig_55: 6982116978205047358
+      HitBig_56: -3248794410687946424
+      HitBig_57: -2797065891532731224
+      HitBig_58: -5558016077065459962
+      HitBig_59: 6608027367229455911
+      HitBig_6: -4045477598199197085
+      HitBig_60: -884324232421164648
+      HitBig_61: 6060337971873961387
+      HitBig_62: 9098573562161056703
+      HitBig_63: 8110502703066480324
+      HitBig_64: -4042897731411453060
+      HitBig_65: -3059178827097747605
+      HitBig_66: -3881912167147793765
+      HitBig_67: 8676092805588411041
+      HitBig_68: -1426303822353036679
+      HitBig_69: -5646528528786817884
+      HitBig_7: -958650440498658005
+      HitBig_70: 2977907359164379044
+      HitBig_71: -8247416299226032138
+      HitBig_72: 1163330920789391333
+      HitBig_73: -2590473550834216210
+      HitBig_74: 5936068007830531652
+      HitBig_75: -4558315359334482737
+      HitBig_76: 7068136111512235065
+      HitBig_77: 5253843154275997326
+      HitBig_78: -981367380131577367
+      HitBig_79: -4605061468232902635
+      HitBig_8: 7838933282535287904
+      HitBig_80: 7537222991863559625
+      HitBig_81: 6845310058209925980
+      HitBig_82: -645306853387273504
+      HitBig_83: 1935589713006966147
+      HitBig_84: 997584508798177696
+      HitBig_85: 5077955364495309864
+      HitBig_86: 8131012896024026921
+      HitBig_87: -8070629940865303298
+      HitBig_88: 5881780940920414196
+      HitBig_89: 7916935505190013540
+      HitBig_9: -365485895055108702
+      HitBig_90: 7866207825258970887
+      HitBig_91: -7968610994251173490
+      HitBig_92: 6734714194697753468
+      HitBig_93: 3294644967503115199
+      HitBig_94: 8644736348956060755
+      HitBig_95: -6227054830923026
+      HitBig_96: -4592647655088192699
+      HitBig_97: -6529104773568952581
+      HitBig_98: -8321372664201578595
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

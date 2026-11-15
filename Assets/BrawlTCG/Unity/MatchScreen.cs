@@ -10,7 +10,7 @@ using UnityEngine.UI;
 namespace BrawlTCG.UnityApp
 {
     /// <summary>The match board (WinForms FRM_Game + UIManager + DetailedCardControl). All rules live in <see cref="Game"/>.</summary>
-    public sealed class MatchScreen : MonoBehaviour
+    public sealed partial class MatchScreen : MonoBehaviour
     {
         // ───────────── Layout (1920x1080 design space) ─────────────
         static readonly Rect TopPanel = new Rect(24, 20, 400, 176);
@@ -69,6 +69,9 @@ namespace BrawlTCG.UnityApp
             UI.Clicks(background.gameObject, e => OnBackgroundClicked());
             _board = UI.Stretch(UI.Rect("Board", transform));
             _cards = UI.Stretch(UI.Rect("Cards", transform));
+            _fx = UI.Stretch(UI.Rect("Fx", transform));
+            _top = UI.Stretch(UI.Rect("FxTop", transform));
+            _shaker = gameObject.AddComponent<Shaker>();
             _detail = UI.Stretch(UI.Rect("Detail", transform));
             _drag = UI.Stretch(UI.Rect("Drag", transform));
             _overlay = UI.Stretch(UI.Rect("Overlay", transform));
@@ -80,6 +83,7 @@ namespace BrawlTCG.UnityApp
             _viewer = _hotSeat ? _game.ActiveIndex : _localIndex;
             if (_hotSeat) ShowHandoff();
             Refresh();
+            if (!_hotSeat) TurnIntro(true);
         }
 
         void BuildBackdrop()
@@ -176,6 +180,7 @@ namespace BrawlTCG.UnityApp
                     Desync($"Invalid message from the other player: {line}");
                     return;
                 }
+                Snapshot before = TakeSnapshot(cmd);
                 string error = _game.TryApply(cmd);
                 if (error != null)
                 {
@@ -186,6 +191,7 @@ namespace BrawlTCG.UnityApp
                 Refresh();
                 RefreshDetail();
                 if (_game.IsOver) ShowGameOver();
+                Animate(before);
             }
             if (_net.IsClosed && !_net.HasPending && !_ended)
                 EndMatch("Connection lost", "The other player disconnected.");
@@ -201,6 +207,7 @@ namespace BrawlTCG.UnityApp
                 _app.Toast(error);
                 return false;
             }
+            Snapshot before = TakeSnapshot(cmd);
             _game.TryApply(cmd);
             _net?.Send(Protocol.CommandPrefix + cmd.Serialize());
 
@@ -213,6 +220,7 @@ namespace BrawlTCG.UnityApp
             }
             Refresh();
             if (_game.IsOver) ShowGameOver();
+            Animate(before);
             return true;
         }
 
@@ -231,6 +239,8 @@ namespace BrawlTCG.UnityApp
             _zones.Clear();
             _zoneOutlines.Clear();
             _legendViews.Clear();
+            _layout.Clear();
+            _views.Clear();
 
             DrawPlayerPanel(Top, TopPanel, false);
             DrawPlayerPanel(Bottom, BottomPanel, true);
@@ -372,7 +382,11 @@ namespace BrawlTCG.UnityApp
 
                 if (Targeting && IsValidAttackTarget(p, legend)) view.SetHighlight(true);
                 else if (legend == _targetAttacker) view.SetGlow(Color.white, 0.6f);
-                else if (!Targeting && CanAct && p == _game.ActivePlayer && CanUseAnyAttack(legend)) view.SetGlow(ReadyGreen, 0.8f);
+                else if (!Targeting && CanAct && p == _game.ActivePlayer && CanUseAnyAttack(legend))
+                {
+                    view.SetGlow(ReadyGreen, 0.8f);
+                    view.gameObject.AddComponent<GlowPulse>();
+                }
             }
         }
 
@@ -563,7 +577,11 @@ namespace BrawlTCG.UnityApp
                 v.DragStarted = OnDragStarted;
                 v.DragEnded = OnDragEnded;
                 v.gameObject.AddComponent<HandHover>();
-                if (showPlayable && IsPlayable(p, i)) v.SetGlow(PlayableGlow, 0.5f);
+                if (showPlayable && IsPlayable(p, i))
+                {
+                    v.SetGlow(PlayableGlow, 0.5f);
+                    v.gameObject.AddComponent<GlowPulse>();
+                }
             }
         }
 
@@ -611,6 +629,7 @@ namespace BrawlTCG.UnityApp
             v.Index = index;
             v.Clicked = OnCardClicked;
             v.DragLayer = _drag;
+            Register(v, card, x, y, scale, zone, index, owner);
             return v;
         }
 
@@ -667,6 +686,7 @@ namespace BrawlTCG.UnityApp
         {
             _targetAttacker = null;
             _targetAttackIndex = -1;
+            StopTargetLine();
         }
 
         // ───────────────────────────── Drag & drop (WinForms TryToSnapCard) ─────────────────────────────
@@ -1051,6 +1071,7 @@ namespace BrawlTCG.UnityApp
                 _targetOwnSide = mode == AttackMode.OwnLegend;
                 CloseDetail();
                 Refresh();
+                StartTargetLine();
                 return;
             }
             Submit(GameCommand.Attack(legend.Owner.Index, legend.Owner.PlayingField.IndexOf(legend), attackIndex, -1));
@@ -1093,6 +1114,7 @@ namespace BrawlTCG.UnityApp
                 _handoffPending = false;
                 CloseOverlay();
                 Refresh();
+                TurnIntro(true);
             }, 30);
         }
 
@@ -1103,11 +1125,16 @@ namespace BrawlTCG.UnityApp
             CancelTargeting();
             Player winner = _game.Winner;
             Player loser = winner != null ? _game.GetOpponent(winner) : null;
-            var dim = ShowOverlay(0.75f);
-            bool iWon = !_hotSeat && winner != null && winner.Index == _localIndex;
-            string title = _hotSeat ? $"{winner?.Name.ToUpperInvariant()} WINS" : iWon ? "VICTORY" : "DEFEAT";
-            var box = Dialog(dim, title, $"{loser?.Name} has been defeated after {_game.TurnNumber} turns.", "MATCH OVER");
-            Theme.Cta(box, "BACK TO MENU", 220, 296, 360, 76, LeaveMatch, 30);
+            // Let the final blow and the K.O. play out before the result appears.
+            GameOverFx(winner, loser, 0.5f);
+            After(loser != null ? 2.8f : 0, () =>
+            {
+                var dim = ShowOverlay(0.75f);
+                bool iWon = !_hotSeat && winner != null && winner.Index == _localIndex;
+                string title = _hotSeat ? $"{winner?.Name.ToUpperInvariant()} WINS" : iWon ? "VICTORY" : "DEFEAT";
+                var box = Dialog(dim, title, $"{loser?.Name} has been defeated after {_game.TurnNumber} turns.", "MATCH OVER");
+                Theme.Cta(box, "BACK TO MENU", 220, 296, 360, 76, LeaveMatch, 30);
+            });
             Refresh();
         }
 
@@ -1160,10 +1187,11 @@ namespace BrawlTCG.UnityApp
         bool _over;
         float _t;
 
+        bool _ready;
+
         void Start()
         {
             _rt = (RectTransform)transform;
-            _base = _rt.anchoredPosition;
             _sibling = transform.GetSiblingIndex();
         }
 
@@ -1183,6 +1211,9 @@ namespace BrawlTCG.UnityApp
         void Update()
         {
             if (_rt == null || transform.parent == null || transform.parent.name == "Drag") return;
+            // Wait for a deal / slide animation to settle before taking over the position.
+            if (GetComponent<CardFlight>() != null) { _ready = false; return; }
+            if (!_ready) { _base = _rt.anchoredPosition; _ready = true; }
             _t = Mathf.MoveTowards(_t, _over ? 1 : 0, Time.unscaledDeltaTime * 9);
             float e = Theme.EaseOut(_t);
             _rt.anchoredPosition = _base + new Vector2(0, 46 * e);

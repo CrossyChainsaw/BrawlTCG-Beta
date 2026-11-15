@@ -1,0 +1,4604 @@
+fileFormatVersion: 2
+guid: a8ef9a1b271698c43a45af8aafb6fee9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5451773292926343979
+    second: KoShadow_0
+  - first:
+      213: 5545358792346945279
+    second: KoShadow_1
+  - first:
+      213: -1584471667051010270
+    second: KoShadow_2
+  - first:
+      213: -2079624587109304456
+    second: KoShadow_3
+  - first:
+      213: -1203675576740530143
+    second: KoShadow_4
+  - first:
+      213: 1966850514614775893
+    second: KoShadow_5
+  - first:
+      213: 7173601626628274958
+    second: KoShadow_6
+  - first:
+      213: 4410181926755636306
+    second: KoShadow_7
+  - first:
+      213: 5889202459244500572
+    second: KoShadow_8
+  - first:
+      213: -272440446349094355
+    second: KoShadow_9
+  - first:
+      213: 6923445830673640022
+    second: KoShadow_10
+  - first:
+      213: 7814456468571533441
+    second: KoShadow_11
+  - first:
+      213: 9078652414029638251
+    second: KoShadow_12
+  - first:
+      213: -6795548423231303097
+    second: KoShadow_13
+  - first:
+      213: 5327772769334413435
+    second: KoShadow_14
+  - first:
+      213: -6039413206261575641
+    second: KoShadow_15
+  - first:
+      213: -7310624625405672522
+    second: KoShadow_16
+  - first:
+      213: -9074889836926927365
+    second: KoShadow_17
+  - first:
+      213: -4718003370149869911
+    second: KoShadow_18
+  - first:
+      213: 8491443583720344899
+    second: KoShadow_19
+  - first:
+      213: -2057757218528208938
+    second: KoShadow_20
+  - first:
+      213: 6862346687582988478
+    second: KoShadow_21
+  - first:
+      213: -5806712479836899671
+    second: KoShadow_22
+  - first:
+      213: -6618440012836973963
+    second: KoShadow_23
+  - first:
+      213: -6381312621474651295
+    second: KoShadow_24
+  - first:
+      213: 2428144148952315706
+    second: KoShadow_25
+  - first:
+      213: 6644511340748790681
+    second: KoShadow_26
+  - first:
+      213: -8274382755406299818
+    second: KoShadow_27
+  - first:
+      213: 7400099426465357639
+    second: KoShadow_28
+  - first:
+      213: -7897706642882195426
+    second: KoShadow_29
+  - first:
+      213: -236205101170408910
+    second: KoShadow_30
+  - first:
+      213: 7935055157681078266
+    second: KoShadow_31
+  - first:
+      213: 2184973690771252021
+    second: KoShadow_32
+  - first:
+      213: 1333437065739542700
+    second: KoShadow_33
+  - first:
+      213: 5549534259336282641
+    second: KoShadow_34
+  - first:
+      213: -1699646406986868040
+    second: KoShadow_35
+  - first:
+      213: 620235941491060636
+    second: KoShadow_36
+  - first:
+      213: -3845145918424578854
+    second: KoShadow_37
+  - first:
+      213: 2741247238904060053
+    second: KoShadow_38
+  - first:
+      213: -4401617605367023933
+    second: KoShadow_39
+  - first:
+      213: -4630421188636823965
+    second: KoShadow_40
+  - first:
+      213: 5371791486318046304
+    second: KoShadow_41
+  - first:
+      213: 137028737246149216
+    second: KoShadow_42
+  - first:
+      213: -5225239556516632598
+    second: KoShadow_43
+  - first:
+      213: -1250648040037000511
+    second: KoShadow_44
+  - first:
+      213: -407229726468585297
+    second: KoShadow_45
+  - first:
+      213: 2721595052971028451
+    second: KoShadow_46
+  - first:
+      213: 152808109223427439
+    second: KoShadow_47
+  - first:
+      213: -7861705482375015665
+    second: KoShadow_48
+  - first:
+      213: -2240516598659364623
+    second: KoShadow_49
+  - first:
+      213: 2594957282675695067
+    second: KoShadow_50
+  - first:
+      213: 8089254199254154609
+    second: KoShadow_51
+  - first:
+      213: -1572789675632951162
+    second: KoShadow_52
+  - first:
+      213: 8023256835380172674
+    second: KoShadow_53
+  - first:
+      213: 6882495552992865583
+    second: KoShadow_54
+  - first:
+      213: 8354844897557481817
+    second: KoShadow_55
+  - first:
+      213: 8487883336769393904
+    second: KoShadow_56
+  - first:
+      213: 3244362458577627374
+    second: KoShadow_57
+  - first:
+      213: -8181540373229376950
+    second: KoShadow_58
+  - first:
+      213: -6404792486552867
+    second: KoShadow_59
+  - first:
+      213: -8791655704791186135
+    second: KoShadow_60
+  - first:
+      213: 8749799232173257048
+    second: KoShadow_61
+  - first:
+      213: 8153161035732436581
+    second: KoShadow_62
+  - first:
+      213: 7687645622094349327
+    second: KoShadow_63
+  - first:
+      213: 7319783173719557547
+    second: KoShadow_64
+  - first:
+      213: 2618866772152729218
+    second: KoShadow_65
+  - first:
+      213: 5389759050114783410
+    second: KoShadow_66
+  - first:
+      213: 8623111467988244587
+    second: KoShadow_67
+  - first:
+      213: 6599069016120484084
+    second: KoShadow_68
+  - first:
+      213: -3854362306797546388
+    second: KoShadow_69
+  - first:
+      213: -4221824017353532604
+    second: KoShadow_70
+  - first:
+      213: -6066182105964819399
+    second: KoShadow_71
+  - first:
+      213: -4938798745728616527
+    second: KoShadow_72
+  - first:
+      213: -2147604219060947747
+    second: KoShadow_73
+  - first:
+      213: 176710051375165148
+    second: KoShadow_74
+  - first:
+      213: -6349958528702442010
+    second: KoShadow_75
+  - first:
+      213: 8296368531531222472
+    second: KoShadow_76
+  - first:
+      213: -2236589453847401580
+    second: KoShadow_77
+  - first:
+      213: 826514825409523162
+    second: KoShadow_78
+  - first:
+      213: 8832079496563568485
+    second: KoShadow_79
+  - first:
+      213: 8128947038111736573
+    second: KoShadow_80
+  - first:
+      213: 4900989548694318670
+    second: KoShadow_81
+  - first:
+      213: 4506581932316855010
+    second: KoShadow_82
+  - first:
+      213: 2194998168159822661
+    second: KoShadow_83
+  - first:
+      213: 5043724051511636566
+    second: KoShadow_84
+  - first:
+      213: -5506018000977658508
+    second: KoShadow_85
+  - first:
+      213: -8608332123608625202
+    second: KoShadow_86
+  - first:
+      213: 5558103495826851510
+    second: KoShadow_87
+  - first:
+      213: -5558028654727033960
+    second: KoShadow_88
+  - first:
+      213: 1936966995769443830
+    second: KoShadow_89
+  - first:
+      213: -4026070838054780290
+    second: KoShadow_90
+  - first:
+      213: 3749529043711601176
+    second: KoShadow_91
+  - first:
+      213: 2012698569326279003
+    second: KoShadow_92
+  - first:
+      213: -597995866390533531
+    second: KoShadow_93
+  - first:
+      213: -525861212476817719
+    second: KoShadow_94
+  - first:
+      213: 4480376623453889918
+    second: KoShadow_95
+  - first:
+      213: 4965288517365224091
+    second: KoShadow_96
+  - first:
+      213: -3463564864408244195
+    second: KoShadow_97
+  - first:
+      213: -631627273658552708
+    second: KoShadow_98
+  - first:
+      213: -436767756063159853
+    second: KoShadow_99
+  - first:
+      213: 6546234218304698709
+    second: KoShadow_100
+  - first:
+      213: -4621029580519718338
+    second: KoShadow_101
+  - first:
+      213: 2714087198935342888
+    second: KoShadow_102
+  - first:
+      213: -1916462100844997408
+    second: KoShadow_103
+  - first:
+      213: -7250351286627772927
+    second: KoShadow_104
+  - first:
+      213: -2501274475059178094
+    second: KoShadow_105
+  - first:
+      213: -3387714407771279372
+    second: KoShadow_106
+  - first:
+      213: 7052138522015988932
+    second: KoShadow_107
+  - first:
+      213: -2752465189983345575
+    second: KoShadow_108
+  - first:
+      213: 5625899118541797483
+    second: KoShadow_109
+  - first:
+      213: 2783694960746886970
+    second: KoShadow_110
+  - first:
+      213: 2069358174323951067
+    second: KoShadow_111
+  - first:
+      213: 487605991579302774
+    second: KoShadow_112
+  - first:
+      213: 2042541583672714491
+    second: KoShadow_113
+  - first:
+      213: 6051419459258355537
+    second: KoShadow_114
+  - first:
+      213: 8033656201823231881
+    second: KoShadow_115
+  - first:
+      213: 1618504586789375944
+    second: KoShadow_116
+  - first:
+      213: 170944023699669556
+    second: KoShadow_117
+  - first:
+      213: -6604045830339298703
+    second: KoShadow_118
+  - first:
+      213: -7663078123603818601
+    second: KoShadow_119
+  - first:
+      213: -1285188975507211668
+    second: KoShadow_120
+  - first:
+      213: -346953491369307168
+    second: KoShadow_121
+  - first:
+      213: 2409367555020571460
+    second: KoShadow_122
+  - first:
+      213: 3091168351593905914
+    second: KoShadow_123
+  - first:
+      213: 2735919321110668852
+    second: KoShadow_124
+  - first:
+      213: 873371435356818818
+    second: KoShadow_125
+  - first:
+      213: 3067408358638410765
+    second: KoShadow_126
+  - first:
+      213: 6539968282039456403
+    second: KoShadow_127
+  - first:
+      213: -5899014469241144609
+    second: KoShadow_128
+  - first:
+      213: -5351521038047305803
+    second: KoShadow_129
+  - first:
+      213: 4673528496667409453
+    second: KoShadow_130
+  - first:
+      213: -6653517532081415649
+    second: KoShadow_131
+  - first:
+      213: -823140127290286412
+    second: KoShadow_132
+  - first:
+      213: 5948164599155273846
+    second: KoShadow_133
+  - first:
+      213: -8442371494830456653
+    second: KoShadow_134
+  - first:
+      213: 9013842439413318035
+    second: KoShadow_135
+  - first:
+      213: 3214322450653709699
+    second: KoShadow_136
+  - first:
+      213: -5143326803196955053
+    second: KoShadow_137
+  - first:
+      213: -5650267567773336512
+    second: KoShadow_138
+  - first:
+      213: 5903307858833219014
+    second: KoShadow_139
+  - first:
+      213: 6890679041874146605
+    second: KoShadow_140
+  - first:
+      213: 4336746954684799211
+    second: KoShadow_141
+  - first:
+      213: 3385738337431821025
+    second: KoShadow_142
+  - first:
+      213: 4224837575261936241
+    second: KoShadow_143
+  - first:
+      213: -4675724775897850394
+    second: KoShadow_144
+  - first:
+      213: 7359355062044318272
+    second: KoShadow_145
+  - first:
+      213: 5859645551849892708
+    second: KoShadow_146
+  - first:
+      213: -4949905795224736750
+    second: KoShadow_147
+  - first:
+      213: -4921973935599856762
+    second: KoShadow_148
+  - first:
+      213: 2516069160765478455
+    second: KoShadow_149
+  - first:
+      213: 3284868594889837186
+    second: KoShadow_150
+  - first:
+      213: -5652451191809492691
+    second: KoShadow_151
+  - first:
+      213: 1478666100192156623
+    second: KoShadow_152
+  - first:
+      213: -7731137754057043434
+    second: KoShadow_153
+  - first:
+      213: 8171543201742481659
+    second: KoShadow_154
+  - first:
+      213: -7695541821626245110
+    second: KoShadow_155
+  - first:
+      213: -8163161209947431520
+    second: KoShadow_156
+  - first:
+      213: -5075014428003584613
+    second: KoShadow_157
+  - first:
+      213: -5093931534938509393
+    second: KoShadow_158
+  - first:
+      213: 5249696825160361456
+    second: KoShadow_159
+  - first:
+      213: -5637897126404149123
+    second: KoShadow_160
+  - first:
+      213: -2255191298868893415
+    second: KoShadow_161
+  - first:
+      213: 879869594258693417
+    second: KoShadow_162
+  - first:
+      213: -267828872824862070
+    second: KoShadow_163
+  - first:
+      213: 4968339805219552879
+    second: KoShadow_164
+  - first:
+      213: 3187943763933249411
+    second: KoShadow_165
+  - first:
+      213: -3697814728737403932
+    second: KoShadow_166
+  - first:
+      213: -5397800441011169560
+    second: KoShadow_167
+  - first:
+      213: -8958543612451981442
+    second: KoShadow_168
+  - first:
+      213: 7665214070998112848
+    second: KoShadow_169
+  - first:
+      213: 4043849109231801251
+    second: KoShadow_170
+  - first:
+      213: -8389699339330753529
+    second: KoShadow_171
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KoShadow_0
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1836
+        width: 6
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b16d8dce698ab40800000000000000
+      internalID: 5451773292926343979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_1
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1805
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6cde9e07215fc40800000000000000
+      internalID: 5545358792346945279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_2
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 1865
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227e0c8e963d20ae0800000000000000
+      internalID: -1584471667051010270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_3
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1832
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8777e23d470b323e0800000000000000
+      internalID: -2079624587109304456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_4
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 1715
+        width: 212
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1283197b07fab4fe0800000000000000
+      internalID: -1203675576740530143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_5
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 1867
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55078e94f18ab4b10800000000000000
+      internalID: 1966850514614775893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_6
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1861
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bb75b0ca0cd8360800000000000000
+      internalID: 7173601626628274958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_7
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 1714
+        width: 235
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2541e13a81d143d30800000000000000
+      internalID: 4410181926755636306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_8
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 1790
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5610a13f66aab150800000000000000
+      internalID: 5889202459244500572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_9
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1857
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22d9e48bd8183cf0800000000000000
+      internalID: -272440446349094355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_10
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1811
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a26fe0d45051060800000000000000
+      internalID: 6923445830673640022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1703
+        width: 64
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180b5f161c6827c60800000000000000
+      internalID: 7814456468571533441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_12
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1803
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6aaa71154addfd70800000000000000
+      internalID: 9078652414029638251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_13
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1711
+        width: 154
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7421553a6bc51b1a0800000000000000
+      internalID: -6795548423231303097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_14
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1807
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b784d202b1d00f940800000000000000
+      internalID: 5327772769334413435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_15
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1786
+        width: 56
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720d9f4efa1bf2ca0800000000000000
+      internalID: -6039413206261575641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_16
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1708
+        width: 183
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3c874f2a17b8a90800000000000000
+      internalID: -7310624625405672522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_17
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1703
+        width: 152
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfdfa2e26c38f0280800000000000000
+      internalID: -9074889836926927365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_18
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1779
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a60f119ee8468eb0800000000000000
+      internalID: -4718003370149869911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_19
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1583
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34dcbe523faa7d570800000000000000
+      internalID: 8491443583720344899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_20
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1430
+        width: 235
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d751a356b06173e0800000000000000
+      internalID: -2057757218528208938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1586
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb866fe34f3fb3f50800000000000000
+      internalID: 6862346687582988478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_22
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1536
+        width: 46
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a67e7ec3c96a6fa0800000000000000
+      internalID: -5806712479836899671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_23
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 1573
+        width: 34
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572de93dfd39624a0800000000000000
+      internalID: -6618440012836973963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_24
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1579
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163694cfaf50177a0800000000000000
+      internalID: -6381312621474651295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_25
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 1567
+        width: 35
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37feb51d3082b120800000000000000
+      internalID: 2428144148952315706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_26
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1580
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bd26b3cdb063c50800000000000000
+      internalID: 6644511340748790681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_27
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 1423
+        width: 253
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65db36839bc7b2d80800000000000000
+      internalID: -8274382755406299818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_28
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1428
+        width: 293
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f1a01983f62b660800000000000000
+      internalID: 7400099426465357639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_29
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1577
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1093c2f6a5b56290800000000000000
+      internalID: -7897706642882195426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_30
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1576
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2324a9246b4d8bcf0800000000000000
+      internalID: -236205101170408910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_31
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1563
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff36bacf9afe1e60800000000000000
+      internalID: 7935055157681078266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_32
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1548
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533aef9cef5925e10800000000000000
+      internalID: 2184973690771252021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_33
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1422
+        width: 243
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0aeb942f1518210800000000000000
+      internalID: 1333437065739542700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_34
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1429
+        width: 242
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11289949108e30d40800000000000000
+      internalID: 5549534259336282641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_35
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1429
+        width: 242
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba57c31994a968e0800000000000000
+      internalID: -1699646406986868040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_36
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1539
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f21897d458b9800800000000000000
+      internalID: 620235941491060636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_37
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1268
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad482ced82c43aac0800000000000000
+      internalID: -3845145918424578854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_38
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1141
+        width: 263
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598956c07ddda0620800000000000000
+      internalID: 2741247238904060053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_39
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1272
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c63ef2db105ae2c0800000000000000
+      internalID: -4401617605367023933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_40
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1146
+        width: 309
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e2cd246707dbfb0800000000000000
+      internalID: -4630421188636823965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_41
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1272
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c647555ef6c8a40800000000000000
+      internalID: 5371791486318046304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_42
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1146
+        width: 309
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ab39719e2d6e100800000000000000
+      internalID: 137028737246149216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_43
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1145
+        width: 313
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7a18fce483c77b0800000000000000
+      internalID: -5225239556516632598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_44
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1145
+        width: 313
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca5e8adb3ec4aee0800000000000000
+      internalID: -1250648040037000511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_45
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1145
+        width: 240
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa84cdba8ba395af0800000000000000
+      internalID: -407229726468585297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_46
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1230
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef6cc2f74c05c520800000000000000
+      internalID: 2721595052971028451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_47
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1219
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6dbf0d6a22ee1200800000000000000
+      internalID: 152808109223427439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_48
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1204
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03db42548c95e290800000000000000
+      internalID: -7861705482375015665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_49
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1209
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f8ca87360618e0e0800000000000000
+      internalID: -2240516598659364623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_50
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1209
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd923166e3230420800000000000000
+      internalID: 2594957282675695067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_51
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 1206
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d7164e5ddc24070800000000000000
+      internalID: 8089254199254154609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_52
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 1210
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6800f7d7f145c2ae0800000000000000
+      internalID: -1572789675632951162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_53
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1200
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2875f8e2595585f60800000000000000
+      internalID: 8023256835380172674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_54
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 1183
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d685c8d39838f50800000000000000
+      internalID: 6882495552992865583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_55
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 1188
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95906602b2f52f370800000000000000
+      internalID: 8354844897557481817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_56
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 861
+        width: 240
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f4d81f8ce40bc570800000000000000
+      internalID: 8487883336769393904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_57
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 864
+        width: 273
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8e12a777a460d20800000000000000
+      internalID: 3244362458577627374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_58
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 864
+        width: 273
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a6522d064557e80800000000000000
+      internalID: -8181540373229376950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_59
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 862
+        width: 294
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda9afa00ee39eff0800000000000000
+      internalID: -6404792486552867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_60
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 862
+        width: 294
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925826877b3cdf580800000000000000
+      internalID: -8791655704791186135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_61
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 863
+        width: 257
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8513ca11b088d6970800000000000000
+      internalID: 8749799232173257048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_62
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 1055
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5664363c3c8d52170800000000000000
+      internalID: 8153161035732436581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_63
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 965
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04450066f000ba60800000000000000
+      internalID: 7687645622094349327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_64
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 965
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba58f6eb308159560800000000000000
+      internalID: 7319783173719557547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_65
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 935
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ebc343475185420800000000000000
+      internalID: 2618866772152729218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_66
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 923
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8d907cc454cca40800000000000000
+      internalID: 5389759050114783410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_67
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 929
+        width: 20
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68590461327ba770800000000000000
+      internalID: 8623111467988244587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_68
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 929
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0e52a8e4a949b50800000000000000
+      internalID: 6599069016120484084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_69
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 922
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c645dab37ed828ac0800000000000000
+      internalID: -3854362306797546388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_70
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 926
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b1e65ac611965c0800000000000000
+      internalID: -4221824017353532604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_71
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 923
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cc22fb38790dba0800000000000000
+      internalID: -6066182105964819399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_72
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 913
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b773b725bcd57bb0800000000000000
+      internalID: -4938798745728616527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_73
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 899
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4fdbc575d2232e0800000000000000
+      internalID: -2147604219060947747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_74
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 904
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde25700bdcc37200800000000000000
+      internalID: 176710051375165148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_75
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 909
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e59a369c5a60e7a0800000000000000
+      internalID: -6349958528702442010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_76
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 909
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdc5af293f922370800000000000000
+      internalID: 8296368531531222472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_77
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 912
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b6a0fddb906f0e0800000000000000
+      internalID: -2236589453847401580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_78
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 917
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adde02acade587b00800000000000000
+      internalID: 826514825409523162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_79
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 578
+        width: 256
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56faeacf189d19a70800000000000000
+      internalID: 8832079496563568485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_80
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 578
+        width: 256
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df22d9c1342dfc070800000000000000
+      internalID: 8128947038111736573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_81
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 577
+        width: 270
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ea3d92700d30440800000000000000
+      internalID: 4900989548694318670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_82
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 577
+        width: 270
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea80faf3689a8e30800000000000000
+      internalID: 4506581932316855010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_83
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 824
+        width: 37
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543accf4433367e10800000000000000
+      internalID: 2194998168159822661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_84
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 579
+        width: 257
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 652f1735d48eef540800000000000000
+      internalID: 5043724051511636566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_85
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 629
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47df1dcdcc1b693b0800000000000000
+      internalID: -5506018000977658508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_86
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 628
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf49bfda8f098880800000000000000
+      internalID: -8608332123608625202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_87
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 633
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6cd9d6ea9522d40800000000000000
+      internalID: 5558103495826851510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_88
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 631
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b8d8fd26aedd2b0800000000000000
+      internalID: -5558028654727033960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_89
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 633
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f54e7c583d71ea10800000000000000
+      internalID: 1936966995769443830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_90
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 631
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e728f2167e58028c0800000000000000
+      internalID: -4026070838054780290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_91
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 633
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81aa075acc0090430800000000000000
+      internalID: 3749529043711601176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_92
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 573
+        width: 275
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5931a06faa8eeb10800000000000000
+      internalID: 2012698569326279003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_93
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 632
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ae3a68ded73b7f0800000000000000
+      internalID: -597995866390533531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_94
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 541
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ceb92d6304c3b8f0800000000000000
+      internalID: -525861212476817719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_95
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 547
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75eeec0dce7d2e30800000000000000
+      internalID: 4480376623453889918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_96
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 543
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9251ec699f38e440800000000000000
+      internalID: 4965288517365224091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_97
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 550
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d103c684b12feefc0800000000000000
+      internalID: -3463564864408244195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_98
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 545
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e222357520c37f0800000000000000
+      internalID: -631627273658552708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_99
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 289
+        width: 275
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9c28a3a0a40f9f0800000000000000
+      internalID: -436767756063159853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_100
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 496
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559fe8e8655e8da50800000000000000
+      internalID: 6546234218304698709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_101
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 507
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32cc8c641ecedfb0800000000000000
+      internalID: -4621029580519718338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_102
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 503
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fd9f57def5aa520800000000000000
+      internalID: 2714087198935342888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_103
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 490
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e492a58fdb5765e0800000000000000
+      internalID: -1916462100844997408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_104
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 511
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10651c73be3916b90800000000000000
+      internalID: -7250351286627772927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_105
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 508
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29598540e10b94dd0800000000000000
+      internalID: -2501274475059178094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_106
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 496
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ffe15ce1bb6cf0d0800000000000000
+      internalID: -3387714407771279372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_107
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 512
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc7c973f9a3ed160800000000000000
+      internalID: 7052138522015988932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_108
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 517
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9542a6e2e774dc9d0800000000000000
+      internalID: -2752465189983345575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_109
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 519
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68fdd6e075331e40800000000000000
+      internalID: 5625899118541797483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_110
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 505
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37fc5271dba1a620800000000000000
+      internalID: 2783694960746886970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_111
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 517
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd541adab46d7bc10800000000000000
+      internalID: 2069358174323951067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_112
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 428
+        width: 42
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bbf6ed01354c600800000000000000
+      internalID: 487605991579302774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_113
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 492
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4a6cd9fb0985c10800000000000000
+      internalID: 2042541583672714491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_114
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 368
+        width: 29
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f0bf7bfe5faf350800000000000000
+      internalID: 6051419459258355537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_115
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 450
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f994d50c74d7f60800000000000000
+      internalID: 8033656201823231881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_116
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 465
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfcbe2b855167610800000000000000
+      internalID: 1618504586789375944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_117
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 471
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43248111fa05f5200800000000000000
+      internalID: 170944023699669556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_118
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 465
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17af93a9e47b954a0800000000000000
+      internalID: -6604045830339298703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_119
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 364
+        width: 24
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797078c1c0747a590800000000000000
+      internalID: -7663078123603818601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_120
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 412
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6af4ad9f671a2ee0800000000000000
+      internalID: -1285188975507211668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_121
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 428
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e3d95943af5f2bf0800000000000000
+      internalID: -346953491369307168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_122
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 398
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4434a52a60bcf6120800000000000000
+      internalID: 2409367555020571460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_123
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 398
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe3fa1fc3906ea20800000000000000
+      internalID: 3091168351593905914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_124
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 410
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436ede48020f7f520800000000000000
+      internalID: 2735919321110668852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_125
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 392
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d8a6171b6de1c00800000000000000
+      internalID: 873371435356818818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_126
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 395
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0cd4bd76af919a20800000000000000
+      internalID: 3067408358638410765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_127
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 291
+        width: 238
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39298459082a2ca50800000000000000
+      internalID: 6539968282039456403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_128
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 292
+        width: 273
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdafdf3389d722ea0800000000000000
+      internalID: -5899014469241144609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_129
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 377
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf192f28f39bb5b0800000000000000
+      internalID: -5351521038047305803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_130
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 370
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2cb6830865bbd040800000000000000
+      internalID: 4673528496667409453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_131
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 371
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a14717e05f9a3a0800000000000000
+      internalID: -6653517532081415649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_132
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be1e785a6e9394f0800000000000000
+      internalID: -823140127290286412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_133
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 372
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670343e20302c8250800000000000000
+      internalID: 5948164599155273846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_134
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 291
+        width: 238
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b04fb4eadba6da80800000000000000
+      internalID: -8442371494830456653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_135
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 364
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3914296f0f9971d70800000000000000
+      internalID: 9013842439413318035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_136
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 294
+        width: 265
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38507c81d319b9c20800000000000000
+      internalID: 3214322450653709699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_137
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 296
+        width: 193
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35633b3e58b3f98b0800000000000000
+      internalID: -5143326803196955053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_138
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 347
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cb5f065973691b0800000000000000
+      internalID: -5650267567773336512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_139
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 348
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd96857833cce150800000000000000
+      internalID: 5903307858833219014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_140
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 341
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d253328841c90af50800000000000000
+      internalID: 6890679041874146605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_141
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 351
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be89eb2d0683f2c30800000000000000
+      internalID: 4336746954684799211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_142
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 341
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea9b09541f8cfe20800000000000000
+      internalID: 3385738337431821025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_143
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 351
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ad53bf363a1aa30800000000000000
+      internalID: 4224837575261936241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_144
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 340
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed9d11e61d7c1fb0800000000000000
+      internalID: -4675724775897850394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_145
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 343
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04adf19ff6ea12660800000000000000
+      internalID: 7359355062044318272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_146
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 324
+        width: 35
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46be5bb6594a15150800000000000000
+      internalID: 5859645551849892708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_147
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 299
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c6bfba7e66e4bb0800000000000000
+      internalID: -4949905795224736750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_148
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 93
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 683d6d688c2a1bbb0800000000000000
+      internalID: -4921973935599856762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_149
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 93
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 736ddbd229fdae220800000000000000
+      internalID: 2516069160765478455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_150
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 62
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ace344592369d20800000000000000
+      internalID: 3284868594889837186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_151
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 19
+        width: 141
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2936f9c6957e81b0800000000000000
+      internalID: -5652451191809492691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_152
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 77
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb9d5bdbf6458410800000000000000
+      internalID: 1478666100192156623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_153
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 52
+        width: 45
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61291db8c2b75b490800000000000000
+      internalID: -7731137754057043434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_154
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 62
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf86e9e4f37276170800000000000000
+      internalID: 8171543201742481659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_155
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 19
+        width: 141
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a002ec76c71f33590800000000000000
+      internalID: -7695541821626245110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_156
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 77
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0add5dc3120a6be80800000000000000
+      internalID: -8163161209947431520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_157
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 52
+        width: 45
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b953ddc244de199b0800000000000000
+      internalID: -5075014428003584613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_158
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 51
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf64ddf148be49b0800000000000000
+      internalID: -5093931534938509393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_159
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 62
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5ed2ac27baad840800000000000000
+      internalID: 5249696825160361456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_160
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 51
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d703c743f6a22c1b0800000000000000
+      internalID: -5637897126404149123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_161
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 62
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9192e525673f3b0e0800000000000000
+      internalID: -2255191298868893415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_162
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 53
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92dd476fbbce53c00800000000000000
+      internalID: 879869594258693417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_163
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 49
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a4ea62f0b784cf0800000000000000
+      internalID: -267828872824862070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_164
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 42
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e7b8dbab613f440800000000000000
+      internalID: 4968339805219552879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_165
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 53
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38fb92d76f9dd3c20800000000000000
+      internalID: 3187943763933249411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_166
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 49
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb46689819beacc0800000000000000
+      internalID: -3697814728737403932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_167
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 42
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6151109192715b0800000000000000
+      internalID: -5397800441011169560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_168
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7774f28c0cdca380800000000000000
+      internalID: -8958543612451981442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_169
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 37
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a1b25e59f406a60800000000000000
+      internalID: 7665214070998112848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_170
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a39a01f653ae1830800000000000000
+      internalID: 4043849109231801251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoShadow_171
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 37
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c6cd2c6ecc19b80800000000000000
+      internalID: -8389699339330753529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      KoShadow_0: 5451773292926343979
+      KoShadow_1: 5545358792346945279
+      KoShadow_10: 6923445830673640022
+      KoShadow_100: 6546234218304698709
+      KoShadow_101: -4621029580519718338
+      KoShadow_102: 2714087198935342888
+      KoShadow_103: -1916462100844997408
+      KoShadow_104: -7250351286627772927
+      KoShadow_105: -2501274475059178094
+      KoShadow_106: -3387714407771279372
+      KoShadow_107: 7052138522015988932
+      KoShadow_108: -2752465189983345575
+      KoShadow_109: 5625899118541797483
+      KoShadow_11: 7814456468571533441
+      KoShadow_110: 2783694960746886970
+      KoShadow_111: 2069358174323951067
+      KoShadow_112: 487605991579302774
+      KoShadow_113: 2042541583672714491
+      KoShadow_114: 6051419459258355537
+      KoShadow_115: 8033656201823231881
+      KoShadow_116: 1618504586789375944
+      KoShadow_117: 170944023699669556
+      KoShadow_118: -6604045830339298703
+      KoShadow_119: -7663078123603818601
+      KoShadow_12: 9078652414029638251
+      KoShadow_120: -1285188975507211668
+      KoShadow_121: -346953491369307168
+      KoShadow_122: 2409367555020571460
+      KoShadow_123: 3091168351593905914
+      KoShadow_124: 2735919321110668852
+      KoShadow_125: 873371435356818818
+      KoShadow_126: 3067408358638410765
+      KoShadow_127: 6539968282039456403
+      KoShadow_128: -5899014469241144609
+      KoShadow_129: -5351521038047305803
+      KoShadow_13: -6795548423231303097
+      KoShadow_130: 4673528496667409453
+      KoShadow_131: -6653517532081415649
+      KoShadow_132: -823140127290286412
+      KoShadow_133: 5948164599155273846
+      KoShadow_134: -8442371494830456653
+      KoShadow_135: 9013842439413318035
+      KoShadow_136: 3214322450653709699
+      KoShadow_137: -5143326803196955053
+      KoShadow_138: -5650267567773336512
+      KoShadow_139: 5903307858833219014
+      KoShadow_14: 5327772769334413435
+      KoShadow_140: 6890679041874146605
+      KoShadow_141: 4336746954684799211
+      KoShadow_142: 3385738337431821025
+      KoShadow_143: 4224837575261936241
+      KoShadow_144: -4675724775897850394
+      KoShadow_145: 7359355062044318272
+      KoShadow_146: 5859645551849892708
+      KoShadow_147: -4949905795224736750
+      KoShadow_148: -4921973935599856762
+      KoShadow_149: 2516069160765478455
+      KoShadow_15: -6039413206261575641
+      KoShadow_150: 3284868594889837186
+      KoShadow_151: -5652451191809492691
+      KoShadow_152: 1478666100192156623
+      KoShadow_153: -7731137754057043434
+      KoShadow_154: 8171543201742481659
+      KoShadow_155: -7695541821626245110
+      KoShadow_156: -8163161209947431520
+      KoShadow_157: -5075014428003584613
+      KoShadow_158: -5093931534938509393
+      KoShadow_159: 5249696825160361456
+      KoShadow_16: -7310624625405672522
+      KoShadow_160: -5637897126404149123
+      KoShadow_161: -2255191298868893415
+      KoShadow_162: 879869594258693417
+      KoShadow_163: -267828872824862070
+      KoShadow_164: 4968339805219552879
+      KoShadow_165: 3187943763933249411
+      KoShadow_166: -3697814728737403932
+      KoShadow_167: -5397800441011169560
+      KoShadow_168: -8958543612451981442
+      KoShadow_169: 7665214070998112848
+      KoShadow_17: -9074889836926927365
+      KoShadow_170: 4043849109231801251
+      KoShadow_171: -8389699339330753529
+      KoShadow_18: -4718003370149869911
+      KoShadow_19: 8491443583720344899
+      KoShadow_2: -1584471667051010270
+      KoShadow_20: -2057757218528208938
+      KoShadow_21: 6862346687582988478
+      KoShadow_22: -5806712479836899671
+      KoShadow_23: -6618440012836973963
+      KoShadow_24: -6381312621474651295
+      KoShadow_25: 2428144148952315706
+      KoShadow_26: 6644511340748790681
+      KoShadow_27: -8274382755406299818
+      KoShadow_28: 7400099426465357639
+      KoShadow_29: -7897706642882195426
+      KoShadow_3: -2079624587109304456
+      KoShadow_30: -236205101170408910
+      KoShadow_31: 7935055157681078266
+      KoShadow_32: 2184973690771252021
+      KoShadow_33: 1333437065739542700
+      KoShadow_34: 5549534259336282641
+      KoShadow_35: -1699646406986868040
+      KoShadow_36: 620235941491060636
+      KoShadow_37: -3845145918424578854
+      KoShadow_38: 2741247238904060053
+      KoShadow_39: -4401617605367023933
+      KoShadow_4: -1203675576740530143
+      KoShadow_40: -4630421188636823965
+      KoShadow_41: 5371791486318046304
+      KoShadow_42: 137028737246149216
+      KoShadow_43: -5225239556516632598
+      KoShadow_44: -1250648040037000511
+      KoShadow_45: -407229726468585297
+      KoShadow_46: 2721595052971028451
+      KoShadow_47: 152808109223427439
+      KoShadow_48: -7861705482375015665
+      KoShadow_49: -2240516598659364623
+      KoShadow_5: 1966850514614775893
+      KoShadow_50: 2594957282675695067
+      KoShadow_51: 8089254199254154609
+      KoShadow_52: -1572789675632951162
+      KoShadow_53: 8023256835380172674
+      KoShadow_54: 6882495552992865583
+      KoShadow_55: 8354844897557481817
+      KoShadow_56: 8487883336769393904
+      KoShadow_57: 3244362458577627374
+      KoShadow_58: -8181540373229376950
+      KoShadow_59: -6404792486552867
+      KoShadow_6: 7173601626628274958
+      KoShadow_60: -8791655704791186135
+      KoShadow_61: 8749799232173257048
+      KoShadow_62: 8153161035732436581
+      KoShadow_63: 7687645622094349327
+      KoShadow_64: 7319783173719557547
+      KoShadow_65: 2618866772152729218
+      KoShadow_66: 5389759050114783410
+      KoShadow_67: 8623111467988244587
+      KoShadow_68: 6599069016120484084
+      KoShadow_69: -3854362306797546388
+      KoShadow_7: 4410181926755636306
+      KoShadow_70: -4221824017353532604
+      KoShadow_71: -6066182105964819399
+      KoShadow_72: -4938798745728616527
+      KoShadow_73: -2147604219060947747
+      KoShadow_74: 176710051375165148
+      KoShadow_75: -6349958528702442010
+      KoShadow_76: 8296368531531222472
+      KoShadow_77: -2236589453847401580
+      KoShadow_78: 826514825409523162
+      KoShadow_79: 8832079496563568485
+      KoShadow_8: 5889202459244500572
+      KoShadow_80: 8128947038111736573
+      KoShadow_81: 4900989548694318670
+      KoShadow_82: 4506581932316855010
+      KoShadow_83: 2194998168159822661
+      KoShadow_84: 5043724051511636566
+      KoShadow_85: -5506018000977658508
+      KoShadow_86: -8608332123608625202
+      KoShadow_87: 5558103495826851510
+      KoShadow_88: -5558028654727033960
+      KoShadow_89: 1936966995769443830
+      KoShadow_9: -272440446349094355
+      KoShadow_90: -4026070838054780290
+      KoShadow_91: 3749529043711601176
+      KoShadow_92: 2012698569326279003
+      KoShadow_93: -597995866390533531
+      KoShadow_94: -525861212476817719
+      KoShadow_95: 4480376623453889918
+      KoShadow_96: 4965288517365224091
+      KoShadow_97: -3463564864408244195
+      KoShadow_98: -631627273658552708
+      KoShadow_99: -436767756063159853
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

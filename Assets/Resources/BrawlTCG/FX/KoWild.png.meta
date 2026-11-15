@@ -1,0 +1,3096 @@
+fileFormatVersion: 2
+guid: 7b9713d58d288534ca1408a86f4cb9e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3576213763201149209
+    second: KoWild_0
+  - first:
+      213: -4055216405346102679
+    second: KoWild_1
+  - first:
+      213: -6852903517021404486
+    second: KoWild_2
+  - first:
+      213: -3759192306467674853
+    second: KoWild_3
+  - first:
+      213: 1876316463222141162
+    second: KoWild_4
+  - first:
+      213: 3944208904177567433
+    second: KoWild_5
+  - first:
+      213: -5916630615876376491
+    second: KoWild_6
+  - first:
+      213: 6458390357321706822
+    second: KoWild_7
+  - first:
+      213: 4723246281301096672
+    second: KoWild_8
+  - first:
+      213: -4931912866649854673
+    second: KoWild_9
+  - first:
+      213: -1414329329031459411
+    second: KoWild_10
+  - first:
+      213: -1119052550262378631
+    second: KoWild_11
+  - first:
+      213: 3503813088224689472
+    second: KoWild_12
+  - first:
+      213: 6585299324880101422
+    second: KoWild_13
+  - first:
+      213: 2002492065376320022
+    second: KoWild_14
+  - first:
+      213: -2539461394461932590
+    second: KoWild_15
+  - first:
+      213: 6579754830311050431
+    second: KoWild_16
+  - first:
+      213: -7576673068540373108
+    second: KoWild_17
+  - first:
+      213: -1679590207728455320
+    second: KoWild_18
+  - first:
+      213: 8980139015319138498
+    second: KoWild_19
+  - first:
+      213: 241821246334442589
+    second: KoWild_20
+  - first:
+      213: 4418239963521943170
+    second: KoWild_21
+  - first:
+      213: 6193356229725592050
+    second: KoWild_22
+  - first:
+      213: -7115131051827712508
+    second: KoWild_23
+  - first:
+      213: -3222274128617304061
+    second: KoWild_24
+  - first:
+      213: -6089773049123281595
+    second: KoWild_25
+  - first:
+      213: -3855273071263120598
+    second: KoWild_26
+  - first:
+      213: 717667503382682911
+    second: KoWild_27
+  - first:
+      213: 4909213910005916573
+    second: KoWild_28
+  - first:
+      213: 8626976635368908414
+    second: KoWild_29
+  - first:
+      213: 4160421837515338046
+    second: KoWild_30
+  - first:
+      213: 7548298860968947532
+    second: KoWild_31
+  - first:
+      213: 5009187139193222668
+    second: KoWild_32
+  - first:
+      213: -3118258461429881396
+    second: KoWild_33
+  - first:
+      213: -2943540647738052851
+    second: KoWild_34
+  - first:
+      213: -2651371201980490837
+    second: KoWild_35
+  - first:
+      213: 6899318965133100879
+    second: KoWild_36
+  - first:
+      213: -7121164001738240098
+    second: KoWild_37
+  - first:
+      213: 9017130547522466498
+    second: KoWild_38
+  - first:
+      213: 4626894831893375972
+    second: KoWild_39
+  - first:
+      213: -5633630863262015713
+    second: KoWild_40
+  - first:
+      213: 7792804738687500310
+    second: KoWild_41
+  - first:
+      213: 3586007198092509888
+    second: KoWild_42
+  - first:
+      213: 3002622739866831722
+    second: KoWild_43
+  - first:
+      213: -5923982053438511639
+    second: KoWild_44
+  - first:
+      213: -100809832593281405
+    second: KoWild_45
+  - first:
+      213: 6100547669484094863
+    second: KoWild_46
+  - first:
+      213: 4147170239978784272
+    second: KoWild_47
+  - first:
+      213: -179420443433146664
+    second: KoWild_48
+  - first:
+      213: 1793101521535357321
+    second: KoWild_49
+  - first:
+      213: 1461507072543371774
+    second: KoWild_50
+  - first:
+      213: -78573078820248981
+    second: KoWild_51
+  - first:
+      213: 3719232188729715930
+    second: KoWild_52
+  - first:
+      213: 6746715086680010869
+    second: KoWild_53
+  - first:
+      213: 9122594437476997771
+    second: KoWild_54
+  - first:
+      213: -303002565042348975
+    second: KoWild_55
+  - first:
+      213: -604532014125078002
+    second: KoWild_56
+  - first:
+      213: -8037217859999946046
+    second: KoWild_57
+  - first:
+      213: -55959691286172229
+    second: KoWild_58
+  - first:
+      213: 465898528602952517
+    second: KoWild_59
+  - first:
+      213: 5593908921430497873
+    second: KoWild_60
+  - first:
+      213: -122516405314447463
+    second: KoWild_61
+  - first:
+      213: -7238739374362314927
+    second: KoWild_62
+  - first:
+      213: -7638115474464822859
+    second: KoWild_63
+  - first:
+      213: 8291815859665713143
+    second: KoWild_64
+  - first:
+      213: 1825910958282030266
+    second: KoWild_65
+  - first:
+      213: -8126310708311000967
+    second: KoWild_66
+  - first:
+      213: 3999982086954291559
+    second: KoWild_67
+  - first:
+      213: 4024514982967300677
+    second: KoWild_68
+  - first:
+      213: 7551662241088831041
+    second: KoWild_69
+  - first:
+      213: -797467156738485281
+    second: KoWild_70
+  - first:
+      213: -6063037112982493800
+    second: KoWild_71
+  - first:
+      213: -5708852922958622311
+    second: KoWild_72
+  - first:
+      213: 6549333756216874397
+    second: KoWild_73
+  - first:
+      213: -8358141474046201430
+    second: KoWild_74
+  - first:
+      213: -6307640644865082114
+    second: KoWild_75
+  - first:
+      213: 2167106603064432418
+    second: KoWild_76
+  - first:
+      213: -7209496444653471522
+    second: KoWild_77
+  - first:
+      213: 8612978440306102192
+    second: KoWild_78
+  - first:
+      213: 2744405976181055369
+    second: KoWild_79
+  - first:
+      213: 7253661683167509305
+    second: KoWild_80
+  - first:
+      213: -8660039513472179466
+    second: KoWild_81
+  - first:
+      213: 9081506650676729204
+    second: KoWild_82
+  - first:
+      213: 3921606190849796759
+    second: KoWild_83
+  - first:
+      213: 783297997605039718
+    second: KoWild_84
+  - first:
+      213: -1316566218439893148
+    second: KoWild_85
+  - first:
+      213: -6570107373879621896
+    second: KoWild_86
+  - first:
+      213: 4049538183640234756
+    second: KoWild_87
+  - first:
+      213: 4451511247628471235
+    second: KoWild_88
+  - first:
+      213: -5368481652163755933
+    second: KoWild_89
+  - first:
+      213: -1132713919877182881
+    second: KoWild_90
+  - first:
+      213: 2297821785253947216
+    second: KoWild_91
+  - first:
+      213: -1878368794724115518
+    second: KoWild_92
+  - first:
+      213: 6436074223136370786
+    second: KoWild_93
+  - first:
+      213: -8998501188373961303
+    second: KoWild_94
+  - first:
+      213: -1550058934752750890
+    second: KoWild_95
+  - first:
+      213: 3013010726883211694
+    second: KoWild_96
+  - first:
+      213: -3562513503629706390
+    second: KoWild_97
+  - first:
+      213: 3873721022189795221
+    second: KoWild_98
+  - first:
+      213: -1015915903469112679
+    second: KoWild_99
+  - first:
+      213: 8984549582377699938
+    second: KoWild_100
+  - first:
+      213: 5472655798052785873
+    second: KoWild_101
+  - first:
+      213: 4722811818976800054
+    second: KoWild_102
+  - first:
+      213: -8480796497442675034
+    second: KoWild_103
+  - first:
+      213: 3390106163266975633
+    second: KoWild_104
+  - first:
+      213: -2503417914033625288
+    second: KoWild_105
+  - first:
+      213: 4416363973578076552
+    second: KoWild_106
+  - first:
+      213: -4379350627314882061
+    second: KoWild_107
+  - first:
+      213: 5371598764540122678
+    second: KoWild_108
+  - first:
+      213: 1478478036487975408
+    second: KoWild_109
+  - first:
+      213: -704829483418232131
+    second: KoWild_110
+  - first:
+      213: 796659904043625914
+    second: KoWild_111
+  - first:
+      213: -1157223513051151697
+    second: KoWild_112
+  - first:
+      213: -1141753070168853569
+    second: KoWild_113
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KoWild_0
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1465
+        width: 136
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919a774587341a130800000000000000
+      internalID: 3576213763201149209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_1
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 1588
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96252003a2af8b7c0800000000000000
+      internalID: -4055216405346102679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_2
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 1588
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab20aeb3f8895e0a0800000000000000
+      internalID: -6852903517021404486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_3
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 1464
+        width: 166
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15ec9aa38aa4dbc0800000000000000
+      internalID: -3759192306467674853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1465
+        width: 108
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0b294d1e30a0a10800000000000000
+      internalID: 1876316463222141162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_5
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1465
+        width: 166
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6cf6dd915acb630800000000000000
+      internalID: 3944208904177567433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_6
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1504
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558ec717dc7e3eda0800000000000000
+      internalID: -5916630615876376491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_7
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1465
+        width: 166
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64de7fcdfcfc0a950800000000000000
+      internalID: 6458390357321706822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_8
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1465
+        width: 166
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8f2afc7775c8140800000000000000
+      internalID: 4723246281301096672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1219
+        width: 220
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d2820d0635e8bb0800000000000000
+      internalID: -4931912866649854673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_10
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1219
+        width: 238
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadc9abf7fa4f5ce0800000000000000
+      internalID: -1414329329031459411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_11
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1223
+        width: 252
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97fad9072a35870f0800000000000000
+      internalID: -1119052550262378631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_12
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1223
+        width: 267
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d3ff2907b00a030800000000000000
+      internalID: 3503813088224689472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_13
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 1223
+        width: 267
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20291778dea36b50800000000000000
+      internalID: 6585299324880101422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_14
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 1222
+        width: 276
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a3b4e7ce74acb10800000000000000
+      internalID: 2002492065376320022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 978
+        width: 276
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3474ef05502ccd0800000000000000
+      internalID: -2539461394461932590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_16
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 978
+        width: 299
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcc9d9382cff4b50800000000000000
+      internalID: 6579754830311050431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_17
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 978
+        width: 299
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87d162bcff3ad690800000000000000
+      internalID: -7576673068540373108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_18
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 982
+        width: 308
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861fe1cda95e0b8e0800000000000000
+      internalID: -1679590207728455320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_19
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 978
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c039b90bdcdf9c70800000000000000
+      internalID: 8980139015319138498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_20
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 982
+        width: 308
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c18ee642f1b5300800000000000000
+      internalID: 241821246334442589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_21
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 978
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286092686ddb05d30800000000000000
+      internalID: 4418239963521943170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_22
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 984
+        width: 319
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f91f385da833f550800000000000000
+      internalID: 6193356229725592050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_23
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 978
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e2575810af14d90800000000000000
+      internalID: -7115131051827712508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 318
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30095da90ce2843d0800000000000000
+      internalID: -3222274128617304061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_25
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 750
+        width: 300
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54562444da7cc7ba0800000000000000
+      internalID: -6089773049123281595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_26
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 750
+        width: 300
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a238b3b51915f7ac0800000000000000
+      internalID: -3855273071263120598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_27
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 853
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d57fdbacaa5f900800000000000000
+      internalID: 717667503382682911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_28
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 749
+        width: 279
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d932f408a08012440800000000000000
+      internalID: 4909213910005916573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_29
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 853
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7622ccca8d29b770800000000000000
+      internalID: 8626976635368908414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_30
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 749
+        width: 279
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3131ec4e99ccb930800000000000000
+      internalID: 4160421837515338046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_31
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 750
+        width: 276
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f2a8a42d1f0c860800000000000000
+      internalID: 7548298860968947532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_32
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 832
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06311dc925348540800000000000000
+      internalID: 5009187139193222668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_33
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 832
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5ad985378b9b4d0800000000000000
+      internalID: -3118258461429881396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_34
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 831
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f66ad50617627d0800000000000000
+      internalID: -2943540647738052851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_35
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 839
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab904a70ff643bd0800000000000000
+      internalID: -2651371201980490837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_36
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 831
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47cfdc6b0e4fbf50800000000000000
+      internalID: 6899318965133100879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_37
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 839
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fc719e11b8c2d90800000000000000
+      internalID: -7121164001738240098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_38
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 827
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c2766a4578432d70800000000000000
+      internalID: 9017130547522466498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_39
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 800
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb6814d558063040800000000000000
+      internalID: 4626894831893375972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_40
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 800
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f179ff39251d1b0800000000000000
+      internalID: -5633630863262015713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_41
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 797
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610037d2f9a952c60800000000000000
+      internalID: 7792804738687500310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_42
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 506
+        width: 275
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c24c441c8e04c130800000000000000
+      internalID: 3586007198092509888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_43
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 506
+        width: 273
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bc54c29757ba920800000000000000
+      internalID: 3002622739866831722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_44
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 506
+        width: 272
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e5220185b9c9cda0800000000000000
+      internalID: -5923982053438511639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_45
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 506
+        width: 294
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e296acdf9d99ef0800000000000000
+      internalID: -100809832593281405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_46
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 506
+        width: 253
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85cfe688cf79a450800000000000000
+      internalID: 6100547669484094863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_47
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 665
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 016c1015c55bd8930800000000000000
+      internalID: 4147170239978784272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_48
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 506
+        width: 193
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d669bbae02928df0800000000000000
+      internalID: -179420443433146664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_49
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 633
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981d355655062e810800000000000000
+      internalID: 1793101521535357321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_50
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 640
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef13ba760f0584410800000000000000
+      internalID: 1461507072543371774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_51
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 627
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62a20c733ad8eef0800000000000000
+      internalID: -78573078820248981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_52
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 624
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcee6668fd5d9330800000000000000
+      internalID: 3719232188729715930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_53
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 595
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570b45e20a521ad50800000000000000
+      internalID: 6746715086680010869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_54
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 581
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a55cbae47f99e70800000000000000
+      internalID: 9122594437476997771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_55
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 584
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c5e90c5c48bcbf0800000000000000
+      internalID: -303002565042348975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_56
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 571
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a29ba06554c97f0800000000000000
+      internalID: -604532014125078002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_57
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 551
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca274870f0167090800000000000000
+      internalID: -8037217859999946046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_58
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 550
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbda52f05f0393ff0800000000000000
+      internalID: -55959691286172229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_59
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 551
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54391ca4e34377600800000000000000
+      internalID: 465898528602952517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_60
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 506
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ad0c7b68e81ad40800000000000000
+      internalID: 5593908921430497873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_61
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 515
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997131e7afbbc4ef0800000000000000
+      internalID: -122516405314447463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_62
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 262
+        width: 192
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157308934e4da8b90800000000000000
+      internalID: -7238739374362314927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_63
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 262
+        width: 148
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b92c17c176fff590800000000000000
+      internalID: -7638115474464822859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_64
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 418
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7335aa792721370800000000000000
+      internalID: 8291815859665713143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_65
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 262
+        width: 86
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcb4eba750f65910800000000000000
+      internalID: 1825910958282030266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_66
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 416
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9787ba0477b893f80800000000000000
+      internalID: -8126310708311000967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_67
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 446
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76116d8e38ac28730800000000000000
+      internalID: 3999982086954291559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_68
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 437
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542d001ed03f9d730800000000000000
+      internalID: 4024514982967300677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_69
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 442
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e74df3cc4ecc860800000000000000
+      internalID: 7551662241088831041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_70
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 432
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3df8a98d3dee4f0800000000000000
+      internalID: -797467156738485281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_71
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 441
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8952bac7ed3cbdba0800000000000000
+      internalID: -6063037112982493800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_72
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 262
+        width: 124
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991d91c638416c0b0800000000000000
+      internalID: -5708852922958622311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_73
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 426
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9518c6f958e3ea50800000000000000
+      internalID: 6549333756216874397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_74
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 401
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa13409dc9ae10c80800000000000000
+      internalID: -8358141474046201430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_75
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 415
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc3008b042c678a0800000000000000
+      internalID: -6307640644865082114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_76
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 428
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2271f0249fb131e10800000000000000
+      internalID: 2167106603064432418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_77
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 422
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8fcfe5e29b2fb90800000000000000
+      internalID: -7209496444653471522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_78
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 416
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf0b880242778770800000000000000
+      internalID: 8612978440306102192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_79
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 416
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f1bb1e1b6161620800000000000000
+      internalID: 2744405976181055369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_80
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 406
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93bbf0a8ede2aa460800000000000000
+      internalID: 7253661683167509305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_81
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 400
+        width: 47
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2e4a202fb51d780800000000000000
+      internalID: -8660039513472179466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_82
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 407
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4751fe2de2ef70e70800000000000000
+      internalID: 9081506650676729204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_83
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 262
+        width: 87
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a23929d085c6630800000000000000
+      internalID: 3921606190849796759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_84
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 408
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ee584f065deda00800000000000000
+      internalID: 783297997605039718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_85
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 410
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f5c92fffd9abde0800000000000000
+      internalID: -1316566218439893148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_86
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 405
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f60bb3472a42d4a0800000000000000
+      internalID: -6570107373879621896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_87
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 345
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bb14cc589d23830800000000000000
+      internalID: 4049538183640234756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_88
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 382
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb0d8405e1f6cd30800000000000000
+      internalID: 4451511247628471235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_89
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 365
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360c39b71625f75b0800000000000000
+      internalID: -5368481652163755933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_90
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 379
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a8495f0bac740f0800000000000000
+      internalID: -1132713919877182881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_91
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 380
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05727334db083ef10800000000000000
+      internalID: 2297821785253947216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_92
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 369
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb5a418881bee5e0800000000000000
+      internalID: -1878368794724115518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_93
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 371
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260771af767815950800000000000000
+      internalID: 6436074223136370786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_94
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 351
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a52a0468d6ee1380800000000000000
+      internalID: -8998501188373961303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_95
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 353
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d254258c951d7ae0800000000000000
+      internalID: -1550058934752750890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_96
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 359
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9b050ea4d50d920800000000000000
+      internalID: 3013010726883211694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_97
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 358
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b7e9ce7d86f8ec0800000000000000
+      internalID: -3562513503629706390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_98
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 360
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597f59eeeb832c530800000000000000
+      internalID: 3873721022189795221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_99
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 342
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992bd0c4eddb6e1f0800000000000000
+      internalID: -1015915903469112679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_100
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 349
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ac1843e388fac70800000000000000
+      internalID: 8984549582377699938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_101
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 342
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de0be4f377c2fb40800000000000000
+      internalID: 5472655798052785873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_102
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 350
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63de02ba35cca8140800000000000000
+      internalID: 4722811818976800054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_103
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 350
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a66d8dc4882e4a80800000000000000
+      internalID: -8480796497442675034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_104
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 346
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197f36c08931c0f20800000000000000
+      internalID: 3390106163266975633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_105
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 307
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8372dadbba2124dd0800000000000000
+      internalID: -2503417914033625288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_106
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 262
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88134f392a31a4d30800000000000000
+      internalID: 4416363973578076552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_107
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 289
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f92308aecb6933c0800000000000000
+      internalID: -4379350627314882061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_108
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 291
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636575ccd90cb8a40800000000000000
+      internalID: 5371598764540122678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_109
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 279
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1351dd0fb948410800000000000000
+      internalID: 1478478036487975408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_110
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 186
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba52a5b151f736f0800000000000000
+      internalID: -704829483418232131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_111
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 175
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd215b36fd4e0b00800000000000000
+      internalID: 796659904043625914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_112
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 101
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa24bda9857b0ffe0800000000000000
+      internalID: -1157223513051151697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KoWild_113
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 66
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3bf57c1ada720f0800000000000000
+      internalID: -1141753070168853569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      KoWild_0: 3576213763201149209
+      KoWild_1: -4055216405346102679
+      KoWild_10: -1414329329031459411
+      KoWild_100: 8984549582377699938
+      KoWild_101: 5472655798052785873
+      KoWild_102: 4722811818976800054
+      KoWild_103: -8480796497442675034
+      KoWild_104: 3390106163266975633
+      KoWild_105: -2503417914033625288
+      KoWild_106: 4416363973578076552
+      KoWild_107: -4379350627314882061
+      KoWild_108: 5371598764540122678
+      KoWild_109: 1478478036487975408
+      KoWild_11: -1119052550262378631
+      KoWild_110: -704829483418232131
+      KoWild_111: 796659904043625914
+      KoWild_112: -1157223513051151697
+      KoWild_113: -1141753070168853569
+      KoWild_12: 3503813088224689472
+      KoWild_13: 6585299324880101422
+      KoWild_14: 2002492065376320022
+      KoWild_15: -2539461394461932590
+      KoWild_16: 6579754830311050431
+      KoWild_17: -7576673068540373108
+      KoWild_18: -1679590207728455320
+      KoWild_19: 8980139015319138498
+      KoWild_2: -6852903517021404486
+      KoWild_20: 241821246334442589
+      KoWild_21: 4418239963521943170
+      KoWild_22: 6193356229725592050
+      KoWild_23: -7115131051827712508
+      KoWild_24: -3222274128617304061
+      KoWild_25: -6089773049123281595
+      KoWild_26: -3855273071263120598
+      KoWild_27: 717667503382682911
+      KoWild_28: 4909213910005916573
+      KoWild_29: 8626976635368908414
+      KoWild_3: -3759192306467674853
+      KoWild_30: 4160421837515338046
+      KoWild_31: 7548298860968947532
+      KoWild_32: 5009187139193222668
+      KoWild_33: -3118258461429881396
+      KoWild_34: -2943540647738052851
+      KoWild_35: -2651371201980490837
+      KoWild_36: 6899318965133100879
+      KoWild_37: -7121164001738240098
+      KoWild_38: 9017130547522466498
+      KoWild_39: 4626894831893375972
+      KoWild_4: 1876316463222141162
+      KoWild_40: -5633630863262015713
+      KoWild_41: 7792804738687500310
+      KoWild_42: 3586007198092509888
+      KoWild_43: 3002622739866831722
+      KoWild_44: -5923982053438511639
+      KoWild_45: -100809832593281405
+      KoWild_46: 6100547669484094863
+      KoWild_47: 4147170239978784272
+      KoWild_48: -179420443433146664
+      KoWild_49: 1793101521535357321
+      KoWild_5: 3944208904177567433
+      KoWild_50: 1461507072543371774
+      KoWild_51: -78573078820248981
+      KoWild_52: 3719232188729715930
+      KoWild_53: 6746715086680010869
+      KoWild_54: 9122594437476997771
+      KoWild_55: -303002565042348975
+      KoWild_56: -604532014125078002
+      KoWild_57: -8037217859999946046
+      KoWild_58: -55959691286172229
+      KoWild_59: 465898528602952517
+      KoWild_6: -5916630615876376491
+      KoWild_60: 5593908921430497873
+      KoWild_61: -122516405314447463
+      KoWild_62: -7238739374362314927
+      KoWild_63: -7638115474464822859
+      KoWild_64: 8291815859665713143
+      KoWild_65: 1825910958282030266
+      KoWild_66: -8126310708311000967
+      KoWild_67: 3999982086954291559
+      KoWild_68: 4024514982967300677
+      KoWild_69: 7551662241088831041
+      KoWild_7: 6458390357321706822
+      KoWild_70: -797467156738485281
+      KoWild_71: -6063037112982493800
+      KoWild_72: -5708852922958622311
+      KoWild_73: 6549333756216874397
+      KoWild_74: -8358141474046201430
+      KoWild_75: -6307640644865082114
+      KoWild_76: 2167106603064432418
+      KoWild_77: -7209496444653471522
+      KoWild_78: 8612978440306102192
+      KoWild_79: 2744405976181055369
+      KoWild_8: 4723246281301096672
+      KoWild_80: 7253661683167509305
+      KoWild_81: -8660039513472179466
+      KoWild_82: 9081506650676729204
+      KoWild_83: 3921606190849796759
+      KoWild_84: 783297997605039718
+      KoWild_85: -1316566218439893148
+      KoWild_86: -6570107373879621896
+      KoWild_87: 4049538183640234756
+      KoWild_88: 4451511247628471235
+      KoWild_89: -5368481652163755933
+      KoWild_9: -4931912866649854673
+      KoWild_90: -1132713919877182881
+      KoWild_91: 2297821785253947216
+      KoWild_92: -1878368794724115518
+      KoWild_93: 6436074223136370786
+      KoWild_94: -8998501188373961303
+      KoWild_95: -1550058934752750890
+      KoWild_96: 3013010726883211694
+      KoWild_97: -3562513503629706390
+      KoWild_98: 3873721022189795221
+      KoWild_99: -1015915903469112679
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

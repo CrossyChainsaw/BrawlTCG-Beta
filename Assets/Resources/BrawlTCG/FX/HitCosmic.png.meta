@@ -1,0 +1,2472 @@
+fileFormatVersion: 2
+guid: 198e7da28e2af4c4eaf4b64529e3a21a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6507055976898761514
+    second: HitCosmic_0
+  - first:
+      213: -5899908982170451897
+    second: HitCosmic_1
+  - first:
+      213: 1515084243674837364
+    second: HitCosmic_2
+  - first:
+      213: -8960375356313746520
+    second: HitCosmic_3
+  - first:
+      213: 6964954352900930614
+    second: HitCosmic_4
+  - first:
+      213: 1849014617902880637
+    second: HitCosmic_5
+  - first:
+      213: 7466490922134188034
+    second: HitCosmic_6
+  - first:
+      213: -165466892176371080
+    second: HitCosmic_7
+  - first:
+      213: 1667807351009331424
+    second: HitCosmic_8
+  - first:
+      213: -1628181586564789892
+    second: HitCosmic_9
+  - first:
+      213: -6284226951725792361
+    second: HitCosmic_10
+  - first:
+      213: 7550092565240852950
+    second: HitCosmic_11
+  - first:
+      213: 5488197983901370352
+    second: HitCosmic_12
+  - first:
+      213: -4369262199556654865
+    second: HitCosmic_13
+  - first:
+      213: -3814246387267951694
+    second: HitCosmic_14
+  - first:
+      213: 7581472173560078030
+    second: HitCosmic_15
+  - first:
+      213: 8728751422751670101
+    second: HitCosmic_16
+  - first:
+      213: -6879031808237427242
+    second: HitCosmic_17
+  - first:
+      213: -1865122017327276513
+    second: HitCosmic_18
+  - first:
+      213: -3263396006169376336
+    second: HitCosmic_19
+  - first:
+      213: 8157909853688767392
+    second: HitCosmic_20
+  - first:
+      213: -6703806191260713505
+    second: HitCosmic_21
+  - first:
+      213: -299275732901341057
+    second: HitCosmic_22
+  - first:
+      213: -357593766372564736
+    second: HitCosmic_23
+  - first:
+      213: -8363195894505014518
+    second: HitCosmic_24
+  - first:
+      213: 5125237030828134061
+    second: HitCosmic_25
+  - first:
+      213: 8399514136444131519
+    second: HitCosmic_26
+  - first:
+      213: -3158519749920253492
+    second: HitCosmic_27
+  - first:
+      213: 178365376479228732
+    second: HitCosmic_28
+  - first:
+      213: -2988617709818278810
+    second: HitCosmic_29
+  - first:
+      213: 4763553854222444931
+    second: HitCosmic_30
+  - first:
+      213: -777870039918599146
+    second: HitCosmic_31
+  - first:
+      213: 2570967024957566977
+    second: HitCosmic_32
+  - first:
+      213: -653152505410988623
+    second: HitCosmic_33
+  - first:
+      213: -6498518069603805480
+    second: HitCosmic_34
+  - first:
+      213: -268656626340406640
+    second: HitCosmic_35
+  - first:
+      213: -6624068406068915124
+    second: HitCosmic_36
+  - first:
+      213: -2415245832801996746
+    second: HitCosmic_37
+  - first:
+      213: -1928315683932180720
+    second: HitCosmic_38
+  - first:
+      213: 7689309456409570331
+    second: HitCosmic_39
+  - first:
+      213: 7067542555898088105
+    second: HitCosmic_40
+  - first:
+      213: 827914252479666060
+    second: HitCosmic_41
+  - first:
+      213: 483944232626253151
+    second: HitCosmic_42
+  - first:
+      213: -9000177011103083104
+    second: HitCosmic_43
+  - first:
+      213: 9059470280432880642
+    second: HitCosmic_44
+  - first:
+      213: 1483305885801647529
+    second: HitCosmic_45
+  - first:
+      213: -802091766895947662
+    second: HitCosmic_46
+  - first:
+      213: -3516721691669427205
+    second: HitCosmic_47
+  - first:
+      213: -3757957343729264835
+    second: HitCosmic_48
+  - first:
+      213: -9178715474544776018
+    second: HitCosmic_49
+  - first:
+      213: -4288095147205790649
+    second: HitCosmic_50
+  - first:
+      213: -33848044598723110
+    second: HitCosmic_51
+  - first:
+      213: -5996967285372071528
+    second: HitCosmic_52
+  - first:
+      213: -6883723178190936928
+    second: HitCosmic_53
+  - first:
+      213: 5206619016475270152
+    second: HitCosmic_54
+  - first:
+      213: 7895841092697069943
+    second: HitCosmic_55
+  - first:
+      213: -3516813487919297903
+    second: HitCosmic_56
+  - first:
+      213: -8681670274636183677
+    second: HitCosmic_57
+  - first:
+      213: 6042715572716820334
+    second: HitCosmic_58
+  - first:
+      213: 1732864811839751328
+    second: HitCosmic_59
+  - first:
+      213: -4520414632366065524
+    second: HitCosmic_60
+  - first:
+      213: -7301632995419862800
+    second: HitCosmic_61
+  - first:
+      213: -2902993424449036931
+    second: HitCosmic_62
+  - first:
+      213: -8888443811531759204
+    second: HitCosmic_63
+  - first:
+      213: -8834518416199609667
+    second: HitCosmic_64
+  - first:
+      213: 1954700740246830283
+    second: HitCosmic_65
+  - first:
+      213: -8793836144876246200
+    second: HitCosmic_66
+  - first:
+      213: 1935011985043154373
+    second: HitCosmic_67
+  - first:
+      213: -4607833284256650701
+    second: HitCosmic_68
+  - first:
+      213: -5324709918560861387
+    second: HitCosmic_69
+  - first:
+      213: -2312295685532684356
+    second: HitCosmic_70
+  - first:
+      213: -459489669008455893
+    second: HitCosmic_71
+  - first:
+      213: 8736846606576951487
+    second: HitCosmic_72
+  - first:
+      213: 1721775504349667664
+    second: HitCosmic_73
+  - first:
+      213: 5486324843105223031
+    second: HitCosmic_74
+  - first:
+      213: -2363651590625113790
+    second: HitCosmic_75
+  - first:
+      213: 2391432783013288083
+    second: HitCosmic_76
+  - first:
+      213: 8439234339899770066
+    second: HitCosmic_77
+  - first:
+      213: -1013502991434809088
+    second: HitCosmic_78
+  - first:
+      213: -3526678404915131894
+    second: HitCosmic_79
+  - first:
+      213: -8377015010184050416
+    second: HitCosmic_80
+  - first:
+      213: -1457157578156725534
+    second: HitCosmic_81
+  - first:
+      213: -7055190851141682969
+    second: HitCosmic_82
+  - first:
+      213: 6375096315852913312
+    second: HitCosmic_83
+  - first:
+      213: 6778929737875807393
+    second: HitCosmic_84
+  - first:
+      213: -6317131375364585285
+    second: HitCosmic_85
+  - first:
+      213: -145211459848593105
+    second: HitCosmic_86
+  - first:
+      213: 6002512462825452671
+    second: HitCosmic_87
+  - first:
+      213: -67004439300615688
+    second: HitCosmic_88
+  - first:
+      213: -3871989844684429127
+    second: HitCosmic_89
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HitCosmic_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 488
+        width: 140
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2312a46fe4bd4a50800000000000000
+      internalID: 6507055976898761514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 474
+        width: 202
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740089e2a005f1ea0800000000000000
+      internalID: -5899908982170451897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_2
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 570
+        width: 43
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471b705a719a60510800000000000000
+      internalID: 1515084243674837364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 559
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a341c8661a56a380800000000000000
+      internalID: -8960375356313746520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 471
+        width: 220
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c7871051d78a060800000000000000
+      internalID: 6964954352900930614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_5
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 572
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d771b9c9ff409a910800000000000000
+      internalID: 1849014617902880637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_6
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 476
+        width: 229
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200bc7c3fed4e9760800000000000000
+      internalID: 7466490922134188034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 546
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8725dbdfcb424bdf0800000000000000
+      internalID: -165466892176371080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_8
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 551
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e842b603fd352710800000000000000
+      internalID: 1667807351009331424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_9
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 543
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7949f639798769e0800000000000000
+      internalID: -1628181586564789892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_10
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 547
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793c276f1e0f9c8a0800000000000000
+      internalID: -6284226951725792361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_11
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 560
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1bf7c9f2157c860800000000000000
+      internalID: 7550092565240852950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 547
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7c4771dfef92c40800000000000000
+      internalID: 5488197983901370352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_13
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 539
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe832e8cd234d53c0800000000000000
+      internalID: -4369262199556654865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_14
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 516
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3a3199e13111bc0800000000000000
+      internalID: -3814246387267951694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 436
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece9e8306ccc63960800000000000000
+      internalID: 7581472173560078030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_16
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 446
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f7ccd0c21c22970800000000000000
+      internalID: 8728751422751670101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_17
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 457
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5256f5405c880a0800000000000000
+      internalID: -6879031808237427242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 249
+        width: 186
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e92763861cd16e0800000000000000
+      internalID: -1865122017327276513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 368
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b988d26f9616b2d0800000000000000
+      internalID: -3263396006169376336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_20
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 383
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a327ca1ac7b63170800000000000000
+      internalID: 8157909853688767392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_21
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 247
+        width: 153
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd37de89cb47f2a0800000000000000
+      internalID: -6703806191260713505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_22
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78558a7e42c8dbf0800000000000000
+      internalID: -299275732901341057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_23
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 385
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00128753d52990bf0800000000000000
+      internalID: -357593766372564736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_24
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 255
+        width: 192
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0bf501e4a5ffeb80800000000000000
+      internalID: -8363195894505014518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_25
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 376
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae4034ccef702740800000000000000
+      internalID: 5125237030828134061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_26
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 255
+        width: 145
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8df94ca91119470800000000000000
+      internalID: 8399514136444131519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_27
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 355
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc992f1a50faa24d0800000000000000
+      internalID: -3158519749920253492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_28
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 362
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33f5496d5ea97200800000000000000
+      internalID: 178365376479228732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_29
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 361
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c07dcf60c4686d0800000000000000
+      internalID: -2988617709818278810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_30
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 369
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3892f55fdfa8b1240800000000000000
+      internalID: 4763553854222444931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 350
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614ab3de1537435f0800000000000000
+      internalID: -777870039918599146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_32
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 346
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 100b6db33e8eda320800000000000000
+      internalID: 2570967024957566977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_33
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 339
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b552d2c1498fe6f0800000000000000
+      internalID: -653152505410988623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_34
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 346
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6dece0f30a0d5a0800000000000000
+      internalID: -6498518069603805480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 324
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09adc64c83a854cf0800000000000000
+      internalID: -268656626340406640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_36
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 339
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44df5861e49214a0800000000000000
+      internalID: -6624068406068915124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_37
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 312
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630389a26b25b7ed0800000000000000
+      internalID: -2415245832801996746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_38
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 296
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f68642a1f3d35e0800000000000000
+      internalID: -1928315683932180720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_39
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 291
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c285df53ae5ba60800000000000000
+      internalID: 7689309456409570331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_40
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 283
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa03475284f41260800000000000000
+      internalID: 7067542555898088105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_41
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 298
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87988b40a75d7b00800000000000000
+      internalID: 827914252479666060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_42
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 292
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d69cc27b057b600800000000000000
+      internalID: 483944232626253151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_43
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 295
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5509181b2f81380800000000000000
+      internalID: -9000177011103083104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c096e8834b9bd70800000000000000
+      internalID: 9059470280432880642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_45
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 285
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad047028d2c59410800000000000000
+      internalID: 1483305885801647529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_46
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 248
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270d6e4a9c56ed4f0800000000000000
+      internalID: -802091766895947662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_47
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 243
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb022af048123fc0800000000000000
+      internalID: -3516721691669427205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_48
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 242
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3752f5d4bd09dbc0800000000000000
+      internalID: -3757957343729264835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_49
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 247
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaca06528e6ae9080800000000000000
+      internalID: -9178715474544776018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_50
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 239
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744f8b3de20ad74c0800000000000000
+      internalID: -4288095147205790649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_51
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1
+        width: 131
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addf95df16fb78ff0800000000000000
+      internalID: -33848044598723110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_52
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 140
+        width: 37
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89152c9f60e76cca0800000000000000
+      internalID: -5996967285372071528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_53
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 183
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a46ecfad3a1870a0800000000000000
+      internalID: -6883723178190936928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_54
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 181
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c5dcdd860a14840800000000000000
+      internalID: 5206619016475270152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_55
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 169
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779142dc3a9a39d60800000000000000
+      internalID: 7895841092697069943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_56
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 134
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a844ff3c4c13fc0800000000000000
+      internalID: -3516813487919297903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_57
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 123
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3870e37f1e2848780800000000000000
+      internalID: -8681670274636183677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_58
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 153
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67d1863cc90cd350800000000000000
+      internalID: 6042715572716820334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_59
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 152
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a48b718d5f5c0810800000000000000
+      internalID: 1732864811839751328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_60
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 150
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88b75097d24441c0800000000000000
+      internalID: -4520414632366065524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_61
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 144
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f84ab3f9736baa90800000000000000
+      internalID: -7301632995419862800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_62
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 141
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d9b667cde76b7d0800000000000000
+      internalID: -2902993424449036931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_63
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 133
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9161a74277e5a480800000000000000
+      internalID: -8888443811531759204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_64
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 85
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db296c8ce4c756580800000000000000
+      internalID: -8834518416199609667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_65
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 127
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccfa9087fd702b10800000000000000
+      internalID: 1954700740246830283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_66
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 119
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b29a33e9406f580800000000000000
+      internalID: -8793836144876246200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_67
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 129
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5ee94f52b8ada10800000000000000
+      internalID: 1935011985043154373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_68
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 96
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a29a39a00bd00c0800000000000000
+      internalID: -4607833284256650701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_69
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 114
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5334e246a84da16b0800000000000000
+      internalID: -5324709918560861387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_70
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 105
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbfe728335319efd0800000000000000
+      internalID: -2312295685532684356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_71
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 80
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b270acc94909f99f0800000000000000
+      internalID: -459489669008455893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_72
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 90
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0a81ae2b38f3970800000000000000
+      internalID: 8736846606576951487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_73
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0512bb7e2b9f4e710800000000000000
+      internalID: 1721775504349667664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_74
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 95
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77100b38067532c40800000000000000
+      internalID: 5486324843105223031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_75
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 94
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249c008c66f923fd0800000000000000
+      internalID: -2363651590625113790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_76
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 79
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3981bbf1273103120800000000000000
+      internalID: 2391432783013288083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_77
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 87
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4010e4bee2e1570800000000000000
+      internalID: 8439234339899770066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_78
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 78
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0018bb826605fe1f0800000000000000
+      internalID: -1013502991434809088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_79
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 58
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a0ef50da8be0fc0800000000000000
+      internalID: -3526678404915131894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_80
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 82
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0194dd74b3ddebb80800000000000000
+      internalID: -8377015010184050416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_81
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 81
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea233c27e227cbe0800000000000000
+      internalID: -1457157578156725534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_82
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 53
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e83d170d4de61e90800000000000000
+      internalID: -7055190851141682969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_83
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 73
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa70539254e87850800000000000000
+      internalID: 6375096315852913312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_84
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 43
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac5b672ea8931e50800000000000000
+      internalID: 6778929737875807393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_85
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 21
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb84be3db7a0558a0800000000000000
+      internalID: -6317131375364585285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_86
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 53
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21a86652fa1cfdf0800000000000000
+      internalID: -145211459848593105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_87
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 32
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74f09248453d4350800000000000000
+      internalID: 6002512462825452671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_88
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 42
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1dc1541d3f11ff0800000000000000
+      internalID: -67004439300615688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitCosmic_89
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 28
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b82aad30cde34ac0800000000000000
+      internalID: -3871989844684429127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HitCosmic_0: 6507055976898761514
+      HitCosmic_1: -5899908982170451897
+      HitCosmic_10: -6284226951725792361
+      HitCosmic_11: 7550092565240852950
+      HitCosmic_12: 5488197983901370352
+      HitCosmic_13: -4369262199556654865
+      HitCosmic_14: -3814246387267951694
+      HitCosmic_15: 7581472173560078030
+      HitCosmic_16: 8728751422751670101
+      HitCosmic_17: -6879031808237427242
+      HitCosmic_18: -1865122017327276513
+      HitCosmic_19: -3263396006169376336
+      HitCosmic_2: 1515084243674837364
+      HitCosmic_20: 8157909853688767392
+      HitCosmic_21: -6703806191260713505
+      HitCosmic_22: -299275732901341057
+      HitCosmic_23: -357593766372564736
+      HitCosmic_24: -8363195894505014518
+      HitCosmic_25: 5125237030828134061
+      HitCosmic_26: 8399514136444131519
+      HitCosmic_27: -3158519749920253492
+      HitCosmic_28: 178365376479228732
+      HitCosmic_29: -2988617709818278810
+      HitCosmic_3: -8960375356313746520
+      HitCosmic_30: 4763553854222444931
+      HitCosmic_31: -777870039918599146
+      HitCosmic_32: 2570967024957566977
+      HitCosmic_33: -653152505410988623
+      HitCosmic_34: -6498518069603805480
+      HitCosmic_35: -268656626340406640
+      HitCosmic_36: -6624068406068915124
+      HitCosmic_37: -2415245832801996746
+      HitCosmic_38: -1928315683932180720
+      HitCosmic_39: 7689309456409570331
+      HitCosmic_4: 6964954352900930614
+      HitCosmic_40: 7067542555898088105
+      HitCosmic_41: 827914252479666060
+      HitCosmic_42: 483944232626253151
+      HitCosmic_43: -9000177011103083104
+      HitCosmic_44: 9059470280432880642
+      HitCosmic_45: 1483305885801647529
+      HitCosmic_46: -802091766895947662
+      HitCosmic_47: -3516721691669427205
+      HitCosmic_48: -3757957343729264835
+      HitCosmic_49: -9178715474544776018
+      HitCosmic_5: 1849014617902880637
+      HitCosmic_50: -4288095147205790649
+      HitCosmic_51: -33848044598723110
+      HitCosmic_52: -5996967285372071528
+      HitCosmic_53: -6883723178190936928
+      HitCosmic_54: 5206619016475270152
+      HitCosmic_55: 7895841092697069943
+      HitCosmic_56: -3516813487919297903
+      HitCosmic_57: -8681670274636183677
+      HitCosmic_58: 6042715572716820334
+      HitCosmic_59: 1732864811839751328
+      HitCosmic_6: 7466490922134188034
+      HitCosmic_60: -4520414632366065524
+      HitCosmic_61: -7301632995419862800
+      HitCosmic_62: -2902993424449036931
+      HitCosmic_63: -8888443811531759204
+      HitCosmic_64: -8834518416199609667
+      HitCosmic_65: 1954700740246830283
+      HitCosmic_66: -8793836144876246200
+      HitCosmic_67: 1935011985043154373
+      HitCosmic_68: -4607833284256650701
+      HitCosmic_69: -5324709918560861387
+      HitCosmic_7: -165466892176371080
+      HitCosmic_70: -2312295685532684356
+      HitCosmic_71: -459489669008455893
+      HitCosmic_72: 8736846606576951487
+      HitCosmic_73: 1721775504349667664
+      HitCosmic_74: 5486324843105223031
+      HitCosmic_75: -2363651590625113790
+      HitCosmic_76: 2391432783013288083
+      HitCosmic_77: 8439234339899770066
+      HitCosmic_78: -1013502991434809088
+      HitCosmic_79: -3526678404915131894
+      HitCosmic_8: 1667807351009331424
+      HitCosmic_80: -8377015010184050416
+      HitCosmic_81: -1457157578156725534
+      HitCosmic_82: -7055190851141682969
+      HitCosmic_83: 6375096315852913312
+      HitCosmic_84: 6778929737875807393
+      HitCosmic_85: -6317131375364585285
+      HitCosmic_86: -145211459848593105
+      HitCosmic_87: 6002512462825452671
+      HitCosmic_88: -67004439300615688
+      HitCosmic_89: -3871989844684429127
+      HitCosmic_9: -1628181586564789892
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

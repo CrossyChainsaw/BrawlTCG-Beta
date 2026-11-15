@@ -1,0 +1,5202 @@
+fileFormatVersion: 2
+guid: 9b5536ceda13ffb4eb4015e8ca64c46f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8226845115806280451
+    second: HitMagic_0
+  - first:
+      213: 8856596031646463762
+    second: HitMagic_1
+  - first:
+      213: -5654162416023609829
+    second: HitMagic_2
+  - first:
+      213: -2920525475412216493
+    second: HitMagic_3
+  - first:
+      213: 1997487186583446628
+    second: HitMagic_4
+  - first:
+      213: 5991666017640732057
+    second: HitMagic_5
+  - first:
+      213: -7953042149010858707
+    second: HitMagic_6
+  - first:
+      213: -3783449282647136849
+    second: HitMagic_7
+  - first:
+      213: -5740873082968809123
+    second: HitMagic_8
+  - first:
+      213: -2211657597014240550
+    second: HitMagic_9
+  - first:
+      213: -3036496413641911042
+    second: HitMagic_10
+  - first:
+      213: 4179128028619023408
+    second: HitMagic_11
+  - first:
+      213: -1266385300387577660
+    second: HitMagic_12
+  - first:
+      213: 6503767604850095051
+    second: HitMagic_13
+  - first:
+      213: -8902449217547387801
+    second: HitMagic_14
+  - first:
+      213: 2429309551032373681
+    second: HitMagic_15
+  - first:
+      213: -1963125854581673933
+    second: HitMagic_16
+  - first:
+      213: -6326919703076295576
+    second: HitMagic_17
+  - first:
+      213: 910592548502313856
+    second: HitMagic_18
+  - first:
+      213: -7406935438103690535
+    second: HitMagic_19
+  - first:
+      213: 2871873210868862640
+    second: HitMagic_20
+  - first:
+      213: 4578217884630158192
+    second: HitMagic_21
+  - first:
+      213: 7215354121482506246
+    second: HitMagic_22
+  - first:
+      213: 1415695302262854849
+    second: HitMagic_23
+  - first:
+      213: 4803382841584563639
+    second: HitMagic_24
+  - first:
+      213: -4965502405108985939
+    second: HitMagic_25
+  - first:
+      213: 3475345829142895407
+    second: HitMagic_26
+  - first:
+      213: -6663987512423894436
+    second: HitMagic_27
+  - first:
+      213: 7025064667380792034
+    second: HitMagic_28
+  - first:
+      213: -1167700904686746334
+    second: HitMagic_29
+  - first:
+      213: 1230237034176835943
+    second: HitMagic_30
+  - first:
+      213: 2957806622582752107
+    second: HitMagic_31
+  - first:
+      213: 5421519365102599987
+    second: HitMagic_32
+  - first:
+      213: -9044995414062425441
+    second: HitMagic_33
+  - first:
+      213: 6976468661082222371
+    second: HitMagic_34
+  - first:
+      213: 8863031212169966530
+    second: HitMagic_35
+  - first:
+      213: 1164822736346140941
+    second: HitMagic_36
+  - first:
+      213: 2267667197066896662
+    second: HitMagic_37
+  - first:
+      213: 5264802032065998513
+    second: HitMagic_38
+  - first:
+      213: 5007768633720050987
+    second: HitMagic_39
+  - first:
+      213: 4996110382759622390
+    second: HitMagic_40
+  - first:
+      213: -4831359585901591546
+    second: HitMagic_41
+  - first:
+      213: -3176491582280942357
+    second: HitMagic_42
+  - first:
+      213: 4769968894510282490
+    second: HitMagic_43
+  - first:
+      213: -6654123947955139236
+    second: HitMagic_44
+  - first:
+      213: -4663673996619390789
+    second: HitMagic_45
+  - first:
+      213: 3987181310565957436
+    second: HitMagic_46
+  - first:
+      213: 4129265321382523654
+    second: HitMagic_47
+  - first:
+      213: 1502356156054424782
+    second: HitMagic_48
+  - first:
+      213: 7190745636133718893
+    second: HitMagic_49
+  - first:
+      213: 4067287506542162634
+    second: HitMagic_50
+  - first:
+      213: -813225278110983963
+    second: HitMagic_51
+  - first:
+      213: 5626100125695871391
+    second: HitMagic_52
+  - first:
+      213: 2736950911877525075
+    second: HitMagic_53
+  - first:
+      213: 8972377510201312660
+    second: HitMagic_54
+  - first:
+      213: 7101746927274346795
+    second: HitMagic_55
+  - first:
+      213: 8731543720130396644
+    second: HitMagic_56
+  - first:
+      213: -2257999746101029891
+    second: HitMagic_57
+  - first:
+      213: -3527724556271155597
+    second: HitMagic_58
+  - first:
+      213: -8391072266875581073
+    second: HitMagic_59
+  - first:
+      213: 590517605193077788
+    second: HitMagic_60
+  - first:
+      213: -3718458282283810580
+    second: HitMagic_61
+  - first:
+      213: 6206621864405988028
+    second: HitMagic_62
+  - first:
+      213: 7726747011799649825
+    second: HitMagic_63
+  - first:
+      213: 5666004892158103818
+    second: HitMagic_64
+  - first:
+      213: 3020810101255477998
+    second: HitMagic_65
+  - first:
+      213: -6274542236485130992
+    second: HitMagic_66
+  - first:
+      213: -5278371940667166806
+    second: HitMagic_67
+  - first:
+      213: 4225839958137910980
+    second: HitMagic_68
+  - first:
+      213: -6072480984069065633
+    second: HitMagic_69
+  - first:
+      213: -8567107426784021269
+    second: HitMagic_70
+  - first:
+      213: -2671276345569617925
+    second: HitMagic_71
+  - first:
+      213: -491511818808582003
+    second: HitMagic_72
+  - first:
+      213: 5668446693301798195
+    second: HitMagic_73
+  - first:
+      213: 1372786718519973623
+    second: HitMagic_74
+  - first:
+      213: 9110392758414756563
+    second: HitMagic_75
+  - first:
+      213: 1195665552551652513
+    second: HitMagic_76
+  - first:
+      213: -8941936535775633011
+    second: HitMagic_77
+  - first:
+      213: -6531053214913900066
+    second: HitMagic_78
+  - first:
+      213: 3416294391490200480
+    second: HitMagic_79
+  - first:
+      213: -630371582472420585
+    second: HitMagic_80
+  - first:
+      213: -2607259941277911314
+    second: HitMagic_81
+  - first:
+      213: -3114157516266448358
+    second: HitMagic_82
+  - first:
+      213: -6145967629308873333
+    second: HitMagic_83
+  - first:
+      213: 5893963598235582541
+    second: HitMagic_84
+  - first:
+      213: -5909618266298133225
+    second: HitMagic_85
+  - first:
+      213: 4172797344994507463
+    second: HitMagic_86
+  - first:
+      213: 3859534192675661398
+    second: HitMagic_87
+  - first:
+      213: 2552522506232509834
+    second: HitMagic_88
+  - first:
+      213: -7753030690456336920
+    second: HitMagic_89
+  - first:
+      213: 2880473232621691714
+    second: HitMagic_90
+  - first:
+      213: 9114791612867714111
+    second: HitMagic_91
+  - first:
+      213: -8879202260796964730
+    second: HitMagic_92
+  - first:
+      213: 7846441149166370206
+    second: HitMagic_93
+  - first:
+      213: -623161534947191591
+    second: HitMagic_94
+  - first:
+      213: -3439450139537160536
+    second: HitMagic_95
+  - first:
+      213: -7485050690849157327
+    second: HitMagic_96
+  - first:
+      213: 2809930796749782126
+    second: HitMagic_97
+  - first:
+      213: -956456588874600003
+    second: HitMagic_98
+  - first:
+      213: 69007242195631532
+    second: HitMagic_99
+  - first:
+      213: -7836776254539974141
+    second: HitMagic_100
+  - first:
+      213: -7282461437242416639
+    second: HitMagic_101
+  - first:
+      213: -2808338313771589375
+    second: HitMagic_102
+  - first:
+      213: -2136727525582368772
+    second: HitMagic_103
+  - first:
+      213: 7168366047461646129
+    second: HitMagic_104
+  - first:
+      213: 4350314803877314830
+    second: HitMagic_105
+  - first:
+      213: -6181896984864417571
+    second: HitMagic_106
+  - first:
+      213: 1910824018707890049
+    second: HitMagic_107
+  - first:
+      213: -239488151341716227
+    second: HitMagic_108
+  - first:
+      213: -7383181206859167631
+    second: HitMagic_109
+  - first:
+      213: 4587666856028327062
+    second: HitMagic_110
+  - first:
+      213: 5981191366416069593
+    second: HitMagic_111
+  - first:
+      213: -9203604578575251807
+    second: HitMagic_112
+  - first:
+      213: -4223501352545084749
+    second: HitMagic_113
+  - first:
+      213: -2981644785083270638
+    second: HitMagic_114
+  - first:
+      213: 1218938602956796919
+    second: HitMagic_115
+  - first:
+      213: 7392915167200469183
+    second: HitMagic_116
+  - first:
+      213: 8225300400286948006
+    second: HitMagic_117
+  - first:
+      213: 1120303289018912680
+    second: HitMagic_118
+  - first:
+      213: -5573470222173158561
+    second: HitMagic_119
+  - first:
+      213: -6112585765411472064
+    second: HitMagic_120
+  - first:
+      213: -37951405694406058
+    second: HitMagic_121
+  - first:
+      213: -4705123326694516434
+    second: HitMagic_122
+  - first:
+      213: 6700157331420193349
+    second: HitMagic_123
+  - first:
+      213: -4975504785173410793
+    second: HitMagic_124
+  - first:
+      213: -1585465995630539955
+    second: HitMagic_125
+  - first:
+      213: 7405609600782971659
+    second: HitMagic_126
+  - first:
+      213: 424559164916391486
+    second: HitMagic_127
+  - first:
+      213: 8227196661809609623
+    second: HitMagic_128
+  - first:
+      213: -9151755459077412022
+    second: HitMagic_129
+  - first:
+      213: 5914371203574154017
+    second: HitMagic_130
+  - first:
+      213: -805009420547309551
+    second: HitMagic_131
+  - first:
+      213: -2554887430346850313
+    second: HitMagic_132
+  - first:
+      213: -4324937257105122664
+    second: HitMagic_133
+  - first:
+      213: 5162373611614368755
+    second: HitMagic_134
+  - first:
+      213: -6499163388883810511
+    second: HitMagic_135
+  - first:
+      213: 1106480402772531450
+    second: HitMagic_136
+  - first:
+      213: -6581417656745800859
+    second: HitMagic_137
+  - first:
+      213: -7532113219843906895
+    second: HitMagic_138
+  - first:
+      213: 5945986640853825640
+    second: HitMagic_139
+  - first:
+      213: 8561915027279083360
+    second: HitMagic_140
+  - first:
+      213: 4699034698836355165
+    second: HitMagic_141
+  - first:
+      213: 8381985451725743880
+    second: HitMagic_142
+  - first:
+      213: 8781400558924101982
+    second: HitMagic_143
+  - first:
+      213: 4000384708517416365
+    second: HitMagic_144
+  - first:
+      213: -1359462320054656814
+    second: HitMagic_145
+  - first:
+      213: -7824508790558360178
+    second: HitMagic_146
+  - first:
+      213: 8187938343370268093
+    second: HitMagic_147
+  - first:
+      213: -2602906128639061481
+    second: HitMagic_148
+  - first:
+      213: -2261826678127171594
+    second: HitMagic_149
+  - first:
+      213: -4178929560565070610
+    second: HitMagic_150
+  - first:
+      213: 5817430733891422524
+    second: HitMagic_151
+  - first:
+      213: -6912484867282642608
+    second: HitMagic_152
+  - first:
+      213: 2683681188665555921
+    second: HitMagic_153
+  - first:
+      213: 7436247689394152226
+    second: HitMagic_154
+  - first:
+      213: -6275438916576260778
+    second: HitMagic_155
+  - first:
+      213: 586682169562246699
+    second: HitMagic_156
+  - first:
+      213: -5672416293675574047
+    second: HitMagic_157
+  - first:
+      213: 2145727468653721179
+    second: HitMagic_158
+  - first:
+      213: -4535082927114465727
+    second: HitMagic_159
+  - first:
+      213: -1513903068318195608
+    second: HitMagic_160
+  - first:
+      213: 3381111276440753064
+    second: HitMagic_161
+  - first:
+      213: -8248808556319702122
+    second: HitMagic_162
+  - first:
+      213: -8534619662213044883
+    second: HitMagic_163
+  - first:
+      213: 1674263042208253211
+    second: HitMagic_164
+  - first:
+      213: -2740862365690051651
+    second: HitMagic_165
+  - first:
+      213: 8364495598855889632
+    second: HitMagic_166
+  - first:
+      213: 9056875940509302405
+    second: HitMagic_167
+  - first:
+      213: 8164928455527027838
+    second: HitMagic_168
+  - first:
+      213: -7009135314085929395
+    second: HitMagic_169
+  - first:
+      213: -6531832108246369145
+    second: HitMagic_170
+  - first:
+      213: 8518085285251700502
+    second: HitMagic_171
+  - first:
+      213: -533282958484194978
+    second: HitMagic_172
+  - first:
+      213: 5229156238599265523
+    second: HitMagic_173
+  - first:
+      213: -7405722759753174404
+    second: HitMagic_174
+  - first:
+      213: 1394651723963045389
+    second: HitMagic_175
+  - first:
+      213: -1705136829799257031
+    second: HitMagic_176
+  - first:
+      213: 2110882160665595356
+    second: HitMagic_177
+  - first:
+      213: 4527544357149857503
+    second: HitMagic_178
+  - first:
+      213: 9165865988076962450
+    second: HitMagic_179
+  - first:
+      213: 5963238328246723912
+    second: HitMagic_180
+  - first:
+      213: -1854990464073035600
+    second: HitMagic_181
+  - first:
+      213: -5286972367225795562
+    second: HitMagic_182
+  - first:
+      213: 9223034747216518145
+    second: HitMagic_183
+  - first:
+      213: -5018168779469233657
+    second: HitMagic_184
+  - first:
+      213: -7768706001059826801
+    second: HitMagic_185
+  - first:
+      213: -8131914140635159311
+    second: HitMagic_186
+  - first:
+      213: -846492193285513696
+    second: HitMagic_187
+  - first:
+      213: -2846468862704340632
+    second: HitMagic_188
+  - first:
+      213: 1425112658066507870
+    second: HitMagic_189
+  - first:
+      213: 7958701520064289957
+    second: HitMagic_190
+  - first:
+      213: 5936315065230222296
+    second: HitMagic_191
+  - first:
+      213: 9155687452098728530
+    second: HitMagic_192
+  - first:
+      213: -4297024281931996546
+    second: HitMagic_193
+  - first:
+      213: -6786076037645025486
+    second: HitMagic_194
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HitMagic_0
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 880
+        width: 125
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b6acd8b00ab2270800000000000000
+      internalID: 8226845115806280451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 908
+        width: 75
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217fb61aa23f8ea70800000000000000
+      internalID: 8856596031646463762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_2
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 1027
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e5c8a5d316881b0800000000000000
+      internalID: -5654162416023609829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_3
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1015
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3557390cd853877d0800000000000000
+      internalID: -2920525475412216493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_4
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1038
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46463b7530088bb10800000000000000
+      internalID: 1997487186583446628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_5
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1035
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99551427f7ca62350800000000000000
+      internalID: 5991666017640732057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_6
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1009
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d9f707d4e11a190800000000000000
+      internalID: -7953042149010858707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_7
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1017
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa56c1a4cec7e7bc0800000000000000
+      internalID: -3783449282647136849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_8
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 990
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51ea05f8525450b0800000000000000
+      internalID: -5740873082968809123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_9
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 928
+        width: 71
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad21c25222d9e41e0800000000000000
+      internalID: -2211657597014240550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_10
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1011
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4502f89923cd5d0800000000000000
+      internalID: -3036496413641911042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_11
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1005
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03427b0dcce3ff930800000000000000
+      internalID: 4179128028619023408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_12
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1022
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c04f956745ec6ee0800000000000000
+      internalID: -1266385300387577660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_13
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1007
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc378cc9d26024a50800000000000000
+      internalID: 6503767604850095051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_14
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1022
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c32259a95247480800000000000000
+      internalID: -8902449217547387801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_15
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1014
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b19fb66a24a6b120800000000000000
+      internalID: 2429309551032373681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_16
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1011
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3303644bf6391c4e0800000000000000
+      internalID: -1963125854581673933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_17
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 1015
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ca7bf2d044238a0800000000000000
+      internalID: -6326919703076295576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 898
+        width: 108
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b199c291313ac00800000000000000
+      internalID: 910592548502313856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_19
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 993
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2c3917677453990800000000000000
+      internalID: -7406935438103690535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_20
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 990
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be8ccd2871fad720800000000000000
+      internalID: 2871873210868862640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_21
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 990
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b88bdd8e8198f30800000000000000
+      internalID: 4578217884630158192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_22
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 1006
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6009d9b4856122460800000000000000
+      internalID: 7215354121482506246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_23
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 984
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c41191706f85a310800000000000000
+      internalID: 1415695302262854849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_24
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 951
+        width: 43
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5bad8be3b09a240800000000000000
+      internalID: 4803382841584563639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_25
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 964
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf8124feddf61bb0800000000000000
+      internalID: -4965502405108985939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_26
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 941
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b92b15e98ea3030800000000000000
+      internalID: 3475345829142895407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_27
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 873
+        width: 105
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52b55e2aa2c483a0800000000000000
+      internalID: -6663987512423894436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_28
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 950
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea3167381b0e7160800000000000000
+      internalID: 7025064667380792034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_29
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 951
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2258e34c63e7bcfe0800000000000000
+      internalID: -1167700904686746334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_30
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 930
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761f3a3801ea21110800000000000000
+      internalID: 1230237034176835943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_31
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 894
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63c75db37d3c0920800000000000000
+      internalID: 2957806622582752107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_32
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 931
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f77db532b1d3b40800000000000000
+      internalID: 5421519365102599987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_33
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 906
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a95c5e798b97280800000000000000
+      internalID: -9044995414062425441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_34
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 923
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f637ac84561d060800000000000000
+      internalID: 6976468661082222371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_35
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 903
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3379addefcffa70800000000000000
+      internalID: 8863031212169966530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_36
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 919
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01d5327b184a2010800000000000000
+      internalID: 1164822736346140941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_37
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 895
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6156af51d4f587f10800000000000000
+      internalID: 2267667197066896662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_38
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 879
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be6c06dd85501940800000000000000
+      internalID: 5264802032065998513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_39
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 894
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b251a324a0b2f7540800000000000000
+      internalID: 5007768633720050987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_40
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 913
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6370f2cefb55540800000000000000
+      internalID: 4996110382759622390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_41
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 895
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6044824ed0093fcb0800000000000000
+      internalID: -4831359585901591546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_42
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 874
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec30265cb5dae3d0800000000000000
+      internalID: -3176491582280942357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_43
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 892
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6b2faef65523240800000000000000
+      internalID: 4769968894510282490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_44
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 884
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dc6be368dc7a3a0800000000000000
+      internalID: -6654123947955139236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_45
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 874
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb06643953d474fb0800000000000000
+      internalID: -4663673996619390789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_46
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 876
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f3c57e640555730800000000000000
+      internalID: 3987181310565957436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_47
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 871
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60338589ee81e4930800000000000000
+      internalID: 4129265321382523654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_48
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 877
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecccebfc6f079d410800000000000000
+      internalID: 1502356156054424782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_49
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 872
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6bc0ffce09aac360800000000000000
+      internalID: 7190745636133718893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_50
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 862
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac274d21078e17830800000000000000
+      internalID: 4067287506542162634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_51
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 865
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e893df0be7d6b4f0800000000000000
+      internalID: -813225278110983963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_52
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 825
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9902e6814ce31e40800000000000000
+      internalID: 5626100125695871391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_53
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 825
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e24267a5a9bf520800000000000000
+      internalID: 2736950911877525075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_54
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 826
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495c04ecec9448c70800000000000000
+      internalID: 8972377510201312660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_55
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 826
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29c8e424397e8260800000000000000
+      internalID: 7101746927274346795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_56
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 847
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e14a2370ccac2970800000000000000
+      internalID: 8731543720130396644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_57
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 792
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3d9beb139f9a0e0800000000000000
+      internalID: -2257999746101029891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_58
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 802
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376090ee4310b0fc0800000000000000
+      internalID: -3527724556271155597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_59
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 796
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6dcf382b3cec8b80800000000000000
+      internalID: -8391072266875581073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_60
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 792
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14d52b12a0f13800800000000000000
+      internalID: 590517605193077788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_61
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 802
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce04d5cb4e1656cc0800000000000000
+      internalID: -3718458282283810580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_62
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 796
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2771b93b9522650800000000000000
+      internalID: 6206621864405988028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_63
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 796
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e01ab187bea3b60800000000000000
+      internalID: 7726747011799649825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_64
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 796
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0195bcfd61b1ae40800000000000000
+      internalID: 5666004892158103818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_65
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 701
+        width: 133
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea9e3b38c21ce920800000000000000
+      internalID: 3020810101255477998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_66
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 673
+        width: 143
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0156e1274195ce8a0800000000000000
+      internalID: -6274542236485130992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_67
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 740
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafe42c9fa47fb6b0800000000000000
+      internalID: -5278371940667166806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_68
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 710
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6367e6d0335aa30800000000000000
+      internalID: 4225839958137910980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_69
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 673
+        width: 143
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54bf37e7b63abba0800000000000000
+      internalID: -6072480984069065633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_70
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 740
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be47de19f258b1980800000000000000
+      internalID: -8567107426784021269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_71
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 710
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf75b651158bdead0800000000000000
+      internalID: -2671276345569617925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_72
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 722
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80220dda9ccd29f0800000000000000
+      internalID: -491511818808582003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_73
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 666
+        width: 95
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335cd7e1c3e5aae40800000000000000
+      internalID: 5668446693301798195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_74
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 722
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6d1c54f3e1d0310800000000000000
+      internalID: 1372786718519973623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_75
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 666
+        width: 95
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da4a91e1fd9e6e70800000000000000
+      internalID: 9110392758414756563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_76
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 696
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac23023c7bd79010800000000000000
+      internalID: 1195665552551652513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_77
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 705
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81a10dd81cd7e380800000000000000
+      internalID: -8941936535775633011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_78
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 696
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed152eb34b90d55a0800000000000000
+      internalID: -6531053214913900066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_79
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 705
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3cee416ad196f20800000000000000
+      internalID: 3416294391490200480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_80
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 694
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7130b36b2687047f0800000000000000
+      internalID: -630371582472420585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_81
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 699
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee63603b5e621dbd0800000000000000
+      internalID: -2607259941277911314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_82
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 684
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a535c0d3a48c4d0800000000000000
+      internalID: -3114157516266448358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_83
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 681
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85befdf00325baa0800000000000000
+      internalID: -6145967629308873333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_84
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 665
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d404aef3aa09bc150800000000000000
+      internalID: 5893963598235582541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_85
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 667
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715d32f4f71dcfda0800000000000000
+      internalID: -5909618266298133225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_86
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 676
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca371ca311c8e930800000000000000
+      internalID: 4172797344994507463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_87
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 665
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65628e846e1df8530800000000000000
+      internalID: 3859534192675661398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_88
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 667
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85bd2112b16c6320800000000000000
+      internalID: 2552522506232509834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_89
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 676
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e506a21aa3b76490800000000000000
+      internalID: -7753030690456336920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_90
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 660
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243ef67c42f79f720800000000000000
+      internalID: 2880473232621691714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_91
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 674
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c90befdae3e7e70800000000000000
+      internalID: 9114791612867714111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_92
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 660
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6800a5c769cb6c480800000000000000
+      internalID: -8879202260796964730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_93
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 674
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9db11727a824ec60800000000000000
+      internalID: 7846441149166370206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_94
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 655
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d419c7b2e51a57f0800000000000000
+      internalID: -623161534947191591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_95
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 658
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a64832325e9440d0800000000000000
+      internalID: -3439450139537160536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_96
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 661
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fc42edd02cf1890800000000000000
+      internalID: -7485050690849157327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_97
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 652
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c73b70c21eef620800000000000000
+      internalID: 2809930796749782126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_98
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 658
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db13c09cccbf9b2f0800000000000000
+      internalID: -956456588874600003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_99
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 661
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cadfffd98b925f000800000000000000
+      internalID: 69007242195631532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_100
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 652
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30abdeb748d2e3390800000000000000
+      internalID: -7836776254539974141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_101
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 658
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1026fae28ef7fea90800000000000000
+      internalID: -7282461437242416639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_102
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 489
+        width: 133
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101668ece27c609d0800000000000000
+      internalID: -2808338313771589375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_103
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 528
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff0dd7e2a1d852e0800000000000000
+      internalID: -2136727525582368772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_104
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 470
+        width: 111
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f1ce6c0f62b7360800000000000000
+      internalID: 7168366047461646129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_105
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 528
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e010b32e34c6f5c30800000000000000
+      internalID: 4350314803877314830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_106
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 470
+        width: 111
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd81913027d753aa0800000000000000
+      internalID: -6181896984864417571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_107
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 495
+        width: 101
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f3e5f225c948a10800000000000000
+      internalID: 1910824018707890049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_108
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 495
+        width: 101
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfcac539bca2dacf0800000000000000
+      internalID: -239488151341716227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_109
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 513
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178c1d46fcba98990800000000000000
+      internalID: -7383181206859167631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_110
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 513
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cc665f2baaaaf30800000000000000
+      internalID: 4587666856028327062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 482
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3fcd8abd5710350800000000000000
+      internalID: 5981191366416069593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_112
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 487
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a60dd8066a364080800000000000000
+      internalID: -9203604578575251807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_113
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 472
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba1b2d95eb1365c0800000000000000
+      internalID: -4223501352545084749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_114
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 469
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a37ba8dd11f96d0800000000000000
+      internalID: -2981644785083270638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_115
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 481
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f33040833a8ae010800000000000000
+      internalID: 1218938602956796919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_116
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 484
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0e49bdc29e89660800000000000000
+      internalID: 7392915167200469183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_117
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 481
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa5bf17223262270800000000000000
+      internalID: 8225300400286948006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_118
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 484
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af8caed7ed1c8f00800000000000000
+      internalID: 1120303289018912680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_119
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 484
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53c629cc5e07a2b0800000000000000
+      internalID: -5573470222173158561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_120
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 484
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d3a89d1abbb2ba0800000000000000
+      internalID: -6112585765411472064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_121
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 443
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 652bbd8c56b297ff0800000000000000
+      internalID: -37951405694406058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_122
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 446
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2918ff534b04beb0800000000000000
+      internalID: -4705123326694516434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_123
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 466
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542a78e089dbbfc50800000000000000
+      internalID: 6700157331420193349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_124
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 466
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c8b7d52c473fab0800000000000000
+      internalID: -4975504785173410793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_125
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 442
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b0bfeb31b4ff9e0800000000000000
+      internalID: -1585465995630539955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_126
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 445
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0334eff1b206c660800000000000000
+      internalID: 7405609600782971659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_127
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 442
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e5af2af4654e500800000000000000
+      internalID: 424559164916391486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_128
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 445
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bf07c36cfdc2270800000000000000
+      internalID: 8227196661809609623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_129
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 342
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4be276e5ee6ef080800000000000000
+      internalID: -9151755459077412022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_130
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 342
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12346d22641141250800000000000000
+      internalID: 5914371203574154017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_131
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 359
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1104f67723804d4f0800000000000000
+      internalID: -805009420547309551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_132
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 372
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffb0112b673b8cd0800000000000000
+      internalID: -2554887430346850313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_133
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 357
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a956aaa7cbaf3c0800000000000000
+      internalID: -4324937257105122664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_134
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 359
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3ff16c27f64a740800000000000000
+      internalID: 5162373611614368755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_135
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 372
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1374b54f4555ec5a0800000000000000
+      internalID: -6499163388883810511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_136
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 357
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8103e50120b5f00800000000000000
+      internalID: 1106480402772531450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_137
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 346
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bce23d28b1aa4a0800000000000000
+      internalID: -6581417656745800859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_138
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 327
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b22e23feee887790800000000000000
+      internalID: -7532113219843906895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_139
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 346
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8687f4fb853648250800000000000000
+      internalID: 5945986640853825640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_140
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 327
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0677c06ba5802d670800000000000000
+      internalID: 8561915027279083360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_141
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 349
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58206b7923563140800000000000000
+      internalID: 4699034698836355165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_142
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 345
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807ea92db5bc25470800000000000000
+      internalID: 8381985451725743880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_143
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 348
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e597611584dcdd970800000000000000
+      internalID: 8781400558924101982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_144
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 338
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadc51c82b8348730800000000000000
+      internalID: 4000384708517416365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_145
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 349
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d02d9ff838322de0800000000000000
+      internalID: -1359462320054656814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_146
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 345
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8df8d406b2c96390800000000000000
+      internalID: -7824508790558360178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_147
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 348
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd926faa8661a170800000000000000
+      internalID: 8187938343370268093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_148
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 338
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71218c2baae90ebd0800000000000000
+      internalID: -2602906128639061481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_149
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 325
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f76ab2be906c90e0800000000000000
+      internalID: -2261826678127171594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_150
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 292
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4c321a4b57106c0800000000000000
+      internalID: -4178929560565070610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_151
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 330
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39c90f2e6aabb050800000000000000
+      internalID: 5817430733891422524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_152
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 325
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059da5a13abe110a0800000000000000
+      internalID: -6912484867282642608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_153
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 292
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dbfec482d95e3520800000000000000
+      internalID: 2683681188665555921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_154
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 330
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2236824efdbd23760800000000000000
+      internalID: 7436247689394152226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_155
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 327
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d4fc7dd8929e8a0800000000000000
+      internalID: -6275438916576260778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_156
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 334
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e20d82350542800800000000000000
+      internalID: 586682169562246699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_157
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 328
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec54554f678741b0800000000000000
+      internalID: -5672416293675574047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_158
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 327
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5637e1a3c727cd10800000000000000
+      internalID: 2145727468653721179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_159
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 334
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e476e0b162011c0800000000000000
+      internalID: -4535082927114465727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_160
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 328
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860258c2e298dfae0800000000000000
+      internalID: -1513903068318195608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_161
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 315
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a39152cace1cee20800000000000000
+      internalID: 3381111276440753064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_162
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 317
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6938c547258568d80800000000000000
+      internalID: -8248808556319702122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_163
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 315
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d652ab4b2a0fe8980800000000000000
+      internalID: -8534619662213044883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_164
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 317
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b154363cd5d2c3710800000000000000
+      internalID: 1674263042208253211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_165
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 314
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3ceca333086f9d0800000000000000
+      internalID: -2740862365690051651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_166
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 318
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2af1f1e68a41470800000000000000
+      internalID: 8364495598855889632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_167
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 319
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58eb6d8beac70bd70800000000000000
+      internalID: 9056875940509302405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_168
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 314
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74da20bb27af4170800000000000000
+      internalID: 8164928455527027838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_169
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 318
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e134d519c8abe90800000000000000
+      internalID: -7009135314085929395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_170
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 319
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78cfb7ffd454a55a0800000000000000
+      internalID: -6531832108246369145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_171
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 289
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617d8e9af61563670800000000000000
+      internalID: 8518085285251700502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_172
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 297
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59b7c689f56998f0800000000000000
+      internalID: -533282958484194978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_173
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 295
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc1abcc4e1b19840800000000000000
+      internalID: 5229156238599265523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_174
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 289
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72f2ef1366993990800000000000000
+      internalID: -7405722759753174404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_175
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 297
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0614309a5cca5310800000000000000
+      internalID: 1394651723963045389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_176
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 295
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c216666132658e0800000000000000
+      internalID: -1705136829799257031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_177
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 292
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd8e25242c5b4d10800000000000000
+      internalID: 2110882160665595356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_178
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 300
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6ddb8da9115de30800000000000000
+      internalID: 4527544357149857503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_179
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 287
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2928926ad82b33f70800000000000000
+      internalID: 9165865988076962450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_180
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 296
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845e32a3aada1c250800000000000000
+      internalID: 5963238328246723912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_181
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 292
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b090374000c146e0800000000000000
+      internalID: -1854990464073035600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_182
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 300
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c4332c4a6e0a6b0800000000000000
+      internalID: -5286972367225795562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_183
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 287
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10cdce2ac3dceff70800000000000000
+      internalID: 9223034747216518145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_184
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 296
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 702e7cc1512eb5ab0800000000000000
+      internalID: -5018168779469233657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_185
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 280
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83326a6d03003490800000000000000
+      internalID: -7768706001059826801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_186
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 269
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4277f7c23a52f80800000000000000
+      internalID: -8131914140635159311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_187
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 280
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e531ac5d7a044f0800000000000000
+      internalID: -846492193285513696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_188
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 269
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8613c4e86af4f78d0800000000000000
+      internalID: -2846468862704340632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_189
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 280
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5887f4796407c310800000000000000
+      internalID: 1425112658066507870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_190
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 278
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac1bc09ddcf27e60800000000000000
+      internalID: 7958701520064289957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_191
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 269
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d3e8d19917026250800000000000000
+      internalID: 5936315065230222296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_192
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 280
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25298d09a398f0f70800000000000000
+      internalID: 9155687452098728530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_193
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 278
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e722734ae27ed54c0800000000000000
+      internalID: -4297024281931996546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitMagic_194
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 269
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23fb0654cc303d1a0800000000000000
+      internalID: -6786076037645025486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HitMagic_0: 8226845115806280451
+      HitMagic_1: 8856596031646463762
+      HitMagic_10: -3036496413641911042
+      HitMagic_100: -7836776254539974141
+      HitMagic_101: -7282461437242416639
+      HitMagic_102: -2808338313771589375
+      HitMagic_103: -2136727525582368772
+      HitMagic_104: 7168366047461646129
+      HitMagic_105: 4350314803877314830
+      HitMagic_106: -6181896984864417571
+      HitMagic_107: 1910824018707890049
+      HitMagic_108: -239488151341716227
+      HitMagic_109: -7383181206859167631
+      HitMagic_11: 4179128028619023408
+      HitMagic_110: 4587666856028327062
+      HitMagic_111: 5981191366416069593
+      HitMagic_112: -9203604578575251807
+      HitMagic_113: -4223501352545084749
+      HitMagic_114: -2981644785083270638
+      HitMagic_115: 1218938602956796919
+      HitMagic_116: 7392915167200469183
+      HitMagic_117: 8225300400286948006
+      HitMagic_118: 1120303289018912680
+      HitMagic_119: -5573470222173158561
+      HitMagic_12: -1266385300387577660
+      HitMagic_120: -6112585765411472064
+      HitMagic_121: -37951405694406058
+      HitMagic_122: -4705123326694516434
+      HitMagic_123: 6700157331420193349
+      HitMagic_124: -4975504785173410793
+      HitMagic_125: -1585465995630539955
+      HitMagic_126: 7405609600782971659
+      HitMagic_127: 424559164916391486
+      HitMagic_128: 8227196661809609623
+      HitMagic_129: -9151755459077412022
+      HitMagic_13: 6503767604850095051
+      HitMagic_130: 5914371203574154017
+      HitMagic_131: -805009420547309551
+      HitMagic_132: -2554887430346850313
+      HitMagic_133: -4324937257105122664
+      HitMagic_134: 5162373611614368755
+      HitMagic_135: -6499163388883810511
+      HitMagic_136: 1106480402772531450
+      HitMagic_137: -6581417656745800859
+      HitMagic_138: -7532113219843906895
+      HitMagic_139: 5945986640853825640
+      HitMagic_14: -8902449217547387801
+      HitMagic_140: 8561915027279083360
+      HitMagic_141: 4699034698836355165
+      HitMagic_142: 8381985451725743880
+      HitMagic_143: 8781400558924101982
+      HitMagic_144: 4000384708517416365
+      HitMagic_145: -1359462320054656814
+      HitMagic_146: -7824508790558360178
+      HitMagic_147: 8187938343370268093
+      HitMagic_148: -2602906128639061481
+      HitMagic_149: -2261826678127171594
+      HitMagic_15: 2429309551032373681
+      HitMagic_150: -4178929560565070610
+      HitMagic_151: 5817430733891422524
+      HitMagic_152: -6912484867282642608
+      HitMagic_153: 2683681188665555921
+      HitMagic_154: 7436247689394152226
+      HitMagic_155: -6275438916576260778
+      HitMagic_156: 586682169562246699
+      HitMagic_157: -5672416293675574047
+      HitMagic_158: 2145727468653721179
+      HitMagic_159: -4535082927114465727
+      HitMagic_16: -1963125854581673933
+      HitMagic_160: -1513903068318195608
+      HitMagic_161: 3381111276440753064
+      HitMagic_162: -8248808556319702122
+      HitMagic_163: -8534619662213044883
+      HitMagic_164: 1674263042208253211
+      HitMagic_165: -2740862365690051651
+      HitMagic_166: 8364495598855889632
+      HitMagic_167: 9056875940509302405
+      HitMagic_168: 8164928455527027838
+      HitMagic_169: -7009135314085929395
+      HitMagic_17: -6326919703076295576
+      HitMagic_170: -6531832108246369145
+      HitMagic_171: 8518085285251700502
+      HitMagic_172: -533282958484194978
+      HitMagic_173: 5229156238599265523
+      HitMagic_174: -7405722759753174404
+      HitMagic_175: 1394651723963045389
+      HitMagic_176: -1705136829799257031
+      HitMagic_177: 2110882160665595356
+      HitMagic_178: 4527544357149857503
+      HitMagic_179: 9165865988076962450
+      HitMagic_18: 910592548502313856
+      HitMagic_180: 5963238328246723912
+      HitMagic_181: -1854990464073035600
+      HitMagic_182: -5286972367225795562
+      HitMagic_183: 9223034747216518145
+      HitMagic_184: -5018168779469233657
+      HitMagic_185: -7768706001059826801
+      HitMagic_186: -8131914140635159311
+      HitMagic_187: -846492193285513696
+      HitMagic_188: -2846468862704340632
+      HitMagic_189: 1425112658066507870
+      HitMagic_19: -7406935438103690535
+      HitMagic_190: 7958701520064289957
+      HitMagic_191: 5936315065230222296
+      HitMagic_192: 9155687452098728530
+      HitMagic_193: -4297024281931996546
+      HitMagic_194: -6786076037645025486
+      HitMagic_2: -5654162416023609829
+      HitMagic_20: 2871873210868862640
+      HitMagic_21: 4578217884630158192
+      HitMagic_22: 7215354121482506246
+      HitMagic_23: 1415695302262854849
+      HitMagic_24: 4803382841584563639
+      HitMagic_25: -4965502405108985939
+      HitMagic_26: 3475345829142895407
+      HitMagic_27: -6663987512423894436
+      HitMagic_28: 7025064667380792034
+      HitMagic_29: -1167700904686746334
+      HitMagic_3: -2920525475412216493
+      HitMagic_30: 1230237034176835943
+      HitMagic_31: 2957806622582752107
+      HitMagic_32: 5421519365102599987
+      HitMagic_33: -9044995414062425441
+      HitMagic_34: 6976468661082222371
+      HitMagic_35: 8863031212169966530
+      HitMagic_36: 1164822736346140941
+      HitMagic_37: 2267667197066896662
+      HitMagic_38: 5264802032065998513
+      HitMagic_39: 5007768633720050987
+      HitMagic_4: 1997487186583446628
+      HitMagic_40: 4996110382759622390
+      HitMagic_41: -4831359585901591546
+      HitMagic_42: -3176491582280942357
+      HitMagic_43: 4769968894510282490
+      HitMagic_44: -6654123947955139236
+      HitMagic_45: -4663673996619390789
+      HitMagic_46: 3987181310565957436
+      HitMagic_47: 4129265321382523654
+      HitMagic_48: 1502356156054424782
+      HitMagic_49: 7190745636133718893
+      HitMagic_5: 5991666017640732057
+      HitMagic_50: 4067287506542162634
+      HitMagic_51: -813225278110983963
+      HitMagic_52: 5626100125695871391
+      HitMagic_53: 2736950911877525075
+      HitMagic_54: 8972377510201312660
+      HitMagic_55: 7101746927274346795
+      HitMagic_56: 8731543720130396644
+      HitMagic_57: -2257999746101029891
+      HitMagic_58: -3527724556271155597
+      HitMagic_59: -8391072266875581073
+      HitMagic_6: -7953042149010858707
+      HitMagic_60: 590517605193077788
+      HitMagic_61: -3718458282283810580
+      HitMagic_62: 6206621864405988028
+      HitMagic_63: 7726747011799649825
+      HitMagic_64: 5666004892158103818
+      HitMagic_65: 3020810101255477998
+      HitMagic_66: -6274542236485130992
+      HitMagic_67: -5278371940667166806
+      HitMagic_68: 4225839958137910980
+      HitMagic_69: -6072480984069065633
+      HitMagic_7: -3783449282647136849
+      HitMagic_70: -8567107426784021269
+      HitMagic_71: -2671276345569617925
+      HitMagic_72: -491511818808582003
+      HitMagic_73: 5668446693301798195
+      HitMagic_74: 1372786718519973623
+      HitMagic_75: 9110392758414756563
+      HitMagic_76: 1195665552551652513
+      HitMagic_77: -8941936535775633011
+      HitMagic_78: -6531053214913900066
+      HitMagic_79: 3416294391490200480
+      HitMagic_8: -5740873082968809123
+      HitMagic_80: -630371582472420585
+      HitMagic_81: -2607259941277911314
+      HitMagic_82: -3114157516266448358
+      HitMagic_83: -6145967629308873333
+      HitMagic_84: 5893963598235582541
+      HitMagic_85: -5909618266298133225
+      HitMagic_86: 4172797344994507463
+      HitMagic_87: 3859534192675661398
+      HitMagic_88: 2552522506232509834
+      HitMagic_89: -7753030690456336920
+      HitMagic_9: -2211657597014240550
+      HitMagic_90: 2880473232621691714
+      HitMagic_91: 9114791612867714111
+      HitMagic_92: -8879202260796964730
+      HitMagic_93: 7846441149166370206
+      HitMagic_94: -623161534947191591
+      HitMagic_95: -3439450139537160536
+      HitMagic_96: -7485050690849157327
+      HitMagic_97: 2809930796749782126
+      HitMagic_98: -956456588874600003
+      HitMagic_99: 69007242195631532
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

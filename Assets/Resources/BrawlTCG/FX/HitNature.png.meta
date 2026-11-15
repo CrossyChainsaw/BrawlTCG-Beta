@@ -1,0 +1,4942 @@
+fileFormatVersion: 2
+guid: 44194730495e6834bb8e1de1789ce6c3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1977879432188241023
+    second: HitNature_0
+  - first:
+      213: 9072771065250463448
+    second: HitNature_1
+  - first:
+      213: 7597399833048931517
+    second: HitNature_2
+  - first:
+      213: -8386629235436636
+    second: HitNature_3
+  - first:
+      213: -6386346200706580391
+    second: HitNature_4
+  - first:
+      213: -2044727898532094424
+    second: HitNature_5
+  - first:
+      213: -2805143335843376649
+    second: HitNature_6
+  - first:
+      213: 2389737157858688544
+    second: HitNature_7
+  - first:
+      213: 8568747560055737663
+    second: HitNature_8
+  - first:
+      213: -8612693759860147537
+    second: HitNature_9
+  - first:
+      213: -8237693684538027152
+    second: HitNature_10
+  - first:
+      213: 8817739063872423319
+    second: HitNature_11
+  - first:
+      213: -9010021616401301002
+    second: HitNature_12
+  - first:
+      213: -5829811792573592349
+    second: HitNature_13
+  - first:
+      213: -8830959069098358316
+    second: HitNature_14
+  - first:
+      213: -3638531259641235593
+    second: HitNature_15
+  - first:
+      213: -4739318907933905984
+    second: HitNature_16
+  - first:
+      213: -4385828220510554758
+    second: HitNature_17
+  - first:
+      213: -8048071567280282085
+    second: HitNature_18
+  - first:
+      213: 5962593502880269415
+    second: HitNature_19
+  - first:
+      213: -2850974690929368304
+    second: HitNature_20
+  - first:
+      213: -4322523005626880349
+    second: HitNature_21
+  - first:
+      213: 31828916066856849
+    second: HitNature_22
+  - first:
+      213: -6303420908700193834
+    second: HitNature_23
+  - first:
+      213: -25579252191769867
+    second: HitNature_24
+  - first:
+      213: -4967073228128920675
+    second: HitNature_25
+  - first:
+      213: 132247200872016909
+    second: HitNature_26
+  - first:
+      213: 7279824293617908672
+    second: HitNature_27
+  - first:
+      213: 3173472245005070208
+    second: HitNature_28
+  - first:
+      213: -6426490365112067014
+    second: HitNature_29
+  - first:
+      213: -8478891527424404427
+    second: HitNature_30
+  - first:
+      213: -3415832195762130193
+    second: HitNature_31
+  - first:
+      213: -4014933268325714193
+    second: HitNature_32
+  - first:
+      213: -5912107623747247955
+    second: HitNature_33
+  - first:
+      213: 5286393536635229338
+    second: HitNature_34
+  - first:
+      213: -7863082974492803220
+    second: HitNature_35
+  - first:
+      213: 6354430437613940283
+    second: HitNature_36
+  - first:
+      213: 5367961558322355085
+    second: HitNature_37
+  - first:
+      213: 7196298464182330921
+    second: HitNature_38
+  - first:
+      213: 8223743381647995147
+    second: HitNature_39
+  - first:
+      213: 2239112209268538402
+    second: HitNature_40
+  - first:
+      213: 8916354820676266733
+    second: HitNature_41
+  - first:
+      213: 956950502110051277
+    second: HitNature_42
+  - first:
+      213: -5257160372900901973
+    second: HitNature_43
+  - first:
+      213: -1014433764702798004
+    second: HitNature_44
+  - first:
+      213: -1560986514140282969
+    second: HitNature_45
+  - first:
+      213: 3007565665290599748
+    second: HitNature_46
+  - first:
+      213: 2413127776887336620
+    second: HitNature_47
+  - first:
+      213: -2619573911604850223
+    second: HitNature_48
+  - first:
+      213: -7581715714944255903
+    second: HitNature_49
+  - first:
+      213: 5313619685977538566
+    second: HitNature_50
+  - first:
+      213: -6407826025978153222
+    second: HitNature_51
+  - first:
+      213: -1284153296043056385
+    second: HitNature_52
+  - first:
+      213: -5204418750688252170
+    second: HitNature_53
+  - first:
+      213: 5698797270083053028
+    second: HitNature_54
+  - first:
+      213: -8579735190098422818
+    second: HitNature_55
+  - first:
+      213: 1885114606898423454
+    second: HitNature_56
+  - first:
+      213: -4517963821887581056
+    second: HitNature_57
+  - first:
+      213: -8288989094901303252
+    second: HitNature_58
+  - first:
+      213: 1384731518513983879
+    second: HitNature_59
+  - first:
+      213: -2360992619472177059
+    second: HitNature_60
+  - first:
+      213: -2979168163409930835
+    second: HitNature_61
+  - first:
+      213: 6711158126415385325
+    second: HitNature_62
+  - first:
+      213: -7275688948572730533
+    second: HitNature_63
+  - first:
+      213: 5596604866008928619
+    second: HitNature_64
+  - first:
+      213: 2995310111772793771
+    second: HitNature_65
+  - first:
+      213: 8167880060860126628
+    second: HitNature_66
+  - first:
+      213: -2698447510100040755
+    second: HitNature_67
+  - first:
+      213: 5334702493187363741
+    second: HitNature_68
+  - first:
+      213: -1902513833783132696
+    second: HitNature_69
+  - first:
+      213: 2665062434412464656
+    second: HitNature_70
+  - first:
+      213: 2030343193726610084
+    second: HitNature_71
+  - first:
+      213: 7289247937484670845
+    second: HitNature_72
+  - first:
+      213: 2337568205281137477
+    second: HitNature_73
+  - first:
+      213: 7670701022637028202
+    second: HitNature_74
+  - first:
+      213: -2256812845279330959
+    second: HitNature_75
+  - first:
+      213: -3319386874151196570
+    second: HitNature_76
+  - first:
+      213: -5737712133166777638
+    second: HitNature_77
+  - first:
+      213: -1500303128546539890
+    second: HitNature_78
+  - first:
+      213: 4370856395052117739
+    second: HitNature_79
+  - first:
+      213: -3347702691191347007
+    second: HitNature_80
+  - first:
+      213: -4100929922172999062
+    second: HitNature_81
+  - first:
+      213: -7007095788523456483
+    second: HitNature_82
+  - first:
+      213: 7413415127871460716
+    second: HitNature_83
+  - first:
+      213: -5708647022579420153
+    second: HitNature_84
+  - first:
+      213: -7266810361014863907
+    second: HitNature_85
+  - first:
+      213: -2733732918944104499
+    second: HitNature_86
+  - first:
+      213: 7354385539626830037
+    second: HitNature_87
+  - first:
+      213: 5071831480583716716
+    second: HitNature_88
+  - first:
+      213: 3501291126217992517
+    second: HitNature_89
+  - first:
+      213: 6709060924975616593
+    second: HitNature_90
+  - first:
+      213: 6528784532410895840
+    second: HitNature_91
+  - first:
+      213: -2646656090727083193
+    second: HitNature_92
+  - first:
+      213: -461376575304426694
+    second: HitNature_93
+  - first:
+      213: -2594203874024380793
+    second: HitNature_94
+  - first:
+      213: -2563027196020094689
+    second: HitNature_95
+  - first:
+      213: -5969012195048271778
+    second: HitNature_96
+  - first:
+      213: 8961316341439603212
+    second: HitNature_97
+  - first:
+      213: -1432864580316011808
+    second: HitNature_98
+  - first:
+      213: -3683529697963649413
+    second: HitNature_99
+  - first:
+      213: -1851030419846824850
+    second: HitNature_100
+  - first:
+      213: -116167891643407185
+    second: HitNature_101
+  - first:
+      213: 4021135138159161854
+    second: HitNature_102
+  - first:
+      213: 5385440081291423360
+    second: HitNature_103
+  - first:
+      213: -4743464386593834234
+    second: HitNature_104
+  - first:
+      213: -1505312900202099286
+    second: HitNature_105
+  - first:
+      213: -4791954136674732868
+    second: HitNature_106
+  - first:
+      213: 3954017639955568981
+    second: HitNature_107
+  - first:
+      213: 4184778083477394638
+    second: HitNature_108
+  - first:
+      213: 6167192424275132059
+    second: HitNature_109
+  - first:
+      213: 127596497566950095
+    second: HitNature_110
+  - first:
+      213: 7405864483488921271
+    second: HitNature_111
+  - first:
+      213: 8123674253030844889
+    second: HitNature_112
+  - first:
+      213: -3010149806021488603
+    second: HitNature_113
+  - first:
+      213: -966113672870095484
+    second: HitNature_114
+  - first:
+      213: -4530184869830630080
+    second: HitNature_115
+  - first:
+      213: 4097866393975948471
+    second: HitNature_116
+  - first:
+      213: 4573401267269238475
+    second: HitNature_117
+  - first:
+      213: -6672373489349470538
+    second: HitNature_118
+  - first:
+      213: 1642183223888354078
+    second: HitNature_119
+  - first:
+      213: -8967095589591453071
+    second: HitNature_120
+  - first:
+      213: 5227695305469228617
+    second: HitNature_121
+  - first:
+      213: 7621930505681858728
+    second: HitNature_122
+  - first:
+      213: -6495644209489174820
+    second: HitNature_123
+  - first:
+      213: 6774378460253737828
+    second: HitNature_124
+  - first:
+      213: 2061684190331375459
+    second: HitNature_125
+  - first:
+      213: 8840716269802957853
+    second: HitNature_126
+  - first:
+      213: 245113094724712948
+    second: HitNature_127
+  - first:
+      213: -4007267422531256216
+    second: HitNature_128
+  - first:
+      213: -6416159459418261293
+    second: HitNature_129
+  - first:
+      213: 6715556405076450789
+    second: HitNature_130
+  - first:
+      213: 7811297835285914942
+    second: HitNature_131
+  - first:
+      213: -507082321819416616
+    second: HitNature_132
+  - first:
+      213: -9148670115462126140
+    second: HitNature_133
+  - first:
+      213: -8317904572896305864
+    second: HitNature_134
+  - first:
+      213: -6956970051916043267
+    second: HitNature_135
+  - first:
+      213: 4449855351090732351
+    second: HitNature_136
+  - first:
+      213: 5974562559949716339
+    second: HitNature_137
+  - first:
+      213: -7365354463024258604
+    second: HitNature_138
+  - first:
+      213: 6241657643862570252
+    second: HitNature_139
+  - first:
+      213: 7766362249757324715
+    second: HitNature_140
+  - first:
+      213: 1283732125322297091
+    second: HitNature_141
+  - first:
+      213: -2105315385507426232
+    second: HitNature_142
+  - first:
+      213: -4975854123235806464
+    second: HitNature_143
+  - first:
+      213: -4205832665344176929
+    second: HitNature_144
+  - first:
+      213: 3472544360618218746
+    second: HitNature_145
+  - first:
+      213: 6858446865184107139
+    second: HitNature_146
+  - first:
+      213: -4718912840494560526
+    second: HitNature_147
+  - first:
+      213: -5509105598604226295
+    second: HitNature_148
+  - first:
+      213: -7286322468136176972
+    second: HitNature_149
+  - first:
+      213: -4097221996094813372
+    second: HitNature_150
+  - first:
+      213: 5412669492619945403
+    second: HitNature_151
+  - first:
+      213: -776864414394478915
+    second: HitNature_152
+  - first:
+      213: -2961438133857905195
+    second: HitNature_153
+  - first:
+      213: 8448300003365111507
+    second: HitNature_154
+  - first:
+      213: 1488461808128879459
+    second: HitNature_155
+  - first:
+      213: -7008902820824704355
+    second: HitNature_156
+  - first:
+      213: 3251189976625385461
+    second: HitNature_157
+  - first:
+      213: -4897238869823707149
+    second: HitNature_158
+  - first:
+      213: 6716201360261240507
+    second: HitNature_159
+  - first:
+      213: -8548082943037474409
+    second: HitNature_160
+  - first:
+      213: 8788073935138830462
+    second: HitNature_161
+  - first:
+      213: -5645280210018497005
+    second: HitNature_162
+  - first:
+      213: 5290102648922000959
+    second: HitNature_163
+  - first:
+      213: -4875222520887242060
+    second: HitNature_164
+  - first:
+      213: 9083078692201439449
+    second: HitNature_165
+  - first:
+      213: -2504603643193457722
+    second: HitNature_166
+  - first:
+      213: -9044745715877061961
+    second: HitNature_167
+  - first:
+      213: 3935380928794846312
+    second: HitNature_168
+  - first:
+      213: 6784585514959596007
+    second: HitNature_169
+  - first:
+      213: -7596801577336574429
+    second: HitNature_170
+  - first:
+      213: -2032234398309774639
+    second: HitNature_171
+  - first:
+      213: -4593237850586641868
+    second: HitNature_172
+  - first:
+      213: 4816244929544776711
+    second: HitNature_173
+  - first:
+      213: -6307911232403580204
+    second: HitNature_174
+  - first:
+      213: -2532624666795095279
+    second: HitNature_175
+  - first:
+      213: 757819592042256603
+    second: HitNature_176
+  - first:
+      213: -645316706652002772
+    second: HitNature_177
+  - first:
+      213: 681515342183194653
+    second: HitNature_178
+  - first:
+      213: -7014471465446910603
+    second: HitNature_179
+  - first:
+      213: -4956671080884040147
+    second: HitNature_180
+  - first:
+      213: 1788952443259462618
+    second: HitNature_181
+  - first:
+      213: -4206765043010514286
+    second: HitNature_182
+  - first:
+      213: 6789765968082895777
+    second: HitNature_183
+  - first:
+      213: -702040774776161528
+    second: HitNature_184
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HitNature_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 492
+        width: 159
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74a1244dd6d27b10800000000000000
+      internalID: 1977879432188241023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 510
+        width: 163
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de32b8d635f8ed70800000000000000
+      internalID: 9072771065250463448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_2
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 634
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc5e7935e26f6960800000000000000
+      internalID: 7597399833048931517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_3
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 614
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a31f87b76432eff0800000000000000
+      internalID: -8386629235436636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_4
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 487
+        width: 162
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950083e77f32f57a0800000000000000
+      internalID: -6386346200706580391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_5
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 635
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ed9a94fcaaf93e0800000000000000
+      internalID: -2044727898532094424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_6
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 619
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f150039ff02219d0800000000000000
+      internalID: -2805143335843376649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_7
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 593
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ef7b0a84d0a2120800000000000000
+      internalID: 2389737157858688544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_8
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 507
+        width: 46
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d0e17b18e4ae670800000000000000
+      internalID: 8568747560055737663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 507
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faaff4c48a0997880800000000000000
+      internalID: -8612693759860147537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_10
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 487
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073d1a43d35ddad80800000000000000
+      internalID: -8237693684538027152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_11
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 490
+        width: 76
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7958330d5f6ee5a70800000000000000
+      internalID: 8817739063872423319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_12
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 492
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f14fc7b319f5f280800000000000000
+      internalID: -9010021616401301002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_13
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 324
+        width: 164
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec8444ff09581fa0800000000000000
+      internalID: -5829811792573592349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_14
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 435
+        width: 11
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9c06cd381227580800000000000000
+      internalID: -8830959069098358316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_15
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 449
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777fdecd817518dc0800000000000000
+      internalID: -3638531259641235593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_16
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 460
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cbae4f209e8a3eb0800000000000000
+      internalID: -4739318907933905984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_17
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 473
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75b59678786223c0800000000000000
+      internalID: -4385828220510554758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_18
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 464
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b166651dc818f4090800000000000000
+      internalID: -8048071567280282085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_19
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 465
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7640b3f13336fb250800000000000000
+      internalID: 5962593502880269415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_20
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 459
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013a68baf9d4f68d0800000000000000
+      internalID: -2850974690929368304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_21
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 439
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aee7246a305304c0800000000000000
+      internalID: -4322523005626880349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_22
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 451
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f20c30b34117000800000000000000
+      internalID: 31828916066856849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_23
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 460
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dba72b9410c588a0800000000000000
+      internalID: -6303420908700193834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_24
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 442
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa4d7f3ecf15aff0800000000000000
+      internalID: -25579252191769867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_25
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 344
+        width: 91
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9bd5083739611bb0800000000000000
+      internalID: -4967073228128920675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 429
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c2486e026d5d100800000000000000
+      internalID: 132247200872016909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_27
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 435
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cbba58ff91270560800000000000000
+      internalID: 7279824293617908672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_28
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 443
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fa61c61307a0c20800000000000000
+      internalID: 3173472245005070208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_29
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 438
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c560bdf0580d6a0800000000000000
+      internalID: -6426490365112067014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_30
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 436
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5349cc2341de45a80800000000000000
+      internalID: -8478891527424404427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_31
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 424
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2714f37b68890d0800000000000000
+      internalID: -3415832195762130193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_32
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 375
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe63c88e6771848c0800000000000000
+      internalID: -4014933268325714193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_33
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 428
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da0aaac9079f3fda0800000000000000
+      internalID: -5912107623747247955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_34
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 428
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94501eb9ea0d5940800000000000000
+      internalID: 5286393536635229338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_35
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 429
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f3fe1f1b7b0e290800000000000000
+      internalID: -7863082974492803220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_36
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 432
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ea8e7d0d87f2850800000000000000
+      internalID: 6354430437613940283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_37
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 430
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b91cbb894de7a40800000000000000
+      internalID: 5367961558322355085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_38
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 410
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926e64753536ed360800000000000000
+      internalID: 7196298464182330921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_39
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 420
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01391bc80b902270800000000000000
+      internalID: 8223743381647995147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_40
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 419
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cf0b5e0bce21f10800000000000000
+      internalID: 2239112209268538402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_41
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 408
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea20c1f7714dbb70800000000000000
+      internalID: 8916354820676266733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_42
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 414
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcbb6e95965c74d00800000000000000
+      internalID: 956950502110051277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_43
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 417
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab4bf59e70da07b0800000000000000
+      internalID: -5257160372900901973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_44
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 370
+        width: 69
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f3abe9dd10ce1f0800000000000000
+      internalID: -1014433764702798004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_45
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 420
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af3e7d2903465ae0800000000000000
+      internalID: -1560986514140282969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_46
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 411
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44dbe4ea9050db920800000000000000
+      internalID: 3007565665290599748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_47
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 406
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae6ff28de62d7120800000000000000
+      internalID: 2413127776887336620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_48
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 397
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d199ef086765abd0800000000000000
+      internalID: -2619573911604850223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_49
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 408
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16830c61ab558c690800000000000000
+      internalID: -7581715714944255903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_50
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 406
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600c63e93f4cdb940800000000000000
+      internalID: 5313619685977538566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_51
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 397
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6b113fd24d217a0800000000000000
+      internalID: -6407826025978153222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_52
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 411
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2e4388165cd2ee0800000000000000
+      internalID: -1284153296043056385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_53
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 404
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe28de68b036c7b0800000000000000
+      internalID: -5204418750688252170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_54
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 389
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e524427ce1361f40800000000000000
+      internalID: 5698797270083053028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_55
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 397
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3d34f4d48aee880800000000000000
+      internalID: -8579735190098422818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_56
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 381
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96a4194fb5492a10800000000000000
+      internalID: 1885114606898423454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_57
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 372
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084135857d7fc41c0800000000000000
+      internalID: -4517963821887581056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_58
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 391
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28325bc55897fc80800000000000000
+      internalID: -8288989094901303252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_59
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 387
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781305ebafd873310800000000000000
+      internalID: 1384731518513983879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_60
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 390
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58ba0fb8b11c3fd0800000000000000
+      internalID: -2360992619472177059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_61
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 392
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da55cc5f65ed7a6d0800000000000000
+      internalID: -2979168163409930835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_62
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 395
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2177c32c2d22d50800000000000000
+      internalID: 6711158126415385325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_63
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 389
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b4614137f870b90800000000000000
+      internalID: -7275688948572730533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_64
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 369
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b615faa39722bad40800000000000000
+      internalID: 5596604866008928619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_65
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 379
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab5a544daa719920800000000000000
+      internalID: 2995310111772793771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_66
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 386
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5509bd3a32a5170800000000000000
+      internalID: 8167880060860126628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_67
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 243
+        width: 70
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3237b59403d8ad0800000000000000
+      internalID: -2698447510100040755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_68
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 354
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93d2d037aba80a40800000000000000
+      internalID: 5334702493187363741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_69
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 372
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edf6158fb9e895e0800000000000000
+      internalID: -1902513833783132696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_70
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 369
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a846bf9243cf420800000000000000
+      internalID: 2665062434412464656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_71
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 339
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aae432a06a3d2c10800000000000000
+      internalID: 2030343193726610084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_72
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 374
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77c589016c982560800000000000000
+      internalID: 7289247937484670845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_73
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 366
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5439702d5e5b07020800000000000000
+      internalID: 2337568205281137477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_74
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 366
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63718060fdc37a60800000000000000
+      internalID: 7670701022637028202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_75
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 325
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d3690aca03ea0e0800000000000000
+      internalID: -2256812845279330959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_76
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 342
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668af1e893b2fe1d0800000000000000
+      internalID: -3319386874151196570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_77
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 363
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada352fe63d8f50b0800000000000000
+      internalID: -5737712133166777638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_78
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 363
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e868397e04add2be0800000000000000
+      internalID: -1500303128546539890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_79
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 352
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee6357cbb668ac30800000000000000
+      internalID: 4370856395052117739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_80
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 354
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8abe5a3229a81d0800000000000000
+      internalID: -3347702691191347007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_81
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 353
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6aab14a6f19617c0800000000000000
+      internalID: -4100929922172999062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_82
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 346
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d187ce9618bc1ce90800000000000000
+      internalID: -7007095788523456483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_83
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 358
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c651945e7cdb1e660800000000000000
+      internalID: 7413415127871460716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_84
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 358
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 704ff0757cfc6c0b0800000000000000
+      internalID: -5708647022579420153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_85
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 363
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7b4955a7a172b90800000000000000
+      internalID: -7266810361014863907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_86
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 340
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf7b87e464df0ad0800000000000000
+      internalID: -2733732918944104499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_87
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 293
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d80abedea6001660800000000000000
+      internalID: 7354385539626830037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_88
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 330
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ff5d02cd3c26640800000000000000
+      internalID: 5071831480583716716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_89
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 334
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54963798ab5179030800000000000000
+      internalID: 3501291126217992517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_90
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 343
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15210a97d5f5b1d50800000000000000
+      internalID: 6709060924975616593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_91
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 340
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed8a65f0f6ea9a50800000000000000
+      internalID: 6528784532410895840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_92
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 346
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743969dde40354bd0800000000000000
+      internalID: -2646656090727083193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_93
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 325
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b1b41037cd899f0800000000000000
+      internalID: -461376575304426694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_94
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 342
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786a5dd32598ffbd0800000000000000
+      internalID: -2594203874024380793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_95
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 346
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f198e8f385c4e6cd0800000000000000
+      internalID: -2563027196020094689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_96
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 341
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e505c26a80fc92da0800000000000000
+      internalID: -5969012195048271778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_97
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 247
+        width: 127
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c022963cbbdfc5c70800000000000000
+      internalID: 8961316341439603212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_98
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 316
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2660f71417d1ce0800000000000000
+      internalID: -1432864580316011808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_99
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 317
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b765641814971ecc0800000000000000
+      internalID: -3683529697963649413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_100
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 302
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c769ce3a1df46e0800000000000000
+      internalID: -1851030419846824850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_101
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 323
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4e9440be9436ef0800000000000000
+      internalID: -116167891643407185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_102
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 331
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef171df6a11fdc730800000000000000
+      internalID: 4021135138159161854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_103
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 272
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ea68c783decba40800000000000000
+      internalID: 5385440081291423360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_104
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 272
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bbb58b544db2eb0800000000000000
+      internalID: -4743464386593834234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_105
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 282
+        width: 54
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad04ab84ed0c1be0800000000000000
+      internalID: -1505312900202099286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_106
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 301
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4f98ff91f8f7db0800000000000000
+      internalID: -4791954136674732868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_107
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 315
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5591e21281e7fd630800000000000000
+      internalID: 3954017639955568981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_108
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 291
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec49289be71531a30800000000000000
+      internalID: 4184778083477394638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_109
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 293
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e366ea5d4469550800000000000000
+      internalID: 6167192424275132059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_110
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 271
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2ef08a65055c100800000000000000
+      internalID: 127596497566950095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_111
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 265
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6f901828ae6c660800000000000000
+      internalID: 7405864483488921271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_112
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 293
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9e3ea21b61db070800000000000000
+      internalID: 8123674253030844889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_113
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 292
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 520d06b23bcc936d0800000000000000
+      internalID: -3010149806021488603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_114
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 288
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4851ee3bbbca792f0800000000000000
+      internalID: -966113672870095484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_115
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 276
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04565e2ecdc8121c0800000000000000
+      internalID: -4530184869830630080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_116
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 243
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b482fd16cb8ed830800000000000000
+      internalID: 4097866393975948471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_117
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 281
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce77eeb83cf77f30800000000000000
+      internalID: 4573401267269238475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_118
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 240
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b65796c9a7f663a0800000000000000
+      internalID: -6672373489349470538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_119
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 276
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b98f301f43ac610800000000000000
+      internalID: 1642183223888354078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_120
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 271
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 172fd6b221a7e8380800000000000000
+      internalID: -8967095589591453071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_121
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 280
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946787cce218c8840800000000000000
+      internalID: 5227695305469228617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_122
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 277
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a071e5896986c960800000000000000
+      internalID: 7621930505681858728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_123
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 274
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde1312c106dad5a0800000000000000
+      internalID: -6495644209489174820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_124
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 273
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4635b71415d630e50800000000000000
+      internalID: 6774378460253737828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_125
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 276
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f8dbb09d29c9c10800000000000000
+      internalID: 2061684190331375459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_126
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 263
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c2f957b9880ba70800000000000000
+      internalID: 8840716269802957853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_127
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 239
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9fcdc9f01d66300800000000000000
+      internalID: 245113094724712948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_128
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 245
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8608708b2835368c0800000000000000
+      internalID: -4007267422531256216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_129
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 246
+        width: 49
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8bc1747f835f6a0800000000000000
+      internalID: -6416159459418261293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_130
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 270
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed5ea948f2723d50800000000000000
+      internalID: 6715556405076450789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_131
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 262
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35aef2cefd476c60800000000000000
+      internalID: 7811297835285914942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_132
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 261
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7c210a05b76f8f0800000000000000
+      internalID: -507082321819416616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_133
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 270
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5e5a07005690180800000000000000
+      internalID: -9148670115462126140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_134
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 252
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d1be07cddd09c80800000000000000
+      internalID: -8317904572896305864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_135
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 256
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb638ee890e37f90800000000000000
+      internalID: -6956970051916043267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_136
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 249
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d52af8ddf01cd30800000000000000
+      internalID: 4449855351090732351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_137
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 255
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bb6226ef8e9e250800000000000000
+      internalID: 5974562559949716339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_138
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 251
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1e992a32109c990800000000000000
+      internalID: -7365354463024258604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_139
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 258
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05b700be82de9650800000000000000
+      internalID: 6241657643862570252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_140
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 247
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba5f9c57159a7cb60800000000000000
+      internalID: 7766362249757324715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_141
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 259
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fb794019bb0d110800000000000000
+      internalID: 1283732125322297091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_142
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 249
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8405aa2bfca68c2e0800000000000000
+      internalID: -2105315385507426232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_143
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 242
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003fd52c90732fab0800000000000000
+      internalID: -4975854123235806464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_144
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc0d6d6971e1a5c0800000000000000
+      internalID: -4205832665344176929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_145
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 245
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af45f6992b4f03030800000000000000
+      internalID: 3472544360618218746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_146
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 249
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38aa03616191e2f50800000000000000
+      internalID: 6858446865184107139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_147
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 240
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2faca4006cd038eb0800000000000000
+      internalID: -4718912840494560526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_148
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 239
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901541585a9bb83b0800000000000000
+      internalID: -5509105598604226295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_149
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 247
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2bbcfd158c1ea90800000000000000
+      internalID: -7286322468136176972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_150
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 248
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b0ad47d4eb327c0800000000000000
+      internalID: -4097221996094813372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_151
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 229
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5a43ad93aad1b40800000000000000
+      internalID: 5412669492619945403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_152
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 229
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe006d5ee50835f0800000000000000
+      internalID: -776864414394478915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_153
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 190
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d59a1725bbd6e6d0800000000000000
+      internalID: -2961438133857905195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_154
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 193
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6428097146e3570800000000000000
+      internalID: 8448300003365111507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_155
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36be147d02418a410800000000000000
+      internalID: 1488461808128879459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_156
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 172
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a928be4006bbe90800000000000000
+      internalID: -7008902820824704355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_157
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 134
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff0116ee0c8e1d20800000000000000
+      internalID: 3251189976625385461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_158
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 182
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f72cefc133890cb0800000000000000
+      internalID: -4897238869823707149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_159
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 178
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6dd5e9d8db43d50800000000000000
+      internalID: 6716201360261240507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_160
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 168
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799fcad5adb1f5980800000000000000
+      internalID: -8548082943037474409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_161
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 155
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78b1dbcea285f970800000000000000
+      internalID: 8788073935138830462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_162
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 158
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e0e481f8fe7a1b0800000000000000
+      internalID: -5645280210018497005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_163
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 124
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e495eb4583a6940800000000000000
+      internalID: 5290102648922000959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_164
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 126
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2188182fab75cb0800000000000000
+      internalID: -4875222520887242060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_165
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 104
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0269342f39d0e70800000000000000
+      internalID: 9083078692201439449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_166
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 104
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c30e48a14cdd3dd0800000000000000
+      internalID: -2504603643193457722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_167
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 89
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba596941bb9a7280800000000000000
+      internalID: -9044745715877061961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_168
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 107
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864e9acaa184d9630800000000000000
+      internalID: 3935380928794846312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_169
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 89
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e96d6f5490b72e50800000000000000
+      internalID: 6784585514959596007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_170
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 42
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ee9b9073db29690800000000000000
+      internalID: -7596801577336574429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_171
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 73
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da8a6cf49d0cc3e0800000000000000
+      internalID: -2032234398309774639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_172
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a87eac28a8140c0800000000000000
+      internalID: -4593237850586641868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_173
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 60
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ceac0fe3db6d240800000000000000
+      internalID: 4816244929544776711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_174
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 60
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da53e5a72cc578a0800000000000000
+      internalID: -6307911232403580204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_175
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 46
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b4942b84f4adcd0800000000000000
+      internalID: -2532624666795095279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8928367e0548a00800000000000000
+      internalID: 757819592042256603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_177
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 35
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26e164dfdf5b07f0800000000000000
+      internalID: -645316706652002772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_178
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 34
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10eec7c79a357900800000000000000
+      internalID: 681515342183194653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_179
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 21
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5755ceecd5797ae90800000000000000
+      internalID: -7014471465446910603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_180
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 5
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e847bd9ed563bb0800000000000000
+      internalID: -4956671080884040147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_181
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 5
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad32c84d4c2a3d810800000000000000
+      internalID: 1788952443259462618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_182
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 6
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292d3d55b719e95c0800000000000000
+      internalID: -4206765043010514286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_183
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a30e9b9c281a3e50800000000000000
+      internalID: 6789765968082895777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HitNature_184
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b70a982a9d146f0800000000000000
+      internalID: -702040774776161528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HitNature_0: 1977879432188241023
+      HitNature_1: 9072771065250463448
+      HitNature_10: -8237693684538027152
+      HitNature_100: -1851030419846824850
+      HitNature_101: -116167891643407185
+      HitNature_102: 4021135138159161854
+      HitNature_103: 5385440081291423360
+      HitNature_104: -4743464386593834234
+      HitNature_105: -1505312900202099286
+      HitNature_106: -4791954136674732868
+      HitNature_107: 3954017639955568981
+      HitNature_108: 4184778083477394638
+      HitNature_109: 6167192424275132059
+      HitNature_11: 8817739063872423319
+      HitNature_110: 127596497566950095
+      HitNature_111: 7405864483488921271
+      HitNature_112: 8123674253030844889
+      HitNature_113: -3010149806021488603
+      HitNature_114: -966113672870095484
+      HitNature_115: -4530184869830630080
+      HitNature_116: 4097866393975948471
+      HitNature_117: 4573401267269238475
+      HitNature_118: -6672373489349470538
+      HitNature_119: 1642183223888354078
+      HitNature_12: -9010021616401301002
+      HitNature_120: -8967095589591453071
+      HitNature_121: 5227695305469228617
+      HitNature_122: 7621930505681858728
+      HitNature_123: -6495644209489174820
+      HitNature_124: 6774378460253737828
+      HitNature_125: 2061684190331375459
+      HitNature_126: 8840716269802957853
+      HitNature_127: 245113094724712948
+      HitNature_128: -4007267422531256216
+      HitNature_129: -6416159459418261293
+      HitNature_13: -5829811792573592349
+      HitNature_130: 6715556405076450789
+      HitNature_131: 7811297835285914942
+      HitNature_132: -507082321819416616
+      HitNature_133: -9148670115462126140
+      HitNature_134: -8317904572896305864
+      HitNature_135: -6956970051916043267
+      HitNature_136: 4449855351090732351
+      HitNature_137: 5974562559949716339
+      HitNature_138: -7365354463024258604
+      HitNature_139: 6241657643862570252
+      HitNature_14: -8830959069098358316
+      HitNature_140: 7766362249757324715
+      HitNature_141: 1283732125322297091
+      HitNature_142: -2105315385507426232
+      HitNature_143: -4975854123235806464
+      HitNature_144: -4205832665344176929
+      HitNature_145: 3472544360618218746
+      HitNature_146: 6858446865184107139
+      HitNature_147: -4718912840494560526
+      HitNature_148: -5509105598604226295
+      HitNature_149: -7286322468136176972
+      HitNature_15: -3638531259641235593
+      HitNature_150: -4097221996094813372
+      HitNature_151: 5412669492619945403
+      HitNature_152: -776864414394478915
+      HitNature_153: -2961438133857905195
+      HitNature_154: 8448300003365111507
+      HitNature_155: 1488461808128879459
+      HitNature_156: -7008902820824704355
+      HitNature_157: 3251189976625385461
+      HitNature_158: -4897238869823707149
+      HitNature_159: 6716201360261240507
+      HitNature_16: -4739318907933905984
+      HitNature_160: -8548082943037474409
+      HitNature_161: 8788073935138830462
+      HitNature_162: -5645280210018497005
+      HitNature_163: 5290102648922000959
+      HitNature_164: -4875222520887242060
+      HitNature_165: 9083078692201439449
+      HitNature_166: -2504603643193457722
+      HitNature_167: -9044745715877061961
+      HitNature_168: 3935380928794846312
+      HitNature_169: 6784585514959596007
+      HitNature_17: -4385828220510554758
+      HitNature_170: -7596801577336574429
+      HitNature_171: -2032234398309774639
+      HitNature_172: -4593237850586641868
+      HitNature_173: 4816244929544776711
+      HitNature_174: -6307911232403580204
+      HitNature_175: -2532624666795095279
+      HitNature_176: 757819592042256603
+      HitNature_177: -645316706652002772
+      HitNature_178: 681515342183194653
+      HitNature_179: -7014471465446910603
+      HitNature_18: -8048071567280282085
+      HitNature_180: -4956671080884040147
+      HitNature_181: 1788952443259462618
+      HitNature_182: -4206765043010514286
+      HitNature_183: 6789765968082895777
+      HitNature_184: -702040774776161528
+      HitNature_19: 5962593502880269415
+      HitNature_2: 7597399833048931517
+      HitNature_20: -2850974690929368304
+      HitNature_21: -4322523005626880349
+      HitNature_22: 31828916066856849
+      HitNature_23: -6303420908700193834
+      HitNature_24: -25579252191769867
+      HitNature_25: -4967073228128920675
+      HitNature_26: 132247200872016909
+      HitNature_27: 7279824293617908672
+      HitNature_28: 3173472245005070208
+      HitNature_29: -6426490365112067014
+      HitNature_3: -8386629235436636
+      HitNature_30: -8478891527424404427
+      HitNature_31: -3415832195762130193
+      HitNature_32: -4014933268325714193
+      HitNature_33: -5912107623747247955
+      HitNature_34: 5286393536635229338
+      HitNature_35: -7863082974492803220
+      HitNature_36: 6354430437613940283
+      HitNature_37: 5367961558322355085
+      HitNature_38: 7196298464182330921
+      HitNature_39: 8223743381647995147
+      HitNature_4: -6386346200706580391
+      HitNature_40: 2239112209268538402
+      HitNature_41: 8916354820676266733
+      HitNature_42: 956950502110051277
+      HitNature_43: -5257160372900901973
+      HitNature_44: -1014433764702798004
+      HitNature_45: -1560986514140282969
+      HitNature_46: 3007565665290599748
+      HitNature_47: 2413127776887336620
+      HitNature_48: -2619573911604850223
+      HitNature_49: -7581715714944255903
+      HitNature_5: -2044727898532094424
+      HitNature_50: 5313619685977538566
+      HitNature_51: -6407826025978153222
+      HitNature_52: -1284153296043056385
+      HitNature_53: -5204418750688252170
+      HitNature_54: 5698797270083053028
+      HitNature_55: -8579735190098422818
+      HitNature_56: 1885114606898423454
+      HitNature_57: -4517963821887581056
+      HitNature_58: -8288989094901303252
+      HitNature_59: 1384731518513983879
+      HitNature_6: -2805143335843376649
+      HitNature_60: -2360992619472177059
+      HitNature_61: -2979168163409930835
+      HitNature_62: 6711158126415385325
+      HitNature_63: -7275688948572730533
+      HitNature_64: 5596604866008928619
+      HitNature_65: 2995310111772793771
+      HitNature_66: 8167880060860126628
+      HitNature_67: -2698447510100040755
+      HitNature_68: 5334702493187363741
+      HitNature_69: -1902513833783132696
+      HitNature_7: 2389737157858688544
+      HitNature_70: 2665062434412464656
+      HitNature_71: 2030343193726610084
+      HitNature_72: 7289247937484670845
+      HitNature_73: 2337568205281137477
+      HitNature_74: 7670701022637028202
+      HitNature_75: -2256812845279330959
+      HitNature_76: -3319386874151196570
+      HitNature_77: -5737712133166777638
+      HitNature_78: -1500303128546539890
+      HitNature_79: 4370856395052117739
+      HitNature_8: 8568747560055737663
+      HitNature_80: -3347702691191347007
+      HitNature_81: -4100929922172999062
+      HitNature_82: -7007095788523456483
+      HitNature_83: 7413415127871460716
+      HitNature_84: -5708647022579420153
+      HitNature_85: -7266810361014863907
+      HitNature_86: -2733732918944104499
+      HitNature_87: 7354385539626830037
+      HitNature_88: 5071831480583716716
+      HitNature_89: 3501291126217992517
+      HitNature_9: -8612693759860147537
+      HitNature_90: 6709060924975616593
+      HitNature_91: 6528784532410895840
+      HitNature_92: -2646656090727083193
+      HitNature_93: -461376575304426694
+      HitNature_94: -2594203874024380793
+      HitNature_95: -2563027196020094689
+      HitNature_96: -5969012195048271778
+      HitNature_97: 8961316341439603212
+      HitNature_98: -1432864580316011808
+      HitNature_99: -3683529697963649413
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
