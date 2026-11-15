@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace BrawlTCG.UnityApp
 {
     /// <summary>
-    /// Which other cards a card's text talks about ("Obtain Fait, ...", "Set stage to Matrix"), so the detail view
+    /// Which other cards a card's text talks about ("Craft Fait, ...", "Set stage to Matrix"), so the detail view
     /// can show them. Effects and attacks are code, so the links are listed here by hand.
     /// </summary>
     public static class CardReferences

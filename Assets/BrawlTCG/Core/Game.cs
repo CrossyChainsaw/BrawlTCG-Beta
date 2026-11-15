@@ -26,7 +26,7 @@ namespace BrawlTCG.Core
 
         public StageCard ActiveStage { get; private set; }
         public Player ActiveStageOwner { get; private set; }
-        /// <summary>The Workshop stage turns this off ("instead of drawing a card you obtain a random card").</summary>
+        /// <summary>The Workshop stage turns this off ("instead of drawing a card, craft a random card").</summary>
         public bool DrawCardStartTurn { get; set; } = true;
 
         public bool IsStarted { get; private set; }

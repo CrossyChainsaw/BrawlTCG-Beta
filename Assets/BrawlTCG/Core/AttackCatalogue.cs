@@ -99,11 +99,11 @@ namespace BrawlTCG.Core
             weaponOneBurnAmount: 3, multiHit: true);
         public static readonly Attack Heatblast_Burn = new Attack("Burn", 0, Weapon.Blasters, 1,
             (a, t, atk, g) => DefaultAttack(a, t, atk, burn: true), weaponOneBurnAmount: 1);
-        public static readonly Attack MasterThief_GrabBomb = new Attack("Grab Bomb", Status, Weapon.Gauntlets, 1,
+        public static readonly Attack MasterThief_GrabBomb = new Attack("Craft Bouncy Bomb", Status, Weapon.Gauntlets, 1,
             (a, t, atk, g) => g.GenerateCard(500), instaEffect: true);
-        public static readonly Attack PlagueKnight_GrabHealingPotion = new Attack("Grab Healing Potion", Status, Weapon.Gauntlets, 1,
+        public static readonly Attack PlagueKnight_GrabHealingPotion = new Attack("Craft Vial of Crows", Status, Weapon.Gauntlets, 1,
             (a, t, atk, g) => g.GenerateCard(501), instaEffect: true);
-        public static readonly Attack Yumiko_GrabOrbs = new Attack("Spawn Orbs", Status, Weapon.Any, 1,
+        public static readonly Attack Yumiko_GrabOrbs = new Attack("Craft 3 Orbs", Status, Weapon.Any, 1,
             (a, t, atk, g) =>
             {
                 g.GenerateCard(504);
@@ -124,10 +124,10 @@ namespace BrawlTCG.Core
                 if (t is LegendCard legend) legend.GainHealth(a.Power);
                 SelfDestruct(a);
             }, friendlyFire: true);
-        public static readonly Attack Jiro_SpawnAndPlayNinjaSpirit = new Attack("Spawn Ninja Spirit", Status, Weapon.Sword, 1,
+        public static readonly Attack Jiro_SpawnAndPlayNinjaSpirit = new Attack("Summon Ninja Spirit", Status, Weapon.Sword, 1,
             (a, t, atk, g) => g.GenerateAndPlayLegend(5003), instaEffect: true,
             precondition: (g, legend) => legend.Owner.PlayingField.Count >= Game.MaxLegendsOnField ? $"Already {Game.MaxLegendsOnField} Legends" : null);
-        public static readonly Attack Ada_SpawnAndPlayAtlantis = new Attack("Spawn Atlantis", Status, Weapon.Blasters, 1,
+        public static readonly Attack Ada_SpawnAndPlayAtlantis = new Attack("Set stage to Atlantis", Status, Weapon.Blasters, 1,
             (a, t, atk, g) => g.GenerateAndPlayStage(EffectCatalogue.AtlantisId), instaEffect: true,
             weaponTwo: Weapon.Spear, weaponTwoAmount: 1);
         public static readonly Attack Seven_CraftWeapons = new Attack("Craft 4 Random Weapons", Status, Weapon.Spear, 1,

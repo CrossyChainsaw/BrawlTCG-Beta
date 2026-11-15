@@ -21,7 +21,7 @@ namespace BrawlTCG.Core
             (target, card, game, played) => StartTurnHeal(target, FangwildHeal, Element.Nature, Element.Magic));
 
         public static readonly Effect Workshop_StartTurn = new Effect(
-            "Instead of drawing a card you obtain a random card",
+            "Instead of drawing a card, craft a random card",
             (target, card, game, played) =>
             {
                 game.GenerateRandomCards(1);
@@ -178,15 +178,15 @@ namespace BrawlTCG.Core
         public const int AtlantisId = 106;
 
         public static readonly Effect GenerateAndPlayMustafar = new Effect(
-            "Change stage to Mustafar",
+            "Set stage to Mustafar",
             (target, card, game, played) => game.GenerateAndPlayStage(MustafarId));
 
         public static readonly Effect GenerateAndPlayMatrix = new Effect(
-            "Change stage to Matrix",
+            "Set stage to Matrix",
             (target, card, game, played) => game.GenerateAndPlayStage(MatrixId));
 
         public static readonly Effect GenerateAndPlayWorkshop = new Effect(
-            "Change stage to Workshop",
+            "Set stage to The Workshop",
             (target, card, game, played) => game.GenerateAndPlayStage(WorkshopId));
 
         // ───────────── Battle cards ─────────────
@@ -236,7 +236,7 @@ namespace BrawlTCG.Core
         const int ChestCards = 3;
 
         public static readonly Effect CardChest = new Effect(
-            $"Obtain {ChestCards} random cards",
+            $"Craft {ChestCards} random cards",
             (target, card, game, played) => game.GenerateRandomCards(ChestCards));
 
         public static readonly Effect Bubble = new Effect(
@@ -250,15 +250,15 @@ namespace BrawlTCG.Core
         public static readonly Effect CosmicChest = ElementChest(Element.Cosmic);
 
         static Effect ElementChest(Element element) => new Effect(
-            $"Obtain {ChestCards} random {element} cards",
+            $"Craft {ChestCards} random {element} cards",
             (target, card, game, played) => game.GenerateRandomCards(ChestCards, element));
 
         public static readonly Effect DarkDuo = new Effect(
-            "Obtain 2 random Shadow Legends",
+            "Craft 2 random Shadow legends",
             (target, card, game, played) => game.GenerateRandomCards(2, Element.Shadow, CardType.Legend));
 
         public static readonly Effect WitchParty = new Effect(
-            "Obtain Fait, Witch Scarlet, Amethyst Scythe and Galaxy Lance",
+            "Craft Fait, Witch Scarlet, Amethyst Scythe and Galaxy Lance",
             (target, card, game, played) =>
             {
                 game.GenerateCard(4004);  // Fait
@@ -284,7 +284,7 @@ namespace BrawlTCG.Core
             });
 
         public static readonly Effect CursedKunai = new Effect(
-            "Obtain random Katars Legend and random Katars",
+            "Craft a random Katars legend and a random Katars weapon",
             (target, card, game, played) =>
             {
                 game.GenerateRandomLegendsWithWeapon(1, Weapon.Katars);
@@ -308,11 +308,11 @@ namespace BrawlTCG.Core
             });
 
         public static readonly Effect ScytheForever = new Effect(
-            "Obtain 3 random scythes",
+            "Craft 3 random Scythe weapons",
             (target, card, game, played) => game.GenerateRandomWeaponCards(3, Weapon.Scythe));
 
         public static readonly Effect DidShawWinYet = new Effect(
-            "Obtain 3x the rock",
+            "Craft 3x The Rock",
             (target, card, game, played) =>
             {
                 for (int i = 0; i < 3; i++)
