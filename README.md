@@ -18,7 +18,7 @@ fixed and a few missing features added (see [Changes from the WinForms version](
 
 To make a standalone build: **File → Build Profiles → Windows → Build** (pick a folder outside `Assets`, e.g. `Builds/`).
 
-Two starter decks (*Starter - Fire* and *Starter - Nature*) are created on first launch, so you can play straight away.
+Seven starter decks, one per element (*Starter - Fire*, *Nature*, *Magic*, *Cosmic*, *Arctic*, *Wild* and *Shadow*), are added on launch, so you can play straight away. Each starter is handed out once: a deleted starter stays deleted, and a deck you already have with the same name is never overwritten.
 
 ## Game modes
 
