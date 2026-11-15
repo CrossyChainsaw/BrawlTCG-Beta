@@ -393,7 +393,7 @@ namespace BrawlTCG.UnityApp
                     // Used up for this turn: darkened so it reads at a glance (no label needed).
                     view.SetDimmed(true);
                 }
-                else if (!legend.CanAttack) view.AddStatus("NO STRIKES", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
+                else if (!legend.CanAttack) view.AddNoStrikes(); // Silent Galaxy: red "not allowed" sword badge
 
                 if (Targeting && IsValidAttackTarget(p, legend)) view.SetHighlight(true);
                 else if (legend == _targetAttacker) view.SetGlow(Color.white, 0.6f);

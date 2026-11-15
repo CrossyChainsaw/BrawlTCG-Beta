@@ -110,7 +110,14 @@ namespace BrawlTCG.UnityApp
             dim.raycastTarget = false;
         }
 
-        /// <summary>Small status tag stacked from the bottom-right of the art window ("ATTACKED", "NO STRIKES"...).</summary>
+        /// <summary>Badge for a legend that can't deal damage (Silent Galaxy), in the ability-badge row.</summary>
+        public void AddNoStrikes()
+        {
+            if (_face == null || !FaceUp) return;
+            TriggerIcons.PaintNoStrikes(_face, Card);
+        }
+
+        /// <summary>Small status tag stacked from the bottom-right of the art window.</summary>
         public void AddStatus(string text, Color background, Color textColor)
         {
             if (_face == null || !FaceUp) return;

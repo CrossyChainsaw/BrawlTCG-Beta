@@ -60,30 +60,60 @@ namespace BrawlTCG.UnityApp
             for (int i = 0; i < triggers.Count; i++)
             {
                 Color c = ColorFor(triggers[i]);
-                float x, y;
-                if (Style == BadgeStyle.FrameEdge)
-                {
-                    x = 300 - 8 - Size - i * (Size + 4);
-                    y = 78 - Size * 0.5f; // straddles the top edge of the art window
-                }
-                else
-                {
-                    x = 300 - 16 - 10 - Size - i * (Size + 6);
-                    y = 78 + 10;
-                }
-                var holder = UI.Place(UI.Rect("Trigger " + triggers[i], face), x - 4, y - 4, Size + 8, Size + 8);
-                var group = holder.gameObject.AddComponent<CanvasGroup>();
-                group.alpha = Opacity;
-                group.blocksRaycasts = false;
-                group.interactable = false;
-                Quiet(Theme.RoundedPanel(holder, c, 1, 1, Size + 6, Size + 6, (Size + 6) / 2, "Ring"));
-                Quiet(Theme.RoundedPanel(holder, new Color(0.04f, 0.05f, 0.14f, 0.95f), 4, 4, Size, Size, Size / 2, "Disc"));
+                var holder = Badge(face, "Trigger " + triggers[i], i, c);
                 float pad = Size * 0.2f;
-                var glyph = UI.Panel(holder, c, 4 + pad, 4 + pad, Size - 2 * pad, Size - 2 * pad, "Glyph");
-                glyph.sprite = GlyphFor(triggers[i]);
-                glyph.preserveAspect = true;
-                glyph.raycastTarget = false;
+                Glyph(holder, GlyphFor(triggers[i]), c, pad);
             }
+        }
+
+        public static readonly Color NoStrikesColor = new Color32(255, 84, 84, 255);
+
+        /// <summary>
+        /// "Can't deal damage" debuff (Silent Galaxy): a "not allowed" sign, a white sword crossed by a red bar inside
+        /// a red ring. It joins the badge row, to the left of the ability badges.
+        /// </summary>
+        public static void PaintNoStrikes(RectTransform face, Card card)
+        {
+            int slot = For(card).Count;
+            var holder = Badge(face, "NoStrikes", slot, NoStrikesColor);
+            Glyph(holder, _sword ??= Glyph(SwordCut), new Color32(238, 232, 240, 255), Size * 0.12f);
+            Glyph(holder, _slash ??= Glyph(Slash), NoStrikesColor, 1);
+
+            // A burned legend without ability badges has its BURNED tag just under the badge row: make room.
+            if (slot == 0 && face.Find("Burned") is RectTransform burned)
+                UI.Place(burned, 300 - 112, 78 + 30, 86, 30);
+        }
+
+        /// <summary>One round badge (coloured ring, dark disc) at a slot of the badge row, counted from the right.</summary>
+        static RectTransform Badge(RectTransform face, string name, int slot, Color ring)
+        {
+            float x, y;
+            if (Style == BadgeStyle.FrameEdge)
+            {
+                x = 300 - 8 - Size - slot * (Size + 4);
+                y = 78 - Size * 0.5f; // straddles the top edge of the art window
+            }
+            else
+            {
+                x = 300 - 16 - 10 - Size - slot * (Size + 6);
+                y = 78 + 10;
+            }
+            var holder = UI.Place(UI.Rect(name, face), x - 4, y - 4, Size + 8, Size + 8);
+            var group = holder.gameObject.AddComponent<CanvasGroup>();
+            group.alpha = Opacity;
+            group.blocksRaycasts = false;
+            group.interactable = false;
+            Quiet(Theme.RoundedPanel(holder, ring, 1, 1, Size + 6, Size + 6, (Size + 6) / 2, "Ring"));
+            Quiet(Theme.RoundedPanel(holder, new Color(0.04f, 0.05f, 0.14f, 0.95f), 4, 4, Size, Size, Size / 2, "Disc"));
+            return holder;
+        }
+
+        static void Glyph(RectTransform holder, Sprite sprite, Color color, float pad)
+        {
+            var glyph = UI.Panel(holder, color, 4 + pad, 4 + pad, Size - 2 * pad, Size - 2 * pad, "Glyph");
+            glyph.sprite = sprite;
+            glyph.preserveAspect = true;
+            glyph.raycastTarget = false;
         }
 
         static Image Quiet(Image img)
@@ -94,7 +124,7 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle;
+        static Sprite _bolt, _infinity, _cycle, _sword, _slash;
 
         public static Sprite GlyphFor(Trigger t) =>
             t == Trigger.WhenPlayed ? (_bolt ??= Glyph(Bolt)) :
@@ -120,6 +150,30 @@ namespace BrawlTCG.UnityApp
             bool ring = Mathf.Abs(v.magnitude - 0.3f) < 0.08f && !(a > -10 && a < 55);
             return ring || InPolygon(x, y, ArrowHead);
         }
+
+        /// <summary>Maps a point into sword space: the sword stands upright (tip up), turned 45° so the tip points top-right.</summary>
+        static Vector2 SwordSpace(float x, float y)
+        {
+            const float c = 0.70710678f;
+            float dx = x - 0.5f, dy = y - 0.5f;
+            return new Vector2(dx * c + dy * c + 0.5f, -dx * c + dy * c + 0.5f);
+        }
+
+        static bool Sword(float u, float v)
+        {
+            float a = Mathf.Abs(u - 0.5f);
+            if (v > 0.03f && v < 0.17f && a < 0.095f * (v - 0.03f) / 0.14f) return true; // tip
+            if (v >= 0.17f && v < 0.64f && a < 0.095f) return true;                       // blade
+            if (v >= 0.64f && v < 0.73f && a < 0.24f) return true;                        // guard
+            if (v >= 0.73f && v < 0.87f && a < 0.055f) return true;                       // grip
+            return Vector2.Distance(new Vector2(u, v), new Vector2(0.5f, 0.915f)) < 0.07f; // pommel
+        }
+
+        // The bar runs across the sword (top-left to bottom-right); the sword is cut away around it so the two read apart.
+        static bool Bar(float u, float v, float half) => Mathf.Abs(v - 0.47f) < half && Mathf.Abs(u - 0.5f) < 0.46f;
+
+        static bool SwordCut(float x, float y) { Vector2 p = SwordSpace(x, y); return Sword(p.x, p.y) && !Bar(p.x, p.y, 0.13f); }
+        static bool Slash(float x, float y) { Vector2 p = SwordSpace(x, y); return Bar(p.x, p.y, 0.068f); }
 
         /// <summary>Renders a white shape (x, y in 0..1, y down) with 4x4 supersampling.</summary>
         static Sprite Glyph(Func<float, float, bool> inside)
