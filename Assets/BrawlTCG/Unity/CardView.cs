@@ -99,6 +99,17 @@ namespace BrawlTCG.UnityApp
             _ring.color = c;
         }
 
+        /// <summary>Darkens the card to show it is used up for this turn. Call before <see cref="AddStatus"/> so tags stay bright.</summary>
+        public void SetDimmed(bool on)
+        {
+            if (_face == null) return;
+            Transform old = _face.Find("Dim");
+            if (old != null) Destroy(old.gameObject);
+            if (!on) return;
+            var dim = Theme.RoundedPanel(_face, new Color(0.02f, 0.03f, 0.09f, 0.74f), 0, 0, FW, FH, 22, "Dim");
+            dim.raycastTarget = false;
+        }
+
         /// <summary>Small status tag stacked from the bottom-right of the art window ("ATTACKED", "CAN'T ATTACK"...).</summary>
         public void AddStatus(string text, Color background, Color textColor)
         {
