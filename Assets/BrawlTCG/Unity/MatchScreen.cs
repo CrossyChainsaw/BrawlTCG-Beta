@@ -637,7 +637,8 @@ namespace BrawlTCG.UnityApp
             help.raycastTarget = false;
             Theme.Label(help.transform, "HOW TO PLAY", 15, Theme.Gold, 20, 14, 340, 20, display: true);
             Theme.Label(help.transform,
-                "Drag cards from your hand onto the board.\nClick any card to inspect it.\nClick your legend, pick an attack, then a target.\nSpace or END TURN passes the turn.",
+                "Drag cards from your hand onto the board.\nClick any card to inspect it.\nClick your legend, pick an attack, then a target.\nSpace or END TURN passes the turn.
+Esc opens the options.",
                 15, Theme.TextDim, 20, 40, 356, 124);
         }
 
