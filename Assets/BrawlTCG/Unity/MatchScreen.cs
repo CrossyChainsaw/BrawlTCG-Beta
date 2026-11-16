@@ -918,15 +918,14 @@ namespace BrawlTCG.UnityApp
 
             if (card is LegendCard legend)
             {
-                float cy = 206;
-                cy = InfoChip(t, $"ATK {legend.Power}" + (legend.Power != legend.PrintedPower ? $"  (base {legend.PrintedPower})" : ""), new Color32(226, 112, 28, 255), ix, cy, iw);
-                cy = InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix, cy, iw);
-                cy = InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, cy, iw);
-                foreach (string status in LegendStatuses(legend))
-                    cy = InfoChip(t, status, new Color(1, 1, 1, 0.06f), ix, cy, iw, Theme.Gold);
+                float half = (iw - 8) / 2;
+                InfoChip(t, $"ATK {legend.Power}", new Color32(226, 112, 28, 255), ix, 206, half);
+                InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix + half + 8, 206, half);
+                InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, 250, iw);
+                float effectsEnd = CurrentEffects(t, legend, ix, 298, iw);
 
-                // Attacks
-                float y = 418;
+                // Attacks (pushed down when the legend has many effects on it)
+                float y = Mathf.Max(418, effectsEnd + 14);
                 Theme.Label(t, "ATTACKS", 16, Theme.Gold, 24, y, 300, 22, display: true);
                 y += 28;
                 if (legend.Attacks.Count == 0)
@@ -1008,12 +1007,64 @@ namespace BrawlTCG.UnityApp
             return y + 44;
         }
 
-        IEnumerable<string> LegendStatuses(LegendCard legend)
+        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A";
+
+        /// <summary>
+        /// Everything currently affecting a legend: stat changes per source (buffs green, debuffs red) and statuses
+        /// (tapped, burned, Silent Galaxy, already attacked), each with what caused it. Returns the bottom edge.
+        /// </summary>
+        float CurrentEffects(Transform t, LegendCard legend, float x, float y, float w)
         {
-            if (legend.IsTapped) yield return "TAPPED  ·  skips its next attack";
-            if (legend.IsBurned) yield return "BURNED  ·  -1 HP each turn";
-            if (!legend.CanAttack) yield return "SILENT GALAXY  ·  can't deal damage";
-            if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer) yield return "ALREADY ATTACKED THIS TURN";
+            var lines = new List<string>();
+            if (legend.IsTapped) lines.Add(Line(StatusHex, "TAPPED", legend.TappedBy, "skips its next attack"));
+            if (legend.IsBurned) lines.Add(Line(DebuffHex, "BURNED  -1 HP each turn", legend.BurnedBy, null));
+            if (!legend.CanAttack) lines.Add(Line(DebuffHex, "CAN'T DEAL DAMAGE", "Silent Galaxy", null));
+            if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer) lines.Add(Line(StatusHex, "ALREADY ATTACKED", null, "this turn"));
+            foreach (LegendCard.StatModifier m in legend.Modifiers)
+            {
+                var parts = new List<string>();
+                if (m.Power != 0) parts.Add($"{m.Power:+0;-0} ATK");
+                if (m.Health != 0) parts.Add($"{m.Health:+0;-0} HP");
+                bool buff = m.Power + m.Health > 0;
+                lines.Add(Line(buff ? BuffHex : DebuffHex, string.Join("  ", parts), m.Source, null));
+            }
+
+            Theme.Label(t, "ON THIS LEGEND", 14, Theme.Gold, x, y, w, 20, display: true);
+            y += 22;
+            const float lineH = 22;
+            const int room = 8;
+            if (lines.Count == 0)
+            {
+                Theme.Label(t, "Nothing right now.", 15, Theme.TextFaint, x, y, w, lineH);
+                return y + lineH;
+            }
+            if (lines.Count > room)
+            {
+                int hidden = lines.Count - (room - 1);
+                lines = lines.Take(room - 1).ToList();
+                lines.Add($"<color=#9AA0C0>+{hidden} more</color>");
+            }
+            foreach (string line in lines)
+            {
+                var label = Theme.Label(t, line, 15, Theme.TextDim, x, y, w, lineH, TextAnchor.MiddleLeft);
+                label.supportRichText = true;
+                label.horizontalOverflow = HorizontalWrapMode.Wrap;
+                label.verticalOverflow = VerticalWrapMode.Truncate;
+                label.resizeTextForBestFit = true;
+                label.resizeTextMinSize = 10;
+                label.resizeTextMaxSize = 15;
+                y += lineH;
+            }
+            return y;
+        }
+
+        /// <summary>"+5 ATK  Super Saiyan": the effect coloured, then its source, then an optional dim note.</summary>
+        static string Line(string hex, string what, string source, string note)
+        {
+            string s = $"<color={hex}>{what}</color>";
+            if (!string.IsNullOrEmpty(source)) s += $"  {source}";
+            if (!string.IsNullOrEmpty(note)) s += $"  <color=#9AA0C0>{note}</color>";
+            return s;
         }
 
         void AttackRow(Transform t, LegendCard legend, int index, float x, float y, float w)

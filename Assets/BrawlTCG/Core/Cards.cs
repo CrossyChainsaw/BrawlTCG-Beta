@@ -177,6 +177,21 @@ namespace BrawlTCG.Core
         public bool AttackedThisTurn { get; internal set; }
         public bool OnPlayingField { get; internal set; }
 
+        /// <summary>A net stat change from one source (a card, or "Legend · Attack"), for showing what affects this legend.</summary>
+        public sealed class StatModifier
+        {
+            public string Source { get; internal set; }
+            public int Power { get; internal set; }
+            public int Health { get; internal set; }
+        }
+
+        List<StatModifier> _modifiers = new List<StatModifier>(); // replaced (not cleared) on reset: clones must not share it
+        /// <summary>Net ATK / max-HP changes per source, oldest first. Changes that cancel out are dropped.</summary>
+        public IReadOnlyList<StatModifier> Modifiers => _modifiers;
+        /// <summary>What tapped / burned this legend most recently (only meaningful while it is tapped / burned).</summary>
+        public string TappedBy { get; private set; }
+        public string BurnedBy { get; private set; }
+
         public override CardType Type => CardType.Legend;
         public override string Description => $"{_baseHealth}hp  {_basePower}att  {PrimaryWeapon} / {SecondaryWeapon}";
 
@@ -206,6 +221,27 @@ namespace BrawlTCG.Core
             CanAttack = true;
             AttackedThisTurn = false;
             OnPlayingField = false;
+            _modifiers = new List<StatModifier>();
+            TappedBy = null;
+            BurnedBy = null;
+        }
+
+        void Record(int power, int health)
+        {
+            if (power == 0 && health == 0) return;
+            string source = EffectContext.Current ?? "Unknown";
+            StatModifier m = _modifiers.Find(x => x.Source == source);
+            if (m == null) _modifiers.Add(m = new StatModifier { Source = source });
+            m.Power += power;
+            m.Health += health;
+            if (m.Power == 0 && m.Health == 0) _modifiers.Remove(m);
+        }
+
+        /// <summary>Sets ATK to a value (e.g. "power becomes 0"), remembering the change like a modifier.</summary>
+        internal void SetPower(int value)
+        {
+            Record(value - Power, 0);
+            Power = value;
         }
 
         public bool HasWeapon(Weapon weapon) => PrimaryWeapon == weapon || SecondaryWeapon == weapon;
@@ -230,17 +266,22 @@ namespace BrawlTCG.Core
             {
                 BaseHealth += amount;
                 CurrentHP += amount;
+                Record(0, amount);
             }
             else
             {
                 Power += amount;
+                Record(amount, 0);
             }
         }
 
         public void SetBurn(bool burn)
         {
             if (Element != Element.Fire)
+            {
                 IsBurned = burn;
+                if (burn) BurnedBy = EffectContext.Current;
+            }
         }
 
         public void TakeBurnDamage()
@@ -249,7 +290,11 @@ namespace BrawlTCG.Core
                 LoseHealth(BurnDamage);
         }
 
-        public void TapOut() => IsTapped = true;
+        public void TapOut()
+        {
+            IsTapped = true;
+            TappedBy = EffectContext.Current;
+        }
 
         /// <summary>Removes up to <paramref name="amount"/> weapon cards of the given type and returns them.</summary>
         internal List<WeaponCard> BurnWeapon(Weapon? weapon, int amount)

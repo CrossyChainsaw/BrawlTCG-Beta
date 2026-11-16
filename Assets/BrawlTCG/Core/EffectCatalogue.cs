@@ -304,7 +304,7 @@ namespace BrawlTCG.Core
             (target, card, game, played) =>
             {
                 if (target is LegendCard legend)
-                    legend.Power = 0;
+                    legend.SetPower(0);
             });
 
         public static readonly Effect ScytheForever = new Effect(
