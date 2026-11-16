@@ -78,13 +78,14 @@ namespace BrawlTCG.UnityApp
             _menu = UI.Stretch(UI.Rect("OptionsMenu", transform));
 
             _game.Notification += OnNotification;
+            _game.StartingHandRedraw = true; // both clients of a network game do this, so they stay in step
             _game.Start();
             _net?.StartReceiving();
 
             _viewer = _hotSeat ? _game.ActiveIndex : _localIndex;
             if (_hotSeat) ShowHandoff();
             Refresh();
-            if (!_hotSeat) TurnIntro(true);
+            if (!_hotSeat) ShowStartingHand();
         }
 
         void BuildBackdrop()
@@ -142,7 +143,7 @@ namespace BrawlTCG.UnityApp
         bool IsLocallyControlled(int playerIndex) => _hotSeat ? playerIndex == _viewer : playerIndex == _localIndex;
 
         /// <summary>Whether the person at this screen may act right now.</summary>
-        bool CanAct => !_ended && !_game.IsOver && !_handoffPending && IsLocallyControlled(_game.ActiveIndex);
+        bool CanAct => !_ended && !_game.IsOver && !_handoffPending && !_game.ChoosingStartingHands && IsLocallyControlled(_game.ActiveIndex);
 
         // ───────────────────────────── Frame loop ─────────────────────────────
 
@@ -188,6 +189,7 @@ namespace BrawlTCG.UnityApp
                     return;
                 }
                 Snapshot before = TakeSnapshot(cmd);
+                bool wasChoosing = _game.ChoosingStartingHands;
                 string error = _game.TryApply(cmd);
                 if (error != null)
                 {
@@ -199,6 +201,7 @@ namespace BrawlTCG.UnityApp
                 RefreshDetail();
                 if (_game.IsOver) ShowGameOver();
                 Animate(before);
+                if (wasChoosing && !_game.ChoosingStartingHands) TurnIntro(false); // both hands chosen: turn 1 begins
             }
             if (_net.IsClosed && !_net.HasPending && !_ended)
                 EndMatch("Connection lost", "The other player disconnected.");
@@ -429,6 +432,17 @@ namespace BrawlTCG.UnityApp
 
             string title;
             Color titleColor;
+            if (_game.ChoosingStartingHands && !_game.IsOver)
+            {
+                bool chosen = _game.HasChosenStartingHand(_viewer);
+                Theme.Label(t, "STARTING HANDS", 34, Theme.Gold, 28, 8, 640, 46, TextAnchor.MiddleLeft, display: true);
+                string waitingFor = _game.Players[1 - _viewer].Name;
+                Theme.Label(t, chosen ? $"Waiting for {waitingFor} to choose their starting hand" : "Choose which cards to keep",
+                    16, Theme.TextDim, 30, 54, 760, 26, TextAnchor.MiddleLeft);
+                var wait = Theme.Ghost(t, "WAITING", Strip.width - 236, 16, 212, 60, null, 22);
+                wait.interactable = false;
+                return;
+            }
             if (_game.IsOver)
             {
                 title = "MATCH OVER";
@@ -1259,14 +1273,86 @@ namespace BrawlTCG.UnityApp
             CloseDetail();
             var dim = ShowOverlay(1f); // fully opaque: nothing of the next player's hand may show through
             Player next = _game.Players[_viewer];
-            var box = Dialog(dim, next.Name.ToUpperInvariant(), $"Pass the device to {next.Name}.\nThe other player should look away.", $"TURN {_game.TurnNumber}");
-            Theme.Cta(box, "START MY TURN", 220, 296, 360, 76, () =>
+            bool choosing = _game.ChoosingStartingHands && !_game.HasChosenStartingHand(_viewer);
+            var box = Dialog(dim, next.Name.ToUpperInvariant(), $"Pass the device to {next.Name}.\nThe other player should look away.",
+                choosing ? "STARTING HAND" : $"TURN {_game.TurnNumber}");
+            Theme.Cta(box, choosing ? "SEE MY HAND" : "START MY TURN", 220, 296, 360, 76, () =>
             {
                 _handoffPending = false;
                 CloseOverlay();
                 Refresh();
-                TurnIntro(true);
+                if (choosing) ShowStartingHand();
+                else TurnIntro(true);
             }, 30);
+        }
+
+        // ───────────────────────────── Starting hand ─────────────────────────────
+
+        /// <summary>Hand indices the viewer marked to shuffle back into the deck.</summary>
+        readonly HashSet<int> _redrawPick = new HashSet<int>();
+
+        /// <summary>
+        /// Before turn 1: the viewer's starting hand, large. Clicking a card marks it to go back into the deck; the button
+        /// keeps the hand or redraws the marked cards (once per match).
+        /// </summary>
+        void ShowStartingHand()
+        {
+            var dim = ShowOverlay(0.95f);
+            Player me = _game.Players[_viewer];
+            Theme.Label(dim, "YOUR STARTING HAND", 18, Theme.Gold, 0, 112, 1920, 26, TextAnchor.MiddleCenter, display: true);
+            var title = Theme.Label(dim, "KEEP OR REDRAW", 58, Theme.Text, 0, 142, 1920, 80, TextAnchor.MiddleCenter, display: true);
+            Theme.AddShadow(title, 3, 0.6f);
+            Theme.Label(dim, "Click the cards you want to shuffle back into your deck. You draw as many new cards. You can do this once.",
+                20, Theme.TextDim, 0, 226, 1920, 30, TextAnchor.MiddleCenter);
+
+            const float scale = 1.3f, gap = 18;
+            float w = CardView.W * scale;
+            int n = me.Hand.Count;
+            float start = 960 - (n * w + (n - 1) * gap) / 2;
+            for (int i = 0; i < n; i++)
+            {
+                int index = i;
+                bool picked = _redrawPick.Contains(i);
+                CardView v = CardView.Create(dim, me.Hand[i], true, start + i * (w + gap), 300 + (picked ? 36 : 0), scale);
+                v.Clicked = _ =>
+                {
+                    if (!_redrawPick.Remove(index)) _redrawPick.Add(index);
+                    Sfx.Play("ui_click", 0.5f);
+                    ShowStartingHand();
+                };
+                if (picked)
+                {
+                    v.SetDimmed(true);
+                    v.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                }
+            }
+
+            int count = _redrawPick.Count;
+            string label = count == 0 ? "KEEP HAND" : count == 1 ? "REDRAW 1 CARD" : $"REDRAW {count} CARDS";
+            Theme.Cta(dim, label, 960 - 210, 680, 420, 76, ConfirmStartingHand, 30);
+        }
+
+        void ConfirmStartingHand()
+        {
+            int me = _viewer, mask = 0;
+            foreach (int i in _redrawPick) mask |= 1 << i;
+            _redrawPick.Clear();
+            CloseOverlay();
+            if (!Submit(GameCommand.RedrawStartingHand(me, mask))) return;
+            RememberHand(me); // seen: turned over in place at the start of the first turn instead of dealt again
+
+            if (_hotSeat)
+            {
+                // Next: the other player's starting hand, or (both chosen) the first turn.
+                _viewer = _game.ChoosingStartingHands ? 1 - me : _game.ActiveIndex;
+                ShowHandoff();
+                Refresh();
+            }
+            else if (!_game.ChoosingStartingHands)
+            {
+                TurnIntro(false); // the opponent had already chosen: turn 1 begins
+            }
+            // Online and the opponent is still choosing: the strip says so until their choice arrives.
         }
 
         void ShowGameOver()

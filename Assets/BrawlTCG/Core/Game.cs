@@ -34,6 +34,21 @@ namespace BrawlTCG.Core
         public Player Winner { get; private set; }
         public int TurnNumber { get; private set; }
 
+        /// <summary>
+        /// Set before <see cref="Start"/>: after drawing their starting hands both players may shuffle any of those cards
+        /// back and redraw that many (one <see cref="CommandType.RedrawStartingHand"/> each) before the first turn.
+        /// Both clients of a network game must use the same setting.
+        /// </summary>
+        public bool StartingHandRedraw { get; set; }
+        /// <summary>True between <see cref="Start"/> and both players choosing their starting hand.</summary>
+        public bool ChoosingStartingHands { get; private set; }
+        readonly bool[] _chosenStartingHand = new bool[2];
+        // One shuffle generator per player, so the two choices give the same result in either order (they are made at
+        // the same time in a network game, so each client may receive them in a different order).
+        Random[] _redrawRng;
+
+        public bool HasChosenStartingHand(int player) => _chosenStartingHand[player];
+
         /// <summary>Messages for the players ("X starts", "X just took damage", ...).</summary>
         public event Action<string> Notification;
 
@@ -90,7 +105,42 @@ namespace BrawlTCG.Core
             }
 
             Notify($"{ActivePlayer.Name} Starts");
+            if (StartingHandRedraw)
+            {
+                ChoosingStartingHands = true;
+                _redrawRng = new[] { new Random(Rng.Next()), new Random(Rng.Next()) };
+                return; // the first turn starts once both players have chosen
+            }
             StartTurn();
+        }
+
+        void RedrawStartingHand(Player player, int mask)
+        {
+            var back = new List<Card>();
+            for (int i = player.Hand.Count - 1; i >= 0; i--)
+            {
+                if ((mask & (1 << i)) == 0) continue;
+                back.Add(player.Hand[i]);
+                player.Hand.RemoveAt(i);
+            }
+            if (back.Count > 0)
+            {
+                player.Deck.AddRange(back);
+                Random rng = _redrawRng[player.Index];
+                for (int i = player.Deck.Count - 1; i > 0; i--)
+                {
+                    int j = rng.Next(i + 1);
+                    (player.Deck[i], player.Deck[j]) = (player.Deck[j], player.Deck[i]);
+                }
+                for (int i = 0; i < back.Count; i++)
+                    player.DrawCardFromDeck();
+            }
+            _chosenStartingHand[player.Index] = true;
+            if (_chosenStartingHand[0] && _chosenStartingHand[1])
+            {
+                ChoosingStartingHands = false;
+                StartTurn();
+            }
         }
 
         void StartTurn()
@@ -135,6 +185,18 @@ namespace BrawlTCG.Core
             if (cmd == null) return "No command.";
             if (!IsStarted) return "The game has not started.";
             if (IsOver) return "The game is over.";
+
+            // Starting hands: both players choose at the same time, before anyone has a turn.
+            if (ChoosingStartingHands)
+            {
+                if (cmd.Type != CommandType.RedrawStartingHand) return "Choose your starting hand first.";
+                if (cmd.PlayerIndex < 0 || cmd.PlayerIndex > 1) return "Invalid player.";
+                if (_chosenStartingHand[cmd.PlayerIndex]) return "You already chose your starting hand.";
+                int cards = _players[cmd.PlayerIndex].Hand.Count;
+                return cmd.TargetIndex >= 0 && cmd.TargetIndex < 1 << cards ? null : "Invalid starting hand choice.";
+            }
+            if (cmd.Type == CommandType.RedrawStartingHand) return "The starting hands were already chosen.";
+
             if (cmd.PlayerIndex != ActiveIndex) return "It is not your turn!";
 
             Player me = ActivePlayer;
@@ -223,6 +285,11 @@ namespace BrawlTCG.Core
 
         void Execute(GameCommand cmd)
         {
+            if (cmd.Type == CommandType.RedrawStartingHand)
+            {
+                RedrawStartingHand(_players[cmd.PlayerIndex], cmd.TargetIndex);
+                return;
+            }
             Player me = ActivePlayer;
             Player enemy = InactivePlayer;
             switch (cmd.Type)
@@ -564,7 +631,7 @@ namespace BrawlTCG.Core
         public string StateFingerprint()
         {
             var sb = new System.Text.StringBuilder();
-            sb.Append($"T{TurnNumber} A{ActiveIndex} S{ActiveStage?.Id ?? -1}/{ActiveStageOwner?.Index ?? -1} D{DrawCardStartTurn} O{IsOver}{Winner?.Index};");
+            sb.Append($"T{TurnNumber} A{ActiveIndex} S{ActiveStage?.Id ?? -1}/{ActiveStageOwner?.Index ?? -1} D{DrawCardStartTurn} O{IsOver}{Winner?.Index} R{ChoosingStartingHands}{_chosenStartingHand[0]}{_chosenStartingHand[1]};");
             foreach (Player p in _players)
             {
                 sb.Append($"P{p.Index}:{p.Health}/{p.MaxHealth} e{p.Essence} pe{p.PlayedEssenceCardThisTurn} d{string.Join(".", p.Deck.Select(c => c.Id))} ");

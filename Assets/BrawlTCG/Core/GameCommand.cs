@@ -15,6 +15,11 @@ namespace BrawlTCG.Core
         Attack,
         /// <summary>Pay the card's Essence cost to put it from your hand onto your discard pile (no effects).</summary>
         DiscardCard,
+        /// <summary>
+        /// Before the first turn: shuffle the chosen starting-hand cards back into your deck and draw as many new ones.
+        /// <see cref="GameCommand.TargetIndex"/> holds the chosen hand indices as a bitmask (0 = keep the hand).
+        /// </summary>
+        RedrawStartingHand,
     }
 
     /// <summary>
@@ -50,6 +55,8 @@ namespace BrawlTCG.Core
         public static GameCommand PlayBattle(int player, int hand, int target) => new GameCommand(CommandType.PlayBattle, player, hand, targetIndex: target);
         public static GameCommand Attack(int player, int legend, int attack, int target) => new GameCommand(CommandType.Attack, player, legendIndex: legend, attackIndex: attack, targetIndex: target);
         public static GameCommand DiscardCard(int player, int hand) => new GameCommand(CommandType.DiscardCard, player, hand);
+        /// <param name="mask">Bit i set = shuffle hand card i back into the deck.</param>
+        public static GameCommand RedrawStartingHand(int player, int mask) => new GameCommand(CommandType.RedrawStartingHand, player, targetIndex: mask);
 
         /// <summary>Plays the hand card at <paramref name="hand"/> with the command matching its type.</summary>
         public static GameCommand PlayCard(Card card, int player, int hand, int target)
@@ -100,6 +107,16 @@ namespace BrawlTCG.Core
         /// <summary>Every command the active player could try right now (most will be illegal). For bots and tests.</summary>
         public static IEnumerable<GameCommand> EnumerateCandidates(Game game)
         {
+            if (game.ChoosingStartingHands)
+            {
+                // Every possible starting-hand choice of each player still choosing.
+                for (int player = 0; player < 2; player++)
+                    if (!game.HasChosenStartingHand(player))
+                        for (int mask = 0; mask < 1 << game.Players[player].Hand.Count; mask++)
+                            yield return RedrawStartingHand(player, mask);
+                yield break;
+            }
+
             int p = game.ActiveIndex;
             Player me = game.ActivePlayer;
             Player enemy = game.InactivePlayer;
