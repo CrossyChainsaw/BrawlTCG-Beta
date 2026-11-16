@@ -17,7 +17,7 @@ namespace BrawlTCG.Core
 
         const int FangwildHeal = 2;
         public static readonly Effect Fangwild = new Effect(
-            $"All Magic and Nature Legends will gain {FangwildHeal} health.",
+            $"All Magic and Nature Legends heal {FangwildHeal}.",
             (target, card, game, played) => StartTurnHeal(target, FangwildHeal, Element.Nature, Element.Magic));
 
         public static readonly Effect Workshop_StartTurn = new Effect(
