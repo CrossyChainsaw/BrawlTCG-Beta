@@ -300,10 +300,10 @@ namespace BrawlTCG.UnityApp
             string type = card.Type.ToString().ToUpperInvariant();
             string text = card is WeaponCard w ? $"{type}  ·  {Pretty(w.Weapon)}" : $"{type}  ·  {card.Element.ToString().ToUpperInvariant()}";
             const float pw = 210, ph = 30;
-            // Cards made during the match get a copper pill with a hammer in front of the type.
+            // Cards made during the match get a hammer in front of the type, in the card's own colours.
             bool crafted = card.CraftedBy != null;
-            Color line = crafted ? TriggerIcons.CraftedColor : accent;
-            var pill = Theme.RoundedPanel(face, crafted ? TriggerIcons.CraftedFill : body, (FW - pw) / 2, 254, pw, ph, 15, "TypePill");
+            Color line = accent;
+            var pill = Theme.RoundedPanel(face, body, (FW - pw) / 2, 254, pw, ph, 15, "TypePill");
             pill.raycastTarget = false;
             Quiet(Theme.RoundedPanel(pill.transform, line, 0, 0, pw, ph, 15, "Line", outline: true));
             float lx = 0;
