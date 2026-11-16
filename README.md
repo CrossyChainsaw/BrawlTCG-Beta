@@ -32,7 +32,7 @@ To test networking on one PC: run a build and press Play in the editor at the sa
 
 ## How to play
 
-- Each player starts with **30 health**, **7 cards** and **1 Essence** on the field. The host goes first.
+- Each player starts with **50 health** (30 in the WinForms version), **7 cards** and **1 Essence** on the field. The host goes first.
 - At the start of your turn you draw a card, and your Essence is refilled to the number of Essence cards you have in play.
 - **Drag cards from your hand** onto the board:
   - **Essence** → your Essence zone (one per turn).
