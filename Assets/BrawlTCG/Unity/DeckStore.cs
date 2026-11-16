@@ -67,6 +67,13 @@ namespace BrawlTCG.UnityApp
             var given = new HashSet<string>(File.Exists(ledger) ? File.ReadAllLines(ledger) : Array.Empty<string>());
             bool firstLaunch = !File.Exists(ledger) && Directory.GetFiles(Folder, "*.txt").Length == 0;
             bool changed = false;
+
+            // Old versions first: an untouched copy of a retired deck is removed, and if that name is still bundled
+            // (the deck was re-tuned) the new version is handed out in its place below.
+            var current = new HashSet<string>(StarterDecks.All.Concat(StarterDecks.Premade).Select(s => s.Name));
+            foreach (string removed in RemoveRetiredDecks(given))
+                if (current.Contains(removed)) given.Remove(removed);
+
             foreach (StarterDecks.Starter s in StarterDecks.All.Concat(StarterDecks.Premade))
             {
                 if (given.Contains(s.Name)) continue;
@@ -79,21 +86,25 @@ namespace BrawlTCG.UnityApp
                 changed = true;
             }
             if (changed) File.WriteAllLines(ledger, given.OrderBy(n => n));
-            RemoveRetiredDecks(given);
         }
 
         /// <summary>
-        /// Deletes decks an earlier version handed out and that are no longer bundled (or were renamed), but only while
+        /// Deletes decks an earlier version handed out that are no longer bundled, renamed or re-tuned, but only while
         /// the file is still exactly the deck that was handed out: a deck the player edited is theirs and stays.
+        /// Returns the names that were removed.
         /// </summary>
-        static void RemoveRetiredDecks(HashSet<string> given)
+        static List<string> RemoveRetiredDecks(HashSet<string> given)
         {
+            var removed = new List<string>();
             foreach (StarterDecks.Starter s in StarterDecks.Retired)
             {
                 if (!given.Contains(s.Name) || !Exists(s.Name)) continue;
                 List<int> saved = Load(s.Name);
-                if (saved.OrderBy(i => i).SequenceEqual(s.Cards.OrderBy(i => i))) Delete(s.Name);
+                if (!saved.OrderBy(i => i).SequenceEqual(s.Cards.OrderBy(i => i))) continue;
+                Delete(s.Name);
+                removed.Add(s.Name);
             }
+            return removed;
         }
     }
 }

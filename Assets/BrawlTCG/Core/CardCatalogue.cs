@@ -71,7 +71,7 @@ namespace BrawlTCG.Core
             Legend(5000, "Caspian", 2, Element.Shadow, "MasterThief", 4, 4, Weapon.Gauntlets, Weapon.Katars, A(AC.Any_BurnForThreeCard, AC.MasterThief_GrabBomb)),
             Legend(5001, "Raymesis", 5, Element.Shadow, "Raymesis", 9, 16, Weapon.Gauntlets, Weapon.Axe, A(AC.Axe_Swing)),
             Legend(5002, "Mastermind", 4, Element.Shadow, "Loki", 5, 10, Weapon.Scythe, Weapon.Orb, A(AC.Scythe_Slash), whenPlayed: EC.GenerateAndPlayMatrix),
-            Legend(5003, "Ninja Spirit", 1, Element.Shadow, "Ninja_Spirit", 3, 1, Weapon.Sword, Weapon.Scythe, A(AC.NinjaSpirit_PhantomSlash)),
+            Legend(5003, "Ninja Spirit", 2, Element.Shadow, "Ninja_Spirit", 3, 1, Weapon.Sword, Weapon.Scythe, A(AC.NinjaSpirit_PhantomSlash)),
             Legend(5004, "Hellshot Hattori", 3, Element.Shadow, "Hellshot_Hattori", 8, 6, Weapon.Sword, Weapon.Blasters, A(AC.Sword_Slash, AC.Blaster_Shot, AC.Blaster_DoubleShot)),
             Legend(5005, "Dullahan Jiro", 3, Element.Shadow, "DullahanJiro", 5, 7, Weapon.Sword, Weapon.Scythe, A(AC.Sword_Slash, AC.Scythe_Slash, AC.Jiro_SpawnAndPlayNinjaSpirit)),
             Legend(5006, "Kitsune Hattori", 6, Element.Shadow, "Kitsune", 15, 13, Weapon.Sword, Weapon.Spear, A(AC.Sword_Slash, AC.Spear_Stab)),
