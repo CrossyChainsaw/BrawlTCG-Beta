@@ -49,6 +49,7 @@ namespace BrawlTCG.UnityApp
         List<int> _deck = new List<int>();
         string _deckName;
         bool _dirty, _confirmDelete;
+        RectTransform _modal;
 
         sealed class GridCell
         {
@@ -73,6 +74,7 @@ namespace BrawlTCG.UnityApp
             BuildCollection();
             BuildPreview();
             BuildDeckPanel();
+            _modal = UI.Stretch(UI.Rect("Modal", transform)); // top layer for the unsaved-changes dialog
 
             ApplyFilters();
             SwitchDeck(_deckSelector.Value);
@@ -409,8 +411,8 @@ namespace BrawlTCG.UnityApp
             _deckSelector = new ThemedSelector(t, "Your deck", 18, 16, w - 36, DeckStore.List());
             _deckSelector.Changed += name =>
             {
-                if (_dirty) _app.Toast($"Unsaved changes to {_deckName} were discarded.");
-                SwitchDeck(name);
+                string previous = _deckName;
+                ConfirmUnsaved("SWITCH", () => SwitchDeck(name), () => _deckSelector.SetOptions(DeckStore.List(), previous));
             };
 
             _newDeckName = Theme.Field(t, null, "New deck name", "", 18, 104, w - 36 - 140, 32);
@@ -631,11 +633,14 @@ namespace BrawlTCG.UnityApp
             if (string.IsNullOrWhiteSpace(_newDeckName.text)) { _app.Toast("Enter a name for the new deck."); return; }
             string name = DeckStore.SanitizeName(_newDeckName.text);
             if (DeckStore.Exists(name)) { _app.Toast("A deck with that name already exists."); return; }
-            DeckStore.Save(name, Enumerable.Empty<int>());
-            _newDeckName.text = "";
-            _deckSelector.SetOptions(DeckStore.List(), name);
-            SwitchDeck(name);
-            _app.Toast($"Created {name}. Add at least 40 cards, including 10 Essence.");
+            ConfirmUnsaved("CREATE", () =>
+            {
+                DeckStore.Save(name, Enumerable.Empty<int>());
+                _newDeckName.text = "";
+                _deckSelector.SetOptions(DeckStore.List(), name);
+                SwitchDeck(name);
+                _app.Toast($"Created {name}. Add at least {DeckRules.MinimumCardsToSave} cards, including {DeckRules.MinimumEssenceToSave} Essence.");
+            });
         }
 
         void DeleteDeck()
@@ -653,10 +658,57 @@ namespace BrawlTCG.UnityApp
             SwitchDeck(_deckSelector.Value);
         }
 
-        void BackToMenu()
+        void BackToMenu() => ConfirmUnsaved("LEAVE", () => _app.ShowMenu());
+
+        /// <summary>
+        /// Runs <paramref name="proceed"/> straight away when nothing is unsaved. Otherwise asks first: save and go on
+        /// (only when the deck can be saved), go on without saving, or keep editing (runs <paramref name="cancel"/>).
+        /// </summary>
+        void ConfirmUnsaved(string verb, Action proceed, Action cancel = null)
         {
-            if (_dirty) _app.Toast("Unsaved changes were discarded.");
-            _app.ShowMenu();
+            if (!_dirty || _deckName == null) { proceed(); return; }
+
+            UI.Clear(_modal);
+            _modal.SetAsLastSibling();
+            void Close() => UI.Clear(_modal);
+            void Cancel() { Close(); cancel?.Invoke(); }
+
+            var dim = UI.FullPanel(_modal, new Color(Theme.Night.r, Theme.Night.g, Theme.Night.b, 0.72f), "Dim");
+            UI.Clicks(dim.gameObject, e => Cancel()); // clicking outside = keep editing
+
+            string saveError = DeckRules.ValidateForSave(_deck);
+            const float w = 620;
+            float h = saveError == null ? 440 : 380;
+            var box = Theme.GlassPanel(dim.rectTransform, 960 - w / 2, 540 - h / 2, w, h, 28, "Unsaved");
+            box.color = new Color32(14, 18, 42, 255);
+            UI.Clicks(box.gameObject, e => { });
+            box.gameObject.AddComponent<SlideIn>().Offset = new Vector2(0, -24);
+            Transform t = box.transform;
+            var title = Theme.Label(t, "UNSAVED CHANGES", 38, Theme.Text, 0, 26, w, 54, TextAnchor.MiddleCenter, display: true);
+            Theme.AddShadow(title, 3, 0.6f);
+            string body = $"{_deckName} has changes that aren't saved yet.";
+            if (saveError != null) body += $"\nIt can't be saved yet: {saveError}";
+            Theme.Label(t, body, 18, Theme.TextDim, 40, 92, w - 80, 70, TextAnchor.MiddleCenter);
+
+            float y = 178;
+            if (saveError == null)
+            {
+                Theme.Cta(t, $"SAVE AND {verb}", 40, y, w - 80, 62, () =>
+                {
+                    Close();
+                    SaveDeck();
+                    if (!_dirty) proceed();
+                }, 24);
+                y += 76;
+            }
+            var discard = Theme.Ghost(t, $"{verb} WITHOUT SAVING", 40, y, w - 80, 62, () =>
+            {
+                Close();
+                _dirty = false;
+                proceed();
+            }, 22);
+            discard.GetComponentInChildren<Text>().color = Theme.Danger;
+            Theme.Ghost(t, "KEEP EDITING", 40, y + 76, w - 80, 62, Cancel, 22);
         }
     }
 }
