@@ -116,6 +116,63 @@ namespace BrawlTCG.UnityApp
             glyph.raycastTarget = false;
         }
 
+        /// <summary>The trigger a text line starts with ("Start Turn: ...", "When Played: ...", "While In Play: ..."), if any.</summary>
+        public static Trigger? LineTrigger(string line)
+        {
+            line = line.TrimStart();
+            if (line.StartsWith("Start Turn:", StringComparison.OrdinalIgnoreCase)) return Trigger.StartOfTurn;
+            if (line.StartsWith("When Played:", StringComparison.OrdinalIgnoreCase)) return Trigger.WhenPlayed;
+            if (line.StartsWith("While In Play:", StringComparison.OrdinalIgnoreCase)) return Trigger.WhileInPlay;
+            return null;
+        }
+
+        /// <summary>
+        /// Effect text with the matching badge in front of every trigger line. Lines without a trigger are lined up with
+        /// the text next to the icons; an empty line adds a small gap. The font shrinks from <paramref name="maxSize"/>
+        /// towards <paramref name="minSize"/> until it fits in <paramref name="h"/>. Returns the height used.
+        /// </summary>
+        public static float PaintAbilities(Transform parent, string text, float x, float y, float w, float h, int maxSize, int minSize, Color color)
+        {
+            string[] lines = (text ?? "").Split('\n');
+            bool anyIcon = false;
+            foreach (string l in lines) anyIcon |= LineTrigger(l) != null;
+
+            for (int size = maxSize; ; size--)
+            {
+                var block = UI.Place(UI.Rect("Abilities", parent), x, y, w, h);
+                float icon = Mathf.Round(size * 1.3f), indent = anyIcon ? icon + 8 : 0, cy = 0;
+                foreach (string raw in lines)
+                {
+                    string line = raw.Trim();
+                    if (line.Length == 0) { cy += size * 0.6f; continue; }
+                    var label = Theme.Label(block, line, size, color, indent, cy, w - indent, size * 2);
+                    label.horizontalOverflow = HorizontalWrapMode.Wrap;
+                    float lh = Mathf.Max(label.preferredHeight, size * 1.2f);
+                    ((RectTransform)label.transform).sizeDelta = new Vector2(w - indent, lh);
+                    Trigger? t = LineTrigger(line);
+                    if (t != null) MiniBadge(block, t.Value, 0, cy + (size * 1.2f - icon) / 2, icon);
+                    cy += lh + size * 0.25f;
+                }
+                if (cy <= h + 1 || size <= minSize) return Mathf.Min(cy, h);
+                UnityEngine.Object.DestroyImmediate(block.gameObject); // too tall: try a smaller font
+            }
+        }
+
+        /// <summary>A small round badge (coloured ring, dark disc, glyph) for inline use next to text.</summary>
+        public static void MiniBadge(Transform parent, Trigger t, float x, float y, float size)
+        {
+            Color c = ColorFor(t);
+            var holder = UI.Place(UI.Rect("Icon " + t, parent), x, y, size, size);
+            float ring = Mathf.Max(2, size * 0.09f);
+            Quiet(Theme.RoundedPanel(holder, c, 0, 0, size, size, size / 2, "Ring"));
+            Quiet(Theme.RoundedPanel(holder, new Color(0.04f, 0.05f, 0.14f, 0.95f), ring, ring, size - 2 * ring, size - 2 * ring, (size - 2 * ring) / 2, "Disc"));
+            float pad = size * 0.24f;
+            var glyph = UI.Panel(holder, c, pad, pad, size - 2 * pad, size - 2 * pad, "Glyph");
+            glyph.sprite = GlyphFor(t);
+            glyph.preserveAspect = true;
+            glyph.raycastTarget = false;
+        }
+
         static Image Quiet(Image img)
         {
             img.raycastTarget = false;

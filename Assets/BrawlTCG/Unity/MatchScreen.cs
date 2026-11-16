@@ -493,11 +493,7 @@ namespace BrawlTCG.UnityApp
             string effects = CleanEffects(stage.EffectDescription);
             if (string.IsNullOrWhiteSpace(effects)) effects = "No special effect.";
             if (!_game.DrawCardStartTurn) effects += "\n\nPlayers don't draw at the start of their turn.";
-            var text = Theme.Label(_board, effects, 15, Theme.Text, StageInfo.x, StageInfo.y + 62, StageInfo.width, StageInfo.height - 62);
-            text.verticalOverflow = VerticalWrapMode.Truncate;
-            text.resizeTextForBestFit = true;
-            text.resizeTextMinSize = 10;
-            text.resizeTextMaxSize = 15;
+            TriggerIcons.PaintAbilities(_board, effects, StageInfo.x, StageInfo.y + 62, StageInfo.width, StageInfo.height - 62, 15, 10, Theme.Text);
         }
 
         static string CleanEffects(string description)
@@ -952,11 +948,7 @@ namespace BrawlTCG.UnityApp
                         PeekRow(t, mentioned, W - 24 - pw + 10, y + 4, pw, 0.3f);
                         textW -= pw + 8;
                     }
-                    var fx = Theme.Label(t, effects, 16, Theme.Text, 24, y + 30, textW, 60);
-                    fx.verticalOverflow = VerticalWrapMode.Truncate;
-                    fx.resizeTextForBestFit = true;
-                    fx.resizeTextMinSize = 11;
-                    fx.resizeTextMaxSize = 16;
+                    TriggerIcons.PaintAbilities(t, effects, 24, y + 30, textW, 62, 16, 11, Theme.Text);
                     y += 96;
                 }
 
@@ -984,11 +976,7 @@ namespace BrawlTCG.UnityApp
                     string kind = battle.Stackable ? "Stays attached to the legend." : "Discarded after use.";
                     text += $"\n\n{target}\n{kind}";
                 }
-                var desc = Theme.Label(t, text, 19, Theme.Text, ix, 214, iw, 300);
-                desc.verticalOverflow = VerticalWrapMode.Truncate;
-                desc.resizeTextForBestFit = true;
-                desc.resizeTextMinSize = 12;
-                desc.resizeTextMaxSize = 19;
+                TriggerIcons.PaintAbilities(t, text, ix, 214, iw, 300, 19, 12, Theme.Text);
 
                 int[] mentioned = CardReferences.For(card);
                 if (mentioned != null)

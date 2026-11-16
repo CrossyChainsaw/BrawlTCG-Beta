@@ -331,11 +331,7 @@ namespace BrawlTCG.UnityApp
                 if (effects.Length > 0)
                 {
                     Theme.Label(t, "ABILITIES", 14, Theme.Gold, 20, y + 4, 200, 20, display: true);
-                    var fx = Theme.Label(t, effects, 15, Theme.Text, 20, y + 28, w - 40, PreviewRect.height - y - 40);
-                    fx.verticalOverflow = VerticalWrapMode.Truncate;
-                    fx.resizeTextForBestFit = true;
-                    fx.resizeTextMinSize = 10;
-                    fx.resizeTextMaxSize = 15;
+                    TriggerIcons.PaintAbilities(t, effects, 20, y + 28, w - 40, PreviewRect.height - y - 40, 15, 10, Theme.Text);
                 }
             }
             else
@@ -349,11 +345,7 @@ namespace BrawlTCG.UnityApp
                     string target = !battle.TargetRequired ? "No target needed." : battle.FriendlyFire ? "Target: one of your legends." : "Target: an enemy legend.";
                     text += $"\n\n{target}  {(battle.Stackable ? "Stays attached to the legend." : "Discarded after use.")}";
                 }
-                var desc = Theme.Label(t, text, 17, Theme.Text, 20, y, w - 40, PreviewRect.height - y - 24);
-                desc.verticalOverflow = VerticalWrapMode.Truncate;
-                desc.resizeTextForBestFit = true;
-                desc.resizeTextMinSize = 11;
-                desc.resizeTextMaxSize = 17;
+                TriggerIcons.PaintAbilities(t, text, 20, y, w - 40, PreviewRect.height - y - 24, 17, 11, Theme.Text);
             }
         }
 
