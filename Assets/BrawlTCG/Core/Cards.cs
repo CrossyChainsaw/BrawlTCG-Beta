@@ -16,6 +16,12 @@ namespace BrawlTCG.Core
         public Player Owner { get; internal set; }
         public bool IsDiscarded { get; internal set; }
 
+        /// <summary>
+        /// Null for cards that came from a deck. For cards made during the match, what made them: a card
+        /// ("Dark Duo", "The Workshop") or an attack ("Yumiko · Craft 3 Orbs"). Display only.
+        /// </summary>
+        public string CraftedBy { get; internal set; }
+
         public Effect StartTurnEffect { get; }
         public Effect WhenPlayedEffect { get; }
         public Effect WhenDiscardedEffect { get; }
@@ -47,6 +53,7 @@ namespace BrawlTCG.Core
             Card copy = (Card)MemberwiseClone();
             copy.Owner = null;
             copy.IsDiscarded = false;
+            copy.CraftedBy = null;
             copy.ResetRuntimeState();
             return copy;
         }

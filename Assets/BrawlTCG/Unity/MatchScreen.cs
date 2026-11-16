@@ -913,13 +913,17 @@ namespace BrawlTCG.UnityApp
             Theme.Label(t, type.ToUpperInvariant(), 15, CardArt.Accent(card.Element), ix, 150, iw, 20, display: true);
             Theme.Label(t, $"Cost {card.Cost}" + (card.Owner != null ? $"  ·  {card.Owner.Name}" : ""), 15, Theme.TextDim, ix, 172, iw, 20);
 
+            // Made during the match (crafted, summoned, set by an effect): say by what.
+            float top = 206;
+            if (card.CraftedBy != null) top = TriggerIcons.PaintCraftedChip(t, card.CraftedBy, ix, 198, iw) + 8;
+
             if (card is LegendCard legend)
             {
                 float half = (iw - 8) / 2;
-                InfoChip(t, $"ATK {legend.Power}", new Color32(226, 112, 28, 255), ix, 206, half);
-                InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix + half + 8, 206, half);
-                InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, 250, iw);
-                float effectsEnd = CurrentEffects(t, legend, ix, 298, iw);
+                InfoChip(t, $"ATK {legend.Power}", new Color32(226, 112, 28, 255), ix, top, half);
+                InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix + half + 8, top, half);
+                InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, top + 44, iw);
+                float effectsEnd = CurrentEffects(t, legend, ix, top + 92, iw);
 
                 // Attacks (pushed down when the legend has many effects on it)
                 float y = Mathf.Max(418, effectsEnd + 14);
@@ -970,7 +974,7 @@ namespace BrawlTCG.UnityApp
             {
                 // Same layout as legends: details next to the card, ABILITIES (one icon per trigger) below it.
                 var (abilities, info) = TriggerIcons.SplitCardText(card);
-                TriggerIcons.PaintAbilities(t, info, ix, 206, iw, 196, 18, 12, Theme.TextDim);
+                TriggerIcons.PaintAbilities(t, info, ix, top, iw, 402 - top, 18, 12, Theme.TextDim);
 
                 float y = 418;
                 if (abilities.Length > 0)

@@ -219,11 +219,43 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle, _sword, _slash;
+        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer;
 
         // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void ResetStatics() => _bolt = _infinity = _cycle = _sword = _slash = null;
+        static void ResetStatics() => _bolt = _infinity = _cycle = _sword = _slash = _hammer = null;
+
+        // ───────────── Crafted cards: copper hammer ─────────────
+
+        public static readonly Color CraftedColor = new Color32(236, 138, 70, 255);
+        public static readonly Color CraftedFill = new Color32(58, 30, 16, 255);
+
+        /// <summary>Hammer turned 45° (head top-right), white: tint it.</summary>
+        public static Sprite Hammer => _hammer ??= Glyph((x, y) =>
+        {
+            Vector2 p = SwordSpace(x, y); // same 45° turn as the sword
+            bool head = p.x > 0.18f && p.x < 0.82f && p.y > 0.08f && p.y < 0.36f && !(p.x > 0.70f && p.y < 0.16f);
+            bool handle = Mathf.Abs(p.x - 0.5f) < 0.075f && p.y >= 0.36f && p.y < 0.94f;
+            return head || handle;
+        });
+
+        /// <summary>Card detail: "CRAFTED BY" and the source on a copper chip. Returns the bottom edge.</summary>
+        public static float PaintCraftedChip(Transform parent, string source, float x, float y, float w)
+        {
+            const float h = 48;
+            var chip = Quiet(Theme.RoundedPanel(parent, CraftedFill, x, y, w, h, 14, "Crafted"));
+            Quiet(Theme.RoundedPanel(chip.transform, CraftedColor, 0, 0, w, h, 14, "Line", outline: true));
+            var icon = UI.Panel(chip.transform, CraftedColor, 12, 11, 26, 26, "Hammer");
+            icon.sprite = Hammer;
+            icon.preserveAspect = true;
+            icon.raycastTarget = false;
+            Theme.Label(chip.transform, "CRAFTED BY", 12, CraftedColor, 48, 5, w - 58, 16, TextAnchor.MiddleLeft, display: true);
+            var label = Theme.Label(chip.transform, source, 15, Theme.Text, 48, 21, w - 58, 22, TextAnchor.MiddleLeft);
+            label.resizeTextForBestFit = true;
+            label.resizeTextMinSize = 10;
+            label.resizeTextMaxSize = 15;
+            return y + h;
+        }
 
         public static Sprite GlyphFor(Trigger t) =>
             t == Trigger.WhenPlayed ? (_bolt ??= Glyph(Bolt)) :

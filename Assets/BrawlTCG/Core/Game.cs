@@ -462,13 +462,20 @@ namespace BrawlTCG.Core
             player.Hand.Add(card);
         }
 
+        /// <summary>Marks a card made during the match with what made it (the effect or attack running now).</summary>
+        static T Crafted<T>(T card) where T : Card
+        {
+            card.CraftedBy = EffectContext.Current ?? "Unknown";
+            return card;
+        }
+
         /// <summary>Gives the active player a fresh copy of the card.</summary>
-        public void GenerateCard(int cardId) => AddCardToHand(ActivePlayer, CardCatalogue.Create(cardId));
+        public void GenerateCard(int cardId) => AddCardToHand(ActivePlayer, Crafted(CardCatalogue.Create(cardId)));
 
         public void GenerateRandomCards(int n, Element? element = null, CardType? type = null)
         {
             for (int i = 0; i < n; i++)
-                AddCardToHand(ActivePlayer, CardCatalogue.CreateRandom(Rng, element, type));
+                AddCardToHand(ActivePlayer, Crafted(CardCatalogue.CreateRandom(Rng, element, type)));
         }
 
         public void GenerateRandomWeaponCards(int n, Weapon? weapon = null)
@@ -476,20 +483,20 @@ namespace BrawlTCG.Core
             for (int i = 0; i < n; i++)
             {
                 Card card = weapon == null ? CardCatalogue.CreateRandomWeapon(Rng) : CardCatalogue.CreateRandomWeapon(Rng, weapon.Value);
-                AddCardToHand(ActivePlayer, card);
+                AddCardToHand(ActivePlayer, Crafted(card));
             }
         }
 
         public void GenerateRandomLegendsWithWeapon(int n, Weapon weapon)
         {
             for (int i = 0; i < n; i++)
-                AddCardToHand(ActivePlayer, CardCatalogue.CreateRandomLegendWithWeapon(Rng, weapon));
+                AddCardToHand(ActivePlayer, Crafted(CardCatalogue.CreateRandomLegendWithWeapon(Rng, weapon)));
         }
 
         /// <summary>Gives the active player the stage plus the essence it costs, and plays it.</summary>
         public void GenerateAndPlayStage(int cardId)
         {
-            var stage = (StageCard)CardCatalogue.Create(cardId);
+            var stage = Crafted((StageCard)CardCatalogue.Create(cardId));
             ActivePlayer.GainEssence(stage.Cost);
             AddCardToHand(ActivePlayer, stage);
             PlayStageCard(ActivePlayer, stage);
@@ -498,7 +505,7 @@ namespace BrawlTCG.Core
         /// <summary>Gives the active player the legend plus the essence it costs, and plays it.</summary>
         public void GenerateAndPlayLegend(int cardId)
         {
-            var legend = (LegendCard)CardCatalogue.Create(cardId);
+            var legend = Crafted((LegendCard)CardCatalogue.Create(cardId));
             if (ActivePlayer.PlayingField.Count >= MaxLegendsOnField) return;
             ActivePlayer.GainEssence(legend.Cost);
             AddCardToHand(ActivePlayer, legend);

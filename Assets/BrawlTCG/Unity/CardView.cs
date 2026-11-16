@@ -300,10 +300,22 @@ namespace BrawlTCG.UnityApp
             string type = card.Type.ToString().ToUpperInvariant();
             string text = card is WeaponCard w ? $"{type}  ·  {Pretty(w.Weapon)}" : $"{type}  ·  {card.Element.ToString().ToUpperInvariant()}";
             const float pw = 210, ph = 30;
-            var pill = Theme.RoundedPanel(face, body, (FW - pw) / 2, 254, pw, ph, 15, "TypePill");
+            // Cards made during the match get a copper pill with a hammer in front of the type.
+            bool crafted = card.CraftedBy != null;
+            Color line = crafted ? TriggerIcons.CraftedColor : accent;
+            var pill = Theme.RoundedPanel(face, crafted ? TriggerIcons.CraftedFill : body, (FW - pw) / 2, 254, pw, ph, 15, "TypePill");
             pill.raycastTarget = false;
-            Quiet(Theme.RoundedPanel(pill.transform, accent, 0, 0, pw, ph, 15, "Line", outline: true));
-            var label = Theme.Label(pill.transform, text, 16, accent, 0, 0, pw, ph, TextAnchor.MiddleCenter, display: true);
+            Quiet(Theme.RoundedPanel(pill.transform, line, 0, 0, pw, ph, 15, "Line", outline: true));
+            float lx = 0;
+            if (crafted)
+            {
+                var hammer = UI.Panel(pill.transform, line, 12, 4, 22, 22, "Hammer");
+                hammer.sprite = TriggerIcons.Hammer;
+                hammer.preserveAspect = true;
+                hammer.raycastTarget = false;
+                lx = 30;
+            }
+            var label = Theme.Label(pill.transform, text, 16, line, lx, 0, pw - lx - (crafted ? 8 : 0), ph, TextAnchor.MiddleCenter, display: true);
             label.resizeTextForBestFit = true;
             label.resizeTextMinSize = 10;
             label.resizeTextMaxSize = 16;
