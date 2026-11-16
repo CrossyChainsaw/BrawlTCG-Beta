@@ -534,6 +534,14 @@ namespace BrawlTCG.UnityApp
             {
                 EmptyPile(discardPos, w, h, "");
             }
+
+            // Your discard pile is a drop zone: discard a hand card by paying its Essence cost.
+            if (bottom)
+            {
+                var zone = Quiet(UI.Panel(_board, new Color(0, 0, 0, 0), discardPos.x, discardPos.y, w, h, "DiscardZone"));
+                _zones[(BoardZone.DiscardPile, p.Index)] = zone.rectTransform;
+                _zoneOutlines[(BoardZone.DiscardPile, p.Index)] = DropOutline(zone.transform, w, h, 12);
+            }
         }
 
         void PileLabel(string text, float x, float y, float w)
@@ -656,12 +664,12 @@ namespace BrawlTCG.UnityApp
         void DrawCorner()
         {
             GearButton(_board, 1840, 20, 56);
-            var help = Theme.GlassPanel(_board, 1508, 884, 388, 176, 20, "Help");
+            var help = Theme.GlassPanel(_board, 1508, 864, 388, 196, 20, "Help");
             help.raycastTarget = false;
             Theme.Label(help.transform, "HOW TO PLAY", 15, Theme.Gold, 20, 14, 340, 20, display: true);
             Theme.Label(help.transform,
-                "Drag cards from your hand onto the board.\nClick any card to inspect it.\nClick your legend, pick an attack, then a target.\nSpace or END TURN passes the turn.\nEsc opens the options.",
-                15, Theme.TextDim, 20, 40, 356, 124);
+                "Drag cards from your hand onto the board.\nDrop one on your discard pile to discard it (costs its Essence).\nClick any card to inspect it.\nClick your legend, pick an attack, then a target.\nSpace or END TURN passes the turn.\nEsc opens the options.",
+                15, Theme.TextDim, 20, 40, 356, 148);
         }
 
         // ───────────────────────────── Cards ─────────────────────────────
@@ -769,6 +777,8 @@ namespace BrawlTCG.UnityApp
                     }
                     break;
             }
+            // Your discard pile takes any card you can pay for.
+            if (_game.Players[me].Essence >= card.Cost) Show(BoardZone.DiscardPile, me);
         }
 
         void OnDragEnded(CardView view)
@@ -808,6 +818,10 @@ namespace BrawlTCG.UnityApp
             if (view.Index < 0 || view.Index >= player.Hand.Count || player.Hand[view.Index] != view.Card) return false;
             Card card = view.Card;
             int hand = view.Index;
+
+            // Any card can be dropped on your own discard pile: it costs the card's Essence, and no effect triggers.
+            if (Over(BoardZone.DiscardPile, me, screen))
+                return Submit(GameCommand.DiscardCard(me, hand));
 
             switch (card)
             {

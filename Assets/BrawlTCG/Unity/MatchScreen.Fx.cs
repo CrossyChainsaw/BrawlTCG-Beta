@@ -461,6 +461,17 @@ namespace BrawlTCG.UnityApp
             Color tint = Fx.Tint(card.Element);
             int player = s.Cmd.PlayerIndex;
 
+            if (s.Cmd.Type == CommandType.DiscardCard)
+            {
+                // Discarded for its Essence cost: a quiet toss onto the pile, no card effects.
+                var dg = Ghost(card, faceUp, startScale);
+                Sound("card_draw", 0, 0.5f);
+                CardFlight df = CardFlight.Begin(dg, start, startScale).To(dest, destScale, 0.34f, 0, 40);
+                if (!startFaceUp && faceUp) df.Flip();
+                Reveal(df, real);
+                return;
+            }
+
             if (card is BattleCard battle)
             {
                 // Effects first so the card is drawn on top of its glow.

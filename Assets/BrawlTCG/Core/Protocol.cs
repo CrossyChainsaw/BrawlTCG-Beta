@@ -19,7 +19,7 @@ namespace BrawlTCG.Core
     /// </summary>
     public static class Protocol
     {
-        public const string Version = "BTCG-UNITY-1";
+        public const string Version = "BTCG-UNITY-2"; // 2: 50 starting health, DiscardCard command
         public const int DefaultPort = 5000;
         public const string HelloPrefix = "HELLO";
         public const string CommandPrefix = "CMD:";

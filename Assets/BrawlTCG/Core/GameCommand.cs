@@ -13,6 +13,8 @@ namespace BrawlTCG.Core
         PlayWeapon,
         PlayBattle,
         Attack,
+        /// <summary>Pay the card's Essence cost to put it from your hand onto your discard pile (no effects).</summary>
+        DiscardCard,
     }
 
     /// <summary>
@@ -47,6 +49,7 @@ namespace BrawlTCG.Core
         public static GameCommand PlayWeapon(int player, int hand, int legend) => new GameCommand(CommandType.PlayWeapon, player, hand, legendIndex: legend);
         public static GameCommand PlayBattle(int player, int hand, int target) => new GameCommand(CommandType.PlayBattle, player, hand, targetIndex: target);
         public static GameCommand Attack(int player, int legend, int attack, int target) => new GameCommand(CommandType.Attack, player, legendIndex: legend, attackIndex: attack, targetIndex: target);
+        public static GameCommand DiscardCard(int player, int hand) => new GameCommand(CommandType.DiscardCard, player, hand);
 
         /// <summary>Plays the hand card at <paramref name="hand"/> with the command matching its type.</summary>
         public static GameCommand PlayCard(Card card, int player, int hand, int target)
@@ -111,6 +114,7 @@ namespace BrawlTCG.Core
                     yield return PlayWeapon(p, h, l);
                 for (int t = -1; t < maxTargets; t++)
                     yield return PlayBattle(p, h, t);
+                yield return DiscardCard(p, h);
             }
             for (int l = 0; l < me.PlayingField.Count; l++)
             {

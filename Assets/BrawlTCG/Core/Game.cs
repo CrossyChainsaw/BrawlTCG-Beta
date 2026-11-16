@@ -205,6 +205,9 @@ namespace BrawlTCG.Core
                         return battle.FriendlyFire ? "Play this on one of your legends." : "Play this on an enemy legend.";
                     return null;
                 }
+
+                case CommandType.DiscardCard:
+                    return me.Essence >= card.Cost ? null : $"Discarding costs {card.Cost} Essence";
             }
             return "Unknown command.";
         }
@@ -259,6 +262,11 @@ namespace BrawlTCG.Core
                     PlayBattleCard(me, battle, target);
                     break;
                 }
+                case CommandType.DiscardCard:
+                    // Pay the cost, straight to the discard pile; no card effects trigger.
+                    PayAndRemoveFromHand(me, card);
+                    Discard(me, card);
+                    break;
             }
         }
 

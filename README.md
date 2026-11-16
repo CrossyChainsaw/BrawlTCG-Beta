@@ -42,6 +42,7 @@ To test networking on one PC: run a build and press Play in the editor at the sa
   - **Battle card** → a legend (or anywhere on a field if it needs no target).
 - **Click a legend** to zoom in and use an attack. Attacks need weapons stacked on the legend; some burn (discard) weapons when used.
 - Weapons that match the legend's element deal **elemental bonus damage**.
+- **Discard a card** by dropping it from your hand on your discard pile. It costs the card's Essence, and none of its effects trigger.
 - You can only hit the enemy player directly when they have no legends on the field.
 - **End your turn** with the END TURN button or **Space**. Right-click or Esc cancels.
 - Bring the other player to 0 health to win.
