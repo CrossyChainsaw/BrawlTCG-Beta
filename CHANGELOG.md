@@ -4,7 +4,7 @@
 
 The first version numbered as a release. It adds three new rules (a bigger health pool, a starting-hand redraw and paid discards). It rebalances Ninja Spirit and the Promotion cards, and replaces every bundled deck with six decks picked by a 105,600-game bot tournament. It also adds a lot of clarity to the match screen: what affects a legend and why, where a card came from, which cards you can't play right now, and a consistent ABILITIES layout on every card.
 
-Closes issues **#10** (Silent Galaxy marker) and **#11** (decks from the alpha).
+Closes issues **#10** (Silent Galaxy marker), **#11** (decks from the alpha) and **#12** (easy online play).
 
 ### Contents
 
@@ -131,6 +131,9 @@ On launch, old copies of removed or re-tuned decks are deleted, but only while t
 
 ### 10. Online play and compatibility
 
+- **Online rooms.** Click **Create Room** to get a 4-digit code, and your friend enters it under **Join Room**. Matches go through Unity Relay, so nobody opens a port on their router or shares their IP address.
+  - The room disappears as soon as your friend joins, or within 30 seconds if the host closes the game.
+  - **LAN Host** and **LAN Join** keep the direct connection for playing without internet. The old **Server** option is gone, since rooms replace it.
 - The network version is now **BTCG-UNITY-2**. The new rules (50 health, discards, starting-hand redraw) make older builds incompatible, so **both players need this version**. A mismatched build is refused with a clear "incompatible version" message instead of falling out of sync.
 - Both players choose their starting hands at the same time. Each player's reshuffle uses its own random generator, so the result is identical whichever choice arrives first. This was tested in 1,000 random games that applied the choices in opposite orders on the two clients, with 0 desyncs.
 
