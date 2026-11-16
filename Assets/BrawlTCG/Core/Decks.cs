@@ -8,7 +8,7 @@ namespace BrawlTCG.Core
     public static class DeckRules
     {
         public const int MinimumCardsToPlay = 40;
-        public const int MinimumCardsToSave = 20;
+        public const int MinimumCardsToSave = 40; // was 20 in the WinForms version; raised to match the play minimum
         public const int MinimumEssenceToSave = 10;
         public const int MaxCopies = 4;
         const int EssenceId = 0;
