@@ -261,14 +261,8 @@ namespace BrawlTCG.UnityApp
             fade.raycastTarget = false;
             Quiet(Theme.RoundedPanel(face, new Color(accent.r, accent.g, accent.b, 0.85f), x, y, w, h, 12, "ArtLine", outline: true));
 
-            if (card is LegendCard legend && legend.IsBurned)
-            {
-                // Below the ability badges when the card has them.
-                float by = y + (TriggerIcons.Any(card) ? 30 : 10);
-                var burn = Theme.RoundedPanel(face, new Color32(255, 120, 30, 240), FW - 112, by, 86, 30, 15, "Burned");
-                burn.raycastTarget = false;
-                Theme.Label(burn.transform, "BURNED", 16, Theme.Ink, 0, 0, 86, 30, TextAnchor.MiddleCenter, display: true);
-            }
+            // Burned: a flame badge in the badge row, left of the ability badges.
+            if (card is LegendCard legend && legend.IsBurned) TriggerIcons.PaintBurned(face, card);
         }
 
         static void PaintName(RectTransform face, Card card)

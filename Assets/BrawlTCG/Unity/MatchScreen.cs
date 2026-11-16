@@ -896,6 +896,8 @@ namespace BrawlTCG.UnityApp
         }
 
         const float DetailX = 1268, DetailY = 84;
+        /// <summary>Tallest the detail panel may grow (to just above the bottom of the 1080 canvas).</summary>
+        const float MaxDetailH = 1080 - DetailY - 12;
 
         /// <summary>Where the full-size preview of a mentioned card appears: left of the detail panel, near the thumbnail.</summary>
         static Vector2 PeekSpot(float panelY) =>
@@ -952,10 +954,8 @@ namespace BrawlTCG.UnityApp
                 InfoChip(t, $"ATK {legend.Power}", new Color32(226, 112, 28, 255), ix, top, half);
                 InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix + half + 8, top, half);
                 InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, top + 44, iw);
-                float effectsEnd = CurrentEffects(t, legend, ix, top + 92, iw);
 
-                // Attacks (pushed down when the legend has many effects on it)
-                float y = Mathf.Max(418, effectsEnd + 14);
+                float y = 418;
                 Theme.Label(t, "ATTACKS", 16, Theme.Gold, 24, y, 300, 22, display: true);
                 y += 28;
                 if (legend.Attacks.Count == 0)
@@ -986,13 +986,24 @@ namespace BrawlTCG.UnityApp
                     y += 96;
                 }
 
-                if (legend.StackedCards.Count > 0)
+                // EFFECTS, then EQUIPPED at the bottom. The panel grows (up to the screen edge) when effects need the room.
+                bool equipped = legend.StackedCards.Count > 0;
+                float below = equipped ? 136 : 20;
+                y = EffectsSection(t, legend, 24, y, W - 48, MaxDetailH - below);
+                float panelH = Mathf.Min(MaxDetailH, Mathf.Max(H, y + below));
+                if (panelH > H)
                 {
-                    Theme.Label(t, $"EQUIPPED ({legend.StackedCards.Count})", 16, Theme.Gold, 24, H - 128, 300, 22, display: true);
+                    UI.Place(panel.rectTransform, X, Y, W, panelH);
+                    if (t.Find("Outline") is RectTransform outline) UI.Place(outline, 0, 0, W, panelH);
+                }
+
+                if (equipped)
+                {
+                    Theme.Label(t, $"EQUIPPED ({legend.StackedCards.Count})", 16, Theme.Gold, 24, panelH - 128, 300, 22, display: true);
                     float sx = 24;
                     foreach (Card stacked in legend.StackedCards.Take(9))
                     {
-                        CardView mini = CardView.Create(t, stacked, true, sx, H - 100, 0.4f);
+                        CardView mini = CardView.Create(t, stacked, true, sx, panelH - 100, 0.4f);
                         Card s = stacked;
                         mini.Clicked = _ => OpenDetail(s);
                         sx += CardView.W * 0.4f + 8;
@@ -1029,55 +1040,100 @@ namespace BrawlTCG.UnityApp
             return y + 44;
         }
 
-        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A";
+        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A", FireHex = "#FFA060", SpentHex = "#B4B9D2";
+
+        /// <summary>One EFFECTS row: its icon, the full text, and a shorter text for when rows go two to a line.</summary>
+        readonly struct EffectRow
+        {
+            public readonly TriggerIcons.EffectIcon Icon;
+            public readonly string Full, Short;
+            public EffectRow(TriggerIcons.EffectIcon icon, string full, string brief) { Icon = icon; Full = full; Short = brief; }
+        }
 
         /// <summary>
-        /// Everything currently affecting a legend: stat changes per source (buffs green, debuffs red) and statuses
-        /// (tapped, burned, Silent Galaxy, already attacked), each with what caused it. Returns the bottom edge.
+        /// Everything currently affecting a legend, each with what caused it: statuses (Silent Galaxy, tapped, burned,
+        /// already attacked) and ATK / max-HP changes per source. Healing is not a change to a stat, so it is not listed.
         /// </summary>
-        float CurrentEffects(Transform t, LegendCard legend, float x, float y, float w)
+        List<EffectRow> LegendEffects(LegendCard legend)
         {
-            var lines = new List<string>();
-            if (legend.IsTapped) lines.Add(Line(StatusHex, "TAPPED", legend.TappedBy, "skips its next attack"));
-            if (legend.IsBurned) lines.Add(Line(DebuffHex, "BURNED  -1 HP each turn", legend.BurnedBy, null));
-            if (!legend.CanAttack) lines.Add(Line(DebuffHex, "CAN'T DEAL DAMAGE", "Silent Galaxy", null));
-            if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer) lines.Add(Line(StatusHex, "ALREADY ATTACKED", null, "this turn"));
+            var rows = new List<EffectRow>();
+            if (!legend.CanAttack)
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.NoStrikes,
+                    Line(DebuffHex, "Can't deal damage", "Silent Galaxy", "only Cosmic legends can deal damage"),
+                    Line(DebuffHex, "Can't deal damage", "Silent Galaxy", null)));
+            if (legend.IsTapped)
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Tapped,
+                    Line(StatusHex, "Tapped", legend.TappedBy, "skips its next attack"),
+                    Line(StatusHex, "Tapped", legend.TappedBy, null)));
+            if (legend.IsBurned)
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Burned,
+                    Line(FireHex, "Burned", legend.BurnedBy, "-1 HP at the start of each of its turns"),
+                    Line(FireHex, "Burned  -1 HP each turn", legend.BurnedBy, null)));
             foreach (LegendCard.StatModifier m in legend.Modifiers)
             {
-                var parts = new List<string>();
-                if (m.Power != 0) parts.Add($"{m.Power:+0;-0} ATK");
-                if (m.Health != 0) parts.Add($"{m.Health:+0;-0} HP");
-                bool buff = m.Power + m.Health > 0;
-                lines.Add(Line(buff ? BuffHex : DebuffHex, string.Join("  ", parts), m.Source, null));
+                if (m.Power != 0)
+                {
+                    string s = Line(m.Power > 0 ? BuffHex : DebuffHex, $"{m.Power:+0;-0} ATK", m.Source, null);
+                    rows.Add(new EffectRow(m.Power > 0 ? TriggerIcons.EffectIcon.AttackUp : TriggerIcons.EffectIcon.AttackDown, s, s));
+                }
+                if (m.Health != 0)
+                {
+                    string s = Line(m.Health > 0 ? BuffHex : DebuffHex, $"{m.Health:+0;-0} max HP", m.Source, null);
+                    rows.Add(new EffectRow(m.Health > 0 ? TriggerIcons.EffectIcon.HealthUp : TriggerIcons.EffectIcon.HealthDown, s, s));
+                }
             }
+            if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer)
+            {
+                string s = Line(SpentHex, "Already attacked", null, "this turn");
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Attacked, s, s));
+            }
+            return rows;
+        }
 
-            Theme.Label(t, "ON THIS LEGEND", 14, Theme.Gold, x, y, w, 20, display: true);
-            y += 22;
-            const float lineH = 22;
-            const int room = 8;
-            if (lines.Count == 0)
+        /// <summary>
+        /// EFFECTS: one row per effect on the legend (icon + what + source). Rows go two to a line when one column does
+        /// not fit above <paramref name="bottom"/>, and the last cell becomes "+N more" if even that is not enough.
+        /// Drawn only when there is something to show. Returns the bottom edge.
+        /// </summary>
+        float EffectsSection(Transform t, LegendCard legend, float x, float y, float w, float bottom)
+        {
+            List<EffectRow> rows = LegendEffects(legend);
+            if (rows.Count == 0) return y;
+
+            const float header = 30, rowH = 28, icon = 22, colGap = 12;
+            Theme.Label(t, "EFFECTS", 16, Theme.Gold, x, y + 4, 300, 22, display: true);
+            float top = y + header;
+            int fitRows = Mathf.Max(1, (int)((bottom - top) / rowH));
+
+            int columns = rows.Count <= fitRows ? 1 : 2;
+            int cells = Mathf.Min(rows.Count, fitRows * columns);
+            int hidden = rows.Count - cells;
+            if (hidden > 0) { cells--; hidden++; } // the last cell says how many are not shown
+
+            float cellW = (w - (columns - 1) * colGap) / columns;
+            int perColumn = (cells + (hidden > 0 ? 1 : 0) + columns - 1) / columns;
+            for (int i = 0; i <= cells; i++)
             {
-                Theme.Label(t, "Nothing right now.", 15, Theme.TextFaint, x, y, w, lineH);
-                return y + lineH;
-            }
-            if (lines.Count > room)
-            {
-                int hidden = lines.Count - (room - 1);
-                lines = lines.Take(room - 1).ToList();
-                lines.Add($"<color=#9AA0C0>+{hidden} more</color>");
-            }
-            foreach (string line in lines)
-            {
-                var label = Theme.Label(t, line, 15, Theme.TextDim, x, y, w, lineH, TextAnchor.MiddleLeft);
+                if (i == cells && hidden == 0) break;
+                float cx = x + (i / perColumn) * (cellW + colGap), cy = top + (i % perColumn) * rowH;
+                string text;
+                float tx = cx;
+                if (i < cells)
+                {
+                    TriggerIcons.MiniEffect(t, rows[i].Icon, cx, cy + (rowH - icon) / 2, icon);
+                    tx += icon + 8;
+                    text = columns == 1 ? rows[i].Full : rows[i].Short;
+                }
+                else text = $"<color=#9AA0C0>+{hidden} more</color>";
+
+                var label = Theme.Label(t, text, 15, Theme.Text, tx, cy, cx + cellW - tx, rowH, TextAnchor.MiddleLeft);
                 label.supportRichText = true;
-                label.horizontalOverflow = HorizontalWrapMode.Wrap;
                 label.verticalOverflow = VerticalWrapMode.Truncate;
                 label.resizeTextForBestFit = true;
                 label.resizeTextMinSize = 10;
                 label.resizeTextMaxSize = 15;
-                y += lineH;
             }
-            return y;
+            return top + perColumn * rowH + 6;
         }
 
         /// <summary>"+5 ATK  Super Saiyan": the effect coloured, then its source, then an optional dim note.</summary>

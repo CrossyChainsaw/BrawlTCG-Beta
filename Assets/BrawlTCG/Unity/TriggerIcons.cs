@@ -74,14 +74,59 @@ namespace BrawlTCG.UnityApp
         /// </summary>
         public static void PaintNoStrikes(RectTransform face, Card card)
         {
-            int slot = For(card).Count;
+            int slot = For(card).Count + (card is LegendCard l && l.IsBurned ? 1 : 0); // after the burn badge
             var holder = Badge(face, "NoStrikes", slot, NoStrikesColor);
             Glyph(holder, _sword ??= Glyph(SwordCut), new Color32(238, 232, 240, 255), Size * 0.12f);
             Glyph(holder, _slash ??= Glyph(Slash), NoStrikesColor, 1);
+        }
 
-            // A burned legend without ability badges has its BURNED tag just under the badge row: make room.
-            if (slot == 0 && face.Find("Burned") is RectTransform burned)
-                UI.Place(burned, 300 - 112, 78 + 30, 86, 30);
+        public static readonly Color FireColor = new Color32(255, 128, 36, 255);
+
+        /// <summary>Burned (-1 HP each turn): an orange flame, in the badge row left of the ability badges.</summary>
+        public static void PaintBurned(RectTransform face, Card card)
+        {
+            var holder = Badge(face, "Burned", For(card).Count, FireColor);
+            Glyph(holder, Flame, FireColor, Size * 0.14f);
+        }
+
+        // ───────────── Effects on a legend (detail panel): small inline icons ─────────────
+
+        public enum EffectIcon { NoStrikes, Tapped, Burned, AttackUp, AttackDown, HealthUp, HealthDown, Attacked }
+
+        public static readonly Color BuffColor = new Color32(110, 220, 130, 255);
+        public static readonly Color DebuffColor = new Color32(255, 84, 84, 255);
+        public static readonly Color TappedColor = new Color32(245, 192, 74, 255);
+        static readonly Color SpentColor = new Color32(150, 156, 184, 255);
+
+        /// <summary>A small round icon (coloured ring, dark disc, glyph) for an effect on a legend, for use next to text.</summary>
+        public static void MiniEffect(Transform parent, EffectIcon kind, float x, float y, float size)
+        {
+            if (kind == EffectIcon.NoStrikes) { MiniNoStrikes(parent, x, y, size); return; }
+            Color c; Sprite s; float pad = 0.22f;
+            switch (kind)
+            {
+                case EffectIcon.Tapped: c = TappedColor; s = TappedCard; pad = 0.18f; break;
+                case EffectIcon.Burned: c = FireColor; s = Flame; pad = 0.2f; break;
+                case EffectIcon.AttackUp: c = BuffColor; s = FullSword; pad = 0.18f; break;
+                case EffectIcon.AttackDown: c = DebuffColor; s = FullSword; pad = 0.18f; break;
+                case EffectIcon.HealthUp: c = BuffColor; s = Heart; break;
+                case EffectIcon.HealthDown: c = DebuffColor; s = Heart; break;
+                default: c = SpentColor; s = FullSword; pad = 0.18f; break;
+            }
+            var holder = MiniDisc(parent, "Icon " + kind, c, x, y, size);
+            var glyph = UI.Panel(holder, c, size * pad, size * pad, size * (1 - 2 * pad), size * (1 - 2 * pad), "Glyph");
+            glyph.sprite = s;
+            glyph.preserveAspect = true;
+            glyph.raycastTarget = false;
+        }
+
+        static RectTransform MiniDisc(Transform parent, string name, Color ring, float x, float y, float size)
+        {
+            var holder = UI.Place(UI.Rect(name, parent), x, y, size, size);
+            float r = Mathf.Max(2, size * 0.09f), disc = size - 2 * r;
+            Quiet(Theme.RoundedPanel(holder, ring, 0, 0, size, size, size / 2, "Ring"));
+            Quiet(Theme.RoundedPanel(holder, new Color(0.04f, 0.05f, 0.14f, 0.95f), r, r, disc, disc, disc / 2, "Disc"));
+            return holder;
         }
 
         /// <summary>One round badge (coloured ring, dark disc) at a slot of the badge row, counted from the right.</summary>
@@ -196,6 +241,22 @@ namespace BrawlTCG.UnityApp
             }
         }
 
+        /// <summary>Inline version of the "can't deal damage" badge (<see cref="PaintNoStrikes"/>), for use next to text.</summary>
+        public static void MiniNoStrikes(Transform parent, float x, float y, float size)
+        {
+            var holder = MiniDisc(parent, "Icon NoStrikes", NoStrikesColor, x, y, size);
+            float ring = Mathf.Max(2, size * 0.09f), disc = size - 2 * ring;
+            float pad = ring + disc * 0.12f;
+            var sword = UI.Panel(holder, new Color32(238, 232, 240, 255), pad, pad, size - 2 * pad, size - 2 * pad, "Glyph");
+            sword.sprite = _sword ??= Glyph(SwordCut);
+            sword.preserveAspect = true;
+            sword.raycastTarget = false;
+            var slash = UI.Panel(holder, NoStrikesColor, ring, ring, disc, disc, "Slash");
+            slash.sprite = _slash ??= Glyph(Slash);
+            slash.preserveAspect = true;
+            slash.raycastTarget = false;
+        }
+
         /// <summary>A small round badge (coloured ring, dark disc, glyph) for inline use next to text.</summary>
         public static void MiniBadge(Transform parent, Trigger t, float x, float y, float size)
         {
@@ -219,11 +280,49 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer;
+        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer, _fullSword, _heart, _flame, _tapped;
 
         // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void ResetStatics() => _bolt = _infinity = _cycle = _sword = _slash = _hammer = null;
+        static void ResetStatics() =>
+            _bolt = _infinity = _cycle = _sword = _slash = _hammer = _fullSword = _heart = _flame = _tapped = null;
+
+        /// <summary>Whole sword, tip top-right (ATK changes).</summary>
+        static Sprite FullSword => _fullSword ??= Glyph((x, y) => { Vector2 p = SwordSpace(x, y); return Sword(p.x, p.y); });
+
+        /// <summary>Heart (max HP changes): the classic (u² + v² − 1)³ − u²v³ ≤ 0 curve.</summary>
+        static Sprite Heart => _heart ??= Glyph((x, y) =>
+        {
+            float u = (x - 0.5f) * 2.5f, v = (0.5f - y) * 2.5f + 0.1f;
+            float a = u * u + v * v - 1;
+            return a * a * a - u * u * v * v * v <= 0;
+        });
+
+        /// <summary>Flame (burned): a teardrop that flickers to a point at the top, with a hollow core.</summary>
+        static Sprite Flame => _flame ??= Glyph((x, y) =>
+        {
+            bool Drop(float cx, float cy, float r, float top, float px, float py)
+            {
+                if (Vector2.Distance(new Vector2(px, py), new Vector2(cx, cy)) < r) return true;
+                if (py < top || py > cy) return false;
+                float t = (py - top) / (cy - top);
+                float bend = 0.07f * Mathf.Sin(t * Mathf.PI) * (1 - t); // tip leans right
+                return Mathf.Abs(px - cx - bend) < r * Mathf.Pow(t, 0.75f);
+            }
+            return Drop(0.5f, 0.66f, 0.28f, 0.04f, x, y) && !Drop(0.5f, 0.76f, 0.12f, 0.46f, x, y);
+        });
+
+        /// <summary>Tapped: a card outline turned onto its side.</summary>
+        static Sprite TappedCard => _tapped ??= Glyph((x, y) =>
+        {
+            const float c = 0.34202014f, s = 0.93969262f; // turned 70°, so it reads as turned rather than just wide
+            float dx = x - 0.5f, dy = y - 0.5f;
+            float u = Mathf.Abs(dx * c + dy * s), v = Mathf.Abs(-dx * s + dy * c);
+            const float hw = 0.25f, hh = 0.34f, line = 0.085f;
+            bool outer = u < hw && v < hh, inner = u < hw - line && v < hh - line;
+            bool art = u < hw - line * 2 && v < hh - line * 2; // filled "art" window so it reads as a card
+            return outer && !inner || art;
+        });
 
         // ───────────── Crafted cards: copper hammer ─────────────
 
