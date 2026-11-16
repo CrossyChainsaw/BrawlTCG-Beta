@@ -14,8 +14,18 @@ namespace BrawlTCG.UnityApp
     public sealed partial class MatchScreen : MonoBehaviour
     {
         // ───────────── Layout (1920x1080 design space) ─────────────
-        static readonly Rect TopPanel = new Rect(24, 20, 400, 176);
-        static readonly Rect BottomPanel = new Rect(24, 884, 400, 176);
+        // Tall enough for 44 essence crystals: rows of 15, 14 and 15, the middle one tucked into the gaps, rows 16 apart.
+        static readonly Rect TopPanel = new Rect(24, 20, 400, 208);
+        static readonly Rect BottomPanel = new Rect(24, 852, 400, 208);
+        const int MaxGems = 15 + 14 + 15;
+
+        /// <summary>Centre of essence crystal <paramref name="n"/> inside a player panel (y down), filling top row first.</summary>
+        static Vector2 GemSlot(int n)
+        {
+            if (n < 15) return new Vector2(27 + n * 24, 154);
+            if (n < 29) return new Vector2(39 + (n - 15) * 24, 170);
+            return new Vector2(27 + (n - 29) * 24, 186);
+        }
         static readonly Rect TopLane = new Rect(440, 214, 1040, 248);
         static readonly Rect BottomLane = new Rect(440, 578, 1040, 248);
         static readonly Rect Strip = new Rect(440, 474, 1040, 92);
@@ -320,22 +330,28 @@ namespace BrawlTCG.UnityApp
             // Essence crystals
             int total = p.EssenceField.Count;
             int available = p.Essence;
-            int shown = Mathf.Min(Mathf.Max(total, available), 12);
+            // Past 44, each extra Essence makes a crystal gold (two in one slot), from the first slot on. Spending uses up
+            // the gold first (gold turns back to purple), then the purple crystals go dim.
+            int shown = Mathf.Min(Mathf.Max(total, available), MaxGems);
+            int goldLit = Mathf.Max(0, available - MaxGems), lit = Mathf.Min(available, MaxGems);
             Theme.Label(t, "ESSENCE", 13, Theme.TextDim, 16, 124, 90, 18, display: true);
-            for (int i = 0; i < shown; i++)
+            for (int n = 0; n < shown; n++)
             {
-                bool filled = i < available;
-                var gem = UI.Panel(t, filled ? new Color32(176, 120, 255, 255) : new Color(1, 1, 1, 0.14f), 20 + i * 24, 152, 15, 15, "Gem");
+                bool filled = n < lit, gold = n < goldLit;
+                Color color = gold ? Theme.Gold : filled ? (Color)new Color32(176, 120, 255, 255) : new Color(1, 1, 1, 0.14f);
+                Vector2 c = GemSlot(n);
+                var gem = UI.Panel(t, color, c.x - 7, c.y - 6, 15, 15, "Gem");
                 gem.sprite = Theme.Rounded;
                 gem.type = Image.Type.Sliced;
                 gem.pixelsPerUnitMultiplier = 8;
                 gem.raycastTarget = false;
                 gem.rectTransform.pivot = new Vector2(0.5f, 0.5f);
-                gem.rectTransform.anchoredPosition = new Vector2(27 + i * 24, -158);
+                gem.rectTransform.anchoredPosition = new Vector2(c.x, -c.y);
                 gem.rectTransform.localRotation = Quaternion.Euler(0, 0, 45);
                 if (filled)
                 {
-                    var glow = UI.Panel(t, new Color(0.7f, 0.5f, 1f, 0.5f), 12 + i * 24, 144, 30, 30, "GemGlow");
+                    Color glowColor = gold ? new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.5f) : new Color(0.7f, 0.5f, 1f, 0.5f);
+                    var glow = UI.Panel(t, glowColor, c.x - 15, c.y - 14, 30, 30, "GemGlow");
                     glow.sprite = Theme.Soft;
                     glow.raycastTarget = false;
                     glow.transform.SetSiblingIndex(gem.transform.GetSiblingIndex());
@@ -1124,16 +1140,56 @@ namespace BrawlTCG.UnityApp
                     tx += icon + 8;
                     text = columns == 1 ? rows[i].Full : rows[i].Short;
                 }
-                else text = $"<color=#9AA0C0>+{hidden} more</color>";
+                else
+                {
+                    // "+N more" opens the full list over the panel.
+                    text = $"<color=#F5C04A>+{hidden} more</color>  <color=#9AA0C0>· click to see all</color>";
+                    var hit = Theme.RoundedPanel(t, new Color(1, 1, 1, 0.06f), cx - 6, cy + 1, cellW + 6, rowH - 2, 10, "MoreEffects");
+                    float bottomEdge = cy + rowH + 8;
+                    UI.Clicks(hit.gameObject, _ => ToggleAllEffects(t, rows, x, bottomEdge, w));
+                    hit.gameObject.AddComponent<HoverFx>().Init(hit, new Color(1, 1, 1, 0.06f), new Color(1, 1, 1, 0.14f), 1f);
+                }
 
-                var label = Theme.Label(t, text, 15, Theme.Text, tx, cy, cx + cellW - tx, rowH, TextAnchor.MiddleLeft);
-                label.supportRichText = true;
-                label.verticalOverflow = VerticalWrapMode.Truncate;
-                label.resizeTextForBestFit = true;
-                label.resizeTextMinSize = 10;
-                label.resizeTextMaxSize = 15;
+                EffectLabel(t, text, tx, cy, cx + cellW - tx, rowH);
             }
             return top + perColumn * rowH + 6;
+        }
+
+        static Text EffectLabel(Transform t, string text, float x, float y, float w, float h)
+        {
+            var label = Theme.Label(t, text, 15, Theme.Text, x, y, w, h, TextAnchor.MiddleLeft);
+            label.supportRichText = true;
+            label.verticalOverflow = VerticalWrapMode.Truncate;
+            label.resizeTextForBestFit = true;
+            label.resizeTextMinSize = 10;
+            label.resizeTextMaxSize = 15;
+            label.raycastTarget = false;
+            return label;
+        }
+
+        /// <summary>
+        /// Every effect on the legend, one full row each, in a box over the detail panel whose bottom sits at
+        /// <paramref name="bottom"/>. Clicking it (or "+N more" again) closes it.
+        /// </summary>
+        void ToggleAllEffects(Transform t, List<EffectRow> rows, float x, float bottom, float w)
+        {
+            if (t.Find("AllEffects") is Transform open) { Destroy(open.gameObject); return; }
+
+            const float header = 44, rowH = 28, icon = 22, pad = 14;
+            float h = header + rows.Count * rowH + pad;
+            float y = Mathf.Max(80, bottom - h);
+            var box = Theme.RoundedPanel(t, new Color32(20, 24, 52, 255), x - 8, y, w + 16, h, 16, "AllEffects");
+            Quiet(Theme.RoundedPanel(box.transform, Theme.Gold, 0, 0, w + 16, h, 16, "Line", outline: true));
+            UI.Clicks(box.gameObject, _ => Destroy(box.gameObject));
+            Transform b = box.transform;
+            Theme.Label(b, $"ALL EFFECTS ({rows.Count})", 16, Theme.Gold, pad, 12, 300, 22, display: true).raycastTarget = false;
+            Theme.Label(b, "click to close", 13, Theme.TextDim, w + 16 - pad - 200, 12, 200, 22, TextAnchor.MiddleRight).raycastTarget = false;
+            for (int i = 0; i < rows.Count; i++)
+            {
+                float ry = header + i * rowH;
+                TriggerIcons.MiniEffect(b, rows[i].Icon, pad, ry + (rowH - icon) / 2, icon);
+                EffectLabel(b, rows[i].Full, pad + icon + 8, ry, w + 16 - 2 * pad - icon - 8, rowH);
+            }
         }
 
         /// <summary>"+5 ATK  Super Saiyan": the effect coloured, then its source, then an optional dim note.</summary>

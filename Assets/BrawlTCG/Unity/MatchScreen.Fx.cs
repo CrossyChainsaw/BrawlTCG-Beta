@@ -119,10 +119,35 @@ namespace BrawlTCG.UnityApp
         Vector2 AvatarCenter(int player) { Rect r = PanelRect(player); return new Vector2(r.x + 47, r.y + 47); }
         Vector2 HandCenter(int player) => player == _viewer ? new Vector2(960, BottomHand.y + 28 + CardView.H / 2) : new Vector2(960, -64 + CardView.H * 0.35f);
 
+        /// <summary>
+        /// Puts the stack <paramref name="stacked"/> belongs to back under its legend, first card closest, as the board
+        /// draws it. A flight raises its card to the top (and the attacker's lunge raises the legend), so a weapon that
+        /// moves while its legend attacks would otherwise end up drawn over the legend.
+        /// </summary>
+        void RestackUnderLegend(Card stacked)
+        {
+            foreach (Player p in _game.Players)
+                foreach (LegendCard l in p.PlayingField)
+                {
+                    if (!l.StackedCards.Contains(stacked)) continue;
+                    if (!_views.TryGetValue(l, out CardView lv) || lv == null) return;
+                    Transform legend = lv.transform;
+                    for (int k = Mathf.Min(l.StackedCards.Count, 4) - 1; k >= 0; k--)
+                    {
+                        if (!_views.TryGetValue(l.StackedCards[k], out CardView v) || v == null || v.transform.parent != legend.parent) continue;
+                        int li = legend.GetSiblingIndex(), vi = v.transform.GetSiblingIndex();
+                        v.transform.SetSiblingIndex(vi < li ? li - 1 : li); // just below the legend
+                    }
+                    return;
+                }
+        }
+
         Vector2 GemCenter(int player, int gem)
         {
             Rect r = PanelRect(player);
-            return new Vector2(r.x + 27 + Mathf.Clamp(gem, 0, 11) * 24, r.y + 159);
+            // Past 44 the slots fill a second time, in gold: Essence 45 lands on the first crystal, 46 on the second...
+            int n = Mathf.Clamp(gem >= MaxGems ? gem - MaxGems : gem, 0, MaxGems - 1);
+            return new Vector2(r.x, r.y + 1) + GemSlot(n);
         }
 
         Vector2 CenterOf(Snapshot s, Card card)
@@ -266,6 +291,12 @@ namespace BrawlTCG.UnityApp
                     var f = CardFlight.Begin(view, before.Center, before.Scale)
                         .To(after.Center, after.Scale, Duration(before.Center, after.Center), 0, before.Zone == after.Zone ? 0 : 50);
                     if (before.FaceUp != after.FaceUp) f.Flip();
+                    if (after.Zone == BoardZone.Stacked)
+                    {
+                        // Sliding along the stack (a weapon under it was burned): stay under the legend the whole way.
+                        if (before.Zone == BoardZone.Stacked) f.NoRaise();
+                        f.Landed += () => RestackUnderLegend(card);
+                    }
                 }
                 else if (after.Zone == BoardZone.Hand)
                 {
@@ -278,7 +309,8 @@ namespace BrawlTCG.UnityApp
                 else if (after.Zone == BoardZone.PlayingField || after.Zone == BoardZone.Stacked || after.Zone == BoardZone.Stage)
                 {
                     // Summoned out of nowhere (generated legends, stages, weapons).
-                    CardFlight.Begin(view, after.Center, after.Scale * 0.2f, impact).To(after.Center, after.Scale, 0.32f);
+                    var f = CardFlight.Begin(view, after.Center, after.Scale * 0.2f, impact).To(after.Center, after.Scale, 0.32f);
+                    if (after.Zone == BoardZone.Stacked) f.Landed += () => RestackUnderLegend(card);
                     Fx.Play(_fx, "Sparkle", after.Center, 280, impact, 30, Fx.Tint(card.Element));
                     Fx.Shockwave(_fx, after.Center, Fx.Tint(card.Element), 360, impact);
                 }
