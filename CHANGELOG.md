@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.0.1 Beta
+
+A small update to the match screen. No rule changes: v1.0.1 and v1.0 can play each other online.
+
+Closes issue **#14** (show the Silent Galaxy icon when inspecting a legend).
+
+### Match screen
+
+- **EFFECTS section.** Clicking a legend shows everything affecting it below its abilities, one row each with an icon and its source:
+  - **Can't deal damage** (Silent Galaxy): red sword with a slash.
+  - **Tapped**: a gold card turned on its side. The diagonal TAPPED text on the board stays.
+  - **Burned**: an orange flame.
+  - **ATK changes**: a green sword for a buff, a red one for a debuff.
+  - **Max HP changes**: a green heart for a buff, a red one for a debuff. Healing is not listed.
+  - **Already attacked** this turn.
+- When there is no room for all of them, rows go two to a line, and **"+N more"** opens the full list. The panel grows taller when it needs to.
+- This replaces the ON THIS LEGEND list.
+- **Burned** legends show a flame badge on the board instead of the BURNED tag.
+- **Essence holds 44 crystals** (was 12), in rows of 15, 14 and 15. Past 44, crystals turn **gold** from the first one on (54 Essence shows 10 gold). Spending uses up gold first: a gold crystal turns back to purple, then purple crystals go dim.
+
+### Fixes
+
+- After **Enchantress** used an Enchant attack, the weapons under her could be drawn on top of her. Weapons that slide along a stack now stay under their legend.
+- **Faerie Queen** now reads "all **your** Nature legends get +1/+1". The effect always worked that way; only the text was wrong.
+
+---
+
 ## v1.0 Beta
 
 The first version numbered as a release. It adds three new rules (a bigger health pool, a starting-hand redraw and paid discards). It rebalances Ninja Spirit and the Promotion cards, and replaces every bundled deck with six decks picked by a 105,600-game bot tournament. It also adds a lot of clarity to the match screen: what affects a legend and why, where a card came from, which cards you can't play right now, and a consistent ABILITIES layout on every card.
