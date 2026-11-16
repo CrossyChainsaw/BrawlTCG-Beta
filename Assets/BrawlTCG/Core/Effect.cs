@@ -20,7 +20,25 @@ namespace BrawlTCG.Core
 
         public void Invoke(object target, Card source, Game game, Card playedCard)
         {
-            _action?.Invoke(target, source, game, playedCard);
+            if (_action == null) return;
+            EffectContext.Push(source?.Name);
+            try { _action(target, source, game, playedCard); }
+            finally { EffectContext.Pop(); }
         }
+    }
+
+    /// <summary>
+    /// Which card (or attack) is currently changing the game, so a legend can remember where its buffs, debuffs,
+    /// taps and burns came from. Bookkeeping only: it never changes what an effect does.
+    /// </summary>
+    internal static class EffectContext
+    {
+        [System.ThreadStatic] static System.Collections.Generic.List<string> _stack;
+
+        internal static string Current => _stack != null && _stack.Count > 0 ? _stack[_stack.Count - 1] : null;
+
+        internal static void Push(string source) => (_stack ??= new System.Collections.Generic.List<string>()).Add(source ?? "Unknown");
+
+        internal static void Pop() => _stack.RemoveAt(_stack.Count - 1);
     }
 }

@@ -54,7 +54,13 @@ namespace BrawlTCG.Core
             Kind = kind;
         }
 
-        public void Execute(LegendCard attacker, object target, Game game) => _execute?.Invoke(attacker, target, this, game);
+        public void Execute(LegendCard attacker, object target, Game game)
+        {
+            if (_execute == null) return;
+            EffectContext.Push($"{attacker?.Name} · {Name}");
+            try { _execute(attacker, target, this, game); }
+            finally { EffectContext.Pop(); }
+        }
 
         /// <summary>Number of stacked weapons that count for the given requirement ("Any" counts every weapon).</summary>
         public static int CountWeapons(LegendCard legend, Weapon weapon)

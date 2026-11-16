@@ -8,7 +8,7 @@ namespace BrawlTCG.Core
     public static class DeckRules
     {
         public const int MinimumCardsToPlay = 40;
-        public const int MinimumCardsToSave = 20;
+        public const int MinimumCardsToSave = 40; // was 20 in the WinForms version; raised to match the play minimum
         public const int MinimumEssenceToSave = 10;
         public const int MaxCopies = 4;
         const int EssenceId = 0;
@@ -88,8 +88,9 @@ namespace BrawlTCG.Core
     }
 
     /// <summary>
-    /// One ready-to-play deck per element. Each is 40 cards with 14 Essence, built from that element's cards
-    /// (Nature keeps its original Vial of Crows; Arctic borrows two legends), with weapons the deck's own legends can equip.
+    /// The decks that come with the game (<see cref="Premade"/>, the only ones handed out) and the ones that used to
+    /// (<see cref="Retired"/>). <see cref="All"/> holds the original per-element starter decks (40 cards, 14 Essence each);
+    /// they are no longer handed out, but tests and the deck simulator still use them as a benchmark.
     /// </summary>
     public static class StarterDecks
     {
@@ -131,6 +132,67 @@ namespace BrawlTCG.Core
                 (0, 14), (5000, 3), (5003, 2), (5004, 3), (5005, 3), (5002, 1), (4002, 1),
                 (25000, 4), (15001, 3), (23005, 2), (501, 2), (500, 1), (516, 1)),
         };
+
+        /// <summary>
+        /// The six decks the game hands out: the top five of a 33-deck bot tournament (16 tactic decks, each tuned by
+        /// simulation, against each other, the starters and the alpha decks) plus Frozen Tide. Named after how they win.
+        /// </summary>
+        public static readonly IReadOnlyList<Starter> Premade = new[]
+        {
+            // All Cosmic, so Silent Galaxy stops only the opponent's damage. Aurora Brynn and Artemis hit hard; chests refill.
+            Make("Cosmic Lockdown", Element.Cosmic, (0, 13), (107, 3), (500, 1), (506, 4), (512, 1), (525, 1), (526, 1), (3000, 3), (3001, 2),
+                (3002, 1), (3003, 4), (3005, 1), (23001, 1), (24002, 1), (24003, 3)),
+            // Card advantage: chests, Witch Party and crafting legends (Breaker Shang, Fait, Ulgrim) bury the opponent in cards.
+            Make("Treasure Hunt", Element.Magic, (0, 16), (506, 3), (513, 3), (514, 1), (516, 3), (518, 3), (521, 1), (525, 1), (2002, 1),
+                (3005, 3), (4004, 2), (23004, 1), (24002, 2)),
+            // Shadow/Wild aggro under Evil Hideout (+3 ATK): Ninja Spirit needs no weapon, Caspian and Dander are cheap,
+            // Forgeborne Chests and Bouncy Bombs keep the pressure up. The fastest deck.
+            Make("Hideout Rush", Element.Shadow, (0, 12), (104, 3), (500, 2), (516, 4), (517, 1), (5000, 3), (5003, 4), (5006, 1), (6000, 1),
+                (6002, 2), (13002, 1), (17001, 1), (20000, 4), (25000, 1)),
+            // Axes and katars: Dander early, The Minotaur and Raymesis late; Wild Chests and Adrenaline for reach.
+            Make("Wild Axe", Element.Wild, (0, 14), (500, 2), (506, 4), (513, 4), (521, 1), (525, 1), (527, 1), (2001, 1), (2004, 1), (5001, 1),
+                (6000, 2), (6002, 3), (13001, 1), (13002, 1), (20000, 3)),
+            // All Fire under Mustafar: every non-Fire legend loses 2 HP each turn while Fire legends are immune.
+            Make("Scorched Earth", Element.Fire, (0, 12), (100, 2), (500, 1), (503, 1), (506, 2), (514, 3), (2000, 2), (2001, 1), (2003, 3),
+                (2004, 1), (2005, 4), (2006, 2), (2007, 1), (23000, 1), (23003, 2), (24000, 1), (25003, 1)),
+            // Arctic control under Atlantis: non-Arctic legends lose 1 HP a turn and deal 2 less; The Rock and Snowman Kor
+            // wall up, Sunken Chests refill. Slow and grinding (#10 in the tournament, kept because it plays so differently).
+            Make("Frozen Tide", Element.Arctic, (0, 13), (106, 3), (500, 2), (506, 4), (515, 4), (525, 1), (5004, 1), (6003, 3), (7000, 2),
+                (7001, 3), (19002, 3), (24004, 1)),
+        };
+
+        /// <summary>
+        /// Decks that earlier versions handed out and that are gone or changed now: the alpha decks, Claude I-III under their
+        /// old names, Overgrowth, and the earlier tunings of the kept decks. A player's copy is removed only while it is
+        /// still exactly as it was handed out (edited decks are kept); a re-tuned deck is then handed out again.
+        /// </summary>
+        public static readonly IReadOnlyList<Starter> Retired = new[]
+        {
+            Make("Ninja Spirit Aggro", Element.Shadow, (0, 14), (104, 4), (500, 2), (503, 3), (504, 2), (5000, 4), (5003, 4), (6000, 2), (13000, 2), (17000, 4)),
+            Make("Dark Duo", Element.Shadow, (0, 20), (500, 4), (502, 4), (516, 4), (517, 4), (519, 4), (1004, 4), (23004, 4)),
+            Make("Faerie Queen", Element.Nature, (0, 20), (101, 4), (1000, 4), (1006, 4), (1008, 4), (18000, 4), (24001, 4)),
+            Make("Katars", Element.Wild, (0, 20), (503, 2), (522, 1), (523, 4), (4003, 4), (5000, 4), (6002, 4), (20000, 4), (20001, 4)),
+            Make("Fire Axe", Element.Fire, (0, 22), (100, 2), (104, 2), (505, 4), (2001, 4), (2002, 4), (2003, 4), (2004, 4), (13001, 2), (13002, 4), (15000, 2), (24000, 2)),
+            Make("Fury Shang", Element.Fire, (0, 20), (100, 4), (104, 2), (508, 4), (2001, 4), (2006, 4), (5000, 4), (17000, 4), (24000, 4)),
+            Make("Arctic Control", Element.Arctic, (0, 28), (105, 4), (106, 4), (509, 4), (510, 4), (511, 2), (515, 4), (5000, 4), (7000, 4), (7001, 4), (17000, 4), (24004, 4)),
+            Make("Nature Magic", Element.Nature, (0, 30), (101, 4), (503, 4), (1000, 4), (1001, 4), (1002, 4), (4000, 4), (4002, 4), (18000, 4), (22000, 4), (22001, 4), (24000, 4), (24001, 4)),
+            Make("Yumiko Gauntlet Control", Element.Nature, (0, 30), (101, 4), (1004, 4), (1005, 4), (1006, 4), (3002, 4), (4003, 4), (5000, 4), (5003, 4), (6001, 4), (17000, 4), (17001, 4), (19000, 4), (24000, 4)),
+            Make("Sword & Scythe", Element.Shadow, (0, 42), (104, 4), (105, 4), (506, 4), (2000, 4), (2003, 4), (2004, 4), (2005, 4), (4001, 4), (4002, 4), (5004, 4), (5005, 4), (5006, 2), (23000, 4), (23001, 4), (23002, 4), (25000, 4), (25001, 4)),
+            Make("Claude I", Element.Shadow, (0, 12), (104, 3), (500, 2), (516, 3), (517, 1), (5000, 4), (5003, 4), (5005, 1), (5006, 1),
+                (6000, 1), (6002, 2), (13002, 1), (17001, 1), (20000, 2), (25000, 2)),
+            Make("Claude II", Element.Cosmic, (0, 13), (107, 3), (506, 1), (512, 1), (526, 1), (3000, 3), (3001, 2), (3002, 2), (3003, 3),
+                (3005, 2), (21000, 2), (23001, 2), (24002, 3), (24003, 2)),
+            Make("Claude III", Element.Nature, (0, 12), (521, 1), (1000, 2), (1001, 4), (1008, 4), (3002, 1), (3003, 2), (4000, 2),
+                (18000, 4), (24001, 4), (24002, 1), (24005, 1), (24006, 2)),
+            Make("Hideout Rush", Element.Shadow, (0, 12), (104, 3), (500, 2), (516, 3), (517, 1), (5000, 4), (5003, 4), (5005, 1), (5006, 1),
+                (6000, 1), (6002, 2), (13002, 1), (17001, 1), (20000, 2), (25000, 2)),
+            Make("Cosmic Lockdown", Element.Cosmic, (0, 13), (107, 3), (506, 1), (512, 1), (526, 1), (3000, 3), (3001, 2), (3002, 2), (3003, 3),
+                (3005, 2), (21000, 2), (23001, 2), (24002, 3), (24003, 2)),
+            Make("Overgrowth", Element.Nature, (0, 12), (521, 1), (1000, 2), (1001, 4), (1008, 4), (3002, 1), (3003, 2), (4000, 2),
+                (18000, 4), (24001, 4), (24002, 1), (24005, 1), (24006, 2)),
+            Make("Wild Axe", Element.Wild, (0, 13), (500, 3), (513, 2), (521, 2), (2002, 2), (2004, 2), (5001, 2), (6000, 1), (6002, 4),
+                (13000, 1), (13001, 2), (13002, 2), (20000, 4)),
+        }.Concat(All).ToArray(); // the seven starter decks are no longer handed out either
 
         static Starter Make(string name, Element element, params (int id, int count)[] entries)
         {

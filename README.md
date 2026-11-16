@@ -18,7 +18,7 @@ fixed and a few missing features added (see [Changes from the WinForms version](
 
 To make a standalone build: **File → Build Profiles → Windows → Build** (pick a folder outside `Assets`, e.g. `Builds/`).
 
-Seven starter decks, one per element (*Starter - Fire*, *Nature*, *Magic*, *Cosmic*, *Arctic*, *Wild* and *Shadow*), are added on launch, so you can play straight away. Each starter is handed out once: a deleted starter stays deleted, and a deck you already have with the same name is never overwritten.
+Six ready-made decks are added on launch, so you can play straight away: *Cosmic Lockdown*, *Treasure Hunt*, *Hideout Rush*, *Wild Axe*, *Scorched Earth* and *Frozen Tide*. Each one is handed out once: a deleted deck stays deleted, and a deck you already have with the same name is never overwritten. Decks that older versions handed out (the per-element starters and earlier premade decks) are removed on launch, unless you edited them.
 
 ## Game modes
 
@@ -32,7 +32,8 @@ To test networking on one PC: run a build and press Play in the editor at the sa
 
 ## How to play
 
-- Each player starts with **30 health**, **7 cards** and **1 Essence** on the field. The host goes first.
+- Each player starts with **50 health** (30 in the WinForms version), **7 cards** and **1 Essence** on the field. The host goes first.
+- **Starting hand:** before the first turn, each player may pick any cards from their 7-card starting hand to shuffle back into their deck, and draws as many new ones. Once per match; both players choose at the same time.
 - At the start of your turn you draw a card, and your Essence is refilled to the number of Essence cards you have in play.
 - **Drag cards from your hand** onto the board:
   - **Essence** → your Essence zone (one per turn).
@@ -42,6 +43,7 @@ To test networking on one PC: run a build and press Play in the editor at the sa
   - **Battle card** → a legend (or anywhere on a field if it needs no target).
 - **Click a legend** to zoom in and use an attack. Attacks need weapons stacked on the legend; some burn (discard) weapons when used.
 - Weapons that match the legend's element deal **elemental bonus damage**.
+- **Discard a card** by dropping it from your hand on your discard pile. It costs the card's Essence, and none of its effects trigger.
 - You can only hit the enemy player directly when they have no legends on the field.
 - **End your turn** with the END TURN button or **Space**. Right-click or Esc cancels.
 - Bring the other player to 0 health to win.
@@ -90,7 +92,7 @@ Stage start-of-turn effects still only affect the active player's legends. That 
 - **END TURN button** (Space still works).
 - **Game over screen** with the winner, plus handling for an opponent leaving or disconnecting.
 - **Hot-seat mode** for two players on one PC.
-- **Starter decks**, and named decks with New / Save / Delete in the deck builder.
+- **Ready-made decks**, and named decks with New / Save / Delete in the deck builder.
 
 ### Other differences
 

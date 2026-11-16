@@ -5,7 +5,7 @@ namespace BrawlTCG.Core
 {
     public sealed class Player
     {
-        public const int StartingHealth = 30;
+        public const int StartingHealth = 50; // was 30 in the WinForms version
 
         /// <summary>0 = the player who takes the first turn.</summary>
         public int Index { get; }

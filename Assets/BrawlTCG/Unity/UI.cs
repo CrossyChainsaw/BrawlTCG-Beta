@@ -12,6 +12,10 @@ namespace BrawlTCG.UnityApp
         static Font _font;
         public static Font Font => _font ??= Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
 
+        // No domain reload on Play: start each run without the previous run's references.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() => _font = null;
+
         public static readonly Color ZoneColor = new Color32(105, 105, 105, 255);       // SystemColors.ControlDarkDark
         public static readonly Color GameBackground = new Color32(25, 25, 112, 255);     // MidnightBlue
         public static readonly Color ActiveGreen = new Color32(0, 128, 0, 255);

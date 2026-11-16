@@ -34,6 +34,21 @@ namespace BrawlTCG.Core
         public Player Winner { get; private set; }
         public int TurnNumber { get; private set; }
 
+        /// <summary>
+        /// Set before <see cref="Start"/>: after drawing their starting hands both players may shuffle any of those cards
+        /// back and redraw that many (one <see cref="CommandType.RedrawStartingHand"/> each) before the first turn.
+        /// Both clients of a network game must use the same setting.
+        /// </summary>
+        public bool StartingHandRedraw { get; set; }
+        /// <summary>True between <see cref="Start"/> and both players choosing their starting hand.</summary>
+        public bool ChoosingStartingHands { get; private set; }
+        readonly bool[] _chosenStartingHand = new bool[2];
+        // One shuffle generator per player, so the two choices give the same result in either order (they are made at
+        // the same time in a network game, so each client may receive them in a different order).
+        Random[] _redrawRng;
+
+        public bool HasChosenStartingHand(int player) => _chosenStartingHand[player];
+
         /// <summary>Messages for the players ("X starts", "X just took damage", ...).</summary>
         public event Action<string> Notification;
 
@@ -90,7 +105,46 @@ namespace BrawlTCG.Core
             }
 
             Notify($"{ActivePlayer.Name} Starts");
+            if (StartingHandRedraw)
+            {
+                ChoosingStartingHands = true;
+                _redrawRng = new[] { new Random(Rng.Next()), new Random(Rng.Next()) };
+                return; // the first turn starts once both players have chosen
+            }
             StartTurn();
+        }
+
+        /// <summary>
+        /// The chosen cards go back into the deck, the deck is shuffled, and each chosen slot gets a newly drawn card in
+        /// the same position, so the rest of the hand doesn't move.
+        /// </summary>
+        void RedrawStartingHand(Player player, int mask)
+        {
+            var slots = new List<int>();
+            for (int i = 0; i < player.Hand.Count; i++)
+                if ((mask & (1 << i)) != 0) slots.Add(i);
+            if (slots.Count > 0)
+            {
+                foreach (int i in slots) player.Deck.Add(player.Hand[i]);
+                Random rng = _redrawRng[player.Index];
+                for (int i = player.Deck.Count - 1; i > 0; i--)
+                {
+                    int j = rng.Next(i + 1);
+                    (player.Deck[i], player.Deck[j]) = (player.Deck[j], player.Deck[i]);
+                }
+                foreach (int i in slots)
+                {
+                    Card drawn = player.Deck[player.Deck.Count - 1]; // top of the deck is the last element
+                    player.Deck.RemoveAt(player.Deck.Count - 1);
+                    player.Hand[i] = drawn;
+                }
+            }
+            _chosenStartingHand[player.Index] = true;
+            if (_chosenStartingHand[0] && _chosenStartingHand[1])
+            {
+                ChoosingStartingHands = false;
+                StartTurn();
+            }
         }
 
         void StartTurn()
@@ -135,6 +189,18 @@ namespace BrawlTCG.Core
             if (cmd == null) return "No command.";
             if (!IsStarted) return "The game has not started.";
             if (IsOver) return "The game is over.";
+
+            // Starting hands: both players choose at the same time, before anyone has a turn.
+            if (ChoosingStartingHands)
+            {
+                if (cmd.Type != CommandType.RedrawStartingHand) return "Choose your starting hand first.";
+                if (cmd.PlayerIndex < 0 || cmd.PlayerIndex > 1) return "Invalid player.";
+                if (_chosenStartingHand[cmd.PlayerIndex]) return "You already chose your starting hand.";
+                int cards = _players[cmd.PlayerIndex].Hand.Count;
+                return cmd.TargetIndex >= 0 && cmd.TargetIndex < 1 << cards ? null : "Invalid starting hand choice.";
+            }
+            if (cmd.Type == CommandType.RedrawStartingHand) return "The starting hands were already chosen.";
+
             if (cmd.PlayerIndex != ActiveIndex) return "It is not your turn!";
 
             Player me = ActivePlayer;
@@ -205,6 +271,9 @@ namespace BrawlTCG.Core
                         return battle.FriendlyFire ? "Play this on one of your legends." : "Play this on an enemy legend.";
                     return null;
                 }
+
+                case CommandType.DiscardCard:
+                    return me.Essence >= card.Cost ? null : $"Discarding costs {card.Cost} Essence";
             }
             return "Unknown command.";
         }
@@ -220,6 +289,11 @@ namespace BrawlTCG.Core
 
         void Execute(GameCommand cmd)
         {
+            if (cmd.Type == CommandType.RedrawStartingHand)
+            {
+                RedrawStartingHand(_players[cmd.PlayerIndex], cmd.TargetIndex);
+                return;
+            }
             Player me = ActivePlayer;
             Player enemy = InactivePlayer;
             switch (cmd.Type)
@@ -259,6 +333,11 @@ namespace BrawlTCG.Core
                     PlayBattleCard(me, battle, target);
                     break;
                 }
+                case CommandType.DiscardCard:
+                    // Pay the cost, straight to the discard pile; no card effects trigger.
+                    PayAndRemoveFromHand(me, card);
+                    Discard(me, card);
+                    break;
             }
         }
 
@@ -462,13 +541,20 @@ namespace BrawlTCG.Core
             player.Hand.Add(card);
         }
 
+        /// <summary>Marks a card made during the match with what made it (the effect or attack running now).</summary>
+        static T Crafted<T>(T card) where T : Card
+        {
+            card.CraftedBy = EffectContext.Current ?? "Unknown";
+            return card;
+        }
+
         /// <summary>Gives the active player a fresh copy of the card.</summary>
-        public void GenerateCard(int cardId) => AddCardToHand(ActivePlayer, CardCatalogue.Create(cardId));
+        public void GenerateCard(int cardId) => AddCardToHand(ActivePlayer, Crafted(CardCatalogue.Create(cardId)));
 
         public void GenerateRandomCards(int n, Element? element = null, CardType? type = null)
         {
             for (int i = 0; i < n; i++)
-                AddCardToHand(ActivePlayer, CardCatalogue.CreateRandom(Rng, element, type));
+                AddCardToHand(ActivePlayer, Crafted(CardCatalogue.CreateRandom(Rng, element, type)));
         }
 
         public void GenerateRandomWeaponCards(int n, Weapon? weapon = null)
@@ -476,20 +562,20 @@ namespace BrawlTCG.Core
             for (int i = 0; i < n; i++)
             {
                 Card card = weapon == null ? CardCatalogue.CreateRandomWeapon(Rng) : CardCatalogue.CreateRandomWeapon(Rng, weapon.Value);
-                AddCardToHand(ActivePlayer, card);
+                AddCardToHand(ActivePlayer, Crafted(card));
             }
         }
 
         public void GenerateRandomLegendsWithWeapon(int n, Weapon weapon)
         {
             for (int i = 0; i < n; i++)
-                AddCardToHand(ActivePlayer, CardCatalogue.CreateRandomLegendWithWeapon(Rng, weapon));
+                AddCardToHand(ActivePlayer, Crafted(CardCatalogue.CreateRandomLegendWithWeapon(Rng, weapon)));
         }
 
         /// <summary>Gives the active player the stage plus the essence it costs, and plays it.</summary>
         public void GenerateAndPlayStage(int cardId)
         {
-            var stage = (StageCard)CardCatalogue.Create(cardId);
+            var stage = Crafted((StageCard)CardCatalogue.Create(cardId));
             ActivePlayer.GainEssence(stage.Cost);
             AddCardToHand(ActivePlayer, stage);
             PlayStageCard(ActivePlayer, stage);
@@ -498,7 +584,7 @@ namespace BrawlTCG.Core
         /// <summary>Gives the active player the legend plus the essence it costs, and plays it.</summary>
         public void GenerateAndPlayLegend(int cardId)
         {
-            var legend = (LegendCard)CardCatalogue.Create(cardId);
+            var legend = Crafted((LegendCard)CardCatalogue.Create(cardId));
             if (ActivePlayer.PlayingField.Count >= MaxLegendsOnField) return;
             ActivePlayer.GainEssence(legend.Cost);
             AddCardToHand(ActivePlayer, legend);
@@ -549,7 +635,7 @@ namespace BrawlTCG.Core
         public string StateFingerprint()
         {
             var sb = new System.Text.StringBuilder();
-            sb.Append($"T{TurnNumber} A{ActiveIndex} S{ActiveStage?.Id ?? -1}/{ActiveStageOwner?.Index ?? -1} D{DrawCardStartTurn} O{IsOver}{Winner?.Index};");
+            sb.Append($"T{TurnNumber} A{ActiveIndex} S{ActiveStage?.Id ?? -1}/{ActiveStageOwner?.Index ?? -1} D{DrawCardStartTurn} O{IsOver}{Winner?.Index} R{ChoosingStartingHands}{_chosenStartingHand[0]}{_chosenStartingHand[1]};");
             foreach (Player p in _players)
             {
                 sb.Append($"P{p.Index}:{p.Health}/{p.MaxHealth} e{p.Essence} pe{p.PlayedEssenceCardThisTurn} d{string.Join(".", p.Deck.Select(c => c.Id))} ");

@@ -51,6 +51,10 @@ namespace BrawlTCG.UnityApp
 
         static readonly Dictionary<string, Sprite[]> Cache = new Dictionary<string, Sprite[]>();
 
+        // No domain reload on Play: frame sprites from the previous run are destroyed, so cut them again.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() => Cache.Clear();
+
         public static Sprite[] Frames(string name)
         {
             if (Cache.TryGetValue(name, out Sprite[] frames)) return frames;
@@ -633,6 +637,41 @@ namespace BrawlTCG.UnityApp
         }
 
         public CardFlight Flip() { _flip = true; return this; }
+
+        CardView _back;
+
+        /// <summary>
+        /// A real turn-over for a face-up card: <paramref name="back"/> (a face-down copy) is shown until the flip is
+        /// edge-on, then the card itself turns into view. Implies <see cref="Flip"/>; <paramref name="back"/> is destroyed.
+        /// </summary>
+        public CardFlight ShowBackFirst(CardView back)
+        {
+            _flip = true;
+            _back = back;
+            var g = back.GetComponent<CanvasGroup>();
+            if (g != null) g.blocksRaycasts = false;
+            back.transform.SetSiblingIndex(transform.GetSiblingIndex() + 1);
+            if (_group != null) _group.alpha = 0;
+            SyncBack();
+            return this;
+        }
+
+        void SyncBack()
+        {
+            if (_back == null) return;
+            var rt = _back.Rect;
+            rt.anchoredPosition = _rt.anchoredPosition;
+            rt.localScale = _rt.localScale;
+        }
+
+        void DropBack()
+        {
+            if (_back != null) Destroy(_back.gameObject);
+            _back = null;
+            if (_group != null) _group.alpha = 1;
+        }
+
+        void OnDestroy() => DropBack(); // replaced or finished early: never leave the copy behind or the card hidden
         public CardFlight FadeOutAndDestroy() { _fadeOut = true; _destroyAtEnd = true; return this; }
         public CardFlight DestroyAtEnd() { _destroyAtEnd = true; return this; }
         public CardFlight NoRaise() { _noRaise = true; return this; }
@@ -652,7 +691,11 @@ namespace BrawlTCG.UnityApp
             if (!_started)
             {
                 _started = true;
-                if (!_noRaise) transform.SetAsLastSibling();
+                if (!_noRaise)
+                {
+                    transform.SetAsLastSibling();
+                    if (_back != null) _back.transform.SetAsLastSibling();
+                }
             }
             if (_leg >= _legs.Count) { Finish(); return; }
             Leg leg = _legs[_leg];
@@ -667,6 +710,11 @@ namespace BrawlTCG.UnityApp
                 float s = Mathf.Lerp(_s0, leg.Scale, e);
                 float scaleX = _flip && _leg == 0 ? Mathf.Max(0.04f, Mathf.Abs(Mathf.Cos(_t * Mathf.PI))) : 1;
                 Apply(c, s, scaleX, 0.12f * Mathf.Sin(_t * Mathf.PI));
+                if (_back != null)
+                {
+                    if (_leg == 0 && _t < 0.5f) SyncBack();
+                    else DropBack(); // past edge-on: the face takes over
+                }
                 if (_fadeOut && _leg == _legs.Count - 1 && _group != null) _group.alpha = 1 - e * e;
                 return;
             }
@@ -694,6 +742,7 @@ namespace BrawlTCG.UnityApp
 
         void Finish()
         {
+            DropBack();
             Landed?.Invoke();
             Landed = null;
             if (_destroyAtEnd) Destroy(gameObject);

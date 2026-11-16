@@ -17,7 +17,7 @@ namespace BrawlTCG.Core
 
         const int FangwildHeal = 2;
         public static readonly Effect Fangwild = new Effect(
-            $"All Magic and Nature Legends will gain {FangwildHeal} health.",
+            $"All Magic and Nature Legends heal {FangwildHeal}.",
             (target, card, game, played) => StartTurnHeal(target, FangwildHeal, Element.Nature, Element.Magic));
 
         public static readonly Effect Workshop_StartTurn = new Effect(
@@ -55,12 +55,12 @@ namespace BrawlTCG.Core
         // ───────────── Player ─────────────
 
         public static readonly Effect PromotionI = new Effect(
-            "Boost player max HP by 5",
-            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(5));
+            "Boost player max HP by 15",
+            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(15));
 
         public static readonly Effect PromotionII = new Effect(
-            "Boost player max HP by 10",
-            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(10));
+            "Boost player max HP by 25",
+            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(25));
 
         // ───────────── Legend while-in-play triggers ─────────────
 
@@ -304,7 +304,7 @@ namespace BrawlTCG.Core
             (target, card, game, played) =>
             {
                 if (target is LegendCard legend)
-                    legend.Power = 0;
+                    legend.SetPower(0);
             });
 
         public static readonly Effect ScytheForever = new Effect(

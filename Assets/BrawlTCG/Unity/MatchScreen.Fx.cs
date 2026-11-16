@@ -461,6 +461,17 @@ namespace BrawlTCG.UnityApp
             Color tint = Fx.Tint(card.Element);
             int player = s.Cmd.PlayerIndex;
 
+            if (s.Cmd.Type == CommandType.DiscardCard)
+            {
+                // Discarded for its Essence cost: a quiet toss onto the pile, no card effects.
+                var dg = Ghost(card, faceUp, startScale);
+                Sound("card_draw", 0, 0.5f);
+                CardFlight df = CardFlight.Begin(dg, start, startScale).To(dest, destScale, 0.34f, 0, 40);
+                if (!startFaceUp && faceUp) df.Flip();
+                Reveal(df, real);
+                return;
+            }
+
             if (card is BattleCard battle)
             {
                 // Effects first so the card is drawn on top of its glow.
@@ -554,14 +565,42 @@ namespace BrawlTCG.UnityApp
             Fx.Banner(_top, title, $"TURN {_game.TurnNumber}", mine ? Theme.Gold : new Color32(140, 170, 255, 255));
             Sfx.Play("turn", mine ? 0.8f : 0.5f);
             if (!deal) return;
-            int i = 0;
+
+            // Cards this player already held at the end of their last turn (hot seat) are turned over where they lie;
+            // only the new ones (this turn's draw, crafted cards...) are dealt from the deck.
+            _seenHand.TryGetValue(_viewer, out HashSet<Card> seen);
+            var flips = new List<(CardView view, Placement p, Card card)>();
+            var draws = new List<(CardView view, Placement p)>();
             foreach (Card c in Bottom.Hand)
             {
                 if (!_views.TryGetValue(c, out CardView view) || view == null || !_layout.TryGetValue(c, out Placement p)) continue;
-                CardFlight.Begin(view, DeckCenter(_viewer), PileScale, 0.35f + i++ * 0.07f).To(p.Center, p.Scale, 0.42f, 0, 70).Flip();
-                Sound("card_draw", 0.35f + (i - 1) * 0.07f, 0.6f);
+                if (seen != null && seen.Contains(c)) flips.Add((view, p, c));
+                else draws.Add((view, p));
+            }
+
+            float t = 0.3f;
+            foreach (var (view, p, card) in flips)
+            {
+                CardView back = CardView.Create(view.transform.parent, card, false, 0, 0, p.Scale);
+                CardFlight.Begin(view, p.Center, p.Scale, t).NoRaise().To(p.Center, p.Scale, 0.34f).ShowBackFirst(back);
+                Sound("card_draw", t + 0.1f, 0.3f);
+                t += 0.05f;
+            }
+            if (flips.Count > 0) t += 0.3f;
+            foreach (var (view, p) in draws)
+            {
+                // Leaves the deck face down and turns over in flight (no face-up card waiting on the pile).
+                CardView back = CardView.Create(view.transform.parent, view.Card, false, 0, 0, PileScale);
+                CardFlight.Begin(view, DeckCenter(_viewer), PileScale, t).To(p.Center, p.Scale, 0.42f, 0, 70).ShowBackFirst(back);
+                Sound("card_draw", t, 0.6f);
+                t += 0.07f;
             }
         }
+
+        /// <summary>Hot seat: the cards each player held when their turn ended, so the next reveal can turn them over in place.</summary>
+        readonly Dictionary<int, HashSet<Card>> _seenHand = new Dictionary<int, HashSet<Card>>();
+
+        void RememberHand(int player) => _seenHand[player] = new HashSet<Card>(_game.Players[player].Hand, RefEq<Card>.Instance);
 
         void StartTargetLine()
         {

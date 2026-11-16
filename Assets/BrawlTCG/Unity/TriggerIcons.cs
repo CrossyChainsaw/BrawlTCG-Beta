@@ -60,30 +60,155 @@ namespace BrawlTCG.UnityApp
             for (int i = 0; i < triggers.Count; i++)
             {
                 Color c = ColorFor(triggers[i]);
-                float x, y;
-                if (Style == BadgeStyle.FrameEdge)
-                {
-                    x = 300 - 8 - Size - i * (Size + 4);
-                    y = 78 - Size * 0.5f; // straddles the top edge of the art window
-                }
-                else
-                {
-                    x = 300 - 16 - 10 - Size - i * (Size + 6);
-                    y = 78 + 10;
-                }
-                var holder = UI.Place(UI.Rect("Trigger " + triggers[i], face), x - 4, y - 4, Size + 8, Size + 8);
-                var group = holder.gameObject.AddComponent<CanvasGroup>();
-                group.alpha = Opacity;
-                group.blocksRaycasts = false;
-                group.interactable = false;
-                Quiet(Theme.RoundedPanel(holder, c, 1, 1, Size + 6, Size + 6, (Size + 6) / 2, "Ring"));
-                Quiet(Theme.RoundedPanel(holder, new Color(0.04f, 0.05f, 0.14f, 0.95f), 4, 4, Size, Size, Size / 2, "Disc"));
+                var holder = Badge(face, "Trigger " + triggers[i], i, c);
                 float pad = Size * 0.2f;
-                var glyph = UI.Panel(holder, c, 4 + pad, 4 + pad, Size - 2 * pad, Size - 2 * pad, "Glyph");
-                glyph.sprite = GlyphFor(triggers[i]);
-                glyph.preserveAspect = true;
-                glyph.raycastTarget = false;
+                Glyph(holder, GlyphFor(triggers[i]), c, pad);
             }
+        }
+
+        public static readonly Color NoStrikesColor = new Color32(255, 84, 84, 255);
+
+        /// <summary>
+        /// "Can't deal damage" debuff (Silent Galaxy): a "not allowed" sign, a white sword crossed by a red bar inside
+        /// a red ring. It joins the badge row, to the left of the ability badges.
+        /// </summary>
+        public static void PaintNoStrikes(RectTransform face, Card card)
+        {
+            int slot = For(card).Count;
+            var holder = Badge(face, "NoStrikes", slot, NoStrikesColor);
+            Glyph(holder, _sword ??= Glyph(SwordCut), new Color32(238, 232, 240, 255), Size * 0.12f);
+            Glyph(holder, _slash ??= Glyph(Slash), NoStrikesColor, 1);
+
+            // A burned legend without ability badges has its BURNED tag just under the badge row: make room.
+            if (slot == 0 && face.Find("Burned") is RectTransform burned)
+                UI.Place(burned, 300 - 112, 78 + 30, 86, 30);
+        }
+
+        /// <summary>One round badge (coloured ring, dark disc) at a slot of the badge row, counted from the right.</summary>
+        static RectTransform Badge(RectTransform face, string name, int slot, Color ring)
+        {
+            float x, y;
+            if (Style == BadgeStyle.FrameEdge)
+            {
+                x = 300 - 8 - Size - slot * (Size + 4);
+                y = 78 - Size * 0.5f; // straddles the top edge of the art window
+            }
+            else
+            {
+                x = 300 - 16 - 10 - Size - slot * (Size + 6);
+                y = 78 + 10;
+            }
+            var holder = UI.Place(UI.Rect(name, face), x - 4, y - 4, Size + 8, Size + 8);
+            var group = holder.gameObject.AddComponent<CanvasGroup>();
+            group.alpha = Opacity;
+            group.blocksRaycasts = false;
+            group.interactable = false;
+            Quiet(Theme.RoundedPanel(holder, ring, 1, 1, Size + 6, Size + 6, (Size + 6) / 2, "Ring"));
+            Quiet(Theme.RoundedPanel(holder, new Color(0.04f, 0.05f, 0.14f, 0.95f), 4, 4, Size, Size, Size / 2, "Disc"));
+            return holder;
+        }
+
+        static void Glyph(RectTransform holder, Sprite sprite, Color color, float pad)
+        {
+            var glyph = UI.Panel(holder, color, 4 + pad, 4 + pad, Size - 2 * pad, Size - 2 * pad, "Glyph");
+            glyph.sprite = sprite;
+            glyph.preserveAspect = true;
+            glyph.raycastTarget = false;
+        }
+
+        /// <summary>
+        /// Splits a card's text the same way for every card type: <c>abilities</c> holds the trigger lines
+        /// ("Start Turn: ...", "When Played: ...", "While In Play: ..."), shown under ABILITIES with their icons;
+        /// <c>info</c> holds the rest (targets, how weapons and Essence work). Legends' info (attacks, stats) is drawn elsewhere.
+        /// </summary>
+        public static (string abilities, string info) SplitCardText(Card card)
+        {
+            string text = card is BattleCard ? card.Description : card.EffectDescription;
+            var abilities = new List<string>();
+            var rest = new List<string>();
+            foreach (string raw in (text ?? "").Split('\n'))
+            {
+                string line = raw.Trim();
+                if (line.Length == 0 || line.EndsWith("N/A")) continue;
+                (LineTrigger(line) != null ? abilities : rest).Add(line);
+            }
+
+            switch (card)
+            {
+                case StageCard _:
+                    rest.Add("Stages affect both players. Playing a new stage replaces the current one.");
+                    break;
+                case EssenceCard _:
+                    rest.Add("You may play one Essence card per turn. Decks need at least 10.");
+                    break;
+                case WeaponCard weapon:
+                    string w = weapon.Weapon == Weapon.RocketLance ? "Rocket Lance" : weapon.Weapon == Weapon.BattleBoots ? "Battle Boots" : weapon.Weapon.ToString();
+                    rest.Add(card.Description + ".");
+                    rest.Add($"It counts towards attacks that need a {w} (and attacks that need any weapon). Matching the legend's element adds bonus damage.");
+                    break;
+                case BattleCard battle:
+                    rest.Add(!battle.TargetRequired ? "No target needed." : battle.FriendlyFire ? "Target: one of your legends." : "Target: an enemy legend.");
+                    rest.Add(battle.Stackable ? "Stays attached to the legend." : "Discarded after use.");
+                    break;
+            }
+            return (string.Join("\n", abilities), string.Join("\n", rest));
+        }
+
+        /// <summary>The trigger a text line starts with ("Start Turn: ...", "When Played: ...", "While In Play: ..."), if any.</summary>
+        public static Trigger? LineTrigger(string line)
+        {
+            line = line.TrimStart();
+            if (line.StartsWith("Start Turn:", StringComparison.OrdinalIgnoreCase)) return Trigger.StartOfTurn;
+            if (line.StartsWith("When Played:", StringComparison.OrdinalIgnoreCase)) return Trigger.WhenPlayed;
+            if (line.StartsWith("While In Play:", StringComparison.OrdinalIgnoreCase)) return Trigger.WhileInPlay;
+            return null;
+        }
+
+        /// <summary>
+        /// Effect text with the matching badge in front of every trigger line. Lines without a trigger are lined up with
+        /// the text next to the icons; an empty line adds a small gap. The font shrinks from <paramref name="maxSize"/>
+        /// towards <paramref name="minSize"/> until it fits in <paramref name="h"/>. Returns the height used.
+        /// </summary>
+        public static float PaintAbilities(Transform parent, string text, float x, float y, float w, float h, int maxSize, int minSize, Color color)
+        {
+            string[] lines = (text ?? "").Split('\n');
+            bool anyIcon = false;
+            foreach (string l in lines) anyIcon |= LineTrigger(l) != null;
+
+            for (int size = maxSize; ; size--)
+            {
+                var block = UI.Place(UI.Rect("Abilities", parent), x, y, w, h);
+                float icon = Mathf.Round(size * 1.3f), indent = anyIcon ? icon + 8 : 0, cy = 0;
+                foreach (string raw in lines)
+                {
+                    string line = raw.Trim();
+                    if (line.Length == 0) { cy += size * 0.6f; continue; }
+                    var label = Theme.Label(block, line, size, color, indent, cy, w - indent, size * 2);
+                    label.horizontalOverflow = HorizontalWrapMode.Wrap;
+                    float lh = Mathf.Max(label.preferredHeight, size * 1.2f);
+                    ((RectTransform)label.transform).sizeDelta = new Vector2(w - indent, lh);
+                    Trigger? t = LineTrigger(line);
+                    if (t != null) MiniBadge(block, t.Value, 0, cy + (size * 1.2f - icon) / 2, icon);
+                    cy += lh + size * 0.25f;
+                }
+                if (cy <= h + 1 || size <= minSize) return Mathf.Min(cy, h);
+                UnityEngine.Object.DestroyImmediate(block.gameObject); // too tall: try a smaller font
+            }
+        }
+
+        /// <summary>A small round badge (coloured ring, dark disc, glyph) for inline use next to text.</summary>
+        public static void MiniBadge(Transform parent, Trigger t, float x, float y, float size)
+        {
+            Color c = ColorFor(t);
+            var holder = UI.Place(UI.Rect("Icon " + t, parent), x, y, size, size);
+            float ring = Mathf.Max(2, size * 0.09f);
+            Quiet(Theme.RoundedPanel(holder, c, 0, 0, size, size, size / 2, "Ring"));
+            Quiet(Theme.RoundedPanel(holder, new Color(0.04f, 0.05f, 0.14f, 0.95f), ring, ring, size - 2 * ring, size - 2 * ring, (size - 2 * ring) / 2, "Disc"));
+            float pad = size * 0.24f;
+            var glyph = UI.Panel(holder, c, pad, pad, size - 2 * pad, size - 2 * pad, "Glyph");
+            glyph.sprite = GlyphFor(t);
+            glyph.preserveAspect = true;
+            glyph.raycastTarget = false;
         }
 
         static Image Quiet(Image img)
@@ -94,7 +219,43 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle;
+        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer;
+
+        // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() => _bolt = _infinity = _cycle = _sword = _slash = _hammer = null;
+
+        // ───────────── Crafted cards: copper hammer ─────────────
+
+        public static readonly Color CraftedColor = new Color32(236, 138, 70, 255);
+        public static readonly Color CraftedFill = new Color32(58, 30, 16, 255);
+
+        /// <summary>Hammer turned 45° (head top-right), white: tint it.</summary>
+        public static Sprite Hammer => _hammer ??= Glyph((x, y) =>
+        {
+            Vector2 p = SwordSpace(x, y); // same 45° turn as the sword
+            bool head = p.x > 0.18f && p.x < 0.82f && p.y > 0.08f && p.y < 0.36f && !(p.x > 0.70f && p.y < 0.16f);
+            bool handle = Mathf.Abs(p.x - 0.5f) < 0.075f && p.y >= 0.36f && p.y < 0.94f;
+            return head || handle;
+        });
+
+        /// <summary>Card detail: "CRAFTED BY" and the source on a copper chip. Returns the bottom edge.</summary>
+        public static float PaintCraftedChip(Transform parent, string source, float x, float y, float w)
+        {
+            const float h = 48;
+            var chip = Quiet(Theme.RoundedPanel(parent, CraftedFill, x, y, w, h, 14, "Crafted"));
+            Quiet(Theme.RoundedPanel(chip.transform, CraftedColor, 0, 0, w, h, 14, "Line", outline: true));
+            var icon = UI.Panel(chip.transform, CraftedColor, 12, 11, 26, 26, "Hammer");
+            icon.sprite = Hammer;
+            icon.preserveAspect = true;
+            icon.raycastTarget = false;
+            Theme.Label(chip.transform, "CRAFTED BY", 12, CraftedColor, 48, 5, w - 58, 16, TextAnchor.MiddleLeft, display: true);
+            var label = Theme.Label(chip.transform, source, 15, Theme.Text, 48, 21, w - 58, 22, TextAnchor.MiddleLeft);
+            label.resizeTextForBestFit = true;
+            label.resizeTextMinSize = 10;
+            label.resizeTextMaxSize = 15;
+            return y + h;
+        }
 
         public static Sprite GlyphFor(Trigger t) =>
             t == Trigger.WhenPlayed ? (_bolt ??= Glyph(Bolt)) :
@@ -120,6 +281,30 @@ namespace BrawlTCG.UnityApp
             bool ring = Mathf.Abs(v.magnitude - 0.3f) < 0.08f && !(a > -10 && a < 55);
             return ring || InPolygon(x, y, ArrowHead);
         }
+
+        /// <summary>Maps a point into sword space: the sword stands upright (tip up), turned 45° so the tip points top-right.</summary>
+        static Vector2 SwordSpace(float x, float y)
+        {
+            const float c = 0.70710678f;
+            float dx = x - 0.5f, dy = y - 0.5f;
+            return new Vector2(dx * c + dy * c + 0.5f, -dx * c + dy * c + 0.5f);
+        }
+
+        static bool Sword(float u, float v)
+        {
+            float a = Mathf.Abs(u - 0.5f);
+            if (v > 0.03f && v < 0.17f && a < 0.095f * (v - 0.03f) / 0.14f) return true; // tip
+            if (v >= 0.17f && v < 0.64f && a < 0.095f) return true;                       // blade
+            if (v >= 0.64f && v < 0.73f && a < 0.24f) return true;                        // guard
+            if (v >= 0.73f && v < 0.87f && a < 0.055f) return true;                       // grip
+            return Vector2.Distance(new Vector2(u, v), new Vector2(0.5f, 0.915f)) < 0.07f; // pommel
+        }
+
+        // The bar runs across the sword (top-left to bottom-right); the sword is cut away around it so the two read apart.
+        static bool Bar(float u, float v, float half) => Mathf.Abs(v - 0.47f) < half && Mathf.Abs(u - 0.5f) < 0.46f;
+
+        static bool SwordCut(float x, float y) { Vector2 p = SwordSpace(x, y); return Sword(p.x, p.y) && !Bar(p.x, p.y, 0.13f); }
+        static bool Slash(float x, float y) { Vector2 p = SwordSpace(x, y); return Bar(p.x, p.y, 0.068f); }
 
         /// <summary>Renders a white shape (x, y in 0..1, y down) with 4x4 supersampling.</summary>
         static Sprite Glyph(Func<float, float, bool> inside)

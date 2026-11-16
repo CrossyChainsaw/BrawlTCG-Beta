@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using BrawlTCG.Core;
@@ -78,13 +79,14 @@ namespace BrawlTCG.UnityApp
             _menu = UI.Stretch(UI.Rect("OptionsMenu", transform));
 
             _game.Notification += OnNotification;
+            _game.StartingHandRedraw = true; // both clients of a network game do this, so they stay in step
             _game.Start();
             _net?.StartReceiving();
 
             _viewer = _hotSeat ? _game.ActiveIndex : _localIndex;
             if (_hotSeat) ShowHandoff();
             Refresh();
-            if (!_hotSeat) TurnIntro(true);
+            if (!_hotSeat) ShowStartingHand();
         }
 
         void BuildBackdrop()
@@ -142,7 +144,7 @@ namespace BrawlTCG.UnityApp
         bool IsLocallyControlled(int playerIndex) => _hotSeat ? playerIndex == _viewer : playerIndex == _localIndex;
 
         /// <summary>Whether the person at this screen may act right now.</summary>
-        bool CanAct => !_ended && !_game.IsOver && !_handoffPending && IsLocallyControlled(_game.ActiveIndex);
+        bool CanAct => !_ended && !_game.IsOver && !_handoffPending && !_game.ChoosingStartingHands && IsLocallyControlled(_game.ActiveIndex);
 
         // ───────────────────────────── Frame loop ─────────────────────────────
 
@@ -188,6 +190,7 @@ namespace BrawlTCG.UnityApp
                     return;
                 }
                 Snapshot before = TakeSnapshot(cmd);
+                bool wasChoosing = _game.ChoosingStartingHands;
                 string error = _game.TryApply(cmd);
                 if (error != null)
                 {
@@ -199,6 +202,7 @@ namespace BrawlTCG.UnityApp
                 RefreshDetail();
                 if (_game.IsOver) ShowGameOver();
                 Animate(before);
+                if (wasChoosing && !_game.ChoosingStartingHands) TurnIntro(false); // both hands chosen: turn 1 begins
             }
             if (_net.IsClosed && !_net.HasPending && !_ended)
                 EndMatch("Connection lost", "The other player disconnected.");
@@ -222,6 +226,7 @@ namespace BrawlTCG.UnityApp
             CloseDetail();
             if (_hotSeat && !_game.IsOver && _game.ActiveIndex != _viewer)
             {
+                RememberHand(_viewer); // what the player who just ended had in hand: turned over, not re-dealt, next time
                 _viewer = _game.ActiveIndex;
                 ShowHandoff();
             }
@@ -393,7 +398,7 @@ namespace BrawlTCG.UnityApp
                     // Used up for this turn: darkened so it reads at a glance (no label needed).
                     view.SetDimmed(true);
                 }
-                else if (!legend.CanAttack) view.AddStatus("NO STRIKES", new Color(0.35f, 0.08f, 0.12f, 0.95f), new Color32(255, 170, 170, 255));
+                else if (!legend.CanAttack) view.AddNoStrikes(); // Silent Galaxy: red "not allowed" sword badge
 
                 if (Targeting && IsValidAttackTarget(p, legend)) view.SetHighlight(true);
                 else if (legend == _targetAttacker) view.SetGlow(Color.white, 0.6f);
@@ -428,6 +433,17 @@ namespace BrawlTCG.UnityApp
 
             string title;
             Color titleColor;
+            if (_game.ChoosingStartingHands && !_game.IsOver)
+            {
+                bool chosen = _game.HasChosenStartingHand(_viewer);
+                Theme.Label(t, "STARTING HANDS", 34, Theme.Gold, 28, 8, 640, 46, TextAnchor.MiddleLeft, display: true);
+                string waitingFor = _game.Players[1 - _viewer].Name;
+                Theme.Label(t, chosen ? $"Waiting for {waitingFor} to choose their starting hand" : "Choose which cards to keep",
+                    16, Theme.TextDim, 30, 54, 760, 26, TextAnchor.MiddleLeft);
+                var wait = Theme.Ghost(t, "WAITING", Strip.width - 236, 16, 212, 60, null, 22);
+                wait.interactable = false;
+                return;
+            }
             if (_game.IsOver)
             {
                 title = "MATCH OVER";
@@ -493,11 +509,7 @@ namespace BrawlTCG.UnityApp
             string effects = CleanEffects(stage.EffectDescription);
             if (string.IsNullOrWhiteSpace(effects)) effects = "No special effect.";
             if (!_game.DrawCardStartTurn) effects += "\n\nPlayers don't draw at the start of their turn.";
-            var text = Theme.Label(_board, effects, 15, Theme.Text, StageInfo.x, StageInfo.y + 62, StageInfo.width, StageInfo.height - 62);
-            text.verticalOverflow = VerticalWrapMode.Truncate;
-            text.resizeTextForBestFit = true;
-            text.resizeTextMinSize = 10;
-            text.resizeTextMaxSize = 15;
+            TriggerIcons.PaintAbilities(_board, effects, StageInfo.x, StageInfo.y + 62, StageInfo.width, StageInfo.height - 62, 15, 10, Theme.Text);
         }
 
         static string CleanEffects(string description)
@@ -536,6 +548,14 @@ namespace BrawlTCG.UnityApp
             else
             {
                 EmptyPile(discardPos, w, h, "");
+            }
+
+            // Your discard pile is a drop zone: discard a hand card by paying its Essence cost.
+            if (bottom)
+            {
+                var zone = Quiet(UI.Panel(_board, new Color(0, 0, 0, 0), discardPos.x, discardPos.y, w, h, "DiscardZone"));
+                _zones[(BoardZone.DiscardPile, p.Index)] = zone.rectTransform;
+                _zoneOutlines[(BoardZone.DiscardPile, p.Index)] = DropOutline(zone.transform, w, h, 12);
             }
         }
 
@@ -609,10 +629,12 @@ namespace BrawlTCG.UnityApp
                     // Can't afford it yet this turn.
                     v.SetDimmed(true);
                 }
-                else if (showPlayable && p.Hand[i] is WeaponCard)
+                else if (showPlayable)
                 {
-                    // Affordable, but none of your legends can carry this weapon (yet). The board is redrawn after
-                    // every move, so playing a fitting legend lights it up again.
+                    // Affordable, but it can't be played right now: a legend while your field is full, a weapon no
+                    // legend of yours can carry, a battle card with no legend on the side it targets (yours for
+                    // heals/boosts, the enemy's for damage/taps). The board is redrawn after every move, so it
+                    // lights up again as soon as it becomes playable.
                     v.SetDimmed(true);
                 }
             }
@@ -657,12 +679,12 @@ namespace BrawlTCG.UnityApp
         void DrawCorner()
         {
             GearButton(_board, 1840, 20, 56);
-            var help = Theme.GlassPanel(_board, 1508, 884, 388, 176, 20, "Help");
+            var help = Theme.GlassPanel(_board, 1508, 864, 388, 196, 20, "Help");
             help.raycastTarget = false;
             Theme.Label(help.transform, "HOW TO PLAY", 15, Theme.Gold, 20, 14, 340, 20, display: true);
             Theme.Label(help.transform,
-                "Drag cards from your hand onto the board.\nClick any card to inspect it.\nClick your legend, pick an attack, then a target.\nSpace or END TURN passes the turn.\nEsc opens the options.",
-                15, Theme.TextDim, 20, 40, 356, 124);
+                "Drag cards from your hand onto the board.\nDrop one on your discard pile to discard it (costs its Essence).\nClick any card to inspect it.\nClick your legend, pick an attack, then a target.\nSpace or END TURN passes the turn.\nEsc opens the options.",
+                15, Theme.TextDim, 20, 40, 356, 148);
         }
 
         // ───────────────────────────── Cards ─────────────────────────────
@@ -770,6 +792,8 @@ namespace BrawlTCG.UnityApp
                     }
                     break;
             }
+            // Your discard pile takes any card you can pay for.
+            if (_game.Players[me].Essence >= card.Cost) Show(BoardZone.DiscardPile, me);
         }
 
         void OnDragEnded(CardView view)
@@ -809,6 +833,10 @@ namespace BrawlTCG.UnityApp
             if (view.Index < 0 || view.Index >= player.Hand.Count || player.Hand[view.Index] != view.Card) return false;
             Card card = view.Card;
             int hand = view.Index;
+
+            // Any card can be dropped on your own discard pile: it costs the card's Essence, and no effect triggers.
+            if (Over(BoardZone.DiscardPile, me, screen))
+                return Submit(GameCommand.DiscardCard(me, hand));
 
             switch (card)
             {
@@ -914,17 +942,20 @@ namespace BrawlTCG.UnityApp
             Theme.Label(t, type.ToUpperInvariant(), 15, CardArt.Accent(card.Element), ix, 150, iw, 20, display: true);
             Theme.Label(t, $"Cost {card.Cost}" + (card.Owner != null ? $"  ·  {card.Owner.Name}" : ""), 15, Theme.TextDim, ix, 172, iw, 20);
 
+            // Made during the match (crafted, summoned, set by an effect): say by what.
+            float top = 206;
+            if (card.CraftedBy != null) top = TriggerIcons.PaintCraftedChip(t, card.CraftedBy, ix, 198, iw) + 8;
+
             if (card is LegendCard legend)
             {
-                float cy = 206;
-                cy = InfoChip(t, $"ATK {legend.Power}" + (legend.Power != legend.PrintedPower ? $"  (base {legend.PrintedPower})" : ""), new Color32(226, 112, 28, 255), ix, cy, iw);
-                cy = InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix, cy, iw);
-                cy = InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, cy, iw);
-                foreach (string status in LegendStatuses(legend))
-                    cy = InfoChip(t, status, new Color(1, 1, 1, 0.06f), ix, cy, iw, Theme.Gold);
+                float half = (iw - 8) / 2;
+                InfoChip(t, $"ATK {legend.Power}", new Color32(226, 112, 28, 255), ix, top, half);
+                InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix + half + 8, top, half);
+                InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, top + 44, iw);
+                float effectsEnd = CurrentEffects(t, legend, ix, top + 92, iw);
 
-                // Attacks
-                float y = 418;
+                // Attacks (pushed down when the legend has many effects on it)
+                float y = Mathf.Max(418, effectsEnd + 14);
                 Theme.Label(t, "ATTACKS", 16, Theme.Gold, 24, y, 300, 22, display: true);
                 y += 28;
                 if (legend.Attacks.Count == 0)
@@ -938,7 +969,7 @@ namespace BrawlTCG.UnityApp
                     y += 82;
                 }
 
-                string effects = CleanEffects(legend.EffectDescription);
+                string effects = TriggerIcons.SplitCardText(legend).abilities;
                 if (!string.IsNullOrWhiteSpace(effects))
                 {
                     Theme.Label(t, "ABILITIES", 16, Theme.Gold, 24, y + 4, 300, 22, display: true);
@@ -951,11 +982,7 @@ namespace BrawlTCG.UnityApp
                         PeekRow(t, mentioned, W - 24 - pw + 10, y + 4, pw, 0.3f);
                         textW -= pw + 8;
                     }
-                    var fx = Theme.Label(t, effects, 16, Theme.Text, 24, y + 30, textW, 60);
-                    fx.verticalOverflow = VerticalWrapMode.Truncate;
-                    fx.resizeTextForBestFit = true;
-                    fx.resizeTextMinSize = 11;
-                    fx.resizeTextMaxSize = 16;
+                    TriggerIcons.PaintAbilities(t, effects, 24, y + 30, textW, 62, 16, 11, Theme.Text);
                     y += 96;
                 }
 
@@ -974,26 +1001,22 @@ namespace BrawlTCG.UnityApp
             }
             else
             {
-                string text = card is StageCard || card is EssenceCard ? CleanEffects(card.Description) : card.Description;
-                if (card is EssenceCard) text = "Each Essence card in play gives you 1 Essence at the start of your turn. You may play one Essence card per turn.";
-                if (card is WeaponCard weapon) text += $"\n\nIt counts towards attacks that need a {Pretty(weapon.Weapon)} (and attacks that need any weapon). Matching the legend's element adds bonus damage.";
-                if (card is BattleCard battle)
+                // Same layout as legends: details next to the card, ABILITIES (one icon per trigger) below it.
+                var (abilities, info) = TriggerIcons.SplitCardText(card);
+                TriggerIcons.PaintAbilities(t, info, ix, top, iw, 402 - top, 18, 12, Theme.TextDim);
+
+                float y = 418;
+                if (abilities.Length > 0)
                 {
-                    string target = !battle.TargetRequired ? "No target needed." : battle.FriendlyFire ? "Target: one of your legends." : "Target: an enemy legend.";
-                    string kind = battle.Stackable ? "Stays attached to the legend." : "Discarded after use.";
-                    text += $"\n\n{target}\n{kind}";
+                    Theme.Label(t, "ABILITIES", 16, Theme.Gold, 24, y, 300, 22, display: true);
+                    y += 30 + TriggerIcons.PaintAbilities(t, abilities, 24, y + 30, W - 48, 200, 18, 12, Theme.Text) + 24;
                 }
-                var desc = Theme.Label(t, text, 19, Theme.Text, ix, 214, iw, 300);
-                desc.verticalOverflow = VerticalWrapMode.Truncate;
-                desc.resizeTextForBestFit = true;
-                desc.resizeTextMinSize = 12;
-                desc.resizeTextMaxSize = 19;
 
                 int[] mentioned = CardReferences.For(card);
                 if (mentioned != null)
                 {
-                    Theme.Label(t, "MENTIONED CARDS  ·  hover to see", 15, Theme.Gold, ix, 530, iw, 22, display: true);
-                    PeekRow(t, mentioned, ix, 558, iw, 0.5f);
+                    Theme.Label(t, "MENTIONED CARDS  ·  hover to see", 15, Theme.Gold, 24, y, W - 48, 22, display: true);
+                    PeekRow(t, mentioned, 24, y + 28, W - 48, 0.5f);
                 }
             }
         }
@@ -1006,12 +1029,64 @@ namespace BrawlTCG.UnityApp
             return y + 44;
         }
 
-        IEnumerable<string> LegendStatuses(LegendCard legend)
+        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A";
+
+        /// <summary>
+        /// Everything currently affecting a legend: stat changes per source (buffs green, debuffs red) and statuses
+        /// (tapped, burned, Silent Galaxy, already attacked), each with what caused it. Returns the bottom edge.
+        /// </summary>
+        float CurrentEffects(Transform t, LegendCard legend, float x, float y, float w)
         {
-            if (legend.IsTapped) yield return "TAPPED  ·  skips its next attack";
-            if (legend.IsBurned) yield return "BURNED  ·  -1 HP each turn";
-            if (!legend.CanAttack) yield return "SILENT GALAXY  ·  can't deal damage";
-            if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer) yield return "ALREADY ATTACKED THIS TURN";
+            var lines = new List<string>();
+            if (legend.IsTapped) lines.Add(Line(StatusHex, "TAPPED", legend.TappedBy, "skips its next attack"));
+            if (legend.IsBurned) lines.Add(Line(DebuffHex, "BURNED  -1 HP each turn", legend.BurnedBy, null));
+            if (!legend.CanAttack) lines.Add(Line(DebuffHex, "CAN'T DEAL DAMAGE", "Silent Galaxy", null));
+            if (legend.AttackedThisTurn && legend.Owner == _game.ActivePlayer) lines.Add(Line(StatusHex, "ALREADY ATTACKED", null, "this turn"));
+            foreach (LegendCard.StatModifier m in legend.Modifiers)
+            {
+                var parts = new List<string>();
+                if (m.Power != 0) parts.Add($"{m.Power:+0;-0} ATK");
+                if (m.Health != 0) parts.Add($"{m.Health:+0;-0} HP");
+                bool buff = m.Power + m.Health > 0;
+                lines.Add(Line(buff ? BuffHex : DebuffHex, string.Join("  ", parts), m.Source, null));
+            }
+
+            Theme.Label(t, "ON THIS LEGEND", 14, Theme.Gold, x, y, w, 20, display: true);
+            y += 22;
+            const float lineH = 22;
+            const int room = 8;
+            if (lines.Count == 0)
+            {
+                Theme.Label(t, "Nothing right now.", 15, Theme.TextFaint, x, y, w, lineH);
+                return y + lineH;
+            }
+            if (lines.Count > room)
+            {
+                int hidden = lines.Count - (room - 1);
+                lines = lines.Take(room - 1).ToList();
+                lines.Add($"<color=#9AA0C0>+{hidden} more</color>");
+            }
+            foreach (string line in lines)
+            {
+                var label = Theme.Label(t, line, 15, Theme.TextDim, x, y, w, lineH, TextAnchor.MiddleLeft);
+                label.supportRichText = true;
+                label.horizontalOverflow = HorizontalWrapMode.Wrap;
+                label.verticalOverflow = VerticalWrapMode.Truncate;
+                label.resizeTextForBestFit = true;
+                label.resizeTextMinSize = 10;
+                label.resizeTextMaxSize = 15;
+                y += lineH;
+            }
+            return y;
+        }
+
+        /// <summary>"+5 ATK  Super Saiyan": the effect coloured, then its source, then an optional dim note.</summary>
+        static string Line(string hex, string what, string source, string note)
+        {
+            string s = $"<color={hex}>{what}</color>";
+            if (!string.IsNullOrEmpty(source)) s += $"  {source}";
+            if (!string.IsNullOrEmpty(note)) s += $"  <color=#9AA0C0>{note}</color>";
+            return s;
         }
 
         void AttackRow(Transform t, LegendCard legend, int index, float x, float y, float w)
@@ -1199,14 +1274,196 @@ namespace BrawlTCG.UnityApp
             CloseDetail();
             var dim = ShowOverlay(1f); // fully opaque: nothing of the next player's hand may show through
             Player next = _game.Players[_viewer];
-            var box = Dialog(dim, next.Name.ToUpperInvariant(), $"Pass the device to {next.Name}.\nThe other player should look away.", $"TURN {_game.TurnNumber}");
-            Theme.Cta(box, "START MY TURN", 220, 296, 360, 76, () =>
+            bool choosing = _game.ChoosingStartingHands && !_game.HasChosenStartingHand(_viewer);
+            var box = Dialog(dim, next.Name.ToUpperInvariant(), $"Pass the device to {next.Name}.\nThe other player should look away.",
+                choosing ? "STARTING HAND" : $"TURN {_game.TurnNumber}");
+            Theme.Cta(box, choosing ? "SEE MY HAND" : "START MY TURN", 220, 296, 360, 76, () =>
             {
                 _handoffPending = false;
                 CloseOverlay();
                 Refresh();
-                TurnIntro(true);
+                if (choosing) ShowStartingHand();
+                else TurnIntro(true);
             }, 30);
+        }
+
+        // ───────────────────────────── Starting hand ─────────────────────────────
+
+        /// <summary>Hand indices the viewer marked to shuffle back into the deck.</summary>
+        readonly HashSet<int> _redrawPick = new HashSet<int>();
+
+        /// <summary>
+        /// Before turn 1: the viewer's starting hand, large. Clicking a card marks it to go back into the deck; the button
+        /// keeps the hand or redraws the marked cards (once per match).
+        /// </summary>
+        void ShowStartingHand()
+        {
+            var dim = ShowOverlay(0.95f);
+            Player me = _game.Players[_viewer];
+            Theme.Label(dim, "YOUR STARTING HAND", 18, Theme.Gold, 0, 112, 1920, 26, TextAnchor.MiddleCenter, display: true);
+            var title = Theme.Label(dim, "KEEP OR REDRAW", 58, Theme.Text, 0, 142, 1920, 80, TextAnchor.MiddleCenter, display: true);
+            Theme.AddShadow(title, 3, 0.6f);
+            Theme.Label(dim, "Click the cards you want to shuffle back into your deck. You draw as many new cards. You can do this once.",
+                20, Theme.TextDim, 0, 226, 1920, 30, TextAnchor.MiddleCenter);
+
+            const float scale = 1.3f, gap = 18;
+            float w = CardView.W * scale;
+            int n = me.Hand.Count;
+            float start = 960 - (n * w + (n - 1) * gap) / 2;
+            for (int i = 0; i < n; i++)
+            {
+                int index = i;
+                bool picked = _redrawPick.Contains(i);
+                CardView v = CardView.Create(dim, me.Hand[i], true, start + i * (w + gap), 300 + (picked ? 36 : 0), scale);
+                v.Clicked = _ =>
+                {
+                    if (!_redrawPick.Remove(index)) _redrawPick.Add(index);
+                    Sfx.Play("ui_click", 0.5f);
+                    ShowStartingHand();
+                };
+                if (picked)
+                {
+                    v.SetDimmed(true);
+                    v.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                }
+            }
+
+            int count = _redrawPick.Count;
+            string label = count == 0 ? "KEEP HAND" : count == 1 ? "REDRAW 1 CARD" : $"REDRAW {count} CARDS";
+            Theme.Cta(dim, label, 960 - 210, 680, 420, 76, ConfirmStartingHand, 30);
+        }
+
+        void ConfirmStartingHand()
+        {
+            int me = _viewer, mask = 0;
+            List<Card> hand = _game.Players[me].Hand;
+            foreach (int i in _redrawPick) mask |= 1 << i;
+            var oldBySlot = _redrawPick.ToDictionary(i => i, i => hand[i]); // the new cards take these same slots
+            _redrawPick.Clear();
+            CloseOverlay();
+            if (!Submit(GameCommand.RedrawStartingHand(me, mask))) return;
+            RememberHand(me); // seen: turned over in place at the start of the first turn instead of dealt again
+            bool startedTurnOne = !_game.ChoosingStartingHands; // our choice was the last one
+
+            void Continue()
+            {
+                if (_hotSeat)
+                {
+                    // Next: the other player's starting hand, or (both chosen) the first turn.
+                    _viewer = _game.ChoosingStartingHands ? 1 - me : _game.ActiveIndex;
+                    ShowHandoff();
+                    Refresh();
+                }
+                else
+                {
+                    CloseOverlay();
+                    // Online: if our choice was the last one, turn 1 begins now (if the opponent's choice arrives later,
+                    // its own handler shows the banner); otherwise the strip says we're waiting.
+                    if (startedTurnOne) TurnIntro(false);
+                }
+            }
+
+            if (mask == 0) { Continue(); return; } // kept the hand: nothing new to show
+
+            // The new starting hand. If this choice also started turn 1 and it's our turn, the turn's draw (the last card)
+            // isn't part of the starting hand.
+            var newHand = hand.ToList();
+            if (!_game.ChoosingStartingHands && _game.ActiveIndex == me && newHand.Count > Game.StartingHandCards)
+                newHand.RemoveAt(newHand.Count - 1);
+            ShowRedrawResult(newHand, oldBySlot, Continue);
+        }
+
+        /// <summary>
+        /// After a redraw: the new starting hand, large. Each swapped slot animates in place, one after another: the old
+        /// card sinks and fades out, then the new card rises into the same slot, fading in while it turns over, and stays
+        /// marked NEW. The other cards don't move. CONTINUE moves on (next player or the first turn).
+        /// </summary>
+        void ShowRedrawResult(List<Card> hand, Dictionary<int, Card> oldBySlot, Action next)
+        {
+            _handoffPending = false; // shown before any hand-off to the other player
+            var dim = ShowOverlay(0.95f);
+            Theme.Label(dim, "YOUR STARTING HAND", 18, Theme.Gold, 0, 112, 1920, 26, TextAnchor.MiddleCenter, display: true);
+            var title = Theme.Label(dim, "YOUR NEW HAND", 58, Theme.Text, 0, 142, 1920, 80, TextAnchor.MiddleCenter, display: true);
+            Theme.AddShadow(title, 3, 0.6f);
+            var backNames = oldBySlot.OrderBy(kv => kv.Key).Select(kv => kv.Value.Name);
+            int fresh = oldBySlot.Count;
+            Theme.Label(dim, $"Shuffled back: {string.Join(", ", backNames)}.  You drew {fresh} new {(fresh == 1 ? "card" : "cards")}, marked NEW.",
+                20, Theme.TextDim, 0, 226, 1920, 30, TextAnchor.MiddleCenter);
+
+            const float scale = 1.3f, gap = 18, y = 300;
+            float w = CardView.W * scale;
+            int n = hand.Count;
+            float start = 960 - (n * w + (n - 1) * gap) / 2;
+            float delay = 0.3f;
+            for (int i = 0; i < n; i++)
+            {
+                float x = start + i * (w + gap);
+                if (!oldBySlot.TryGetValue(i, out Card old))
+                {
+                    CardView.Create(dim, hand[i], true, x, y, scale);
+                    continue;
+                }
+                // The card that goes back, as it looked when picked (lowered, dimmed, BACK TO DECK) ...
+                CardView oldView = CardView.Create(dim, old, true, x, y + 36, scale);
+                oldView.SetDimmed(true);
+                oldView.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                // ... and the new one, marked NEW, with a face-down copy for the first half of its turn.
+                CardView newView = CardView.Create(dim, hand[i], true, x, y, scale);
+                newView.SetGlow(Theme.Gold, 0.6f);
+                newView.AddStatus("NEW", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                CardView back = CardView.Create(dim, hand[i], false, x, y, scale);
+                StartCoroutine(SwapSlot(oldView, newView, back, x, y, scale, delay));
+                delay += 0.3f;
+            }
+
+            Theme.Cta(dim, "CONTINUE", 960 - 210, 680, 420, 76, () => { CloseOverlay(); next(); }, 30);
+        }
+
+        /// <summary>Old card sinks and fades out; the new card rises into the slot, fading in while it turns over.</summary>
+        static IEnumerator SwapSlot(CardView oldView, CardView newView, CardView back, float x, float y, float scale, float delay)
+        {
+            float w = CardView.W * scale;
+            CanvasGroup Group(CardView v) => v.GetComponent<CanvasGroup>();
+            void Place(CardView v, float top, float scaleX)
+            {
+                v.Rect.localScale = new Vector3(scale * scaleX, scale, 1);
+                v.Rect.anchoredPosition = new Vector2(x + w * (1 - scaleX) / 2, -top); // turn around the card's centre
+            }
+            foreach (var g in new[] { Group(newView), Group(back) }) { g.alpha = 0; g.blocksRaycasts = false; }
+
+            for (float t = 0; t < delay; t += Time.unscaledDeltaTime) yield return null;
+            if (oldView == null || newView == null || back == null) yield break; // closed early
+
+            // Out: sink and fade.
+            const float outTime = 0.32f, inTime = 0.55f, sink = 60, rise = 90;
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / outTime)
+            {
+                if (oldView == null) yield break;
+                float e = t * t;
+                Place(oldView, y + 36 + sink * e, 1);
+                Group(oldView).alpha = 1 - t;
+                yield return null;
+            }
+            if (oldView != null) Destroy(oldView.gameObject);
+            Sfx.Play("card_draw", 0.5f);
+
+            // In: rise into the slot, fading in, back first, then the face.
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / inTime)
+            {
+                if (newView == null || back == null) yield break;
+                float top = y + rise * (1 - Theme.EaseOut(t));
+                float scaleX = Mathf.Max(0.04f, Mathf.Abs(Mathf.Cos(t * Mathf.PI)));
+                float alpha = Mathf.Clamp01(t * 2.2f);
+                bool showBack = t < 0.5f;
+                Place(showBack ? back : newView, top, scaleX);
+                Group(back).alpha = showBack ? alpha : 0;
+                Group(newView).alpha = showBack ? 0 : alpha;
+                yield return null;
+            }
+            if (back != null) Destroy(back.gameObject);
+            if (newView == null) yield break;
+            Place(newView, y, 1);
+            Group(newView).alpha = 1;
         }
 
         void ShowGameOver()

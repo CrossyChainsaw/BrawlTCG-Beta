@@ -468,7 +468,7 @@ namespace BrawlTCG.UnityApp
 
         void BuildFooter()
         {
-            Theme.Label(transform, "v0.1 BETA  ·  UNITY EDITION", 16, Theme.TextDim, 96, 1018, 600, 22, display: true);
+            Theme.Label(transform, $"v{Application.version} BETA  ·  UNITY EDITION", 16, Theme.TextDim, 96, 1018, 600, 22, display: true);
             Theme.Label(transform, "Fan-made project. Not affiliated with Blue Mammoth Games. Art credits in CREDITS.txt.", 14, Theme.TextFaint, 96, 1042, 900, 20);
             Theme.Ghost(transform, "DECKS FOLDER", 1660, 1016, 220, 44, OpenDecksFolder, 17);
         }
