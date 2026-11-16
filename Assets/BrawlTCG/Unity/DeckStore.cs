@@ -57,7 +57,7 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>
-        /// Hands out every starter deck (one per element) once. A starter that was already given is never recreated,
+        /// Hands out every starter deck (one per element) and every premade deck once. A deck that was already given is never recreated,
         /// so deleting one keeps it deleted; an existing deck with the same name is never overwritten.
         /// </summary>
         public static void EnsureStarterDecks()
@@ -67,7 +67,7 @@ namespace BrawlTCG.UnityApp
             var given = new HashSet<string>(File.Exists(ledger) ? File.ReadAllLines(ledger) : Array.Empty<string>());
             bool firstLaunch = !File.Exists(ledger) && Directory.GetFiles(Folder, "*.txt").Length == 0;
             bool changed = false;
-            foreach (StarterDecks.Starter s in StarterDecks.All)
+            foreach (StarterDecks.Starter s in StarterDecks.All.Concat(StarterDecks.Premade))
             {
                 if (given.Contains(s.Name)) continue;
                 // Before the ledger existed only Fire and Nature were handed out (on first launch). If the player
