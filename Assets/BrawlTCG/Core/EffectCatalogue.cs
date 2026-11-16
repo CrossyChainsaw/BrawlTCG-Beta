@@ -76,7 +76,7 @@ namespace BrawlTCG.Core
             });
 
         public static readonly Effect BoostAllNatureLegendsStats_WhileInPlay = new Effect(
-            "When you play a Nature card, all nature legends get +1/+1",
+            "When you play a Nature card, all your Nature legends get +1/+1",
             (target, card, game, played) =>
             {
                 if (played.Element != Element.Nature || played == card || card.Owner != played.Owner) return;
