@@ -222,6 +222,7 @@ namespace BrawlTCG.UnityApp
             CloseDetail();
             if (_hotSeat && !_game.IsOver && _game.ActiveIndex != _viewer)
             {
+                RememberHand(_viewer); // what the player who just ended had in hand: turned over, not re-dealt, next time
                 _viewer = _game.ActiveIndex;
                 ShowHandoff();
             }
