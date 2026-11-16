@@ -18,7 +18,7 @@ fixed and a few missing features added (see [Changes from the WinForms version](
 
 To make a standalone build: **File → Build Profiles → Windows → Build** (pick a folder outside `Assets`, e.g. `Builds/`).
 
-Seven starter decks, one per element (*Starter - Fire*, *Nature*, *Magic*, *Cosmic*, *Arctic*, *Wild* and *Shadow*), are added on launch, so you can play straight away. Each starter is handed out once: a deleted starter stays deleted, and a deck you already have with the same name is never overwritten.
+Six ready-made decks are added on launch, so you can play straight away: *Cosmic Lockdown*, *Treasure Hunt*, *Hideout Rush*, *Wild Axe*, *Scorched Earth* and *Frozen Tide*. Each one is handed out once: a deleted deck stays deleted, and a deck you already have with the same name is never overwritten. Decks that older versions handed out (the per-element starters and earlier premade decks) are removed on launch, unless you edited them.
 
 ## Game modes
 
@@ -91,7 +91,7 @@ Stage start-of-turn effects still only affect the active player's legends. That 
 - **END TURN button** (Space still works).
 - **Game over screen** with the winner, plus handling for an opponent leaving or disconnecting.
 - **Hot-seat mode** for two players on one PC.
-- **Starter decks**, and named decks with New / Save / Delete in the deck builder.
+- **Ready-made decks**, and named decks with New / Save / Delete in the deck builder.
 
 ### Other differences
 

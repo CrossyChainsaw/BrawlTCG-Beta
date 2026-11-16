@@ -88,8 +88,9 @@ namespace BrawlTCG.Core
     }
 
     /// <summary>
-    /// One ready-to-play deck per element. Each is 40 cards with 14 Essence, built from that element's cards
-    /// (Nature keeps its original Vial of Crows; Arctic borrows two legends), with weapons the deck's own legends can equip.
+    /// The decks that come with the game (<see cref="Premade"/>, the only ones handed out) and the ones that used to
+    /// (<see cref="Retired"/>). <see cref="All"/> holds the original per-element starter decks (40 cards, 14 Essence each);
+    /// they are no longer handed out, but tests and the deck simulator still use them as a benchmark.
     /// </summary>
     public static class StarterDecks
     {
@@ -133,8 +134,8 @@ namespace BrawlTCG.Core
         };
 
         /// <summary>
-        /// Ready-made decks handed out next to the starters: the top five of a 33-deck bot tournament (16 tactic decks,
-        /// each tuned by simulation, against each other, the starters and the alpha decks). Named after how they win.
+        /// The six decks the game hands out: the top five of a 33-deck bot tournament (16 tactic decks, each tuned by
+        /// simulation, against each other, the starters and the alpha decks) plus Frozen Tide. Named after how they win.
         /// </summary>
         public static readonly IReadOnlyList<Starter> Premade = new[]
         {
@@ -154,6 +155,10 @@ namespace BrawlTCG.Core
             // All Fire under Mustafar: every non-Fire legend loses 2 HP each turn while Fire legends are immune.
             Make("Scorched Earth", Element.Fire, (0, 12), (100, 2), (500, 1), (503, 1), (506, 2), (514, 3), (2000, 2), (2001, 1), (2003, 3),
                 (2004, 1), (2005, 4), (2006, 2), (2007, 1), (23000, 1), (23003, 2), (24000, 1), (25003, 1)),
+            // Arctic control under Atlantis: non-Arctic legends lose 1 HP a turn and deal 2 less; The Rock and Snowman Kor
+            // wall up, Sunken Chests refill. Slow and grinding (#10 in the tournament, kept because it plays so differently).
+            Make("Frozen Tide", Element.Arctic, (0, 13), (106, 3), (500, 2), (506, 4), (515, 4), (525, 1), (5004, 1), (6003, 3), (7000, 2),
+                (7001, 3), (19002, 3), (24004, 1)),
         };
 
         /// <summary>
@@ -187,7 +192,7 @@ namespace BrawlTCG.Core
                 (18000, 4), (24001, 4), (24002, 1), (24005, 1), (24006, 2)),
             Make("Wild Axe", Element.Wild, (0, 13), (500, 3), (513, 2), (521, 2), (2002, 2), (2004, 2), (5001, 2), (6000, 1), (6002, 4),
                 (13000, 1), (13001, 2), (13002, 2), (20000, 4)),
-        };
+        }.Concat(All).ToArray(); // the seven starter decks are no longer handed out either
 
         static Starter Make(string name, Element element, params (int id, int count)[] entries)
         {

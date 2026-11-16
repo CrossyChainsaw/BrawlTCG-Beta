@@ -57,31 +57,30 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>
-        /// Hands out every starter deck (one per element) and every premade deck once. A deck that was already given is never recreated,
-        /// so deleting one keeps it deleted; an existing deck with the same name is never overwritten.
+        /// Hands out the six premade decks once each and cleans up decks earlier versions handed out (see
+        /// <see cref="StarterDecks.Retired"/>). A deck that was already given is never recreated, so deleting one keeps it
+        /// deleted; an existing deck with the same name is never overwritten.
         /// </summary>
         public static void EnsureStarterDecks()
         {
             Directory.CreateDirectory(Folder);
             string ledger = Path.Combine(Folder, ".starters"); // not a .txt, so it never shows up as a deck
             var given = new HashSet<string>(File.Exists(ledger) ? File.ReadAllLines(ledger) : Array.Empty<string>());
-            bool firstLaunch = !File.Exists(ledger) && Directory.GetFiles(Folder, "*.txt").Length == 0;
             bool changed = false;
 
             // Old versions first: an untouched copy of a retired deck is removed, and if that name is still bundled
             // (the deck was re-tuned) the new version is handed out in its place below.
-            var current = new HashSet<string>(StarterDecks.All.Concat(StarterDecks.Premade).Select(s => s.Name));
+            var current = new HashSet<string>(StarterDecks.Premade.Select(s => s.Name));
             foreach (string removed in RemoveRetiredDecks(given))
+            {
                 if (current.Contains(removed)) given.Remove(removed);
+                changed = true;
+            }
 
-            foreach (StarterDecks.Starter s in StarterDecks.All.Concat(StarterDecks.Premade))
+            foreach (StarterDecks.Starter s in StarterDecks.Premade)
             {
                 if (given.Contains(s.Name)) continue;
-                // Before the ledger existed only Fire and Nature were handed out (on first launch). If the player
-                // already had decks back then and deleted those two, don't bring them back.
-                bool legacy = s.Name == "Starter - Fire" || s.Name == "Starter - Nature";
-                bool hadDecksBefore = !firstLaunch && !File.Exists(ledger);
-                if (!Exists(s.Name) && !(legacy && hadDecksBefore)) Save(s.Name, s.Cards);
+                if (!Exists(s.Name)) Save(s.Name, s.Cards);
                 given.Add(s.Name);
                 changed = true;
             }
