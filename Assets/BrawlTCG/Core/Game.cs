@@ -114,26 +114,30 @@ namespace BrawlTCG.Core
             StartTurn();
         }
 
+        /// <summary>
+        /// The chosen cards go back into the deck, the deck is shuffled, and each chosen slot gets a newly drawn card in
+        /// the same position, so the rest of the hand doesn't move.
+        /// </summary>
         void RedrawStartingHand(Player player, int mask)
         {
-            var back = new List<Card>();
-            for (int i = player.Hand.Count - 1; i >= 0; i--)
+            var slots = new List<int>();
+            for (int i = 0; i < player.Hand.Count; i++)
+                if ((mask & (1 << i)) != 0) slots.Add(i);
+            if (slots.Count > 0)
             {
-                if ((mask & (1 << i)) == 0) continue;
-                back.Add(player.Hand[i]);
-                player.Hand.RemoveAt(i);
-            }
-            if (back.Count > 0)
-            {
-                player.Deck.AddRange(back);
+                foreach (int i in slots) player.Deck.Add(player.Hand[i]);
                 Random rng = _redrawRng[player.Index];
                 for (int i = player.Deck.Count - 1; i > 0; i--)
                 {
                     int j = rng.Next(i + 1);
                     (player.Deck[i], player.Deck[j]) = (player.Deck[j], player.Deck[i]);
                 }
-                for (int i = 0; i < back.Count; i++)
-                    player.DrawCardFromDeck();
+                foreach (int i in slots)
+                {
+                    Card drawn = player.Deck[player.Deck.Count - 1]; // top of the deck is the last element
+                    player.Deck.RemoveAt(player.Deck.Count - 1);
+                    player.Hand[i] = drawn;
+                }
             }
             _chosenStartingHand[player.Index] = true;
             if (_chosenStartingHand[0] && _chosenStartingHand[1])

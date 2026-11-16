@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using BrawlTCG.Core;
@@ -1337,8 +1338,7 @@ namespace BrawlTCG.UnityApp
             int me = _viewer, mask = 0;
             List<Card> hand = _game.Players[me].Hand;
             foreach (int i in _redrawPick) mask |= 1 << i;
-            var shuffledBack = _redrawPick.OrderBy(i => i).Select(i => hand[i]).ToList();
-            var before = new HashSet<Card>(hand, RefEq<Card>.Instance);
+            var oldBySlot = _redrawPick.ToDictionary(i => i, i => hand[i]); // the new cards take these same slots
             _redrawPick.Clear();
             CloseOverlay();
             if (!Submit(GameCommand.RedrawStartingHand(me, mask))) return;
@@ -1370,46 +1370,100 @@ namespace BrawlTCG.UnityApp
             var newHand = hand.ToList();
             if (!_game.ChoosingStartingHands && _game.ActiveIndex == me && newHand.Count > Game.StartingHandCards)
                 newHand.RemoveAt(newHand.Count - 1);
-            ShowRedrawResult(newHand, before, shuffledBack, Continue);
+            ShowRedrawResult(newHand, oldBySlot, Continue);
         }
 
         /// <summary>
-        /// After a redraw: the new starting hand, large, with the new cards turning over one by one and marked NEW,
-        /// plus which cards went back. CONTINUE moves on (next player or the first turn).
+        /// After a redraw: the new starting hand, large. Each swapped slot animates in place, one after another: the old
+        /// card sinks and fades out, then the new card rises into the same slot, fading in while it turns over, and stays
+        /// marked NEW. The other cards don't move. CONTINUE moves on (next player or the first turn).
         /// </summary>
-        void ShowRedrawResult(List<Card> hand, HashSet<Card> old, List<Card> shuffledBack, Action next)
+        void ShowRedrawResult(List<Card> hand, Dictionary<int, Card> oldBySlot, Action next)
         {
             _handoffPending = false; // shown before any hand-off to the other player
             var dim = ShowOverlay(0.95f);
             Theme.Label(dim, "YOUR STARTING HAND", 18, Theme.Gold, 0, 112, 1920, 26, TextAnchor.MiddleCenter, display: true);
             var title = Theme.Label(dim, "YOUR NEW HAND", 58, Theme.Text, 0, 142, 1920, 80, TextAnchor.MiddleCenter, display: true);
             Theme.AddShadow(title, 3, 0.6f);
-            int fresh = hand.Count(c => !old.Contains(c));
-            Theme.Label(dim, $"Shuffled back: {string.Join(", ", shuffledBack.Select(c => c.Name))}.  You drew {fresh} new {(fresh == 1 ? "card" : "cards")}, marked NEW.",
+            var backNames = oldBySlot.OrderBy(kv => kv.Key).Select(kv => kv.Value.Name);
+            int fresh = oldBySlot.Count;
+            Theme.Label(dim, $"Shuffled back: {string.Join(", ", backNames)}.  You drew {fresh} new {(fresh == 1 ? "card" : "cards")}, marked NEW.",
                 20, Theme.TextDim, 0, 226, 1920, 30, TextAnchor.MiddleCenter);
 
-            const float scale = 1.3f, gap = 18;
-            float w = CardView.W * scale, h = CardView.H * scale;
+            const float scale = 1.3f, gap = 18, y = 300;
+            float w = CardView.W * scale;
             int n = hand.Count;
             float start = 960 - (n * w + (n - 1) * gap) / 2;
-            float delay = 0.25f;
+            float delay = 0.3f;
             for (int i = 0; i < n; i++)
             {
-                Card card = hand[i];
-                float x = start + i * (w + gap), y = 300;
-                CardView v = CardView.Create(dim, card, true, x, y, scale);
-                if (old.Contains(card)) continue;
-                v.SetGlow(Theme.Gold, 0.6f);
-                v.AddStatus("NEW", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
-                // Turn the new card over where it lies.
-                var center = new Vector2(x + w / 2, y + h / 2);
-                CardView back = CardView.Create(dim, card, false, x, y, scale);
-                CardFlight.Begin(v, center, scale, delay).NoRaise().To(center, scale, 0.34f).ShowBackFirst(back);
-                Sound("card_draw", delay + 0.1f, 0.5f);
-                delay += 0.18f;
+                float x = start + i * (w + gap);
+                if (!oldBySlot.TryGetValue(i, out Card old))
+                {
+                    CardView.Create(dim, hand[i], true, x, y, scale);
+                    continue;
+                }
+                // The card that goes back, as it looked when picked (lowered, dimmed, BACK TO DECK) ...
+                CardView oldView = CardView.Create(dim, old, true, x, y + 36, scale);
+                oldView.SetDimmed(true);
+                oldView.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                // ... and the new one, marked NEW, with a face-down copy for the first half of its turn.
+                CardView newView = CardView.Create(dim, hand[i], true, x, y, scale);
+                newView.SetGlow(Theme.Gold, 0.6f);
+                newView.AddStatus("NEW", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                CardView back = CardView.Create(dim, hand[i], false, x, y, scale);
+                StartCoroutine(SwapSlot(oldView, newView, back, x, y, scale, delay));
+                delay += 0.3f;
             }
 
             Theme.Cta(dim, "CONTINUE", 960 - 210, 680, 420, 76, () => { CloseOverlay(); next(); }, 30);
+        }
+
+        /// <summary>Old card sinks and fades out; the new card rises into the slot, fading in while it turns over.</summary>
+        static IEnumerator SwapSlot(CardView oldView, CardView newView, CardView back, float x, float y, float scale, float delay)
+        {
+            float w = CardView.W * scale;
+            CanvasGroup Group(CardView v) => v.GetComponent<CanvasGroup>();
+            void Place(CardView v, float top, float scaleX)
+            {
+                v.Rect.localScale = new Vector3(scale * scaleX, scale, 1);
+                v.Rect.anchoredPosition = new Vector2(x + w * (1 - scaleX) / 2, -top); // turn around the card's centre
+            }
+            foreach (var g in new[] { Group(newView), Group(back) }) { g.alpha = 0; g.blocksRaycasts = false; }
+
+            for (float t = 0; t < delay; t += Time.unscaledDeltaTime) yield return null;
+            if (oldView == null || newView == null || back == null) yield break; // closed early
+
+            // Out: sink and fade.
+            const float outTime = 0.32f, inTime = 0.55f, sink = 60, rise = 90;
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / outTime)
+            {
+                if (oldView == null) yield break;
+                float e = t * t;
+                Place(oldView, y + 36 + sink * e, 1);
+                Group(oldView).alpha = 1 - t;
+                yield return null;
+            }
+            if (oldView != null) Destroy(oldView.gameObject);
+            Sfx.Play("card_draw", 0.5f);
+
+            // In: rise into the slot, fading in, back first, then the face.
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / inTime)
+            {
+                if (newView == null || back == null) yield break;
+                float top = y + rise * (1 - Theme.EaseOut(t));
+                float scaleX = Mathf.Max(0.04f, Mathf.Abs(Mathf.Cos(t * Mathf.PI)));
+                float alpha = Mathf.Clamp01(t * 2.2f);
+                bool showBack = t < 0.5f;
+                Place(showBack ? back : newView, top, scaleX);
+                Group(back).alpha = showBack ? alpha : 0;
+                Group(newView).alpha = showBack ? 0 : alpha;
+                yield return null;
+            }
+            if (back != null) Destroy(back.gameObject);
+            if (newView == null) yield break;
+            Place(newView, y, 1);
+            Group(newView).alpha = 1;
         }
 
         void ShowGameOver()
