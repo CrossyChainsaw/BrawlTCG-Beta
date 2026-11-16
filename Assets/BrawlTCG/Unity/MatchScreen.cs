@@ -1335,24 +1335,81 @@ namespace BrawlTCG.UnityApp
         void ConfirmStartingHand()
         {
             int me = _viewer, mask = 0;
+            List<Card> hand = _game.Players[me].Hand;
             foreach (int i in _redrawPick) mask |= 1 << i;
+            var shuffledBack = _redrawPick.OrderBy(i => i).Select(i => hand[i]).ToList();
+            var before = new HashSet<Card>(hand, RefEq<Card>.Instance);
             _redrawPick.Clear();
             CloseOverlay();
             if (!Submit(GameCommand.RedrawStartingHand(me, mask))) return;
             RememberHand(me); // seen: turned over in place at the start of the first turn instead of dealt again
+            bool startedTurnOne = !_game.ChoosingStartingHands; // our choice was the last one
 
-            if (_hotSeat)
+            void Continue()
             {
-                // Next: the other player's starting hand, or (both chosen) the first turn.
-                _viewer = _game.ChoosingStartingHands ? 1 - me : _game.ActiveIndex;
-                ShowHandoff();
-                Refresh();
+                if (_hotSeat)
+                {
+                    // Next: the other player's starting hand, or (both chosen) the first turn.
+                    _viewer = _game.ChoosingStartingHands ? 1 - me : _game.ActiveIndex;
+                    ShowHandoff();
+                    Refresh();
+                }
+                else
+                {
+                    CloseOverlay();
+                    // Online: if our choice was the last one, turn 1 begins now (if the opponent's choice arrives later,
+                    // its own handler shows the banner); otherwise the strip says we're waiting.
+                    if (startedTurnOne) TurnIntro(false);
+                }
             }
-            else if (!_game.ChoosingStartingHands)
+
+            if (mask == 0) { Continue(); return; } // kept the hand: nothing new to show
+
+            // The new starting hand. If this choice also started turn 1 and it's our turn, the turn's draw (the last card)
+            // isn't part of the starting hand.
+            var newHand = hand.ToList();
+            if (!_game.ChoosingStartingHands && _game.ActiveIndex == me && newHand.Count > Game.StartingHandCards)
+                newHand.RemoveAt(newHand.Count - 1);
+            ShowRedrawResult(newHand, before, shuffledBack, Continue);
+        }
+
+        /// <summary>
+        /// After a redraw: the new starting hand, large, with the new cards turning over one by one and marked NEW,
+        /// plus which cards went back. CONTINUE moves on (next player or the first turn).
+        /// </summary>
+        void ShowRedrawResult(List<Card> hand, HashSet<Card> old, List<Card> shuffledBack, Action next)
+        {
+            _handoffPending = false; // shown before any hand-off to the other player
+            var dim = ShowOverlay(0.95f);
+            Theme.Label(dim, "YOUR STARTING HAND", 18, Theme.Gold, 0, 112, 1920, 26, TextAnchor.MiddleCenter, display: true);
+            var title = Theme.Label(dim, "YOUR NEW HAND", 58, Theme.Text, 0, 142, 1920, 80, TextAnchor.MiddleCenter, display: true);
+            Theme.AddShadow(title, 3, 0.6f);
+            int fresh = hand.Count(c => !old.Contains(c));
+            Theme.Label(dim, $"Shuffled back: {string.Join(", ", shuffledBack.Select(c => c.Name))}.  You drew {fresh} new {(fresh == 1 ? "card" : "cards")}, marked NEW.",
+                20, Theme.TextDim, 0, 226, 1920, 30, TextAnchor.MiddleCenter);
+
+            const float scale = 1.3f, gap = 18;
+            float w = CardView.W * scale, h = CardView.H * scale;
+            int n = hand.Count;
+            float start = 960 - (n * w + (n - 1) * gap) / 2;
+            float delay = 0.25f;
+            for (int i = 0; i < n; i++)
             {
-                TurnIntro(false); // the opponent had already chosen: turn 1 begins
+                Card card = hand[i];
+                float x = start + i * (w + gap), y = 300;
+                CardView v = CardView.Create(dim, card, true, x, y, scale);
+                if (old.Contains(card)) continue;
+                v.SetGlow(Theme.Gold, 0.6f);
+                v.AddStatus("NEW", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                // Turn the new card over where it lies.
+                var center = new Vector2(x + w / 2, y + h / 2);
+                CardView back = CardView.Create(dim, card, false, x, y, scale);
+                CardFlight.Begin(v, center, scale, delay).NoRaise().To(center, scale, 0.34f).ShowBackFirst(back);
+                Sound("card_draw", delay + 0.1f, 0.5f);
+                delay += 0.18f;
             }
-            // Online and the opponent is still choosing: the strip says so until their choice arrives.
+
+            Theme.Cta(dim, "CONTINUE", 960 - 210, 680, 420, 76, () => { CloseOverlay(); next(); }, 30);
         }
 
         void ShowGameOver()
