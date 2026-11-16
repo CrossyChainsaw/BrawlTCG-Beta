@@ -55,12 +55,12 @@ namespace BrawlTCG.Core
         // ───────────── Player ─────────────
 
         public static readonly Effect PromotionI = new Effect(
-            "Boost player max HP by 5",
-            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(5));
+            "Boost player max HP by 15",
+            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(15));
 
         public static readonly Effect PromotionII = new Effect(
-            "Boost player max HP by 10",
-            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(10));
+            "Boost player max HP by 25",
+            (target, card, game, played) => game.ActivePlayer.BoostMaxHealth(25));
 
         // ───────────── Legend while-in-play triggers ─────────────
 
