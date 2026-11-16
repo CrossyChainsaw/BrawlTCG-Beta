@@ -133,12 +133,34 @@ namespace BrawlTCG.Core
         };
 
         /// <summary>
-        /// Ready-made decks handed out next to the starters: the decks from the alpha (card for card, renamed from
-        /// "S-NinjaSpiritAggro" style file names) and decks tuned by simulation (bot tournaments against every other deck).
+        /// Ready-made decks handed out next to the starters, tuned by simulation (bot tournaments against every starter
+        /// and the alpha decks). Named after how they win.
         /// </summary>
         public static readonly IReadOnlyList<Starter> Premade = new[]
         {
-            // ── From the alpha (v1.16.0 deck files) ──
+            // Shadow/Wild aggro under Evil Hideout (+3 ATK): Ninja Spirit needs no weapon, so it hits for 6 from turn one;
+            // Caspian and Dander are cheap, Bouncy Bomb and Forgeborne Chests keep the pressure up. No losing matchup.
+            Make("Hideout Rush", Element.Shadow, (0, 12), (104, 3), (500, 2), (516, 3), (517, 1), (5000, 4), (5003, 4), (5005, 1), (5006, 1),
+                (6000, 1), (6002, 2), (13002, 1), (17001, 1), (20000, 2), (25000, 2)),
+            // All Cosmic, so Silent Galaxy silences only the opponent. Aurora Brynn and Artemis hit hard with spears,
+            // lances and scythes; Wu Shang's Gauntlet Dsig hits every enemy legend.
+            Make("Cosmic Lockdown", Element.Cosmic, (0, 13), (107, 3), (506, 1), (512, 1), (526, 1), (3000, 3), (3001, 2), (3002, 2), (3003, 3),
+                (3005, 2), (21000, 2), (23001, 2), (24002, 3), (24003, 2)),
+            // Spear & greatsword: Faerie Queen grows every Nature legend, Forest Guardian walls with 13 HP, Arcadia's Pink Roses
+            // (spear + greatsword) and Aurora Brynn finish.
+            Make("Overgrowth", Element.Nature, (0, 12), (521, 1), (1000, 2), (1001, 4), (1008, 4), (3002, 1), (3003, 2), (4000, 2),
+                (18000, 4), (24001, 4), (24002, 1), (24005, 1), (24006, 2)),
+            // Axes and katars: Dander and Jhala hit early, Raymesis and Ulgrim late, Adrenaline swings twice.
+            Make("Wild Axe", Element.Wild, (0, 13), (500, 3), (513, 2), (521, 2), (2002, 2), (2004, 2), (5001, 2), (6000, 1), (6002, 4),
+                (13000, 1), (13001, 2), (13002, 2), (20000, 4)),
+        };
+
+        /// <summary>
+        /// Decks that earlier versions handed out and that are gone now: the alpha decks, and Claude I-III under their old
+        /// names. A player's copy is removed only while it is still exactly as it was handed out (edited decks are kept).
+        /// </summary>
+        public static readonly IReadOnlyList<Starter> Retired = new[]
+        {
             Make("Ninja Spirit Aggro", Element.Shadow, (0, 14), (104, 4), (500, 2), (503, 3), (504, 2), (5000, 4), (5003, 4), (6000, 2), (13000, 2), (17000, 4)),
             Make("Dark Duo", Element.Shadow, (0, 20), (500, 4), (502, 4), (516, 4), (517, 4), (519, 4), (1004, 4), (23004, 4)),
             Make("Faerie Queen", Element.Nature, (0, 20), (101, 4), (1000, 4), (1006, 4), (1008, 4), (18000, 4), (24001, 4)),
@@ -149,24 +171,12 @@ namespace BrawlTCG.Core
             Make("Nature Magic", Element.Nature, (0, 30), (101, 4), (503, 4), (1000, 4), (1001, 4), (1002, 4), (4000, 4), (4002, 4), (18000, 4), (22000, 4), (22001, 4), (24000, 4), (24001, 4)),
             Make("Yumiko Gauntlet Control", Element.Nature, (0, 30), (101, 4), (1004, 4), (1005, 4), (1006, 4), (3002, 4), (4003, 4), (5000, 4), (5003, 4), (6001, 4), (17000, 4), (17001, 4), (19000, 4), (24000, 4)),
             Make("Sword & Scythe", Element.Shadow, (0, 42), (104, 4), (105, 4), (506, 4), (2000, 4), (2003, 4), (2004, 4), (2005, 4), (4001, 4), (4002, 4), (5004, 4), (5005, 4), (5006, 2), (23000, 4), (23001, 4), (23002, 4), (25000, 4), (25001, 4)),
-
-            // ── Claude's decks, best first ──
-            // Shadow/Wild aggro under Evil Hideout (+3 ATK): Ninja Spirit needs no weapon, so it hits for 6 from turn one;
-            // Caspian and Dander are cheap, Bouncy Bomb and Forgeborne Chests keep the pressure up. No losing matchup.
-            Make("Claude I", Element.Shadow, (0, 12), (104, 3), (500, 2), (516, 3), (517, 1), (5000, 4), (5003, 4), (5005, 1), (5006, 1),
-                (6000, 1), (6002, 2), (13002, 1), (17001, 1), (20000, 2), (25000, 2)),
-            // All Cosmic, so Silent Galaxy silences only the opponent. Aurora Brynn and Artemis hit hard with spears,
-            // lances and scythes; Wu Shang's Gauntlet Dsig hits every enemy legend.
-            Make("Claude II", Element.Cosmic, (0, 13), (107, 3), (506, 1), (512, 1), (526, 1), (3000, 3), (3001, 2), (3002, 2), (3003, 3),
-                (3005, 2), (21000, 2), (23001, 2), (24002, 3), (24003, 2)),
-            // Spear & greatsword: Faerie Queen grows every Nature legend, Forest Guardian walls with 13 HP, Arcadia's Pink Roses
-            // (spear + greatsword) and Aurora Brynn finish.
-            Make("Claude III", Element.Nature, (0, 12), (521, 1), (1000, 2), (1001, 4), (1008, 4), (3002, 1), (3003, 2), (4000, 2),
-                (18000, 4), (24001, 4), (24002, 1), (24005, 1), (24006, 2)),
-            // Axes and katars: Dander and Jhala hit early, Raymesis and Ulgrim late, Adrenaline swings twice.
-            Make("Wild Axe", Element.Wild, (0, 13), (500, 3), (513, 2), (521, 2), (2002, 2), (2004, 2), (5001, 2), (6000, 1), (6002, 4),
-                (13000, 1), (13001, 2), (13002, 2), (20000, 4)),
+            Renamed(Premade[0], "Claude I"),
+            Renamed(Premade[1], "Claude II"),
+            Renamed(Premade[2], "Claude III"),
         };
+
+        static Starter Renamed(Starter s, string oldName) => new Starter { Name = oldName, Element = s.Element, Cards = s.Cards };
 
         static Starter Make(string name, Element element, params (int id, int count)[] entries)
         {

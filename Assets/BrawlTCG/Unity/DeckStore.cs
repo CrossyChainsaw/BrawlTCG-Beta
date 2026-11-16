@@ -79,6 +79,21 @@ namespace BrawlTCG.UnityApp
                 changed = true;
             }
             if (changed) File.WriteAllLines(ledger, given.OrderBy(n => n));
+            RemoveRetiredDecks(given);
+        }
+
+        /// <summary>
+        /// Deletes decks an earlier version handed out and that are no longer bundled (or were renamed), but only while
+        /// the file is still exactly the deck that was handed out: a deck the player edited is theirs and stays.
+        /// </summary>
+        static void RemoveRetiredDecks(HashSet<string> given)
+        {
+            foreach (StarterDecks.Starter s in StarterDecks.Retired)
+            {
+                if (!given.Contains(s.Name) || !Exists(s.Name)) continue;
+                List<int> saved = Load(s.Name);
+                if (saved.OrderBy(i => i).SequenceEqual(s.Cards.OrderBy(i => i))) Delete(s.Name);
+            }
         }
     }
 }
