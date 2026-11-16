@@ -935,7 +935,7 @@ namespace BrawlTCG.UnityApp
                     y += 82;
                 }
 
-                string effects = CleanEffects(legend.EffectDescription);
+                string effects = TriggerIcons.SplitCardText(legend).abilities;
                 if (!string.IsNullOrWhiteSpace(effects))
                 {
                     Theme.Label(t, "ABILITIES", 16, Theme.Gold, 24, y + 4, 300, 22, display: true);
@@ -967,22 +967,22 @@ namespace BrawlTCG.UnityApp
             }
             else
             {
-                string text = card is StageCard || card is EssenceCard ? CleanEffects(card.Description) : card.Description;
-                if (card is EssenceCard) text = "Each Essence card in play gives you 1 Essence at the start of your turn. You may play one Essence card per turn.";
-                if (card is WeaponCard weapon) text += $"\n\nIt counts towards attacks that need a {Pretty(weapon.Weapon)} (and attacks that need any weapon). Matching the legend's element adds bonus damage.";
-                if (card is BattleCard battle)
+                // Same layout as legends: details next to the card, ABILITIES (one icon per trigger) below it.
+                var (abilities, info) = TriggerIcons.SplitCardText(card);
+                TriggerIcons.PaintAbilities(t, info, ix, 206, iw, 196, 18, 12, Theme.TextDim);
+
+                float y = 418;
+                if (abilities.Length > 0)
                 {
-                    string target = !battle.TargetRequired ? "No target needed." : battle.FriendlyFire ? "Target: one of your legends." : "Target: an enemy legend.";
-                    string kind = battle.Stackable ? "Stays attached to the legend." : "Discarded after use.";
-                    text += $"\n\n{target}\n{kind}";
+                    Theme.Label(t, "ABILITIES", 16, Theme.Gold, 24, y, 300, 22, display: true);
+                    y += 30 + TriggerIcons.PaintAbilities(t, abilities, 24, y + 30, W - 48, 200, 18, 12, Theme.Text) + 24;
                 }
-                TriggerIcons.PaintAbilities(t, text, ix, 214, iw, 300, 19, 12, Theme.Text);
 
                 int[] mentioned = CardReferences.For(card);
                 if (mentioned != null)
                 {
-                    Theme.Label(t, "MENTIONED CARDS  ·  hover to see", 15, Theme.Gold, ix, 530, iw, 22, display: true);
-                    PeekRow(t, mentioned, ix, 558, iw, 0.5f);
+                    Theme.Label(t, "MENTIONED CARDS  ·  hover to see", 15, Theme.Gold, 24, y, W - 48, 22, display: true);
+                    PeekRow(t, mentioned, 24, y + 28, W - 48, 0.5f);
                 }
             }
         }

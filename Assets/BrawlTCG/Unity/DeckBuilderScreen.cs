@@ -327,7 +327,7 @@ namespace BrawlTCG.UnityApp
                     PreviewAttack(t, legend, attack, 16, y, w - 32);
                     y += 62;
                 }
-                string effects = CleanEffects(legend.EffectDescription);
+                string effects = TriggerIcons.SplitCardText(legend).abilities;
                 if (effects.Length > 0)
                 {
                     Theme.Label(t, "ABILITIES", 14, Theme.Gold, 20, y + 4, 200, 20, display: true);
@@ -336,16 +336,15 @@ namespace BrawlTCG.UnityApp
             }
             else
             {
-                string text = card is EssenceCard
-                    ? "Each Essence card in play gives you 1 Essence at the start of your turn. Play one per turn. Decks need at least 10."
-                    : CleanEffects(card.Description);
-                if (card is WeaponCard weapon) text += $"\n\nUnlocks attacks that need a {Pretty(weapon.Weapon)}. Matching the legend's element adds bonus damage.";
-                if (card is BattleCard battle)
+                // Same layout as legends: a details line first, then ABILITIES with one icon per trigger.
+                var (abilities, info) = TriggerIcons.SplitCardText(card);
+                float room = PreviewRect.height - y - 24;
+                y += TriggerIcons.PaintAbilities(t, info, 20, y, w - 40, abilities.Length > 0 ? Mathf.Min(110, room) : room, 15, 11, Theme.TextDim) + 10;
+                if (abilities.Length > 0)
                 {
-                    string target = !battle.TargetRequired ? "No target needed." : battle.FriendlyFire ? "Target: one of your legends." : "Target: an enemy legend.";
-                    text += $"\n\n{target}  {(battle.Stackable ? "Stays attached to the legend." : "Discarded after use.")}";
+                    Theme.Label(t, "ABILITIES", 14, Theme.Gold, 20, y + 4, 200, 20, display: true);
+                    TriggerIcons.PaintAbilities(t, abilities, 20, y + 28, w - 40, PreviewRect.height - y - 40, 16, 10, Theme.Text);
                 }
-                TriggerIcons.PaintAbilities(t, text, 20, y, w - 40, PreviewRect.height - y - 24, 17, 11, Theme.Text);
             }
         }
 
@@ -380,13 +379,6 @@ namespace BrawlTCG.UnityApp
             else Theme.Label(chip.transform, "ANY", 11, Theme.Text, 0, 0, 36, 40, TextAnchor.MiddleCenter, display: true);
             Theme.Label(chip.transform, amount == 0 ? "—" : $"×{amount}", 14, burn > 0 ? new Color32(255, 150, 70, 255) : Theme.Gold, 32, 0, 24, 40, TextAnchor.MiddleCenter, display: true);
             return x + 64;
-        }
-
-        static string CleanEffects(string description)
-        {
-            return string.Join("\n", (description ?? "").Split('\n')
-                .Select(l => l.Trim())
-                .Where(l => l.Length > 0 && !l.EndsWith("N/A")));
         }
 
         static string Pretty(Weapon w) => w == Weapon.RocketLance ? "Rocket Lance" : w == Weapon.BattleBoots ? "Battle Boots" : w.ToString();

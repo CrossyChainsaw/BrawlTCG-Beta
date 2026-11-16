@@ -116,6 +116,44 @@ namespace BrawlTCG.UnityApp
             glyph.raycastTarget = false;
         }
 
+        /// <summary>
+        /// Splits a card's text the same way for every card type: <c>abilities</c> holds the trigger lines
+        /// ("Start Turn: ...", "When Played: ...", "While In Play: ..."), shown under ABILITIES with their icons;
+        /// <c>info</c> holds the rest (targets, how weapons and Essence work). Legends' info (attacks, stats) is drawn elsewhere.
+        /// </summary>
+        public static (string abilities, string info) SplitCardText(Card card)
+        {
+            string text = card is BattleCard ? card.Description : card.EffectDescription;
+            var abilities = new List<string>();
+            var rest = new List<string>();
+            foreach (string raw in (text ?? "").Split('\n'))
+            {
+                string line = raw.Trim();
+                if (line.Length == 0 || line.EndsWith("N/A")) continue;
+                (LineTrigger(line) != null ? abilities : rest).Add(line);
+            }
+
+            switch (card)
+            {
+                case StageCard _:
+                    rest.Add("Stages affect both players. Playing a new stage replaces the current one.");
+                    break;
+                case EssenceCard _:
+                    rest.Add("You may play one Essence card per turn. Decks need at least 10.");
+                    break;
+                case WeaponCard weapon:
+                    string w = weapon.Weapon == Weapon.RocketLance ? "Rocket Lance" : weapon.Weapon == Weapon.BattleBoots ? "Battle Boots" : weapon.Weapon.ToString();
+                    rest.Add(card.Description + ".");
+                    rest.Add($"It counts towards attacks that need a {w} (and attacks that need any weapon). Matching the legend's element adds bonus damage.");
+                    break;
+                case BattleCard battle:
+                    rest.Add(!battle.TargetRequired ? "No target needed." : battle.FriendlyFire ? "Target: one of your legends." : "Target: an enemy legend.");
+                    rest.Add(battle.Stackable ? "Stays attached to the legend." : "Discarded after use.");
+                    break;
+            }
+            return (string.Join("\n", abilities), string.Join("\n", rest));
+        }
+
         /// <summary>The trigger a text line starts with ("Start Turn: ...", "When Played: ...", "While In Play: ..."), if any.</summary>
         public static Trigger? LineTrigger(string line)
         {
