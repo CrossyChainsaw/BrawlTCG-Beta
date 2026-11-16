@@ -45,6 +45,18 @@ namespace BrawlTCG.UnityApp
         /// <summary>Anti-aliased heart shape (white, tint it).</summary>
         public static Sprite Heart => _heart ??= MakeHeart();
 
+        /// <summary>
+        /// The project enters Play mode without a domain reload, so statics survive between runs while Unity destroys
+        /// the sprites made at runtime. Forget them at the start of every run so they are made again.
+        /// </summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics()
+        {
+            _display = null;
+            _rounded = _roundedOutline = _soft = _ring = _heart = null;
+            Gradients.Clear();
+        }
+
         static Sprite MakeHeart()
         {
             const int size = 128, ss = 4;

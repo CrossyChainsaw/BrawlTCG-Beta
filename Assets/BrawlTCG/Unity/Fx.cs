@@ -51,6 +51,10 @@ namespace BrawlTCG.UnityApp
 
         static readonly Dictionary<string, Sprite[]> Cache = new Dictionary<string, Sprite[]>();
 
+        // No domain reload on Play: frame sprites from the previous run are destroyed, so cut them again.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() => Cache.Clear();
+
         public static Sprite[] Frames(string name)
         {
             if (Cache.TryGetValue(name, out Sprite[] frames)) return frames;

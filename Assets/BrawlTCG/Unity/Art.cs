@@ -24,6 +24,14 @@ namespace BrawlTCG.UnityApp
 
         static readonly Dictionary<Weapon, Texture2D> WeaponCache = new Dictionary<Weapon, Texture2D>();
 
+        // No domain reload on Play: start each run with fresh caches.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics()
+        {
+            Cache.Clear();
+            WeaponCache.Clear();
+        }
+
         /// <summary>White weapon glyph (tint it), or null for Weapon.Any.</summary>
         public static Texture2D Weapon(Weapon weapon)
         {

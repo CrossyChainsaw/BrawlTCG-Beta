@@ -126,6 +126,10 @@ namespace BrawlTCG.UnityApp
 
         static Sprite _bolt, _infinity, _cycle, _sword, _slash;
 
+        // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() => _bolt = _infinity = _cycle = _sword = _slash = null;
+
         public static Sprite GlyphFor(Trigger t) =>
             t == Trigger.WhenPlayed ? (_bolt ??= Glyph(Bolt)) :
             t == Trigger.WhileInPlay ? (_infinity ??= Glyph(Infinity)) :

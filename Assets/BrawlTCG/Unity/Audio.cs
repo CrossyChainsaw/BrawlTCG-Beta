@@ -17,6 +17,17 @@ namespace BrawlTCG.UnityApp
         static AudioSource[] _pool;
         static int _next;
 
+        // No domain reload on Play: the clock restarts at 0 each run, so old "last played" times would mute cues,
+        // and the voice pool from the previous run is gone.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics()
+        {
+            Cache.Clear();
+            LastPlayed.Clear();
+            _pool = null;
+            _next = 0;
+        }
+
         public static float Volume
         {
             get => PlayerPrefs.GetFloat("BrawlTCG.SfxVolume", 0.8f);
