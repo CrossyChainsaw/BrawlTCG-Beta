@@ -57,12 +57,37 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>
+        /// Builds up to v1.0 Beta saved under the Unity defaults "DefaultCompany/My project". The first time a build with
+        /// the real names starts, it copies those decks (and the starter ledger) over. The old folder is left untouched.
+        /// </summary>
+        static void MigrateFromOldFolder()
+        {
+            try
+            {
+                if (Directory.Exists(Folder)) return;
+                string root = Directory.GetParent(Directory.GetParent(Application.persistentDataPath).FullName).FullName;
+                string old = Path.Combine(root, "DefaultCompany", "My project", "Decks");
+                if (!Directory.Exists(old) || Path.GetFullPath(old) == Path.GetFullPath(Folder)) return;
+
+                Directory.CreateDirectory(Folder);
+                foreach (string file in Directory.GetFiles(old))
+                    File.Copy(file, Path.Combine(Folder, Path.GetFileName(file)), overwrite: false);
+                Debug.Log($"Copied decks from {old}");
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning("Could not copy decks from the old folder: " + e.Message);
+            }
+        }
+
+        /// <summary>
         /// Hands out the six premade decks once each and cleans up decks earlier versions handed out (see
         /// <see cref="StarterDecks.Retired"/>). A deck that was already given is never recreated, so deleting one keeps it
         /// deleted; an existing deck with the same name is never overwritten.
         /// </summary>
         public static void EnsureStarterDecks()
         {
+            MigrateFromOldFolder();
             Directory.CreateDirectory(Folder);
             string ledger = Path.Combine(Folder, ".starters"); // not a .txt, so it never shows up as a deck
             var given = new HashSet<string>(File.Exists(ledger) ? File.ReadAllLines(ledger) : Array.Empty<string>());
