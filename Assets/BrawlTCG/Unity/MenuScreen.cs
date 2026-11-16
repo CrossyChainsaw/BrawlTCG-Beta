@@ -28,7 +28,7 @@ namespace BrawlTCG.UnityApp
             PrefDeck2 = "BrawlTCG.Deck2", PrefIp = "BrawlTCG.Ip", PrefPort = "BrawlTCG.Port", PrefMode = "BrawlTCG.OnlineMode";
 
         enum Panel { None, Online, Local }
-        enum OnlineMode { Host, Join, Server }
+        enum OnlineMode { CreateRoom, JoinRoom, LanHost, LanJoin }
 
         App _app;
         Panel _panel = Panel.None;
@@ -48,8 +48,9 @@ namespace BrawlTCG.UnityApp
         GameObject _onlinePanel;
         ThemedSelector _deck;
         Text _deckInfo, _modeHint, _status;
-        InputField _ip, _port;
-        RectTransform _ipBox, _portBox;
+        InputField _ip, _port, _code;
+        RectTransform _ipBox, _portBox, _codeBox, _roomBox;
+        Text _roomCode;
         readonly List<(OnlineMode mode, Image bg, Text label)> _tabs = new List<(OnlineMode, Image, Text)>();
         Button _cta;
         Text _ctaLabel;
@@ -332,7 +333,7 @@ namespace BrawlTCG.UnityApp
         void BuildOnlinePanel()
         {
             List<string> decks = DeckStore.List();
-            RectTransform t = PanelShell("OnlinePanel", "PLAY ONLINE", "Battle a friend over LAN, the internet or a relay server.", 790, out _onlinePanel);
+            RectTransform t = PanelShell("OnlinePanel", "PLAY ONLINE", "Battle a friend anywhere with a room code, or directly over LAN.", 790, out _onlinePanel);
 
             _deck = new ThemedSelector(t, "Your deck", 48, 156, 694, decks, PlayerPrefs.GetString(PrefDeck, null));
             _deckInfo = Theme.Label(t, "", 16, Theme.TextDim, 50, 238, 694, 24);
@@ -340,8 +341,12 @@ namespace BrawlTCG.UnityApp
 
             // Segmented mode tabs
             var tabs = Theme.RoundedPanel(t, new Color(1, 1, 1, 0.06f), 48, 284, 694, 58, 14, "Tabs");
-            var modes = new[] { (OnlineMode.Host, "HOST"), (OnlineMode.Join, "JOIN"), (OnlineMode.Server, "SERVER") };
-            float segW = (694 - 12) / 3f;
+            var modes = new[]
+            {
+                (OnlineMode.CreateRoom, "CREATE ROOM"), (OnlineMode.JoinRoom, "JOIN ROOM"),
+                (OnlineMode.LanHost, "LAN HOST"), (OnlineMode.LanJoin, "LAN JOIN"),
+            };
+            float segW = (694 - 12) / (float)modes.Length;
             for (int i = 0; i < modes.Length; i++)
             {
                 OnlineMode m = modes[i].Item1;
@@ -349,7 +354,7 @@ namespace BrawlTCG.UnityApp
                 var b = seg.gameObject.AddComponent<Button>();
                 b.transition = Selectable.Transition.None;
                 b.onClick.AddListener(() => SetMode(m));
-                var label = Theme.Label(seg.transform, modes[i].Item2, 22, Theme.TextDim, 0, 0, segW, 46, TextAnchor.MiddleCenter, display: true);
+                var label = Theme.Label(seg.transform, modes[i].Item2, 18, Theme.TextDim, 0, 0, segW, 46, TextAnchor.MiddleCenter, display: true);
                 _tabs.Add((m, seg, label));
             }
             _modeHint = Theme.Label(t, "", 17, Theme.TextDim, 50, 356, 694, 48);
@@ -360,6 +365,15 @@ namespace BrawlTCG.UnityApp
             _port = Theme.Field(_portBox, "Port", "5000",
                 PlayerPrefs.GetInt(PrefPort, Protocol.DefaultPort).ToString(CultureInfo.InvariantCulture), 0, 0, 220, 5);
             _port.contentType = InputField.ContentType.IntegerNumber;
+
+            _codeBox = UI.Place(UI.Rect("CodeBox", t), 48, 414, 300, 80);
+            _code = Theme.Field(_codeBox, "Room code", "0000", "", 0, 0, 300, 4);
+            _code.contentType = InputField.ContentType.IntegerNumber;
+
+            _roomBox = UI.Place(UI.Rect("RoomBox", t), 48, 404, 694, 110);
+            Theme.Label(_roomBox, "ROOM CODE  ·  SEND THIS TO YOUR FRIEND", 14, Theme.TextDim, 2, 0, 694, 20, display: true);
+            _roomCode = Theme.Label(_roomBox, "", 72, Theme.Gold, 0, 22, 694, 86, TextAnchor.MiddleLeft, display: true);
+            _roomBox.gameObject.SetActive(false);
 
             _cta = Theme.Cta(t, "HOST GAME", 48, 530, 694, 78, OnlineCtaClicked, 30);
             _ctaLabel = _cta.GetComponentInChildren<Text>();
@@ -374,10 +388,11 @@ namespace BrawlTCG.UnityApp
             _status.verticalOverflow = VerticalWrapMode.Truncate;
             _cancel = Theme.Ghost(t, "CANCEL", 592, 646, 150, 44, CancelConnect, 18).gameObject;
 
-            Theme.Label(t, "Tip: hosting needs port 5000 reachable. On one PC, host in one window and join 127.0.0.1 in the other.",
+            Theme.Label(t, "Rooms work over the internet without opening ports. LAN modes need port 5000 reachable; " +
+                "on one PC, LAN host in one window and LAN join 127.0.0.1 in the other.",
                 15, Theme.TextFaint, 50, 718, 694, 44);
 
-            SetMode((OnlineMode)Mathf.Clamp(PlayerPrefs.GetInt(PrefMode, 0), 0, 2));
+            SetMode((OnlineMode)Mathf.Clamp(PlayerPrefs.GetInt(PrefMode, 0), 0, 3));
             SetBusy(false, "Not connected");
         }
 
@@ -391,21 +406,27 @@ namespace BrawlTCG.UnityApp
                 bg.color = on ? Theme.Gold : new Color(0, 0, 0, 0);
                 label.color = on ? Theme.Ink : Theme.TextDim;
             }
-            _ipBox.gameObject.SetActive(mode != OnlineMode.Host);
-            _portBox.anchoredPosition = new Vector2(mode == OnlineMode.Host ? 48 : 522, -414);
+            _ipBox.gameObject.SetActive(mode == OnlineMode.LanJoin);
+            _portBox.gameObject.SetActive(mode == OnlineMode.LanHost || mode == OnlineMode.LanJoin);
+            _portBox.anchoredPosition = new Vector2(mode == OnlineMode.LanHost ? 48 : 522, -414);
+            _codeBox.gameObject.SetActive(mode == OnlineMode.JoinRoom);
             switch (mode)
             {
-                case OnlineMode.Host:
-                    _modeHint.text = "Wait for a friend to join you. You take the first turn.";
+                case OnlineMode.CreateRoom:
+                    _modeHint.text = "Get a 4-digit room code and send it to a friend. You take the first turn.";
+                    _ctaLabel.text = "CREATE ROOM";
+                    break;
+                case OnlineMode.JoinRoom:
+                    _modeHint.text = "Enter the 4-digit code your friend got when they created a room.";
+                    _ctaLabel.text = "JOIN ROOM";
+                    break;
+                case OnlineMode.LanHost:
+                    _modeHint.text = "Host directly on this PC. Your friend needs your IP address. You take the first turn.";
                     _ctaLabel.text = "HOST GAME";
                     break;
-                case OnlineMode.Join:
-                    _modeHint.text = "Connect directly to a friend who is hosting.";
-                    _ctaLabel.text = "JOIN GAME";
-                    break;
                 default:
-                    _modeHint.text = "Both players connect to a running BrawlTCG relay server.";
-                    _ctaLabel.text = "CONNECT TO SERVER";
+                    _modeHint.text = "Connect directly to a friend who is hosting with LAN HOST.";
+                    _ctaLabel.text = "JOIN GAME";
                     break;
             }
         }
@@ -415,9 +436,10 @@ namespace BrawlTCG.UnityApp
             if (_busy) return;
             switch (_mode)
             {
-                case OnlineMode.Host: HostP2P(); break;
-                case OnlineMode.Join: JoinP2P(); break;
-                default: JoinServer(); break;
+                case OnlineMode.CreateRoom: HostRoom(); break;
+                case OnlineMode.JoinRoom: JoinRoom(); break;
+                case OnlineMode.LanHost: HostP2P(); break;
+                default: JoinP2P(); break;
             }
         }
 
@@ -558,38 +580,32 @@ namespace BrawlTCG.UnityApp
 
         // ───────────────────────────── Networking ─────────────────────────────
 
-        async void HostP2P()
+        /// <summary>
+        /// Shared wrapper for every online flow: validates the player, shows the busy state, and on failure or
+        /// cancel disposes whatever connection was pending. Flows store each new connection in <see cref="_pending"/>
+        /// right away and call <see cref="CheckAlive"/> after every await.
+        /// </summary>
+        async void RunOnline(string busyText, string failText, Func<(string name, List<int> deck), Task> flow)
         {
             var me = PrepareLocalPlayer(_name.text, _deck);
             if (me == null) return;
             SavePrefs();
-            int port = ParsePort();
-            SetBusy(true, $"Waiting for a second player on port {port}...");
-            NetSession session = null;
+            SetBusy(true, busyText);
             try
             {
-                _listener = new NetSession.Listener(port);
-                session = await _listener.AcceptAsync();
-                _listener = null;
-                if (this == null) { session.Dispose(); return; }
-                _pending = session;
-                SetStatus("Someone is joining...", Theme.Text);
-
-                int mySeed = new Random().Next();
-                session.Send(Protocol.EncodeHello(me.Value.name, mySeed, me.Value.deck));
-                Protocol.Hello peer = await ReadHello(session);
-                if (this == null) { session.Dispose(); return; }
-
-                // Host always starts: host is player 0.
-                var game = new Game(me.Value.name, me.Value.deck, peer.Name, peer.Deck, mySeed ^ peer.Seed);
-                Launch(game, session, 0);
+                await flow(me.Value);
             }
             catch (Exception e)
             {
-                session?.Dispose();
+                _pending?.Dispose();
                 if (this != null)
                 {
-                    if (_cancelled) SetStatus("Not connected"); else Error($"Could not host: {e.Message}");
+                    if (_cancelled || e is OperationCanceledException) SetStatus("Not connected");
+                    else
+                    {
+                        Debug.LogException(e);
+                        Error($"{failText}: {e.Message}");
+                    }
                 }
             }
             finally
@@ -598,96 +614,105 @@ namespace BrawlTCG.UnityApp
                 _pending = null;
                 _listener?.Dispose();
                 _listener = null;
-                if (this != null) SetBusy(false);
+                if (this != null)
+                {
+                    ShowRoomCode(null);
+                    SetBusy(false);
+                }
             }
         }
 
-        async void JoinP2P()
+        void CheckAlive()
         {
-            var me = PrepareLocalPlayer(_name.text, _deck);
-            if (me == null) return;
-            if (string.IsNullOrWhiteSpace(_ip.text)) { _app.Toast("Enter the host's address."); return; }
-            SavePrefs();
-            SetBusy(true, $"Joining {_ip.text.Trim()}...");
-            NetSession session = null;
-            try
+            if (this == null || _cancelled) throw new OperationCanceledException();
+        }
+
+        void ShowRoomCode(string code)
+        {
+            _roomBox.gameObject.SetActive(code != null);
+            _roomCode.text = code == null ? "" : string.Join("  ", code.ToCharArray());
+        }
+
+        void HostRoom()
+        {
+            RunOnline("Creating a room...", "Could not create a room", async me =>
             {
-                session = await NetSession.ConnectAsync(_ip.text.Trim(), ParsePort());
-                if (this == null) { session.Dispose(); return; }
+                RelaySession session = await RelaySession.CreateRoomAsync();
                 _pending = session;
+                CheckAlive();
+                ShowRoomCode(session.RoomCode);
+                SetStatus("Waiting for a friend to join...", Theme.Text);
+
+                await session.WaitForOpponentAsync();
+                CheckAlive();
+                ShowRoomCode(null);
+                SetStatus("Someone is joining...", Theme.Text);
+                await HandshakeAsHost(session, me);
+            });
+        }
+
+        void JoinRoom()
+        {
+            string code = _code.text.Trim();
+            if (code.Length != 4 || !code.All(char.IsDigit)) { _app.Toast("Enter the 4-digit room code."); return; }
+            RunOnline($"Joining room {code}...", "Could not join", async me =>
+            {
+                RelaySession session = await RelaySession.JoinRoomAsync(code);
+                _pending = session;
+                CheckAlive();
                 SetStatus("Connected! Exchanging decks...", Theme.Text);
-
-                int mySeed = new Random().Next();
-                session.Send(Protocol.EncodeHello(me.Value.name, mySeed, me.Value.deck));
-                Protocol.Hello host = await ReadHello(session);
-                if (this == null) { session.Dispose(); return; }
-
-                var game = new Game(host.Name, host.Deck, me.Value.name, me.Value.deck, host.Seed ^ mySeed);
-                Launch(game, session, 1);
-            }
-            catch (Exception e)
-            {
-                session?.Dispose();
-                if (this != null)
-                {
-                    if (_cancelled) SetStatus("Not connected"); else Error($"Could not join: {e.Message}");
-                }
-            }
-            finally
-            {
-                _cancelled = false;
-                _pending = null;
-                if (this != null) SetBusy(false);
-            }
+                await HandshakeAsGuest(session, me);
+            });
         }
 
-        async void JoinServer()
+        void HostP2P()
         {
-            var me = PrepareLocalPlayer(_name.text, _deck);
-            if (me == null) return;
-            if (string.IsNullOrWhiteSpace(_ip.text)) { _app.Toast("Enter the server's address."); return; }
-            SavePrefs();
-            SetBusy(true, "Connecting to server...");
-            NetSession session = null;
-            try
+            int port = ParsePort();
+            RunOnline($"Waiting for a second player on port {port}...", "Could not host", async me =>
             {
-                session = await NetSession.ConnectAsync(_ip.text.Trim(), ParsePort());
-                if (this == null) { session.Dispose(); return; }
+                _listener = new NetSession.Listener(port);
+                NetSession session = await _listener.AcceptAsync();
+                _listener = null;
                 _pending = session;
-                SetStatus("Connected! Waiting for an opponent...", Theme.Text);
+                CheckAlive();
+                SetStatus("Someone is joining...", Theme.Text);
+                await HandshakeAsHost(session, me);
+            });
+        }
 
-                int mySeed = new Random().Next();
-                session.Send(Protocol.EncodeHello(me.Value.name, mySeed, me.Value.deck));
-                Protocol.Hello opponent = await ReadHello(session, timeoutMs: 10 * 60 * 1000);
-                if (this == null) { session.Dispose(); return; }
-
-                session.Send(Protocol.DistTurnsRequest);
-                string dist = await session.ReadLineAsync();
-                if (this == null) { session.Dispose(); return; }
-                bool amIFirst = dist == Protocol.DistTurnsFirst;
-                if (!amIFirst && dist != Protocol.DistTurnsSecond)
-                    throw new Exception("Unexpected answer from server: " + dist);
-
-                int seed = mySeed ^ opponent.Seed;
-                Game game = amIFirst
-                    ? new Game(me.Value.name, me.Value.deck, opponent.Name, opponent.Deck, seed)
-                    : new Game(opponent.Name, opponent.Deck, me.Value.name, me.Value.deck, seed);
-                Launch(game, session, amIFirst ? 0 : 1);
-            }
-            catch (Exception e)
+        void JoinP2P()
+        {
+            string ip = _ip.text.Trim();
+            if (string.IsNullOrWhiteSpace(ip)) { _app.Toast("Enter the host's address."); return; }
+            RunOnline($"Joining {ip}...", "Could not join", async me =>
             {
-                session?.Dispose();
-                if (this != null)
-                {
-                    if (_cancelled) SetStatus("Not connected"); else Error($"Could not connect: {e.Message}");
-                }
-            }
-            finally
-            {
-                _cancelled = false;
-                _pending = null;
-                if (this != null) SetBusy(false);
-            }
+                NetSession session = await NetSession.ConnectAsync(ip, ParsePort());
+                _pending = session;
+                CheckAlive();
+                SetStatus("Connected! Exchanging decks...", Theme.Text);
+                await HandshakeAsGuest(session, me);
+            });
+        }
+
+        /// <summary>The host is always player 0 and takes the first turn.</summary>
+        async Task HandshakeAsHost(NetSession session, (string name, List<int> deck) me)
+        {
+            int mySeed = new Random().Next();
+            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck));
+            Protocol.Hello peer = await ReadHello(session);
+            CheckAlive();
+            var game = new Game(me.name, me.deck, peer.Name, peer.Deck, mySeed ^ peer.Seed);
+            Launch(game, session, 0);
+        }
+
+        async Task HandshakeAsGuest(NetSession session, (string name, List<int> deck) me)
+        {
+            int mySeed = new Random().Next();
+            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck));
+            Protocol.Hello host = await ReadHello(session);
+            CheckAlive();
+            var game = new Game(host.Name, host.Deck, me.name, me.deck, host.Seed ^ mySeed);
+            Launch(game, session, 1);
         }
 
         static async Task<Protocol.Hello> ReadHello(NetSession session, int timeoutMs = 20000)

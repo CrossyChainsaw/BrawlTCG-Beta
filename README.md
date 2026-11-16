@@ -25,10 +25,12 @@ Six ready-made decks are added on launch, so you can play straight away: *Cosmic
 | Mode | How |
 |---|---|
 | **Hot-Seat** | Two players on one PC. The screen hides between turns so you can pass the device. |
-| **P2P / LAN** | One player clicks **Host Game**, the other enters the host's IP and clicks **Join Game** (port 5000). |
-| **Client-Server** | Both players connect to the `BrawlTCG-Server` relay from the original project. |
+| **Online rooms** | One player clicks **Create Room** and gets a 4-digit code; the other enters it under **Join Room**. Works over the internet with no port forwarding, through Unity Relay. |
+| **LAN** | One player clicks **LAN Host**, the other enters the host's IP under **LAN Join** (port 5000). |
 
-To test networking on one PC: run a build and press Play in the editor at the same time, then host in one and join `127.0.0.1` in the other.
+To test networking on one PC: run a build and press Play in the editor at the same time, then create a room in one and join it in the other (or LAN host and join `127.0.0.1`).
+
+Online rooms need the Unity project linked to a Unity Cloud project with **Relay** and **Lobby** turned on (Edit > Project Settings > Services). Each room is a Lobby whose indexed field holds the 4-digit code and whose data holds the Relay join code; the Lobby is deleted as soon as the second player connects.
 
 ## How to play
 
