@@ -19,7 +19,13 @@ namespace BrawlTCG.Core
     /// </summary>
     public static class Protocol
     {
-        public const string Version = "BTCG-UNITY-3"; // 2: 50 starting health, DiscardCard and RedrawStartingHand commands. 3: v1.1 rules (tapped abilities off, no elemental bonus at 0 damage)
+        /// <summary>
+        /// The game version (Application.version, "major.minor.patch"), set by the Unity layer at startup. It is sent in
+        /// HELLO; players can only play each other when major and minor match, so a patch must never change the rules.
+        /// Clients up to v1.1.0 sent a protocol tag ("BTCG-UNITY-3") in its place instead of a version number.
+        /// </summary>
+        public static string GameVersion = "0.0.0";
+        public const string VersionMismatchPrefix = "Version mismatch: ";
         public const int DefaultPort = 5000;
         public const string HelloPrefix = "HELLO";
         public const string CommandPrefix = "CMD:";
@@ -33,11 +39,20 @@ namespace BrawlTCG.Core
             public string Name;
             public int Seed;
             public List<int> Deck;
+            /// <summary>Legend card id shown as the avatar, or -1 for the name's initial.</summary>
+            public int Avatar = -1;
         }
 
-        public static string EncodeHello(string name, int seed, IEnumerable<int> deck)
+        /// <summary>
+        /// The name field also carries profile extras after the escaped name, as "&amp;key=value" pairs (the escaped name
+        /// never contains a raw '&amp;'). Keeping HELLO at five fields lets pre-v1.2.0 clients still reach their version check.
+        /// Unknown keys are ignored, so later patches can add extras without breaking compatibility.
+        /// </summary>
+        public static string EncodeHello(string name, int seed, IEnumerable<int> deck, int avatar = -1)
         {
-            return string.Join(":", HelloPrefix, Version, Uri.EscapeDataString(name ?? ""),
+            string profile = Uri.EscapeDataString(name ?? "");
+            if (ValidAvatar(avatar) >= 0) profile += "&a=" + avatar.ToString(CultureInfo.InvariantCulture);
+            return string.Join(":", HelloPrefix, GameVersion, profile,
                 seed.ToString(CultureInfo.InvariantCulture),
                 string.Join(",", deck.Select(i => i.ToString(CultureInfo.InvariantCulture))));
         }
@@ -49,7 +64,15 @@ namespace BrawlTCG.Core
             if (string.IsNullOrEmpty(line)) { error = "No data received from peer."; return false; }
             string[] parts = line.Split(':');
             if (parts.Length != 5 || parts[0] != HelloPrefix) { error = "Invalid data received from peer."; return false; }
-            if (parts[1] != Version) { error = $"Peer runs an incompatible version ({parts[1]})."; return false; }
+            string[] profile = parts[2].Split('&');
+            string peerName = SanitizeName(Uri.UnescapeDataString(profile[0]));
+            int avatar = -1;
+            foreach (string extra in profile.Skip(1))
+                if (extra.StartsWith("a=", StringComparison.Ordinal) &&
+                    int.TryParse(extra.Substring(2), NumberStyles.Integer, CultureInfo.InvariantCulture, out int a))
+                    avatar = ValidAvatar(a);
+            error = VersionMismatch(GameVersion, parts[1], peerName);
+            if (error != null) return false;
             if (!int.TryParse(parts[3], NumberStyles.Integer, CultureInfo.InvariantCulture, out int seed)) { error = "Invalid seed from peer."; return false; }
 
             var deck = new List<int>();
@@ -65,9 +88,39 @@ namespace BrawlTCG.Core
             string deckError = DeckRules.ValidateForPlay(deck);
             if (deckError != null) { error = "Peer deck is invalid: " + deckError; return false; }
 
-            hello = new Hello { Name = SanitizeName(Uri.UnescapeDataString(parts[2])), Seed = seed, Deck = deck };
+            hello = new Hello { Name = peerName, Seed = seed, Deck = deck, Avatar = avatar };
             return true;
         }
+
+        /// <summary>
+        /// Null when the two versions can play each other (same major.minor; the patch number may differ), otherwise a
+        /// short message for this player saying who is outdated.
+        /// </summary>
+        public static string VersionMismatch(string mine, string theirs, string peerName)
+        {
+            bool mineOk = TryParseVersion(mine, out int myMajor, out int myMinor);
+            bool theirsOk = TryParseVersion(theirs, out int theirMajor, out int theirMinor);
+            if (mineOk && theirsOk && myMajor == theirMajor && myMinor == theirMinor) return null;
+
+            // An unparsable peer version is a pre-v1.2.0 client, which sent a protocol tag instead.
+            bool peerOlder = !theirsOk || (mineOk && (theirMajor, theirMinor).CompareTo((myMajor, myMinor)) < 0);
+            string theirLabel = theirsOk ? "v" + theirs : "an older version";
+            return peerOlder
+                ? $"{VersionMismatchPrefix}you are on v{mine}, {peerName} is on {theirLabel} (outdated). {peerName} needs to update."
+                : $"{VersionMismatchPrefix}you are on v{mine} (outdated), {peerName} is on v{theirs}. Update your game.";
+        }
+
+        static bool TryParseVersion(string version, out int major, out int minor)
+        {
+            major = minor = 0;
+            string[] p = (version ?? "").Split('.');
+            return p.Length >= 2
+                && int.TryParse(p[0], NumberStyles.None, CultureInfo.InvariantCulture, out major)
+                && int.TryParse(p[1], NumberStyles.None, CultureInfo.InvariantCulture, out minor);
+        }
+
+        /// <summary>The id when it is a legend (a valid avatar), otherwise -1.</summary>
+        public static int ValidAvatar(int id) => id >= 0 && CardCatalogue.Exists(id) && CardCatalogue.Get(id) is LegendCard ? id : -1;
 
         public static string SanitizeName(string name)
         {

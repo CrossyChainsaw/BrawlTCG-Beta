@@ -26,13 +26,15 @@ namespace BrawlTCG.Core
 
             // Stages
             new StageCard(100, "Mustafar", 2, Element.Fire, "Mustafar", startTurnEffect: EC.Mustafar),
-            new StageCard(101, "Fangwild", 3, Element.Nature, "Fangwild", startTurnEffect: EC.Fangwild),
+            new StageCard(101, "Fangwild", 4, Element.Nature, "Fangwild", startTurnEffect: EC.Fangwild),
             new StageCard(102, "Matrix", 1, Element.Cosmic, "Matrix"),
             new StageCard(103, "The Workshop", 2, Element.Fire, "TheWorkshop", startTurnEffect: EC.Workshop_StartTurn, whenPlayedEffect: EC.Workshop_WhenPlayed, whenDiscardedEffect: EC.Workshop_Discarded),
-            new StageCard(104, "Evil Hideout", 3, Element.Fire, "Evil_Hideout", whenPlayedEffect: EC.EvilHideout_WhenPlayed, whileInPlayEffect: EC.EvilHideout_WhileInPlay, whenDiscardedEffect: EC.EvilHideout_WhenDiscarded),
+            new StageCard(104, "Evil Hideout", 3, Element.Wild, "Evil_Hideout", whenPlayedEffect: EC.EvilHideout_WhenPlayed, whileInPlayEffect: EC.EvilHideout_WhileInPlay, whenDiscardedEffect: EC.EvilHideout_WhenDiscarded),
             new StageCard(105, "Space Time", 1, Element.Cosmic, "SpaceTime", startTurnEffect: EC.SpaceTime),
             new StageCard(106, "Atlantis", 3, Element.Arctic, "Atlantis", startTurnEffect: EC.Atlantis_StartTurn, whenPlayedEffect: EC.Atlantis_WhenPlayed, whileInPlayEffect: EC.Atlantis_WhileInPlay, whenDiscardedEffect: EC.Atlantis_WhenDiscarded),
             new StageCard(107, "Silent Galaxy", 5, Element.Cosmic, "SilentGalaxy", startTurnEffect: EC.SilentGalaxy_StartTurn, whenPlayedEffect: EC.SilentGalaxy_WhenPlayed, whileInPlayEffect: EC.SilentGalaxy_WhilePlay, whenDiscardedEffect: EC.SilentGalaxy_WhenDiscarded),
+            new StageCard(108, "Sozin's Comet", 7, Element.Fire, "SozinsComet", whenPlayedEffect: EC.SozinsComet_WhenPlayed, whileInPlayEffect: EC.SozinsComet_WhileInPlay, whenDiscardedEffect: EC.SozinsComet_WhenDiscarded),
+            new StageCard(109, "Full Eclipse", 7, Element.Arctic, "FullEclipse", whenPlayedEffect: EC.FullEclipse_WhenPlayed, whileInPlayEffect: EC.FullEclipse_WhileInPlay, whenDiscardedEffect: EC.FullEclipse_WhenDiscarded),
 
             // Nature legends                                              power hp
             Legend(1000, "Briar Rose", 3, Element.Nature, "BriarRose", 6, 9, Weapon.Spear, Weapon.Greatsword, A(AC.Spear_Stab, AC.Any_BlowAKiss)),
@@ -137,7 +139,7 @@ namespace BrawlTCG.Core
             new BattleCard(508, "Fire Nation", 2, "When Played: Boosts all your fire legend stats +2/+2", Element.Fire, "Avatar_Fire", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 2, healthModifier: 2, targetElements: new[] { Element.Fire }, multiTarget: true),
             new BattleCard(509, "Water Tribe", 2, "When Played: Boosts all your Arctic legend stats +2/+2", Element.Arctic, "Avatar_Water", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 2, healthModifier: 2, targetElements: new[] { Element.Arctic }, multiTarget: true),
             new BattleCard(510, "Krabby Patty", 2, "When Played: Fully heals legend", Element.Arctic, "Avatar_Krabby_Patty", true, false, true, EC.BattleCardHealWhenPlayed, healthModifier: 1000),
-            new BattleCard(511, "Bubble", 1, "When Played: Tap a card", Element.Arctic, "Bubble", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.Bubble),
+            new BattleCard(511, "Bubble", 1, "When Played: Stun a legend", Element.Arctic, "Bubble", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.Bubble),
             new BattleCard(512, "Cosmic Chest", 3, "When Played: Craft 3 random Cosmic cards", Element.Cosmic, "Cosmic_Chest", true, false, true, EC.CosmicChest, targetRequired: false),
             new BattleCard(513, "Wild Chest", 3, "When Played: Craft 3 random Wild cards", Element.Wild, "Wild_Chest", true, false, true, EC.WildChest, targetRequired: false),
             new BattleCard(514, "Dragon's Chest", 3, "When Played: Craft 3 random Fire cards", Element.Fire, "Dragon_Chest", true, false, true, EC.DragonChest, targetRequired: false),
@@ -150,10 +152,12 @@ namespace BrawlTCG.Core
             new BattleCard(521, "Adrenaline", 2, "When Played: Legend can attack again", Element.Nature, "Adrenaline", true, false, true, EC.Adrenaline),
             new BattleCard(522, "Death's Hour", 7, "When Played: Every legend's HP becomes 1", Element.Shadow, "DeathsHour", true, false, false, EC.DeathsHour, targetRequired: false),
             new BattleCard(523, "Cursed Kunai", 3, "When Played: Craft a random Katars legend and a random Katars weapon", Element.Shadow, "CursedKunai", true, false, false, EC.CursedKunai, targetRequired: false),
-            new BattleCard(524, "Ymir's Breath", 5, "When Played: Tap all opposing legends", Element.Arctic, "YmirsBreath", true, false, false, EC.YmirsBreath, targetRequired: false),
+            new BattleCard(524, "Ymir's Breath", 5, "When Played: Stun all opposing legends", Element.Arctic, "YmirsBreath", true, false, false, EC.YmirsBreath, targetRequired: false),
             new BattleCard(525, "Cody Travis", 5, "When Played: A legend's power becomes 0", Element.Wild, "finger", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.The_Finger),
             new BattleCard(526, "Scythe Forever", 3, "When Played: Craft 3 random Scythe weapons", Element.Cosmic, "sandstorm", true, false, false, EC.ScytheForever, targetRequired: false),
             new BattleCard(527, "Did Shaw Win Yet?", 3, "When Played: Craft 3x The Rock", Element.Wild, "shaw", true, false, false, EC.DidShawWinYet, targetRequired: false),
+            new BattleCard(528, "Tombstone", 6, "When Played: Eliminate an opposing legend", Element.Shadow, "Tombstone", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.Tombstone),
+            new BattleCard(529, "A-Oooooo", 6, "When Played: Boosts all your Wild legends +4 Attack", Element.Wild, "AOooooo", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 4, healthModifier: 0, targetElements: new[] { Element.Wild }, multiTarget: true),
         };
 
         static readonly Dictionary<int, Card> ById = BuildIndex();

@@ -18,6 +18,8 @@ namespace BrawlTCG.UnityApp
         public NetSession Net;
         /// <summary>The player controlled on this machine (network games).</summary>
         public int LocalIndex;
+        /// <summary>Avatar (legend card id or -1) per player index; null = initials for everyone.</summary>
+        public int[] Avatars;
         /// <summary>Showcase clip to play (Game is its staged position); null for real matches.</summary>
         public ShowcaseClip Showcase;
         public bool HotSeat => Net == null && Showcase == null;
@@ -44,7 +46,8 @@ namespace BrawlTCG.UnityApp
 
         // Profile
         InputField _name;
-        Text _avatarInitial;
+        Image _avatar;
+        RectTransform _pickerLayer;
 
         // Online panel
         GameObject _onlinePanel;
@@ -86,6 +89,7 @@ namespace BrawlTCG.UnityApp
             BuildOnlinePanel();
             BuildLocalPanel();
             BuildFooter();
+            _pickerLayer = UI.Stretch(UI.Rect("AvatarPickerLayer", transform));
             ShowPanel(Panel.None);
         }
 
@@ -174,9 +178,12 @@ namespace BrawlTCG.UnityApp
         void BuildProfile()
         {
             var chip = Theme.GlassPanel(transform, 1540, 40, 340, 80, 20, "Profile");
-            var avatar = Theme.RoundedPanel(chip.transform, Theme.Gold, 14, 14, 52, 52, 26, "Avatar");
-            avatar.raycastTarget = false;
-            _avatarInitial = Theme.Label(avatar.transform, "?", 28, Theme.Ink, 0, 0, 52, 52, TextAnchor.MiddleCenter, display: true);
+            // Click the avatar to pick a legend portrait (#44).
+            _avatar = Theme.RoundedPanel(chip.transform, Theme.Gold, 14, 14, 52, 52, 26, "Avatar");
+            var pick = _avatar.gameObject.AddComponent<Button>();
+            pick.transition = Selectable.Transition.None;
+            pick.onClick.AddListener(OpenAvatarPicker);
+            _avatar.gameObject.AddComponent<HoverFx>().Init(_avatar, Theme.Gold, new Color32(255, 214, 120, 255), 1.1f);
             Theme.Label(chip.transform, "PLAYER", 13, Theme.TextDim, 82, 12, 200, 18, display: true);
 
             var field = UI.Rect("Name", chip.transform);
@@ -201,9 +208,20 @@ namespace BrawlTCG.UnityApp
 
         void OnProfileNameChanged(string value)
         {
-            string trimmed = (value ?? "").Trim();
-            _avatarInitial.text = trimmed.Length > 0 ? trimmed.Substring(0, 1).ToUpperInvariant() : "?";
+            RefreshAvatar();
             if (_localName1 != null && _localName1.text != value) _localName1.text = value;
+        }
+
+        void RefreshAvatar() => Avatars.Paint(_avatar, 52, Avatars.Saved, _name.text, 28, Theme.Ink);
+
+        void OpenAvatarPicker()
+        {
+            if (_busy) return;
+            Avatars.OpenPicker(_pickerLayer, Avatars.Saved, _name.text, id =>
+            {
+                Avatars.Saved = id;
+                RefreshAvatar();
+            });
         }
 
         // ───────────────────────────── Featured legend showcase ─────────────────────────────
@@ -371,6 +389,9 @@ namespace BrawlTCG.UnityApp
             _codeBox = UI.Place(UI.Rect("CodeBox", t), 48, 414, 300, 80);
             _code = Theme.Field(_codeBox, "Room code", "0000", "", 0, 0, 300, 4);
             _code.contentType = InputField.ContentType.IntegerNumber;
+            // Enter in the room code (or LAN address) field joins right away (#38).
+            _code.onSubmit.AddListener(_ => { if (_mode == OnlineMode.JoinRoom) OnlineCtaClicked(); });
+            _ip.onSubmit.AddListener(_ => { if (_mode == OnlineMode.LanJoin) OnlineCtaClicked(); });
 
             _roomBox = UI.Place(UI.Rect("RoomBox", t), 48, 404, 694, 110);
             Theme.Label(_roomBox, "ROOM CODE  ·  SEND THIS TO YOUR FRIEND", 14, Theme.TextDim, 2, 0, 694, 20, display: true);
@@ -577,7 +598,7 @@ namespace BrawlTCG.UnityApp
             if (p2 == null) return;
             SavePrefs();
             var game = new Game(p1.Value.name, p1.Value.deck, p2.Value.name, p2.Value.deck, new Random().Next());
-            _app.StartMatch(new MatchSetup { Game = game, Net = null, LocalIndex = 0 });
+            _app.StartMatch(new MatchSetup { Game = game, Net = null, LocalIndex = 0, Avatars = new[] { Avatars.Saved, Avatars.None } });
         }
 
         // ───────────────────────────── Networking ─────────────────────────────
@@ -603,6 +624,12 @@ namespace BrawlTCG.UnityApp
                 if (this != null)
                 {
                     if (_cancelled || e is OperationCanceledException) SetStatus("Not connected");
+                    else if (e.Message.StartsWith(Protocol.VersionMismatchPrefix, StringComparison.Ordinal))
+                    {
+                        // Shown as is (no "Could not join:" prefix) and as a toast, so it is hard to miss (#34).
+                        Error(e.Message);
+                        _app.Toast(e.Message, 8);
+                    }
                     else
                     {
                         Debug.LogException(e);
@@ -700,21 +727,21 @@ namespace BrawlTCG.UnityApp
         async Task HandshakeAsHost(NetSession session, (string name, List<int> deck) me)
         {
             int mySeed = new Random().Next();
-            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck));
+            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck, Avatars.Saved));
             Protocol.Hello peer = await ReadHello(session);
             CheckAlive();
             var game = new Game(me.name, me.deck, peer.Name, peer.Deck, mySeed ^ peer.Seed);
-            Launch(game, session, 0);
+            Launch(game, session, 0, new[] { Avatars.Saved, peer.Avatar });
         }
 
         async Task HandshakeAsGuest(NetSession session, (string name, List<int> deck) me)
         {
             int mySeed = new Random().Next();
-            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck));
+            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck, Avatars.Saved));
             Protocol.Hello host = await ReadHello(session);
             CheckAlive();
             var game = new Game(host.Name, host.Deck, me.name, me.deck, host.Seed ^ mySeed);
-            Launch(game, session, 1);
+            Launch(game, session, 1, new[] { host.Avatar, Avatars.Saved });
         }
 
         static async Task<Protocol.Hello> ReadHello(NetSession session, int timeoutMs = 20000)
@@ -725,10 +752,10 @@ namespace BrawlTCG.UnityApp
             return hello;
         }
 
-        void Launch(Game game, NetSession session, int localIndex)
+        void Launch(Game game, NetSession session, int localIndex, int[] avatars)
         {
             _pending = null; // ownership moves to the match
-            _app.StartMatch(new MatchSetup { Game = game, Net = session, LocalIndex = localIndex });
+            _app.StartMatch(new MatchSetup { Game = game, Net = session, LocalIndex = localIndex, Avatars = avatars });
         }
 
         void CancelConnect()

@@ -177,8 +177,8 @@ namespace BrawlTCG.Core
         public List<Card> StackedCards { get; private set; } = new List<Card>();
         public IReadOnlyList<Attack> Attacks => _attacks;
 
-        /// <summary>Tapped legends are shown face down, cannot attack and cannot be targeted by attacks.</summary>
-        public bool IsTapped { get; internal set; }
+        /// <summary>Stunned legends cannot attack and their abilities are off. They can still be attacked and have cards played on them.</summary>
+        public bool IsStunned { get; internal set; }
         public bool IsBurned { get; internal set; }
         public bool CanAttack { get; internal set; } = true;
         public bool AttackedThisTurn { get; internal set; }
@@ -195,8 +195,8 @@ namespace BrawlTCG.Core
         List<StatModifier> _modifiers = new List<StatModifier>(); // replaced (not cleared) on reset: clones must not share it
         /// <summary>Net ATK / max-HP changes per source, oldest first. Changes that cancel out are dropped.</summary>
         public IReadOnlyList<StatModifier> Modifiers => _modifiers;
-        /// <summary>What tapped / burned this legend most recently (only meaningful while it is tapped / burned).</summary>
-        public string TappedBy { get; private set; }
+        /// <summary>What stunned / burned this legend most recently (only meaningful while it is stunned / burned).</summary>
+        public string StunnedBy { get; private set; }
         public string BurnedBy { get; private set; }
 
         public override CardType Type => CardType.Legend;
@@ -223,13 +223,13 @@ namespace BrawlTCG.Core
             CurrentHP = _baseHealth;
             Power = _basePower;
             StackedCards = new List<Card>();
-            IsTapped = false;
+            IsStunned = false;
             IsBurned = false;
             CanAttack = true;
             AttackedThisTurn = false;
             OnPlayingField = false;
             _modifiers = new List<StatModifier>();
-            TappedBy = null;
+            StunnedBy = null;
             BurnedBy = null;
         }
 
@@ -297,10 +297,10 @@ namespace BrawlTCG.Core
                 LoseHealth(BurnDamage);
         }
 
-        public void TapOut()
+        public void Stun()
         {
-            IsTapped = true;
-            TappedBy = EffectContext.Current;
+            IsStunned = true;
+            StunnedBy = EffectContext.Current;
         }
 
         /// <summary>Removes up to <paramref name="amount"/> weapon cards of the given type and returns them.</summary>

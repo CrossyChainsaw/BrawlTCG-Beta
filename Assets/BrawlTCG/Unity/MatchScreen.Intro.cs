@@ -58,7 +58,7 @@ namespace BrawlTCG.UnityApp
             StartCoroutine(VersusRoutine(group, leftSide, rightSide, vs, firstGroup, () => finished, Finish));
         }
 
-        /// <summary>One player's half: a tinted band, a big avatar with their initial, the name and their role.</summary>
+        /// <summary>One player's half: a tinted band, a big avatar (portrait or initial), the name and their role.</summary>
         RectTransform VersusSide(RectTransform dim, Player p, bool isLeft)
         {
             Color c = isLeft ? LeftColor : RightColor;
@@ -80,8 +80,7 @@ namespace BrawlTCG.UnityApp
             glow.raycastTarget = false;
             var avatar = Theme.RoundedPanel(side, c, cx - 90, 380, 180, 180, 90, "Avatar");
             avatar.raycastTarget = false;
-            string initial = p.Name.Length > 0 ? p.Name.Substring(0, 1).ToUpperInvariant() : "?";
-            Theme.Label(avatar.transform, initial, 96, Theme.Ink, 0, 0, 180, 180, TextAnchor.MiddleCenter, display: true).raycastTarget = false;
+            Avatars.Paint(avatar, 180, _avatars[p.Index], p.Name, 96, Theme.Ink);
 
             var name = Theme.Label(side, p.Name.ToUpperInvariant(), 56, Theme.Text, cx - 420, 580, 840, 72, TextAnchor.MiddleCenter, display: true);
             name.resizeTextForBestFit = true;

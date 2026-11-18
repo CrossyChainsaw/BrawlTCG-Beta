@@ -60,15 +60,15 @@ namespace BrawlTCG.Core
         public static readonly Attack Blaster_Shot = new Attack("Shot", 0, Weapon.Blasters, 1, Default);
         public static readonly Attack Blaster_DoubleShot = new Attack("Double Shot", 5, Weapon.Blasters, 2, Default);
 
-        // ───────────── Tap out ─────────────
+        // ───────────── Stun ─────────────
         public static readonly Attack Any_BlowAKiss = new Attack("Blow a Kiss", Status, Weapon.Any, 2,
-            (a, t, atk, g) => EffectCatalogue.TapLegendCard(t),
+            (a, t, atk, g) => EffectCatalogue.StunLegendCard(t),
             kind: AttackKind.Hex);
         public static readonly Attack Any_Freeze = new Attack("Freeze", 0, Weapon.Any, 1,
             (a, t, atk, g) =>
             {
                 DefaultAttack(a, t, atk);
-                EffectCatalogue.TapLegendCard(t);
+                EffectCatalogue.StunLegendCard(t);
             });
 
         // ───────────── Insta effects ─────────────

@@ -45,6 +45,7 @@ namespace BrawlTCG.UnityApp
         Game _game;
         NetSession _net;
         int _localIndex;
+        int[] _avatars;
         bool _hotSeat;
 
         /// <summary>Player shown at the bottom (whose hand is visible).</summary>
@@ -52,7 +53,7 @@ namespace BrawlTCG.UnityApp
         bool _handoffPending;
         bool _ended;
 
-        RectTransform _board, _cards, _detail, _drag, _overlay;
+        RectTransform _board, _cards, _detail, _pileView, _drag, _overlay;
         readonly Dictionary<(BoardZone zone, int player), RectTransform> _zones = new Dictionary<(BoardZone, int), RectTransform>();
         readonly Dictionary<(BoardZone zone, int player), Image> _zoneOutlines = new Dictionary<(BoardZone, int), Image>();
         readonly List<CardView> _legendViews = new List<CardView>();
@@ -74,6 +75,7 @@ namespace BrawlTCG.UnityApp
             _net = setup.Net;
             _hotSeat = setup.HotSeat;
             _localIndex = setup.LocalIndex;
+            _avatars = setup.Avatars ?? new[] { Avatars.None, Avatars.None };
 
             BuildBackdrop();
             var background = UI.FullPanel(transform, new Color(0, 0, 0, 0), "ClickCatcher");
@@ -84,6 +86,7 @@ namespace BrawlTCG.UnityApp
             _top = UI.Stretch(UI.Rect("FxTop", transform));
             _shaker = gameObject.AddComponent<Shaker>();
             _detail = UI.Stretch(UI.Rect("Detail", transform));
+            _pileView = UI.Stretch(UI.Rect("PileView", transform));
             _drag = UI.Stretch(UI.Rect("Drag", transform));
             _overlay = UI.Stretch(UI.Rect("Overlay", transform));
             _menu = UI.Stretch(UI.Rect("OptionsMenu", transform));
@@ -181,7 +184,7 @@ namespace BrawlTCG.UnityApp
 
             if (InShowcase) return; // scripted: no keyboard either
             UpdateTimers();
-            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !OptionsOpen && CanAct)
+            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !PileViewOpen && !OptionsOpen && CanAct && !TurnIntroPlaying)
                 Submit(GameCommand.EndTurn(_game.ActiveIndex));
 
             // Esc steps back: closes the options menu, cancels targeting, closes the card detail, or opens the options.
@@ -191,6 +194,7 @@ namespace BrawlTCG.UnityApp
             if (esc || right)
             {
                 if (OptionsOpen) { if (esc) CloseOptions(); }
+                else if (PileViewOpen) CloseDiscardPile();
                 else if (Targeting) { CancelTargeting(); Refresh(); }
                 else if (_detailCard != null) CloseDetail();
                 else if (esc) OpenOptions();
@@ -261,9 +265,12 @@ namespace BrawlTCG.UnityApp
             return true;
         }
 
+        /// <summary>The turn banner is still on screen: ending the turn is blocked so it cannot be skipped by accident (#39).</summary>
+        bool TurnIntroPlaying => _turnBanner != null;
+
         void EndTurnClicked()
         {
-            if (!CanAct) return;
+            if (!CanAct || TurnIntroPlaying) return;
             Submit(GameCommand.EndTurn(_game.ActiveIndex));
         }
 
@@ -290,6 +297,7 @@ namespace BrawlTCG.UnityApp
             DrawTopHand();
             DrawBottomHand();
             DrawCorner();
+            if (PileViewOpen) ShowDiscardPile(_pileViewPlayer); // keep an open discard pile up to date
         }
 
         // ── Player panels ──
@@ -310,8 +318,7 @@ namespace BrawlTCG.UnityApp
 
             // Avatar
             var avatar = Quiet(Theme.RoundedPanel(t, active ? Theme.Gold : new Color32(70, 80, 120, 255), 16, 16, 62, 62, 31, "Avatar"));
-            string initial = p.Name.Length > 0 ? p.Name.Substring(0, 1).ToUpperInvariant() : "?";
-            Theme.Label(avatar.transform, initial, 30, active ? Theme.Ink : Theme.Text, 0, 0, 62, 62, TextAnchor.MiddleCenter, display: true);
+            Avatars.Paint(avatar, 62, _avatars[p.Index], p.Name, 30, active ? Theme.Ink : Theme.Text);
 
             var name = Theme.Label(t, p.Name, 26, Theme.Text, 92, 12, 220, 32, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
@@ -415,18 +422,18 @@ namespace BrawlTCG.UnityApp
                 int shown = Mathf.Min(legend.StackedCards.Count, 4);
                 // Darkened: used up this turn, or (your side) waiting for the opponent's turn to end.
                 bool idle = bottom && WaitingForOpponent;
-                bool spent = idle || legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsTapped;
+                bool spent = idle || legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsStunned;
                 for (int k = shown - 1; k >= 0; k--)
                 {
                     CardView stacked = AddCard(legend.StackedCards[k], true, x, y - 14 * (k + 1), p, BoardZone.Stacked, k);
                     if (spent) stacked.SetDimmed(true); // darkened together with their legend
                 }
 
-                CardView view = AddCard(legend, true, x, y, p, BoardZone.PlayingField, slot, tapped: legend.IsTapped);
+                CardView view = AddCard(legend, true, x, y, p, BoardZone.PlayingField, slot, stunned: legend.IsStunned);
                 _legendViews.Add(view);
 
                 if (idle) view.SetDimmed(true);
-                if (legend.IsTapped) { /* ribbon is painted on the card */ }
+                if (legend.IsStunned) { /* ribbon is painted on the card */ }
                 else if (legend.AttackedThisTurn && p == _game.ActivePlayer)
                 {
                     // Used up for this turn: darkened so it reads at a glance (no label needed).
@@ -680,7 +687,7 @@ namespace BrawlTCG.UnityApp
                 {
                     // Affordable, but it can't be played right now: a legend while your field is full, a weapon no
                     // legend of yours can carry, a battle card with no legend on the side it targets (yours for
-                    // heals/boosts, the enemy's for damage/taps). The board is redrawn after every move, so it
+                    // heals/boosts, the enemy's for damage/stuns). The board is redrawn after every move, so it
                     // lights up again as soon as it becomes playable.
                     v.SetDimmed(true);
                 }
@@ -736,9 +743,9 @@ namespace BrawlTCG.UnityApp
 
         // ───────────────────────────── Cards ─────────────────────────────
 
-        CardView AddCard(Card card, bool faceUp, float x, float y, Player owner, BoardZone zone, int index, bool tapped = false, float scale = 1f)
+        CardView AddCard(Card card, bool faceUp, float x, float y, Player owner, BoardZone zone, int index, bool stunned = false, float scale = 1f)
         {
-            CardView v = CardView.Create(_cards, card, faceUp, x, y, scale, tapped);
+            CardView v = CardView.Create(_cards, card, faceUp, x, y, scale, stunned);
             v.PlayerIndex = owner?.Index ?? -1;
             v.Zone = zone;
             v.Index = index;
@@ -787,12 +794,79 @@ namespace BrawlTCG.UnityApp
                 return;
             }
             if (!view.FaceUp) return;
+            if (view.Zone == BoardZone.DiscardPile) { ShowDiscardPile(view.PlayerIndex); return; }
             OpenDetail(view.Card);
+        }
+
+        // ── Discard pile viewer ──
+
+        int _pileViewPlayer = -1;
+        bool PileViewOpen => _pileViewPlayer >= 0;
+
+        /// <summary>Every card in a player's discard pile, newest first. Hover for the full card, click to open its details.</summary>
+        void ShowDiscardPile(int playerIndex)
+        {
+            Player p = _game.Players[playerIndex];
+            UI.Clear(_pileView);
+            if (p.DiscardPile.Count == 0) { _pileViewPlayer = -1; return; }
+            _pileViewPlayer = playerIndex;
+
+            var dim = UI.FullPanel(_pileView, new Color(Theme.Night.r, Theme.Night.g, Theme.Night.b, 0.72f), "Dim");
+            UI.Clicks(dim.gameObject, _ => CloseDiscardPile());
+
+            const float W = 1060, H = 780, X = 120, Y = (1080 - H) / 2, Scale = 0.8f, Gap = 18;
+            var box = Theme.GlassPanel(dim.rectTransform, X, Y, W, H, 26, "DiscardPile");
+            box.color = new Color32(11, 14, 34, 255);
+            UI.Clicks(box.gameObject, _ => { });
+            Transform t = box.transform;
+            string owner = _hotSeat || InShowcase || !IsLocallyControlled(p.Index) ? p.Name.ToUpperInvariant() + "'S" : "YOUR";
+            Theme.Label(t, $"{owner} DISCARD PILE", 36, Theme.Text, 36, 24, W - 140, 50, display: true);
+            Theme.Label(t, $"{p.DiscardPile.Count} CARD{(p.DiscardPile.Count == 1 ? "" : "S")}  ·  NEWEST FIRST  ·  HOVER TO ENLARGE, CLICK FOR DETAILS",
+                15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            var close = Theme.Ghost(t, "×", W - 70, 26, 44, 44, CloseDiscardPile, 30);
+            close.GetComponentInChildren<Text>().font = Theme.Body; // the display font has no multiplication sign
+
+            var area = UI.Place(UI.Rect("Grid", t), 20, 112, W - 40, H - 132);
+            var scroll = area.gameObject.AddComponent<ScrollRect>();
+            scroll.horizontal = false;
+            scroll.scrollSensitivity = 60;
+            scroll.movementType = ScrollRect.MovementType.Clamped;
+            var viewport = UI.Stretch(UI.Rect("Viewport", area));
+            viewport.gameObject.AddComponent<RectMask2D>();
+            viewport.gameObject.AddComponent<Image>().color = new Color(0, 0, 0, 0);
+            var content = UI.Rect("Content", viewport);
+            content.anchorMin = new Vector2(0, 1);
+            content.anchorMax = new Vector2(1, 1);
+            content.pivot = new Vector2(0.5f, 1);
+            content.offsetMin = content.offsetMax = Vector2.zero;
+            var grid = content.gameObject.AddComponent<GridLayoutGroup>();
+            grid.cellSize = new Vector2(CardView.W * Scale, CardView.H * Scale);
+            grid.spacing = new Vector2(Gap, Gap);
+            grid.padding = new RectOffset(16, 16, 8, 16);
+            content.gameObject.AddComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            scroll.viewport = viewport;
+            scroll.content = content;
+
+            // The full-size card appears right of the panel.
+            var previewAt = new Vector2(X + W + 24, (1080 - CardView.H * 1.9f) / 2);
+            for (int i = p.DiscardPile.Count - 1; i >= 0; i--)
+            {
+                Card card = p.DiscardPile[i];
+                var cell = UI.Rect(card.Name, content);
+                CardView thumb = CardPeek.Create(cell, card.Id, 0, 0, Scale, _drag, previewAt);
+                UI.Clicks(thumb.gameObject, _ => { CloseDiscardPile(); OpenDetail(card); });
+            }
+        }
+
+        void CloseDiscardPile()
+        {
+            _pileViewPlayer = -1;
+            UI.Clear(_pileView); // the thumbnails remove their own full-size previews
         }
 
         bool IsValidAttackTarget(Player side, LegendCard legend)
         {
-            if (!Targeting || legend.IsTapped) return false;
+            if (!Targeting) return false;
             Player wanted = _targetOwnSide ? _targetAttacker.Owner : _game.GetOpponent(_targetAttacker.Owner);
             return side == wanted;
         }
@@ -977,7 +1051,7 @@ namespace BrawlTCG.UnityApp
             var close = Theme.Ghost(t, "×", W - 62, 18, 44, 44, CloseDetail, 30);
             close.GetComponentInChildren<Text>().font = Theme.Body;
 
-            CardView big = CardView.Create(t, card, true, 24, 24, 1.9f, card is LegendCard l0 && l0.IsTapped);
+            CardView big = CardView.Create(t, card, true, 24, 24, 1.9f, card is LegendCard l0 && l0.IsStunned);
             foreach (Graphic g in big.GetComponentsInChildren<Graphic>()) g.raycastTarget = false;
 
             // Info column
@@ -1019,9 +1093,9 @@ namespace BrawlTCG.UnityApp
                 string effects = TriggerIcons.SplitCardText(legend).abilities;
                 if (!string.IsNullOrWhiteSpace(effects))
                 {
-                    // A tapped legend's abilities are turned off (Game skips its triggers): shown dimmed.
-                    bool off = legend.IsTapped && legend.OnPlayingField;
-                    Theme.Label(t, off ? "ABILITIES  ·  OFF WHILE TAPPED" : "ABILITIES", 16, off ? Theme.TextDim : Theme.Gold, 24, y + 4, 400, 22, display: true);
+                    // A stunned legend's abilities are turned off (Game skips its triggers): shown dimmed.
+                    bool off = legend.IsStunned && legend.OnPlayingField;
+                    Theme.Label(t, off ? "ABILITIES  ·  OFF WHILE STUNNED" : "ABILITIES", 16, off ? Theme.TextDim : Theme.Gold, 24, y + 4, 400, 22, display: true);
                     int[] mentioned = CardReferences.For(card);
                     float textW = W - 48;
                     if (mentioned != null)
@@ -1100,7 +1174,7 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>
-        /// Everything currently affecting a legend, each with what caused it: statuses (Silent Galaxy, tapped, burned,
+        /// Everything currently affecting a legend, each with what caused it: statuses (Silent Galaxy, stunned, burned,
         /// already attacked) and ATK / max-HP changes per source. Healing is not a change to a stat, so it is not listed.
         /// </summary>
         List<EffectRow> LegendEffects(LegendCard legend)
@@ -1110,10 +1184,10 @@ namespace BrawlTCG.UnityApp
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.NoStrikes,
                     Line(DebuffHex, "Can't deal damage", "Silent Galaxy", "only Cosmic legends can deal damage"),
                     Line(DebuffHex, "Can't deal damage", "Silent Galaxy", null)));
-            if (legend.IsTapped)
-                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Tapped,
-                    Line(StatusHex, "Tapped", legend.TappedBy, "skips its next attack, abilities off"),
-                    Line(StatusHex, "Tapped", legend.TappedBy, null)));
+            if (legend.IsStunned)
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Stunned,
+                    Line(StatusHex, "Stunned", legend.StunnedBy, "skips its next attack, abilities off"),
+                    Line(StatusHex, "Stunned", legend.StunnedBy, null)));
             if (legend.IsBurned)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Burned,
                     Line(FireHex, "Burned", legend.BurnedBy, "-1 HP at the start of each of its turns"),
@@ -1367,9 +1441,9 @@ namespace BrawlTCG.UnityApp
             if (mode == AttackMode.OwnLegend || mode == AttackMode.EnemyLegend)
             {
                 Player side = mode == AttackMode.OwnLegend ? legend.Owner : _game.GetOpponent(legend.Owner);
-                if (!side.PlayingField.Any(l => !l.IsTapped))
+                if (side.PlayingField.Count == 0)
                 {
-                    _app.Toast("There is no untapped legend to target.");
+                    _app.Toast("There is no legend to target.");
                     return;
                 }
                 _targetAttacker = legend;

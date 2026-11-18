@@ -587,6 +587,9 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Turn intro, targeting line, game over ─────────────
 
+        /// <summary>The current turn's banner while it is on screen (Unity-null once it is gone).</summary>
+        TurnBanner _turnBanner;
+
         /// <summary>Turn banner; with <paramref name="deal"/> the visible hand is dealt from the deck.</summary>
         void TurnIntro(bool deal)
         {
@@ -594,7 +597,7 @@ namespace BrawlTCG.UnityApp
             Player active = _game.ActivePlayer;
             bool mine = IsLocallyControlled(active.Index);
             string title = _hotSeat || InShowcase ? $"{active.Name.ToUpperInvariant()}'S TURN" : mine ? "YOUR TURN" : $"{active.Name.ToUpperInvariant()}'S TURN";
-            Fx.Banner(_top, title, $"TURN {_game.TurnNumber}", mine ? Theme.Gold : new Color32(140, 170, 255, 255));
+            _turnBanner = Fx.Banner(_top, title, $"TURN {_game.TurnNumber}", mine ? Theme.Gold : new Color32(140, 170, 255, 255));
             Sfx.Play("turn", mine ? 0.8f : 0.5f);
             if (!deal) return;
 

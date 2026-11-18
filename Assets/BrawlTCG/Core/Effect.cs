@@ -29,7 +29,7 @@ namespace BrawlTCG.Core
 
     /// <summary>
     /// Which card (or attack) is currently changing the game, so a legend can remember where its buffs, debuffs,
-    /// taps and burns came from. Bookkeeping only: it never changes what an effect does.
+    /// stuns and burns came from. Bookkeeping only: it never changes what an effect does.
     /// </summary>
     internal static class EffectContext
     {

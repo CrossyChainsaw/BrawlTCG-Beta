@@ -7,18 +7,25 @@ namespace BrawlTCG.Core
     public static class EffectCatalogue
     {
         // ───────────── Start turn (stages) ─────────────
-        // Stage start-turn effects receive the ACTIVE player's legends as target, so each player's legends are
-        // affected once per round (at the start of their own turn).
+        // Mustafar, Fangwild and Atlantis hit every legend on the board (both players) at the start of every turn,
+        // so each legend is affected twice per round. Stage start-turn effects are handed only the active player's
+        // legends as target, so these ignore it and take all legends from the game.
 
-        const int MustafarDamage = 2;
+        const int MustafarDamage = 1;
         public static readonly Effect Mustafar = new Effect(
             $"All non-Fire Legends lose {MustafarDamage} health.",
-            (target, card, game, played) => StartTurnDamage(target, MustafarDamage, Element.Fire));
+            (target, card, game, played) => StartTurnDamage(game, MustafarDamage, Element.Fire));
 
-        const int FangwildHeal = 2;
+        // #43: grows Magic and Nature legends instead of healing them.
+        const int FangwildMaxHealth = 2;
         public static readonly Effect Fangwild = new Effect(
-            $"All Magic and Nature Legends heal {FangwildHeal}.",
-            (target, card, game, played) => StartTurnHeal(target, FangwildHeal, Element.Nature, Element.Magic));
+            $"All Magic and Nature Legends gain +{FangwildMaxHealth} max health.",
+            (target, card, game, played) =>
+            {
+                foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                    if (legend.Element == Element.Magic || legend.Element == Element.Nature)
+                        legend.ModifyStat(Stat.Health, FangwildMaxHealth); // raises max and current HP
+            });
 
         public static readonly Effect Workshop_StartTurn = new Effect(
             "Instead of drawing a card, craft a random card",
@@ -92,14 +99,15 @@ namespace BrawlTCG.Core
 
         // ───────────── Evil Hideout ─────────────
 
-        static readonly Element[] EvilHideoutElements = { Element.Fire, Element.Wild, Element.Shadow };
+        // #49: Fire legends no longer benefit (Fire already has Mustafar and The Workshop).
+        static readonly Element[] EvilHideoutElements = { Element.Wild, Element.Shadow };
 
         public static readonly Effect EvilHideout_WhenPlayed = new Effect(
             "N/A",
             (target, card, game, played) => ModifyStatOfAllLegends(game, EvilHideoutElements, Stat.Power, 3));
 
         public static readonly Effect EvilHideout_WhileInPlay = new Effect(
-            "Shadow, Wild and Fire Legends get +3 Power",
+            "Shadow and Wild Legends get +3 Power",
             (target, card, game, played) =>
             {
                 if (target is LegendCard legend && EvilHideoutElements.Contains(legend.Element))
@@ -168,7 +176,54 @@ namespace BrawlTCG.Core
 
         public static readonly Effect Atlantis_StartTurn = new Effect(
             $"All non-Arctic Legends lose {AtlantisDamage} health.",
-            (target, card, game, played) => StartTurnDamage(target, AtlantisDamage, Element.Arctic));
+            (target, card, game, played) => StartTurnDamage(game, AtlantisDamage, Element.Arctic));
+
+        // ───────────── Sozin's Comet (#50) and Full Eclipse (#51) ─────────────
+        // While in play, every legend of the stage's element (both players') gets +5/+5. When the stage leaves, the
+        // bonus is taken back, but a legend never dies from losing it: it keeps at least 1 HP.
+
+        const int ElementStageBonus = 5;
+
+        static Effect ElementStageWhenPlayed(Element element) => new Effect(
+            "N/A",
+            (target, card, game, played) =>
+            {
+                ModifyStatOfAllLegends(game, new[] { element }, Stat.Power, ElementStageBonus);
+                ModifyStatOfAllLegends(game, new[] { element }, Stat.Health, ElementStageBonus);
+            });
+
+        static Effect ElementStageWhileInPlay(Element element) => new Effect(
+            $"{element} Legends get +{ElementStageBonus}/+{ElementStageBonus}",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend && legend.Element == element)
+                {
+                    legend.ModifyStat(Stat.Power, ElementStageBonus);
+                    legend.ModifyStat(Stat.Health, ElementStageBonus);
+                }
+            });
+
+        static Effect ElementStageWhenDiscarded(Element element) => new Effect(
+            "N/A",
+            (target, card, game, played) =>
+            {
+                foreach (Player p in game.Players)
+                    foreach (LegendCard legend in p.PlayingField)
+                    {
+                        if (legend.Element != element) continue;
+                        legend.ModifyStat(Stat.Power, -ElementStageBonus);
+                        legend.ModifyStat(Stat.Health, -ElementStageBonus);
+                        if (legend.CurrentHP < 1) legend.GainHealth(1 - legend.CurrentHP);
+                    }
+            });
+
+        public static readonly Effect SozinsComet_WhenPlayed = ElementStageWhenPlayed(Element.Fire);
+        public static readonly Effect SozinsComet_WhileInPlay = ElementStageWhileInPlay(Element.Fire);
+        public static readonly Effect SozinsComet_WhenDiscarded = ElementStageWhenDiscarded(Element.Fire);
+
+        public static readonly Effect FullEclipse_WhenPlayed = ElementStageWhenPlayed(Element.Arctic);
+        public static readonly Effect FullEclipse_WhileInPlay = ElementStageWhileInPlay(Element.Arctic);
+        public static readonly Effect FullEclipse_WhenDiscarded = ElementStageWhenDiscarded(Element.Arctic);
 
         // ───────────── Legend when-played ─────────────
 
@@ -240,8 +295,8 @@ namespace BrawlTCG.Core
             (target, card, game, played) => game.GenerateRandomCards(ChestCards));
 
         public static readonly Effect Bubble = new Effect(
-            "Tap legend Card",
-            (target, card, game, played) => TapLegendCard(target));
+            "Stun a legend",
+            (target, card, game, played) => StunLegendCard(target));
 
         public static readonly Effect DragonChest = ElementChest(Element.Fire);
         public static readonly Effect WildChest = ElementChest(Element.Wild);
@@ -292,11 +347,20 @@ namespace BrawlTCG.Core
             });
 
         public static readonly Effect YmirsBreath = new Effect(
-            "Tap all opposing legends",
+            "Stun all opposing legends",
             (target, card, game, played) =>
             {
                 foreach (LegendCard legend in game.InactivePlayer.PlayingField)
-                    legend.TapOut();
+                    legend.Stun();
+            });
+
+        /// <summary>Tombstone (#46): the targeted opposing legend is eliminated, whatever its HP.</summary>
+        public static readonly Effect Tombstone = new Effect(
+            "Eliminate an opposing Legend",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend)
+                    legend.LoseHealth(Math.Max(1, legend.CurrentHP));
             });
 
         public static readonly Effect The_Finger = new Effect(
@@ -321,26 +385,16 @@ namespace BrawlTCG.Core
 
         // ───────────── Shared helpers ─────────────
 
-        public static void TapLegendCard(object target)
+        public static void StunLegendCard(object target)
         {
             if (target is LegendCard legend)
-                legend.TapOut();
+                legend.Stun();
         }
 
-        static void StartTurnHeal(object target, int heal, params Element[] targetElements)
+        /// <summary>Damages every legend on the board (both players) except those of the immune elements.</summary>
+        static void StartTurnDamage(Game game, int damage, params Element[] immuneElements)
         {
-            if (!(target is IEnumerable<LegendCard> legends)) return;
-            foreach (LegendCard legend in legends)
-            {
-                if (targetElements.Contains(legend.Element))
-                    legend.GainHealth(heal);
-            }
-        }
-
-        static void StartTurnDamage(object target, int damage, params Element[] immuneElements)
-        {
-            if (!(target is IEnumerable<LegendCard> legends)) return;
-            foreach (LegendCard legend in legends)
+            foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
             {
                 if (!immuneElements.Contains(legend.Element))
                     legend.LoseHealth(damage);
