@@ -45,6 +45,7 @@ namespace BrawlTCG.UnityApp
         Game _game;
         NetSession _net;
         int _localIndex;
+        int[] _avatars;
         bool _hotSeat;
 
         /// <summary>Player shown at the bottom (whose hand is visible).</summary>
@@ -74,6 +75,7 @@ namespace BrawlTCG.UnityApp
             _net = setup.Net;
             _hotSeat = setup.HotSeat;
             _localIndex = setup.LocalIndex;
+            _avatars = setup.Avatars ?? new[] { Avatars.None, Avatars.None };
 
             BuildBackdrop();
             var background = UI.FullPanel(transform, new Color(0, 0, 0, 0), "ClickCatcher");
@@ -181,7 +183,7 @@ namespace BrawlTCG.UnityApp
 
             if (InShowcase) return; // scripted: no keyboard either
             UpdateTimers();
-            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !OptionsOpen && CanAct)
+            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !OptionsOpen && CanAct && !TurnIntroPlaying)
                 Submit(GameCommand.EndTurn(_game.ActiveIndex));
 
             // Esc steps back: closes the options menu, cancels targeting, closes the card detail, or opens the options.
@@ -261,9 +263,12 @@ namespace BrawlTCG.UnityApp
             return true;
         }
 
+        /// <summary>The turn banner is still on screen: ending the turn is blocked so it cannot be skipped by accident (#39).</summary>
+        bool TurnIntroPlaying => _turnBanner != null;
+
         void EndTurnClicked()
         {
-            if (!CanAct) return;
+            if (!CanAct || TurnIntroPlaying) return;
             Submit(GameCommand.EndTurn(_game.ActiveIndex));
         }
 
@@ -310,8 +315,7 @@ namespace BrawlTCG.UnityApp
 
             // Avatar
             var avatar = Quiet(Theme.RoundedPanel(t, active ? Theme.Gold : new Color32(70, 80, 120, 255), 16, 16, 62, 62, 31, "Avatar"));
-            string initial = p.Name.Length > 0 ? p.Name.Substring(0, 1).ToUpperInvariant() : "?";
-            Theme.Label(avatar.transform, initial, 30, active ? Theme.Ink : Theme.Text, 0, 0, 62, 62, TextAnchor.MiddleCenter, display: true);
+            Avatars.Paint(avatar, 62, _avatars[p.Index], p.Name, 30, active ? Theme.Ink : Theme.Text);
 
             var name = Theme.Label(t, p.Name, 26, Theme.Text, 92, 12, 220, 32, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;

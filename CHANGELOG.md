@@ -1,5 +1,46 @@
 # Changelog
 
+## v1.2.0 Beta
+
+Four new cards, three reworks, avatars and a batch of quality-of-life fixes. **v1.2.0 can't play online with v1.1.0 or older.** From now on, versions with the same major.minor number (1.2.x) can always play each other, and a mismatch tells you who needs to update.
+
+Closes issues **#34**, **#36**, **#38**, **#39**, **#40**, **#41**, **#43**, **#44**, **#45**, **#46**, **#49**, **#50** and **#51**.
+
+### New cards
+
+- **Sozin's Comet** (Stage, Fire, 7) (#50). While in play, Fire legends get +5/+5.
+- **Full Eclipse** (Stage, Arctic, 7) (#51). While in play, Arctic legends get +5/+5.
+- **Tombstone** (Battle, Shadow, 6) (#46). Eliminates an opposing legend.
+- **A-Oooooo** (Battle, Wild, 6) (#45). All your Wild legends get +4 Attack.
+
+When Sozin's Comet or Full Eclipse leaves play, the +5/+5 goes away again, but a legend never dies from it: it keeps at least 1 HP.
+
+### Card reworks
+
+- **Fangwild** (#43). At the start of each turn, that player's legends gain +2 max health (and +2 HP). It used to heal Magic and Nature legends by 2.
+- **Evil Hideout** (#49). Now a Wild card, and only Shadow and Wild legends get the +3 Power. Fire legends no longer benefit.
+
+### Online
+
+- **Version check** (#34). When you connect, both games compare versions. If the major or minor number differs, you see who is outdated, for example "Version mismatch: you are on v1.2.0, Bob is on v1.1.0 (outdated). Bob needs to update."
+- **Press Enter to join** (#38) after typing a room code or LAN address.
+
+### Profile
+
+- **Avatars** (#44). Click the circle next to your name on the main menu to pick a legend portrait instead of your initial. Your opponent sees it on the match screen and in the versus intro.
+
+### Match screen
+
+- **No accidental end turn** (#39). END TURN and Space don't work while the YOUR TURN banner is still showing.
+
+### Deck builder
+
+- **Reopens on the deck you last had open** (#40).
+- **Mentioned cards** (#36). A card that names other cards (Witch Party, Did Shaw Win Yet?, Ulgrim...) shows them under MENTIONED CARDS, and attacks that craft a card show a small thumbnail. Hover to see the full card, click to select it.
+- **Equal buttons** (#41). NEW DECK, RENAME, SAVE and DELETE are now the same size in a 2×2 grid. The stray rectangles on top of gold buttons are gone.
+
+---
+
 ## v1.1.0 Beta
 
 Timers, a versus intro, two rule fixes and deck renaming. **Two rules changed, so v1.1.0 can't play online with v1.0.x.** An older version is refused when it connects ("incompatible version"), instead of going out of sync mid-match.

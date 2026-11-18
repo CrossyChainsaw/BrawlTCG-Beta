@@ -189,13 +189,15 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>A sweeping banner across the middle of the board ("YOUR TURN").</summary>
-        public static void Banner(Transform layer, string title, string subtitle, Color color, float delay = 0)
+        public static TurnBanner Banner(Transform layer, string title, string subtitle, Color color, float delay = 0)
         {
             foreach (TurnBanner old in layer.GetComponentsInChildren<TurnBanner>())
                 UnityEngine.Object.Destroy(old.gameObject);
             var root = UI.Rect("Banner", layer);
             UI.Place(root, 0, 430, 1920, 220);
-            root.gameObject.AddComponent<TurnBanner>().Init(title, subtitle, color, delay);
+            var banner = root.gameObject.AddComponent<TurnBanner>();
+            banner.Init(title, subtitle, color, delay);
+            return banner;
         }
     }
 

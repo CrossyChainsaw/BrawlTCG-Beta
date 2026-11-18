@@ -133,7 +133,7 @@ namespace BrawlTCG.UnityApp
             .Element(AxeOfRegrowth, 2)
             .Element(LawOfTheLand, 2)
             .Element(Adrenaline, 3)
-            .Type(Fangwild, 3, "HEAL EVERY TURN")
+            .Type(Fangwild, 3, "+2 MAX HP EVERY TURN")
             .Type(Essence, 12);
     }
 }

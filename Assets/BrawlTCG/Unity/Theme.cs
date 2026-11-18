@@ -215,6 +215,8 @@ namespace BrawlTCG.UnityApp
         public static Button Cta(Transform parent, string text, float x, float y, float w, float h, Action onClick, int fontSize = 28)
         {
             var bg = RoundedPanel(parent, Gold, x, y, w, h, 14, "CTA");
+            // Clip the square shine to the rounded button, or its top corners poke out past the curve (#41).
+            bg.gameObject.AddComponent<Mask>().showMaskGraphic = true;
             var shine = UI.Panel(bg.transform, Color.white, 0, 0, w, h * 0.5f, "Shine");
             shine.sprite = Gradient(false, 0f, 0.22f);
             shine.raycastTarget = false;

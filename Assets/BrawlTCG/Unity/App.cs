@@ -39,6 +39,7 @@ namespace BrawlTCG.UnityApp
             Instance = this;
             Application.runInBackground = true; // keep the network game alive when the window loses focus
             Application.targetFrameRate = 60;
+            Protocol.GameVersion = Application.version;
             WindowTitle.Apply();
 
             EnsureCameraAndEventSystem();

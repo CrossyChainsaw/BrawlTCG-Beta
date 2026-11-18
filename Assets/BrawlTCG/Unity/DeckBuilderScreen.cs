@@ -48,7 +48,8 @@ namespace BrawlTCG.UnityApp
         List<int> _deck = new List<int>();
         string _deckName;
         bool _dirty, _confirmDelete;
-        RectTransform _modal;
+        RectTransform _modal, _peekLayer;
+        const string PrefLastDeck = "BrawlTCG.BuilderDeck";
 
         sealed class GridCell
         {
@@ -73,6 +74,7 @@ namespace BrawlTCG.UnityApp
             BuildCollection();
             BuildPreview();
             BuildDeckPanel();
+            _peekLayer = UI.Stretch(UI.Rect("PeekLayer", transform)); // full-size previews of mentioned cards
             _modal = UI.Stretch(UI.Rect("Modal", transform)); // top layer for the unsaved-changes dialog
 
             ApplyFilters();
@@ -292,6 +294,7 @@ namespace BrawlTCG.UnityApp
         void ShowPreview()
         {
             UI.Clear(_preview);
+            UI.Clear(_peekLayer);
             Card card = _selected;
             if (card == null) return;
             Transform t = _preview;
@@ -331,24 +334,58 @@ namespace BrawlTCG.UnityApp
                 if (effects.Length > 0)
                 {
                     Theme.Label(t, "ABILITIES", 14, Theme.Gold, 20, y + 4, 200, 20, display: true);
-                    TriggerIcons.PaintAbilities(t, effects, 20, y + 28, w - 40, PreviewRect.height - y - 40, 15, 10, Theme.Text);
+                    y += 28 + TriggerIcons.PaintAbilities(t, effects, 20, y + 28, w - 40, PreviewRect.height - y - 40 - MentionsRoom(card), 15, 10, Theme.Text);
                 }
             }
             else
             {
                 // Same layout as legends: a details line first, then ABILITIES with one icon per trigger.
                 var (abilities, info) = TriggerIcons.SplitCardText(card);
-                float room = PreviewRect.height - y - 24;
+                float room = PreviewRect.height - y - 24 - MentionsRoom(card);
                 y += TriggerIcons.PaintAbilities(t, info, 20, y, w - 40, abilities.Length > 0 ? Mathf.Min(110, room) : room, 15, 11, Theme.TextDim) + 10;
                 if (abilities.Length > 0)
                 {
                     Theme.Label(t, "ABILITIES", 14, Theme.Gold, 20, y + 4, 200, 20, display: true);
-                    TriggerIcons.PaintAbilities(t, abilities, 20, y + 28, w - 40, PreviewRect.height - y - 40, 16, 10, Theme.Text);
+                    y += 28 + TriggerIcons.PaintAbilities(t, abilities, 20, y + 28, w - 40, PreviewRect.height - y - 40 - MentionsRoom(card), 16, 10, Theme.Text);
+                }
+            }
+
+            // Cards the text mentions ("Craft Fait, ...", "the stage becomes Matrix"): hover to see, click to select (#36).
+            int[] mentioned = CardReferences.For(card);
+            if (mentioned != null)
+            {
+                y += 12;
+                Theme.Label(t, "MENTIONED CARDS", 14, Theme.Gold, 20, y, 300, 20, display: true);
+                y += 26;
+                float tw = CardView.W * MentionScale, th = CardView.H * MentionScale, gap = 10;
+                int perRow = Mathf.Max(1, (int)((w - 40 + gap) / (tw + gap)));
+                for (int i = 0; i < mentioned.Length; i++)
+                {
+                    float px = 20 + (i % perRow) * (tw + gap), py = y + (i / perRow) * (th + gap);
+                    MentionThumb(t, mentioned[i], px, py, MentionScale, py);
                 }
             }
         }
 
-        static void PreviewAttack(Transform t, LegendCard legend, Attack attack, float x, float y, float w)
+        const float MentionScale = 0.4f, AttackMentionScale = 0.24f;
+
+        /// <summary>Height kept free at the bottom of the preview for the MENTIONED CARDS row.</summary>
+        static float MentionsRoom(Card card) => CardReferences.For(card) == null ? 0 : 12 + 26 + CardView.H * MentionScale + 10;
+
+        /// <summary>
+        /// A hoverable thumbnail of a mentioned card; the full card shows left of the preview panel, lined up with
+        /// <paramref name="panelY"/> (the thumbnail's y inside the panel). A click selects the card.
+        /// </summary>
+        void MentionThumb(Transform parent, int cardId, float x, float y, float scale, float panelY)
+        {
+            float bigW = CardView.W * 1.9f, bigH = CardView.H * 1.9f;
+            var at = new Vector2(PreviewRect.x - bigW - 16, Mathf.Clamp(PreviewRect.y + panelY - bigH / 2, 20, App.Height - bigH - 20));
+            CardView thumb = CardPeek.Create(parent, cardId, x, y, scale, _peekLayer, at);
+            Card target = CardCatalogue.All.FirstOrDefault(k => k.Id == cardId);
+            if (target != null) UI.Clicks(thumb.gameObject, e => Select(target));
+        }
+
+        void PreviewAttack(Transform t, LegendCard legend, Attack attack, float x, float y, float w)
         {
             var row = Theme.RoundedPanel(t, new Color(1, 1, 1, 0.06f), x, y, w, 54, 12, "Attack");
             row.raycastTarget = false;
@@ -356,7 +393,10 @@ namespace BrawlTCG.UnityApp
             float ix = 8;
             ix = ReqIcon(rt, attack.WeaponOne, attack.WeaponOneAmount, attack.WeaponOneBurnAmount, ix);
             if (attack.WeaponTwo != null) ix = ReqIcon(rt, attack.WeaponTwo.Value, attack.WeaponTwoAmount, attack.WeaponTwoBurnAmount, ix);
-            var name = Theme.Label(rt, attack.Name, 18, Theme.Text, ix + 4, 4, w - ix - 70, 26, TextAnchor.MiddleLeft, display: true);
+            int[] mentioned = CardReferences.For(attack);
+            float tw = CardView.W * AttackMentionScale + 6;
+            float right = 70 + (mentioned == null ? 0 : mentioned.Length * tw);
+            var name = Theme.Label(rt, attack.Name, 18, Theme.Text, ix + 4, 4, w - ix - right, 26, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
             var tags = new List<string>();
             if (attack.Kind != AttackKind.Strike) tags.Add(attack.Kind.ToString().ToUpperInvariant());
@@ -365,7 +405,10 @@ namespace BrawlTCG.UnityApp
             if (attack.FriendlyFire) tags.Add("ALLY");
             int burns = attack.WeaponOneBurnAmount + attack.WeaponTwoBurnAmount;
             if (burns > 0) tags.Add($"BURNS {burns}");
-            Theme.Label(rt, tags.Count > 0 ? string.Join(" · ", tags) : "", 12, Theme.TextDim, ix + 4, 30, w - ix - 70, 18, TextAnchor.MiddleLeft, display: true);
+            Theme.Label(rt, tags.Count > 0 ? string.Join(" · ", tags) : "", 12, Theme.TextDim, ix + 4, 30, w - ix - right, 18, TextAnchor.MiddleLeft, display: true);
+            if (mentioned != null)
+                for (int m = 0; m < mentioned.Length; m++)
+                    MentionThumb(rt, mentioned[m], w - 70 - (m + 1) * tw, 3, AttackMentionScale, y + 3);
             string damage = attack.OneHitKO ? "KO" : attack.AttackModifier <= -1000 ? "—" : Attack.CalculateBaseDamage(legend, attack).ToString();
             Theme.Label(rt, damage, 28, Theme.Gold, w - 70, 0, 60, 54, TextAnchor.MiddleRight, display: true);
         }
@@ -393,20 +436,23 @@ namespace BrawlTCG.UnityApp
             Transform t = panel.transform;
             float w = DeckRect.width;
 
-            _deckSelector = new ThemedSelector(t, "Your deck", 18, 16, w - 36, _showcase != null ? new string[0] : DeckStore.List());
+            // Reopens on the deck that was open last time (#40).
+            _deckSelector = new ThemedSelector(t, "Your deck", 18, 16, w - 36, _showcase != null ? new string[0] : DeckStore.List(),
+                _showcase != null ? null : PlayerPrefs.GetString(PrefLastDeck, null));
             _deckSelector.Changed += name =>
             {
                 string previous = _deckName;
                 ConfirmUnsaved("SWITCH", () => SwitchDeck(name), () => _deckSelector.SetOptions(DeckStore.List(), previous));
             };
 
-            // NEW DECK and RENAME ask for the name in a pop-up.
-            float half = (w - 36 - 10) / 2;
-            _newDeckButton = Theme.Ghost(t, "NEW DECK", 18, 104, half, 52, CreateDeck, 18);
-            _renameButton = Theme.Ghost(t, "RENAME", 18 + half + 10, 104, half, 52, RenameDeck, 18);
+            // Four equal buttons in a 2x2 grid (#41). NEW DECK and RENAME ask for the name in a pop-up.
+            const float bh = 54, gap = 10;
+            float half = (w - 36 - gap) / 2;
+            _newDeckButton = Theme.Ghost(t, "NEW DECK", 18, 104, half, bh, CreateDeck, 18);
+            _renameButton = Theme.Ghost(t, "RENAME", 18 + half + gap, 104, half, bh, RenameDeck, 18);
 
-            _save = Theme.Cta(t, "SAVE", 18, 170, 220, 56, SaveDeck, 24);
-            var delete = Theme.Ghost(t, "DELETE", 248, 170, w - 266, 56, DeleteDeck, 18);
+            _save = Theme.Cta(t, "SAVE", 18, 104 + bh + gap, half, bh, SaveDeck, 18);
+            var delete = Theme.Ghost(t, "DELETE", 18 + half + gap, 104 + bh + gap, half, bh, DeleteDeck, 18);
             _deleteLabel = delete.GetComponentInChildren<Text>();
 
             _deckTitle = Theme.Label(t, "", 22, Theme.Text, 18, 240, w - 36, 30, display: true);
@@ -426,7 +472,15 @@ namespace BrawlTCG.UnityApp
             _deck = name != null ? DeckStore.Load(name, errors) : new List<int>();
             foreach (string e in errors) _app.Toast(e);
             _dirty = false;
+            RememberDeck();
             RefreshDeck();
+        }
+
+        void RememberDeck()
+        {
+            if (_showcase != null || _deckName == null) return;
+            PlayerPrefs.SetString(PrefLastDeck, _deckName);
+            PlayerPrefs.Save();
         }
 
         void RefreshDeck()
@@ -646,6 +700,7 @@ namespace BrawlTCG.UnityApp
                 _deckName = name;
                 _confirmDelete = false;
                 _deckSelector.SetOptions(DeckStore.List(), name);
+                RememberDeck();
                 RefreshDeck();
             });
         }

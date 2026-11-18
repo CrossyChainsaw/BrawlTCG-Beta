@@ -15,10 +15,16 @@ namespace BrawlTCG.Core
             $"All non-Fire Legends lose {MustafarDamage} health.",
             (target, card, game, played) => StartTurnDamage(target, MustafarDamage, Element.Fire));
 
-        const int FangwildHeal = 2;
+        // Runs at the start of every turn on the active player's field, so each player's legends grow on their own turn (#43).
+        const int FangwildMaxHealth = 2;
         public static readonly Effect Fangwild = new Effect(
-            $"All Magic and Nature Legends heal {FangwildHeal}.",
-            (target, card, game, played) => StartTurnHeal(target, FangwildHeal, Element.Nature, Element.Magic));
+            $"Your Legends gain +{FangwildMaxHealth} max health.",
+            (target, card, game, played) =>
+            {
+                if (!(target is IEnumerable<LegendCard> legends)) return;
+                foreach (LegendCard legend in legends)
+                    legend.ModifyStat(Stat.Health, FangwildMaxHealth); // raises max and current HP
+            });
 
         public static readonly Effect Workshop_StartTurn = new Effect(
             "Instead of drawing a card, craft a random card",
@@ -92,14 +98,15 @@ namespace BrawlTCG.Core
 
         // ───────────── Evil Hideout ─────────────
 
-        static readonly Element[] EvilHideoutElements = { Element.Fire, Element.Wild, Element.Shadow };
+        // #49: Fire legends no longer benefit (Fire already has Mustafar and The Workshop).
+        static readonly Element[] EvilHideoutElements = { Element.Wild, Element.Shadow };
 
         public static readonly Effect EvilHideout_WhenPlayed = new Effect(
             "N/A",
             (target, card, game, played) => ModifyStatOfAllLegends(game, EvilHideoutElements, Stat.Power, 3));
 
         public static readonly Effect EvilHideout_WhileInPlay = new Effect(
-            "Shadow, Wild and Fire Legends get +3 Power",
+            "Shadow and Wild Legends get +3 Power",
             (target, card, game, played) =>
             {
                 if (target is LegendCard legend && EvilHideoutElements.Contains(legend.Element))
@@ -169,6 +176,53 @@ namespace BrawlTCG.Core
         public static readonly Effect Atlantis_StartTurn = new Effect(
             $"All non-Arctic Legends lose {AtlantisDamage} health.",
             (target, card, game, played) => StartTurnDamage(target, AtlantisDamage, Element.Arctic));
+
+        // ───────────── Sozin's Comet (#50) and Full Eclipse (#51) ─────────────
+        // While in play, every legend of the stage's element (both players') gets +5/+5. When the stage leaves, the
+        // bonus is taken back, but a legend never dies from losing it: it keeps at least 1 HP.
+
+        const int ElementStageBonus = 5;
+
+        static Effect ElementStageWhenPlayed(Element element) => new Effect(
+            "N/A",
+            (target, card, game, played) =>
+            {
+                ModifyStatOfAllLegends(game, new[] { element }, Stat.Power, ElementStageBonus);
+                ModifyStatOfAllLegends(game, new[] { element }, Stat.Health, ElementStageBonus);
+            });
+
+        static Effect ElementStageWhileInPlay(Element element) => new Effect(
+            $"{element} Legends get +{ElementStageBonus}/+{ElementStageBonus}",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend && legend.Element == element)
+                {
+                    legend.ModifyStat(Stat.Power, ElementStageBonus);
+                    legend.ModifyStat(Stat.Health, ElementStageBonus);
+                }
+            });
+
+        static Effect ElementStageWhenDiscarded(Element element) => new Effect(
+            "N/A",
+            (target, card, game, played) =>
+            {
+                foreach (Player p in game.Players)
+                    foreach (LegendCard legend in p.PlayingField)
+                    {
+                        if (legend.Element != element) continue;
+                        legend.ModifyStat(Stat.Power, -ElementStageBonus);
+                        legend.ModifyStat(Stat.Health, -ElementStageBonus);
+                        if (legend.CurrentHP < 1) legend.GainHealth(1 - legend.CurrentHP);
+                    }
+            });
+
+        public static readonly Effect SozinsComet_WhenPlayed = ElementStageWhenPlayed(Element.Fire);
+        public static readonly Effect SozinsComet_WhileInPlay = ElementStageWhileInPlay(Element.Fire);
+        public static readonly Effect SozinsComet_WhenDiscarded = ElementStageWhenDiscarded(Element.Fire);
+
+        public static readonly Effect FullEclipse_WhenPlayed = ElementStageWhenPlayed(Element.Arctic);
+        public static readonly Effect FullEclipse_WhileInPlay = ElementStageWhileInPlay(Element.Arctic);
+        public static readonly Effect FullEclipse_WhenDiscarded = ElementStageWhenDiscarded(Element.Arctic);
 
         // ───────────── Legend when-played ─────────────
 
@@ -299,6 +353,15 @@ namespace BrawlTCG.Core
                     legend.TapOut();
             });
 
+        /// <summary>Tombstone (#46): the targeted opposing legend is eliminated, whatever its HP.</summary>
+        public static readonly Effect Tombstone = new Effect(
+            "Eliminate an opposing Legend",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend)
+                    legend.LoseHealth(Math.Max(1, legend.CurrentHP));
+            });
+
         public static readonly Effect The_Finger = new Effect(
             "Legend attack becomes 0",
             (target, card, game, played) =>
@@ -325,16 +388,6 @@ namespace BrawlTCG.Core
         {
             if (target is LegendCard legend)
                 legend.TapOut();
-        }
-
-        static void StartTurnHeal(object target, int heal, params Element[] targetElements)
-        {
-            if (!(target is IEnumerable<LegendCard> legends)) return;
-            foreach (LegendCard legend in legends)
-            {
-                if (targetElements.Contains(legend.Element))
-                    legend.GainHealth(heal);
-            }
         }
 
         static void StartTurnDamage(object target, int damage, params Element[] immuneElements)
