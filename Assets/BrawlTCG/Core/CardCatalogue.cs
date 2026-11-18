@@ -26,7 +26,7 @@ namespace BrawlTCG.Core
 
             // Stages
             new StageCard(100, "Mustafar", 2, Element.Fire, "Mustafar", startTurnEffect: EC.Mustafar),
-            new StageCard(101, "Fangwild", 3, Element.Nature, "Fangwild", startTurnEffect: EC.Fangwild),
+            new StageCard(101, "Fangwild", 4, Element.Nature, "Fangwild", startTurnEffect: EC.Fangwild),
             new StageCard(102, "Matrix", 1, Element.Cosmic, "Matrix"),
             new StageCard(103, "The Workshop", 2, Element.Fire, "TheWorkshop", startTurnEffect: EC.Workshop_StartTurn, whenPlayedEffect: EC.Workshop_WhenPlayed, whenDiscardedEffect: EC.Workshop_Discarded),
             new StageCard(104, "Evil Hideout", 3, Element.Wild, "Evil_Hideout", whenPlayedEffect: EC.EvilHideout_WhenPlayed, whileInPlayEffect: EC.EvilHideout_WhileInPlay, whenDiscardedEffect: EC.EvilHideout_WhenDiscarded),

@@ -17,7 +17,7 @@ When Sozin's Comet or Full Eclipse leaves play, the +5/+5 goes away again, but a
 
 ### Card reworks
 
-- **Fangwild** (#43). At the start of every turn, all Magic and Nature legends on the board gain +2 max health (and +2 HP). It used to heal them by 2.
+- **Fangwild** (#43). At the start of every turn, all Magic and Nature legends on the board gain +2 max health (and +2 HP). It used to heal them by 2. It now costs 4 (was 3).
 - **Start-turn stages hit the whole board.** Mustafar, Atlantis and Fangwild now affect every legend on the board (both players) at the start of every turn, as their text says, instead of only the side whose turn starts. To make up for it, Mustafar deals 1 damage (was 2). Atlantis stays at 1.
 - **Evil Hideout** (#49). Now a Wild card, and only Shadow and Wild legends get the +3 Power. Fire legends no longer benefit.
 
