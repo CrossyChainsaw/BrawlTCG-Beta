@@ -8,7 +8,7 @@ namespace BrawlTCG.Core
     /// The complete rules engine. Pure C#, deterministic for a given seed, decks and command sequence.
     /// All randomness must go through <see cref="Rng"/>.
     /// </summary>
-    public sealed class Game
+    public sealed partial class Game
     {
         public const int StartingEssence = 1;
         public const int StartingHandCards = 7;
@@ -419,13 +419,16 @@ namespace BrawlTCG.Core
             PostPlayEffects(player, battle);
         }
 
-        /// <summary>Triggers every legend's while-in-play effect for the card just played, then resolves deaths.</summary>
+        /// <summary>
+        /// Triggers every legend's while-in-play effect for the card just played, then resolves deaths.
+        /// Tapped legends' abilities are turned off.
+        /// </summary>
         void PostPlayEffects(Player player, Card playedCard)
         {
             ResolveDeaths();
             foreach (LegendCard legend in GetAllLegendsOnPlayingField())
             {
-                if (legend.WhileInPlayEffect != null && legend.OnPlayingField)
+                if (legend.WhileInPlayEffect != null && legend.OnPlayingField && !legend.IsTapped)
                     legend.WhileInPlayEffect.Invoke(null, legend, this, playedCard);
             }
             ResolveDeaths();

@@ -50,6 +50,37 @@ namespace BrawlTCG.UnityApp
             File.WriteAllText(PathFor(name), DeckFormat.Serialize(ids));
         }
 
+        /// <summary>
+        /// Renames a deck file. Returns null on success, otherwise why not. Changing only the case of the name works too
+        /// (via a temporary name, as Windows treats both as the same file). The menu's remembered deck follows the rename.
+        /// </summary>
+        public static string Rename(string oldName, string newName)
+        {
+            string from = PathFor(oldName), to = PathFor(newName);
+            if (!File.Exists(from)) return "That deck no longer exists.";
+            if (from == to) return null;
+            bool caseOnly = string.Equals(from, to, StringComparison.OrdinalIgnoreCase);
+            if (!caseOnly && File.Exists(to)) return "A deck with that name already exists.";
+            try
+            {
+                if (caseOnly)
+                {
+                    string temp = from + ".renaming";
+                    File.Move(from, temp);
+                    File.Move(temp, to);
+                }
+                else File.Move(from, to);
+            }
+            catch (Exception e)
+            {
+                return "Could not rename the deck: " + e.Message;
+            }
+            foreach (string key in new[] { "BrawlTCG.Deck", "BrawlTCG.Deck2" })
+                if (PlayerPrefs.GetString(key, null) == SanitizeName(oldName)) PlayerPrefs.SetString(key, SanitizeName(newName));
+            PlayerPrefs.Save();
+            return null;
+        }
+
         public static void Delete(string name)
         {
             string path = PathFor(name);

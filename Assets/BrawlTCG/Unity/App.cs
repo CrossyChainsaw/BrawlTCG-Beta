@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using BrawlTCG.Core;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
@@ -44,6 +45,7 @@ namespace BrawlTCG.UnityApp
             BuildCanvas();
             DeckStore.EnsureStarterDecks();
             ShowMenu();
+            ShowcaseDirector.StartRequestedFromEditor(this);
         }
 
         static void EnsureCameraAndEventSystem()
@@ -113,6 +115,17 @@ namespace BrawlTCG.UnityApp
         public void ShowDeckBuilder()
         {
             Show<DeckBuilderScreen>("DeckBuilder", new Color32(240, 240, 240, 255)).Build(this);
+        }
+
+        public void StartShowcase(ShowcaseClip clip)
+        {
+            Game game = clip.CreateGame();
+            StartMatch(new MatchSetup { Game = game, Net = null, LocalIndex = clip.Hero, Showcase = clip });
+        }
+
+        public void StartDeckShowcase(DeckClip clip)
+        {
+            Show<DeckBuilderScreen>("DeckBuilder", new Color32(240, 240, 240, 255)).BuildShowcase(this, clip);
         }
 
         public void StartMatch(MatchSetup setup)

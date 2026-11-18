@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.1.0 Beta
+
+Timers, a versus intro, two rule fixes and deck renaming. **Two rules changed, so v1.1.0 can't play online with v1.0.x.** An older version is refused when it connects ("incompatible version"), instead of going out of sync mid-match.
+
+Closes issues **#17**, **#18**, **#19**, **#20**, **#21**, **#25**, **#26**, **#27**, **#28** and **#29**.
+
+### Rule changes
+
+- **Tapped legends' abilities are turned off** (#29). A tapped legend's "while in play" ability doesn't trigger until it is untapped. Its card detail shows ABILITIES · OFF WHILE TAPPED.
+- **No elemental bonus without damage** (#21). An attack that deals 0 damage of its own (for example after The Finger) no longer gets the +1 per matching-element weapon.
+
+### Timers
+
+- **60 seconds per turn** (#17). A countdown next to END TURN and a bar along the bottom of the centre strip. It turns red at 10 seconds, ticks for the last 5, and ends your turn at 0. Online you also see roughly how long your opponent has left. In local matches the clock pauses while the options menu is open.
+- **30 seconds to choose your starting hand** (#28). When time runs out, the cards you've marked so far go back.
+
+### Match screen
+
+- **Versus intro** (#26). Both players slide in, VS slams down, and the screen says who goes first. Click to skip.
+- **See whether your opponent is still choosing their starting hand** (#27). After you choose, you wait on the hand screen until they're done, and the first turn starts right after.
+- **Your cards are darkened during your opponent's turn** (#19), online.
+- **Weapon burns** on attacks are now a flame with the number in it, instead of an orange oval (#20). The deck builder shows it too.
+- **Volume slider** in the options menu (Esc), under the sound on/off switch (#18).
+
+### Deck builder
+
+- **Rename decks** (#25). NEW DECK and RENAME ask for the name in a pop-up. The name text box is gone. Renaming keeps unsaved changes, and the main menu remembers the deck under its new name.
+
+---
+
 ## v1.0.1 Beta
 
 A small update to the match screen. No rule changes: v1.0.1 and v1.0 can play each other online.

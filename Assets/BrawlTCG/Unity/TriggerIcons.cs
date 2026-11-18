@@ -280,12 +280,12 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer, _fullSword, _heart, _flame, _tapped;
+        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _tapped;
 
         // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetStatics() =>
-            _bolt = _infinity = _cycle = _sword = _slash = _hammer = _fullSword = _heart = _flame = _tapped = null;
+            _bolt = _infinity = _cycle = _sword = _slash = _hammer = _fullSword = _heart = _flame = _solidFlame = _tapped = null;
 
         /// <summary>Whole sword, tip top-right (ATK changes).</summary>
         static Sprite FullSword => _fullSword ??= Glyph((x, y) => { Vector2 p = SwordSpace(x, y); return Sword(p.x, p.y); });
@@ -299,18 +299,31 @@ namespace BrawlTCG.UnityApp
         });
 
         /// <summary>Flame (burned): a teardrop that flickers to a point at the top, with a hollow core.</summary>
-        static Sprite Flame => _flame ??= Glyph((x, y) =>
+        static Sprite Flame => _flame ??= Glyph((x, y) => FlameDrop(0.5f, 0.66f, 0.28f, 0.04f, x, y) && !FlameDrop(0.5f, 0.76f, 0.12f, 0.46f, x, y));
+
+        /// <summary>The same flame without the hollow core, so a number fits in its round base (weapon burns).</summary>
+        static Sprite SolidFlame => _solidFlame ??= Glyph((x, y) => FlameDrop(0.5f, 0.66f, 0.28f, 0.04f, x, y));
+
+        static bool FlameDrop(float cx, float cy, float r, float top, float px, float py)
         {
-            bool Drop(float cx, float cy, float r, float top, float px, float py)
-            {
-                if (Vector2.Distance(new Vector2(px, py), new Vector2(cx, cy)) < r) return true;
-                if (py < top || py > cy) return false;
-                float t = (py - top) / (cy - top);
-                float bend = 0.07f * Mathf.Sin(t * Mathf.PI) * (1 - t); // tip leans right
-                return Mathf.Abs(px - cx - bend) < r * Mathf.Pow(t, 0.75f);
-            }
-            return Drop(0.5f, 0.66f, 0.28f, 0.04f, x, y) && !Drop(0.5f, 0.76f, 0.12f, 0.46f, x, y);
-        });
+            if (Vector2.Distance(new Vector2(px, py), new Vector2(cx, cy)) < r) return true;
+            if (py < top || py > cy) return false;
+            float t = (py - top) / (cy - top);
+            float bend = 0.07f * Mathf.Sin(t * Mathf.PI) * (1 - t); // tip leans right
+            return Mathf.Abs(px - cx - bend) < r * Mathf.Pow(t, 0.75f);
+        }
+
+        /// <summary>How many weapons an attack burns: a solid orange flame with the number in its round base.</summary>
+        public static void BurnCount(Transform parent, int amount, float x, float y, float size)
+        {
+            var holder = UI.Place(UI.Rect("Burn", parent), x, y, size, size);
+            var flame = UI.Panel(holder, FireColor, 0, 0, size, size, "Flame");
+            flame.sprite = SolidFlame;
+            flame.preserveAspect = true;
+            flame.raycastTarget = false;
+            var label = Theme.Label(holder, amount.ToString(), Mathf.RoundToInt(size * 0.46f), Theme.Ink, 0, size * 0.41f, size, size * 0.5f, TextAnchor.MiddleCenter, display: true);
+            label.raycastTarget = false;
+        }
 
         /// <summary>Tapped: a card outline turned onto its side.</summary>
         static Sprite TappedCard => _tapped ??= Glyph((x, y) =>

@@ -4,7 +4,8 @@ using UnityEngine.UI;
 namespace BrawlTCG.UnityApp
 {
     /// <summary>
-    /// In-match options: a gear button (top right) or Esc opens a menu with a sound-effects switch and "leave match".
+    /// In-match options: a gear button (top right) or Esc opens a menu with a sound-effects switch, a volume slider
+    /// and "leave match".
     /// It lives on its own layer above every overlay, so it can be opened over the hand-off and game-over screens
     /// and closing it leaves those untouched.
     /// </summary>
@@ -53,7 +54,7 @@ namespace BrawlTCG.UnityApp
         {
             Sfx.Play("ui_click", 0.6f);
             var dim = MenuDim();
-            Transform box = MenuPanel(dim, "OPTIONS", 420);
+            Transform box = MenuPanel(dim, "OPTIONS", 504);
             const float w = 560;
 
             // Sound effects switch
@@ -68,9 +69,21 @@ namespace BrawlTCG.UnityApp
                 OpenOptions(); // redraw
             });
 
-            Theme.Cta(box, "RESUME", 40, 216, w - 80, 66, CloseOptions, 26);
-            Theme.Ghost(box, _ended || _game.IsOver ? "BACK TO MENU" : "LEAVE MATCH", 40, 298, w - 80, 66, ConfirmLeave, 24);
-            Theme.Label(box, "Esc to close", 15, Theme.TextFaint, 0, 378, w, 24, TextAnchor.MiddleCenter);
+            // Volume slider
+            var volRow = Theme.RoundedPanel(box, new Color(1, 1, 1, 0.05f), 40, 196, w - 80, 72, 16, "VolumeRow");
+            Theme.Label(volRow.transform, "VOLUME", 22, Theme.Text, 24, 0, 140, 72, TextAnchor.MiddleLeft, display: true);
+            var percent = Theme.Label(volRow.transform, Percent(Sfx.Volume), 18, Theme.TextDim, w - 80 - 84, 0, 60, 72, TextAnchor.MiddleRight, display: true);
+            VolumeSlider(volRow.transform, 164, 20, w - 80 - 164 - 96, Sfx.Volume, v =>
+            {
+                Sfx.Volume = v;
+                percent.text = Percent(v);
+                if (Sfx.Muted && v > 0) Sfx.Muted = false; // turning it up turns sound back on
+                Sfx.Play("ui_click", 0.8f, 0, 0.12f); // preview at the new volume
+            });
+
+            Theme.Cta(box, "RESUME", 40, 300, w - 80, 66, CloseOptions, 26);
+            Theme.Ghost(box, _ended || _game.IsOver ? "BACK TO MENU" : "LEAVE MATCH", 40, 382, w - 80, 66, ConfirmLeave, 24);
+            Theme.Label(box, "Esc to close", 15, Theme.TextFaint, 0, 462, w, 24, TextAnchor.MiddleCenter);
         }
 
         void ConfirmLeave()
@@ -88,6 +101,49 @@ namespace BrawlTCG.UnityApp
             Theme.Ghost(box, "STAY", 40, 206, (w - 100) / 2, 66, OpenOptions, 24);
             var go = Theme.Cta(box, "LEAVE", 60 + (w - 100) / 2, 206, (w - 100) / 2, 66, LeaveMatch, 26);
             go.GetComponent<HoverFx>().Init(go.GetComponent<Image>(), new Color32(230, 90, 90, 255), new Color32(250, 120, 120, 255), 1.025f);
+        }
+
+        static string Percent(float v) => $"{Mathf.RoundToInt(v * 100)}%";
+
+        /// <summary>A gold slider (0..1): track, fill and a round knob; click or drag anywhere along it.</summary>
+        static void VolumeSlider(Transform parent, float x, float y, float w, float value, System.Action<float> changed)
+        {
+            const float h = 32, track = 10;
+            var root = UI.Place(UI.Rect("VolumeSlider", parent), x, y, w, h);
+            var hit = UI.Panel(root, new Color(0, 0, 0, 0), 0, 0, w, h, "Hit"); // the whole strip takes clicks
+            Theme.RoundedPanel(root, new Color(1, 1, 1, 0.16f), 0, (h - track) / 2, w, track, track / 2, "Track").raycastTarget = false;
+
+            var fillArea = UI.Place(UI.Rect("FillArea", root), 0, (h - track) / 2, w, track);
+            var fill = Theme.RoundedPanel(fillArea, Theme.Gold, 0, 0, w, track, track / 2, "Fill");
+            fill.raycastTarget = false;
+            RectTransform fr = fill.rectTransform;
+            fr.anchorMin = Vector2.zero;
+            fr.anchorMax = Vector2.one;
+            fr.pivot = new Vector2(0.5f, 0.5f);
+            fr.offsetMin = fr.offsetMax = Vector2.zero;
+
+            // The knob travels inside a strip inset by half its size, so it never sticks out of the ends.
+            var handleArea = UI.Stretch(UI.Rect("HandleArea", root));
+            handleArea.offsetMin = new Vector2(h / 2, 0);
+            handleArea.offsetMax = new Vector2(-h / 2, 0);
+            var knob = Theme.RoundedPanel(handleArea, Color.white, 0, 0, h, h, h / 2, "Knob");
+            knob.raycastTarget = false;
+            RectTransform kr = knob.rectTransform;
+            kr.anchorMin = new Vector2(0, 0);
+            kr.anchorMax = new Vector2(0, 1);
+            kr.pivot = new Vector2(0.5f, 0.5f);
+            kr.sizeDelta = new Vector2(h, 0);
+            kr.anchoredPosition = Vector2.zero;
+
+            var slider = root.gameObject.AddComponent<Slider>();
+            slider.transition = Selectable.Transition.None;
+            slider.targetGraphic = hit;
+            slider.fillRect = fr;
+            slider.handleRect = kr;
+            slider.minValue = 0;
+            slider.maxValue = 1;
+            slider.value = Mathf.Clamp01(value);
+            slider.onValueChanged.AddListener(v => changed(v));
         }
 
         /// <summary>A pill-shaped on/off switch.</summary>

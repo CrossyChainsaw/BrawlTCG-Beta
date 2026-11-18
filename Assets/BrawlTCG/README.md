@@ -24,3 +24,12 @@ Two starter decks are created on first launch.
 ## Controls
 Drag cards from your hand onto a zone / legend. Click a card to zoom; click an attack, then click a
 target if one is needed. Space or the END TURN button ends the turn. Right-click / Esc cancels.
+
+## Showcase clips
+`Unity/Showcase/` holds scripted trailer clips: each one stages a mid-match position (`Game.Stage*` in
+`Core/Game.Staging.cs`) and plays its moves through the normal match screen, so every animation is the real one.
+Open **BrawlTCG ▸ Showcase ▸ Clips Window** to play a clip, or record it to `Recordings/` as a 1080p60 MP4 (needs
+Unity Recorder; the window installs it). F8 on the main menu plays them all in the editor and development builds.
+Add a clip in `ShowcaseClips.cs`: a `Setup` that stages the board, then `.Play`, `.PlayOn`, `.Attack`, `.EndTurn`.
+Deck-building clips live in `ShowcaseDecks.cs`: a drawn cursor builds the deck in the real deck builder (kept in memory,
+never saved to the player's deck folder).
