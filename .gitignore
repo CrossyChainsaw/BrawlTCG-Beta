@@ -112,3 +112,6 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Showcase clips recorded from the editor (BrawlTCG > Showcase)
+/[Rr]ecordings/

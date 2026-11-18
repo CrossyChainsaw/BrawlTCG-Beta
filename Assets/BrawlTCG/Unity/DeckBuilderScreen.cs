@@ -8,7 +8,7 @@ using UnityEngine.UI;
 namespace BrawlTCG.UnityApp
 {
     /// <summary>The deck builder (WinForms FRM_DeckBuilder): browse the collection, preview, add/remove copies, save decks.</summary>
-    public sealed class DeckBuilderScreen : MonoBehaviour
+    public sealed partial class DeckBuilderScreen : MonoBehaviour
     {
         // Layout
         static readonly Rect CollectionRect = new Rect(24, 96, 984, 960);
@@ -41,8 +41,7 @@ namespace BrawlTCG.UnityApp
 
         // Deck
         ThemedSelector _deckSelector;
-        InputField _newDeckName;
-        Button _save;
+        Button _save, _addButton, _newDeckButton, _renameButton;
         Text _deleteLabel, _deckTitle, _status;
         RectTransform _stats;
         ScrollList _deckList;
@@ -77,6 +76,7 @@ namespace BrawlTCG.UnityApp
             _modal = UI.Stretch(UI.Rect("Modal", transform)); // top layer for the unsaved-changes dialog
 
             ApplyFilters();
+            if (_showcase != null) { SwitchDeck(null); return; } // the showcase starts with no deck and makes its own
             SwitchDeck(_deckSelector.Value);
             Select(CardCatalogue.All.OfType<LegendCard>().First());
         }
@@ -305,7 +305,7 @@ namespace BrawlTCG.UnityApp
             string copyText = card is EssenceCard ? $"In deck: {copies}" : $"In deck: {copies} / {DeckRules.MaxCopies}";
             Theme.Label(t, copyText, 18, copies > 0 ? Theme.Text : Theme.TextDim, 20, 456, w - 40, 26, TextAnchor.MiddleCenter, display: true);
 
-            var add = Theme.Cta(t, "ADD", 20, 492, (w - 52) / 2, 56, AddSelected, 24);
+            var add = _addButton = Theme.Cta(t, "ADD", 20, 492, (w - 52) / 2, 56, AddSelected, 24);
             add.interactable = _deckName != null && DeckRules.CanAddCard(_deck, card.Id) == null;
             var remove = Theme.Ghost(t, "REMOVE", 32 + (w - 52) / 2, 492, (w - 52) / 2, 56, RemoveSelected, 20);
             remove.interactable = copies > 0;
@@ -377,7 +377,8 @@ namespace BrawlTCG.UnityApp
             Texture2D icon = Art.Weapon(weapon);
             if (icon != null) UI.Picture(chip.transform, icon, 5, 5, 30, 30, cover: false);
             else Theme.Label(chip.transform, "ANY", 11, Theme.Text, 0, 0, 36, 40, TextAnchor.MiddleCenter, display: true);
-            Theme.Label(chip.transform, amount == 0 ? "—" : $"×{amount}", 14, burn > 0 ? new Color32(255, 150, 70, 255) : Theme.Gold, 32, 0, 24, 40, TextAnchor.MiddleCenter, display: true);
+            Theme.Label(chip.transform, amount == 0 ? "—" : $"×{amount}", 14, Theme.Gold, 32, 0, 24, 40, TextAnchor.MiddleCenter, display: true);
+            if (burn > 0) TriggerIcons.BurnCount(chip.transform, burn, 38, -10, 24); // flame with the number of weapons burned
             return x + 64;
         }
 
@@ -392,15 +393,17 @@ namespace BrawlTCG.UnityApp
             Transform t = panel.transform;
             float w = DeckRect.width;
 
-            _deckSelector = new ThemedSelector(t, "Your deck", 18, 16, w - 36, DeckStore.List());
+            _deckSelector = new ThemedSelector(t, "Your deck", 18, 16, w - 36, _showcase != null ? new string[0] : DeckStore.List());
             _deckSelector.Changed += name =>
             {
                 string previous = _deckName;
                 ConfirmUnsaved("SWITCH", () => SwitchDeck(name), () => _deckSelector.SetOptions(DeckStore.List(), previous));
             };
 
-            _newDeckName = Theme.Field(t, null, "New deck name", "", 18, 104, w - 36 - 140, 32);
-            Theme.Ghost(t, "NEW DECK", w - 18 - 130, 104, 130, 52, CreateDeck, 18);
+            // NEW DECK and RENAME ask for the name in a pop-up.
+            float half = (w - 36 - 10) / 2;
+            _newDeckButton = Theme.Ghost(t, "NEW DECK", 18, 104, half, 52, CreateDeck, 18);
+            _renameButton = Theme.Ghost(t, "RENAME", 18 + half + 10, 104, half, 52, RenameDeck, 18);
 
             _save = Theme.Cta(t, "SAVE", 18, 170, 220, 56, SaveDeck, 24);
             var delete = Theme.Ghost(t, "DELETE", 248, 170, w - 266, 56, DeleteDeck, 18);
@@ -614,16 +617,36 @@ namespace BrawlTCG.UnityApp
 
         void CreateDeck()
         {
-            if (string.IsNullOrWhiteSpace(_newDeckName.text)) { _app.Toast("Enter a name for the new deck."); return; }
-            string name = DeckStore.SanitizeName(_newDeckName.text);
-            if (DeckStore.Exists(name)) { _app.Toast("A deck with that name already exists."); return; }
-            ConfirmUnsaved("CREATE", () =>
+            NamePrompt("NEW DECK", "NAME YOUR DECK", "", "CREATE", typed => CheckNewName(typed), typed =>
             {
-                DeckStore.Save(name, Enumerable.Empty<int>());
-                _newDeckName.text = "";
+                string name = DeckStore.SanitizeName(typed);
+                ConfirmUnsaved("CREATE", () =>
+                {
+                    DeckStore.Save(name, Enumerable.Empty<int>());
+                    _deckSelector.SetOptions(DeckStore.List(), name);
+                    SwitchDeck(name);
+                    _app.Toast($"Created {name}. Add at least {DeckRules.MinimumCardsToSave} cards, including {DeckRules.MinimumEssenceToSave} Essence.");
+                });
+            });
+        }
+
+        /// <summary>Asks for a new name for the open deck. Unsaved changes stay unsaved (only the file moves).</summary>
+        void RenameDeck()
+        {
+            if (_deckName == null) { _app.Toast("Select a deck to rename."); return; }
+            string old = _deckName;
+            NamePrompt("RENAME DECK", old.ToUpperInvariant(), old, "RENAME", typed =>
+            {
+                string error = CheckNewName(typed, old);
+                return error ?? DeckStore.Rename(old, DeckStore.SanitizeName(typed));
+            }, typed =>
+            {
+                string name = DeckStore.SanitizeName(typed);
+                _app.Toast($"Renamed {old} to {name}.");
+                _deckName = name;
+                _confirmDelete = false;
                 _deckSelector.SetOptions(DeckStore.List(), name);
-                SwitchDeck(name);
-                _app.Toast($"Created {name}. Add at least {DeckRules.MinimumCardsToSave} cards, including {DeckRules.MinimumEssenceToSave} Essence.");
+                RefreshDeck();
             });
         }
 

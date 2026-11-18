@@ -39,6 +39,13 @@ namespace BrawlTCG.Core
 
         public void GainEssence(int gain) => Essence += gain;
 
+        /// <summary>Staging only (<see cref="Game.StageHealth"/>).</summary>
+        internal void SetHealth(int health, int maxHealth)
+        {
+            MaxHealth = maxHealth;
+            Health = health;
+        }
+
         public void BoostMaxHealth(int amount)
         {
             MaxHealth += amount;

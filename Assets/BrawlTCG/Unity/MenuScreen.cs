@@ -18,7 +18,9 @@ namespace BrawlTCG.UnityApp
         public NetSession Net;
         /// <summary>The player controlled on this machine (network games).</summary>
         public int LocalIndex;
-        public bool HotSeat => Net == null;
+        /// <summary>Showcase clip to play (Game is its staged position); null for real matches.</summary>
+        public ShowcaseClip Showcase;
+        public bool HotSeat => Net == null && Showcase == null;
     }
 
     /// <summary>The home screen: animated backdrop, navigation, featured legends, Play Online and Local Match panels.</summary>

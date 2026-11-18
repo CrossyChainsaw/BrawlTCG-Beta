@@ -19,7 +19,7 @@ namespace BrawlTCG.Core
     /// </summary>
     public static class Protocol
     {
-        public const string Version = "BTCG-UNITY-2"; // 2: 50 starting health, DiscardCard and RedrawStartingHand commands
+        public const string Version = "BTCG-UNITY-3"; // 2: 50 starting health, DiscardCard and RedrawStartingHand commands. 3: v1.1 rules (tapped abilities off, no elemental bonus at 0 damage)
         public const int DefaultPort = 5000;
         public const string HelloPrefix = "HELLO";
         public const string CommandPrefix = "CMD:";

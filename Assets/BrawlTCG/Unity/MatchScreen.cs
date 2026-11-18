@@ -89,14 +89,23 @@ namespace BrawlTCG.UnityApp
             _menu = UI.Stretch(UI.Rect("OptionsMenu", transform));
 
             _game.Notification += OnNotification;
+            if (setup.Showcase != null)
+            {
+                BeginShowcase(setup.Showcase); // staged position, scripted moves
+                return;
+            }
             _game.StartingHandRedraw = true; // both clients of a network game do this, so they stay in step
             _game.Start();
             _net?.StartReceiving();
 
             _viewer = _hotSeat ? _game.ActiveIndex : _localIndex;
-            if (_hotSeat) ShowHandoff();
+            _handoffPending = _hotSeat; // hot seat: the hand stays face down behind the intro until it's handed over
             Refresh();
-            if (!_hotSeat) ShowStartingHand();
+            PlayVersusIntro(() =>
+            {
+                if (_hotSeat) ShowHandoff();
+                else ShowStartingHand();
+            });
         }
 
         void BuildBackdrop()
@@ -156,6 +165,10 @@ namespace BrawlTCG.UnityApp
         /// <summary>Whether the person at this screen may act right now.</summary>
         bool CanAct => !_ended && !_game.IsOver && !_handoffPending && !_game.ChoosingStartingHands && IsLocallyControlled(_game.ActiveIndex);
 
+        /// <summary>Online, during the opponent's turn: the viewer's own hand and field are darkened.</summary>
+        bool WaitingForOpponent => !_ended && !_game.IsOver && !_hotSeat && !InShowcase && !_game.ChoosingStartingHands
+            && !IsLocallyControlled(_game.ActiveIndex);
+
         // ───────────────────────────── Frame loop ─────────────────────────────
 
         void Update()
@@ -166,6 +179,8 @@ namespace BrawlTCG.UnityApp
             var mouse = Mouse.current;
             bool typing = UI.IsTyping();
 
+            if (InShowcase) return; // scripted: no keyboard either
+            UpdateTimers();
             if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !OptionsOpen && CanAct)
                 Submit(GameCommand.EndTurn(_game.ActiveIndex));
 
@@ -212,7 +227,7 @@ namespace BrawlTCG.UnityApp
                 RefreshDetail();
                 if (_game.IsOver) ShowGameOver();
                 Animate(before);
-                if (wasChoosing && !_game.ChoosingStartingHands) TurnIntro(false); // both hands chosen: turn 1 begins
+                if (wasChoosing && !_game.ChoosingStartingHands) BothHandsChosen(); // turn 1 begins
             }
             if (_net.IsClosed && !_net.HasPending && !_ended)
                 EndMatch("Connection lost", "The other player disconnected.");
@@ -303,7 +318,7 @@ namespace BrawlTCG.UnityApp
             name.resizeTextForBestFit = true;
             name.resizeTextMinSize = 14;
             name.resizeTextMaxSize = 26;
-            string role = _hotSeat ? $"PLAYER {p.Index + 1}" : IsLocallyControlled(p.Index) ? "YOU" : "OPPONENT";
+            string role = _hotSeat || InShowcase ? $"PLAYER {p.Index + 1}" : IsLocallyControlled(p.Index) ? "YOU" : "OPPONENT";
             Theme.Label(t, active ? role + "  ·  ACTIVE" : role, 13, active ? Theme.Gold : Theme.TextDim, 92, 44, 220, 18, display: true);
 
             // Counters (top-right)
@@ -379,7 +394,7 @@ namespace BrawlTCG.UnityApp
             var bg = Theme.RoundedPanel(_board, new Color(0.03f, 0.04f, 0.12f, 0.55f), lane.x, lane.y, lane.width, lane.height, 22, bottom ? "MyLane" : "EnemyLane");
             bg.raycastTarget = false;
             Quiet(Theme.RoundedPanel(bg.transform, new Color(1, 1, 1, 0.08f), 0, 0, lane.width, lane.height, 22, "Line", outline: true));
-            string label = bottom ? (_hotSeat || IsLocallyControlled(p.Index) ? "YOUR FIELD" : $"{p.Name.ToUpperInvariant()}'S FIELD") : $"{p.Name.ToUpperInvariant()}'S FIELD";
+            string label = bottom && !InShowcase && (_hotSeat || IsLocallyControlled(p.Index)) ? "YOUR FIELD" : $"{p.Name.ToUpperInvariant()}'S FIELD";
             Theme.Label(bg.transform, $"{label}  ·  {p.PlayingField.Count}/{Game.MaxLegendsOnField}", 14, Theme.TextFaint, 18, 8, 400, 20, display: true);
             _zones[(BoardZone.PlayingField, p.Index)] = bg.rectTransform;
             _zoneOutlines[(BoardZone.PlayingField, p.Index)] = DropOutline(bg.transform, lane.width, lane.height, 22);
@@ -398,7 +413,9 @@ namespace BrawlTCG.UnityApp
                 LegendCard legend = p.PlayingField[slot];
                 // Stacked weapon / battle cards peek out above the legend, first card closest to it.
                 int shown = Mathf.Min(legend.StackedCards.Count, 4);
-                bool spent = legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsTapped;
+                // Darkened: used up this turn, or (your side) waiting for the opponent's turn to end.
+                bool idle = bottom && WaitingForOpponent;
+                bool spent = idle || legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsTapped;
                 for (int k = shown - 1; k >= 0; k--)
                 {
                     CardView stacked = AddCard(legend.StackedCards[k], true, x, y - 14 * (k + 1), p, BoardZone.Stacked, k);
@@ -408,6 +425,7 @@ namespace BrawlTCG.UnityApp
                 CardView view = AddCard(legend, true, x, y, p, BoardZone.PlayingField, slot, tapped: legend.IsTapped);
                 _legendViews.Add(view);
 
+                if (idle) view.SetDimmed(true);
                 if (legend.IsTapped) { /* ribbon is painted on the card */ }
                 else if (legend.AttackedThisTurn && p == _game.ActivePlayer)
                 {
@@ -449,6 +467,8 @@ namespace BrawlTCG.UnityApp
 
             string title;
             Color titleColor;
+            _turnTimerLabel = null;
+            _turnTimerBar = null;
             if (_game.ChoosingStartingHands && !_game.IsOver)
             {
                 bool chosen = _game.HasChosenStartingHand(_viewer);
@@ -465,7 +485,7 @@ namespace BrawlTCG.UnityApp
                 title = "MATCH OVER";
                 titleColor = Theme.Gold;
             }
-            else if (CanAct)
+            else if (CanAct && !InShowcase)
             {
                 title = "YOUR TURN";
                 titleColor = Theme.Gold;
@@ -480,11 +500,17 @@ namespace BrawlTCG.UnityApp
                 title = $"{_game.ActivePlayer.Name.ToUpperInvariant()}'S TURN";
                 titleColor = Theme.Text;
             }
-            Theme.Label(t, title, 34, titleColor, 28, 8, 640, 46, TextAnchor.MiddleLeft, display: true);
+            Theme.Label(t, title, 34, titleColor, 28, 8, 620, 46, TextAnchor.MiddleLeft, display: true);
             string sub = $"Turn {_game.TurnNumber}";
-            if (CanAct) sub += "  ·  Drag cards onto the board, click a legend to attack, Space ends your turn";
+            if (InShowcase) { }
+            else if (CanAct) sub += "  ·  Drag cards onto the board, click a legend to attack, Space ends your turn";
             else if (!_game.IsOver && !_hotSeat) sub += "  ·  Waiting for your opponent";
-            Theme.Label(t, sub, 16, Theme.TextDim, 30, 54, 760, 26, TextAnchor.MiddleLeft);
+            var subLabel = Theme.Label(t, sub, 16, Theme.TextDim, 30, 54, 630, 26, TextAnchor.MiddleLeft);
+            subLabel.resizeTextForBestFit = true;
+            subLabel.resizeTextMinSize = 12;
+            subLabel.resizeTextMaxSize = 16;
+            subLabel.verticalOverflow = VerticalWrapMode.Truncate;
+            DrawTurnTimer(t);
 
             if (CanAct)
                 Theme.Cta(t, "END TURN", Strip.width - 236, 16, 212, 60, EndTurnClicked, 28);
@@ -630,7 +656,12 @@ namespace BrawlTCG.UnityApp
                 v.DragStarted = OnDragStarted;
                 v.DragEnded = OnDragEnded;
                 v.gameObject.AddComponent<HandHover>();
-                if (showPlayable && IsPlayable(p, i))
+                if (WaitingForOpponent)
+                {
+                    // Not your turn: the whole hand is darkened.
+                    v.SetDimmed(true);
+                }
+                else if (showPlayable && IsPlayable(p, i))
                 {
                     v.SetGlow(PlayableGlow, 0.5f);
                     v.gameObject.AddComponent<GlowPulse>();
@@ -988,7 +1019,9 @@ namespace BrawlTCG.UnityApp
                 string effects = TriggerIcons.SplitCardText(legend).abilities;
                 if (!string.IsNullOrWhiteSpace(effects))
                 {
-                    Theme.Label(t, "ABILITIES", 16, Theme.Gold, 24, y + 4, 300, 22, display: true);
+                    // A tapped legend's abilities are turned off (Game skips its triggers): shown dimmed.
+                    bool off = legend.IsTapped && legend.OnPlayingField;
+                    Theme.Label(t, off ? "ABILITIES  ·  OFF WHILE TAPPED" : "ABILITIES", 16, off ? Theme.TextDim : Theme.Gold, 24, y + 4, 400, 22, display: true);
                     int[] mentioned = CardReferences.For(card);
                     float textW = W - 48;
                     if (mentioned != null)
@@ -998,7 +1031,7 @@ namespace BrawlTCG.UnityApp
                         PeekRow(t, mentioned, W - 24 - pw + 10, y + 4, pw, 0.3f);
                         textW -= pw + 8;
                     }
-                    TriggerIcons.PaintAbilities(t, effects, 24, y + 30, textW, 62, 16, 11, Theme.Text);
+                    TriggerIcons.PaintAbilities(t, effects, 24, y + 30, textW, 62, 16, 11, off ? Theme.TextFaint : Theme.Text);
                     y += 96;
                 }
 
@@ -1079,7 +1112,7 @@ namespace BrawlTCG.UnityApp
                     Line(DebuffHex, "Can't deal damage", "Silent Galaxy", null)));
             if (legend.IsTapped)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Tapped,
-                    Line(StatusHex, "Tapped", legend.TappedBy, "skips its next attack"),
+                    Line(StatusHex, "Tapped", legend.TappedBy, "skips its next attack, abilities off"),
                     Line(StatusHex, "Tapped", legend.TappedBy, null)));
             if (legend.IsBurned)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Burned,
@@ -1290,12 +1323,7 @@ namespace BrawlTCG.UnityApp
                 Theme.Label(chip.transform, "ANY", 13, new Color(1, 1, 1, alpha), 2, 0, 40, 48, TextAnchor.MiddleCenter, display: true);
             }
             Theme.Label(chip.transform, amount == 0 ? "—" : $"×{amount}", 16, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, alpha), 36, 0, 26, 48, TextAnchor.MiddleCenter, display: true);
-            if (burn > 0)
-            {
-                var flame = Theme.RoundedPanel(chip.transform, new Color32(255, 120, 30, 255), 44, -6, 24, 18, 9, "Burn");
-                flame.raycastTarget = false;
-                Theme.Label(flame.transform, burn.ToString(), 13, Theme.Ink, 0, 0, 24, 18, TextAnchor.MiddleCenter, display: true);
-            }
+            if (burn > 0) TriggerIcons.BurnCount(chip.transform, burn, 42, -12, 28); // flame with the number of weapons burned
             return x + 72;
         }
 
@@ -1359,12 +1387,24 @@ namespace BrawlTCG.UnityApp
 
         RectTransform ShowOverlay(float opacity)
         {
+            ResetHandOverlay();
             UI.Clear(_overlay);
             var dim = UI.FullPanel(_overlay, new Color(Theme.Night.r, Theme.Night.g, Theme.Night.b, opacity), "Dim");
             return dim.rectTransform;
         }
 
-        void CloseOverlay() => UI.Clear(_overlay);
+        void CloseOverlay()
+        {
+            ResetHandOverlay();
+            UI.Clear(_overlay);
+        }
+
+        void ResetHandOverlay()
+        {
+            _handOverlay = false;
+            _handTimerLabel = null;
+            _opponentHandLabel = null;
+        }
 
         Transform Dialog(RectTransform dim, string title, string message, string eyebrow = null)
         {
@@ -1417,6 +1457,10 @@ namespace BrawlTCG.UnityApp
             Theme.AddShadow(title, 3, 0.6f);
             Theme.Label(dim, "Click the cards you want to shuffle back into your deck. You draw as many new cards. You can do this once.",
                 20, Theme.TextDim, 0, 226, 1920, 30, TextAnchor.MiddleCenter);
+            StartHandClock();
+            _handTimerLabel = Theme.Label(dim, "", 20, Theme.TextDim, 0, 772, 1920, 28, TextAnchor.MiddleCenter, display: true);
+            _handTimerLabel.raycastTarget = false;
+            OpponentHandLine(dim, 806);
 
             const float scale = 1.3f, gap = 18;
             float w = CardView.W * scale;
@@ -1448,6 +1492,7 @@ namespace BrawlTCG.UnityApp
         void ConfirmStartingHand()
         {
             int me = _viewer, mask = 0;
+            _handDeadline = -1; // chosen: the clock stops
             List<Card> hand = _game.Players[me].Hand;
             foreach (int i in _redrawPick) mask |= 1 << i;
             var oldBySlot = _redrawPick.ToDictionary(i => i, i => hand[i]); // the new cards take these same slots
@@ -1470,12 +1515,18 @@ namespace BrawlTCG.UnityApp
                 {
                     CloseOverlay();
                     // Online: if our choice was the last one, turn 1 begins now (if the opponent's choice arrives later,
-                    // its own handler shows the banner); otherwise the strip says we're waiting.
+                    // BothHandsChosen shows the banner).
                     if (startedTurnOne) TurnIntro(false);
                 }
             }
 
-            if (mask == 0) { Continue(); return; } // kept the hand: nothing new to show
+            if (mask == 0)
+            {
+                // Kept the hand. Online, while the opponent is still choosing, we wait on the hand screen.
+                if (!_hotSeat && _game.ChoosingStartingHands) ShowWaitingForHands();
+                else Continue();
+                return;
+            }
 
             // The new starting hand. If this choice also started turn 1 and it's our turn, the turn's draw (the last card)
             // isn't part of the starting hand.
@@ -1494,6 +1545,7 @@ namespace BrawlTCG.UnityApp
         {
             _handoffPending = false; // shown before any hand-off to the other player
             var dim = ShowOverlay(0.95f);
+            _handOverlay = true; // the turn clock waits until this is closed
             Theme.Label(dim, "YOUR STARTING HAND", 18, Theme.Gold, 0, 112, 1920, 26, TextAnchor.MiddleCenter, display: true);
             var title = Theme.Label(dim, "YOUR NEW HAND", 58, Theme.Text, 0, 142, 1920, 80, TextAnchor.MiddleCenter, display: true);
             Theme.AddShadow(title, 3, 0.6f);
@@ -1528,7 +1580,52 @@ namespace BrawlTCG.UnityApp
                 delay += 0.3f;
             }
 
+            if (!_hotSeat && _game.ChoosingStartingHands)
+            {
+                // Online, the opponent is still choosing: stay here; BothHandsChosen closes this once they're done.
+                OpponentHandLine(dim, 700);
+                return;
+            }
             Theme.Cta(dim, "CONTINUE", 960 - 210, 680, 420, 76, () => { CloseOverlay(); next(); }, 30);
+        }
+
+        /// <summary>Online, after keeping the hand: the hand, and whether the opponent is still choosing theirs.</summary>
+        void ShowWaitingForHands()
+        {
+            var dim = ShowOverlay(0.95f);
+            _handOverlay = true;
+            Player me = _game.Players[_viewer];
+            Theme.Label(dim, "YOUR STARTING HAND", 18, Theme.Gold, 0, 112, 1920, 26, TextAnchor.MiddleCenter, display: true);
+            var title = Theme.Label(dim, "HAND KEPT", 58, Theme.Text, 0, 142, 1920, 80, TextAnchor.MiddleCenter, display: true);
+            Theme.AddShadow(title, 3, 0.6f);
+            Theme.Label(dim, "The first turn starts as soon as both players have chosen.", 20, Theme.TextDim, 0, 226, 1920, 30, TextAnchor.MiddleCenter);
+
+            const float scale = 1.3f, gap = 18;
+            float w = CardView.W * scale;
+            int n = me.Hand.Count;
+            float start = 960 - (n * w + (n - 1) * gap) / 2;
+            for (int i = 0; i < n; i++)
+                CardView.Create(dim, me.Hand[i], true, start + i * (w + gap), 300, scale);
+            OpponentHandLine(dim, 700);
+        }
+
+        /// <summary>Online: the opponent's choice arrived after ours. Leave the hand screen and start turn 1.</summary>
+        void BothHandsChosen()
+        {
+            if (!_handOverlay)
+            {
+                TurnIntro(false);
+                return;
+            }
+            if (_opponentHandLabel != null) _opponentHandLabel.text = OpponentHandStatus(); // "... is ready"
+            // A moment to read it (and to let a redraw's cards land) before the board.
+            After(1.2f, () =>
+            {
+                if (_ended || !_handOverlay) return;
+                CloseOverlay();
+                Refresh();
+                TurnIntro(false);
+            });
         }
 
         /// <summary>Old card sinks and fades out; the new card rises into the slot, fading in while it turns over.</summary>
@@ -1591,7 +1688,7 @@ namespace BrawlTCG.UnityApp
             {
                 var dim = ShowOverlay(0.75f);
                 bool iWon = !_hotSeat && winner != null && winner.Index == _localIndex;
-                string title = _hotSeat ? $"{winner?.Name.ToUpperInvariant()} WINS" : iWon ? "VICTORY" : "DEFEAT";
+                string title = _hotSeat || InShowcase ? $"{winner?.Name.ToUpperInvariant()} WINS" : iWon ? "VICTORY" : "DEFEAT";
                 var box = Dialog(dim, title, $"{loser?.Name} has been defeated after {_game.TurnNumber} turns.", "MATCH OVER");
                 Theme.Cta(box, "BACK TO MENU", 220, 296, 360, 76, LeaveMatch, 30);
             });

@@ -86,10 +86,12 @@ namespace BrawlTCG.Core
 
         /// <summary>
         /// Elemental bonus: for each weapon requirement, if the legend holds at least the required amount of that weapon
-        /// in its own element, the attack deals that amount of extra damage.
+        /// in its own element, the attack deals that amount of extra damage. An attack that deals no damage of its own
+        /// (0 ATK, e.g. after The Finger) gets no bonus either.
         /// </summary>
         public static int CalculateElementalBonus(LegendCard attacker, Attack attack)
         {
+            if (CalculateBaseDamage(attacker, attack) <= 0) return 0;
             int bonus = 0;
             bonus += BonusFor(attacker, attack.WeaponOne, attack.WeaponOneAmount);
             if (attack.WeaponTwo != null)
