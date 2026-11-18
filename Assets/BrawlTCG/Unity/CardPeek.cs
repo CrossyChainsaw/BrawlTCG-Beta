@@ -20,6 +20,8 @@ namespace BrawlTCG.UnityApp
             [AttackCatalogue.Yumiko_GrabOrbs] = new[] { 504 },
             [AttackCatalogue.MasterThief_GrabBomb] = new[] { 500 },
             [AttackCatalogue.PlagueKnight_GrabHealingPotion] = new[] { 501 },
+            [AttackCatalogue.Kaya_CraftSnowball] = new[] { 502 },
+            [AttackCatalogue.Kaya_BuildASnowman] = new[] { 7000 },
         };
 
         /// <summary>Cards mentioned by a card's own text (abilities, stage or battle effects).</summary>

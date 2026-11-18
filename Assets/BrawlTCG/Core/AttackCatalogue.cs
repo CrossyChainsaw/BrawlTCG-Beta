@@ -138,6 +138,15 @@ namespace BrawlTCG.Core
                 SelfDestruct(a);
             }, friendlyFire: true,
             kind: AttackKind.Boost);
+        // Alpine Kaya: both count as her attack for the turn (insta = no target needed).
+        public static readonly Attack Kaya_CraftSnowball = new Attack("Craft Snowball", Status, Weapon.Any, 1,
+            (a, t, atk, g) => g.GenerateCard(502), instaEffect: true,
+            kind: AttackKind.Craft);
+        public static readonly Attack Kaya_BuildASnowman = new Attack("Build a Snowman", Status, Weapon.Any, 2,
+            (a, t, atk, g) => g.GenerateAndPlayLegend(7000), weaponOneBurnAmount: 1, instaEffect: true,
+            precondition: (g, legend) => legend.Owner.PlayingField.Count >= Game.MaxLegendsOnField ? $"Already {Game.MaxLegendsOnField} Legends" : null,
+            kind: AttackKind.Summon);
+
         public static readonly Attack Jiro_SpawnAndPlayNinjaSpirit = new Attack("Summon Ninja Spirit", Status, Weapon.Sword, 1,
             (a, t, atk, g) => g.GenerateAndPlayLegend(5003), instaEffect: true,
             precondition: (g, legend) => legend.Owner.PlayingField.Count >= Game.MaxLegendsOnField ? $"Already {Game.MaxLegendsOnField} Legends" : null,

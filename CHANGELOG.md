@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.3.0 Beta (in progress)
+
+### New cards
+
+- **Alpine Kaya** (Legend, Arctic, 4, 2 ATK / 16 HP, Spear + Bow). **Craft Snowball** (any weapon ×1): puts a Snowball in your hand. **Build a Snowman** (any weapon ×2, burns 1): summons Snowman Kor onto your field.
+
+### Fixes
+
+- **Avatars with a transparent background** (Snowman Kor) now sit on their element colour everywhere, as in the avatar picker, instead of showing the gold circle behind them.
+
+---
+
 ## v1.2.0 Beta
 
 Four new cards, three reworks, avatars and a batch of quality-of-life fixes. **v1.2.0 can't play online with v1.1.0 or older.** From now on, versions with the same major.minor number (1.2.x) can always play each other, and a mismatch tells you who needs to update.

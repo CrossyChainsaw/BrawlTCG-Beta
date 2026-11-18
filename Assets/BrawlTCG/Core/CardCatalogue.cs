@@ -85,6 +85,7 @@ namespace BrawlTCG.Core
             // Arctic legends
             Legend(7000, "Snowman Kor", 4, Element.Arctic, "SnowmanKor", 0, 16, Weapon.Gauntlets, Weapon.Hammer, A(AC.Any_Freeze)),
             Legend(7001, "Atlantean Ada", 2, Element.Arctic, "Atlantean_Ada", 2, 5, Weapon.Blasters, Weapon.Spear, A(AC.Blaster_Shot, AC.Spear_Stab, AC.Ada_SpawnAndPlayAtlantis)),
+            Legend(7002, "Alpine Kaya", 4, Element.Arctic, "AlpineKaya", 2, 16, Weapon.Spear, Weapon.Bow, A(AC.Kaya_CraftSnowball, AC.Kaya_BuildASnowman)),
 
             // Weapons
             W(13000, "Axe of Regrowth", Element.Nature, "Axe_of_Regrowth", Weapon.Axe),
