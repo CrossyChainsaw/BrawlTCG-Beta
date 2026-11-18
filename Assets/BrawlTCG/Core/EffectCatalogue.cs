@@ -7,23 +7,22 @@ namespace BrawlTCG.Core
     public static class EffectCatalogue
     {
         // ───────────── Start turn (stages) ─────────────
-        // Stage start-turn effects receive the ACTIVE player's legends as target, so each player's legends are
-        // affected once per round (at the start of their own turn).
+        // Mustafar, Fangwild and Atlantis hit every legend on the board (both players) at the start of every turn,
+        // so each legend is affected twice per round. Stage start-turn effects are handed only the active player's
+        // legends as target, so these ignore it and take all legends from the game.
 
-        const int MustafarDamage = 2;
+        const int MustafarDamage = 1;
         public static readonly Effect Mustafar = new Effect(
             $"All non-Fire Legends lose {MustafarDamage} health.",
-            (target, card, game, played) => StartTurnDamage(target, MustafarDamage, Element.Fire));
+            (target, card, game, played) => StartTurnDamage(game, MustafarDamage, Element.Fire));
 
-        // Runs at the start of every turn on the active player's field, so both players' Magic and Nature legends grow,
-        // each on their own turn (#43).
+        // #43: grows Magic and Nature legends instead of healing them.
         const int FangwildMaxHealth = 2;
         public static readonly Effect Fangwild = new Effect(
             $"All Magic and Nature Legends gain +{FangwildMaxHealth} max health.",
             (target, card, game, played) =>
             {
-                if (!(target is IEnumerable<LegendCard> legends)) return;
-                foreach (LegendCard legend in legends)
+                foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
                     if (legend.Element == Element.Magic || legend.Element == Element.Nature)
                         legend.ModifyStat(Stat.Health, FangwildMaxHealth); // raises max and current HP
             });
@@ -177,7 +176,7 @@ namespace BrawlTCG.Core
 
         public static readonly Effect Atlantis_StartTurn = new Effect(
             $"All non-Arctic Legends lose {AtlantisDamage} health.",
-            (target, card, game, played) => StartTurnDamage(target, AtlantisDamage, Element.Arctic));
+            (target, card, game, played) => StartTurnDamage(game, AtlantisDamage, Element.Arctic));
 
         // ───────────── Sozin's Comet (#50) and Full Eclipse (#51) ─────────────
         // While in play, every legend of the stage's element (both players') gets +5/+5. When the stage leaves, the
@@ -392,10 +391,10 @@ namespace BrawlTCG.Core
                 legend.Stun();
         }
 
-        static void StartTurnDamage(object target, int damage, params Element[] immuneElements)
+        /// <summary>Damages every legend on the board (both players) except those of the immune elements.</summary>
+        static void StartTurnDamage(Game game, int damage, params Element[] immuneElements)
         {
-            if (!(target is IEnumerable<LegendCard> legends)) return;
-            foreach (LegendCard legend in legends)
+            foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
             {
                 if (!immuneElements.Contains(legend.Element))
                     legend.LoseHealth(damage);
