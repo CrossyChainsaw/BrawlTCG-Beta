@@ -37,17 +37,62 @@ namespace BrawlTCG.UnityApp
         public static void Paint(Image circle, float size, int avatarId, string name, int fontSize, Color textColor)
         {
             UI.Clear(circle.transform);
-            Texture2D tex = Protocol.ValidAvatar(avatarId) == None ? null : Art.Get(CardCatalogue.Get(avatarId).Art);
-            if (tex != null)
+            Texture2D portrait = Portrait(avatarId, size);
+            if (portrait != null)
             {
-                // The circle masks the square art into a round portrait.
-                if (circle.GetComponent<Mask>() == null) circle.gameObject.AddComponent<Mask>().showMaskGraphic = true;
-                UI.Picture(circle.transform, tex, 0, 0, size, size, cover: true);
+                UI.Picture(circle.transform, portrait, 0, 0, size, size, cover: false);
                 return;
             }
             string trimmed = (name ?? "").Trim();
             string initial = trimmed.Length > 0 ? trimmed.Substring(0, 1).ToUpperInvariant() : "?";
             Theme.Label(circle.transform, initial, fontSize, textColor, 0, 0, size, size, TextAnchor.MiddleCenter, display: true).raycastTarget = false;
+        }
+
+        static readonly Dictionary<(int id, int px), Texture2D> Portraits = new Dictionary<(int, int), Texture2D>();
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetStatics() => Portraits.Clear();
+
+        /// <summary>
+        /// The legend's art cropped to a square and cut into a circle with a soft, anti-aliased edge, rendered at twice
+        /// <paramref name="size"/> so it stays sharp. A UI Mask would cut a hard, jagged edge instead. Cached per size.
+        /// </summary>
+        static Texture2D Portrait(int avatarId, float size)
+        {
+            if (Protocol.ValidAvatar(avatarId) == None) return null;
+            Texture2D art = Art.Get(CardCatalogue.Get(avatarId).Art);
+            if (art == null) return null;
+            int px = Mathf.Clamp(Mathf.CeilToInt(size * 2), 32, 512);
+            if (Portraits.TryGetValue((avatarId, px), out Texture2D cached) && cached != null) return cached;
+
+            // Centre square of the art, rendered on the GPU (the art itself is not CPU-readable), then read back.
+            float aspect = (float)art.width / art.height;
+            Vector2 scale = aspect > 1 ? new Vector2(1 / aspect, 1) : new Vector2(1, aspect);
+            Vector2 offset = new Vector2((1 - scale.x) / 2, (1 - scale.y) / 2);
+            RenderTexture rt = RenderTexture.GetTemporary(px, px, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
+            Graphics.Blit(art, rt, scale, offset);
+            var tex = new Texture2D(px, px, TextureFormat.RGBA32, false, false) { name = "Avatar " + avatarId, wrapMode = TextureWrapMode.Clamp };
+            RenderTexture previous = RenderTexture.active;
+            RenderTexture.active = rt;
+            tex.ReadPixels(new Rect(0, 0, px, px), 0, 0);
+            RenderTexture.active = previous;
+            RenderTexture.ReleaseTemporary(rt);
+
+            // Round cut-out: alpha fades over one pixel at the edge.
+            Color32[] pixels = tex.GetPixels32();
+            float r = px / 2f;
+            for (int y = 0; y < px; y++)
+                for (int x = 0; x < px; x++)
+                {
+                    float dx = x + 0.5f - r, dy = y + 0.5f - r;
+                    float a = Mathf.Clamp01(r - Mathf.Sqrt(dx * dx + dy * dy));
+                    int i = y * px + x;
+                    pixels[i].a = (byte)(pixels[i].a * a);
+                }
+            tex.SetPixels32(pixels);
+            tex.Apply(false, true); // no longer readable: frees the CPU copy
+            Portraits[(avatarId, px)] = tex;
+            return tex;
         }
 
         /// <summary>

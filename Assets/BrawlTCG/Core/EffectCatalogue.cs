@@ -15,15 +15,17 @@ namespace BrawlTCG.Core
             $"All non-Fire Legends lose {MustafarDamage} health.",
             (target, card, game, played) => StartTurnDamage(target, MustafarDamage, Element.Fire));
 
-        // Runs at the start of every turn on the active player's field, so each player's legends grow on their own turn (#43).
+        // Runs at the start of every turn on the active player's field, so both players' Magic and Nature legends grow,
+        // each on their own turn (#43).
         const int FangwildMaxHealth = 2;
         public static readonly Effect Fangwild = new Effect(
-            $"Your Legends gain +{FangwildMaxHealth} max health.",
+            $"All Magic and Nature Legends gain +{FangwildMaxHealth} max health.",
             (target, card, game, played) =>
             {
                 if (!(target is IEnumerable<LegendCard> legends)) return;
                 foreach (LegendCard legend in legends)
-                    legend.ModifyStat(Stat.Health, FangwildMaxHealth); // raises max and current HP
+                    if (legend.Element == Element.Magic || legend.Element == Element.Nature)
+                        legend.ModifyStat(Stat.Health, FangwildMaxHealth); // raises max and current HP
             });
 
         public static readonly Effect Workshop_StartTurn = new Effect(

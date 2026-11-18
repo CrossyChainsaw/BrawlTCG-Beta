@@ -17,7 +17,7 @@ When Sozin's Comet or Full Eclipse leaves play, the +5/+5 goes away again, but a
 
 ### Card reworks
 
-- **Fangwild** (#43). At the start of each turn, that player's legends gain +2 max health (and +2 HP). It used to heal Magic and Nature legends by 2.
+- **Fangwild** (#43). At the start of each turn, that player's Magic and Nature legends gain +2 max health (and +2 HP), for both players. It used to heal them by 2.
 - **Evil Hideout** (#49). Now a Wild card, and only Shadow and Wild legends get the +3 Power. Fire legends no longer benefit.
 
 ### Tapped is now called Stunned
@@ -37,6 +37,7 @@ When Sozin's Comet or Full Eclipse leaves play, the +5/+5 goes away again, but a
 ### Match screen
 
 - **No accidental end turn** (#39). END TURN and Space don't work while the YOUR TURN banner is still showing.
+- **Look through a discard pile.** Click either player's discard pile to see every card in it, newest first. Hover a card to enlarge it, click it for its details.
 
 ### Deck builder
 

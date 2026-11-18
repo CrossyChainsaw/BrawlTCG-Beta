@@ -53,7 +53,7 @@ namespace BrawlTCG.UnityApp
         bool _handoffPending;
         bool _ended;
 
-        RectTransform _board, _cards, _detail, _drag, _overlay;
+        RectTransform _board, _cards, _detail, _pileView, _drag, _overlay;
         readonly Dictionary<(BoardZone zone, int player), RectTransform> _zones = new Dictionary<(BoardZone, int), RectTransform>();
         readonly Dictionary<(BoardZone zone, int player), Image> _zoneOutlines = new Dictionary<(BoardZone, int), Image>();
         readonly List<CardView> _legendViews = new List<CardView>();
@@ -86,6 +86,7 @@ namespace BrawlTCG.UnityApp
             _top = UI.Stretch(UI.Rect("FxTop", transform));
             _shaker = gameObject.AddComponent<Shaker>();
             _detail = UI.Stretch(UI.Rect("Detail", transform));
+            _pileView = UI.Stretch(UI.Rect("PileView", transform));
             _drag = UI.Stretch(UI.Rect("Drag", transform));
             _overlay = UI.Stretch(UI.Rect("Overlay", transform));
             _menu = UI.Stretch(UI.Rect("OptionsMenu", transform));
@@ -183,7 +184,7 @@ namespace BrawlTCG.UnityApp
 
             if (InShowcase) return; // scripted: no keyboard either
             UpdateTimers();
-            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !OptionsOpen && CanAct && !TurnIntroPlaying)
+            if (kb != null && kb.spaceKey.wasPressedThisFrame && !typing && _overlay.childCount == 0 && !PileViewOpen && !OptionsOpen && CanAct && !TurnIntroPlaying)
                 Submit(GameCommand.EndTurn(_game.ActiveIndex));
 
             // Esc steps back: closes the options menu, cancels targeting, closes the card detail, or opens the options.
@@ -193,6 +194,7 @@ namespace BrawlTCG.UnityApp
             if (esc || right)
             {
                 if (OptionsOpen) { if (esc) CloseOptions(); }
+                else if (PileViewOpen) CloseDiscardPile();
                 else if (Targeting) { CancelTargeting(); Refresh(); }
                 else if (_detailCard != null) CloseDetail();
                 else if (esc) OpenOptions();
@@ -295,6 +297,7 @@ namespace BrawlTCG.UnityApp
             DrawTopHand();
             DrawBottomHand();
             DrawCorner();
+            if (PileViewOpen) ShowDiscardPile(_pileViewPlayer); // keep an open discard pile up to date
         }
 
         // ── Player panels ──
@@ -791,7 +794,74 @@ namespace BrawlTCG.UnityApp
                 return;
             }
             if (!view.FaceUp) return;
+            if (view.Zone == BoardZone.DiscardPile) { ShowDiscardPile(view.PlayerIndex); return; }
             OpenDetail(view.Card);
+        }
+
+        // ── Discard pile viewer ──
+
+        int _pileViewPlayer = -1;
+        bool PileViewOpen => _pileViewPlayer >= 0;
+
+        /// <summary>Every card in a player's discard pile, newest first. Hover for the full card, click to open its details.</summary>
+        void ShowDiscardPile(int playerIndex)
+        {
+            Player p = _game.Players[playerIndex];
+            UI.Clear(_pileView);
+            if (p.DiscardPile.Count == 0) { _pileViewPlayer = -1; return; }
+            _pileViewPlayer = playerIndex;
+
+            var dim = UI.FullPanel(_pileView, new Color(Theme.Night.r, Theme.Night.g, Theme.Night.b, 0.72f), "Dim");
+            UI.Clicks(dim.gameObject, _ => CloseDiscardPile());
+
+            const float W = 1060, H = 780, X = 120, Y = (1080 - H) / 2, Scale = 0.8f, Gap = 18;
+            var box = Theme.GlassPanel(dim.rectTransform, X, Y, W, H, 26, "DiscardPile");
+            box.color = new Color32(11, 14, 34, 255);
+            UI.Clicks(box.gameObject, _ => { });
+            Transform t = box.transform;
+            string owner = _hotSeat || InShowcase || !IsLocallyControlled(p.Index) ? p.Name.ToUpperInvariant() + "'S" : "YOUR";
+            Theme.Label(t, $"{owner} DISCARD PILE", 36, Theme.Text, 36, 24, W - 140, 50, display: true);
+            Theme.Label(t, $"{p.DiscardPile.Count} CARD{(p.DiscardPile.Count == 1 ? "" : "S")}  ·  NEWEST FIRST  ·  HOVER TO ENLARGE, CLICK FOR DETAILS",
+                15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            var close = Theme.Ghost(t, "×", W - 70, 26, 44, 44, CloseDiscardPile, 30);
+            close.GetComponentInChildren<Text>().font = Theme.Body; // the display font has no multiplication sign
+
+            var area = UI.Place(UI.Rect("Grid", t), 20, 112, W - 40, H - 132);
+            var scroll = area.gameObject.AddComponent<ScrollRect>();
+            scroll.horizontal = false;
+            scroll.scrollSensitivity = 60;
+            scroll.movementType = ScrollRect.MovementType.Clamped;
+            var viewport = UI.Stretch(UI.Rect("Viewport", area));
+            viewport.gameObject.AddComponent<RectMask2D>();
+            viewport.gameObject.AddComponent<Image>().color = new Color(0, 0, 0, 0);
+            var content = UI.Rect("Content", viewport);
+            content.anchorMin = new Vector2(0, 1);
+            content.anchorMax = new Vector2(1, 1);
+            content.pivot = new Vector2(0.5f, 1);
+            content.offsetMin = content.offsetMax = Vector2.zero;
+            var grid = content.gameObject.AddComponent<GridLayoutGroup>();
+            grid.cellSize = new Vector2(CardView.W * Scale, CardView.H * Scale);
+            grid.spacing = new Vector2(Gap, Gap);
+            grid.padding = new RectOffset(16, 16, 8, 16);
+            content.gameObject.AddComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            scroll.viewport = viewport;
+            scroll.content = content;
+
+            // The full-size card appears right of the panel.
+            var previewAt = new Vector2(X + W + 24, (1080 - CardView.H * 1.9f) / 2);
+            for (int i = p.DiscardPile.Count - 1; i >= 0; i--)
+            {
+                Card card = p.DiscardPile[i];
+                var cell = UI.Rect(card.Name, content);
+                CardView thumb = CardPeek.Create(cell, card.Id, 0, 0, Scale, _drag, previewAt);
+                UI.Clicks(thumb.gameObject, _ => { CloseDiscardPile(); OpenDetail(card); });
+            }
+        }
+
+        void CloseDiscardPile()
+        {
+            _pileViewPlayer = -1;
+            UI.Clear(_pileView); // the thumbnails remove their own full-size previews
         }
 
         bool IsValidAttackTarget(Player side, LegendCard legend)
