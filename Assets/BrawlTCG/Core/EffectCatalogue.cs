@@ -294,8 +294,8 @@ namespace BrawlTCG.Core
             (target, card, game, played) => game.GenerateRandomCards(ChestCards));
 
         public static readonly Effect Bubble = new Effect(
-            "Tap legend Card",
-            (target, card, game, played) => TapLegendCard(target));
+            "Stun a legend",
+            (target, card, game, played) => StunLegendCard(target));
 
         public static readonly Effect DragonChest = ElementChest(Element.Fire);
         public static readonly Effect WildChest = ElementChest(Element.Wild);
@@ -346,11 +346,11 @@ namespace BrawlTCG.Core
             });
 
         public static readonly Effect YmirsBreath = new Effect(
-            "Tap all opposing legends",
+            "Stun all opposing legends",
             (target, card, game, played) =>
             {
                 foreach (LegendCard legend in game.InactivePlayer.PlayingField)
-                    legend.TapOut();
+                    legend.Stun();
             });
 
         /// <summary>Tombstone (#46): the targeted opposing legend is eliminated, whatever its HP.</summary>
@@ -384,10 +384,10 @@ namespace BrawlTCG.Core
 
         // ───────────── Shared helpers ─────────────
 
-        public static void TapLegendCard(object target)
+        public static void StunLegendCard(object target)
         {
             if (target is LegendCard legend)
-                legend.TapOut();
+                legend.Stun();
         }
 
         static void StartTurnDamage(object target, int damage, params Element[] immuneElements)

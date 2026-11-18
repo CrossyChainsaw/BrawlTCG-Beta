@@ -45,7 +45,7 @@ namespace BrawlTCG.Core
         Summon,
         /// <summary>Helps one of your own legends (buffs, healing).</summary>
         Boost,
-        /// <summary>Targets an enemy legend without dealing damage (curses, tapping).</summary>
+        /// <summary>Targets an enemy legend without dealing damage (curses, stuns).</summary>
         Hex,
     }
 
@@ -73,9 +73,9 @@ namespace BrawlTCG.Core
         Insta,
         /// <summary>Hits the opposing player directly (their field is empty).</summary>
         Player,
-        /// <summary>Requires one of your own untapped legends as target.</summary>
+        /// <summary>Requires one of your own legends as target (stunned ones too).</summary>
         OwnLegend,
-        /// <summary>Requires one opposing untapped legend as target.</summary>
+        /// <summary>Requires one opposing legend as target (stunned ones too).</summary>
         EnemyLegend,
         /// <summary>Hits every opposing legend.</summary>
         AllEnemies,

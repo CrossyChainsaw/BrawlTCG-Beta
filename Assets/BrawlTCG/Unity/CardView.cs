@@ -57,7 +57,7 @@ namespace BrawlTCG.UnityApp
         public RectTransform Rect => (RectTransform)transform;
 
         public static CardView Create(Transform parent, Card card, bool faceUp, float x, float y, float scale = 1f,
-            bool tapped = false)
+            bool stunned = false)
         {
             var rt = UI.Place(UI.Rect(card != null ? card.Name : "Card", parent), x, y, W, H);
             rt.localScale = new Vector3(scale, scale, 1);
@@ -80,8 +80,8 @@ namespace BrawlTCG.UnityApp
             var face = UI.Place(UI.Rect("Face", rt), 0, 0, FW, FH);
             face.localScale = new Vector3(W / FW, H / FH, 1);
             view._face = face;
-            if (view.FaceUp) CardArt.PaintFront(face, card, detailed: scale >= 1.3f, tapped: tapped);
-            else CardArt.PaintBack(face, tapped);
+            if (view.FaceUp) CardArt.PaintFront(face, card, detailed: scale >= 1.3f, stunned: stunned);
+            else CardArt.PaintBack(face, stunned);
             return view;
         }
 
@@ -199,7 +199,7 @@ namespace BrawlTCG.UnityApp
 
         public static Color Accent(Element e) => Color.Lerp(CardStyle.FrameColor(e), Color.white, 0.35f);
 
-        public static void PaintFront(RectTransform face, Card card, bool detailed = true, bool tapped = false)
+        public static void PaintFront(RectTransform face, Card card, bool detailed = true, bool stunned = false)
         {
             Color elem = CardStyle.FrameColor(card.Element);
             Color rim = Color.Lerp(elem, Color.white, 0.18f);
@@ -233,7 +233,7 @@ namespace BrawlTCG.UnityApp
             if (card is LegendCard legend) PaintLegendFooter(face, legend, accent, detailed);
             else PaintTextBox(face, card, accent);
             TriggerIcons.Paint(face, card); // ability badges: when played / while in play / start of turn
-            if (tapped) PaintTappedOverlay(face);
+            if (stunned) PaintStunnedOverlay(face);
         }
 
         static void PaintArtWindow(RectTransform face, Card card, Color elem, Color accent, bool cover)
@@ -437,26 +437,26 @@ namespace BrawlTCG.UnityApp
             t.resizeTextMaxSize = 18;
         }
 
-        /// <summary>Tapped legends stay readable: dimmed, with a diagonal TAPPED ribbon.</summary>
-        static void PaintTappedOverlay(RectTransform face)
+        /// <summary>Stunned legends stay readable: dimmed, with a diagonal STUNNED ribbon.</summary>
+        static void PaintStunnedOverlay(RectTransform face)
         {
             // Everything is clipped to the card shape so the diagonal ribbon stays inside the frame.
-            var clip = Theme.RoundedPanel(face, Color.white, 0, 0, FW, FH, 22, "TappedClip");
+            var clip = Theme.RoundedPanel(face, Color.white, 0, 0, FW, FH, 22, "StunnedClip");
             clip.raycastTarget = false;
             clip.gameObject.AddComponent<Mask>().showMaskGraphic = false;
-            Quiet(UI.Panel(clip.transform, new Color(0.02f, 0.03f, 0.1f, 0.55f), 0, 0, FW, FH, "TappedDim"));
-            var band = UI.Panel(clip.transform, new Color(0.05f, 0.06f, 0.16f, 0.92f), 0, 0, FW + 80, 62, "TappedBand");
+            Quiet(UI.Panel(clip.transform, new Color(0.02f, 0.03f, 0.1f, 0.55f), 0, 0, FW, FH, "StunnedDim"));
+            var band = UI.Panel(clip.transform, new Color(0.05f, 0.06f, 0.16f, 0.92f), 0, 0, FW + 80, 62, "StunnedBand");
             band.raycastTarget = false;
             band.rectTransform.pivot = new Vector2(0.5f, 0.5f);
             band.rectTransform.anchoredPosition = new Vector2(FW / 2, -FH / 2 + 20);
             band.rectTransform.localRotation = Quaternion.Euler(0, 0, 14);
             Quiet(UI.Panel(band.transform, Theme.Gold, 0, 0, FW + 80, 3, "Top"));
             Quiet(UI.Panel(band.transform, Theme.Gold, 0, 59, FW + 80, 3, "Bottom"));
-            var label = Theme.Label(band.transform, "TAPPED", 36, Theme.Gold, 0, 0, FW + 80, 62, TextAnchor.MiddleCenter, display: true);
+            var label = Theme.Label(band.transform, "STUNNED", 36, Theme.Gold, 0, 0, FW + 80, 62, TextAnchor.MiddleCenter, display: true);
             UI.Stretch(label.rectTransform);
         }
 
-        public static void PaintBack(RectTransform face, bool tapped)
+        public static void PaintBack(RectTransform face, bool stunned)
         {
             Color rim = Theme.GoldDeep;
             Color body = new Color32(20, 24, 58, 255);
@@ -479,14 +479,14 @@ namespace BrawlTCG.UnityApp
             var title = Theme.Label(face, "BRAWL<color=#F5C04A>TCG</color>", 30, Theme.Text, 0, 286, FW, 40, TextAnchor.MiddleCenter, display: true);
             title.supportRichText = true;
 
-            if (tapped)
+            if (stunned)
             {
-                var band = UI.Panel(face, new Color(0.05f, 0.05f, 0.1f, 0.88f), -10, FH / 2 - 30, FW + 20, 60, "Tapped");
+                var band = UI.Panel(face, new Color(0.05f, 0.05f, 0.1f, 0.88f), -10, FH / 2 - 30, FW + 20, 60, "Stunned");
                 band.raycastTarget = false;
                 band.rectTransform.pivot = new Vector2(0.5f, 0.5f);
                 band.rectTransform.anchoredPosition = new Vector2(FW / 2, -FH / 2);
                 band.rectTransform.localRotation = Quaternion.Euler(0, 0, 12);
-                var label = Theme.Label(band.transform, "TAPPED", 34, Theme.Gold, 0, 0, FW + 20, 60, TextAnchor.MiddleCenter, display: true);
+                var label = Theme.Label(band.transform, "STUNNED", 34, Theme.Gold, 0, 0, FW + 20, 60, TextAnchor.MiddleCenter, display: true);
                 UI.Stretch(label.rectTransform);
             }
         }

@@ -171,7 +171,7 @@ namespace BrawlTCG.Core
             Player ending = ActivePlayer;
             foreach (LegendCard legend in ending.PlayingField)
             {
-                legend.IsTapped = false;
+                legend.IsStunned = false;
                 legend.AttackedThisTurn = false;
                 legend.CanAttack = true;
             }
@@ -222,9 +222,9 @@ namespace BrawlTCG.Core
                     switch (GetAttackMode(legend, attack))
                     {
                         case AttackMode.OwnLegend:
-                            return IsTargetableLegend(me, cmd.TargetIndex) ? null : "Choose one of your untapped legends.";
+                            return IsTargetableLegend(me, cmd.TargetIndex) ? null : "Choose one of your legends.";
                         case AttackMode.EnemyLegend:
-                            return IsTargetableLegend(enemy, cmd.TargetIndex) ? null : "Choose an untapped enemy legend.";
+                            return IsTargetableLegend(enemy, cmd.TargetIndex) ? null : "Choose an enemy legend.";
                         default:
                             return null;
                     }
@@ -343,7 +343,8 @@ namespace BrawlTCG.Core
 
         static bool InRange(int index, int count) => index >= 0 && index < count;
 
-        static bool IsTargetableLegend(Player side, int index) => InRange(index, side.PlayingField.Count) && !side.PlayingField[index].IsTapped;
+        /// <summary>Any legend on that side, stunned or not: being stunned only switches off its own attacks and abilities.</summary>
+        static bool IsTargetableLegend(Player side, int index) => InRange(index, side.PlayingField.Count);
 
         // ───────────────────────────── Playing cards ─────────────────────────────
 
@@ -421,14 +422,14 @@ namespace BrawlTCG.Core
 
         /// <summary>
         /// Triggers every legend's while-in-play effect for the card just played, then resolves deaths.
-        /// Tapped legends' abilities are turned off.
+        /// Stunned legends' abilities are turned off.
         /// </summary>
         void PostPlayEffects(Player player, Card playedCard)
         {
             ResolveDeaths();
             foreach (LegendCard legend in GetAllLegendsOnPlayingField())
             {
-                if (legend.WhileInPlayEffect != null && legend.OnPlayingField && !legend.IsTapped)
+                if (legend.WhileInPlayEffect != null && legend.OnPlayingField && !legend.IsStunned)
                     legend.WhileInPlayEffect.Invoke(null, legend, this, playedCard);
             }
             ResolveDeaths();
@@ -448,7 +449,7 @@ namespace BrawlTCG.Core
             if (IsOver) return "The game is over.";
             if (legend.Owner != ActivePlayer) return "It is not your turn!";
             if (!legend.OnPlayingField) return "This legend is not on the playing field.";
-            if (legend.IsTapped) return "This legend is tapped.";
+            if (legend.IsStunned) return "This legend is stunned.";
             if (legend.AttackedThisTurn) return "This legend already attacked this turn";
             // Silent Galaxy turns CanAttack off for non-Cosmic legends: they can't deal damage, but can still craft, set, summon...
             if (!legend.CanAttack && attack.Kind == AttackKind.Strike) return "Silent Galaxy: only Cosmic legends can deal damage";
@@ -644,7 +645,7 @@ namespace BrawlTCG.Core
                 sb.Append($"P{p.Index}:{p.Health}/{p.MaxHealth} e{p.Essence} pe{p.PlayedEssenceCardThisTurn} d{string.Join(".", p.Deck.Select(c => c.Id))} ");
                 sb.Append($"h{string.Join(".", p.Hand.Select(c => c.Id))} x{string.Join(".", p.DiscardPile.Select(c => c.Id))} es{p.EssenceField.Count} f[");
                 foreach (LegendCard l in p.PlayingField)
-                    sb.Append($"{l.Id}:{l.CurrentHP}/{l.BaseHealth}:{l.Power}:{l.IsTapped}{l.IsBurned}{l.CanAttack}{l.AttackedThisTurn}:{string.Join(".", l.StackedCards.Select(c => c.Id))} ");
+                    sb.Append($"{l.Id}:{l.CurrentHP}/{l.BaseHealth}:{l.Power}:{l.IsStunned}{l.IsBurned}{l.CanAttack}{l.AttackedThisTurn}:{string.Join(".", l.StackedCards.Select(c => c.Id))} ");
                 sb.Append("];");
             }
             return sb.ToString();

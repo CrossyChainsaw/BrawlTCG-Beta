@@ -419,18 +419,18 @@ namespace BrawlTCG.UnityApp
                 int shown = Mathf.Min(legend.StackedCards.Count, 4);
                 // Darkened: used up this turn, or (your side) waiting for the opponent's turn to end.
                 bool idle = bottom && WaitingForOpponent;
-                bool spent = idle || legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsTapped;
+                bool spent = idle || legend.AttackedThisTurn && p == _game.ActivePlayer && !legend.IsStunned;
                 for (int k = shown - 1; k >= 0; k--)
                 {
                     CardView stacked = AddCard(legend.StackedCards[k], true, x, y - 14 * (k + 1), p, BoardZone.Stacked, k);
                     if (spent) stacked.SetDimmed(true); // darkened together with their legend
                 }
 
-                CardView view = AddCard(legend, true, x, y, p, BoardZone.PlayingField, slot, tapped: legend.IsTapped);
+                CardView view = AddCard(legend, true, x, y, p, BoardZone.PlayingField, slot, stunned: legend.IsStunned);
                 _legendViews.Add(view);
 
                 if (idle) view.SetDimmed(true);
-                if (legend.IsTapped) { /* ribbon is painted on the card */ }
+                if (legend.IsStunned) { /* ribbon is painted on the card */ }
                 else if (legend.AttackedThisTurn && p == _game.ActivePlayer)
                 {
                     // Used up for this turn: darkened so it reads at a glance (no label needed).
@@ -684,7 +684,7 @@ namespace BrawlTCG.UnityApp
                 {
                     // Affordable, but it can't be played right now: a legend while your field is full, a weapon no
                     // legend of yours can carry, a battle card with no legend on the side it targets (yours for
-                    // heals/boosts, the enemy's for damage/taps). The board is redrawn after every move, so it
+                    // heals/boosts, the enemy's for damage/stuns). The board is redrawn after every move, so it
                     // lights up again as soon as it becomes playable.
                     v.SetDimmed(true);
                 }
@@ -740,9 +740,9 @@ namespace BrawlTCG.UnityApp
 
         // ───────────────────────────── Cards ─────────────────────────────
 
-        CardView AddCard(Card card, bool faceUp, float x, float y, Player owner, BoardZone zone, int index, bool tapped = false, float scale = 1f)
+        CardView AddCard(Card card, bool faceUp, float x, float y, Player owner, BoardZone zone, int index, bool stunned = false, float scale = 1f)
         {
-            CardView v = CardView.Create(_cards, card, faceUp, x, y, scale, tapped);
+            CardView v = CardView.Create(_cards, card, faceUp, x, y, scale, stunned);
             v.PlayerIndex = owner?.Index ?? -1;
             v.Zone = zone;
             v.Index = index;
@@ -796,7 +796,7 @@ namespace BrawlTCG.UnityApp
 
         bool IsValidAttackTarget(Player side, LegendCard legend)
         {
-            if (!Targeting || legend.IsTapped) return false;
+            if (!Targeting) return false;
             Player wanted = _targetOwnSide ? _targetAttacker.Owner : _game.GetOpponent(_targetAttacker.Owner);
             return side == wanted;
         }
@@ -981,7 +981,7 @@ namespace BrawlTCG.UnityApp
             var close = Theme.Ghost(t, "×", W - 62, 18, 44, 44, CloseDetail, 30);
             close.GetComponentInChildren<Text>().font = Theme.Body;
 
-            CardView big = CardView.Create(t, card, true, 24, 24, 1.9f, card is LegendCard l0 && l0.IsTapped);
+            CardView big = CardView.Create(t, card, true, 24, 24, 1.9f, card is LegendCard l0 && l0.IsStunned);
             foreach (Graphic g in big.GetComponentsInChildren<Graphic>()) g.raycastTarget = false;
 
             // Info column
@@ -1023,9 +1023,9 @@ namespace BrawlTCG.UnityApp
                 string effects = TriggerIcons.SplitCardText(legend).abilities;
                 if (!string.IsNullOrWhiteSpace(effects))
                 {
-                    // A tapped legend's abilities are turned off (Game skips its triggers): shown dimmed.
-                    bool off = legend.IsTapped && legend.OnPlayingField;
-                    Theme.Label(t, off ? "ABILITIES  ·  OFF WHILE TAPPED" : "ABILITIES", 16, off ? Theme.TextDim : Theme.Gold, 24, y + 4, 400, 22, display: true);
+                    // A stunned legend's abilities are turned off (Game skips its triggers): shown dimmed.
+                    bool off = legend.IsStunned && legend.OnPlayingField;
+                    Theme.Label(t, off ? "ABILITIES  ·  OFF WHILE STUNNED" : "ABILITIES", 16, off ? Theme.TextDim : Theme.Gold, 24, y + 4, 400, 22, display: true);
                     int[] mentioned = CardReferences.For(card);
                     float textW = W - 48;
                     if (mentioned != null)
@@ -1104,7 +1104,7 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>
-        /// Everything currently affecting a legend, each with what caused it: statuses (Silent Galaxy, tapped, burned,
+        /// Everything currently affecting a legend, each with what caused it: statuses (Silent Galaxy, stunned, burned,
         /// already attacked) and ATK / max-HP changes per source. Healing is not a change to a stat, so it is not listed.
         /// </summary>
         List<EffectRow> LegendEffects(LegendCard legend)
@@ -1114,10 +1114,10 @@ namespace BrawlTCG.UnityApp
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.NoStrikes,
                     Line(DebuffHex, "Can't deal damage", "Silent Galaxy", "only Cosmic legends can deal damage"),
                     Line(DebuffHex, "Can't deal damage", "Silent Galaxy", null)));
-            if (legend.IsTapped)
-                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Tapped,
-                    Line(StatusHex, "Tapped", legend.TappedBy, "skips its next attack, abilities off"),
-                    Line(StatusHex, "Tapped", legend.TappedBy, null)));
+            if (legend.IsStunned)
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Stunned,
+                    Line(StatusHex, "Stunned", legend.StunnedBy, "skips its next attack, abilities off"),
+                    Line(StatusHex, "Stunned", legend.StunnedBy, null)));
             if (legend.IsBurned)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Burned,
                     Line(FireHex, "Burned", legend.BurnedBy, "-1 HP at the start of each of its turns"),
@@ -1371,9 +1371,9 @@ namespace BrawlTCG.UnityApp
             if (mode == AttackMode.OwnLegend || mode == AttackMode.EnemyLegend)
             {
                 Player side = mode == AttackMode.OwnLegend ? legend.Owner : _game.GetOpponent(legend.Owner);
-                if (!side.PlayingField.Any(l => !l.IsTapped))
+                if (side.PlayingField.Count == 0)
                 {
-                    _app.Toast("There is no untapped legend to target.");
+                    _app.Toast("There is no legend to target.");
                     return;
                 }
                 _targetAttacker = legend;

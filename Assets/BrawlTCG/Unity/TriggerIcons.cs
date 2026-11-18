@@ -91,11 +91,11 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Effects on a legend (detail panel): small inline icons ─────────────
 
-        public enum EffectIcon { NoStrikes, Tapped, Burned, AttackUp, AttackDown, HealthUp, HealthDown, Attacked }
+        public enum EffectIcon { NoStrikes, Stunned, Burned, AttackUp, AttackDown, HealthUp, HealthDown, Attacked }
 
         public static readonly Color BuffColor = new Color32(110, 220, 130, 255);
         public static readonly Color DebuffColor = new Color32(255, 84, 84, 255);
-        public static readonly Color TappedColor = new Color32(245, 192, 74, 255);
+        public static readonly Color StunnedColor = new Color32(245, 192, 74, 255);
         static readonly Color SpentColor = new Color32(150, 156, 184, 255);
 
         /// <summary>A small round icon (coloured ring, dark disc, glyph) for an effect on a legend, for use next to text.</summary>
@@ -105,7 +105,7 @@ namespace BrawlTCG.UnityApp
             Color c; Sprite s; float pad = 0.22f;
             switch (kind)
             {
-                case EffectIcon.Tapped: c = TappedColor; s = TappedCard; pad = 0.18f; break;
+                case EffectIcon.Stunned: c = StunnedColor; s = StunnedCard; pad = 0.18f; break;
                 case EffectIcon.Burned: c = FireColor; s = Flame; pad = 0.2f; break;
                 case EffectIcon.AttackUp: c = BuffColor; s = FullSword; pad = 0.18f; break;
                 case EffectIcon.AttackDown: c = DebuffColor; s = FullSword; pad = 0.18f; break;
@@ -280,12 +280,12 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _tapped;
+        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _stunned;
 
         // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetStatics() =>
-            _bolt = _infinity = _cycle = _sword = _slash = _hammer = _fullSword = _heart = _flame = _solidFlame = _tapped = null;
+            _bolt = _infinity = _cycle = _sword = _slash = _hammer = _fullSword = _heart = _flame = _solidFlame = _stunned = null;
 
         /// <summary>Whole sword, tip top-right (ATK changes).</summary>
         static Sprite FullSword => _fullSword ??= Glyph((x, y) => { Vector2 p = SwordSpace(x, y); return Sword(p.x, p.y); });
@@ -325,8 +325,8 @@ namespace BrawlTCG.UnityApp
             label.raycastTarget = false;
         }
 
-        /// <summary>Tapped: a card outline turned onto its side.</summary>
-        static Sprite TappedCard => _tapped ??= Glyph((x, y) =>
+        /// <summary>Stunned: a card outline turned onto its side.</summary>
+        static Sprite StunnedCard => _stunned ??= Glyph((x, y) =>
         {
             const float c = 0.34202014f, s = 0.93969262f; // turned 70°, so it reads as turned rather than just wide
             float dx = x - 0.5f, dy = y - 0.5f;

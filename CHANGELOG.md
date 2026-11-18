@@ -20,6 +20,11 @@ When Sozin's Comet or Full Eclipse leaves play, the +5/+5 goes away again, but a
 - **Fangwild** (#43). At the start of each turn, that player's legends gain +2 max health (and +2 HP). It used to heal Magic and Nature legends by 2.
 - **Evil Hideout** (#49). Now a Wild card, and only Shadow and Wild legends get the +3 Power. Fire legends no longer benefit.
 
+### Tapped is now called Stunned
+
+- **"Tapped" is renamed to "Stunned"** everywhere: the ribbon on the card, the effects list, Bubble ("Stun a legend") and Ymir's Breath ("Stun all opposing legends"). A stunned legend can't attack and its abilities are off.
+- **Stunned legends can be attacked now.** Before, a tapped legend couldn't be targeted by attacks, so stunning an enemy also protected it. Battle cards and weapons could already be played on them, Tombstone included.
+
 ### Online
 
 - **Version check** (#34). When you connect, both games compare versions. If the major or minor number differs, you see who is outdated, for example "Version mismatch: you are on v1.2.0, Bob is on v1.1.0 (outdated). Bob needs to update."
