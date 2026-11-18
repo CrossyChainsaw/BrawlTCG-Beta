@@ -85,6 +85,7 @@ namespace BrawlTCG.Core
             // Arctic legends
             Legend(7000, "Snowman Kor", 4, Element.Arctic, "SnowmanKor", 0, 16, Weapon.Gauntlets, Weapon.Hammer, A(AC.Any_Freeze)),
             Legend(7001, "Atlantean Ada", 2, Element.Arctic, "Atlantean_Ada", 2, 5, Weapon.Blasters, Weapon.Spear, A(AC.Blaster_Shot, AC.Spear_Stab, AC.Ada_SpawnAndPlayAtlantis)),
+            Legend(7002, "Alpine Kaya", 4, Element.Arctic, "AlpineKaya", 2, 16, Weapon.Spear, Weapon.Bow, A(AC.Kaya_CraftSnowball, AC.Kaya_BuildASnowman)),
 
             // Weapons
             W(13000, "Axe of Regrowth", Element.Nature, "Axe_of_Regrowth", Weapon.Axe),
@@ -99,6 +100,9 @@ namespace BrawlTCG.Core
             W(26000, "Molten Cannon", Element.Fire, "MoltenCannon", Weapon.Cannon),
             W(17000, "Sleight of Hand", Element.Shadow, "Sleight_of_Hand", Weapon.Gauntlets),
             W(17001, "Rippers", Element.Wild, "MordexGaunts", Weapon.Gauntlets),
+            W(17002, "Hot Lava", Element.Fire, "HotLava", Weapon.Gauntlets),
+            W(17003, "Infinite & Absolute", Element.Cosmic, "InfiniteAndAbsolute", Weapon.Gauntlets),
+            W(17004, "Spine-Chilling Fists", Element.Nature, "SpineChillingFists", Weapon.Gauntlets),
             W(18000, "Law of the Land", Element.Nature, "LawOfTheLand", Weapon.Greatsword),
             W(19000, "Primrose Mallet", Element.Nature, "Primrose_Mallet", Weapon.Hammer),
             W(19001, "Chikara", Element.Wild, "Chikara", Weapon.Hammer),

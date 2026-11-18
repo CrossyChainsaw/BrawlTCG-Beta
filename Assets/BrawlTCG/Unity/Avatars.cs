@@ -78,16 +78,25 @@ namespace BrawlTCG.UnityApp
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(rt);
 
-            // Round cut-out: alpha fades over one pixel at the edge.
+            // Art with a transparent background (Snowman Kor...) sits on its element colour, the same as in the picker,
+            // so the portrait looks identical whatever it is drawn on. Then the round cut-out: alpha fades over one
+            // pixel at the edge.
+            Color32 bg = CardStyle.FrameColor(CardCatalogue.Get(avatarId).Element);
             Color32[] pixels = tex.GetPixels32();
             float r = px / 2f;
             for (int y = 0; y < px; y++)
                 for (int x = 0; x < px; x++)
                 {
-                    float dx = x + 0.5f - r, dy = y + 0.5f - r;
-                    float a = Mathf.Clamp01(r - Mathf.Sqrt(dx * dx + dy * dy));
                     int i = y * px + x;
-                    pixels[i].a = (byte)(pixels[i].a * a);
+                    Color32 c = pixels[i];
+                    float k = c.a / 255f;
+                    float dx = x + 0.5f - r, dy = y + 0.5f - r;
+                    float edge = Mathf.Clamp01(r - Mathf.Sqrt(dx * dx + dy * dy));
+                    pixels[i] = new Color32(
+                        (byte)(c.r * k + bg.r * (1 - k)),
+                        (byte)(c.g * k + bg.g * (1 - k)),
+                        (byte)(c.b * k + bg.b * (1 - k)),
+                        (byte)(255 * edge));
                 }
             tex.SetPixels32(pixels);
             tex.Apply(false, true); // no longer readable: frees the CPU copy
