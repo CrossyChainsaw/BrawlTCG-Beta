@@ -96,7 +96,7 @@ namespace BrawlTCG.UnityApp
             var dim = MenuDim();
             Transform box = MenuPanel(dim, "LEAVE MATCH?", 330);
             const float w = 560;
-            Theme.Label(box, _hotSeat ? "The current game will be lost." : "Your opponent will be told that you left.", 20, Theme.TextDim,
+            Theme.Label(box, _hotSeat || VsBot ? "The current game will be lost." : "Your opponent will be told that you left.", 20, Theme.TextDim,
                 40, 96, w - 80, 70, TextAnchor.MiddleCenter);
             Theme.Ghost(box, "STAY", 40, 206, (w - 100) / 2, 66, OpenOptions, 24);
             var go = Theme.Cta(box, "LEAVE", 60 + (w - 100) / 2, 206, (w - 100) / 2, 66, LeaveMatch, 26);

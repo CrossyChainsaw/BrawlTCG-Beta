@@ -22,6 +22,10 @@ namespace BrawlTCG.UnityApp
         public int[] Avatars;
         /// <summary>Showcase clip to play (Game is its staged position); null for real matches.</summary>
         public ShowcaseClip Showcase;
+        /// <summary>Bot games: starts another match with the same settings (the result screen's PLAY AGAIN).</summary>
+        public Action Rematch;
+        /// <summary>Bot games: the premade deck the bot plays. Beating it unlocks that deck (see <see cref="Collection"/>).</summary>
+        public string BotDeck;
         public bool HotSeat => Net == null && Showcase == null;
     }
 
@@ -31,7 +35,8 @@ namespace BrawlTCG.UnityApp
         const string PrefName = "BrawlTCG.Name", PrefName2 = "BrawlTCG.Name2", PrefDeck = "BrawlTCG.Deck",
             PrefDeck2 = "BrawlTCG.Deck2", PrefIp = "BrawlTCG.Ip", PrefPort = "BrawlTCG.Port", PrefMode = "BrawlTCG.OnlineMode";
 
-        enum Panel { None, Online, Local }
+        enum Panel { None, Online, Bot, Local }
+        const string PrefBotMyDeck = "BrawlTCG.BotMyDeck", PrefBotLevel = "BrawlTCG.BotLevel";
         enum OnlineMode { CreateRoom, JoinRoom, LanHost, LanJoin }
 
         App _app;
@@ -48,6 +53,7 @@ namespace BrawlTCG.UnityApp
         InputField _name;
         Image _avatar;
         RectTransform _pickerLayer;
+        RectTransform _deckPickerLayer;
 
         // Online panel
         GameObject _onlinePanel;
@@ -66,6 +72,12 @@ namespace BrawlTCG.UnityApp
         InputField _localName1, _name2;
         ThemedSelector _localDeck1, _deck2;
         Text _localInfo1, _localInfo2;
+
+        // Bot panel
+        GameObject _botPanel;
+        ThemedSelector _botMyDeck, _botLevel;
+        Text _botMyInfo, _botPool;
+        NavItem _navOnline, _navBot, _navLocal;
 
         // Networking state
         NetSession.Listener _listener;
@@ -88,7 +100,9 @@ namespace BrawlTCG.UnityApp
             BuildShowcase();
             BuildOnlinePanel();
             BuildLocalPanel();
+            BuildBotPanel();
             BuildFooter();
+            _deckPickerLayer = UI.Stretch(UI.Rect("DeckPickerLayer", transform)); // ALL DECKS grid of the deck pickers
             _pickerLayer = UI.Stretch(UI.Rect("AvatarPickerLayer", transform));
             ShowPanel(Panel.None);
         }
@@ -162,17 +176,21 @@ namespace BrawlTCG.UnityApp
             var items = new (string title, string subtitle, Action action)[]
             {
                 ("PLAY ONLINE", "Host or join a match over the network", () => TogglePanel(Panel.Online)),
+                ("VS BOT", "No one around? Battle the computer", () => TogglePanel(Panel.Bot)),
                 ("LOCAL MATCH", "Two players, one screen", () => TogglePanel(Panel.Local)),
                 ("DECK BUILDER", "Build and tune your decks", () => { if (!_busy) _app.ShowDeckBuilder(); }),
                 ("QUIT", "See you next brawl", Quit),
             };
-            float y = 330;
+            float y = 310;
             for (int i = 0; i < items.Length; i++)
             {
                 var item = NavItem.Create(transform, items[i].title, items[i].subtitle, 92, y, 500, 88, items[i].action, i * 0.07f);
                 _nav.Add(item);
                 y += 100;
             }
+            _navOnline = _nav[0];
+            _navBot = _nav[1];
+            _navLocal = _nav[2];
         }
 
         void BuildProfile()
@@ -325,9 +343,16 @@ namespace BrawlTCG.UnityApp
             _panel = panel;
             _onlinePanel.SetActive(panel == Panel.Online);
             _localPanel.SetActive(panel == Panel.Local);
+            _botPanel.SetActive(panel == Panel.Bot);
             _showcase.gameObject.SetActive(panel == Panel.None);
-            _nav[0].Selected = panel == Panel.Online;
-            _nav[1].Selected = panel == Panel.Local;
+            _navOnline.Selected = panel == Panel.Online;
+            _navBot.Selected = panel == Panel.Bot;
+            _navLocal.Selected = panel == Panel.Local;
+            if (panel == Panel.Bot)
+            {
+                RefreshDeckInfo(_botMyDeck, _botMyInfo);
+                RefreshBotPool();
+            }
             if (panel == Panel.Online) RefreshDeckInfo(_deck, _deckInfo);
             if (panel == Panel.Local)
             {
@@ -352,12 +377,13 @@ namespace BrawlTCG.UnityApp
 
         void BuildOnlinePanel()
         {
-            List<string> decks = DeckStore.List();
+            List<string> decks = DeckLibrary.Playable();
             RectTransform t = PanelShell("OnlinePanel", "PLAY ONLINE", "Battle a friend anywhere with a room code, or directly over LAN.", 790, out _onlinePanel);
 
             _deck = new ThemedSelector(t, "Your deck", 48, 156, 694, decks, PlayerPrefs.GetString(PrefDeck, null));
             _deckInfo = Theme.Label(t, "", 16, Theme.TextDim, 50, 238, 694, 24);
             _deck.Changed += _ => RefreshDeckInfo(_deck, _deckInfo);
+            DeckPickerButton(t, _deck, _deckInfo, 612, 150, 130);
 
             // Segmented mode tabs
             var tabs = Theme.RoundedPanel(t, new Color(1, 1, 1, 0.06f), 48, 284, 694, 58, 14, "Tabs");
@@ -468,7 +494,7 @@ namespace BrawlTCG.UnityApp
 
         void BuildLocalPanel()
         {
-            List<string> decks = DeckStore.List();
+            List<string> decks = DeckLibrary.Playable();
             RectTransform t = PanelShell("LocalPanel", "LOCAL MATCH", "Two players, one screen. Hands are hidden between turns.", 650, out _localPanel);
 
             var p1 = Theme.RoundedPanel(t, Theme.GlassLight, 48, 156, 316, 290, 18, "Player1");
@@ -478,6 +504,7 @@ namespace BrawlTCG.UnityApp
             _localDeck1 = new ThemedSelector(p1.transform, "Deck", 24, 150, 268, decks, PlayerPrefs.GetString(PrefDeck, null));
             _localInfo1 = Theme.Label(p1.transform, "", 15, Theme.TextDim, 26, 238, 268, 30);
             _localDeck1.Changed += _ => RefreshDeckInfo(_localDeck1, _localInfo1);
+            DeckPickerButton(p1.transform, _localDeck1, _localInfo1, 172, 144, 120);
 
             var p2 = Theme.RoundedPanel(t, Theme.GlassLight, 426, 156, 316, 290, 18, "Player2");
             Theme.Label(p2.transform, "PLAYER 2", 18, Theme.Gold, 24, 20, 260, 24, display: true);
@@ -486,6 +513,7 @@ namespace BrawlTCG.UnityApp
                 PlayerPrefs.GetString(PrefDeck2, decks.Count > 1 ? decks[1] : null));
             _localInfo2 = Theme.Label(p2.transform, "", 15, Theme.TextDim, 26, 238, 268, 30);
             _deck2.Changed += _ => RefreshDeckInfo(_deck2, _localInfo2);
+            DeckPickerButton(p2.transform, _deck2, _localInfo2, 172, 144, 120);
 
             var vs = Theme.RoundedPanel(t, Theme.Gold, 365, 271, 60, 60, 30, "VS");
             vs.raycastTarget = false;
@@ -496,6 +524,106 @@ namespace BrawlTCG.UnityApp
                 16, Theme.TextFaint, 50, 574, 694, 48);
         }
 
+        void BuildBotPanel()
+        {
+            List<string> decks = DeckLibrary.Playable();
+            RectTransform t = PanelShell("BotPanel", "VS BOT", "No one to play with? Take on the computer. It plays by the same rules and can't see your hand.", 700, out _botPanel);
+
+            _botMyDeck = new ThemedSelector(t, "Your deck", 48, 156, 694, decks, PlayerPrefs.GetString(PrefBotMyDeck, PlayerPrefs.GetString(PrefDeck, null)));
+            _botMyInfo = Theme.Label(t, "", 16, Theme.TextDim, 50, 238, 694, 24);
+            _botMyDeck.Changed += _ => RefreshDeckInfo(_botMyDeck, _botMyInfo);
+            DeckPickerButton(t, _botMyDeck, _botMyInfo, 612, 150, 130);
+
+            // The bot's deck stays a surprise: it picks one you don't own yet (see Collection.PickBotDeck).
+            Theme.Label(t, "BOT'S DECK", 14, Theme.TextDim, 50, 276, 694, 20, display: true);
+            var mystery = Theme.RoundedPanel(t, new Color(1, 1, 1, 0.05f), 48, 300, 694, 70, 12, "BotDeck");
+            mystery.raycastTarget = false;
+            _botPool = Theme.Label(mystery.transform, "", 17, Theme.Text, 18, 0, 658, 70, TextAnchor.MiddleLeft);
+
+            var levels = new List<string> { "Easy", "Normal", "Hard" };
+            _botLevel = new ThemedSelector(t, "Difficulty", 48, 396, 694, levels, PlayerPrefs.GetString(PrefBotLevel, "Normal"));
+            _botLevel.Changed += _ => RefreshBotPool(); // each difficulty has its own decks to unlock
+            Theme.Label(t, "Easy plays its best move. Normal also thinks a move ahead. Hard also plans for your reply.", 16, Theme.TextDim, 50, 478, 694, 24);
+
+            Theme.Cta(t, "START MATCH", 48, 526, 694, 78, StartBotMatch, 30);
+            Theme.Label(t, "A coin flip decides who takes the first turn.", 16, Theme.TextFaint, 50, 624, 694, 30);
+            RefreshBotPool();
+        }
+
+        /// <summary>The mystery-deck line of the VS BOT panel: how many of this difficulty's decks are still to unlock.</summary>
+        void RefreshBotPool()
+        {
+            Bot.Level level = SelectedLevel;
+            var (locked, total) = Collection.Progress(level);
+            _botPool.text = locked > 0
+                ? $"A secret deck you don't have yet. Beat the {level} bot to unlock it.\n{locked} of {total} {level} decks left to unlock."
+                : $"You unlocked all {total} {level} decks! The bot plays a random one of them.";
+            _botPool.color = locked > 0 ? Theme.Text : Theme.Success;
+        }
+
+        void StartBotMatch()
+        {
+            if (_busy) return;
+            var me = PrepareLocalPlayer(_name.text, _botMyDeck);
+            if (me == null) return;
+            SavePrefs();
+            PlayerPrefs.SetString(PrefBotMyDeck, _botMyDeck.Value);
+            PlayerPrefs.SetString(PrefBotLevel, _botLevel.Value);
+            PlayerPrefs.Save();
+            LaunchBotMatch(_app, me.Value.name, DeckLibrary.Load(_botMyDeck.Value), SelectedLevel);
+        }
+
+        Bot.Level SelectedLevel => (Bot.Level)Enum.Parse(typeof(Bot.Level), _botLevel.Value ?? "Normal");
+
+        /// <summary>
+        /// Starts a match against the bot with a deck the player doesn't own yet (from the difficulty's pool). Static so
+        /// PLAY AGAIN can call it after the menu is gone; every match picks again, so a win moves on to the next deck.
+        /// </summary>
+        static void LaunchBotMatch(App app, string myName, List<int> myDeck, Bot.Level level)
+        {
+            var rng = new Random();
+            StarterDecks.Starter premade = Collection.PickBotDeck(level, rng);
+            List<int> botCards = premade.Cards;
+
+            bool botFirst = rng.Next(2) == 0; // coin flip
+            string botName = $"Bot ({level})";
+            List<int> mine = DeckRules.Shuffle(myDeck, rng), theirs = DeckRules.Shuffle(botCards, rng);
+            Game game = botFirst ? new Game(botName, theirs, myName, mine, rng.Next()) : new Game(myName, mine, botName, theirs, rng.Next());
+            int botIndex = botFirst ? 0 : 1;
+
+            var avatars = new int[2];
+            avatars[botIndex] = BotAvatar(botCards);
+            avatars[1 - botIndex] = Avatars.Saved;
+            app.StartMatch(new MatchSetup
+            {
+                Game = game,
+                Net = new BotSession(game, level, botIndex),
+                LocalIndex = 1 - botIndex,
+                Avatars = avatars,
+                BotDeck = premade.Name,
+                Rematch = () => LaunchBotMatch(app, myName, myDeck, level),
+            });
+        }
+
+        /// <summary>The bot wears the portrait of the legend its deck runs most.</summary>
+        static int BotAvatar(List<int> deck)
+        {
+            var withArt = new HashSet<int>(Avatars.Choices().Select(l => l.Id));
+            var top = deck.Where(withArt.Contains).GroupBy(id => id).OrderByDescending(g => g.Count()).FirstOrDefault();
+            return top?.Key ?? Avatars.None;
+        }
+
+        /// <summary>A small ALL DECKS button above a deck picker: opens the deck grid and selects the deck clicked there.</summary>
+        void DeckPickerButton(Transform parent, ThemedSelector selector, Text info, float x, float y, float w)
+        {
+            Theme.Ghost(parent, "ALL DECKS", x, y, w, 30, () =>
+                DeckOverview.Open(_deckPickerLayer, playableOnly: true, selector.Value, (name, kind) =>
+                {
+                    selector.SetOptions(DeckLibrary.Playable(), name);
+                    RefreshDeckInfo(selector, info);
+                }), 14);
+        }
+
         void RefreshDeckInfo(ThemedSelector selector, Text info)
         {
             if (selector.Value == null)
@@ -504,10 +632,12 @@ namespace BrawlTCG.UnityApp
                 info.color = Theme.Danger;
                 return;
             }
-            List<int> deck = DeckStore.Load(selector.Value);
+            List<int> deck = DeckLibrary.Load(selector.Value);
             int essence = deck.Count(id => id == 0);
             string error = DeckRules.ValidateForPlay(deck);
-            info.text = error == null ? $"{deck.Count} cards  ·  {essence} Essence  ·  Ready to play" : $"{deck.Count} cards  ·  {error}";
+            string kind = DeckLibrary.KindOf(selector.Value);
+            string prefix = kind != null ? kind + "  ·  " : "";
+            info.text = error == null ? $"{prefix}{deck.Count} cards  ·  {essence} Essence  ·  Ready to play" : $"{prefix}{deck.Count} cards  ·  {error}";
             info.color = error == null ? Theme.Success : Theme.Danger;
         }
 
@@ -576,7 +706,7 @@ namespace BrawlTCG.UnityApp
                 return null;
             }
             var errors = new List<string>();
-            List<int> deck = DeckStore.Load(deckSelector.Value, errors);
+            List<int> deck = DeckLibrary.Load(deckSelector.Value, errors);
             foreach (string e in errors) _app.Toast(e);
             string invalid = DeckRules.ValidateForPlay(deck);
             if (invalid != null)
