@@ -1553,8 +1553,8 @@ namespace BrawlTCG.UnityApp
                 };
                 if (picked)
                 {
-                    v.SetDimmed(true);
-                    v.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                    v.SetDimmed(true, 0.85f);
+                    v.AddCenterBanner("BACK TO DECK", Theme.Gold);
                 }
             }
 
@@ -1643,8 +1643,8 @@ namespace BrawlTCG.UnityApp
                 }
                 // The card that goes back, as it looked when picked (lowered, dimmed, BACK TO DECK) ...
                 CardView oldView = CardView.Create(dim, old, true, x, y + 36, scale);
-                oldView.SetDimmed(true);
-                oldView.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                oldView.SetDimmed(true, 0.85f);
+                oldView.AddCenterBanner("BACK TO DECK", Theme.Gold);
                 // ... and the new one, marked NEW, with a face-down copy for the first half of its turn.
                 CardView newView = CardView.Create(dim, hand[i], true, x, y, scale);
                 newView.SetGlow(Theme.Gold, 0.6f);

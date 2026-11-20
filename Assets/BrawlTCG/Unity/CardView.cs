@@ -100,14 +100,24 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>Darkens the card to show it is used up for this turn. Call before <see cref="AddStatus"/> so tags stay bright.</summary>
-        public void SetDimmed(bool on)
+        public void SetDimmed(bool on, float darkness = 0.74f)
         {
             if (_face == null) return;
             Transform old = _face.Find("Dim");
             if (old != null) Destroy(old.gameObject);
             if (!on) return;
-            var dim = Theme.RoundedPanel(_face, new Color(0.02f, 0.03f, 0.09f, 0.74f), 0, 0, FW, FH, 22, "Dim");
+            var dim = Theme.RoundedPanel(_face, new Color(0.02f, 0.03f, 0.09f, darkness), 0, 0, FW, FH, 22, "Dim");
             dim.raycastTarget = false;
+        }
+
+        /// <summary>A dark band across the middle of the card with a large label (e.g. BACK TO DECK). Call after <see cref="SetDimmed"/>.</summary>
+        public void AddCenterBanner(string text, Color textColor)
+        {
+            if (_face == null || !FaceUp) return;
+            const float h = 64;
+            var band = UI.Panel(_face, new Color(0.01f, 0.02f, 0.06f, 0.92f), 0, (FH - h) / 2, FW, h, "Banner " + text);
+            band.raycastTarget = false;
+            Theme.Label(band.transform, text, 28, textColor, 0, 0, FW, h, TextAnchor.MiddleCenter, display: true);
         }
 
         /// <summary>Badge for a legend that can't deal damage (Silent Galaxy), in the ability-badge row.</summary>
