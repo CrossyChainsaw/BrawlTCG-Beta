@@ -1,5 +1,37 @@
 # Changelog
 
+## Unreleased
+
+### Play against a bot (#53)
+
+- **VS BOT** in the main menu: pick your deck and a difficulty. The bot's deck is a secret until the match starts (see below). A coin flip decides who goes first. **PLAY AGAIN** on the result screen starts another match at the same difficulty.
+- Three difficulties:
+  - **Easy** always plays the move that leaves it in the best position.
+  - **Normal** also looks one move further ahead (weapon then attack, Essence then legend). It beats Easy about 61% of the time.
+  - **Hard** plays its best few moves out to the end of its turn and through your reply before choosing. It beats Normal about 64% of the time.
+- The bot plays by the same rules and can't cheat. It thinks on a copy of the match where both decks are shuffled and the random results are different, so it can't know your next draw or its own. Hard also redeals your hand from your unseen cards when it imagines your reply.
+- Its moves are spaced out so you can follow them, with the same animations as an online opponent.
+
+### Starter decks and unlocking bot decks (#54)
+
+The premade decks are no longer handed out as editable decks. Your earlier copies of them are removed, edited or not; decks you built yourself stay.
+
+- **59 premade decks** now ship with the game: ranks 1-59 of a 64-deck round robin (201,600 games, see **DECK_ANALYSIS_64.md**). 32 of them are new **stage decks**, each built around four copies of one stage card and at most two weapon types.
+- **Starter decks:** every player gets 3 decks picked from ranks 33-59. The pick comes from your PC's hardware ID, so reinstalling the game or deleting its save data gives you the same three again.
+- **Bot decks:** every other premade deck is unlocked by beating the bot while it plays that deck. The bot always picks a deck you don't have yet from its difficulty's pool, and plays a random one from that pool once you own them all:
+  - **Easy:** the 20 C-tier decks (under 45% in the round robin).
+  - **Normal:** the 18 B-tier decks (45-60%).
+  - **Hard:** the 21 S- and A-tier decks (60% and up).
+- Winning shows a **NEW DECK UNLOCKED** reveal with the deck's key cards. A loss tells you which deck the bot played.
+- **Deck Builder** has three categories: **STARTER**, **BOT DECKS** and **MY DECKS**. Starter and bot decks can be looked at and played in every mode, but not changed. BOT DECKS also lists the locked decks with a teaser and what unlocks them ("Beat the Hard bot"). Your own decks work as before, under MY DECKS. Premade deck names can't be used for your own decks; an existing deck of yours with such a name gets "(mine)" added.
+- **ALL DECKS** in the Deck Builder shows every deck at a glance: a tile per deck with two of its key cards, its name across them in the element colour, stars for the bot that unlocks it (one Easy, two Normal, three Hard) and a ribbon (STARTER, UNLOCKED, MY DECK or BEAT HARD BOT). Sections for starter, own and bot decks, a search field, and a click opens the deck. The deck pickers of Play Online, VS BOT and Local Match have an ALL DECKS button too, showing the decks you can play.
+- Unlocks are saved in collection.dat next to your decks. Editing that file by hand makes the game ignore the unlocks.
+### Fixes and polish
+
+- **Starting-hand redraw:** a card you shuffle back can no longer be drawn straight back. The new cards are drawn first, then the cards you returned are shuffled in.
+- **BACK TO DECK** (#16) is now a band across the middle of the card instead of a small corner tag, and the card is darker.
+- **END TURN** works again 0.75 seconds into your turn, instead of only after the whole YOUR TURN banner (about 2 seconds). The short lock still stops a turn from being handed straight back by accident.
+
 ## v1.2.0 Beta
 
 Eight new cards, three reworks, avatars and a batch of quality-of-life fixes. **v1.2.0 can't play online with v1.1.0 or older.** From now on, versions with the same major.minor number (1.2.x) can always play each other, and a mismatch tells you who needs to update.

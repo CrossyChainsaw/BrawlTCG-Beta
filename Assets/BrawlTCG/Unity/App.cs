@@ -44,7 +44,7 @@ namespace BrawlTCG.UnityApp
 
             EnsureCameraAndEventSystem();
             BuildCanvas();
-            DeckStore.EnsureStarterDecks();
+            Collection.Initialize();
             ShowMenu();
             ShowcaseDirector.StartRequestedFromEditor(this);
         }

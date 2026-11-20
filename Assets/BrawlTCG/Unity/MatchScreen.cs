@@ -47,6 +47,9 @@ namespace BrawlTCG.UnityApp
         int _localIndex;
         int[] _avatars;
         bool _hotSeat;
+        /// <summary>Bot games: starts another match with the same settings (null otherwise).</summary>
+        Action _rematch;
+        bool VsBot => _net is BotSession;
 
         /// <summary>Player shown at the bottom (whose hand is visible).</summary>
         int _viewer;
@@ -75,6 +78,8 @@ namespace BrawlTCG.UnityApp
             _net = setup.Net;
             _hotSeat = setup.HotSeat;
             _localIndex = setup.LocalIndex;
+            _rematch = setup.Rematch;
+            _botDeck = setup.BotDeck;
             _avatars = setup.Avatars ?? new[] { Avatars.None, Avatars.None };
 
             BuildBackdrop();
@@ -204,6 +209,7 @@ namespace BrawlTCG.UnityApp
         void PumpNetwork()
         {
             if (_net == null || _ended) return;
+            _net.Poll();
             while (_net.TryReceive(out string line))
             {
                 if (line == Protocol.Quit)
@@ -265,8 +271,13 @@ namespace BrawlTCG.UnityApp
             return true;
         }
 
-        /// <summary>The turn banner is still on screen: ending the turn is blocked so it cannot be skipped by accident (#39).</summary>
-        bool TurnIntroPlaying => _turnBanner != null;
+        /// <summary>
+        /// The turn just started: ending it is blocked for <see cref="EndTurnLock"/> seconds so a turn cannot be handed
+        /// back by accident (#39). The banner itself plays on; END TURN works again before it is gone.
+        /// </summary>
+        bool TurnIntroPlaying => _turnBanner != null && Time.unscaledTime - _turnIntroAt < EndTurnLock;
+        const float EndTurnLock = 0.75f;
+        float _turnIntroAt;
 
         void EndTurnClicked()
         {
@@ -1553,8 +1564,8 @@ namespace BrawlTCG.UnityApp
                 };
                 if (picked)
                 {
-                    v.SetDimmed(true);
-                    v.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                    v.SetDimmed(true, 0.85f);
+                    v.AddCenterBanner("BACK TO DECK", Theme.Gold);
                 }
             }
 
@@ -1643,8 +1654,8 @@ namespace BrawlTCG.UnityApp
                 }
                 // The card that goes back, as it looked when picked (lowered, dimmed, BACK TO DECK) ...
                 CardView oldView = CardView.Create(dim, old, true, x, y + 36, scale);
-                oldView.SetDimmed(true);
-                oldView.AddStatus("BACK TO DECK", new Color(0.04f, 0.05f, 0.14f, 0.95f), Theme.Gold);
+                oldView.SetDimmed(true, 0.85f);
+                oldView.AddCenterBanner("BACK TO DECK", Theme.Gold);
                 // ... and the new one, marked NEW, with a face-down copy for the first half of its turn.
                 CardView newView = CardView.Create(dim, hand[i], true, x, y, scale);
                 newView.SetGlow(Theme.Gold, 0.6f);
@@ -1756,15 +1767,34 @@ namespace BrawlTCG.UnityApp
             CancelTargeting();
             Player winner = _game.Winner;
             Player loser = winner != null ? _game.GetOpponent(winner) : null;
+            bool iWon = !_hotSeat && winner != null && winner.Index == _localIndex;
+            StarterDecks.Starter unlocked = UnlockBotDeck(iWon); // saved now, even if the player quits during the animation
             // Let the final blow and the K.O. play out before the result appears.
             GameOverFx(winner, loser, 0.5f);
-            After(loser != null ? 2.8f : 0, () =>
+            string title = _hotSeat || InShowcase ? $"{winner?.Name.ToUpperInvariant()} WINS" : iWon ? "VICTORY" : "DEFEAT";
+            string message = $"{loser?.Name} has been defeated after {_game.TurnNumber} turns.{BotDeckLine(iWon, unlocked)}";
+
+            // The result with its buttons. After an unlock it comes back when the player leaves the reveal.
+            void ShowResult()
             {
                 var dim = ShowOverlay(0.75f);
-                bool iWon = !_hotSeat && winner != null && winner.Index == _localIndex;
-                string title = _hotSeat || InShowcase ? $"{winner?.Name.ToUpperInvariant()} WINS" : iWon ? "VICTORY" : "DEFEAT";
-                var box = Dialog(dim, title, $"{loser?.Name} has been defeated after {_game.TurnNumber} turns.", "MATCH OVER");
-                Theme.Cta(box, "BACK TO MENU", 220, 296, 360, 76, LeaveMatch, 30);
+                var box = Dialog(dim, title, message, "MATCH OVER");
+                if (_rematch != null)
+                {
+                    // Bot games: straight into another match at the same difficulty (with a deck still to unlock).
+                    Theme.Cta(box, "PLAY AGAIN", 60, 296, 330, 76, Rematch, 30);
+                    Theme.Ghost(box, "BACK TO MENU", 410, 296, 330, 76, LeaveMatch, 26);
+                }
+                else Theme.Cta(box, "BACK TO MENU", 220, 296, 360, 76, LeaveMatch, 30);
+            }
+
+            After(loser != null ? 2.8f : 0, () =>
+            {
+                if (unlocked == null) { ShowResult(); return; }
+                // First the victory with one way on, then the reveal on its own screen, then the result again.
+                var dim = ShowOverlay(0.75f);
+                var box = Dialog(dim, title, message, "MATCH OVER");
+                Theme.Cta(box, "SEE YOUR NEW DECK", 190, 296, 420, 76, () => ShowDeckUnlocked(unlocked, ShowResult), 28);
             });
             Refresh();
         }
@@ -1792,6 +1822,13 @@ namespace BrawlTCG.UnityApp
             _net?.Dispose();
             _net = null;
             _app.ShowMenu();
+        }
+
+        void Rematch()
+        {
+            _net?.Dispose();
+            _net = null;
+            _rematch();
         }
     }
 

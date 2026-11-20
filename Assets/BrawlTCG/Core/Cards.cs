@@ -60,6 +60,17 @@ namespace BrawlTCG.Core
 
         protected virtual void ResetRuntimeState() { }
 
+        /// <summary>For <see cref="Game.CloneForSearch"/>: an exact copy, runtime state included. The caller re-points
+        /// <see cref="Owner"/> and a legend's stacked cards at the copied match.</summary>
+        internal Card CopyForSearch()
+        {
+            Card copy = (Card)MemberwiseClone();
+            copy.CopyMutableState();
+            return copy;
+        }
+
+        protected virtual void CopyMutableState() { }
+
         public string EffectDescription => GenerateEffectDescription(this);
 
         public static string GenerateEffectDescription(Card c)
@@ -232,6 +243,16 @@ namespace BrawlTCG.Core
             StunnedBy = null;
             BurnedBy = null;
         }
+
+        protected override void CopyMutableState()
+        {
+            var modifiers = new List<StatModifier>(_modifiers.Count);
+            foreach (StatModifier m in _modifiers)
+                modifiers.Add(new StatModifier { Source = m.Source, Power = m.Power, Health = m.Health });
+            _modifiers = modifiers;
+        }
+
+        internal void ReplaceStackedCards(List<Card> cards) => StackedCards = cards;
 
         void Record(int power, int health)
         {

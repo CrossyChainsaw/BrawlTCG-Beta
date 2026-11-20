@@ -27,6 +27,8 @@ namespace BrawlTCG.UnityApp
 
         public abstract Task<string> ReadLineAsync(int timeoutMs = 20000);
         public virtual void StartReceiving() { }
+        /// <summary>Called every frame on the main thread before the inbox is read (the bot uses it to take its turn).</summary>
+        public virtual void Poll() { }
         public abstract bool Send(string line);
         public abstract void Dispose();
 

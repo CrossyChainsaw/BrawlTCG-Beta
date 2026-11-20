@@ -49,7 +49,20 @@ namespace BrawlTCG.UnityApp
         string _deckName;
         bool _dirty, _confirmDelete;
         RectTransform _modal, _peekLayer;
-        const string PrefLastDeck = "BrawlTCG.BuilderDeck";
+        const string PrefLastDeck = "BrawlTCG.BuilderDeck", PrefLastCategory = "BrawlTCG.BuilderCategory";
+
+        // Deck categories: premade decks the player owns can be looked at and played, never changed.
+        enum DeckCategory { Starter, Bot, Mine }
+        DeckCategory _category = DeckCategory.Mine;
+        readonly List<(DeckCategory category, Image bg, Text label)> _categoryTabs = new List<(DeckCategory, Image, Text)>();
+        Text _selectorCaption, _readOnlyNote;
+        GameObject _editButtons;
+        /// <summary>The open premade deck (starter or bot deck), or null for the player's own decks.</summary>
+        StarterDecks.Starter _premade;
+        /// <summary>The open bot deck isn't unlocked yet: only a teaser is shown.</summary>
+        bool _locked;
+        bool ReadOnly => _premade != null;
+        const string LockedSuffix = "  ·  LOCKED";
 
         sealed class GridCell
         {
@@ -70,16 +83,20 @@ namespace BrawlTCG.UnityApp
             Theme.Label(transform, "DECK BUILDER", 46, Theme.Text, 28, 20, 600, 60, display: true);
             Theme.Label(transform, "Build decks of at least 40 cards with 10 or more Essence. Up to 4 copies of each card.", 17, Theme.TextDim, 380, 40, 900, 30);
             Theme.Ghost(transform, "‹  MENU", 1736, 26, 160, 50, BackToMenu, 22);
+            if (_showcase == null) Theme.Cta(transform, "ALL DECKS", 1540, 26, 180, 50, OpenOverview, 22);
 
             BuildCollection();
             BuildPreview();
             BuildDeckPanel();
             _peekLayer = UI.Stretch(UI.Rect("PeekLayer", transform)); // full-size previews of mentioned cards
+            _overviewLayer = UI.Stretch(UI.Rect("OverviewLayer", transform)); // ALL DECKS grid
             _modal = UI.Stretch(UI.Rect("Modal", transform)); // top layer for the unsaved-changes dialog
 
             ApplyFilters();
-            if (_showcase != null) { SwitchDeck(null); return; } // the showcase starts with no deck and makes its own
-            SwitchDeck(_deckSelector.Value);
+            if (_showcase != null) { SetCategory(DeckCategory.Mine, null); SwitchDeck(null); return; } // the showcase makes its own deck
+            // Reopens on the category and deck that were open last time (#40); new players start on their starter decks.
+            var category = (DeckCategory)Mathf.Clamp(PlayerPrefs.GetInt(PrefLastCategory, DeckStore.List().Count > 0 ? (int)DeckCategory.Mine : 0), 0, 2);
+            SetCategory(category, PlayerPrefs.GetString(PrefLastDeck, null));
             Select(CardCatalogue.All.OfType<LegendCard>().First());
         }
 
@@ -309,9 +326,9 @@ namespace BrawlTCG.UnityApp
             Theme.Label(t, copyText, 18, copies > 0 ? Theme.Text : Theme.TextDim, 20, 456, w - 40, 26, TextAnchor.MiddleCenter, display: true);
 
             var add = _addButton = Theme.Cta(t, "ADD", 20, 492, (w - 52) / 2, 56, AddSelected, 24);
-            add.interactable = _deckName != null && DeckRules.CanAddCard(_deck, card.Id) == null;
+            add.interactable = _deckName != null && !ReadOnly && DeckRules.CanAddCard(_deck, card.Id) == null;
             var remove = Theme.Ghost(t, "REMOVE", 32 + (w - 52) / 2, 492, (w - 52) / 2, 56, RemoveSelected, 20);
-            remove.interactable = copies > 0;
+            remove.interactable = copies > 0 && !ReadOnly;
 
             float y = 568;
             if (card is LegendCard legend)
@@ -436,40 +453,116 @@ namespace BrawlTCG.UnityApp
             Transform t = panel.transform;
             float w = DeckRect.width;
 
-            // Reopens on the deck that was open last time (#40).
-            _deckSelector = new ThemedSelector(t, "Your deck", 18, 16, w - 36, _showcase != null ? new string[0] : DeckStore.List(),
-                _showcase != null ? null : PlayerPrefs.GetString(PrefLastDeck, null));
-            _deckSelector.Changed += name =>
+            // Category tabs: STARTER and BOT DECKS are premade and read-only, MY DECKS are the player's own files.
+            var tabs = Theme.RoundedPanel(t, new Color(1, 1, 1, 0.06f), 18, 16, w - 36, 50, 12, "Categories");
+            var categories = new[] { (DeckCategory.Starter, "STARTER"), (DeckCategory.Bot, "BOT DECKS"), (DeckCategory.Mine, "MY DECKS") };
+            float segW = (w - 36 - 8) / categories.Length;
+            for (int i = 0; i < categories.Length; i++)
             {
-                string previous = _deckName;
-                ConfirmUnsaved("SWITCH", () => SwitchDeck(name), () => _deckSelector.SetOptions(DeckStore.List(), previous));
+                DeckCategory c = categories[i].Item1;
+                var seg = Theme.RoundedPanel(tabs.transform, new Color(0, 0, 0, 0), 4 + i * segW, 4, segW, 42, 10, "Tab");
+                var b = seg.gameObject.AddComponent<Button>();
+                b.transition = Selectable.Transition.None;
+                b.onClick.AddListener(() =>
+                {
+                    if (_showcase != null || c == _category) return;
+                    ConfirmUnsaved("SWITCH", () => SetCategory(c, null));
+                });
+                var label = Theme.Label(seg.transform, categories[i].Item2, 16, Theme.TextDim, 0, 0, segW, 42, TextAnchor.MiddleCenter, display: true);
+                _categoryTabs.Add((c, seg, label));
+            }
+
+            _selectorCaption = Theme.Label(t, "", 14, Theme.TextDim, 20, 78, w - 40, 20, display: true);
+            _deckSelector = new ThemedSelector(t, null, 18, 100, w - 36, new string[0]);
+            _deckSelector.Changed += option =>
+            {
+                string previous = OptionFor(_deckName);
+                ConfirmUnsaved("SWITCH", () => SwitchDeck(option), () => _deckSelector.SetOptions(CategoryOptions(), previous));
             };
 
-            // Four equal buttons in a 2x2 grid (#41). NEW DECK and RENAME ask for the name in a pop-up.
-            const float bh = 54, gap = 10;
+            // Four equal buttons in a 2x2 grid (#41). NEW DECK and RENAME ask for the name in a pop-up. MY DECKS only.
+            const float bh = 54, gap = 10, by = 164;
             float half = (w - 36 - gap) / 2;
-            _newDeckButton = Theme.Ghost(t, "NEW DECK", 18, 104, half, bh, CreateDeck, 18);
-            _renameButton = Theme.Ghost(t, "RENAME", 18 + half + gap, 104, half, bh, RenameDeck, 18);
+            _editButtons = UI.Place(UI.Rect("EditButtons", t), 0, 0, w, by + 2 * bh + gap).gameObject;
+            Transform eb = _editButtons.transform;
+            _newDeckButton = Theme.Ghost(eb, "NEW DECK", 18, by, half, bh, CreateDeck, 18);
+            _renameButton = Theme.Ghost(eb, "RENAME", 18 + half + gap, by, half, bh, RenameDeck, 18);
 
-            _save = Theme.Cta(t, "SAVE", 18, 104 + bh + gap, half, bh, SaveDeck, 18);
-            var delete = Theme.Ghost(t, "DELETE", 18 + half + gap, 104 + bh + gap, half, bh, DeleteDeck, 18);
+            _save = Theme.Cta(eb, "SAVE", 18, by + bh + gap, half, bh, SaveDeck, 18);
+            var delete = Theme.Ghost(eb, "DELETE", 18 + half + gap, by + bh + gap, half, bh, DeleteDeck, 18);
             _deleteLabel = delete.GetComponentInChildren<Text>();
+            _readOnlyNote = Theme.Label(t, "", 16, Theme.TextDim, 22, by + 4, w - 44, 2 * bh + gap - 8, TextAnchor.MiddleLeft);
 
-            _deckTitle = Theme.Label(t, "", 22, Theme.Text, 18, 240, w - 36, 30, display: true);
+            _deckTitle = Theme.Label(t, "", 22, Theme.Text, 18, 298, w - 36, 30, display: true);
             _deckTitle.verticalOverflow = VerticalWrapMode.Truncate;
-            _stats = UI.Place(UI.Rect("Stats", t), 18, 274, w - 36, 160);
-            _status = Theme.Label(t, "", 15, Theme.TextDim, 18, 436, w - 36, 40);
+            _stats = UI.Place(UI.Rect("Stats", t), 18, 332, w - 36, 160);
+            _status = Theme.Label(t, "", 15, Theme.TextDim, 18, 494, w - 36, 40);
 
-            _deckList = new ScrollList(t, 10, 480, w - 20, DeckRect.height - 490, new Color(0, 0, 0, 0));
+            _deckList = new ScrollList(t, 10, 538, w - 20, DeckRect.height - 548, new Color(0, 0, 0, 0));
             _deckList.Scroll.scrollSensitivity = 40;
         }
 
-        void SwitchDeck(string name)
+        /// <summary>Shows a category: its tab, its decks in the selector, and the edit buttons only for MY DECKS.</summary>
+        void SetCategory(DeckCategory category, string select)
         {
+            _category = category;
+            foreach (var (c, bg, label) in _categoryTabs)
+            {
+                bool on = c == category;
+                bg.color = on ? Theme.Gold : new Color(0, 0, 0, 0);
+                label.color = on ? Theme.Ink : Theme.TextDim;
+            }
+            _editButtons.SetActive(category == DeckCategory.Mine);
+            _readOnlyNote.gameObject.SetActive(category != DeckCategory.Mine);
+            switch (category)
+            {
+                case DeckCategory.Starter:
+                    _selectorCaption.text = "YOUR STARTER DECKS";
+                    _readOnlyNote.text = "The decks you started with. You can play them in every mode, but not change them. " +
+                        "Build your own under MY DECKS.";
+                    break;
+                case DeckCategory.Bot:
+                    int unlocked = Collection.UnlockedBotDecks.Count, total = Collection.BotDecks.Count;
+                    _selectorCaption.text = $"BOT DECKS  ·  {unlocked} / {total} UNLOCKED";
+                    _readOnlyNote.text = "Beat the bot in VS BOT to unlock the deck it played. Unlocked decks can be played " +
+                        "in every mode, but not changed.";
+                    break;
+                default:
+                    _selectorCaption.text = "YOUR DECKS";
+                    break;
+            }
+            List<string> options = _showcase != null ? new List<string>() : CategoryOptions();
+            _deckSelector.SetOptions(options, OptionFor(select));
+            SwitchDeck(_deckSelector.Value);
+        }
+
+        /// <summary>The selector's entries for the open category. Locked bot decks are listed too, marked LOCKED.</summary>
+        List<string> CategoryOptions()
+        {
+            switch (_category)
+            {
+                case DeckCategory.Starter: return Collection.Starters.Select(s => s.Name).ToList();
+                case DeckCategory.Bot: return Collection.BotDecks.Select(s => OptionFor(s.Name)).ToList();
+                default: return DeckStore.List();
+            }
+        }
+
+        string OptionFor(string name) =>
+            name != null && _category == DeckCategory.Bot && !Collection.IsUnlocked(name) ? name + LockedSuffix : name;
+
+        static string NameOf(string option) =>
+            option != null && option.EndsWith(LockedSuffix) ? option.Substring(0, option.Length - LockedSuffix.Length) : option;
+
+        void SwitchDeck(string option)
+        {
+            string name = NameOf(option);
             _deckName = name;
             _confirmDelete = false;
+            _premade = _category == DeckCategory.Mine || name == null ? null : StarterDecks.Find(name);
+            _locked = _premade != null && !Collection.Owns(name);
             var errors = new List<string>();
-            _deck = name != null ? DeckStore.Load(name, errors) : new List<int>();
+            if (_premade != null) _deck = _locked ? new List<int>() : _premade.Cards.ToList(); // a locked deck's list stays secret
+            else _deck = name != null ? DeckStore.Load(name, errors) : new List<int>();
             foreach (string e in errors) _app.Toast(e);
             _dirty = false;
             RememberDeck();
@@ -478,8 +571,9 @@ namespace BrawlTCG.UnityApp
 
         void RememberDeck()
         {
-            if (_showcase != null || _deckName == null) return;
-            PlayerPrefs.SetString(PrefLastDeck, _deckName);
+            if (_showcase != null) return;
+            PlayerPrefs.SetInt(PrefLastCategory, (int)_category);
+            if (_deckName != null) PlayerPrefs.SetString(PrefLastDeck, _deckName);
             PlayerPrefs.Save();
         }
 
@@ -488,8 +582,9 @@ namespace BrawlTCG.UnityApp
             RefreshCopyBadges();
             if (_selected != null) ShowPreview();
 
-            _deckTitle.text = _deckName == null ? "NO DECK SELECTED" : _deckName.ToUpperInvariant() + (_dirty ? "  ·  UNSAVED" : "");
-            _deckTitle.color = _dirty ? Theme.Gold : Theme.Text;
+            string tag = _premade == null ? "" : _locked ? "  ·  LOCKED" : Collection.IsStarter(_deckName) ? "  ·  STARTER" : "  ·  BOT DECK";
+            _deckTitle.text = _deckName == null ? "NO DECK SELECTED" : _deckName.ToUpperInvariant() + tag + (_dirty ? "  ·  UNSAVED" : "");
+            _deckTitle.color = _dirty || _locked ? Theme.Gold : Theme.Text;
 
             string saveError = _deckName == null ? "Create a deck first." : DeckRules.ValidateForSave(_deck);
             _save.interactable = saveError == null && _dirty;
@@ -497,7 +592,13 @@ namespace BrawlTCG.UnityApp
             _deleteLabel.color = _confirmDelete ? Theme.Danger : Theme.Text;
 
             string playError = DeckRules.ValidateForPlay(_deck);
-            if (_deckName == null) { _status.text = "Create a deck with NEW DECK to start building."; _status.color = Theme.TextDim; }
+            if (_locked) { _status.text = $"Beat the {_premade.UnlockLevel} bot in VS BOT to unlock this deck."; _status.color = Theme.Gold; }
+            else if (_premade != null) { _status.text = _premade.Description; _status.color = Theme.TextDim; }
+            else if (_deckName == null)
+            {
+                _status.text = _category == DeckCategory.Mine ? "Create a deck with NEW DECK to start building." : "No decks here yet.";
+                _status.color = Theme.TextDim;
+            }
             else if (playError == null) { _status.text = "Ready to play!"; _status.color = Theme.Success; }
             else { _status.text = saveError ?? playError; _status.color = saveError != null ? Theme.Danger : Theme.Gold; }
 
@@ -510,6 +611,15 @@ namespace BrawlTCG.UnityApp
             UI.Clear(_stats);
             Transform t = _stats;
             float w = DeckRect.width - 36;
+            if (_locked)
+            {
+                // A locked deck shows how to get it, not what is in it.
+                var plate = Quiet(Theme.RoundedPanel(t, new Color(1, 1, 1, 0.05f), 0, 0, w, 156, 16, "Locked"));
+                Theme.Label(plate.transform, "LOCKED", 40, Theme.Gold, 0, 18, w, 50, TextAnchor.MiddleCenter, display: true);
+                Theme.Label(plate.transform, $"BEAT THE {_premade.UnlockLevel.ToString().ToUpperInvariant()} BOT", 22, Theme.Text, 0, 72, w, 30, TextAnchor.MiddleCenter, display: true);
+                Theme.Label(plate.transform, $"{_premade.Element}  ·  {_premade.Tier} tier  ·  the bot plays decks you don't have yet", 14, Theme.TextDim, 0, 110, w, 24, TextAnchor.MiddleCenter);
+                return;
+            }
             int count = _deck.Count;
             int essence = _deck.Count(id => id == 0);
             int legends = _deck.Count(id => CardCatalogue.Get(id) is LegendCard);
@@ -549,6 +659,29 @@ namespace BrawlTCG.UnityApp
         void DrawDeckList()
         {
             _deckList.Clear();
+            if (_locked)
+            {
+                // The teaser: what the deck is about and three of its key cards, darkened.
+                float w = DeckRect.width - 44;
+                var about = _deckList.AddRow(96, new Color(1, 1, 1, 0.05f), null);
+                about.sprite = Theme.Rounded;
+                about.type = Image.Type.Sliced;
+                about.pixelsPerUnitMultiplier = 2;
+                Theme.Label(about.transform, _premade.Description, 16, Theme.Text, 14, 0, w - 28, 96, TextAnchor.MiddleLeft).raycastTarget = false;
+
+                List<int> keys = DeckLibrary.KeyCards(_premade);
+                const float scale = 0.86f, gap = 14;
+                float cw = CardView.W * scale, total = keys.Count * cw + (keys.Count - 1) * gap;
+                var row = _deckList.AddRow(CardView.H * scale + 24, new Color(0, 0, 0, 0), null);
+                for (int i = 0; i < keys.Count; i++)
+                {
+                    CardView view = CardView.Create(row.transform, CardCatalogue.Create(keys[i]), true, (w - total) / 2 + i * (cw + gap), 12, scale);
+                    view.SetDimmed(true, 0.86f);
+                    view.AddCenterBanner("?", Theme.Gold);
+                    foreach (Graphic g in view.GetComponentsInChildren<Graphic>()) g.raycastTarget = false;
+                }
+                return;
+            }
             var groups = _deck.Distinct()
                 .Select(id => CardCatalogue.Get(id))
                 .GroupBy(c => c.Type)
@@ -582,7 +715,8 @@ namespace BrawlTCG.UnityApp
             Theme.Label(gem.transform, card.Cost.ToString(), 15, Color.white, 0, 0, 28, 28, TextAnchor.MiddleCenter, display: true);
             var name = Theme.Label(t, card.Name, 17, Theme.Text, 52, 0, w - 52 - 130, 46, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
-            Theme.Label(t, $"×{copies}", 18, Theme.Gold, w - 130, 0, 44, 46, TextAnchor.MiddleRight, display: true);
+            Theme.Label(t, $"×{copies}", 18, Theme.Gold, ReadOnly ? w - 54 : w - 130, 0, 44, 46, TextAnchor.MiddleRight, display: true);
+            if (ReadOnly) return; // premade decks can't be changed
             SmallButton(t, "−", w - 78, 7, () => { Select(c); RemoveSelected(); });
             SmallButton(t, "+", w - 40, 7, () => { Select(c); AddSelected(); });
         }
@@ -630,8 +764,17 @@ namespace BrawlTCG.UnityApp
 
         // ───────────────────────────── Actions ─────────────────────────────
 
+        /// <summary>Premade decks are never changed: says so and returns true.</summary>
+        bool RefuseReadOnly()
+        {
+            if (!ReadOnly) return false;
+            _app.Toast(_locked ? "This deck is locked. Beat the bot to unlock it." : "Premade decks can't be changed. Build your own under MY DECKS.");
+            return true;
+        }
+
         void AddSelected()
         {
+            if (RefuseReadOnly()) return;
             if (_selected == null) { _app.Toast("Select a card first."); return; }
             if (_deckName == null) { _app.Toast("Create a deck first (NEW DECK)."); return; }
             string error = DeckRules.CanAddCard(_deck, _selected.Id);
@@ -644,6 +787,7 @@ namespace BrawlTCG.UnityApp
 
         void RemoveSelected()
         {
+            if (RefuseReadOnly()) return;
             if (_selected == null || !_deck.Contains(_selected.Id)) { _app.Toast("That card is not in your deck."); return; }
             _deck.RemoveAt(_deck.LastIndexOf(_selected.Id));
             _dirty = true;

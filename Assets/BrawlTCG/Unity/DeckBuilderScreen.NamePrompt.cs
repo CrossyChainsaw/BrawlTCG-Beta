@@ -100,6 +100,7 @@ namespace BrawlTCG.UnityApp
             if (current != null && name == current) return "The deck already has that name.";
             bool caseOnly = current != null && string.Equals(name, current, StringComparison.OrdinalIgnoreCase);
             if (!caseOnly && DeckStore.Exists(name)) return "A deck with that name already exists.";
+            if (DeckLibrary.IsReserved(name)) return "That name belongs to a premade deck.";
             return null;
         }
     }

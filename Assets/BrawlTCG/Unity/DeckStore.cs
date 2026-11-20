@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace BrawlTCG.UnityApp
 {
-    /// <summary>Decks are stored as "&lt;name&gt;.txt" (one card id per line) in persistentDataPath/Decks.</summary>
+    /// <summary>The player's own decks ("My decks"): "&lt;name&gt;.txt" files (one card id per line) in persistentDataPath/Decks.</summary>
     public static class DeckStore
     {
         public static string Folder => Path.Combine(Application.persistentDataPath, "Decks");
@@ -112,54 +112,36 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>
-        /// Hands out the six premade decks once each and cleans up decks earlier versions handed out (see
-        /// <see cref="StarterDecks.Retired"/>). A deck that was already given is never recreated, so deleting one keeps it
-        /// deleted; an existing deck with the same name is never overwritten.
+        /// Premade decks are no longer deck files (see <see cref="Collection"/>). Earlier versions handed them out as
+        /// editable files and listed every name they gave in the ".starters" ledger: those files are deleted once, edited or
+        /// not, together with the ledger. Then any remaining file whose name belongs to a premade deck gets "(mine)"
+        /// added, so every deck name means one deck.
         /// </summary>
-        public static void EnsureStarterDecks()
+        public static void RemoveHandedOutDecks()
         {
             MigrateFromOldFolder();
             Directory.CreateDirectory(Folder);
-            string ledger = Path.Combine(Folder, ".starters"); // not a .txt, so it never shows up as a deck
-            var given = new HashSet<string>(File.Exists(ledger) ? File.ReadAllLines(ledger) : Array.Empty<string>());
-            bool changed = false;
-
-            // Old versions first: an untouched copy of a retired deck is removed, and if that name is still bundled
-            // (the deck was re-tuned) the new version is handed out in its place below.
-            var current = new HashSet<string>(StarterDecks.Premade.Select(s => s.Name));
-            foreach (string removed in RemoveRetiredDecks(given))
+            string ledger = Path.Combine(Folder, ".starters"); // not a .txt, so it never showed up as a deck
+            try
             {
-                if (current.Contains(removed)) given.Remove(removed);
-                changed = true;
+                if (File.Exists(ledger))
+                {
+                    foreach (string name in File.ReadAllLines(ledger))
+                        if (name.Trim().Length > 0) Delete(name.Trim());
+                    File.Delete(ledger);
+                }
+                foreach (string name in List())
+                {
+                    if (!DeckLibrary.IsReserved(name)) continue;
+                    string free = name + " (mine)";
+                    for (int i = 2; Exists(free) || DeckLibrary.IsReserved(free); i++) free = $"{name} (mine {i})";
+                    Rename(name, free);
+                }
             }
-
-            foreach (StarterDecks.Starter s in StarterDecks.Premade)
+            catch (Exception e)
             {
-                if (given.Contains(s.Name)) continue;
-                if (!Exists(s.Name)) Save(s.Name, s.Cards);
-                given.Add(s.Name);
-                changed = true;
+                Debug.LogWarning("Could not clean up the old premade decks: " + e.Message);
             }
-            if (changed) File.WriteAllLines(ledger, given.OrderBy(n => n));
-        }
-
-        /// <summary>
-        /// Deletes decks an earlier version handed out that are no longer bundled, renamed or re-tuned, but only while
-        /// the file is still exactly the deck that was handed out: a deck the player edited is theirs and stays.
-        /// Returns the names that were removed.
-        /// </summary>
-        static List<string> RemoveRetiredDecks(HashSet<string> given)
-        {
-            var removed = new List<string>();
-            foreach (StarterDecks.Starter s in StarterDecks.Retired)
-            {
-                if (!given.Contains(s.Name) || !Exists(s.Name)) continue;
-                List<int> saved = Load(s.Name);
-                if (!saved.OrderBy(i => i).SequenceEqual(s.Cards.OrderBy(i => i))) continue;
-                Delete(s.Name);
-                removed.Add(s.Name);
-            }
-            return removed;
         }
     }
 }

@@ -115,28 +115,29 @@ namespace BrawlTCG.Core
         }
 
         /// <summary>
-        /// The chosen cards go back into the deck, the deck is shuffled, and each chosen slot gets a newly drawn card in
-        /// the same position, so the rest of the hand doesn't move.
+        /// Each chosen slot gets a newly drawn card in the same position, so the rest of the hand doesn't move. Only then
+        /// do the replaced cards go back into the deck and the deck is shuffled, so a replaced card can't be drawn
+        /// straight back. If the deck runs out, the remaining chosen cards stay in the hand.
         /// </summary>
         void RedrawStartingHand(Player player, int mask)
         {
-            var slots = new List<int>();
+            var replaced = new List<Card>();
             for (int i = 0; i < player.Hand.Count; i++)
-                if ((mask & (1 << i)) != 0) slots.Add(i);
-            if (slots.Count > 0)
             {
-                foreach (int i in slots) player.Deck.Add(player.Hand[i]);
+                if ((mask & (1 << i)) == 0 || player.Deck.Count == 0) continue;
+                Card drawn = player.Deck[player.Deck.Count - 1]; // top of the deck is the last element
+                player.Deck.RemoveAt(player.Deck.Count - 1);
+                replaced.Add(player.Hand[i]);
+                player.Hand[i] = drawn;
+            }
+            if (replaced.Count > 0)
+            {
+                player.Deck.AddRange(replaced);
                 Random rng = _redrawRng[player.Index];
                 for (int i = player.Deck.Count - 1; i > 0; i--)
                 {
                     int j = rng.Next(i + 1);
                     (player.Deck[i], player.Deck[j]) = (player.Deck[j], player.Deck[i]);
-                }
-                foreach (int i in slots)
-                {
-                    Card drawn = player.Deck[player.Deck.Count - 1]; // top of the deck is the last element
-                    player.Deck.RemoveAt(player.Deck.Count - 1);
-                    player.Hand[i] = drawn;
                 }
             }
             _chosenStartingHand[player.Index] = true;

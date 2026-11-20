@@ -598,6 +598,7 @@ namespace BrawlTCG.UnityApp
             bool mine = IsLocallyControlled(active.Index);
             string title = _hotSeat || InShowcase ? $"{active.Name.ToUpperInvariant()}'S TURN" : mine ? "YOUR TURN" : $"{active.Name.ToUpperInvariant()}'S TURN";
             _turnBanner = Fx.Banner(_top, title, $"TURN {_game.TurnNumber}", mine ? Theme.Gold : new Color32(140, 170, 255, 255));
+            _turnIntroAt = Time.unscaledTime;
             Sfx.Play("turn", mine ? 0.8f : 0.5f);
             if (!deal) return;
 
