@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased
+## v1.3.0 Beta
+
+Play against a bot, 59 premade decks, starter decks and decks to unlock by beating the bot. **v1.3.0 can't play online with v1.2.x or older** (the starting-hand redraw changed); the game tells you who needs to update.
+
+Closes issues **#16**, **#22**, **#53** and **#54**.
 
 ### Play against a bot (#53)
 
@@ -26,6 +30,7 @@ The premade decks are no longer handed out as editable decks. Your earlier copie
 - **Deck Builder** has three categories: **STARTER**, **BOT DECKS** and **MY DECKS**. Starter and bot decks can be looked at and played in every mode, but not changed. BOT DECKS also lists the locked decks with a teaser and what unlocks them ("Beat the Hard bot"). Your own decks work as before, under MY DECKS. Premade deck names can't be used for your own decks; an existing deck of yours with such a name gets "(mine)" added.
 - **ALL DECKS** in the Deck Builder shows every deck at a glance: a tile per deck with two of its key cards, its name across them in the element colour, stars for the bot that unlocks it (one Easy, two Normal, three Hard) and a ribbon (STARTER, UNLOCKED, MY DECK or BEAT HARD BOT). Sections for starter, own and bot decks, a search field, and a click opens the deck. The deck pickers of Play Online, VS BOT and Local Match have an ALL DECKS button too, showing the decks you can play.
 - Unlocks are saved in collection.dat next to your decks. Editing that file by hand makes the game ignore the unlocks.
+
 ### Fixes and polish
 
 - **Starting-hand redraw:** a card you shuffle back can no longer be drawn straight back. The new cards are drawn first, then the cards you returned are shuffled in.
