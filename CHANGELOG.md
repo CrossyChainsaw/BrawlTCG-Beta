@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.3.1 Beta
+
+Plays online with v1.3.0.
+
+### Fixes
+
+- **Fullscreen:** the game now always starts fullscreen at your monitor's native resolution. Before, Unity remembered an earlier windowed run and kept opening in a window. Alt+Enter no longer switches to windowed.
+
 ## v1.3.0 Beta
 
 Play against a bot, 59 premade decks, starter decks and decks to unlock by beating the bot. **v1.3.0 can't play online with v1.2.x or older** (the starting-hand redraw changed); the game tells you who needs to update.

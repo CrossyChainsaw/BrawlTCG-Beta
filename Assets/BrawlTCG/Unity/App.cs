@@ -10,6 +10,16 @@ namespace BrawlTCG.UnityApp
     /// <summary>Starts the game in whatever scene is loaded: no scene setup is required.</summary>
     static class Bootstrap
     {
+        /// <summary>Always runs fullscreen at the monitor's native resolution, whatever Unity
+        /// remembered from an earlier windowed run (it keeps that in the registry).</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        static void ForceFullscreen()
+        {
+            if (Application.isEditor) return;
+            var native = Screen.mainWindowDisplayInfo;
+            Screen.SetResolution(native.width, native.height, FullScreenMode.FullScreenWindow);
+        }
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Init()
         {
