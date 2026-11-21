@@ -292,7 +292,7 @@ namespace BrawlTCG.Core
 
         public static readonly Effect CardChest = new Effect(
             $"Craft {ChestCards} random cards",
-            (target, card, game, played) => game.GenerateRandomCards(ChestCards));
+            (target, card, game, played) => game.GenerateRandomCards(ChestCards, noChests: true));
 
         public static readonly Effect Bubble = new Effect(
             "Stun a legend",
@@ -306,7 +306,7 @@ namespace BrawlTCG.Core
 
         static Effect ElementChest(Element element) => new Effect(
             $"Craft {ChestCards} random {element} cards",
-            (target, card, game, played) => game.GenerateRandomCards(ChestCards, element));
+            (target, card, game, played) => game.GenerateRandomCards(ChestCards, element, noChests: true));
 
         public static readonly Effect DarkDuo = new Effect(
             "Craft 2 random Shadow legends",
