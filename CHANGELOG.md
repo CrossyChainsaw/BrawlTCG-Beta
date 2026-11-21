@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.4.0 Beta
+
+Changes the rules, so it can't play online with v1.3.x.
+
+### Fixes
+
+- **Mastermind** now has **Katars and Scythe** instead of Scythe and Orb (#55). Its attack is still Scythe Slash.
+- **Chests** (Chest, Cosmic, Wild, Dragon's, Sunken and Forgeborne Chest) can no longer craft another chest (#56). Other crafting effects, like the Workshop, can still craft chests.
+
 ## v1.3.1 Beta
 
 Plays online with v1.3.0.
