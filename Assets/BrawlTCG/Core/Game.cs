@@ -556,10 +556,10 @@ namespace BrawlTCG.Core
         /// <summary>Gives the active player a fresh copy of the card.</summary>
         public void GenerateCard(int cardId) => AddCardToHand(ActivePlayer, Crafted(CardCatalogue.Create(cardId)));
 
-        public void GenerateRandomCards(int n, Element? element = null, CardType? type = null)
+        public void GenerateRandomCards(int n, Element? element = null, CardType? type = null, bool noChests = false)
         {
             for (int i = 0; i < n; i++)
-                AddCardToHand(ActivePlayer, Crafted(CardCatalogue.CreateRandom(Rng, element, type)));
+                AddCardToHand(ActivePlayer, Crafted(CardCatalogue.CreateRandom(Rng, element, type, noChests)));
         }
 
         public void GenerateRandomWeaponCards(int n, Weapon? weapon = null)

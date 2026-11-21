@@ -72,7 +72,7 @@ namespace BrawlTCG.Core
             Legend(4002, "Dark Mage", 5, Element.Shadow, "DarkMage", 11, 12, Weapon.Scythe, Weapon.Orb, A(AC.Scythe_Slash)),
             Legend(5000, "Caspian", 2, Element.Shadow, "MasterThief", 4, 4, Weapon.Gauntlets, Weapon.Katars, A(AC.Any_BurnForThreeCard, AC.MasterThief_GrabBomb)),
             Legend(5001, "Raymesis", 5, Element.Shadow, "Raymesis", 9, 16, Weapon.Gauntlets, Weapon.Axe, A(AC.Axe_Swing)),
-            Legend(5002, "Mastermind", 4, Element.Shadow, "Loki", 5, 10, Weapon.Scythe, Weapon.Orb, A(AC.Scythe_Slash), whenPlayed: EC.GenerateAndPlayMatrix),
+            Legend(5002, "Mastermind", 4, Element.Shadow, "Loki", 5, 10, Weapon.Katars, Weapon.Scythe, A(AC.Scythe_Slash), whenPlayed: EC.GenerateAndPlayMatrix),
             Legend(5003, "Ninja Spirit", 2, Element.Shadow, "Ninja_Spirit", 3, 1, Weapon.Sword, Weapon.Scythe, A(AC.NinjaSpirit_PhantomSlash)),
             Legend(5004, "Hellshot Hattori", 3, Element.Shadow, "Hellshot_Hattori", 8, 6, Weapon.Sword, Weapon.Blasters, A(AC.Sword_Slash, AC.Blaster_Shot, AC.Blaster_DoubleShot)),
             Legend(5005, "Dullahan Jiro", 3, Element.Shadow, "DullahanJiro", 5, 7, Weapon.Sword, Weapon.Scythe, A(AC.Sword_Slash, AC.Scythe_Slash, AC.Jiro_SpawnAndPlayNinjaSpirit)),
@@ -193,10 +193,17 @@ namespace BrawlTCG.Core
         /// <summary>A fresh, playable copy of the card.</summary>
         public static Card Create(int id) => Get(id).Clone();
 
-        public static Card CreateRandom(Random rng, Element? element = null, CardType? type = null)
+        /// <summary>Chest, Cosmic Chest, Wild Chest, Dragon's Chest, Sunken Chest and Forgeborne Chest.</summary>
+        static readonly HashSet<int> ChestIds = new HashSet<int> { 506, 512, 513, 514, 515, 516 };
+
+        public static bool IsChest(int id) => ChestIds.Contains(id);
+
+        /// <param name="noChests">Leaves chests out of the pool, so a chest can never craft another chest.</param>
+        public static Card CreateRandom(Random rng, Element? element = null, CardType? type = null, bool noChests = false)
         {
             List<Card> pool = Prototypes
-                .Where(c => (element == null || c.Element == element) && (type == null || c.Type == type))
+                .Where(c => (element == null || c.Element == element) && (type == null || c.Type == type)
+                            && !(noChests && IsChest(c.Id)))
                 .ToList();
             if (pool.Count == 0)
                 throw new InvalidOperationException($"No cards for element '{element?.ToString() ?? "Any"}' and type '{type?.ToString() ?? "Any"}'.");
