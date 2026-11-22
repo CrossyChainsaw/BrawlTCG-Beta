@@ -63,7 +63,7 @@ namespace BrawlTCG.UnityApp
             title.resizeTextMaxSize = 80;
             title.verticalOverflow = VerticalWrapMode.Truncate;
             Theme.AddShadow(title, 4, 0.8f);
-            var info = Theme.Label(t, $"{deck.Element.ToString().ToUpperInvariant()}  ·  {deck.Tier} TIER  ·  BEATEN ON {deck.UnlockLevel.ToString().ToUpperInvariant()}",
+            var info = Theme.Label(t, $"{deck.Element.ToString().ToUpperInvariant()}  ·  {deck.Stars}-STAR DECK  ·  BEATEN ON {deck.UnlockLevel.ToString().ToUpperInvariant()}",
                 20, Theme.Text, 0, 186, pw, 30, TextAnchor.MiddleCenter, display: true);
             Theme.AddShadow(info, 2, 0.8f);
 
