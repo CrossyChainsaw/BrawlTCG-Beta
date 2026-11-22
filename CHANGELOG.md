@@ -1,5 +1,36 @@
 # Changelog
 
+## v1.5.0 Beta
+
+Five new cards, a new deck lineup and several rule changes. **Can't play online with v1.4.x.**
+
+Closes issues **#37**, **#57**, **#65** and **#66**.
+
+### New cards
+
+- **Fallout** (Battle, Fire, 7) (#66). Eliminates every legend on the board, both sides.
+- **Superfan Brynn** (Battle, Arctic, 4). All your Spear and Axe legends get +2/+2, and you craft a random Spear and a random Axe.
+- **Mako's Reef** (Stage, Arctic, 7). While it's in play, every legend has 1 HP, so any hit kills. When it leaves, every legend gets its HP back. Healing and max-HP gains made under the reef wait until it leaves.
+- **Art Class** (Battle, Magic, 3). Crafts 2 random legends that cost 2 or less.
+- **Final Form Petra** (Legend, Shadow, 9, 18 ATK / 25 HP, Gauntlets + Orb). The strongest and most expensive card in the game. **When Eliminated:** eliminates every legend.
+
+**"When Eliminated"** is a new kind of ability: it fires when the legend dies. Cards show it with a red skull badge.
+
+### Rule changes
+
+- **Death's Hour** costs 5 (was 7) (#65).
+- **Basic weapon attacks are all +0.** Axe Swing, Hammer Swing and Cannon Blast lost their +1.
+- **Chests craft 2 cards** (was 3) (#57). This goes for Chest, Cosmic, Wild, Dragon's, Sunken and Forgeborne Chest.
+- **No card, no free turn** (#37). If you get no card at the start of your turn (your hand is full or your deck is empty), each of your legends loses 1 HP. With no legends, you lose 1 HP. A card from The Workshop or Space Time counts as getting a card.
+
+### Decks
+
+- **New lineup of 64 premade decks**, picked by a round robin of 75 decks with the Hard bot (see DECK_ANALYSIS_75.md). 13 of them are new, built around the new cards. 8 older decks were removed: Iron Wall, Adrenaline Rush, Comet Blades, Atlantis Freeze, Fangwild Hammers, Matrix Hammers, Hammer Time and Comet Blaze.
+- **16 decks per bot:** ranks 1-16 are unlocked by beating the Hard bot, 17-32 the Normal bot, 33-48 the Easy bot.
+- **Starter decks** now come from ranks 49-64. Starter decks you had that aren't in this pool are replaced, so most players get new starter decks.
+- **Stars show how strong a deck is,** not which bot unlocks it: four stars win 70%+ of their games, three 60-70%, two 50-60%, one under 50%.
+- **Your unlocks carry over.** Unlocks of removed decks are dropped. Decks you unlocked that are now starter-pool decks stay yours, under OTHER UNLOCKED DECKS.
+
 ## v1.4.0 Beta
 
 Changes the rules, so it can't play online with v1.3.x.
