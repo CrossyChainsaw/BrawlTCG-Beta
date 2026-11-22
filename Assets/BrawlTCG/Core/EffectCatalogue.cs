@@ -217,6 +217,32 @@ namespace BrawlTCG.Core
                     }
             });
 
+        // ───────────── Mako's Reef ─────────────
+        // While in play, every legend (both players') has 1 HP. When the reef leaves, each legend gets back the HP it had.
+
+        public static readonly Effect MakosReef_WhenPlayed = new Effect(
+            "N/A",
+            (target, card, game, played) =>
+            {
+                foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                    legend.EnterReef();
+            });
+
+        public static readonly Effect MakosReef_WhileInPlay = new Effect(
+            "Every legend has 1 HP. When this stage leaves, they get their HP back",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) legend.EnterReef();
+            });
+
+        public static readonly Effect MakosReef_WhenDiscarded = new Effect(
+            "N/A",
+            (target, card, game, played) =>
+            {
+                foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                    legend.LeaveReef();
+            });
+
         public static readonly Effect SozinsComet_WhenPlayed = ElementStageWhenPlayed(Element.Fire);
         public static readonly Effect SozinsComet_WhileInPlay = ElementStageWhileInPlay(Element.Fire);
         public static readonly Effect SozinsComet_WhenDiscarded = ElementStageWhenDiscarded(Element.Fire);
@@ -288,7 +314,7 @@ namespace BrawlTCG.Core
                 }
             });
 
-        const int ChestCards = 3;
+        const int ChestCards = 2;
 
         public static readonly Effect CardChest = new Effect(
             $"Craft {ChestCards} random cards",
@@ -335,7 +361,7 @@ namespace BrawlTCG.Core
             (target, card, game, played) =>
             {
                 foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
-                    legend.CurrentHP = 1;
+                    legend.SetHealth(1);
             });
 
         public static readonly Effect CursedKunai = new Effect(
@@ -362,6 +388,41 @@ namespace BrawlTCG.Core
                 if (target is LegendCard legend)
                     legend.LoseHealth(Math.Max(1, legend.CurrentHP));
             });
+
+        /// <summary>Fallout: every legend on the board, both sides, is eliminated, whatever its HP.</summary>
+        public static readonly Effect Fallout = new Effect(
+            "Eliminate every legend",
+            (target, card, game, played) =>
+            {
+                foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                    legend.LoseHealth(Math.Max(1, legend.CurrentHP));
+            });
+
+        /// <summary>Superfan Brynn: your legends that use a Spear or an Axe get the card's boost, then craft a random Spear and a random Axe.</summary>
+        public static readonly Effect SuperfanBrynn = new Effect(
+            "Boosts all your Spear and Axe legends, then crafts a random Spear and a random Axe",
+            (target, card, game, played) =>
+            {
+                if (!(card is BattleCard battle)) return;
+                foreach (LegendCard legend in game.ActivePlayer.PlayingField.ToList())
+                {
+                    if (UsesWeapon(legend, Weapon.Spear) || UsesWeapon(legend, Weapon.Axe))
+                    {
+                        legend.ModifyStat(Stat.Health, battle.HealthModifier);
+                        legend.ModifyStat(Stat.Power, battle.PowerModifier);
+                    }
+                }
+                game.GenerateRandomWeaponCards(1, Weapon.Spear);
+                game.GenerateRandomWeaponCards(1, Weapon.Axe);
+            });
+
+        static bool UsesWeapon(LegendCard legend, Weapon weapon) =>
+            legend.PrimaryWeapon == weapon || legend.SecondaryWeapon == weapon;
+
+        /// <summary>Art Class: craft 2 random legends that cost 2 or less.</summary>
+        public static readonly Effect ArtClass = new Effect(
+            "Craft 2 random legends that cost 2 or less",
+            (target, card, game, played) => game.GenerateRandomLegends(2, maxCost: 2));
 
         public static readonly Effect The_Finger = new Effect(
             "Legend attack becomes 0",

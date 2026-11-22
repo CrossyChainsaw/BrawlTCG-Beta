@@ -72,7 +72,7 @@ namespace BrawlTCG.UnityApp
             Theme.Label(t, _playableOnly ? "CHOOSE A DECK" : "ALL DECKS", 44, Theme.Text, 60, 26, 600, 60, display: true);
             string hint = _playableOnly
                 ? "Click a deck to play with it. Win against the bot in VS BOT to unlock more decks."
-                : "Click a deck to open it. Stars show which bot unlocks it: one star Easy, two Normal, three Hard.";
+                : "Click a deck to open it. Stars show how strong a deck is: four stars win 70%+ of games, three 60-70%, two 50-60%, one under 50%.";
             Theme.Label(t, hint, 17, Theme.TextDim, 62, 86, 1100, 26);
             _search = Theme.Field(t, null, "Search decks…", "", OverviewW - 520, 34, 380);
             _search.onValueChanged.AddListener(_ => Layout());
@@ -113,7 +113,7 @@ namespace BrawlTCG.UnityApp
                 .Select(n => new DeckTile { Name = n, Kind = DeckKind.Mine, Cards = DeckStore.Load(n) }).ToList()));
             foreach (Bot.Level level in new[] { Bot.Level.Easy, Bot.Level.Normal, Bot.Level.Hard })
             {
-                List<StarterDecks.Starter> decks = Collection.BotDecks.Where(s => s.UnlockLevel == level).ToList();
+                List<StarterDecks.Starter> decks = Collection.BotDecks.Where(s => !s.IsStarterPool && s.UnlockLevel == level).ToList();
                 int unlocked = decks.Count(s => Collection.IsUnlocked(s.Name));
                 sections.Add(($"BOT DECKS  ·  {level.ToString().ToUpperInvariant()} BOT  ·  {unlocked} / {decks.Count} UNLOCKED",
                     decks.Where(s => Match(s.Name) && (!_playableOnly || Collection.IsUnlocked(s.Name))).Select(s => new DeckTile
@@ -121,6 +121,10 @@ namespace BrawlTCG.UnityApp
                         Name = s.Name, Kind = DeckKind.Bot, Premade = s, Cards = s.Cards, Locked = !Collection.IsUnlocked(s.Name),
                     }).ToList()));
             }
+            // Decks unlocked in an earlier version that are now starter-pool decks: still the player's.
+            List<StarterDecks.Starter> kept = Collection.BotDecks.Where(s => s.IsStarterPool && Match(s.Name)).ToList();
+            if (kept.Count > 0)
+                sections.Add(("OTHER UNLOCKED DECKS", kept.Select(s => new DeckTile { Name = s.Name, Kind = DeckKind.Bot, Premade = s, Cards = s.Cards }).ToList()));
             return sections;
         }
 
@@ -206,10 +210,10 @@ namespace BrawlTCG.UnityApp
             name.raycastTarget = false;
             Theme.AddOutline(name, 2, 0.8f);
 
-            // Stars on the front plate's top edge: the bot that unlocks it (1 Easy, 2 Normal, 3 Hard).
+            // Stars on the front plate's top edge: how strong the deck is (1-4, from its win rate).
             if (deck.Premade != null)
             {
-                int stars = (int)deck.Premade.UnlockLevel + 1;
+                int stars = deck.Premade.Stars;
                 const float s = 24, gap = 2;
                 float sx = (TileW - stars * s - (stars - 1) * gap) / 2;
                 for (int i = 0; i < stars; i++)

@@ -617,7 +617,7 @@ namespace BrawlTCG.UnityApp
                 var plate = Quiet(Theme.RoundedPanel(t, new Color(1, 1, 1, 0.05f), 0, 0, w, 156, 16, "Locked"));
                 Theme.Label(plate.transform, "LOCKED", 40, Theme.Gold, 0, 18, w, 50, TextAnchor.MiddleCenter, display: true);
                 Theme.Label(plate.transform, $"BEAT THE {_premade.UnlockLevel.ToString().ToUpperInvariant()} BOT", 22, Theme.Text, 0, 72, w, 30, TextAnchor.MiddleCenter, display: true);
-                Theme.Label(plate.transform, $"{_premade.Element}  ·  {_premade.Tier} tier  ·  the bot plays decks you don't have yet", 14, Theme.TextDim, 0, 110, w, 24, TextAnchor.MiddleCenter);
+                Theme.Label(plate.transform, $"{_premade.Element}  ·  {_premade.Stars}-star deck  ·  the bot plays decks you don't have yet", 14, Theme.TextDim, 0, 110, w, 24, TextAnchor.MiddleCenter);
                 return;
             }
             int count = _deck.Count;

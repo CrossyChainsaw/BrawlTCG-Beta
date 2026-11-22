@@ -9,9 +9,10 @@ namespace BrawlTCG.Core
     public static class CardCatalogue
     {
         static LegendCard Legend(int id, string name, int cost, Element element, string art, int power, int health,
-            Weapon primary, Weapon secondary, Attack[] attacks, Effect whenPlayed = null, Effect whileInPlay = null)
+            Weapon primary, Weapon secondary, Attack[] attacks, Effect whenPlayed = null, Effect whileInPlay = null,
+            Effect whenEliminated = null)
             => new LegendCard(id, name, cost, element, art, power, health, primary, secondary, attacks,
-                whenPlayedEffect: whenPlayed, whileInPlayEffect: whileInPlay);
+                whenPlayedEffect: whenPlayed, whileInPlayEffect: whileInPlay, whenDiscardedEffect: whenEliminated);
 
         static Attack[] A(params Attack[] attacks) => attacks;
 
@@ -35,6 +36,7 @@ namespace BrawlTCG.Core
             new StageCard(107, "Silent Galaxy", 5, Element.Cosmic, "SilentGalaxy", startTurnEffect: EC.SilentGalaxy_StartTurn, whenPlayedEffect: EC.SilentGalaxy_WhenPlayed, whileInPlayEffect: EC.SilentGalaxy_WhilePlay, whenDiscardedEffect: EC.SilentGalaxy_WhenDiscarded),
             new StageCard(108, "Sozin's Comet", 7, Element.Fire, "SozinsComet", whenPlayedEffect: EC.SozinsComet_WhenPlayed, whileInPlayEffect: EC.SozinsComet_WhileInPlay, whenDiscardedEffect: EC.SozinsComet_WhenDiscarded),
             new StageCard(109, "Full Eclipse", 7, Element.Arctic, "FullEclipse", whenPlayedEffect: EC.FullEclipse_WhenPlayed, whileInPlayEffect: EC.FullEclipse_WhileInPlay, whenDiscardedEffect: EC.FullEclipse_WhenDiscarded),
+            new StageCard(110, "Mako's Reef", 7, Element.Arctic, "Avatar_Makos_Reef", whenPlayedEffect: EC.MakosReef_WhenPlayed, whileInPlayEffect: EC.MakosReef_WhileInPlay, whenDiscardedEffect: EC.MakosReef_WhenDiscarded),
 
             // Nature legends                                              power hp
             Legend(1000, "Briar Rose", 3, Element.Nature, "BriarRose", 6, 9, Weapon.Spear, Weapon.Greatsword, A(AC.Spear_Stab, AC.Any_BlowAKiss)),
@@ -77,6 +79,7 @@ namespace BrawlTCG.Core
             Legend(5004, "Hellshot Hattori", 3, Element.Shadow, "Hellshot_Hattori", 8, 6, Weapon.Sword, Weapon.Blasters, A(AC.Sword_Slash, AC.Blaster_Shot, AC.Blaster_DoubleShot)),
             Legend(5005, "Dullahan Jiro", 3, Element.Shadow, "DullahanJiro", 5, 7, Weapon.Sword, Weapon.Scythe, A(AC.Sword_Slash, AC.Scythe_Slash, AC.Jiro_SpawnAndPlayNinjaSpirit)),
             Legend(5006, "Kitsune Hattori", 6, Element.Shadow, "Kitsune", 15, 13, Weapon.Sword, Weapon.Spear, A(AC.Sword_Slash, AC.Spear_Stab)),
+            Legend(5007, "Final Form Petra", 9, Element.Shadow, "FinalFormPetra", 18, 25, Weapon.Gauntlets, Weapon.Orb, A(AC.Gauntlets_Punch, AC.Orb_Swing), whenEliminated: EC.Fallout),
             // Wild legends
             Legend(6000, "The Minotaur", 5, Element.Wild, "Teros", 10, 15, Weapon.Axe, Weapon.Hammer, A(AC.Axe_Swing, AC.Hammer_Swing)),
             Legend(6001, "Fox Spirit", 2, Element.Wild, "Fox_Spirit", 1, 6, Weapon.Bow, Weapon.Hammer, A(AC.Hammer_Swing, AC.Yumiko_GrabOrbs)),
@@ -138,23 +141,23 @@ namespace BrawlTCG.Core
             new BattleCard(503, "Super Saiyan", 6, "When Played: Boosts legend stats +5/+5", Element.Wild, "SuperSaiyan", false, true, true, EC.BoostHealthAndPower, powerModifier: 5, healthModifier: 5),
             new BattleCard(504, "Orb", 0, "When Played: Deals direct damage 1", Element.Magic, "Orb", true, false, false, EC.BattleCardDirectDamageWhenPlayed, damage: 1),
             new BattleCard(505, "Xull's Fury", 3, "When Played: Boosts legend stats +5 Attack", Element.Fire, "XullsFury", false, true, true, EC.BoostHealthAndPower, powerModifier: 5, healthModifier: 0),
-            new BattleCard(506, "Chest", 1, "When Played: Craft 3 random cards", Element.Magic, "CardChest", true, false, true, EC.CardChest, targetRequired: false),
+            new BattleCard(506, "Chest", 1, "When Played: Craft 2 random cards", Element.Magic, "CardChest", true, false, true, EC.CardChest, targetRequired: false),
             new BattleCard(507, "<3", 2, "When Played: Boosts legend stats +5 HP", Element.Magic, "Avatar_Heart", true, false, true, EC.BoostHealthAndPower, powerModifier: 0, healthModifier: 5),
             new BattleCard(508, "Fire Nation", 2, "When Played: Boosts all your fire legend stats +2/+2", Element.Fire, "Avatar_Fire", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 2, healthModifier: 2, targetElements: new[] { Element.Fire }, multiTarget: true),
             new BattleCard(509, "Water Tribe", 2, "When Played: Boosts all your Arctic legend stats +2/+2", Element.Arctic, "Avatar_Water", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 2, healthModifier: 2, targetElements: new[] { Element.Arctic }, multiTarget: true),
             new BattleCard(510, "Krabby Patty", 2, "When Played: Fully heals legend", Element.Arctic, "Avatar_Krabby_Patty", true, false, true, EC.BattleCardHealWhenPlayed, healthModifier: 1000),
             new BattleCard(511, "Bubble", 1, "When Played: Stun a legend", Element.Arctic, "Bubble", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.Bubble),
-            new BattleCard(512, "Cosmic Chest", 3, "When Played: Craft 3 random Cosmic cards", Element.Cosmic, "Cosmic_Chest", true, false, true, EC.CosmicChest, targetRequired: false),
-            new BattleCard(513, "Wild Chest", 3, "When Played: Craft 3 random Wild cards", Element.Wild, "Wild_Chest", true, false, true, EC.WildChest, targetRequired: false),
-            new BattleCard(514, "Dragon's Chest", 3, "When Played: Craft 3 random Fire cards", Element.Fire, "Dragon_Chest", true, false, true, EC.DragonChest, targetRequired: false),
-            new BattleCard(515, "Sunken Chest", 3, "When Played: Craft 3 random Arctic cards", Element.Arctic, "Sunken_Chest", true, false, true, EC.SunkenChest, targetRequired: false),
-            new BattleCard(516, "Forgeborne Chest", 3, "When Played: Craft 3 random Shadow cards", Element.Shadow, "Shadow_Chest", true, false, true, EC.ShadowChest, targetRequired: false),
+            new BattleCard(512, "Cosmic Chest", 3, "When Played: Craft 2 random Cosmic cards", Element.Cosmic, "Cosmic_Chest", true, false, true, EC.CosmicChest, targetRequired: false),
+            new BattleCard(513, "Wild Chest", 3, "When Played: Craft 2 random Wild cards", Element.Wild, "Wild_Chest", true, false, true, EC.WildChest, targetRequired: false),
+            new BattleCard(514, "Dragon's Chest", 3, "When Played: Craft 2 random Fire cards", Element.Fire, "Dragon_Chest", true, false, true, EC.DragonChest, targetRequired: false),
+            new BattleCard(515, "Sunken Chest", 3, "When Played: Craft 2 random Arctic cards", Element.Arctic, "Sunken_Chest", true, false, true, EC.SunkenChest, targetRequired: false),
+            new BattleCard(516, "Forgeborne Chest", 3, "When Played: Craft 2 random Shadow cards", Element.Shadow, "Shadow_Chest", true, false, true, EC.ShadowChest, targetRequired: false),
             new BattleCard(517, "Dark Duo", 4, "When Played: Craft 2 random Shadow legends", Element.Shadow, "DarkDuo", true, false, true, EC.DarkDuo, targetRequired: false),
             new BattleCard(518, "Witch Party", 6, "When Played: Craft Fait, Witch Scarlet, Amethyst Scythe and Galaxy Lance", Element.Magic, "WitchParty", true, false, true, EC.WitchParty, targetRequired: false),
             new BattleCard(519, "Promotion I", 5, "When Played: Player Max health goes up by 15", Element.Magic, "Avatar_CollectorsPackI", true, false, false, EC.PromotionI, targetRequired: false),
             new BattleCard(520, "Promotion II", 8, "When Played: Player Max health goes up by 25", Element.Magic, "Avatar_CollectorsPack", true, false, false, EC.PromotionII, targetRequired: false),
             new BattleCard(521, "Adrenaline", 2, "When Played: Legend can attack again", Element.Nature, "Adrenaline", true, false, true, EC.Adrenaline),
-            new BattleCard(522, "Death's Hour", 7, "When Played: Every legend's HP becomes 1", Element.Shadow, "DeathsHour", true, false, false, EC.DeathsHour, targetRequired: false),
+            new BattleCard(522, "Death's Hour", 5, "When Played: Every legend's HP becomes 1", Element.Shadow, "DeathsHour", true, false, false, EC.DeathsHour, targetRequired: false),
             new BattleCard(523, "Cursed Kunai", 3, "When Played: Craft a random Katars legend and a random Katars weapon", Element.Shadow, "CursedKunai", true, false, false, EC.CursedKunai, targetRequired: false),
             new BattleCard(524, "Ymir's Breath", 5, "When Played: Stun all opposing legends", Element.Arctic, "YmirsBreath", true, false, false, EC.YmirsBreath, targetRequired: false),
             new BattleCard(525, "Cody Travis", 5, "When Played: A legend's power becomes 0", Element.Wild, "finger", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.The_Finger),
@@ -162,6 +165,9 @@ namespace BrawlTCG.Core
             new BattleCard(527, "Did Shaw Win Yet?", 3, "When Played: Craft 3x The Rock", Element.Wild, "shaw", true, false, false, EC.DidShawWinYet, targetRequired: false),
             new BattleCard(528, "Tombstone", 6, "When Played: Eliminate an opposing legend", Element.Shadow, "Tombstone", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.Tombstone),
             new BattleCard(529, "A-Oooooo", 6, "When Played: Boosts all your Wild legends +4 Attack", Element.Wild, "AOooooo", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 4, healthModifier: 0, targetElements: new[] { Element.Wild }, multiTarget: true),
+            new BattleCard(530, "Fallout", 7, "When Played: Eliminate every legend", Element.Fire, "Fallout", true, false, false, EC.Fallout, targetRequired: false),
+            new BattleCard(531, "Superfan Brynn", 4, "When Played: Boosts all your Spear and Axe legends +2/+2. Craft a random Spear and a random Axe", Element.Arctic, "Avatar_Superfan_Brynn", true, false, true, EC.SuperfanBrynn, powerModifier: 2, healthModifier: 2, targetRequired: false),
+            new BattleCard(532, "Art Class", 3, "When Played: Craft 2 random legends that cost 2 or less", Element.Magic, "ArtClass", true, false, false, EC.ArtClass, targetRequired: false),
         };
 
         static readonly Dictionary<int, Card> ById = BuildIndex();
@@ -222,6 +228,14 @@ namespace BrawlTCG.Core
             List<WeaponCard> pool = Prototypes.OfType<WeaponCard>().Where(w => w.Weapon == weapon).ToList();
             if (pool.Count == 0)
                 throw new InvalidOperationException($"No cards available for weapon type {weapon}.");
+            return pool[rng.Next(pool.Count)].Clone();
+        }
+
+        public static Card CreateRandomLegend(Random rng, int maxCost)
+        {
+            List<LegendCard> pool = Prototypes.OfType<LegendCard>().Where(l => l.Cost <= maxCost).ToList();
+            if (pool.Count == 0)
+                throw new InvalidOperationException($"No legends that cost {maxCost} or less.");
             return pool[rng.Next(pool.Count)].Clone();
         }
 

@@ -52,14 +52,17 @@ namespace BrawlTCG.UnityApp
             get { Load(); return StarterDecks.Premade.Where(s => _starters.Contains(s.Name)).ToList(); }
         }
 
-        /// <summary>Every premade deck that is not one of the player's starters (locked or not), easiest unlock first.</summary>
+        /// <summary>
+        /// The bot decks (locked or not), easiest unlock first. Starter-pool decks are never bot decks, except ones the
+        /// player unlocked in an earlier version, when the deck was still a bot deck: those are kept, at the end.
+        /// </summary>
         public static List<StarterDecks.Starter> BotDecks
         {
             get
             {
                 Load();
-                return StarterDecks.Premade.Where(s => !_starters.Contains(s.Name))
-                    .OrderBy(s => s.UnlockLevel).ThenBy(s => s.Rank).ToList();
+                return StarterDecks.Premade.Where(s => !_starters.Contains(s.Name) && (!s.IsStarterPool || _unlocked.Contains(s.Name)))
+                    .OrderBy(s => s.IsStarterPool).ThenBy(s => s.UnlockLevel).ThenBy(s => s.Rank).ToList();
             }
         }
 
@@ -95,7 +98,8 @@ namespace BrawlTCG.UnityApp
         public static bool Unlock(string name)
         {
             Load();
-            if (StarterDecks.Find(name) == null || Owns(name)) return false;
+            StarterDecks.Starter deck = StarterDecks.Find(name);
+            if (deck == null || deck.IsStarterPool || Owns(name)) return false;
             _unlocked.Add(name);
             Save();
             return true;

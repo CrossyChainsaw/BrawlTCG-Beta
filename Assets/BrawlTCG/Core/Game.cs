@@ -13,6 +13,8 @@ namespace BrawlTCG.Core
         public const int StartingEssence = 1;
         public const int StartingHandCards = 7;
         public const int MaxCardsInHand = 15;
+        /// <summary>Damage at the start of a turn with no card (full hand or empty deck): to each of the player's legends, or to the player if they have none.</summary>
+        public const int NoDrawDamage = 1;
         public const int MaxLegendsOnField = 5;
         const int EssenceCardId = 0;
 
@@ -152,12 +154,31 @@ namespace BrawlTCG.Core
         {
             TurnNumber++;
             Player p = ActivePlayer;
+            int handBefore = p.Hand.Count;
 
             if (p.Hand.Count < MaxCardsInHand && DrawCardStartTurn)
                 DrawCardFromDeck(p);
 
             if (ActiveStage?.StartTurnEffect != null)
                 ActiveStage.StartTurnEffect.Invoke(p.PlayingField.ToList(), ActiveStage, this, ActiveStage);
+
+            // No card this turn (full hand or empty deck): each of the player's legends loses 1 HP, or, with no legends,
+            // the player does. A card from the stage (The Workshop's craft, Space Time's extra draw) counts as getting a card.
+            if (p.Hand.Count <= handBefore)
+            {
+                string reason = p.Deck.Count == 0 ? $"{p.Name} has no cards left to draw" : $"{p.Name}'s hand is full, so no card is drawn";
+                if (p.PlayingField.Count > 0)
+                {
+                    foreach (LegendCard legend in p.PlayingField.ToList())
+                        legend.LoseHealth(NoDrawDamage);
+                    Notify($"{reason}: their legends lose {NoDrawDamage} HP.");
+                }
+                else
+                {
+                    p.LoseHealth(NoDrawDamage);
+                    Notify($"{reason} and takes {NoDrawDamage} damage.");
+                }
+            }
 
             foreach (LegendCard legend in p.PlayingField.ToList())
                 legend.TakeBurnDamage();
@@ -571,6 +592,12 @@ namespace BrawlTCG.Core
             }
         }
 
+        public void GenerateRandomLegends(int n, int maxCost)
+        {
+            for (int i = 0; i < n; i++)
+                AddCardToHand(ActivePlayer, Crafted(CardCatalogue.CreateRandomLegend(Rng, maxCost)));
+        }
+
         public void GenerateRandomLegendsWithWeapon(int n, Weapon weapon)
         {
             for (int i = 0; i < n; i++)
@@ -598,16 +625,28 @@ namespace BrawlTCG.Core
 
         // ───────────────────────────── Death & victory ─────────────────────────────
 
+        /// <summary>
+        /// Removes dead legends. A "when eliminated" effect can kill more legends, so this repeats until nobody else
+        /// died. It always ends: every pass removes at least one legend from the field.
+        /// </summary>
         void ResolveDeaths()
         {
-            foreach (Player p in _players)
+            bool anyDied;
+            do
             {
-                foreach (LegendCard legend in p.PlayingField.ToList())
+                anyDied = false;
+                foreach (Player p in _players)
                 {
-                    if (legend.CurrentHP <= 0)
-                        KillLegend(p, legend);
+                    foreach (LegendCard legend in p.PlayingField.ToList())
+                    {
+                        if (legend.CurrentHP <= 0 && legend.OnPlayingField)
+                        {
+                            KillLegend(p, legend);
+                            anyDied = true;
+                        }
+                    }
                 }
-            }
+            } while (anyDied);
         }
 
         void KillLegend(Player owner, LegendCard legend)
@@ -619,6 +658,8 @@ namespace BrawlTCG.Core
             legend.OnPlayingField = false;
             owner.PlayingField.Remove(legend);
             Discard(owner, legend);
+            // "When Eliminated" (e.g. Final Form Petra). It runs after the legend has left the field, so it can't hit itself.
+            legend.WhenDiscardedEffect?.Invoke(null, legend, this, legend);
         }
 
         void CheckGameOver()
@@ -646,7 +687,7 @@ namespace BrawlTCG.Core
                 sb.Append($"P{p.Index}:{p.Health}/{p.MaxHealth} e{p.Essence} pe{p.PlayedEssenceCardThisTurn} d{string.Join(".", p.Deck.Select(c => c.Id))} ");
                 sb.Append($"h{string.Join(".", p.Hand.Select(c => c.Id))} x{string.Join(".", p.DiscardPile.Select(c => c.Id))} es{p.EssenceField.Count} f[");
                 foreach (LegendCard l in p.PlayingField)
-                    sb.Append($"{l.Id}:{l.CurrentHP}/{l.BaseHealth}:{l.Power}:{l.IsStunned}{l.IsBurned}{l.CanAttack}{l.AttackedThisTurn}:{string.Join(".", l.StackedCards.Select(c => c.Id))} ");
+                    sb.Append($"{l.Id}:{l.CurrentHP}/{l.BaseHealth}:{l.Power}:{l.IsStunned}{l.IsBurned}{l.CanAttack}{l.AttackedThisTurn}{l.ReefSavedHP}:{string.Join(".", l.StackedCards.Select(c => c.Id))} ");
                 sb.Append("];");
             }
             return sb.ToString();

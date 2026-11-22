@@ -39,7 +39,7 @@ namespace BrawlTCG.Core
 
         // ───────────── Default weapon attacks ─────────────
         public static readonly Attack Spear_Stab = new Attack("Spear Stab", 0, Weapon.Spear, 1, Default);
-        public static readonly Attack Cannon_Blast = new Attack("Cannon Blast", 1, Weapon.Cannon, 1, Default);
+        public static readonly Attack Cannon_Blast = new Attack("Cannon Blast", 0, Weapon.Cannon, 1, Default);
         public static readonly Attack Orb_Throw = new Attack("Orb Throw", 3, Weapon.Orb, 1, Default, weaponOneBurnAmount: 1);
         public static readonly Attack Orb_Swing = new Attack("Orb Swing", 0, Weapon.Orb, 1, Default);
         public static readonly Attack Greatsword_Swing = new Attack("Great Swing", 0, Weapon.Greatsword, 1, Default);
@@ -49,10 +49,10 @@ namespace BrawlTCG.Core
             (a, t, atk, g) => OneHitKO(t), weaponOneBurnAmount: 2, oneHitKO: true);
         public static readonly Attack Lance_Poke = new Attack("Lance Poke", 0, Weapon.RocketLance, 1, Default);
         public static readonly Attack Lance_Flamethrower = new Attack("Flamethrower", 4, Weapon.RocketLance, 2, Default);
-        public static readonly Attack Hammer_Swing = new Attack("Hammer Swing", 1, Weapon.Hammer, 1, Default);
+        public static readonly Attack Hammer_Swing = new Attack("Hammer Swing", 0, Weapon.Hammer, 1, Default);
         public static readonly Attack Hammer_Gimp = new Attack("Hammer Gimp", 0, Weapon.Hammer, 3,
             (a, t, atk, g) => OneHitKO(t), weaponOneBurnAmount: 2, oneHitKO: true);
-        public static readonly Attack Axe_Swing = new Attack("Axe Swing", 1, Weapon.Axe, 1, Default);
+        public static readonly Attack Axe_Swing = new Attack("Axe Swing", 0, Weapon.Axe, 1, Default);
         public static readonly Attack Gauntlets_Punch = new Attack("Punch", 0, Weapon.Gauntlets, 1, Default);
         public static readonly Attack Gauntlets_PowerPunch = new Attack("Power Punch", 4, Weapon.Gauntlets, 2, Default);
         public static readonly Attack Katar_Slash = new Attack("Slash", 0, Weapon.Katars, 1, Default);

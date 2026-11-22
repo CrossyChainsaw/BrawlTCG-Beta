@@ -8,11 +8,11 @@ namespace BrawlTCG.UnityApp
 {
     /// <summary>
     /// Small badges on legend and stage cards that show they have an ability and when it fires:
-    /// bolt = when played, infinity = while in play, arrow = start of turn.
+    /// bolt = when played, infinity = while in play, arrow = start of turn, skull = when eliminated.
     /// </summary>
     public static class TriggerIcons
     {
-        public enum Trigger { WhenPlayed, WhileInPlay, StartOfTurn }
+        public enum Trigger { WhenPlayed, WhileInPlay, StartOfTurn, WhenEliminated }
 
         public enum BadgeStyle
         {
@@ -31,9 +31,12 @@ namespace BrawlTCG.UnityApp
         public static readonly Color PlayedColor = new Color32(245, 192, 74, 255);
         public static readonly Color WhileColor = new Color32(176, 120, 255, 255);
         public static readonly Color StartColor = new Color32(110, 220, 150, 255);
+        public static readonly Color EliminatedColor = new Color32(255, 96, 120, 255);
 
-        public static Color ColorFor(Trigger t) => t == Trigger.WhenPlayed ? PlayedColor : t == Trigger.WhileInPlay ? WhileColor : StartColor;
-        public static string LabelFor(Trigger t) => t == Trigger.WhenPlayed ? "When played" : t == Trigger.WhileInPlay ? "While in play" : "Start of turn";
+        public static Color ColorFor(Trigger t) =>
+            t == Trigger.WhenPlayed ? PlayedColor : t == Trigger.WhileInPlay ? WhileColor : t == Trigger.WhenEliminated ? EliminatedColor : StartColor;
+        public static string LabelFor(Trigger t) =>
+            t == Trigger.WhenPlayed ? "When played" : t == Trigger.WhileInPlay ? "While in play" : t == Trigger.WhenEliminated ? "When eliminated" : "Start of turn";
 
         static bool HasText(Effect e) => e != null && !string.IsNullOrWhiteSpace(e.Description) && e.Description != "N/A";
 
@@ -48,6 +51,7 @@ namespace BrawlTCG.UnityApp
             if (HasText(card.WhenPlayedEffect)) list.Add(Trigger.WhenPlayed);
             if (HasText(card.WhileInPlayEffect)) list.Add(Trigger.WhileInPlay);
             if (HasText(card.StartTurnEffect)) list.Add(Trigger.StartOfTurn);
+            if (card is LegendCard && HasText(card.WhenDiscardedEffect)) list.Add(Trigger.WhenEliminated);
             return list;
         }
 
@@ -206,6 +210,7 @@ namespace BrawlTCG.UnityApp
             if (line.StartsWith("Start Turn:", StringComparison.OrdinalIgnoreCase)) return Trigger.StartOfTurn;
             if (line.StartsWith("When Played:", StringComparison.OrdinalIgnoreCase)) return Trigger.WhenPlayed;
             if (line.StartsWith("While In Play:", StringComparison.OrdinalIgnoreCase)) return Trigger.WhileInPlay;
+            if (line.StartsWith("When Eliminated:", StringComparison.OrdinalIgnoreCase)) return Trigger.WhenEliminated;
             return null;
         }
 
@@ -280,12 +285,12 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _stunned;
+        static Sprite _bolt, _infinity, _cycle, _skull, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _stunned;
 
         // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetStatics() =>
-            _bolt = _infinity = _cycle = _sword = _slash = _hammer = _fullSword = _heart = _flame = _solidFlame = _stunned = null;
+            _bolt = _infinity = _cycle = _skull = _sword = _slash = _hammer = _fullSword = _heart = _flame = _solidFlame = _stunned = null;
 
         /// <summary>Whole sword, tip top-right (ATK changes).</summary>
         static Sprite FullSword => _fullSword ??= Glyph((x, y) => { Vector2 p = SwordSpace(x, y); return Sword(p.x, p.y); });
@@ -372,7 +377,22 @@ namespace BrawlTCG.UnityApp
         public static Sprite GlyphFor(Trigger t) =>
             t == Trigger.WhenPlayed ? (_bolt ??= Glyph(Bolt)) :
             t == Trigger.WhileInPlay ? (_infinity ??= Glyph(Infinity)) :
+            t == Trigger.WhenEliminated ? (_skull ??= Glyph(Skull)) :
             (_cycle ??= Glyph(Cycle));
+
+        /// <summary>Skull (when eliminated): a round cranium and jaw with two eye holes, a nose notch and teeth gaps.</summary>
+        static bool Skull(float x, float y)
+        {
+            bool cranium = Vector2.Distance(new Vector2(x, y), new Vector2(0.5f, 0.42f)) < 0.32f;
+            bool jaw = Mathf.Abs(x - 0.5f) < 0.19f && y > 0.55f && y < 0.86f;
+            bool eye = Vector2.Distance(new Vector2(x, y), new Vector2(0.37f, 0.47f)) < 0.085f
+                    || Vector2.Distance(new Vector2(x, y), new Vector2(0.63f, 0.47f)) < 0.085f;
+            bool nose = InPolygon(x, y, NoseShape);
+            bool teeth = y > 0.74f && y < 0.86f && (Mathf.Abs(x - 0.42f) < 0.018f || Mathf.Abs(x - 0.58f) < 0.018f);
+            return (cranium || jaw) && !eye && !nose && !teeth;
+        }
+
+        static readonly float[] NoseShape = { 0.5f, 0.57f, 0.45f, 0.67f, 0.55f, 0.67f };
 
         static readonly float[] BoltShape = { 0.58f, 0.06f, 0.22f, 0.56f, 0.46f, 0.56f, 0.36f, 0.94f, 0.80f, 0.42f, 0.55f, 0.42f, 0.70f, 0.06f };
         static readonly float[] ArrowHead = { 0.60f, 0.10f, 0.95f, 0.30f, 0.66f, 0.47f };
