@@ -218,7 +218,7 @@ namespace BrawlTCG.Core
             });
 
         // ───────────── Mako's Reef ─────────────
-        // While in play, every legend (both players') has 1 HP. When the reef leaves, each legend gets back the HP it had.
+        // While in play, every legend (both players') has 1 max HP. When the reef leaves, each legend gets its old max HP back, at full HP.
 
         public static readonly Effect MakosReef_WhenPlayed = new Effect(
             "N/A",
@@ -229,7 +229,7 @@ namespace BrawlTCG.Core
             });
 
         public static readonly Effect MakosReef_WhileInPlay = new Effect(
-            "Every legend has 1 HP. When this stage leaves, they get their HP back",
+            "Every legend has 1 max HP. When this stage leaves, they get their max HP back",
             (target, card, game, played) =>
             {
                 if (target is LegendCard legend) legend.EnterReef();

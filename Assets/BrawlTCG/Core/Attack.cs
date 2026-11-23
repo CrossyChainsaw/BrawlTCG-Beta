@@ -85,8 +85,9 @@ namespace BrawlTCG.Core
         }
 
         /// <summary>
-        /// Elemental bonus: for each weapon requirement, if the legend holds at least the required amount of that weapon
-        /// in its own element, the attack deals that amount of extra damage. An attack that deals no damage of its own
+        /// Elemental bonus: for each weapon requirement, every weapon of that type in the legend's own element adds its
+        /// <see cref="WeaponCard.ElementalBonus"/> (1, or 2 for the special 2-cost weapons). Only as many weapons as the
+        /// requirement asks for count, the strongest first (Storm with 2 Nature Orbs and 1 Magic Orb gets +2). An attack that deals no damage of its own
         /// (0 ATK, e.g. after The Finger) gets no bonus either.
         /// </summary>
         public static int CalculateElementalBonus(LegendCard attacker, Attack attack)
@@ -101,8 +102,12 @@ namespace BrawlTCG.Core
             static int BonusFor(LegendCard legend, Weapon weapon, int required)
             {
                 if (required <= 0) return 0;
-                int matches = legend.StackedWeapons.Count(w => w.Weapon == weapon && w.Element == legend.Element);
-                return matches >= required ? required : 0;
+                return legend.StackedWeapons
+                    .Where(w => w.Weapon == weapon && w.Element == legend.Element)
+                    .Select(w => w.ElementalBonus)
+                    .OrderByDescending(b => b)
+                    .Take(required)
+                    .Sum();
             }
         }
 

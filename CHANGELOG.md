@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.6.0 Beta
+
+New weapons, stronger elemental weapons, a Mako's Reef rework and cost filters in the deck builder. **Can't play online with v1.5.x.**
+
+### New weapons
+
+Ten new weapon cards:
+
+- **Bifrost Edge** (Cosmic Axe, **2**) and **Vinetouched Greatsword** (Nature Greatsword, **2**). See 2-cost weapons below.
+- **Magma Bolt** (Fire Rocket Lance, 1)
+- **Hardlight Hammer** and **Hardlight Blasters** (Cosmic, 1)
+- **The North Wind** (Arctic Bow, 1)
+- **Smasher** (Wild Hammer, 1)
+- **Darkheart Axe**, **Shadow Spear** and **Katars of the Raven** (Shadow, 1)
+
+### Rule changes
+
+- **Elemental bonus counts each weapon.** Every weapon in the legend's own element adds to the bonus, up to as many weapons as the attack needs. Before, you only got the bonus with the full set. Deathcap's Storm with 2 Nature Orbs and 1 Magic Orb now gets +2 (was +0).
+- **2-cost weapons give +2 elemental bonus** instead of +1. They still count as one weapon for an attack's requirements. **Axe of Regrowth, Buzz Axe, Blazing Fire, Remnant of Fate, Magma Spear** and **Shattering Star** now cost 2, as do the new Bifrost Edge and Vinetouched Greatsword. Discarding one costs 2 Essence.
+- **Mako's Reef** now sets every legend's **max HP** to 1 while it's in play. When it leaves, every legend gets its old max HP back **at full HP**. Max-HP buffs and curses played under the reef are kept for when it leaves; curses still hit right away.
+- **Mahou Shoujo** is now a **Magic** sword (was Cosmic).
+
+### Deck builder
+
+- **Sort by cost:** Default, Cost Low or Cost High. Your choice is remembered.
+- **Cost buttons 1-9** show only cards of that cost. Click the same button again to show all costs.
+
 ## v1.5.0 Beta
 
 Five new cards, a new deck lineup and several rule changes. **Can't play online with v1.4.x.**
