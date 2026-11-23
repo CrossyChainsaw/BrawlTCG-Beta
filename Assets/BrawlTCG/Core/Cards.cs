@@ -113,13 +113,17 @@ namespace BrawlTCG.Core
     public sealed class WeaponCard : Card
     {
         public Weapon Weapon { get; }
+        /// <summary>Extra damage this weapon adds when it matches its legend's element: 2 for the special 2-cost weapons, else 1.</summary>
+        public int ElementalBonus { get; }
         public override CardType Type => CardType.Weapon;
-        public override string Description => $"Play this on {GetArticle(Weapon.ToString())} {Weapon} Legend to unlock attacks";
+        public override string Description => $"Play this on {GetArticle(Weapon.ToString())} {Weapon} Legend to unlock attacks"
+            + (ElementalBonus > 1 ? $". Gives +{ElementalBonus} elemental bonus" : "");
 
         public WeaponCard(int id, string name, int cost, Element element, string art, Weapon weapon)
             : base(id, name, cost, element, art)
         {
             Weapon = weapon;
+            ElementalBonus = cost >= 2 ? 2 : 1;
         }
 
         public static string GetArticle(string word)
@@ -195,10 +199,11 @@ namespace BrawlTCG.Core
         public bool AttackedThisTurn { get; internal set; }
         public bool OnPlayingField { get; internal set; }
 
-        /// <summary>Mako's Reef: the HP this legend had when the reef set it to 1, given back when the reef leaves.
-        /// Null when the reef is not holding it. While held, healing and max-HP gains go to this value instead.</summary>
-        public int? ReefSavedHP { get; private set; }
-        public bool HeldByReef => ReefSavedHP != null;
+        /// <summary>Mako's Reef: the max HP this legend had when the reef set its max HP to 1, given back when the reef leaves.
+        /// Null when the reef is not holding it. While held, max-HP gains and losses go to this value as well.</summary>
+        public int? ReefSavedMaxHP { get; private set; }
+        public bool HeldByReef => ReefSavedMaxHP != null;
+        int _reefEnteredMaxHP; // max HP when the reef took hold, so the reef's own modifier entry cancels out when it leaves
 
         /// <summary>A net stat change from one source (a card, or "Legend · Attack"), for showing what affects this legend.</summary>
         public sealed class StatModifier
@@ -244,7 +249,8 @@ namespace BrawlTCG.Core
             CanAttack = true;
             AttackedThisTurn = false;
             OnPlayingField = false;
-            ReefSavedHP = null;
+            ReefSavedMaxHP = null;
+            _reefEnteredMaxHP = 0;
             _modifiers = new List<StatModifier>();
             StunnedBy = null;
             BurnedBy = null;
@@ -288,38 +294,35 @@ namespace BrawlTCG.Core
             CurrentHP = (int)Math.Max(int.MinValue / 2, (long)CurrentHP - damage);
         }
 
-        /// <summary>Mako's Reef comes into play (or this legend arrives while it is in play): HP becomes 1, the rest is kept.</summary>
+        /// <summary>Mako's Reef comes into play (or this legend arrives while it is in play): max HP becomes 1 (so HP is 1 too),
+        /// the old max HP is kept for when the reef leaves.</summary>
         internal void EnterReef()
         {
             if (HeldByReef || CurrentHP <= 0) return;
-            ReefSavedHP = CurrentHP;
+            ReefSavedMaxHP = BaseHealth;
+            _reefEnteredMaxHP = BaseHealth;
+            Record(0, 1 - BaseHealth);
+            BaseHealth = 1;
             CurrentHP = 1;
         }
 
-        /// <summary>Mako's Reef leaves play: the legend gets back the HP it had (never above its max, never below 1).</summary>
+        /// <summary>Mako's Reef leaves play: the legend gets back its old max HP (never below 1) and is healed to it.</summary>
         internal void LeaveReef()
         {
             if (!HeldByReef) return;
-            if (CurrentHP > 0)
-                CurrentHP = Math.Max(1, Math.Min(BaseHealth, ReefSavedHP.Value));
-            ReefSavedHP = null;
+            int max = Math.Max(1, ReefSavedMaxHP.Value);
+            Record(0, _reefEnteredMaxHP - 1);
+            BaseHealth = max;
+            if (CurrentHP > 0) CurrentHP = max;
+            ReefSavedMaxHP = null;
         }
 
-        /// <summary>Sets HP to a value (Death's Hour). Under Mako's Reef it also sets the HP that comes back.</summary>
-        internal void SetHealth(int value)
-        {
-            if (HeldByReef) ReefSavedHP = value;
-            else CurrentHP = value;
-        }
+        /// <summary>Sets HP to a value (Death's Hour), never above max HP.</summary>
+        internal void SetHealth(int value) => CurrentHP = Math.Min(BaseHealth, value);
 
         public void GainHealth(int healing)
         {
             if (healing <= 0) return;
-            if (HeldByReef)
-            {
-                ReefSavedHP = (int)Math.Min(BaseHealth, (long)ReefSavedHP.Value + healing);
-                return;
-            }
             CurrentHP = (int)Math.Min(BaseHealth, (long)CurrentHP + healing);
         }
 
@@ -327,15 +330,17 @@ namespace BrawlTCG.Core
         {
             if (stat == Stat.Health)
             {
-                BaseHealth += amount;
                 if (HeldByReef)
                 {
-                    // Under the reef, gains wait for it to leave; losses still hurt now.
-                    ReefSavedHP += amount;
+                    // Under the reef max HP stays 1: gains wait for it to leave; losses still hurt now.
+                    ReefSavedMaxHP += amount;
                     if (amount < 0) CurrentHP += amount;
                 }
                 else
+                {
+                    BaseHealth += amount;
                     CurrentHP += amount;
+                }
                 Record(0, amount);
             }
             else
