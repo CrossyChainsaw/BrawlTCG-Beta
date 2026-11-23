@@ -8,7 +8,7 @@ namespace BrawlTCG.UnityApp
 {
     /// <summary>
     /// Opening animation: the two players slide in from either side, "VS" slams down between them, and the one who
-    /// goes first is announced. Click to skip. Fully opaque, so in hot seat no hand shows through.
+    /// goes first is announced. When a coin flip decided that, the coin is tossed with an avatar on each face. Click to skip. Fully opaque, so in hot seat no hand shows through.
     /// </summary>
     public sealed partial class MatchScreen
     {
@@ -21,7 +21,7 @@ namespace BrawlTCG.UnityApp
         {
             var dim = ShowOverlay(1f);
             // You on the left (online); player 1 on the left in hot seat.
-            int leftIndex = _hotSeat ? 0 : _localIndex;
+            int leftIndex = _hotSeat ? (_seatsSwapped ? 1 : 0) : _localIndex;
             Player left = _game.Players[leftIndex], right = _game.Players[1 - leftIndex];
 
             var group = dim.gameObject.AddComponent<CanvasGroup>();
@@ -36,6 +36,7 @@ namespace BrawlTCG.UnityApp
             UI.Stretch(vsLabel.rectTransform);
             Theme.AddShadow(vsLabel, 6, 0.7f);
             vs.localScale = Vector3.zero;
+            RectTransform coin = _coinFlip ? Coin(dim, left, right) : null;
 
             string starter = _game.ActivePlayer.Name.ToUpperInvariant();
             bool meFirst = !_hotSeat && _game.ActiveIndex == _localIndex;
@@ -55,7 +56,32 @@ namespace BrawlTCG.UnityApp
                 done();
             }
             UI.Clicks(dim.gameObject, _ => Finish());
-            StartCoroutine(VersusRoutine(group, leftSide, rightSide, vs, firstGroup, () => finished, Finish));
+            bool leftWins = _game.ActiveIndex == leftIndex;
+            StartCoroutine(VersusRoutine(group, leftSide, rightSide, vs, coin, leftWins, firstGroup, () => finished, Finish));
+        }
+
+        /// <summary>A gold-rimmed coin with the left player's avatar on face "A" and the right player's on face "B".</summary>
+        RectTransform Coin(RectTransform dim, Player left, Player right)
+        {
+            const float size = 220;
+            var coin = UI.Place(UI.Rect("Coin", dim), 960 - size / 2, 510 - size / 2, size, size);
+            coin.pivot = new Vector2(0.5f, 0.5f);
+            coin.anchoredPosition = new Vector2(960, -510);
+            CoinFace(coin, "A", left, LeftColor, size);
+            CoinFace(coin, "B", right, RightColor, size).gameObject.SetActive(false);
+            coin.gameObject.SetActive(false);
+            return coin;
+        }
+
+        RectTransform CoinFace(RectTransform coin, string name, Player p, Color c, float size)
+        {
+            var rim = Theme.Disc(coin, Theme.Gold, 0, 0, size, name);
+            rim.raycastTarget = false;
+            float inner = size - 28;
+            var face = Theme.Disc(rim.transform, c, 14, 14, inner, "Avatar");
+            face.raycastTarget = false;
+            Avatars.Paint(face, inner, _avatars[p.Index], p.Name, 96, Theme.Ink);
+            return rim.rectTransform;
         }
 
         /// <summary>One player's half: a tinted band, a big avatar (portrait or initial), the name and their role.</summary>
@@ -78,7 +104,7 @@ namespace BrawlTCG.UnityApp
             var glow = UI.Panel(side, new Color(c.r, c.g, c.b, 0.45f), cx - 170, 330, 340, 340, "Glow");
             glow.sprite = Theme.Soft;
             glow.raycastTarget = false;
-            var avatar = Theme.RoundedPanel(side, c, cx - 90, 380, 180, 180, 90, "Avatar");
+            var avatar = Theme.Disc(side, c, cx - 90, 380, 180, "Avatar");
             avatar.raycastTarget = false;
             Avatars.Paint(avatar, 180, _avatars[p.Index], p.Name, 96, Theme.Ink);
 
@@ -96,8 +122,8 @@ namespace BrawlTCG.UnityApp
             return side;
         }
 
-        IEnumerator VersusRoutine(CanvasGroup all, RectTransform left, RectTransform right, RectTransform vs, CanvasGroup first,
-            Func<bool> skipped, Action finish)
+        IEnumerator VersusRoutine(CanvasGroup all, RectTransform left, RectTransform right, RectTransform vs, RectTransform coin,
+            bool leftWins, CanvasGroup first, Func<bool> skipped, Action finish)
         {
             Sfx.Play("ui_click", 0.6f);
             // Sides slide in.
@@ -127,6 +153,13 @@ namespace BrawlTCG.UnityApp
             vs.localScale = Vector3.one;
             Shake(0.4f, 0);
 
+            if (coin != null)
+            {
+                IEnumerator toss = CoinToss(vs, coin, leftWins, skipped);
+                while (toss.MoveNext()) yield return toss.Current;
+                if (skipped()) yield break;
+            }
+
             // Who goes first.
             for (float t = 0; t < 1; t += Time.unscaledDeltaTime / 0.3f)
             {
@@ -150,6 +183,57 @@ namespace BrawlTCG.UnityApp
                 yield return null;
             }
             finish();
+        }
+
+        /// <summary>
+        /// The VS shrinks away and the coin spins in place, slowing down, and stops on the
+        /// face of the player who goes first (A = left, B = right). That player's side lights up in their colour.
+        /// </summary>
+        IEnumerator CoinToss(RectTransform vs, RectTransform coin, bool leftWins, Func<bool> skipped)
+        {
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / 0.2f)
+            {
+                if (skipped()) yield break;
+                float s = 1 - Theme.EaseOut(t);
+                vs.localScale = new Vector3(s, s, 1);
+                yield return null;
+            }
+            vs.localScale = Vector3.zero;
+
+            GameObject faceA = coin.Find("A").gameObject, faceB = coin.Find("B").gameObject;
+            coin.gameObject.SetActive(true);
+            Sfx.Play("card_draw", 0.8f);
+
+            // An even number of half turns ends on face A, an odd number on face B.
+            int halfTurns = leftWins ? 12 : 13;
+            const float duration = 1.9f;
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / duration)
+            {
+                if (skipped()) yield break;
+                float spin = (1 - (1 - t) * (1 - t) * (1 - t)) * halfTurns * Mathf.PI; // fast at first, slowing down
+                bool a = Mathf.FloorToInt((spin + Mathf.PI / 2) / Mathf.PI) % 2 == 0;
+                faceA.SetActive(a);
+                faceB.SetActive(!a);
+                coin.localScale = new Vector3(Mathf.Max(0.04f, Mathf.Abs(Mathf.Cos(spin))), 1, 1);
+                yield return null;
+            }
+            faceA.SetActive(leftWins);
+            faceB.SetActive(!leftWins);
+            coin.localScale = Vector3.one;
+
+            // Landed: the winner's side lights up.
+            Color c = leftWins ? LeftColor : RightColor;
+            var winner = new Vector2(leftWins ? 480 : 1440, 470);
+            Sfx.Play("turn", 0.9f);
+            Fx.Shockwave(coin.parent, new Vector2(960, 510), c, 600, 0, 0.5f);
+            Fx.Glow(coin.parent, winner, c, 460, 0.05f, 0.9f);
+            Fx.Sparks(coin.parent, winner, c, 36, 700, 0.05f);
+            Shake(0.3f, 0);
+            for (float t = 0; t < 0.25f; t += Time.unscaledDeltaTime)
+            {
+                if (skipped()) yield break;
+                yield return null;
+            }
         }
     }
 }

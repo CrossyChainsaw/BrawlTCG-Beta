@@ -1,6 +1,6 @@
 # BrawlTCG – Unity port
 
-Port of the WinForms game in `BrawlTCG-alpha/`. Press Play in any scene: `App` bootstraps itself
+Port of the WinForms game in `_reference/BrawlTCG-alpha/` (local only, not in git). Press Play in any scene: `App` bootstraps itself
 (`RuntimeInitializeOnLoadMethod`) and builds the whole UI from code, so no scene setup is needed.
 
 ## Layout

@@ -166,7 +166,7 @@ namespace BrawlTCG.Core
 
         /// <summary>
         /// The 64 decks that ship with the game, strongest first: the top 64 of a 75-deck round robin with the Hard bot
-        /// (13,875 games, v1.5.0 rules). DECK_ANALYSIS_75.md in the project root has the strategies, results and how the
+        /// (13,875 games, v1.5.0 rules). docs/DECK_ANALYSIS_75.md has the strategies, results and how the
         /// decks were built. Ranks 1-48 are bot decks (16 per difficulty), ranks 49-64 the starter pool.
         /// </summary>
         public static readonly IReadOnlyList<Starter> Premade = new[]

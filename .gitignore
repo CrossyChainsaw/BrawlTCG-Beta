@@ -115,3 +115,7 @@ InitTestScene*.unity*
 
 # Showcase clips recorded from the editor (BrawlTCG > Showcase)
 /[Rr]ecordings/
+
+# Local-only reference material and marketing assets
+/_reference/
+/_marketing/

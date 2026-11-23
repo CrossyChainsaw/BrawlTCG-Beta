@@ -153,6 +153,39 @@ namespace BrawlTCG.Core
             }
         }
 
+        // ───────────── Leaves From the Vine ─────────────
+        // Like Silent Galaxy, but for every legend: no one deals damage with attacks, and every legend heals at the
+        // start of each turn. Leaving uses Silent Galaxy's "everyone can attack again".
+
+        public const int LeavesFromTheVineId = 111;
+        const int LeavesHeal = 1;
+
+        public static readonly Effect LeavesFromTheVine_WhenPlayed = new Effect(
+            "N/A",
+            (target, card, game, played) => DisableAllAttacks(game));
+
+        public static readonly Effect LeavesFromTheVine_WhilePlay = new Effect(
+            "No legend can deal damage",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) legend.CanAttack = false;
+            });
+
+        public static readonly Effect LeavesFromTheVine_StartTurn = new Effect(
+            $"All legends heal {LeavesHeal} HP",
+            (target, card, game, played) =>
+            {
+                DisableAllAttacks(game);
+                foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                    legend.GainHealth(LeavesHeal);
+            });
+
+        static void DisableAllAttacks(Game game)
+        {
+            foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                legend.CanAttack = false;
+        }
+
         // ───────────── Atlantis ─────────────
 
         static readonly Element[] NonArctic = ((Element[])Enum.GetValues(typeof(Element))).Where(e => e != Element.Arctic).ToArray();
@@ -422,6 +455,25 @@ namespace BrawlTCG.Core
         public static readonly Effect ArtClass = new Effect(
             "Craft 2 random legends that cost 2 or less",
             (target, card, game, played) => game.GenerateRandomLegends(2, maxCost: 2));
+
+        /// <summary>Afterlife: the legend picked from your discard pile returns to your hand, fresh (crafted ones stay crafted).</summary>
+        public static readonly Effect Afterlife = new Effect(
+            "Return a legend of your choice from your discard pile to your hand",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) game.ReturnFromDiscard(card.Owner, legend);
+            });
+
+        /// <summary>Wanted (#47): stays stacked on the legend; see <see cref="Game.WantedAllows"/>.</summary>
+        public const int WantedId = 535;
+
+        /// <summary>Beta Cupcake: one of your legends is no longer stunned or burned.</summary>
+        public static readonly Effect BetaCupcake = new Effect(
+            "Cures a legend of every status effect (stun and burn)",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) legend.CureStatuses();
+            });
 
         public static readonly Effect The_Finger = new Effect(
             "Legend attack becomes 0",

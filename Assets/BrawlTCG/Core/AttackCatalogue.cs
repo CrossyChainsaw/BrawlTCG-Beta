@@ -69,7 +69,7 @@ namespace BrawlTCG.Core
             {
                 DefaultAttack(a, t, atk);
                 EffectCatalogue.StunLegendCard(t);
-            });
+            }, effectText: "STUNS TARGET");
 
         // ───────────── Insta effects ─────────────
         public static readonly Attack Any_BurnForThreeCard = new Attack("Draw Three Cards", Status, Weapon.Any, 1,
@@ -108,7 +108,8 @@ namespace BrawlTCG.Core
         public static readonly Attack DeathCap_Storm = new Attack("Storm", 0, Weapon.Orb, 3, Default,
             weaponOneBurnAmount: 3, multiHit: true);
         public static readonly Attack Heatblast_Burn = new Attack("Burn", 0, Weapon.Blasters, 1,
-            (a, t, atk, g) => DefaultAttack(a, t, atk, burn: true), weaponOneBurnAmount: 1);
+            (a, t, atk, g) => DefaultAttack(a, t, atk, burn: true), weaponOneBurnAmount: 1,
+            effectText: "SETS TARGET ON FIRE (-1 HP EACH TURN)");
         public static readonly Attack MasterThief_GrabBomb = new Attack("Craft Bouncy Bomb", Status, Weapon.Gauntlets, 1,
             (a, t, atk, g) => g.GenerateCard(500), instaEffect: true,
             kind: AttackKind.Craft);

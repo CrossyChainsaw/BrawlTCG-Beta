@@ -246,7 +246,8 @@ namespace BrawlTCG.Core
                         case AttackMode.OwnLegend:
                             return IsTargetableLegend(me, cmd.TargetIndex) ? null : "Choose one of your legends.";
                         case AttackMode.EnemyLegend:
-                            return IsTargetableLegend(enemy, cmd.TargetIndex) ? null : "Choose an enemy legend.";
+                            if (!IsTargetableLegend(enemy, cmd.TargetIndex)) return "Choose an enemy legend.";
+                            return WantedAllows(enemy.PlayingField[cmd.TargetIndex]) ? null : "Attack a Wanted legend first.";
                         default:
                             return null;
                     }
@@ -287,6 +288,12 @@ namespace BrawlTCG.Core
                 {
                     if (!(card is BattleCard battle)) return "That is not a Battle card.";
                     if (me.Essence < card.Cost) return "Not enough Essence";
+                    if (battle.PicksFromDiscard)
+                    {
+                        if (!me.DiscardPile.Any(c => c is LegendCard)) return "No legend in your discard pile";
+                        return InRange(cmd.TargetIndex, me.DiscardPile.Count) && me.DiscardPile[cmd.TargetIndex] is LegendCard
+                            ? null : "Pick a legend from your discard pile.";
+                    }
                     if (!battle.TargetRequired) return null;
                     Player side = battle.FriendlyFire ? me : enemy;
                     if (!InRange(cmd.TargetIndex, side.PlayingField.Count))
@@ -350,7 +357,9 @@ namespace BrawlTCG.Core
                 {
                     var battle = (BattleCard)card;
                     LegendCard target = null;
-                    if (battle.TargetRequired)
+                    if (battle.PicksFromDiscard)
+                        target = (LegendCard)me.DiscardPile[cmd.TargetIndex];
+                    else if (battle.TargetRequired)
                         target = (battle.FriendlyFire ? me : enemy).PlayingField[cmd.TargetIndex];
                     PlayBattleCard(me, battle, target);
                     break;
@@ -438,7 +447,8 @@ namespace BrawlTCG.Core
             }
             else
             {
-                battle.WhenPlayedEffect?.Invoke(null, battle, this, battle);
+                // A discard pick (Afterlife) gets its legend; it is taken out before this card lands on the pile.
+                battle.WhenPlayedEffect?.Invoke(battle.PicksFromDiscard ? target : null, battle, this, battle);
                 PayAndRemoveFromHand(player, battle);
                 Discard(player, battle);
             }
@@ -477,7 +487,10 @@ namespace BrawlTCG.Core
             if (legend.IsStunned) return "This legend is stunned.";
             if (legend.AttackedThisTurn) return "This legend already attacked this turn";
             // Silent Galaxy turns CanAttack off for non-Cosmic legends: they can't deal damage, but can still craft, set, summon...
-            if (!legend.CanAttack && attack.Kind == AttackKind.Strike) return "Silent Galaxy: only Cosmic legends can deal damage";
+            if (!legend.CanAttack && attack.Kind == AttackKind.Strike)
+                return ActiveStage?.Id == EffectCatalogue.LeavesFromTheVineId
+                    ? "Leaves From the Vine: no legend can deal damage"
+                    : "Silent Galaxy: only Cosmic legends can deal damage";
             if (!attack.MeetsWeaponRequirements(legend)) return "This legend does not have the required weapons.";
             string pre = attack.Precondition?.Invoke(this, legend);
             if (pre != null) return pre;
@@ -491,6 +504,19 @@ namespace BrawlTCG.Core
         }
 
         static int CalculateDamageSafe(LegendCard legend, Attack attack) => Attack.CalculateDamage(legend, attack);
+
+        /// <summary>A legend carrying a Wanted card (#47).</summary>
+        public static bool IsWanted(LegendCard legend) => legend.StackedCards.Any(c => c.Id == EffectCatalogue.WantedId);
+
+        /// <summary>
+        /// Wanted: while one or more of a player's legends are Wanted, single-target attacks on that player's legends
+        /// must pick a Wanted one. Battle cards and attacks that hit everyone are not affected.
+        /// </summary>
+        public bool WantedAllows(LegendCard target)
+        {
+            Player side = target.Owner;
+            return side == null || IsWanted(target) || !side.PlayingField.Any(IsWanted);
+        }
 
         public AttackMode GetAttackMode(LegendCard legend, Attack attack)
         {
@@ -551,6 +577,15 @@ namespace BrawlTCG.Core
             card.IsDiscarded = true;
             card.Owner = player;
             player.DiscardPile.Add(card);
+        }
+
+        /// <summary>Afterlife: takes the legend out of its owner's discard pile and puts it in their hand, fresh.</summary>
+        public void ReturnFromDiscard(Player player, LegendCard legend)
+        {
+            if (!player.DiscardPile.Remove(legend)) return;
+            legend.ResetForReturn();
+            legend.RevivedBy = EffectContext.Current ?? "Unknown";
+            AddCardToHand(player, legend);
         }
 
         public void DrawCardFromDeck(Player player) => player.DrawCardFromDeck();

@@ -31,11 +31,13 @@ namespace BrawlTCG.Core
         public bool OneHitKO { get; }
         /// <summary>Optional extra requirement. Returns an error message when the attack cannot be used.</summary>
         public Func<Game, LegendCard, string> Precondition { get; }
+        /// <summary>Short text for what the attack does on top of its damage ("SETS TARGET ON FIRE"), shown with its tags.</summary>
+        public string EffectText { get; }
 
         public Attack(string name, int attackModifier, Weapon weaponOne, int weaponOneAmount, AttackAction execute,
             int weaponOneBurnAmount = 0, Weapon? weaponTwo = null, int weaponTwoAmount = 0, int weaponTwoBurnAmount = 0,
             bool friendlyFire = false, bool multiHit = false, bool instaEffect = false, bool oneHitKO = false,
-            Func<Game, LegendCard, string> precondition = null, AttackKind kind = AttackKind.Strike)
+            Func<Game, LegendCard, string> precondition = null, AttackKind kind = AttackKind.Strike, string effectText = null)
         {
             Name = name;
             AttackModifier = attackModifier;
@@ -52,6 +54,7 @@ namespace BrawlTCG.Core
             OneHitKO = oneHitKO;
             Precondition = precondition;
             Kind = kind;
+            EffectText = effectText;
         }
 
         public void Execute(LegendCard attacker, object target, Game game)

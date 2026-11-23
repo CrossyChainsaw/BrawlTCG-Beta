@@ -46,7 +46,10 @@ namespace BrawlTCG.UnityApp
         NetSession _net;
         int _localIndex;
         int[] _avatars;
-        bool _hotSeat;
+        bool _hotSeat, _coinFlip, _seatsSwapped;
+
+        /// <summary>"Player 1" / "Player 2" as chosen in the menu, even when a coin flip let Player 2 start.</summary>
+        int SeatNumber(int index) => (_seatsSwapped ? 1 - index : index) + 1;
         /// <summary>Bot games: starts another match with the same settings (null otherwise).</summary>
         Action _rematch;
         bool VsBot => _net is BotSession;
@@ -77,6 +80,8 @@ namespace BrawlTCG.UnityApp
             _game = setup.Game;
             _net = setup.Net;
             _hotSeat = setup.HotSeat;
+            _coinFlip = setup.CoinFlip;
+            _seatsSwapped = setup.HotSeat && setup.SeatsSwapped;
             _localIndex = setup.LocalIndex;
             _rematch = setup.Rematch;
             _botDeck = setup.BotDeck;
@@ -125,7 +130,7 @@ namespace BrawlTCG.UnityApp
             pic.pivot = new Vector2(0.5f, 0.5f);
             var raw = pic.gameObject.AddComponent<RawImage>();
             raw.texture = tex;
-            raw.color = new Color(0.36f, 0.38f, 0.52f, 1f);
+            raw.color = BackdropTint;
             raw.raycastTarget = false;
             if (tex != null)
             {
@@ -136,6 +141,9 @@ namespace BrawlTCG.UnityApp
             var kb = pic.gameObject.AddComponent<KenBurns>();
             kb.Amplitude = 0.02f;
             kb.Speed = 0.03f;
+
+            // The stage in play is shown over the battle backdrop (#60), under the vignette.
+            _stageBackdrops = UI.Stretch(UI.Rect("StageBackdrops", backdrop));
 
             // Vignette: darker edges keep the eye on the lanes.
             foreach (var (min, max, horizontal, from, to) in new[]
@@ -154,7 +162,73 @@ namespace BrawlTCG.UnityApp
                 img.sprite = Theme.Gradient(horizontal, from, to);
                 img.color = Theme.Night;
                 img.raycastTarget = false;
+                // Same darkness as without a stage, with a hint of the stage colour.
+                Accent(img, -1, backdrop: true, mix: 0.25f);
             }
+        }
+
+        // ── Stage backdrop (#60) ──
+
+        const float StageFade = 0.9f;
+        static readonly Color BackdropTint = new Color(0.36f, 0.38f, 0.52f, 1f);
+        RectTransform _stageBackdrops;
+        string _stageBackdropArt;
+        const string Leaving = "Leaving";
+
+        /// <summary>
+        /// Crossfades the background to the art of the stage in play, or back to the battle backdrop when there is none.
+        /// Darkened like the battle backdrop so the board stays readable. Called on every board refresh; only a change of
+        /// stage starts a fade.
+        /// </summary>
+        void UpdateStageBackdrop()
+        {
+            if (_stageBackdrops == null) return;
+            string art = StageVisuals ? _game.ActiveStage?.Art : null;
+            Texture2D tex = art != null ? Art.Get(art) : null;
+            if (tex == null) art = null;
+            if (art == _stageBackdropArt) return;
+            _stageBackdropArt = art;
+
+            // Everything already there fades out; the new stage fades in on top.
+            foreach (Transform old in _stageBackdrops)
+            {
+                var oldRaw = old.GetComponent<RawImage>();
+                if (oldRaw == null || old.name == Leaving) continue;
+                old.name = Leaving; // stops its fade-in, if it is still fading in
+                StartCoroutine(FadeBackdrop(oldRaw, 0, destroy: true));
+            }
+            if (tex == null) return;
+
+            var pic = UI.Rect("Stage " + art, _stageBackdrops);
+            pic.anchorMin = pic.anchorMax = new Vector2(0.5f, 0.5f);
+            pic.pivot = new Vector2(0.5f, 0.5f);
+            var raw = pic.gameObject.AddComponent<RawImage>();
+            raw.texture = tex;
+            raw.color = new Color(BackdropTint.r, BackdropTint.g, BackdropTint.b, 0);
+            raw.raycastTarget = false;
+            var fitter = pic.gameObject.AddComponent<AspectRatioFitter>();
+            fitter.aspectMode = AspectRatioFitter.AspectMode.EnvelopeParent;
+            fitter.aspectRatio = (float)tex.width / tex.height;
+            var kb = pic.gameObject.AddComponent<KenBurns>();
+            kb.Amplitude = 0.02f;
+            kb.Speed = 0.03f;
+            StartCoroutine(FadeBackdrop(raw, 1, destroy: false));
+        }
+
+        System.Collections.IEnumerator FadeBackdrop(RawImage raw, float to, bool destroy)
+        {
+            float from = raw.color.a;
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / StageFade)
+            {
+                if (raw == null || (!destroy && raw.name == Leaving)) yield break;
+                Color c = raw.color;
+                c.a = Mathf.Lerp(from, to, Theme.EaseOut(t));
+                raw.color = c;
+                yield return null;
+            }
+            if (raw == null) yield break;
+            if (destroy) Destroy(raw.gameObject);
+            else { Color c = raw.color; c.a = to; raw.color = c; }
         }
 
         void OnDestroy()
@@ -182,6 +256,7 @@ namespace BrawlTCG.UnityApp
         void Update()
         {
             PumpNetwork();
+            UpdateAccent();
 
             var kb = Keyboard.current;
             var mouse = Mouse.current;
@@ -297,6 +372,9 @@ namespace BrawlTCG.UnityApp
             _layout.Clear();
             _views.Clear();
 
+            _accentBoard.Clear();
+            UpdateAccentTarget();
+            UpdateStageBackdrop();
             DrawPlayerPanel(Top, TopPanel, false);
             DrawPlayerPanel(Bottom, BottomPanel, true);
             DrawLane(Top, TopLane, false);
@@ -324,6 +402,7 @@ namespace BrawlTCG.UnityApp
             }
             var panel = Theme.GlassPanel(_board, r.x, r.y, r.width, r.height, 20, bottom ? "MyPanel" : "EnemyPanel");
             panel.raycastTarget = false;
+            if (panel.transform.Find("Outline") is RectTransform panelLine) Accent(panelLine.GetComponent<Image>(), 0.4f);
             Transform t = panel.transform;
             if (active) Quiet(Theme.RoundedPanel(t, Theme.Gold, 0, 0, r.width, r.height, 20, "ActiveLine", outline: true));
 
@@ -336,7 +415,7 @@ namespace BrawlTCG.UnityApp
             name.resizeTextForBestFit = true;
             name.resizeTextMinSize = 14;
             name.resizeTextMaxSize = 26;
-            string role = _hotSeat || InShowcase ? $"PLAYER {p.Index + 1}" : IsLocallyControlled(p.Index) ? "YOU" : "OPPONENT";
+            string role = _hotSeat || InShowcase ? $"PLAYER {SeatNumber(p.Index)}" : IsLocallyControlled(p.Index) ? "YOU" : "OPPONENT";
             Theme.Label(t, active ? role + "  ·  ACTIVE" : role, 13, active ? Theme.Gold : Theme.TextDim, 92, 44, 220, 18, display: true);
 
             // Counters (top-right)
@@ -411,7 +490,8 @@ namespace BrawlTCG.UnityApp
         {
             var bg = Theme.RoundedPanel(_board, new Color(0.03f, 0.04f, 0.12f, 0.55f), lane.x, lane.y, lane.width, lane.height, 22, bottom ? "MyLane" : "EnemyLane");
             bg.raycastTarget = false;
-            Quiet(Theme.RoundedPanel(bg.transform, new Color(1, 1, 1, 0.08f), 0, 0, lane.width, lane.height, 22, "Line", outline: true));
+            Accent(Quiet(Theme.RoundedPanel(bg.transform, new Color(1, 1, 1, 0.08f), 0, 0, lane.width, lane.height, 22, "Line", outline: true)), 0.45f);
+            Accent(Quiet(Theme.RoundedPanel(bg.transform, new Color(1, 1, 1, 0), 0, 0, lane.width, lane.height, 22, "Tint")), 0.06f);
             string label = bottom && !InShowcase && (_hotSeat || IsLocallyControlled(p.Index)) ? "YOUR FIELD" : $"{p.Name.ToUpperInvariant()}'S FIELD";
             Theme.Label(bg.transform, $"{label}  ·  {p.PlayingField.Count}/{Game.MaxLegendsOnField}", 14, Theme.TextFaint, 18, 8, 400, 20, display: true);
             _zones[(BoardZone.PlayingField, p.Index)] = bg.rectTransform;
@@ -470,7 +550,7 @@ namespace BrawlTCG.UnityApp
         {
             var strip = Theme.RoundedPanel(_board, new Color(0.03f, 0.04f, 0.12f, 0.78f), Strip.x, Strip.y, Strip.width, Strip.height, 20, "Strip");
             strip.raycastTarget = false;
-            Quiet(Theme.RoundedPanel(strip.transform, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.25f), 0, 0, Strip.width, Strip.height, 20, "Line", outline: true));
+            Accent(Quiet(Theme.RoundedPanel(strip.transform, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.25f), 0, 0, Strip.width, Strip.height, 20, "Line", outline: true)), 0.5f);
             Transform t = strip.transform;
 
             if (Targeting)
@@ -543,10 +623,10 @@ namespace BrawlTCG.UnityApp
 
         void DrawStage()
         {
-            var title = Theme.Label(_board, "STAGE", 16, Theme.Gold, StageSlot.x, StageSlot.y - 30, 200, 22, display: true);
+            var title = Accent(Theme.Label(_board, "STAGE", 16, Theme.Gold, StageSlot.x, StageSlot.y - 30, 200, 22, display: true), 1f);
             title.raycastTarget = false;
             var slot = Quiet(Theme.RoundedPanel(_board, new Color(1, 1, 1, 0.05f), StageSlot.x, StageSlot.y, StageSlot.width, StageSlot.height, 14, "StageSlot"));
-            Quiet(Theme.RoundedPanel(slot.transform, new Color(1, 1, 1, 0.12f), 0, 0, StageSlot.width, StageSlot.height, 14, "Line", outline: true));
+            Accent(Quiet(Theme.RoundedPanel(slot.transform, new Color(1, 1, 1, 0.12f), 0, 0, StageSlot.width, StageSlot.height, 14, "Line", outline: true)), 0.6f);
             _zones[(BoardZone.Stage, -1)] = slot.rectTransform;
             _zoneOutlines[(BoardZone.Stage, -1)] = DropOutline(slot.transform, StageSlot.width, StageSlot.height, 14);
 
@@ -733,7 +813,9 @@ namespace BrawlTCG.UnityApp
                         if (_game.Validate(GameCommand.PlayWeapon(pi, hand, l)) == null) return true;
                     return false;
                 default:
-                    for (int t = -1; t < Game.MaxLegendsOnField; t++)
+                    // A discard pick (Afterlife) targets a discard-pile index, the rest a legend on the field.
+                    int last = card is BattleCard b && b.PicksFromDiscard ? p.DiscardPile.Count : Game.MaxLegendsOnField;
+                    for (int t = -1; t < last; t++)
                         if (_game.Validate(GameCommand.PlayBattle(pi, hand, t)) == null) return true;
                     return false;
             }
@@ -814,11 +896,19 @@ namespace BrawlTCG.UnityApp
         int _pileViewPlayer = -1;
         bool PileViewOpen => _pileViewPlayer >= 0;
 
+        /// <summary>The Afterlife being played: the discard pile is open to pick a legend for it (null otherwise).</summary>
+        Card _pilePick;
+        const string PickPrompt = "Pick a legend from your discard pile.";
+
         /// <summary>Every card in a player's discard pile, newest first. Hover for the full card, click to open its details.</summary>
         void ShowDiscardPile(int playerIndex)
         {
             Player p = _game.Players[playerIndex];
             UI.Clear(_pileView);
+            // A pick only stays open while it can still be made (it's still your turn and the card is still in hand).
+            if (_pilePick != null && (!CanAct || _pilePick.Owner != p || !p.Hand.Contains(_pilePick) || !p.DiscardPile.Any(c => c is LegendCard)))
+                _pilePick = null;
+            bool picking = _pilePick != null;
             if (p.DiscardPile.Count == 0) { _pileViewPlayer = -1; return; }
             _pileViewPlayer = playerIndex;
 
@@ -831,9 +921,17 @@ namespace BrawlTCG.UnityApp
             UI.Clicks(box.gameObject, _ => { });
             Transform t = box.transform;
             string owner = _hotSeat || InShowcase || !IsLocallyControlled(p.Index) ? p.Name.ToUpperInvariant() + "'S" : "YOUR";
-            Theme.Label(t, $"{owner} DISCARD PILE", 36, Theme.Text, 36, 24, W - 140, 50, display: true);
-            Theme.Label(t, $"{p.DiscardPile.Count} CARD{(p.DiscardPile.Count == 1 ? "" : "S")}  ·  NEWEST FIRST  ·  HOVER TO ENLARGE, CLICK FOR DETAILS",
-                15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            if (picking)
+            {
+                Theme.Label(t, $"{_pilePick.Name.ToUpperInvariant()}  ·  PICK A LEGEND", 36, Theme.Gold, 36, 24, W - 140, 50, display: true);
+                Theme.Label(t, "CLICK A LEGEND TO RETURN IT TO YOUR HAND  ·  CLICK OUTSIDE OR ESC TO CANCEL", 15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            }
+            else
+            {
+                Theme.Label(t, $"{owner} DISCARD PILE", 36, Theme.Text, 36, 24, W - 140, 50, display: true);
+                Theme.Label(t, $"{p.DiscardPile.Count} CARD{(p.DiscardPile.Count == 1 ? "" : "S")}  ·  NEWEST FIRST  ·  HOVER TO ENLARGE, CLICK FOR DETAILS",
+                    15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            }
             var close = Theme.Ghost(t, "×", W - 70, 26, 44, 44, CloseDiscardPile, 30);
             close.GetComponentInChildren<Text>().font = Theme.Body; // the display font has no multiplication sign
 
@@ -864,13 +962,32 @@ namespace BrawlTCG.UnityApp
             {
                 Card card = p.DiscardPile[i];
                 var cell = UI.Rect(card.Name, content);
-                CardView thumb = CardPeek.Create(cell, card.Id, 0, 0, Scale, _drag, previewAt);
-                UI.Clicks(thumb.gameObject, _ => { CloseDiscardPile(); OpenDetail(card); });
+                CardView thumb = CardPeek.Create(cell, card, 0, 0, Scale, _drag, previewAt);
+                if (!picking)
+                    UI.Clicks(thumb.gameObject, _ => { CloseDiscardPile(); OpenDetail(card); });
+                else if (card is LegendCard)
+                {
+                    int index = i;
+                    thumb.SetGlow(Theme.Gold, 0.8f);
+                    UI.Clicks(thumb.gameObject, _ => PickFromDiscard(p, index));
+                }
+                else
+                    thumb.SetDimmed(true, 0.8f); // only legends can be picked
             }
+        }
+
+        /// <summary>Plays the Afterlife on the legend at discard-pile <paramref name="index"/>.</summary>
+        void PickFromDiscard(Player p, int index)
+        {
+            Card card = _pilePick;
+            CloseDiscardPile();
+            int hand = card != null ? p.Hand.IndexOf(card) : -1;
+            if (hand >= 0) Submit(GameCommand.PlayBattle(p.Index, hand, index));
         }
 
         void CloseDiscardPile()
         {
+            _pilePick = null;
             _pileViewPlayer = -1;
             UI.Clear(_pileView); // the thumbnails remove their own full-size previews
         }
@@ -879,7 +996,7 @@ namespace BrawlTCG.UnityApp
         {
             if (!Targeting) return false;
             Player wanted = _targetOwnSide ? _targetAttacker.Owner : _game.GetOpponent(_targetAttacker.Owner);
-            return side == wanted;
+            return side == wanted && (_targetOwnSide || _game.WantedAllows(legend)); // Wanted legends must be attacked first
         }
 
         void CancelTargeting()
@@ -982,6 +1099,16 @@ namespace BrawlTCG.UnityApp
                     if (!Over(BoardZone.PlayingField, me, screen)) return false;
                     int legend = LegendUnder(me, screen);
                     return legend >= 0 && Submit(GameCommand.PlayWeapon(me, hand, legend));
+                case BattleCard battle when battle.PicksFromDiscard:
+                {
+                    // Afterlife: dropping it opens your discard pile to pick the legend; nothing is played until you do.
+                    if (!Over(BoardZone.PlayingField, me, screen) && !Over(BoardZone.PlayingField, enemy, screen)) return false;
+                    string why = _game.Validate(GameCommand.PlayBattle(me, hand, -1));
+                    if (why != PickPrompt) { _app.Toast(why); return false; }
+                    _pilePick = card;
+                    ShowDiscardPile(me);
+                    return false; // the card stays in the hand until a legend is picked
+                }
                 case BattleCard battle:
                     if (!Over(BoardZone.PlayingField, me, screen) && !Over(BoardZone.PlayingField, enemy, screen)) return false;
                     int target = -1;
@@ -1079,6 +1206,7 @@ namespace BrawlTCG.UnityApp
             // Made during the match (crafted, summoned, set by an effect): say by what.
             float top = 206;
             if (card.CraftedBy != null) top = TriggerIcons.PaintCraftedChip(t, card.CraftedBy, ix, 198, iw) + 8;
+            if (card.RevivedBy != null) top = TriggerIcons.PaintRevivedChip(t, card.RevivedBy, ix, card.CraftedBy != null ? top : 198, iw) + 8;
 
             if (card is LegendCard legend)
             {
@@ -1174,7 +1302,7 @@ namespace BrawlTCG.UnityApp
             return y + 44;
         }
 
-        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A", FireHex = "#FFA060", SpentHex = "#B4B9D2";
+        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A", FireHex = "#FFA060", SpentHex = "#B4B9D2", WantedHex = "#E8C48C";
 
         /// <summary>One EFFECTS row: its icon, the full text, and a shorter text for when rows go two to a line.</summary>
         readonly struct EffectRow
@@ -1192,13 +1320,22 @@ namespace BrawlTCG.UnityApp
         {
             var rows = new List<EffectRow>();
             if (!legend.CanAttack)
+            {
+                // Silent Galaxy (non-Cosmic legends) or Leaves From the Vine (everyone).
+                bool leaves = _game.ActiveStage?.Id == EffectCatalogue.LeavesFromTheVineId;
+                string stage = leaves ? "Leaves From the Vine" : "Silent Galaxy";
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.NoStrikes,
-                    Line(DebuffHex, "Can't deal damage", "Silent Galaxy", "only Cosmic legends can deal damage"),
-                    Line(DebuffHex, "Can't deal damage", "Silent Galaxy", null)));
+                    Line(DebuffHex, "Can't deal damage", stage, leaves ? "no legend can deal damage" : "only Cosmic legends can deal damage"),
+                    Line(DebuffHex, "Can't deal damage", stage, null)));
+            }
             if (legend.IsStunned)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Stunned,
                     Line(StatusHex, "Stunned", legend.StunnedBy, "skips its next attack, abilities off"),
                     Line(StatusHex, "Stunned", legend.StunnedBy, null)));
+            if (Game.IsWanted(legend))
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Wanted,
+                    Line(WantedHex, "Wanted", "Wanted", "the opponent can only attack Wanted legends"),
+                    Line(WantedHex, "Wanted", "Wanted", null)));
             if (legend.IsBurned)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Burned,
                     Line(FireHex, "Burned", legend.BurnedBy, "-1 HP at the start of each of its turns"),
@@ -1353,6 +1490,7 @@ namespace BrawlTCG.UnityApp
             var name = Theme.Label(rt, attack.Name, 22, new Color(1, 1, 1, alpha), ix + 6, 8, w - ix - 120, 30, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
             var tags = new List<string>();
+            if (attack.EffectText != null) tags.Add(attack.EffectText);
             if (attack.Kind != AttackKind.Strike) tags.Add(attack.Kind.ToString().ToUpperInvariant());
             if (attack.InstaEffect) tags.Add("INSTANT");
             if (attack.MultiHit) tags.Add("HITS ALL ENEMIES");

@@ -50,9 +50,12 @@ namespace BrawlTCG.UnityApp
         /// Adds a thumbnail of <paramref name="cardId"/> at (x, y) inside <paramref name="parent"/>. The full-size
         /// preview appears in <paramref name="layer"/> with its top-left corner at <paramref name="previewAt"/>.
         /// </summary>
-        public static CardView Create(Transform parent, int cardId, float x, float y, float scale, RectTransform layer, Vector2 previewAt)
+        public static CardView Create(Transform parent, int cardId, float x, float y, float scale, RectTransform layer, Vector2 previewAt) =>
+            Create(parent, CardCatalogue.Create(cardId), x, y, scale, layer, previewAt);
+
+        /// <summary>A thumbnail of this exact card, so match-only details (like the crafted hammer) are kept.</summary>
+        public static CardView Create(Transform parent, Card card, float x, float y, float scale, RectTransform layer, Vector2 previewAt)
         {
-            Card card = CardCatalogue.Create(cardId);
             CardView thumb = CardView.Create(parent, card, true, x, y, scale);
             thumb.name = "Peek " + card.Name;
             // Only the frame takes the pointer; everything else on the mini card ignores it.

@@ -9,7 +9,8 @@ namespace BrawlTCG.Core
     /// Line based TCP protocol (lockstep).
     ///
     /// Handshake: each side sends one HELLO line containing its name, a random seed and its shuffled deck.
-    ///   P2P: the host is player 0 (goes first).
+    ///   P2P and rooms: the host is player 0 (goes first), unless the host turned on the coin flip and the guest supports
+    ///   it (see <see cref="GuestStarts"/>); then the guest is player 0 when the coin says so.
     ///   Relay server (BrawlTCG-Server): the server forwards the HELLO lines, then answers DIST_TURNS_REQUEST
     ///   with DIST_TURNS:true for the player that goes first.
     /// Both clients seed the shared game RNG with seedA ^ seedB, so every random effect resolves identically
@@ -41,17 +42,33 @@ namespace BrawlTCG.Core
             public List<int> Deck;
             /// <summary>Legend card id shown as the avatar, or -1 for the name's initial.</summary>
             public int Avatar = -1;
+            /// <summary>
+            /// The "cf" extra (#33): null when the peer didn't send it (a client from before the online coin flip),
+            /// otherwise whether the peer asks for a coin flip. Only the host's request counts.
+            /// </summary>
+            public bool? CoinFlip;
         }
+
+        /// <summary>
+        /// Whether the guest takes the first turn. Only when the host asked for a coin flip and the guest's client knows
+        /// about it (it sends "cf"), so an older guest never disagrees about who starts. Both sides call this with the same
+        /// shared seed (seedA ^ seedB), so they get the same answer without another message.
+        /// </summary>
+        public static bool CoinFlipActive(bool hostAsks, bool guestSupports) => hostAsks && guestSupports;
+
+        public static bool GuestStarts(bool hostAsks, bool guestSupports, int sharedSeed) =>
+            CoinFlipActive(hostAsks, guestSupports) && new Random(sharedSeed ^ 0x5EED).Next(2) == 0;
 
         /// <summary>
         /// The name field also carries profile extras after the escaped name, as "&amp;key=value" pairs (the escaped name
         /// never contains a raw '&amp;'). Keeping HELLO at five fields lets pre-v1.2.0 clients still reach their version check.
         /// Unknown keys are ignored, so later patches can add extras without breaking compatibility.
         /// </summary>
-        public static string EncodeHello(string name, int seed, IEnumerable<int> deck, int avatar = -1)
+        public static string EncodeHello(string name, int seed, IEnumerable<int> deck, int avatar = -1, bool coinFlip = false)
         {
             string profile = Uri.EscapeDataString(name ?? "");
             if (ValidAvatar(avatar) >= 0) profile += "&a=" + avatar.ToString(CultureInfo.InvariantCulture);
+            profile += coinFlip ? "&cf=1" : "&cf=0"; // always sent: it also tells the host this client knows the coin flip
             return string.Join(":", HelloPrefix, GameVersion, profile,
                 seed.ToString(CultureInfo.InvariantCulture),
                 string.Join(",", deck.Select(i => i.ToString(CultureInfo.InvariantCulture))));
@@ -67,10 +84,15 @@ namespace BrawlTCG.Core
             string[] profile = parts[2].Split('&');
             string peerName = SanitizeName(Uri.UnescapeDataString(profile[0]));
             int avatar = -1;
+            bool? coinFlip = null;
             foreach (string extra in profile.Skip(1))
+            {
                 if (extra.StartsWith("a=", StringComparison.Ordinal) &&
                     int.TryParse(extra.Substring(2), NumberStyles.Integer, CultureInfo.InvariantCulture, out int a))
                     avatar = ValidAvatar(a);
+                else if (extra.StartsWith("cf=", StringComparison.Ordinal))
+                    coinFlip = extra.Substring(3) == "1";
+            }
             error = VersionMismatch(GameVersion, parts[1], peerName);
             if (error != null) return false;
             if (!int.TryParse(parts[3], NumberStyles.Integer, CultureInfo.InvariantCulture, out int seed)) { error = "Invalid seed from peer."; return false; }
@@ -88,7 +110,7 @@ namespace BrawlTCG.Core
             string deckError = DeckRules.ValidateForPlay(deck);
             if (deckError != null) { error = "Peer deck is invalid: " + deckError; return false; }
 
-            hello = new Hello { Name = peerName, Seed = seed, Deck = deck, Avatar = avatar };
+            hello = new Hello { Name = peerName, Seed = seed, Deck = deck, Avatar = avatar, CoinFlip = coinFlip };
             return true;
         }
 

@@ -78,7 +78,7 @@ namespace BrawlTCG.UnityApp
         /// </summary>
         public static void PaintNoStrikes(RectTransform face, Card card)
         {
-            int slot = For(card).Count + (card is LegendCard l && l.IsBurned ? 1 : 0); // after the burn badge
+            int slot = For(card).Count + (card is LegendCard l ? (l.IsBurned ? 1 : 0) + (Game.IsWanted(l) ? 1 : 0) : 0); // after burn and wanted
             var holder = Badge(face, "NoStrikes", slot, NoStrikesColor);
             Glyph(holder, _sword ??= Glyph(SwordCut), new Color32(238, 232, 240, 255), Size * 0.12f);
             Glyph(holder, _slash ??= Glyph(Slash), NoStrikesColor, 1);
@@ -93,9 +93,20 @@ namespace BrawlTCG.UnityApp
             Glyph(holder, Flame, FireColor, Size * 0.14f);
         }
 
+        /// <summary>Wanted-poster parchment, for the Wanted badge (#47).</summary>
+        public static readonly Color WantedColor = new Color32(232, 196, 140, 255);
+
+        /// <summary>Wanted (#47): a wild-west slab-serif W, in the badge row after the burn badge.</summary>
+        public static void PaintWanted(RectTransform face, Card card)
+        {
+            int slot = For(card).Count + (card is LegendCard l && l.IsBurned ? 1 : 0);
+            var holder = Badge(face, "Wanted", slot, WantedColor);
+            Glyph(holder, WantedW, WantedColor, Size * 0.13f);
+        }
+
         // ───────────── Effects on a legend (detail panel): small inline icons ─────────────
 
-        public enum EffectIcon { NoStrikes, Stunned, Burned, AttackUp, AttackDown, HealthUp, HealthDown, Attacked }
+        public enum EffectIcon { NoStrikes, Stunned, Burned, AttackUp, AttackDown, HealthUp, HealthDown, Attacked, Wanted }
 
         public static readonly Color BuffColor = new Color32(110, 220, 130, 255);
         public static readonly Color DebuffColor = new Color32(255, 84, 84, 255);
@@ -115,6 +126,7 @@ namespace BrawlTCG.UnityApp
                 case EffectIcon.AttackDown: c = DebuffColor; s = FullSword; pad = 0.18f; break;
                 case EffectIcon.HealthUp: c = BuffColor; s = Heart; break;
                 case EffectIcon.HealthDown: c = DebuffColor; s = Heart; break;
+                case EffectIcon.Wanted: c = WantedColor; s = WantedW; pad = 0.17f; break;
                 default: c = SpentColor; s = FullSword; pad = 0.18f; break;
             }
             var holder = MiniDisc(parent, "Icon " + kind, c, x, y, size);
@@ -285,7 +297,24 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle, _skull, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _stunned;
+        static Sprite _bolt, _infinity, _cycle, _skull, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _stunned, _wantedW;
+
+        /// <summary>
+        /// A wild-west "W": thick down-strokes, thin up-strokes, and the heavy slab serifs of a wanted poster, with a
+        /// small spur on top of the middle point.
+        /// </summary>
+        static Sprite WantedW => _wantedW ??= Glyph((x, y) =>
+            InPolygon(x, y, WThick1) || InPolygon(x, y, WThin1) || InPolygon(x, y, WThick2) || InPolygon(x, y, WThin2)
+            || (y > 0.14f && y < 0.24f && ((x > 0.03f && x < 0.33f) || (x > 0.67f && x < 0.97f)))   // top slab serifs
+            || (y > 0.31f && y < 0.38f && x > 0.42f && x < 0.58f)                                    // middle spur
+            || InPolygon(x, y, WFoot1) || InPolygon(x, y, WFoot2));                                  // pointed feet
+
+        static readonly float[] WThick1 = { 0.08f, 0.20f, 0.26f, 0.20f, 0.40f, 0.82f, 0.29f, 0.82f };
+        static readonly float[] WThin1 = { 0.30f, 0.82f, 0.36f, 0.82f, 0.53f, 0.34f, 0.47f, 0.34f };
+        static readonly float[] WThick2 = { 0.44f, 0.34f, 0.56f, 0.34f, 0.71f, 0.82f, 0.60f, 0.82f };
+        static readonly float[] WThin2 = { 0.64f, 0.82f, 0.70f, 0.82f, 0.88f, 0.20f, 0.80f, 0.20f };
+        static readonly float[] WFoot1 = { 0.27f, 0.82f, 0.40f, 0.82f, 0.335f, 0.90f };
+        static readonly float[] WFoot2 = { 0.58f, 0.82f, 0.72f, 0.82f, 0.65f, 0.90f };
 
         // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -348,15 +377,61 @@ namespace BrawlTCG.UnityApp
         public static readonly Color CraftedFill = new Color32(58, 30, 16, 255);
 
         /// <summary>Hammer turned 45° (head top-right), white: tint it.</summary>
-        public static Sprite Hammer => _hammer ??= Glyph((x, y) =>
+        public static Sprite Hammer => _hammer ??= Glyph(HammerShape);
+
+        static bool HammerShape(float x, float y)
         {
             Vector2 p = SwordSpace(x, y); // same 45° turn as the sword
             bool head = p.x > 0.18f && p.x < 0.82f && p.y > 0.08f && p.y < 0.36f && !(p.x > 0.70f && p.y < 0.16f);
             bool handle = Mathf.Abs(p.x - 0.5f) < 0.075f && p.y >= 0.36f && p.y < 0.94f;
             return head || handle;
-        });
+        }
 
         /// <summary>Card detail: "CRAFTED BY" and the source on a copper chip. Returns the bottom edge.</summary>
+        // Revived uses the crafted colours, so the two "came from somewhere else" marks look alike.
+        public static Color RevivedColor => CraftedColor;
+        public static Color RevivedFill => CraftedFill;
+
+        /// <summary>Revived (came back from the discard pile): a little ghost with a wavy hem and two eyes.</summary>
+        public static Sprite Ghost => _ghost ??= Glyph(GhostShape);
+
+        /// <summary>
+        /// Crafted and revived: one icon split by a diagonal (top-left to bottom-right) with a thin gap, the hammer in the
+        /// top-right half and the ghost in the bottom-left half.
+        /// </summary>
+        public static Sprite HammerAndGhost => _hammerAndGhost ??= Glyph((x, y) =>
+            (HammerShape(x, y) && y < x - 0.05f) || (GhostShape(x, y) && y > x + 0.05f));
+        static Sprite _hammerAndGhost;
+
+        static bool GhostShape(float x, float y)
+        {
+            float dx = x - 0.5f;
+            bool head = Vector2.Distance(new Vector2(x, y), new Vector2(0.5f, 0.42f)) < 0.30f && y < 0.42f;
+            bool body = Mathf.Abs(dx) < 0.30f && y >= 0.42f && y < 0.82f + 0.06f * Mathf.Sin((x - 0.2f) / 0.6f * Mathf.PI * 3);
+            bool eye = Vector2.Distance(new Vector2(x, y), new Vector2(0.40f, 0.44f)) < 0.06f
+                    || Vector2.Distance(new Vector2(x, y), new Vector2(0.60f, 0.44f)) < 0.06f;
+            return (head || body) && !eye;
+        }
+        static Sprite _ghost;
+
+        /// <summary>"REVIVED BY Afterlife" chip for the detail panel, like the crafted one.</summary>
+        public static float PaintRevivedChip(Transform parent, string source, float x, float y, float w)
+        {
+            const float h = 48;
+            var chip = Quiet(Theme.RoundedPanel(parent, RevivedFill, x, y, w, h, 14, "Revived"));
+            Quiet(Theme.RoundedPanel(chip.transform, RevivedColor, 0, 0, w, h, 14, "Line", outline: true));
+            var icon = UI.Panel(chip.transform, RevivedColor, 12, 11, 26, 26, "Ghost");
+            icon.sprite = Ghost;
+            icon.preserveAspect = true;
+            icon.raycastTarget = false;
+            Theme.Label(chip.transform, "REVIVED BY", 12, RevivedColor, 48, 5, w - 58, 16, TextAnchor.MiddleLeft, display: true);
+            var label = Theme.Label(chip.transform, source, 15, Theme.Text, 48, 21, w - 58, 22, TextAnchor.MiddleLeft);
+            label.resizeTextForBestFit = true;
+            label.resizeTextMinSize = 10;
+            label.resizeTextMaxSize = 15;
+            return y + h;
+        }
+
         public static float PaintCraftedChip(Transform parent, string source, float x, float y, float w)
         {
             const float h = 48;
