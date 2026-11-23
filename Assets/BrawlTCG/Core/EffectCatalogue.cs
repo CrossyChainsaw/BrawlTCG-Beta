@@ -180,7 +180,7 @@ namespace BrawlTCG.Core
 
         // ───────────── Sozin's Comet (#50) and Full Eclipse (#51) ─────────────
         // While in play, every legend of the stage's element (both players') gets +5/+5. When the stage leaves, the
-        // bonus is taken back, but a legend never dies from losing it: it keeps at least 1 HP.
+        // bonus is taken back, damage stays: a legend with 5 HP or less left dies when the stage leaves.
 
         const int ElementStageBonus = 5;
 
@@ -213,7 +213,6 @@ namespace BrawlTCG.Core
                         if (legend.Element != element) continue;
                         legend.ModifyStat(Stat.Power, -ElementStageBonus);
                         legend.ModifyStat(Stat.Health, -ElementStageBonus);
-                        if (legend.CurrentHP < 1) legend.GainHealth(1 - legend.CurrentHP);
                     }
             });
 

@@ -391,6 +391,9 @@ namespace BrawlTCG.Core
                 StageCard old = ActiveStage;
                 Discard(ActiveStageOwner, old);
                 old.WhenDiscardedEffect?.Invoke(GetAllCardsInPlayingFields(), old, this, old);
+                // Legends killed by the old stage leaving (Sozin's Comet / Full Eclipse taking back +5 HP) die now,
+                // before the new stage's "when played" could heal or buff them back.
+                ResolveDeaths();
             }
 
             PayAndRemoveFromHand(player, stage);
