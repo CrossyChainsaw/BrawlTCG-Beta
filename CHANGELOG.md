@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.8.0 Beta
+
+Four new cards and a new stage, a coin flip for who starts, stage backgrounds, a card grid in the deck builder and Esc to go back. **Can't play online with v1.7.x.**
+
+### New cards
+
+- **Afterlife** (Shadow battle card, 3): return a legend of your choice from your discard pile to your hand. Your discard pile opens to pick it: legends glow, everything else is darkened. Close it to keep the card. The legend comes back fresh (base stats, nothing equipped, no statuses); crafted legends can come back too. Revived legends show a ghost in their type bar and a "Revived by" note in their details (#64).
+- **Wanted** (Wild battle card, 3): play it on one of your legends. While a Wanted legend is in play, your opponent can only attack Wanted legends. Battle cards and attacks that hit all enemies still hit everyone. Wanted legends get a W badge (#47).
+- **Beta Cupcake** (Magic battle card, 3): cures one of your legends of stun and burn (#30).
+- **The Firehawk** (Fire Orb, 2): a 2-cost orb with +2 elemental bonus.
+- **Leaves From the Vine** (Fire stage, 2): no legend can deal damage with attacks, and every legend heals 1 HP at the start of each turn.
+
+### Coin flip
+
+- **Local Match** and hosts of **online** games can switch on a coin flip for the first turn. VS BOT already flipped a coin (#33).
+- The VS intro now spins a coin with each player's avatar and lands on whoever goes first.
+
+### Match
+
+- **Stage visuals:** the stage in play becomes the match background, and its element colour tints the board's outlines. Gold still marks everything you can act on. Turn it off in OPTIONS with **STAGE VISUALS (experimental)** (#60).
+- Crafted cards keep their hammer in the discard pile viewer (#61).
+- Burn and Freeze now say what they do: "Sets target on fire (-1 HP each turn)" and "Stuns target". Weapon burns read "Burns 1 weapon" (#75).
+- Sharper round shapes and a new shockwave ring.
+- **Full Eclipse** has new art with the blue tint of the Avatar episode (#76).
+
+### Deck builder and menus
+
+- **The deck list is a grid of the cards themselves**, four per row, with the copies and - / + under each card (#73).
+- **Esc goes back** in the menu (pickers, panels) and the deck builder (the unsaved-changes dialog, ALL DECKS, back to the menu) (#74).
+
 ## v1.7.0 Beta
 
 Choose the bot's deck in VS BOT, and Sozin's Comet / Full Eclipse can now kill legends when they leave. **Can't play online with v1.6.x.**
