@@ -4,8 +4,8 @@ using UnityEngine.UI;
 namespace BrawlTCG.UnityApp
 {
     /// <summary>
-    /// In-match options: a gear button (top right) or Esc opens a menu with a sound-effects switch, a volume slider
-    /// and "leave match".
+    /// In-match options: a gear button (top right) or Esc opens a menu with a sound-effects switch, a volume slider,
+    /// a stage-visuals switch and "leave match".
     /// It lives on its own layer above every overlay, so it can be opened over the hand-off and game-over screens
     /// and closing it leaves those untouched.
     /// </summary>
@@ -54,7 +54,7 @@ namespace BrawlTCG.UnityApp
         {
             Sfx.Play("ui_click", 0.6f);
             var dim = MenuDim();
-            Transform box = MenuPanel(dim, "OPTIONS", 504);
+            Transform box = MenuPanel(dim, "OPTIONS", 588);
             const float w = 560;
 
             // Sound effects switch
@@ -81,9 +81,24 @@ namespace BrawlTCG.UnityApp
                 Sfx.Play("ui_click", 0.8f, 0, 0.12f); // preview at the new volume
             });
 
-            Theme.Cta(box, "RESUME", 40, 300, w - 80, 66, CloseOptions, 26);
-            Theme.Ghost(box, _ended || _game.IsOver ? "BACK TO MENU" : "LEAVE MATCH", 40, 382, w - 80, 66, ConfirmLeave, 24);
-            Theme.Label(box, "Esc to close", 15, Theme.TextFaint, 0, 462, w, 24, TextAnchor.MiddleCenter);
+            // Stage visuals switch (#60): the stage's art as the background and its colour on the board.
+            var stageRow = Theme.RoundedPanel(box, new Color(1, 1, 1, 0.05f), 40, 280, w - 80, 72, 16, "StageRow");
+            var stageTitle = Theme.Label(stageRow.transform, "STAGE VISUALS", 22, Theme.Text, 24, 0, 300, 72, TextAnchor.MiddleLeft, display: true);
+            Theme.Label(stageRow.transform, "(experimental)", 15, Theme.TextFaint, 24 + stageTitle.preferredWidth + 8, 0, 140, 72, TextAnchor.MiddleLeft);
+            bool stageOn = StageVisuals;
+            Theme.Label(stageRow.transform, stageOn ? "ON" : "OFF", 18, stageOn ? Theme.Success : Theme.TextDim, w - 80 - 168, 0, 60, 72, TextAnchor.MiddleRight, display: true);
+            Switch(stageRow.transform, w - 80 - 96, 20, stageOn, () =>
+            {
+                StageVisuals = !StageVisuals;
+                Sfx.Play("ui_click", 0.8f);
+                UpdateAccentTarget();
+                UpdateStageBackdrop();
+                OpenOptions(); // redraw
+            });
+
+            Theme.Cta(box, "RESUME", 40, 384, w - 80, 66, CloseOptions, 26);
+            Theme.Ghost(box, _ended || _game.IsOver ? "BACK TO MENU" : "LEAVE MATCH", 40, 466, w - 80, 66, ConfirmLeave, 24);
+            Theme.Label(box, "Esc to close", 15, Theme.TextFaint, 0, 546, w, 24, TextAnchor.MiddleCenter);
         }
 
         void ConfirmLeave()

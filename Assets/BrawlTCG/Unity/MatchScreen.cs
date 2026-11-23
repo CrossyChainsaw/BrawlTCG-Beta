@@ -130,7 +130,7 @@ namespace BrawlTCG.UnityApp
             pic.pivot = new Vector2(0.5f, 0.5f);
             var raw = pic.gameObject.AddComponent<RawImage>();
             raw.texture = tex;
-            raw.color = new Color(0.36f, 0.38f, 0.52f, 1f);
+            raw.color = BackdropTint;
             raw.raycastTarget = false;
             if (tex != null)
             {
@@ -141,6 +141,9 @@ namespace BrawlTCG.UnityApp
             var kb = pic.gameObject.AddComponent<KenBurns>();
             kb.Amplitude = 0.02f;
             kb.Speed = 0.03f;
+
+            // The stage in play is shown over the battle backdrop (#60), under the vignette.
+            _stageBackdrops = UI.Stretch(UI.Rect("StageBackdrops", backdrop));
 
             // Vignette: darker edges keep the eye on the lanes.
             foreach (var (min, max, horizontal, from, to) in new[]
@@ -159,7 +162,73 @@ namespace BrawlTCG.UnityApp
                 img.sprite = Theme.Gradient(horizontal, from, to);
                 img.color = Theme.Night;
                 img.raycastTarget = false;
+                // Same darkness as without a stage, with a hint of the stage colour.
+                Accent(img, -1, backdrop: true, mix: 0.25f);
             }
+        }
+
+        // ── Stage backdrop (#60) ──
+
+        const float StageFade = 0.9f;
+        static readonly Color BackdropTint = new Color(0.36f, 0.38f, 0.52f, 1f);
+        RectTransform _stageBackdrops;
+        string _stageBackdropArt;
+        const string Leaving = "Leaving";
+
+        /// <summary>
+        /// Crossfades the background to the art of the stage in play, or back to the battle backdrop when there is none.
+        /// Darkened like the battle backdrop so the board stays readable. Called on every board refresh; only a change of
+        /// stage starts a fade.
+        /// </summary>
+        void UpdateStageBackdrop()
+        {
+            if (_stageBackdrops == null) return;
+            string art = StageVisuals ? _game.ActiveStage?.Art : null;
+            Texture2D tex = art != null ? Art.Get(art) : null;
+            if (tex == null) art = null;
+            if (art == _stageBackdropArt) return;
+            _stageBackdropArt = art;
+
+            // Everything already there fades out; the new stage fades in on top.
+            foreach (Transform old in _stageBackdrops)
+            {
+                var oldRaw = old.GetComponent<RawImage>();
+                if (oldRaw == null || old.name == Leaving) continue;
+                old.name = Leaving; // stops its fade-in, if it is still fading in
+                StartCoroutine(FadeBackdrop(oldRaw, 0, destroy: true));
+            }
+            if (tex == null) return;
+
+            var pic = UI.Rect("Stage " + art, _stageBackdrops);
+            pic.anchorMin = pic.anchorMax = new Vector2(0.5f, 0.5f);
+            pic.pivot = new Vector2(0.5f, 0.5f);
+            var raw = pic.gameObject.AddComponent<RawImage>();
+            raw.texture = tex;
+            raw.color = new Color(BackdropTint.r, BackdropTint.g, BackdropTint.b, 0);
+            raw.raycastTarget = false;
+            var fitter = pic.gameObject.AddComponent<AspectRatioFitter>();
+            fitter.aspectMode = AspectRatioFitter.AspectMode.EnvelopeParent;
+            fitter.aspectRatio = (float)tex.width / tex.height;
+            var kb = pic.gameObject.AddComponent<KenBurns>();
+            kb.Amplitude = 0.02f;
+            kb.Speed = 0.03f;
+            StartCoroutine(FadeBackdrop(raw, 1, destroy: false));
+        }
+
+        System.Collections.IEnumerator FadeBackdrop(RawImage raw, float to, bool destroy)
+        {
+            float from = raw.color.a;
+            for (float t = 0; t < 1; t += Time.unscaledDeltaTime / StageFade)
+            {
+                if (raw == null || (!destroy && raw.name == Leaving)) yield break;
+                Color c = raw.color;
+                c.a = Mathf.Lerp(from, to, Theme.EaseOut(t));
+                raw.color = c;
+                yield return null;
+            }
+            if (raw == null) yield break;
+            if (destroy) Destroy(raw.gameObject);
+            else { Color c = raw.color; c.a = to; raw.color = c; }
         }
 
         void OnDestroy()
@@ -187,6 +256,7 @@ namespace BrawlTCG.UnityApp
         void Update()
         {
             PumpNetwork();
+            UpdateAccent();
 
             var kb = Keyboard.current;
             var mouse = Mouse.current;
@@ -302,6 +372,9 @@ namespace BrawlTCG.UnityApp
             _layout.Clear();
             _views.Clear();
 
+            _accentBoard.Clear();
+            UpdateAccentTarget();
+            UpdateStageBackdrop();
             DrawPlayerPanel(Top, TopPanel, false);
             DrawPlayerPanel(Bottom, BottomPanel, true);
             DrawLane(Top, TopLane, false);
@@ -329,6 +402,7 @@ namespace BrawlTCG.UnityApp
             }
             var panel = Theme.GlassPanel(_board, r.x, r.y, r.width, r.height, 20, bottom ? "MyPanel" : "EnemyPanel");
             panel.raycastTarget = false;
+            if (panel.transform.Find("Outline") is RectTransform panelLine) Accent(panelLine.GetComponent<Image>(), 0.4f);
             Transform t = panel.transform;
             if (active) Quiet(Theme.RoundedPanel(t, Theme.Gold, 0, 0, r.width, r.height, 20, "ActiveLine", outline: true));
 
@@ -416,7 +490,8 @@ namespace BrawlTCG.UnityApp
         {
             var bg = Theme.RoundedPanel(_board, new Color(0.03f, 0.04f, 0.12f, 0.55f), lane.x, lane.y, lane.width, lane.height, 22, bottom ? "MyLane" : "EnemyLane");
             bg.raycastTarget = false;
-            Quiet(Theme.RoundedPanel(bg.transform, new Color(1, 1, 1, 0.08f), 0, 0, lane.width, lane.height, 22, "Line", outline: true));
+            Accent(Quiet(Theme.RoundedPanel(bg.transform, new Color(1, 1, 1, 0.08f), 0, 0, lane.width, lane.height, 22, "Line", outline: true)), 0.45f);
+            Accent(Quiet(Theme.RoundedPanel(bg.transform, new Color(1, 1, 1, 0), 0, 0, lane.width, lane.height, 22, "Tint")), 0.06f);
             string label = bottom && !InShowcase && (_hotSeat || IsLocallyControlled(p.Index)) ? "YOUR FIELD" : $"{p.Name.ToUpperInvariant()}'S FIELD";
             Theme.Label(bg.transform, $"{label}  ·  {p.PlayingField.Count}/{Game.MaxLegendsOnField}", 14, Theme.TextFaint, 18, 8, 400, 20, display: true);
             _zones[(BoardZone.PlayingField, p.Index)] = bg.rectTransform;
@@ -475,7 +550,7 @@ namespace BrawlTCG.UnityApp
         {
             var strip = Theme.RoundedPanel(_board, new Color(0.03f, 0.04f, 0.12f, 0.78f), Strip.x, Strip.y, Strip.width, Strip.height, 20, "Strip");
             strip.raycastTarget = false;
-            Quiet(Theme.RoundedPanel(strip.transform, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.25f), 0, 0, Strip.width, Strip.height, 20, "Line", outline: true));
+            Accent(Quiet(Theme.RoundedPanel(strip.transform, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.25f), 0, 0, Strip.width, Strip.height, 20, "Line", outline: true)), 0.5f);
             Transform t = strip.transform;
 
             if (Targeting)
@@ -548,10 +623,10 @@ namespace BrawlTCG.UnityApp
 
         void DrawStage()
         {
-            var title = Theme.Label(_board, "STAGE", 16, Theme.Gold, StageSlot.x, StageSlot.y - 30, 200, 22, display: true);
+            var title = Accent(Theme.Label(_board, "STAGE", 16, Theme.Gold, StageSlot.x, StageSlot.y - 30, 200, 22, display: true), 1f);
             title.raycastTarget = false;
             var slot = Quiet(Theme.RoundedPanel(_board, new Color(1, 1, 1, 0.05f), StageSlot.x, StageSlot.y, StageSlot.width, StageSlot.height, 14, "StageSlot"));
-            Quiet(Theme.RoundedPanel(slot.transform, new Color(1, 1, 1, 0.12f), 0, 0, StageSlot.width, StageSlot.height, 14, "Line", outline: true));
+            Accent(Quiet(Theme.RoundedPanel(slot.transform, new Color(1, 1, 1, 0.12f), 0, 0, StageSlot.width, StageSlot.height, 14, "Line", outline: true)), 0.6f);
             _zones[(BoardZone.Stage, -1)] = slot.rectTransform;
             _zoneOutlines[(BoardZone.Stage, -1)] = DropOutline(slot.transform, StageSlot.width, StageSlot.height, 14);
 
