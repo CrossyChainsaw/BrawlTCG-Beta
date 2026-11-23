@@ -30,7 +30,8 @@ namespace BrawlTCG.UnityApp
         {
             if (!VsBot || _botDeck == null) return "";
             if (unlocked != null) return $"\nYou unlocked {_botDeck}!";
-            if (Collection.Owns(_botDeck)) return $"\nThe bot played {_botDeck}.";
+            // Owned or not premade at all: a deck the player chose for the bot once every bot deck was unlocked.
+            if (Collection.Owns(_botDeck) || StarterDecks.Find(_botDeck) == null) return $"\nThe bot played {_botDeck}.";
             return iWon ? "" : $"\nThe bot played {_botDeck}. Beat it to unlock this deck.";
         }
 

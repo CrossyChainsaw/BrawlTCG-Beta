@@ -36,7 +36,8 @@ namespace BrawlTCG.UnityApp
             PrefDeck2 = "BrawlTCG.Deck2", PrefIp = "BrawlTCG.Ip", PrefPort = "BrawlTCG.Port", PrefMode = "BrawlTCG.OnlineMode";
 
         enum Panel { None, Online, Bot, Local }
-        const string PrefBotMyDeck = "BrawlTCG.BotMyDeck", PrefBotLevel = "BrawlTCG.BotLevel";
+        const string PrefBotMyDeck = "BrawlTCG.BotMyDeck", PrefBotLevel = "BrawlTCG.BotLevel", PrefBotDeck = "BrawlTCG.BotDeck";
+        const string BotDeckRandom = "Random bot deck";
         enum OnlineMode { CreateRoom, JoinRoom, LanHost, LanJoin }
 
         App _app;
@@ -75,8 +76,9 @@ namespace BrawlTCG.UnityApp
 
         // Bot panel
         GameObject _botPanel;
-        ThemedSelector _botMyDeck, _botLevel;
+        ThemedSelector _botMyDeck, _botLevel, _botDeck;
         Text _botMyInfo, _botPool;
+        GameObject _botMystery, _botChooser;
         NavItem _navOnline, _navBot, _navLocal;
 
         // Networking state
@@ -535,10 +537,17 @@ namespace BrawlTCG.UnityApp
             DeckPickerButton(t, _botMyDeck, _botMyInfo, 612, 150, 130);
 
             // The bot's deck stays a surprise: it picks one you don't own yet (see Collection.PickBotDeck).
-            Theme.Label(t, "BOT'S DECK", 14, Theme.TextDim, 50, 276, 694, 20, display: true);
-            var mystery = Theme.RoundedPanel(t, new Color(1, 1, 1, 0.05f), 48, 300, 694, 70, 12, "BotDeck");
+            _botMystery = UI.Stretch(UI.Rect("BotDeckMystery", t)).gameObject;
+            Theme.Label(_botMystery.transform, "BOT'S DECK", 14, Theme.TextDim, 50, 276, 694, 20, display: true);
+            var mystery = Theme.RoundedPanel(_botMystery.transform, new Color(1, 1, 1, 0.05f), 48, 300, 694, 70, 12, "BotDeck");
             mystery.raycastTarget = false;
             _botPool = Theme.Label(mystery.transform, "", 17, Theme.Text, 18, 0, 658, 70, TextAnchor.MiddleLeft);
+
+            // Once every bot deck is unlocked, the player picks the bot's deck instead: random, or any deck they can play.
+            _botChooser = UI.Stretch(UI.Rect("BotDeckChooser", t)).gameObject;
+            _botDeck = new ThemedSelector(_botChooser.transform, "Bot's deck", 48, 276, 694, BotDeckOptions(), PlayerPrefs.GetString(PrefBotDeck, BotDeckRandom));
+            Theme.Ghost(_botChooser.transform, "ALL DECKS", 612, 270, 130, 30, () =>
+                DeckOverview.Open(_deckPickerLayer, playableOnly: true, _botDeck.Value, (name, kind) => _botDeck.SetOptions(BotDeckOptions(), name)), 14);
 
             var levels = new List<string> { "Easy", "Normal", "Hard" };
             _botLevel = new ThemedSelector(t, "Difficulty", 48, 396, 694, levels, PlayerPrefs.GetString(PrefBotLevel, "Normal"));
@@ -553,6 +562,11 @@ namespace BrawlTCG.UnityApp
         /// <summary>The mystery-deck line of the VS BOT panel: how many of this difficulty's decks are still to unlock.</summary>
         void RefreshBotPool()
         {
+            bool choose = Collection.AllBotDecksUnlocked;
+            _botMystery.SetActive(!choose);
+            _botChooser.SetActive(choose);
+            if (choose) _botDeck.SetOptions(BotDeckOptions(), _botDeck.Value ?? PlayerPrefs.GetString(PrefBotDeck, BotDeckRandom));
+
             Bot.Level level = SelectedLevel;
             var (locked, total) = Collection.Progress(level);
             _botPool.text = locked > 0
@@ -561,16 +575,39 @@ namespace BrawlTCG.UnityApp
             _botPool.color = locked > 0 ? Theme.Text : Theme.Success;
         }
 
+        /// <summary>The bot-deck chooser's options: a random bot deck first, then every deck the player can play.</summary>
+        static List<string> BotDeckOptions()
+        {
+            var options = new List<string> { BotDeckRandom };
+            options.AddRange(DeckLibrary.Playable());
+            return options;
+        }
+
         void StartBotMatch()
         {
             if (_busy) return;
             var me = PrepareLocalPlayer(_name.text, _botMyDeck);
             if (me == null) return;
+
+            // The bot's deck: chosen by the player once every bot deck is unlocked, else a surprise (null).
+            string botDeck = null;
+            if (Collection.AllBotDecksUnlocked && _botDeck.Index > 0)
+            {
+                botDeck = _botDeck.Value;
+                string invalid = DeckRules.ValidateForPlay(DeckLibrary.Load(botDeck));
+                if (invalid != null)
+                {
+                    _app.Toast($"The bot can't play {botDeck}: {invalid}", 5);
+                    return;
+                }
+            }
+
             SavePrefs();
             PlayerPrefs.SetString(PrefBotMyDeck, _botMyDeck.Value);
             PlayerPrefs.SetString(PrefBotLevel, _botLevel.Value);
+            if (_botDeck.Value != null) PlayerPrefs.SetString(PrefBotDeck, _botDeck.Value);
             PlayerPrefs.Save();
-            LaunchBotMatch(_app, me.Value.name, DeckLibrary.Load(_botMyDeck.Value), SelectedLevel);
+            LaunchBotMatch(_app, me.Value.name, DeckLibrary.Load(_botMyDeck.Value), SelectedLevel, botDeck);
         }
 
         Bot.Level SelectedLevel => (Bot.Level)Enum.Parse(typeof(Bot.Level), _botLevel.Value ?? "Normal");
@@ -578,12 +615,26 @@ namespace BrawlTCG.UnityApp
         /// <summary>
         /// Starts a match against the bot with a deck the player doesn't own yet (from the difficulty's pool). Static so
         /// PLAY AGAIN can call it after the menu is gone; every match picks again, so a win moves on to the next deck.
+        /// <paramref name="botDeck"/> is the deck the player chose for the bot (all bot decks unlocked), or null to pick one.
         /// </summary>
-        static void LaunchBotMatch(App app, string myName, List<int> myDeck, Bot.Level level)
+        static void LaunchBotMatch(App app, string myName, List<int> myDeck, Bot.Level level, string botDeck = null)
         {
             var rng = new Random();
-            StarterDecks.Starter premade = Collection.PickBotDeck(level, rng);
-            List<int> botCards = premade.Cards;
+            // A picked bot deck is usually one the player doesn't own yet, so it comes straight from the premade list:
+            // DeckLibrary.Load only returns premade decks the player owns. A chosen deck is one they can play, so Load works.
+            string botDeckName;
+            List<int> botCards;
+            if (botDeck == null)
+            {
+                StarterDecks.Starter premade = Collection.PickBotDeck(level, rng);
+                botDeckName = premade.Name;
+                botCards = premade.Cards.ToList();
+            }
+            else
+            {
+                botDeckName = botDeck;
+                botCards = DeckLibrary.Load(botDeck);
+            }
 
             bool botFirst = rng.Next(2) == 0; // coin flip
             string botName = $"Bot ({level})";
@@ -600,8 +651,8 @@ namespace BrawlTCG.UnityApp
                 Net = new BotSession(game, level, botIndex),
                 LocalIndex = 1 - botIndex,
                 Avatars = avatars,
-                BotDeck = premade.Name,
-                Rematch = () => LaunchBotMatch(app, myName, myDeck, level),
+                BotDeck = botDeckName,
+                Rematch = () => LaunchBotMatch(app, myName, myDeck, level, botDeck),
             });
         }
 

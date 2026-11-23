@@ -92,6 +92,12 @@ namespace BrawlTCG.UnityApp
             return (pool.Count(s => !Owns(s.Name)), pool.Count);
         }
 
+        /// <summary>
+        /// Whether the player owns every bot deck of every difficulty. This unlocks choosing the bot's deck in VS BOT.
+        /// </summary>
+        public static bool AllBotDecksUnlocked =>
+            ((Bot.Level[])Enum.GetValues(typeof(Bot.Level))).All(level => Progress(level).locked == 0);
+
         // ───────────── Changes ─────────────
 
         /// <summary>Unlocks a bot deck. Returns true only the first time (false for starters, owned and unknown decks).</summary>
