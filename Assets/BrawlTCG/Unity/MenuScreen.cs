@@ -26,6 +26,10 @@ namespace BrawlTCG.UnityApp
         public Action Rematch;
         /// <summary>Bot games: the premade deck the bot plays. Beating it unlocks that deck (see <see cref="Collection"/>).</summary>
         public string BotDeck;
+        /// <summary>A coin flip decided who starts: the intro shows the coin being tossed (#33).</summary>
+        public bool CoinFlip;
+        /// <summary>Hot seat: the coin flip made Player 2 the Game's first player (index 0), so seat numbers are swapped.</summary>
+        public bool SeatsSwapped;
         public bool HotSeat => Net == null && Showcase == null;
     }
 
@@ -36,6 +40,7 @@ namespace BrawlTCG.UnityApp
             PrefDeck2 = "BrawlTCG.Deck2", PrefIp = "BrawlTCG.Ip", PrefPort = "BrawlTCG.Port", PrefMode = "BrawlTCG.OnlineMode";
 
         enum Panel { None, Online, Bot, Local }
+        const string PrefCoinFlip = "BrawlTCG.LocalCoinFlip", PrefOnlineCoinFlip = "BrawlTCG.OnlineCoinFlip";
         const string PrefBotMyDeck = "BrawlTCG.BotMyDeck", PrefBotLevel = "BrawlTCG.BotLevel", PrefBotDeck = "BrawlTCG.BotDeck";
         const string BotDeckRandom = "Random bot deck";
         enum OnlineMode { CreateRoom, JoinRoom, LanHost, LanJoin }
@@ -67,12 +72,16 @@ namespace BrawlTCG.UnityApp
         Button _cta;
         Text _ctaLabel;
         GameObject _spinner, _cancel;
+        RectTransform _onlineCoinRow;
+        bool _onlineCoinFlip;
 
         // Local panel
         GameObject _localPanel;
         InputField _localName1, _name2;
         ThemedSelector _localDeck1, _deck2;
         Text _localInfo1, _localInfo2;
+        RectTransform _coinFlipRow;
+        bool _coinFlip;
 
         // Bot panel
         GameObject _botPanel;
@@ -426,6 +435,11 @@ namespace BrawlTCG.UnityApp
             _roomCode = Theme.Label(_roomBox, "", 72, Theme.Gold, 0, 22, 694, 86, TextAnchor.MiddleLeft, display: true);
             _roomBox.gameObject.SetActive(false);
 
+            // Hosts only: a coin flip decides who goes first (#33). Right of the room code / port, so both stay visible.
+            _onlineCoinFlip = PlayerPrefs.GetInt(PrefOnlineCoinFlip, 0) == 1;
+            _onlineCoinRow = UI.Place(UI.Rect("CoinFlip", t), 400, 446, 342, 34);
+            DrawOnlineCoinRow();
+
             _cta = Theme.Cta(t, "HOST GAME", 48, 530, 694, 78, OnlineCtaClicked, 30);
             _ctaLabel = _cta.GetComponentInChildren<Text>();
 
@@ -447,6 +461,23 @@ namespace BrawlTCG.UnityApp
             SetBusy(false, "Not connected");
         }
 
+        void DrawOnlineCoinRow()
+        {
+            UI.Clear(_onlineCoinRow);
+            MatchScreen.Switch(_onlineCoinRow, 0, 1, _onlineCoinFlip, () =>
+            {
+                if (_busy) return; // the guest has already been told (or is about to be)
+                _onlineCoinFlip = !_onlineCoinFlip;
+                PlayerPrefs.SetInt(PrefOnlineCoinFlip, _onlineCoinFlip ? 1 : 0);
+                PlayerPrefs.Save();
+                DrawOnlineCoinRow();
+                SetMode(_mode); // the hint says who goes first
+            });
+            Theme.Label(_onlineCoinRow, "Coin flip for the first turn", 17, Theme.TextDim, 88, 0, 254, 34, TextAnchor.MiddleLeft);
+        }
+
+        string HostFirstHint => _onlineCoinFlip ? "A coin flip decides who takes the first turn." : "You take the first turn.";
+
         void SetMode(OnlineMode mode)
         {
             if (_busy) return;
@@ -461,10 +492,11 @@ namespace BrawlTCG.UnityApp
             _portBox.gameObject.SetActive(mode == OnlineMode.LanHost || mode == OnlineMode.LanJoin);
             _portBox.anchoredPosition = new Vector2(mode == OnlineMode.LanHost ? 48 : 522, -414);
             _codeBox.gameObject.SetActive(mode == OnlineMode.JoinRoom);
+            _onlineCoinRow.gameObject.SetActive(mode == OnlineMode.CreateRoom || mode == OnlineMode.LanHost);
             switch (mode)
             {
                 case OnlineMode.CreateRoom:
-                    _modeHint.text = "Get a 4-digit room code and send it to a friend. You take the first turn.";
+                    _modeHint.text = "Get a 4-digit room code and send it to a friend. " + HostFirstHint;
                     _ctaLabel.text = "CREATE ROOM";
                     break;
                 case OnlineMode.JoinRoom:
@@ -472,7 +504,7 @@ namespace BrawlTCG.UnityApp
                     _ctaLabel.text = "JOIN ROOM";
                     break;
                 case OnlineMode.LanHost:
-                    _modeHint.text = "Host directly on this PC. Your friend needs your IP address. You take the first turn.";
+                    _modeHint.text = "Host directly on this PC. Your friend needs your IP address. " + HostFirstHint;
                     _ctaLabel.text = "HOST GAME";
                     break;
                 default:
@@ -522,8 +554,25 @@ namespace BrawlTCG.UnityApp
             Theme.Label(vs.transform, "VS", 24, Theme.Ink, 0, 0, 60, 60, TextAnchor.MiddleCenter, display: true);
 
             Theme.Cta(t, "START MATCH", 48, 476, 694, 78, StartHotSeat, 30);
-            Theme.Label(t, "Player 1 takes the first turn. The screen is covered between turns so you can pass the device.",
-                16, Theme.TextFaint, 50, 574, 694, 48);
+            _coinFlip = PlayerPrefs.GetInt(PrefCoinFlip, 0) == 1;
+            _coinFlipRow = UI.Place(UI.Rect("CoinFlip", t), 48, 570, 694, 34);
+            DrawCoinFlipRow();
+            Theme.Label(t, "The screen is covered between turns so you can pass the device.", 16, Theme.TextFaint, 50, 612, 694, 24);
+        }
+
+        /// <summary>The Local Match coin-flip switch (#33): on, a coin flip decides who takes the first turn.</summary>
+        void DrawCoinFlipRow()
+        {
+            UI.Clear(_coinFlipRow);
+            MatchScreen.Switch(_coinFlipRow, 0, 1, _coinFlip, () =>
+            {
+                _coinFlip = !_coinFlip;
+                PlayerPrefs.SetInt(PrefCoinFlip, _coinFlip ? 1 : 0);
+                PlayerPrefs.Save();
+                DrawCoinFlipRow();
+            });
+            Theme.Label(_coinFlipRow, _coinFlip ? "Coin flip: a random player takes the first turn." : "Coin flip off: Player 1 takes the first turn.",
+                17, Theme.TextDim, 88, 0, 606, 34, TextAnchor.MiddleLeft);
         }
 
         void BuildBotPanel()
@@ -652,6 +701,7 @@ namespace BrawlTCG.UnityApp
                 LocalIndex = 1 - botIndex,
                 Avatars = avatars,
                 BotDeck = botDeckName,
+                CoinFlip = true,
                 Rematch = () => LaunchBotMatch(app, myName, myDeck, level, botDeck),
             });
         }
@@ -700,6 +750,16 @@ namespace BrawlTCG.UnityApp
         }
 
         // ───────────────────────────── Shared helpers ─────────────────────────────
+
+        /// <summary>Esc steps back (#74): closes the avatar or deck picker, then the open panel. It never quits the game.</summary>
+        void Update()
+        {
+            var kb = UnityEngine.InputSystem.Keyboard.current;
+            if (kb == null || !kb.escapeKey.wasPressedThisFrame) return;
+            if (_pickerLayer.childCount > 0) UI.Clear(_pickerLayer);
+            else if (_deckPickerLayer.childCount > 0) UI.Clear(_deckPickerLayer);
+            else if (_panel != Panel.None && !_busy) ShowPanel(Panel.None);
+        }
 
         void OnDestroy()
         {
@@ -778,8 +838,13 @@ namespace BrawlTCG.UnityApp
             var p2 = PrepareLocalPlayer(_name2.text, _deck2);
             if (p2 == null) return;
             SavePrefs();
-            var game = new Game(p1.Value.name, p1.Value.deck, p2.Value.name, p2.Value.deck, new Random().Next());
-            _app.StartMatch(new MatchSetup { Game = game, Net = null, LocalIndex = 0, Avatars = new[] { Avatars.Saved, Avatars.None } });
+            var rng = new Random();
+            bool p2First = _coinFlip && rng.Next(2) == 0; // the first player in a Game takes the first turn
+            var game = p2First
+                ? new Game(p2.Value.name, p2.Value.deck, p1.Value.name, p1.Value.deck, rng.Next())
+                : new Game(p1.Value.name, p1.Value.deck, p2.Value.name, p2.Value.deck, rng.Next());
+            int[] avatars = p2First ? new[] { Avatars.None, Avatars.Saved } : new[] { Avatars.Saved, Avatars.None };
+            _app.StartMatch(new MatchSetup { Game = game, Net = null, LocalIndex = 0, Avatars = avatars, CoinFlip = _coinFlip, SeatsSwapped = p2First });
         }
 
         // ───────────────────────────── Networking ─────────────────────────────
@@ -904,15 +969,24 @@ namespace BrawlTCG.UnityApp
             });
         }
 
-        /// <summary>The host is always player 0 and takes the first turn.</summary>
+        /// <summary>
+        /// The host is player 0 and takes the first turn, unless the host turned on the coin flip: then the coin can
+        /// make the guest player 0 (see <see cref="Protocol.GuestStarts"/>).
+        /// </summary>
         async Task HandshakeAsHost(NetSession session, (string name, List<int> deck) me)
         {
             int mySeed = new Random().Next();
-            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck, Avatars.Saved));
+            bool asks = _onlineCoinFlip;
+            session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck, Avatars.Saved, asks));
             Protocol.Hello peer = await ReadHello(session);
             CheckAlive();
-            var game = new Game(me.name, me.deck, peer.Name, peer.Deck, mySeed ^ peer.Seed);
-            Launch(game, session, 0, new[] { Avatars.Saved, peer.Avatar });
+            int seed = mySeed ^ peer.Seed;
+            bool flip = Protocol.CoinFlipActive(asks, peer.CoinFlip != null);
+            if (Protocol.GuestStarts(asks, peer.CoinFlip != null, seed))
+                Launch(new Game(peer.Name, peer.Deck, me.name, me.deck, seed), session, 1, new[] { peer.Avatar, Avatars.Saved }, flip);
+            else
+                Launch(new Game(me.name, me.deck, peer.Name, peer.Deck, seed), session, 0, new[] { Avatars.Saved, peer.Avatar }, flip);
+            if (asks && !flip) _app.Toast($"{peer.Name}'s game is too old for the coin flip, so you go first.", 5);
         }
 
         async Task HandshakeAsGuest(NetSession session, (string name, List<int> deck) me)
@@ -921,8 +995,12 @@ namespace BrawlTCG.UnityApp
             session.Send(Protocol.EncodeHello(me.name, mySeed, me.deck, Avatars.Saved));
             Protocol.Hello host = await ReadHello(session);
             CheckAlive();
-            var game = new Game(host.Name, host.Deck, me.name, me.deck, host.Seed ^ mySeed);
-            Launch(game, session, 1, new[] { host.Avatar, Avatars.Saved });
+            int seed = host.Seed ^ mySeed;
+            bool asks = host.CoinFlip == true, flip = Protocol.CoinFlipActive(asks, true);
+            if (Protocol.GuestStarts(asks, true, seed))
+                Launch(new Game(me.name, me.deck, host.Name, host.Deck, seed), session, 0, new[] { Avatars.Saved, host.Avatar }, flip);
+            else
+                Launch(new Game(host.Name, host.Deck, me.name, me.deck, seed), session, 1, new[] { host.Avatar, Avatars.Saved }, flip);
         }
 
         static async Task<Protocol.Hello> ReadHello(NetSession session, int timeoutMs = 20000)
@@ -933,10 +1011,10 @@ namespace BrawlTCG.UnityApp
             return hello;
         }
 
-        void Launch(Game game, NetSession session, int localIndex, int[] avatars)
+        void Launch(Game game, NetSession session, int localIndex, int[] avatars, bool coinFlip)
         {
             _pending = null; // ownership moves to the match
-            _app.StartMatch(new MatchSetup { Game = game, Net = session, LocalIndex = localIndex, Avatars = avatars });
+            _app.StartMatch(new MatchSetup { Game = game, Net = session, LocalIndex = localIndex, Avatars = avatars, CoinFlip = coinFlip });
         }
 
         void CancelConnect()

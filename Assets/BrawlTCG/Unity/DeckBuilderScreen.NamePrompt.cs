@@ -85,11 +85,20 @@ namespace BrawlTCG.UnityApp
 
         void Update()
         {
-            if (!PromptOpen || _showcase != null) return;
+            if (_showcase != null) return;
             var kb = Keyboard.current;
             if (kb == null) return;
-            if (kb.enterKey.wasPressedThisFrame || kb.numpadEnterKey.wasPressedThisFrame) SubmitPrompt();
-            else if (kb.escapeKey.wasPressedThisFrame) ClosePrompt();
+            if (PromptOpen)
+            {
+                if (kb.enterKey.wasPressedThisFrame || kb.numpadEnterKey.wasPressedThisFrame) SubmitPrompt();
+                else if (kb.escapeKey.wasPressedThisFrame) ClosePrompt();
+                return;
+            }
+            // Esc steps back (#74): closes the unsaved-changes dialog, then the ALL DECKS grid, then leaves for the menu.
+            if (!kb.escapeKey.wasPressedThisFrame) return;
+            if (_modal.childCount > 0) _cancelModal?.Invoke();
+            else if (_overviewLayer.childCount > 0) UI.Clear(_overviewLayer);
+            else BackToMenu();
         }
 
         /// <summary>Why a name can't be used for a new deck (or a rename to it), or null when it's fine.</summary>

@@ -151,7 +151,7 @@ namespace BrawlTCG.UnityApp
             rt.anchoredPosition = new Vector2(center.x, -center.y);
             rt.sizeDelta = new Vector2(size, size);
             var img = rt.gameObject.AddComponent<Image>();
-            img.sprite = Theme.Ring;
+            img.sprite = Theme.ShockRing; // not the spinner's small ring with a gap: that went blurry when stretched
             img.color = color;
             img.raycastTarget = false;
             rt.gameObject.AddComponent<Expand>().Init(img, color, 0.15f, 1f, duration, delay);

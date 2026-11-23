@@ -46,7 +46,10 @@ namespace BrawlTCG.UnityApp
         NetSession _net;
         int _localIndex;
         int[] _avatars;
-        bool _hotSeat;
+        bool _hotSeat, _coinFlip, _seatsSwapped;
+
+        /// <summary>"Player 1" / "Player 2" as chosen in the menu, even when a coin flip let Player 2 start.</summary>
+        int SeatNumber(int index) => (_seatsSwapped ? 1 - index : index) + 1;
         /// <summary>Bot games: starts another match with the same settings (null otherwise).</summary>
         Action _rematch;
         bool VsBot => _net is BotSession;
@@ -77,6 +80,8 @@ namespace BrawlTCG.UnityApp
             _game = setup.Game;
             _net = setup.Net;
             _hotSeat = setup.HotSeat;
+            _coinFlip = setup.CoinFlip;
+            _seatsSwapped = setup.HotSeat && setup.SeatsSwapped;
             _localIndex = setup.LocalIndex;
             _rematch = setup.Rematch;
             _botDeck = setup.BotDeck;
@@ -336,7 +341,7 @@ namespace BrawlTCG.UnityApp
             name.resizeTextForBestFit = true;
             name.resizeTextMinSize = 14;
             name.resizeTextMaxSize = 26;
-            string role = _hotSeat || InShowcase ? $"PLAYER {p.Index + 1}" : IsLocallyControlled(p.Index) ? "YOU" : "OPPONENT";
+            string role = _hotSeat || InShowcase ? $"PLAYER {SeatNumber(p.Index)}" : IsLocallyControlled(p.Index) ? "YOU" : "OPPONENT";
             Theme.Label(t, active ? role + "  ·  ACTIVE" : role, 13, active ? Theme.Gold : Theme.TextDim, 92, 44, 220, 18, display: true);
 
             // Counters (top-right)
@@ -864,7 +869,7 @@ namespace BrawlTCG.UnityApp
             {
                 Card card = p.DiscardPile[i];
                 var cell = UI.Rect(card.Name, content);
-                CardView thumb = CardPeek.Create(cell, card.Id, 0, 0, Scale, _drag, previewAt);
+                CardView thumb = CardPeek.Create(cell, card, 0, 0, Scale, _drag, previewAt);
                 UI.Clicks(thumb.gameObject, _ => { CloseDiscardPile(); OpenDetail(card); });
             }
         }
@@ -1353,6 +1358,7 @@ namespace BrawlTCG.UnityApp
             var name = Theme.Label(rt, attack.Name, 22, new Color(1, 1, 1, alpha), ix + 6, 8, w - ix - 120, 30, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
             var tags = new List<string>();
+            if (attack.EffectText != null) tags.Add(attack.EffectText);
             if (attack.Kind != AttackKind.Strike) tags.Add(attack.Kind.ToString().ToUpperInvariant());
             if (attack.InstaEffect) tags.Add("INSTANT");
             if (attack.MultiHit) tags.Add("HITS ALL ENEMIES");

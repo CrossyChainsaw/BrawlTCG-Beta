@@ -30,14 +30,24 @@ namespace BrawlTCG.UnityApp
         public static Font Body => UI.Font;
 
         // ───────────── Generated sprites ─────────────
-        static Sprite _rounded, _roundedOutline, _soft, _ring;
+        static Sprite _rounded, _roundedOutline, _soft, _ring, _circle, _shockRing;
         static readonly Dictionary<string, Sprite> Gradients = new Dictionary<string, Sprite>();
 
         /// <summary>9-sliced rounded rectangle with a 24px corner radius (scale with pixelsPerUnitMultiplier).</summary>
         public static Sprite Rounded => _rounded ??= MakeRounded(false);
         public static Sprite RoundedOutline => _roundedOutline ??= MakeRounded(true);
+        /// <summary>
+        /// A 256px anti-aliased disc for big round shapes. <see cref="Rounded"/> is a small 9-sliced sprite, so stretched to
+        /// a large radius its one-pixel soft edge becomes several pixels of blur.
+        /// </summary>
+        public static Sprite Circle => _circle ??= MakeCircle();
         /// <summary>Soft radial glow.</summary>
         public static Sprite Soft => _soft ??= MakeSoft();
+        /// <summary>
+        /// A 512px full ring for shockwaves: a crisp bright edge with a soft glow trailing inwards, like a wave of light.
+        /// Big enough to stay sharp when it expands across the screen.
+        /// </summary>
+        public static Sprite ShockRing => _shockRing ??= MakeShockRing();
         /// <summary>Thin circle with a gap, used as a loading spinner.</summary>
         public static Sprite Ring => _ring ??= MakeRing();
 
@@ -53,7 +63,7 @@ namespace BrawlTCG.UnityApp
         static void ResetStatics()
         {
             _display = null;
-            _rounded = _roundedOutline = _soft = _ring = _heart = null;
+            _rounded = _roundedOutline = _soft = _ring = _circle = _shockRing = _heart = null;
             Gradients.Clear();
         }
 
@@ -110,6 +120,33 @@ namespace BrawlTCG.UnityApp
                 new Vector4(Radius, Radius, Radius, Radius));
         }
 
+        static Sprite MakeCircle()
+        {
+            const int size = 256;
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, true) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear };
+            var px = new Color32[size * size];
+            float r = size / 2f;
+            for (int y = 0; y < size; y++)
+            for (int x = 0; x < size; x++)
+            {
+                float dx = x + 0.5f - r, dy = y + 0.5f - r;
+                float a = Mathf.Clamp01(r - 0.5f - Mathf.Sqrt(dx * dx + dy * dy));
+                px[y * size + x] = new Color32(255, 255, 255, (byte)(a * 255));
+            }
+            tex.SetPixels32(px);
+            tex.Apply(true);
+            return Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f), 100);
+        }
+
+        /// <summary>A sharp round disc of the given diameter (see <see cref="Circle"/>).</summary>
+        public static Image Disc(Transform parent, Color color, float x, float y, float size, string name = "Disc")
+        {
+            var img = UI.Panel(parent, color, x, y, size, size, name);
+            img.sprite = Circle;
+            img.type = Image.Type.Simple;
+            return img;
+        }
+
         static float RoundedDistance(float x, float y, int size, float r)
         {
             float cx = Mathf.Clamp(x, r, size - r);
@@ -133,6 +170,27 @@ namespace BrawlTCG.UnityApp
             tex.SetPixels32(px);
             tex.Apply();
             return Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f));
+        }
+
+        static Sprite MakeShockRing()
+        {
+            const int size = 512;
+            const float edge = 248;      // radius of the bright edge (texture pixels)
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, true) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear };
+            var px = new Color32[size * size];
+            for (int y = 0; y < size; y++)
+            for (int x = 0; x < size; x++)
+            {
+                float dx = x + 0.5f - size / 2f, dy = y + 0.5f - size / 2f;
+                float d = Mathf.Sqrt(dx * dx + dy * dy) - edge; // < 0 inside the ring
+                float core = Mathf.Exp(-(d * d) / (2 * 2.2f * 2.2f));                     // thin, sharp line
+                float trail = d < 0 ? 0.45f * Mathf.Exp(d / 28f) : Mathf.Exp(-(d * d) / 18f) * 0.45f; // glow behind it
+                float a = Mathf.Clamp01(core + trail);
+                px[y * size + x] = new Color32(255, 255, 255, (byte)(a * 255));
+            }
+            tex.SetPixels32(px);
+            tex.Apply(true);
+            return Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f), 100);
         }
 
         static Sprite MakeRing()

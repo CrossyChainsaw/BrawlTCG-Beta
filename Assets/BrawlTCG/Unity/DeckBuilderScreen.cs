@@ -469,13 +469,17 @@ namespace BrawlTCG.UnityApp
             var name = Theme.Label(rt, attack.Name, 18, Theme.Text, ix + 4, 4, w - ix - right, 26, TextAnchor.MiddleLeft, display: true);
             name.verticalOverflow = VerticalWrapMode.Truncate;
             var tags = new List<string>();
+            if (attack.EffectText != null) tags.Add(attack.EffectText);
             if (attack.Kind != AttackKind.Strike) tags.Add(attack.Kind.ToString().ToUpperInvariant());
             if (attack.InstaEffect) tags.Add("INSTANT");
             if (attack.MultiHit) tags.Add("HITS ALL");
             if (attack.FriendlyFire) tags.Add("ALLY");
             int burns = attack.WeaponOneBurnAmount + attack.WeaponTwoBurnAmount;
-            if (burns > 0) tags.Add($"BURNS {burns}");
-            Theme.Label(rt, tags.Count > 0 ? string.Join(" · ", tags) : "", 12, Theme.TextDim, ix + 4, 30, w - ix - right, 18, TextAnchor.MiddleLeft, display: true);
+            if (burns > 0) tags.Add($"BURNS {burns} WEAPON{(burns > 1 ? "S" : "")}");
+            var tagText = Theme.Label(rt, tags.Count > 0 ? string.Join(" · ", tags) : "", 12, Theme.TextDim, ix + 4, 30, w - ix - right, 18, TextAnchor.MiddleLeft, display: true);
+            tagText.resizeTextForBestFit = true; // long effect texts shrink instead of being cut off
+            tagText.resizeTextMinSize = 8;
+            tagText.resizeTextMaxSize = 12;
             if (mentioned != null)
                 for (int m = 0; m < mentioned.Length; m++)
                     MentionThumb(rt, mentioned[m], w - 70 - (m + 1) * tw, 3, AttackMentionScale, y + 3);
@@ -919,6 +923,9 @@ namespace BrawlTCG.UnityApp
 
         void BackToMenu() => ConfirmUnsaved("LEAVE", () => _app.ShowMenu());
 
+        /// <summary>What Esc does while the unsaved-changes dialog is open: the same as KEEP EDITING.</summary>
+        Action _cancelModal;
+
         /// <summary>
         /// Runs <paramref name="proceed"/> straight away when nothing is unsaved. Otherwise asks first: save and go on
         /// (only when the deck can be saved), go on without saving, or keep editing (runs <paramref name="cancel"/>).
@@ -931,6 +938,7 @@ namespace BrawlTCG.UnityApp
             _modal.SetAsLastSibling();
             void Close() => UI.Clear(_modal);
             void Cancel() { Close(); cancel?.Invoke(); }
+            _cancelModal = Cancel;
 
             var dim = UI.FullPanel(_modal, new Color(Theme.Night.r, Theme.Night.g, Theme.Night.b, 0.72f), "Dim");
             UI.Clicks(dim.gameObject, e => Cancel()); // clicking outside = keep editing

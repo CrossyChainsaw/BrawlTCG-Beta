@@ -147,7 +147,7 @@ namespace BrawlTCG.UnityApp
         }
 
         /// <summary>A pill-shaped on/off switch.</summary>
-        static void Switch(Transform parent, float x, float y, bool on, System.Action toggle)
+        internal static void Switch(Transform parent, float x, float y, bool on, System.Action toggle)
         {
             const float w = 72, h = 32;
             Color track = on ? Theme.Success : new Color(1, 1, 1, 0.16f);
