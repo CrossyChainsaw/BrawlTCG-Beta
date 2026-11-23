@@ -184,6 +184,7 @@ namespace BrawlTCG.Core
             new BattleCard(531, "Superfan Brynn", 4, "When Played: Boosts all your Spear and Axe legends +2/+2. Craft a random Spear and a random Axe", Element.Arctic, "Avatar_Superfan_Brynn", true, false, true, EC.SuperfanBrynn, powerModifier: 2, healthModifier: 2, targetRequired: false),
             new BattleCard(532, "Art Class", 3, "When Played: Craft 2 random legends that cost 2 or less", Element.Magic, "ArtClass", true, false, false, EC.ArtClass, targetRequired: false),
             new BattleCard(533, "Afterlife", 3, "When Played: Return a legend of your choice from your discard pile to your hand", Element.Shadow, "Afterlife", true, false, false, EC.Afterlife, picksFromDiscard: true),
+            new BattleCard(534, "Beta Cupcake", 3, "When Played: Cures a legend of every status effect (stun and burn)", Element.Magic, "BetaCupcake", true, false, true, EC.BetaCupcake),
         };
 
         static readonly Dictionary<int, Card> ById = BuildIndex();

@@ -381,6 +381,15 @@ namespace BrawlTCG.Core
                 LoseHealth(BurnDamage);
         }
 
+        /// <summary>Beta Cupcake: ends the legend's stun and burn.</summary>
+        public void CureStatuses()
+        {
+            IsStunned = false;
+            StunnedBy = null;
+            IsBurned = false;
+            BurnedBy = null;
+        }
+
         public void Stun()
         {
             IsStunned = true;

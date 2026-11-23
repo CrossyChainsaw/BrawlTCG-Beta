@@ -431,6 +431,14 @@ namespace BrawlTCG.Core
                 if (target is LegendCard legend) game.ReturnFromDiscard(card.Owner, legend);
             });
 
+        /// <summary>Beta Cupcake: one of your legends is no longer stunned or burned.</summary>
+        public static readonly Effect BetaCupcake = new Effect(
+            "Cures a legend of every status effect (stun and burn)",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) legend.CureStatuses();
+            });
+
         public static readonly Effect The_Finger = new Effect(
             "Legend attack becomes 0",
             (target, card, game, played) =>
