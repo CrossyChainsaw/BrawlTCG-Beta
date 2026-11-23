@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.7.0 Beta
+
+Choose the bot's deck in VS BOT, and Sozin's Comet / Full Eclipse can now kill legends when they leave. **Can't play online with v1.6.x.**
+
+### VS BOT
+
+- **Choose the bot's deck.** Once you've unlocked every bot deck of every difficulty, the secret-deck box becomes a **BOT'S DECK** selector. Pick a random bot deck, or any deck you can play: starters, unlocked bot decks or your own decks.
+- Your choice is saved and kept for **PLAY AGAIN**. If you pick one of your own decks and it isn't legal, a message tells you and the game doesn't use it.
+- When you picked the bot's deck yourself, the result screen no longer says "Beat it to unlock".
+
+### Rule changes
+
+- **Sozin's Comet / Full Eclipse:** when the stage leaves and the +5/+5 is taken back, legends keep their damage. A legend with 5 HP or less left dies. Before, it stayed alive at 1 HP. These deaths happen right after the old stage leaves, before the new stage's "when played" effect can heal or buff the legend.
+
 ## v1.6.0 Beta
 
 New weapons, stronger elemental weapons, a Mako's Reef rework and cost filters in the deck builder. **Can't play online with v1.5.x.**
