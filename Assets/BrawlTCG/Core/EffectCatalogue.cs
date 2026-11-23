@@ -423,6 +423,14 @@ namespace BrawlTCG.Core
             "Craft 2 random legends that cost 2 or less",
             (target, card, game, played) => game.GenerateRandomLegends(2, maxCost: 2));
 
+        /// <summary>Afterlife: the legend picked from your discard pile returns to your hand, fresh (crafted ones stay crafted).</summary>
+        public static readonly Effect Afterlife = new Effect(
+            "Return a legend of your choice from your discard pile to your hand",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) game.ReturnFromDiscard(card.Owner, legend);
+            });
+
         public static readonly Effect The_Finger = new Effect(
             "Legend attack becomes 0",
             (target, card, game, played) =>

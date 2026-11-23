@@ -71,6 +71,16 @@ namespace BrawlTCG.Core
 
         protected virtual void CopyMutableState() { }
 
+        /// <summary>
+        /// Back to its printed state for a return from the discard pile (Afterlife): base stats, nothing stacked, no
+        /// statuses. Unlike <see cref="Clone"/>, it stays the same card and keeps its owner and crafted mark.
+        /// </summary>
+        internal void ResetForReturn()
+        {
+            IsDiscarded = false;
+            ResetRuntimeState();
+        }
+
         public string EffectDescription => GenerateEffectDescription(this);
 
         public static string GenerateEffectDescription(Card c)
@@ -146,6 +156,11 @@ namespace BrawlTCG.Core
         public int HealthModifier { get; }
         public Element[] TargetElements { get; }
         public bool MultiTarget { get; }
+        /// <summary>
+        /// Played by picking a legend from your own discard pile (Afterlife): the command's target index is the
+        /// discard-pile index, and the effect gets that legend. Implies no target on the field.
+        /// </summary>
+        public bool PicksFromDiscard { get; }
 
         public override CardType Type => CardType.Battle;
         public override string Description => _description;
@@ -153,7 +168,7 @@ namespace BrawlTCG.Core
         public BattleCard(int id, string name, int cost, string description, Element element, string art,
             bool oneTimeUse, bool stackable, bool friendlyFire, Effect whenPlayedEffect = null,
             int damage = 0, int powerModifier = 0, int healthModifier = 0,
-            Element[] targetElements = null, bool multiTarget = false, bool targetRequired = true)
+            Element[] targetElements = null, bool multiTarget = false, bool targetRequired = true, bool picksFromDiscard = false)
             : base(id, name, cost, element, art, whenPlayedEffect: whenPlayedEffect)
         {
             if (oneTimeUse == stackable)
@@ -167,7 +182,8 @@ namespace BrawlTCG.Core
             HealthModifier = healthModifier;
             TargetElements = targetElements ?? Array.Empty<Element>();
             MultiTarget = multiTarget;
-            TargetRequired = targetRequired;
+            TargetRequired = targetRequired && !picksFromDiscard;
+            PicksFromDiscard = picksFromDiscard;
         }
     }
 

@@ -287,6 +287,12 @@ namespace BrawlTCG.Core
                 {
                     if (!(card is BattleCard battle)) return "That is not a Battle card.";
                     if (me.Essence < card.Cost) return "Not enough Essence";
+                    if (battle.PicksFromDiscard)
+                    {
+                        if (!me.DiscardPile.Any(c => c is LegendCard)) return "No legend in your discard pile";
+                        return InRange(cmd.TargetIndex, me.DiscardPile.Count) && me.DiscardPile[cmd.TargetIndex] is LegendCard
+                            ? null : "Pick a legend from your discard pile.";
+                    }
                     if (!battle.TargetRequired) return null;
                     Player side = battle.FriendlyFire ? me : enemy;
                     if (!InRange(cmd.TargetIndex, side.PlayingField.Count))
@@ -350,7 +356,9 @@ namespace BrawlTCG.Core
                 {
                     var battle = (BattleCard)card;
                     LegendCard target = null;
-                    if (battle.TargetRequired)
+                    if (battle.PicksFromDiscard)
+                        target = (LegendCard)me.DiscardPile[cmd.TargetIndex];
+                    else if (battle.TargetRequired)
                         target = (battle.FriendlyFire ? me : enemy).PlayingField[cmd.TargetIndex];
                     PlayBattleCard(me, battle, target);
                     break;
@@ -438,7 +446,8 @@ namespace BrawlTCG.Core
             }
             else
             {
-                battle.WhenPlayedEffect?.Invoke(null, battle, this, battle);
+                // A discard pick (Afterlife) gets its legend; it is taken out before this card lands on the pile.
+                battle.WhenPlayedEffect?.Invoke(battle.PicksFromDiscard ? target : null, battle, this, battle);
                 PayAndRemoveFromHand(player, battle);
                 Discard(player, battle);
             }
@@ -551,6 +560,14 @@ namespace BrawlTCG.Core
             card.IsDiscarded = true;
             card.Owner = player;
             player.DiscardPile.Add(card);
+        }
+
+        /// <summary>Afterlife: takes the legend out of its owner's discard pile and puts it in their hand, fresh.</summary>
+        public void ReturnFromDiscard(Player player, LegendCard legend)
+        {
+            if (!player.DiscardPile.Remove(legend)) return;
+            legend.ResetForReturn();
+            AddCardToHand(player, legend);
         }
 
         public void DrawCardFromDeck(Player player) => player.DrawCardFromDeck();

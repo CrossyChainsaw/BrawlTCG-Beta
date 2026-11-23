@@ -813,7 +813,9 @@ namespace BrawlTCG.UnityApp
                         if (_game.Validate(GameCommand.PlayWeapon(pi, hand, l)) == null) return true;
                     return false;
                 default:
-                    for (int t = -1; t < Game.MaxLegendsOnField; t++)
+                    // A discard pick (Afterlife) targets a discard-pile index, the rest a legend on the field.
+                    int last = card is BattleCard b && b.PicksFromDiscard ? p.DiscardPile.Count : Game.MaxLegendsOnField;
+                    for (int t = -1; t < last; t++)
                         if (_game.Validate(GameCommand.PlayBattle(pi, hand, t)) == null) return true;
                     return false;
             }
@@ -894,11 +896,19 @@ namespace BrawlTCG.UnityApp
         int _pileViewPlayer = -1;
         bool PileViewOpen => _pileViewPlayer >= 0;
 
+        /// <summary>The Afterlife being played: the discard pile is open to pick a legend for it (null otherwise).</summary>
+        Card _pilePick;
+        const string PickPrompt = "Pick a legend from your discard pile.";
+
         /// <summary>Every card in a player's discard pile, newest first. Hover for the full card, click to open its details.</summary>
         void ShowDiscardPile(int playerIndex)
         {
             Player p = _game.Players[playerIndex];
             UI.Clear(_pileView);
+            // A pick only stays open while it can still be made (it's still your turn and the card is still in hand).
+            if (_pilePick != null && (!CanAct || _pilePick.Owner != p || !p.Hand.Contains(_pilePick) || !p.DiscardPile.Any(c => c is LegendCard)))
+                _pilePick = null;
+            bool picking = _pilePick != null;
             if (p.DiscardPile.Count == 0) { _pileViewPlayer = -1; return; }
             _pileViewPlayer = playerIndex;
 
@@ -911,9 +921,17 @@ namespace BrawlTCG.UnityApp
             UI.Clicks(box.gameObject, _ => { });
             Transform t = box.transform;
             string owner = _hotSeat || InShowcase || !IsLocallyControlled(p.Index) ? p.Name.ToUpperInvariant() + "'S" : "YOUR";
-            Theme.Label(t, $"{owner} DISCARD PILE", 36, Theme.Text, 36, 24, W - 140, 50, display: true);
-            Theme.Label(t, $"{p.DiscardPile.Count} CARD{(p.DiscardPile.Count == 1 ? "" : "S")}  ·  NEWEST FIRST  ·  HOVER TO ENLARGE, CLICK FOR DETAILS",
-                15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            if (picking)
+            {
+                Theme.Label(t, $"{_pilePick.Name.ToUpperInvariant()}  ·  PICK A LEGEND", 36, Theme.Gold, 36, 24, W - 140, 50, display: true);
+                Theme.Label(t, "CLICK A LEGEND TO RETURN IT TO YOUR HAND  ·  CLICK OUTSIDE OR ESC TO CANCEL", 15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            }
+            else
+            {
+                Theme.Label(t, $"{owner} DISCARD PILE", 36, Theme.Text, 36, 24, W - 140, 50, display: true);
+                Theme.Label(t, $"{p.DiscardPile.Count} CARD{(p.DiscardPile.Count == 1 ? "" : "S")}  ·  NEWEST FIRST  ·  HOVER TO ENLARGE, CLICK FOR DETAILS",
+                    15, Theme.TextDim, 38, 76, W - 80, 22, display: true);
+            }
             var close = Theme.Ghost(t, "×", W - 70, 26, 44, 44, CloseDiscardPile, 30);
             close.GetComponentInChildren<Text>().font = Theme.Body; // the display font has no multiplication sign
 
@@ -945,12 +963,31 @@ namespace BrawlTCG.UnityApp
                 Card card = p.DiscardPile[i];
                 var cell = UI.Rect(card.Name, content);
                 CardView thumb = CardPeek.Create(cell, card, 0, 0, Scale, _drag, previewAt);
-                UI.Clicks(thumb.gameObject, _ => { CloseDiscardPile(); OpenDetail(card); });
+                if (!picking)
+                    UI.Clicks(thumb.gameObject, _ => { CloseDiscardPile(); OpenDetail(card); });
+                else if (card is LegendCard)
+                {
+                    int index = i;
+                    thumb.SetGlow(Theme.Gold, 0.8f);
+                    UI.Clicks(thumb.gameObject, _ => PickFromDiscard(p, index));
+                }
+                else
+                    thumb.SetDimmed(true, 0.8f); // only legends can be picked
             }
+        }
+
+        /// <summary>Plays the Afterlife on the legend at discard-pile <paramref name="index"/>.</summary>
+        void PickFromDiscard(Player p, int index)
+        {
+            Card card = _pilePick;
+            CloseDiscardPile();
+            int hand = card != null ? p.Hand.IndexOf(card) : -1;
+            if (hand >= 0) Submit(GameCommand.PlayBattle(p.Index, hand, index));
         }
 
         void CloseDiscardPile()
         {
+            _pilePick = null;
             _pileViewPlayer = -1;
             UI.Clear(_pileView); // the thumbnails remove their own full-size previews
         }
@@ -1062,6 +1099,16 @@ namespace BrawlTCG.UnityApp
                     if (!Over(BoardZone.PlayingField, me, screen)) return false;
                     int legend = LegendUnder(me, screen);
                     return legend >= 0 && Submit(GameCommand.PlayWeapon(me, hand, legend));
+                case BattleCard battle when battle.PicksFromDiscard:
+                {
+                    // Afterlife: dropping it opens your discard pile to pick the legend; nothing is played until you do.
+                    if (!Over(BoardZone.PlayingField, me, screen) && !Over(BoardZone.PlayingField, enemy, screen)) return false;
+                    string why = _game.Validate(GameCommand.PlayBattle(me, hand, -1));
+                    if (why != PickPrompt) { _app.Toast(why); return false; }
+                    _pilePick = card;
+                    ShowDiscardPile(me);
+                    return false; // the card stays in the hand until a legend is picked
+                }
                 case BattleCard battle:
                     if (!Over(BoardZone.PlayingField, me, screen) && !Over(BoardZone.PlayingField, enemy, screen)) return false;
                     int target = -1;

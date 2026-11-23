@@ -177,6 +177,16 @@ namespace BrawlTCG.Core
                     case WeaponCard _:
                         for (int l = 0; l < me.PlayingField.Count; l++) moves.Add(GameCommand.PlayWeapon(p, h, l));
                         break;
+                    case BattleCard battle when battle.PicksFromDiscard:
+                    {
+                        // Afterlife: the most expensive legend in the discard pile (the newest of equals).
+                        int pick = -1;
+                        for (int d = 0; d < me.DiscardPile.Count; d++)
+                            if (me.DiscardPile[d] is LegendCard && (pick < 0 || me.DiscardPile[d].Cost >= me.DiscardPile[pick].Cost))
+                                pick = d;
+                        if (pick >= 0) moves.Add(GameCommand.PlayBattle(p, h, pick));
+                        break;
+                    }
                     case BattleCard battle:
                         if (!battle.TargetRequired) moves.Add(GameCommand.PlayBattle(p, h, -1));
                         else

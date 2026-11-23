@@ -129,6 +129,7 @@ namespace BrawlTCG.Core
             W2(22000, "Remnant of Fate", Element.Magic, "RemnantOfFate", Weapon.Orb),
             W(22001, "Sacred Relic", Element.Nature, "SacredRelic", Weapon.Orb),
             W(22002, "Scrying Glass", Element.Cosmic, "ScryingGlass", Weapon.Orb),
+            W2(22003, "The Firehawk", Element.Fire, "TheFirehawk", Weapon.Orb),
             W(23000, "Searing Blade", Element.Fire, "SearingBlade", Weapon.Scythe),
             W(23001, "Shooting Star", Element.Cosmic, "ShootingStar", Weapon.Scythe),
             W(23002, "Starry Scythe", Element.Cosmic, "StarryScythe", Weapon.Scythe),
@@ -182,6 +183,7 @@ namespace BrawlTCG.Core
             new BattleCard(530, "Fallout", 7, "When Played: Eliminate every legend", Element.Fire, "Fallout", true, false, false, EC.Fallout, targetRequired: false),
             new BattleCard(531, "Superfan Brynn", 4, "When Played: Boosts all your Spear and Axe legends +2/+2. Craft a random Spear and a random Axe", Element.Arctic, "Avatar_Superfan_Brynn", true, false, true, EC.SuperfanBrynn, powerModifier: 2, healthModifier: 2, targetRequired: false),
             new BattleCard(532, "Art Class", 3, "When Played: Craft 2 random legends that cost 2 or less", Element.Magic, "ArtClass", true, false, false, EC.ArtClass, targetRequired: false),
+            new BattleCard(533, "Afterlife", 3, "When Played: Return a legend of your choice from your discard pile to your hand", Element.Shadow, "Afterlife", true, false, false, EC.Afterlife, picksFromDiscard: true),
         };
 
         static readonly Dictionary<int, Card> ById = BuildIndex();
