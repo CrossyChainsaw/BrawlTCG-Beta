@@ -19,6 +19,10 @@ namespace BrawlTCG.Core
         static WeaponCard W(int id, string name, Element element, string art, Weapon weapon)
             => new WeaponCard(id, name, 1, element, art, weapon);
 
+        /// <summary>A special 2-cost weapon: +2 elemental bonus instead of +1.</summary>
+        static WeaponCard W2(int id, string name, Element element, string art, Weapon weapon)
+            => new WeaponCard(id, name, 2, element, art, weapon);
+
         /// <summary>Card prototypes in catalogue order. Never handed out directly; <see cref="Create"/> clones them.</summary>
         static readonly Card[] Prototypes =
         {
@@ -91,15 +95,19 @@ namespace BrawlTCG.Core
             Legend(7002, "Alpine Kaya", 4, Element.Arctic, "AlpineKaya", 2, 16, Weapon.Spear, Weapon.Bow, A(AC.Kaya_CraftSnowball, AC.Kaya_BuildASnowman)),
 
             // Weapons
-            W(13000, "Axe of Regrowth", Element.Nature, "Axe_of_Regrowth", Weapon.Axe),
-            W(13001, "Buzz Axe", Element.Wild, "BuzzAxe", Weapon.Axe),
+            W2(13000, "Axe of Regrowth", Element.Nature, "Axe_of_Regrowth", Weapon.Axe),
+            W2(13001, "Buzz Axe", Element.Wild, "BuzzAxe", Weapon.Axe),
             W(13002, "Boiling Point", Element.Fire, "BoilingPoint", Weapon.Axe),
+            W2(13003, "Bifrost Edge", Element.Cosmic, "BifrostEdge", Weapon.Axe),
+            W(13004, "Darkheart Axe", Element.Shadow, "DarkheartAxe", Weapon.Axe),
             W(14000, "Molten Boots", Element.Fire, "MoltenBoots", Weapon.BattleBoots),
-            W(15000, "Blazing Fire", Element.Fire, "BlazingFire", Weapon.Blasters),
+            W2(15000, "Blazing Fire", Element.Fire, "BlazingFire", Weapon.Blasters),
             W(15001, "Revolvers", Element.Shadow, "Revolvers", Weapon.Blasters),
             W(15002, "Aqua Blasters", Element.Arctic, "Aqua_Blasters", Weapon.Blasters),
             W(15003, "Splish Splash", Element.Arctic, "Splish_Splash", Weapon.Blasters),
+            W(15004, "Hardlight Blasters", Element.Cosmic, "HardlightBlasters", Weapon.Blasters),
             W(16000, "Sakura Strike", Element.Nature, "Sakura_Strike", Weapon.Bow),
+            W(16001, "The North Wind", Element.Arctic, "TheNorthWind", Weapon.Bow),
             W(26000, "Molten Cannon", Element.Fire, "MoltenCannon", Weapon.Cannon),
             W(17000, "Sleight of Hand", Element.Shadow, "Sleight_of_Hand", Weapon.Gauntlets),
             W(17001, "Rippers", Element.Wild, "MordexGaunts", Weapon.Gauntlets),
@@ -107,13 +115,18 @@ namespace BrawlTCG.Core
             W(17003, "Infinite & Absolute", Element.Cosmic, "InfiniteAndAbsolute", Weapon.Gauntlets),
             W(17004, "Spine-Chilling Fists", Element.Nature, "SpineChillingFists", Weapon.Gauntlets),
             W(18000, "Law of the Land", Element.Nature, "LawOfTheLand", Weapon.Greatsword),
+            W2(18001, "Vinetouched Greatsword", Element.Nature, "VinetouchedGreatsword", Weapon.Greatsword),
             W(19000, "Primrose Mallet", Element.Nature, "Primrose_Mallet", Weapon.Hammer),
             W(19001, "Chikara", Element.Wild, "Chikara", Weapon.Hammer),
             W(19002, "Ice Crusher", Element.Arctic, "IceCrusher", Weapon.Hammer),
+            W(19003, "Hardlight Hammer", Element.Cosmic, "HardlightHammer", Weapon.Hammer),
+            W(19004, "Smasher", Element.Wild, "Smasher", Weapon.Hammer),
             W(20000, "Nightmare Claws", Element.Wild, "Nightmare_Claws", Weapon.Katars),
             W(20001, "Winter Daggers", Element.Arctic, "Winter_Daggers", Weapon.Katars),
+            W(20002, "Katars of the Raven", Element.Shadow, "KatarsOfTheRaven", Weapon.Katars),
             W(21000, "Galaxy Lance", Element.Cosmic, "GalaxyLance", Weapon.RocketLance),
-            W(22000, "Remnant of Fate", Element.Magic, "RemnantOfFate", Weapon.Orb),
+            W(21001, "Magma Bolt", Element.Fire, "MagmaBolt", Weapon.RocketLance),
+            W2(22000, "Remnant of Fate", Element.Magic, "RemnantOfFate", Weapon.Orb),
             W(22001, "Sacred Relic", Element.Nature, "SacredRelic", Weapon.Orb),
             W(22002, "Scrying Glass", Element.Cosmic, "ScryingGlass", Weapon.Orb),
             W(23000, "Searing Blade", Element.Fire, "SearingBlade", Weapon.Scythe),
@@ -122,15 +135,16 @@ namespace BrawlTCG.Core
             W(23003, "Candlelit Scythe", Element.Fire, "Candlelit_Scythe", Weapon.Scythe),
             W(23004, "Amethyst Scythe", Element.Magic, "Constellation_Carver", Weapon.Scythe),
             W(23005, "Necro Aura", Element.Shadow, "NecromanticAuraBlack", Weapon.Scythe),
-            W(24000, "Magma Spear", Element.Fire, "MagmaSpear", Weapon.Spear),
+            W2(24000, "Magma Spear", Element.Fire, "MagmaSpear", Weapon.Spear),
             W(24001, "Piercing Regret", Element.Nature, "PiercingRegret", Weapon.Spear),
             W(24002, "Sweet Magi", Element.Cosmic, "SweetMagi", Weapon.Spear),
-            W(24003, "Shattering Star", Element.Cosmic, "ShatteringStar", Weapon.Spear),
+            W2(24003, "Shattering Star", Element.Cosmic, "ShatteringStar", Weapon.Spear),
             W(24004, "Glacier's Grace", Element.Arctic, "GlaciersGrace", Weapon.Spear),
             W(24005, "Hand Saw", Element.Wild, "HandSaw", Weapon.Spear),
             W(24006, "Holy Covenant", Element.Magic, "HolyCovenant", Weapon.Spear),
+            W(24007, "Shadow Spear", Element.Shadow, "ShadowSpear", Weapon.Spear),
             W(25000, "Shadow Edge", Element.Shadow, "ShadowEdge", Weapon.Sword),
-            W(25001, "Mahou Shoujo", Element.Cosmic, "MahouShoujo", Weapon.Sword),
+            W(25001, "Mahou Shoujo", Element.Magic, "MahouShoujo", Weapon.Sword),
             W(25002, "Frozen Edge", Element.Arctic, "FrozenEdge", Weapon.Sword),
             W(25003, "Ancestor's Flame", Element.Fire, "Ancestors_Flame", Weapon.Sword),
 
