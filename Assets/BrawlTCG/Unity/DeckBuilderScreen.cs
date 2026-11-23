@@ -343,6 +343,8 @@ namespace BrawlTCG.UnityApp
                 cell.BadgeText.text = essence ? $"IN DECK ×{copies}" : $"IN DECK {copies}/{DeckRules.MaxCopies}";
                 cell.View.SetGlow(cell.Card == _selected ? Theme.Gold : (Color?)null, 0.85f);
             }
+            foreach (var (card, view) in _deckViews)
+                if (view != null) view.SetGlow(card == _selected ? Theme.Gold : (Color?)null, 0.85f);
         }
 
         // ───────────────────────────── Preview ─────────────────────────────
@@ -739,17 +741,20 @@ namespace BrawlTCG.UnityApp
                 }
                 return;
             }
-            var groups = _deck.Distinct()
+            // One grid of the cards themselves (#73): left to right, DeckColumns per row, then the next row.
+            // Ordered by type (legends, weapons, battle cards, stages, essence), then cost and name.
+            _deckViews.Clear();
+            List<Card> cards = _deck.Distinct()
                 .Select(id => CardCatalogue.Get(id))
-                .GroupBy(c => c.Type)
-                .OrderBy(g => TypeOrder(g.Key));
-            foreach (var group in groups)
+                .OrderBy(c => TypeOrder(c.Type)).ThenBy(c => c.Cost).ThenBy(c => c.Name)
+                .ToList();
+            if (cards.Count > 0) _deckList.AddRow(6, new Color(0, 0, 0, 0), null).raycastTarget = false; // top margin
+            for (int i = 0; i < cards.Count; i += DeckColumns)
             {
-                int total = group.Sum(c => _deck.Count(id => id == c.Id));
-                var header = _deckList.AddRow(34, new Color(0, 0, 0, 0), null);
-                Theme.Label(header.transform, $"{TypeName(group.Key)}  ({total})", 14, Theme.Gold, 10, 0, 300, 34, TextAnchor.MiddleLeft, display: true).raycastTarget = false;
-                foreach (Card card in group.OrderBy(c => c.Cost).ThenBy(c => c.Name))
-                    DeckRow(card, _deck.Count(id => id == card.Id));
+                var row = _deckList.AddRow(DeckCellH, new Color(0, 0, 0, 0), null);
+                row.raycastTarget = false; // scrolling still works: the cards pass drags on to the list
+                for (int col = 0; col < DeckColumns && i + col < cards.Count; col++)
+                    DeckCell(row.transform, cards[i + col], _deck.Count(id => id == cards[i + col].Id), DeckGridX + col * (DeckCardW + DeckGap));
             }
             if (_deck.Count == 0)
             {
@@ -758,24 +763,33 @@ namespace BrawlTCG.UnityApp
             }
         }
 
-        void DeckRow(Card card, int copies)
+        // Deck grid (#73): four cards per row in the 480px wide list.
+        const int DeckColumns = 4;
+        const float DeckGap = 10, DeckScale = 0.71f;
+        const float DeckCardW = CardView.W * DeckScale, DeckCardH = CardView.H * DeckScale;
+        const float DeckCellH = DeckCardH + 44;
+        static readonly float DeckGridX = (DeckRect.width - 20 - DeckColumns * DeckCardW - (DeckColumns - 1) * DeckGap) / 2;
+        readonly List<(Card card, CardView view)> _deckViews = new List<(Card, CardView)>();
+
+        /// <summary>One card of the deck: the card itself (click to select it), and under it the copies, with − and + on your own decks.</summary>
+        void DeckCell(Transform row, Card card, int copies, float x)
         {
             Card c = card;
-            float w = DeckRect.width - 44;
-            var row = _deckList.AddRow(46, c == _selected ? new Color(1, 1, 1, 0.14f) : new Color(1, 1, 1, 0.05f), () => Select(c));
-            row.sprite = Theme.Rounded;
-            row.type = Image.Type.Sliced;
-            row.pixelsPerUnitMultiplier = 2;
-            Transform t = row.transform;
-            Quiet(Theme.RoundedPanel(t, CardStyle.FrameColor(card.Element), 0, 0, 6, 46, 3, "Element"));
-            var gem = Quiet(Theme.RoundedPanel(t, new Color32(58, 46, 150, 255), 14, 9, 28, 28, 14, "Cost"));
-            Theme.Label(gem.transform, card.Cost.ToString(), 15, Color.white, 0, 0, 28, 28, TextAnchor.MiddleCenter, display: true);
-            var name = Theme.Label(t, card.Name, 17, Theme.Text, 52, 0, w - 52 - 130, 46, TextAnchor.MiddleLeft, display: true);
-            name.verticalOverflow = VerticalWrapMode.Truncate;
-            Theme.Label(t, $"×{copies}", 18, Theme.Gold, ReadOnly ? w - 54 : w - 130, 0, 44, 46, TextAnchor.MiddleRight, display: true);
-            if (ReadOnly) return; // premade decks can't be changed
-            SmallButton(t, "−", w - 78, 7, () => { Select(c); RemoveSelected(); });
-            SmallButton(t, "+", w - 40, 7, () => { Select(c); AddSelected(); });
+            CardView view = CardView.Create(row, c.Clone(), true, x, 4, DeckScale);
+            view.Clicked = _ => Select(c);
+            if (c == _selected) view.SetGlow(Theme.Gold, 0.85f);
+            _deckViews.Add((c, view));
+
+            float y = 4 + DeckCardH + 6;
+            if (ReadOnly)
+            {
+                var pill = Quiet(Theme.RoundedPanel(row, new Color(1, 1, 1, 0.08f), x + (DeckCardW - 56) / 2, y, 56, 28, 14, "Copies"));
+                Theme.Label(pill.transform, $"×{copies}", 17, Theme.Gold, 0, 0, 56, 28, TextAnchor.MiddleCenter, display: true).raycastTarget = false;
+                return; // premade decks can't be changed
+            }
+            SmallButton(row, "−", x, y - 2, () => { Select(c); RemoveSelected(); });
+            Theme.Label(row, $"×{copies}", 17, Theme.Gold, x + 32, y, DeckCardW - 64, 28, TextAnchor.MiddleCenter, display: true).raycastTarget = false;
+            SmallButton(row, "+", x + DeckCardW - 32, y - 2, () => { Select(c); AddSelected(); });
         }
 
         static void SmallButton(Transform parent, string text, float x, float y, Action onClick)
@@ -798,18 +812,6 @@ namespace BrawlTCG.UnityApp
                 case CardType.Battle: return 2;
                 case CardType.Stage: return 3;
                 default: return 4;
-            }
-        }
-
-        static string TypeName(CardType t)
-        {
-            switch (t)
-            {
-                case CardType.Legend: return "LEGENDS";
-                case CardType.Weapon: return "WEAPONS";
-                case CardType.Battle: return "BATTLE CARDS";
-                case CardType.Stage: return "STAGES";
-                default: return "ESSENCE";
             }
         }
 
