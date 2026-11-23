@@ -26,6 +26,17 @@ namespace BrawlTCG.UnityApp
         string _typeFilter = "ALL";
         Element? _elementFilter;
         Weapon? _weaponFilter;
+
+        // Collection order: catalogue order, or by cost (ties keep catalogue order).
+        enum SortMode { Default, CostLow, CostHigh }
+        static readonly (SortMode mode, string text)[] SortOptions = { (SortMode.Default, "DEFAULT"), (SortMode.CostLow, "COST LOW"), (SortMode.CostHigh, "COST HIGH") };
+        SortMode _sort;
+        readonly List<(SortMode mode, Image bg, Text label)> _sortChips = new List<(SortMode, Image, Text)>();
+        const string PrefSort = "BrawlTCG.BuilderSort";
+
+        // Cost filter: show only cards of exactly this cost (null = any cost). Click the same button again to clear it.
+        int? _costFilter;
+        readonly List<(int cost, Image bg, Text label)> _costChips = new List<(int, Image, Text)>();
         readonly List<(string key, Image bg, Text label)> _typeChips = new List<(string, Image, Text)>();
         readonly List<(Element? element, Image bg, Text label)> _elementChips = new List<(Element?, Image, Text)>();
         readonly List<(Weapon weapon, Image bg, RawImage icon)> _weaponChips = new List<(Weapon, Image, RawImage)>();
@@ -173,8 +184,32 @@ namespace BrawlTCG.UnityApp
                 x += 58;
             }
 
-            _resultCount = Theme.Label(t, "", 15, Theme.TextDim, 20, 204, 600, 22, display: true);
-            Theme.Label(t, "Click to preview  ·  double-click to add", 15, Theme.TextFaint, w - 420, 204, 400, 22, TextAnchor.MiddleRight);
+            _resultCount = Theme.Label(t, "", 15, Theme.TextDim, 20, 204, 110, 22, display: true);
+
+            // Sort chips
+            _sort = (SortMode)Mathf.Clamp(PlayerPrefs.GetInt(PrefSort, 0), 0, SortOptions.Length - 1);
+            Theme.Label(t, "SORT", 14, Theme.TextDim, 136, 200, 50, 30, TextAnchor.MiddleLeft, display: true);
+            x = 184;
+            foreach (var (mode, text) in SortOptions)
+            {
+                float cw = 20 + text.Length * 9;
+                SortMode m = mode;
+                var (bg, label) = Chip(t, text, x, 200, cw, 30, () => { _sort = m; PlayerPrefs.SetInt(PrefSort, (int)m); ApplySort(); ApplyFilters(); });
+                _sortChips.Add((mode, bg, label));
+                x += cw + 6;
+            }
+
+            // Cost filter chips 1-9
+            Theme.Label(t, "COST", 14, Theme.TextDim, x + 8, 200, 50, 30, TextAnchor.MiddleLeft, display: true);
+            x += 56;
+            for (int cost = 1; cost <= 9; cost++)
+            {
+                int c = cost;
+                var (bg, label) = Chip(t, cost.ToString(), x, 200, 28, 30, () => { _costFilter = _costFilter == c ? (int?)null : c; ApplyFilters(); });
+                _costChips.Add((cost, bg, label));
+                x += 32;
+            }
+            Theme.Label(t, "Double-click to add", 14, Theme.TextFaint, x + 4, 204, w - 20 - (x + 4), 22, TextAnchor.MiddleRight);
 
             // Grid
             var area = UI.Place(UI.Rect("GridArea", t), 8, 234, w - 16, CollectionRect.height - 244);
@@ -212,6 +247,21 @@ namespace BrawlTCG.UnityApp
                 var badgeText = Theme.Label(badge.transform, "", 14, Theme.Ink, 0, 0, 100, 24, TextAnchor.MiddleCenter, display: true);
                 _cells.Add(new GridCell { Card = proto, Root = cell.gameObject, View = view, Badge = badge.gameObject, BadgeText = badgeText });
             }
+            ApplySort();
+        }
+
+        /// <summary>Reorders the grid cells for the current sort mode (the grid lays children out in sibling order).</summary>
+        void ApplySort()
+        {
+            IEnumerable<GridCell> order = _sort switch
+            {
+                SortMode.CostLow => _cells.OrderBy(c => c.Card.Cost),
+                SortMode.CostHigh => _cells.OrderByDescending(c => c.Card.Cost),
+                _ => _cells,
+            };
+            int i = 0;
+            foreach (GridCell cell in order)
+                cell.Root.transform.SetSiblingIndex(i++);
         }
 
         (Image bg, Text label) Chip(Transform parent, string text, float x, float y, float w, float h, Action onClick, Element? dot = null)
@@ -241,6 +291,7 @@ namespace BrawlTCG.UnityApp
                     (_typeFilter == "ALL" || c.Type.ToString().ToUpperInvariant() == _typeFilter) &&
                     (_elementFilter == null || c.Element == _elementFilter) &&
                     (_weaponFilter == null || HasWeapon(c, _weaponFilter.Value)) &&
+                    (_costFilter == null || c.Cost == _costFilter) &&
                     (query.Length == 0 || c.Name.ToLowerInvariant().Contains(query) || c.Description.ToLowerInvariant().Contains(query));
                 cell.Root.SetActive(visible);
                 if (visible) shown++;
@@ -249,6 +300,8 @@ namespace BrawlTCG.UnityApp
 
             foreach (var (key, bg, label) in _typeChips) SetChip(bg, label, key == _typeFilter);
             foreach (var (element, bg, label) in _elementChips) SetChip(bg, label, element == _elementFilter);
+            foreach (var (mode, bg, label) in _sortChips) SetChip(bg, label, mode == _sort);
+            foreach (var (cost, bg, label) in _costChips) SetChip(bg, label, cost == _costFilter);
             foreach (var (weapon, bg, icon) in _weaponChips)
             {
                 bool on = weapon == _weaponFilter;
