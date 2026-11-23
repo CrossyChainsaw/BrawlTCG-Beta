@@ -185,6 +185,7 @@ namespace BrawlTCG.Core
             new BattleCard(532, "Art Class", 3, "When Played: Craft 2 random legends that cost 2 or less", Element.Magic, "ArtClass", true, false, false, EC.ArtClass, targetRequired: false),
             new BattleCard(533, "Afterlife", 3, "When Played: Return a legend of your choice from your discard pile to your hand", Element.Shadow, "Afterlife", true, false, false, EC.Afterlife, picksFromDiscard: true),
             new BattleCard(534, "Beta Cupcake", 3, "When Played: Cures a legend of every status effect (stun and burn)", Element.Magic, "BetaCupcake", true, false, true, EC.BetaCupcake),
+            new BattleCard(EC.WantedId, "Wanted", 3, "Play on one of your legends. While a Wanted legend is in play, your opponent can only attack Wanted legends", Element.Wild, "Wanted", false, true, true),
         };
 
         static readonly Dictionary<int, Card> ById = BuildIndex();

@@ -22,6 +22,9 @@ namespace BrawlTCG.Core
         /// </summary>
         public string CraftedBy { get; internal set; }
 
+        /// <summary>Null unless the card came back from the discard pile; then what brought it back ("Afterlife"). Display only.</summary>
+        public string RevivedBy { get; internal set; }
+
         public Effect StartTurnEffect { get; }
         public Effect WhenPlayedEffect { get; }
         public Effect WhenDiscardedEffect { get; }
@@ -54,6 +57,7 @@ namespace BrawlTCG.Core
             copy.Owner = null;
             copy.IsDiscarded = false;
             copy.CraftedBy = null;
+            copy.RevivedBy = null;
             copy.ResetRuntimeState();
             return copy;
         }

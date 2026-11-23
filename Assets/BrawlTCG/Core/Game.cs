@@ -246,7 +246,8 @@ namespace BrawlTCG.Core
                         case AttackMode.OwnLegend:
                             return IsTargetableLegend(me, cmd.TargetIndex) ? null : "Choose one of your legends.";
                         case AttackMode.EnemyLegend:
-                            return IsTargetableLegend(enemy, cmd.TargetIndex) ? null : "Choose an enemy legend.";
+                            if (!IsTargetableLegend(enemy, cmd.TargetIndex)) return "Choose an enemy legend.";
+                            return WantedAllows(enemy.PlayingField[cmd.TargetIndex]) ? null : "Attack a Wanted legend first.";
                         default:
                             return null;
                     }
@@ -501,6 +502,19 @@ namespace BrawlTCG.Core
 
         static int CalculateDamageSafe(LegendCard legend, Attack attack) => Attack.CalculateDamage(legend, attack);
 
+        /// <summary>A legend carrying a Wanted card (#47).</summary>
+        public static bool IsWanted(LegendCard legend) => legend.StackedCards.Any(c => c.Id == EffectCatalogue.WantedId);
+
+        /// <summary>
+        /// Wanted: while one or more of a player's legends are Wanted, single-target attacks on that player's legends
+        /// must pick a Wanted one. Battle cards and attacks that hit everyone are not affected.
+        /// </summary>
+        public bool WantedAllows(LegendCard target)
+        {
+            Player side = target.Owner;
+            return side == null || IsWanted(target) || !side.PlayingField.Any(IsWanted);
+        }
+
         public AttackMode GetAttackMode(LegendCard legend, Attack attack)
         {
             Player enemy = GetOpponent(legend.Owner);
@@ -567,6 +581,7 @@ namespace BrawlTCG.Core
         {
             if (!player.DiscardPile.Remove(legend)) return;
             legend.ResetForReturn();
+            legend.RevivedBy = EffectContext.Current ?? "Unknown";
             AddCardToHand(player, legend);
         }
 

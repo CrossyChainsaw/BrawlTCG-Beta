@@ -207,7 +207,8 @@ namespace BrawlTCG.Core
                     switch (game.GetAttackMode(legend, attack))
                     {
                         case AttackMode.EnemyLegend:
-                            for (int t = 0; t < enemy.PlayingField.Count; t++) moves.Add(GameCommand.Attack(p, l, a, t));
+                            for (int t = 0; t < enemy.PlayingField.Count; t++)
+                                if (game.WantedAllows(enemy.PlayingField[t])) moves.Add(GameCommand.Attack(p, l, a, t));
                             break;
                         case AttackMode.OwnLegend:
                             for (int t = 0; t < me.PlayingField.Count; t++) moves.Add(GameCommand.Attack(p, l, a, t));

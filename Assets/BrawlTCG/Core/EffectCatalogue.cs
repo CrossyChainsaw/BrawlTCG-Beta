@@ -431,6 +431,9 @@ namespace BrawlTCG.Core
                 if (target is LegendCard legend) game.ReturnFromDiscard(card.Owner, legend);
             });
 
+        /// <summary>Wanted (#47): stays stacked on the legend; see <see cref="Game.WantedAllows"/>.</summary>
+        public const int WantedId = 535;
+
         /// <summary>Beta Cupcake: one of your legends is no longer stunned or burned.</summary>
         public static readonly Effect BetaCupcake = new Effect(
             "Cures a legend of every status effect (stun and burn)",

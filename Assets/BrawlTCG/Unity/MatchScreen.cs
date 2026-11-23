@@ -996,7 +996,7 @@ namespace BrawlTCG.UnityApp
         {
             if (!Targeting) return false;
             Player wanted = _targetOwnSide ? _targetAttacker.Owner : _game.GetOpponent(_targetAttacker.Owner);
-            return side == wanted;
+            return side == wanted && (_targetOwnSide || _game.WantedAllows(legend)); // Wanted legends must be attacked first
         }
 
         void CancelTargeting()
@@ -1206,6 +1206,7 @@ namespace BrawlTCG.UnityApp
             // Made during the match (crafted, summoned, set by an effect): say by what.
             float top = 206;
             if (card.CraftedBy != null) top = TriggerIcons.PaintCraftedChip(t, card.CraftedBy, ix, 198, iw) + 8;
+            if (card.RevivedBy != null) top = TriggerIcons.PaintRevivedChip(t, card.RevivedBy, ix, card.CraftedBy != null ? top : 198, iw) + 8;
 
             if (card is LegendCard legend)
             {
@@ -1301,7 +1302,7 @@ namespace BrawlTCG.UnityApp
             return y + 44;
         }
 
-        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A", FireHex = "#FFA060", SpentHex = "#B4B9D2";
+        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A", FireHex = "#FFA060", SpentHex = "#B4B9D2", WantedHex = "#E8C48C";
 
         /// <summary>One EFFECTS row: its icon, the full text, and a shorter text for when rows go two to a line.</summary>
         readonly struct EffectRow
@@ -1326,6 +1327,10 @@ namespace BrawlTCG.UnityApp
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Stunned,
                     Line(StatusHex, "Stunned", legend.StunnedBy, "skips its next attack, abilities off"),
                     Line(StatusHex, "Stunned", legend.StunnedBy, null)));
+            if (Game.IsWanted(legend))
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Wanted,
+                    Line(WantedHex, "Wanted", "Wanted", "the opponent can only attack Wanted legends"),
+                    Line(WantedHex, "Wanted", "Wanted", null)));
             if (legend.IsBurned)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Burned,
                     Line(FireHex, "Burned", legend.BurnedBy, "-1 HP at the start of each of its turns"),
