@@ -153,6 +153,39 @@ namespace BrawlTCG.Core
             }
         }
 
+        // ───────────── Leaves From the Vine ─────────────
+        // Like Silent Galaxy, but for every legend: no one deals damage with attacks, and every legend heals at the
+        // start of each turn. Leaving uses Silent Galaxy's "everyone can attack again".
+
+        public const int LeavesFromTheVineId = 111;
+        const int LeavesHeal = 1;
+
+        public static readonly Effect LeavesFromTheVine_WhenPlayed = new Effect(
+            "N/A",
+            (target, card, game, played) => DisableAllAttacks(game));
+
+        public static readonly Effect LeavesFromTheVine_WhilePlay = new Effect(
+            "No legend can deal damage",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) legend.CanAttack = false;
+            });
+
+        public static readonly Effect LeavesFromTheVine_StartTurn = new Effect(
+            $"All legends heal {LeavesHeal} HP",
+            (target, card, game, played) =>
+            {
+                DisableAllAttacks(game);
+                foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                    legend.GainHealth(LeavesHeal);
+            });
+
+        static void DisableAllAttacks(Game game)
+        {
+            foreach (LegendCard legend in game.GetAllLegendsOnPlayingField())
+                legend.CanAttack = false;
+        }
+
         // ───────────── Atlantis ─────────────
 
         static readonly Element[] NonArctic = ((Element[])Enum.GetValues(typeof(Element))).Where(e => e != Element.Arctic).ToArray();

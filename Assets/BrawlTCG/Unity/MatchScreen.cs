@@ -1320,9 +1320,14 @@ namespace BrawlTCG.UnityApp
         {
             var rows = new List<EffectRow>();
             if (!legend.CanAttack)
+            {
+                // Silent Galaxy (non-Cosmic legends) or Leaves From the Vine (everyone).
+                bool leaves = _game.ActiveStage?.Id == EffectCatalogue.LeavesFromTheVineId;
+                string stage = leaves ? "Leaves From the Vine" : "Silent Galaxy";
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.NoStrikes,
-                    Line(DebuffHex, "Can't deal damage", "Silent Galaxy", "only Cosmic legends can deal damage"),
-                    Line(DebuffHex, "Can't deal damage", "Silent Galaxy", null)));
+                    Line(DebuffHex, "Can't deal damage", stage, leaves ? "no legend can deal damage" : "only Cosmic legends can deal damage"),
+                    Line(DebuffHex, "Can't deal damage", stage, null)));
+            }
             if (legend.IsStunned)
                 rows.Add(new EffectRow(TriggerIcons.EffectIcon.Stunned,
                     Line(StatusHex, "Stunned", legend.StunnedBy, "skips its next attack, abilities off"),

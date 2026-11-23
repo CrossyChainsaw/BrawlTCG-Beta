@@ -487,7 +487,10 @@ namespace BrawlTCG.Core
             if (legend.IsStunned) return "This legend is stunned.";
             if (legend.AttackedThisTurn) return "This legend already attacked this turn";
             // Silent Galaxy turns CanAttack off for non-Cosmic legends: they can't deal damage, but can still craft, set, summon...
-            if (!legend.CanAttack && attack.Kind == AttackKind.Strike) return "Silent Galaxy: only Cosmic legends can deal damage";
+            if (!legend.CanAttack && attack.Kind == AttackKind.Strike)
+                return ActiveStage?.Id == EffectCatalogue.LeavesFromTheVineId
+                    ? "Leaves From the Vine: no legend can deal damage"
+                    : "Silent Galaxy: only Cosmic legends can deal damage";
             if (!attack.MeetsWeaponRequirements(legend)) return "This legend does not have the required weapons.";
             string pre = attack.Precondition?.Invoke(this, legend);
             if (pre != null) return pre;

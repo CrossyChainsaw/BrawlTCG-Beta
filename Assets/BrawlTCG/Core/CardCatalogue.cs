@@ -40,6 +40,7 @@ namespace BrawlTCG.Core
             new StageCard(107, "Silent Galaxy", 5, Element.Cosmic, "SilentGalaxy", startTurnEffect: EC.SilentGalaxy_StartTurn, whenPlayedEffect: EC.SilentGalaxy_WhenPlayed, whileInPlayEffect: EC.SilentGalaxy_WhilePlay, whenDiscardedEffect: EC.SilentGalaxy_WhenDiscarded),
             new StageCard(108, "Sozin's Comet", 7, Element.Fire, "SozinsComet", whenPlayedEffect: EC.SozinsComet_WhenPlayed, whileInPlayEffect: EC.SozinsComet_WhileInPlay, whenDiscardedEffect: EC.SozinsComet_WhenDiscarded),
             new StageCard(109, "Full Eclipse", 7, Element.Arctic, "FullEclipse", whenPlayedEffect: EC.FullEclipse_WhenPlayed, whileInPlayEffect: EC.FullEclipse_WhileInPlay, whenDiscardedEffect: EC.FullEclipse_WhenDiscarded),
+            new StageCard(EC.LeavesFromTheVineId, "Leaves From the Vine", 2, Element.Fire, "LeavesFromTheVine", startTurnEffect: EC.LeavesFromTheVine_StartTurn, whenPlayedEffect: EC.LeavesFromTheVine_WhenPlayed, whileInPlayEffect: EC.LeavesFromTheVine_WhilePlay, whenDiscardedEffect: EC.SilentGalaxy_WhenDiscarded),
             new StageCard(110, "Mako's Reef", 7, Element.Arctic, "Avatar_Makos_Reef", whenPlayedEffect: EC.MakosReef_WhenPlayed, whileInPlayEffect: EC.MakosReef_WhileInPlay, whenDiscardedEffect: EC.MakosReef_WhenDiscarded),
 
             // Nature legends                                              power hp
