@@ -9,7 +9,7 @@ namespace BrawlTCG.Core
     public static class CardCatalogue
     {
         static LegendCard Legend(int id, string name, int cost, Element element, string art, int power, int health,
-            Weapon primary, Weapon secondary, Attack[] attacks, Effect whenPlayed = null, Effect whileInPlay = null,
+            Weapon primary, Weapon? secondary, Attack[] attacks, Effect whenPlayed = null, Effect whileInPlay = null,
             Effect whenEliminated = null)
             => new LegendCard(id, name, cost, element, art, power, health, primary, secondary, attacks,
                 whenPlayedEffect: whenPlayed, whileInPlayEffect: whileInPlay, whenDiscardedEffect: whenEliminated);
@@ -80,7 +80,7 @@ namespace BrawlTCG.Core
             Legend(5000, "Caspian", 2, Element.Shadow, "MasterThief", 4, 4, Weapon.Gauntlets, Weapon.Katars, A(AC.Any_BurnForThreeCard, AC.MasterThief_GrabBomb)),
             Legend(5001, "Raymesis", 5, Element.Shadow, "Raymesis", 9, 16, Weapon.Gauntlets, Weapon.Axe, A(AC.Axe_Swing)),
             Legend(5002, "Mastermind", 4, Element.Shadow, "Loki", 5, 10, Weapon.Katars, Weapon.Scythe, A(AC.Scythe_Slash), whenPlayed: EC.GenerateAndPlayMatrix),
-            Legend(5003, "Ninja Spirit", 2, Element.Shadow, "Ninja_Spirit", 3, 1, Weapon.Sword, Weapon.Scythe, A(AC.NinjaSpirit_PhantomSlash)),
+            Legend(5003, "Ninja Spirit", 2, Element.Shadow, "Ninja_Spirit", 3, 1, Weapon.Sword, null, A(AC.NinjaSpirit_PhantomSlash)),
             Legend(5004, "Hellshot Hattori", 3, Element.Shadow, "Hellshot_Hattori", 8, 6, Weapon.Sword, Weapon.Blasters, A(AC.Sword_Slash, AC.Blaster_Shot, AC.Blaster_DoubleShot)),
             Legend(5005, "Dullahan Jiro", 3, Element.Shadow, "DullahanJiro", 5, 7, Weapon.Sword, Weapon.Scythe, A(AC.Sword_Slash, AC.Scythe_Slash, AC.Jiro_SpawnAndPlayNinjaSpirit)),
             Legend(5006, "Kitsune Hattori", 6, Element.Shadow, "Kitsune", 15, 13, Weapon.Sword, Weapon.Spear, A(AC.Sword_Slash, AC.Spear_Stab)),
@@ -88,7 +88,7 @@ namespace BrawlTCG.Core
             // Wild legends
             Legend(6000, "The Minotaur", 5, Element.Wild, "Teros", 10, 15, Weapon.Axe, Weapon.Hammer, A(AC.Axe_Swing, AC.Hammer_Swing)),
             Legend(6001, "Fox Spirit", 2, Element.Wild, "Fox_Spirit", 1, 6, Weapon.Bow, Weapon.Hammer, A(AC.Hammer_Swing, AC.Yumiko_GrabOrbs)),
-            Legend(6002, "Dander", 1, Element.Wild, "Dander", 6, 2, Weapon.Gauntlets, Weapon.Katars, A(AC.Katar_Slash)),
+            Legend(6002, "Dander", 1, Element.Wild, "Dander", 5, 2, Weapon.Katars, null, A(AC.Katar_Slash)),
             Legend(6003, "The Rock", 5, Element.Wild, "TheRock", 4, 20, Weapon.Hammer, Weapon.Katars, A(AC.Hammer_Swing, AC.Katar_Slash)),
             // Arctic legends
             Legend(7000, "Snowman Kor", 4, Element.Arctic, "SnowmanKor", 0, 16, Weapon.Gauntlets, Weapon.Hammer, A(AC.Any_Freeze)),

@@ -208,7 +208,9 @@ namespace BrawlTCG.Core
         public int CurrentHP { get; internal set; }
         public int Power { get; internal set; }
         public Weapon PrimaryWeapon { get; }
-        public Weapon SecondaryWeapon { get; }
+        /// <summary>Null for a single-weapon legend.</summary>
+        public Weapon? SecondaryWeapon { get; }
+        public bool IsSingleWeapon => SecondaryWeapon == null;
         public List<Card> StackedCards { get; private set; } = new List<Card>();
         public IReadOnlyList<Attack> Attacks => _attacks;
 
@@ -241,10 +243,10 @@ namespace BrawlTCG.Core
         public string BurnedBy { get; private set; }
 
         public override CardType Type => CardType.Legend;
-        public override string Description => $"{_baseHealth}hp  {_basePower}att  {PrimaryWeapon} / {SecondaryWeapon}";
+        public override string Description => $"{_baseHealth}hp  {_basePower}att  {WeaponText()}";
 
         public LegendCard(int id, string name, int cost, Element element, string art,
-            int power, int health, Weapon primaryWeapon, Weapon secondaryWeapon,
+            int power, int health, Weapon primaryWeapon, Weapon? secondaryWeapon,
             Attack[] attacks = null,
             Effect startTurnEffect = null, Effect whenPlayedEffect = null,
             Effect whenDiscardedEffect = null, Effect whileInPlayEffect = null)
@@ -253,7 +255,7 @@ namespace BrawlTCG.Core
             _basePower = power;
             _baseHealth = health;
             PrimaryWeapon = primaryWeapon;
-            SecondaryWeapon = secondaryWeapon;
+            SecondaryWeapon = secondaryWeapon == primaryWeapon ? null : secondaryWeapon; // "Sword / Sword" is just a Sword legend
             _attacks = (attacks ?? Array.Empty<Attack>()).Where(a => a != null).ToArray();
             ResetRuntimeState();
         }
@@ -305,6 +307,20 @@ namespace BrawlTCG.Core
         }
 
         public bool HasWeapon(Weapon weapon) => PrimaryWeapon == weapon || SecondaryWeapon == weapon;
+
+        /// <summary>The legend's weapons, primary first (one or two).</summary>
+        public IEnumerable<Weapon> Weapons
+        {
+            get
+            {
+                yield return PrimaryWeapon;
+                if (SecondaryWeapon != null) yield return SecondaryWeapon.Value;
+            }
+        }
+
+        /// <summary>"Sword / Axe", or just "Sword" for a single-weapon legend.</summary>
+        public string WeaponText(Func<Weapon, string> name = null) =>
+            string.Join(" / ", Weapons.Select(w => name != null ? name(w) : w.ToString()));
 
         public IEnumerable<WeaponCard> StackedWeapons => StackedCards.OfType<WeaponCard>();
 

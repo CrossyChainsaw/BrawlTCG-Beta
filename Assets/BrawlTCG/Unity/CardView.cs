@@ -348,8 +348,13 @@ namespace BrawlTCG.UnityApp
         {
             float chip = detailed ? chipDetailed : chipCompact;
             float chipY = detailed ? chipYDetailed : chipYCompact;
-            WeaponChip(face, legend.PrimaryWeapon, FW / 2 - chip - 6, chipY, chip, accent);
-            WeaponChip(face, legend.SecondaryWeapon, FW / 2 + 6, chipY, chip, accent);
+            if (legend.SecondaryWeapon is Weapon second)
+            {
+                WeaponChip(face, legend.PrimaryWeapon, FW / 2 - chip - 6, chipY, chip, accent);
+                WeaponChip(face, second, FW / 2 + 6, chipY, chip, accent);
+            }
+            else
+                WeaponChip(face, legend.PrimaryWeapon, FW / 2 - chip / 2, chipY, chip, accent); // single weapon: centred
 
             // Attack names (only when the card is shown large enough to read them)
             if (!detailed) return;

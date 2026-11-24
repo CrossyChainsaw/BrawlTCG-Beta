@@ -1213,7 +1213,7 @@ namespace BrawlTCG.UnityApp
                 float half = (iw - 8) / 2;
                 InfoChip(t, $"ATK {legend.Power}", new Color32(226, 112, 28, 255), ix, top, half);
                 InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix + half + 8, top, half);
-                InfoChip(t, $"WEAPONS  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", new Color(1, 1, 1, 0.12f), ix, top + 44, iw);
+                InfoChip(t, $"{(legend.IsSingleWeapon ? "WEAPON" : "WEAPONS")}  {legend.WeaponText(Pretty)}", new Color(1, 1, 1, 0.12f), ix, top + 44, iw);
 
                 float y = 418;
                 Theme.Label(t, "ATTACKS", 16, Theme.Gold, 24, y, 300, 22, display: true);
