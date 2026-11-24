@@ -241,6 +241,7 @@ namespace BrawlTCG.Core
                     Attack attack = legend.Attacks[cmd.AttackIndex];
                     string error = CanUseAttack(legend, attack);
                     if (error != null) return error;
+                    if (!IsValidBurnMask(legend, attack, cmd.BurnMask)) return "Choose which weapons to burn.";
                     switch (GetAttackMode(legend, attack))
                     {
                         case AttackMode.OwnLegend:
@@ -333,7 +334,7 @@ namespace BrawlTCG.Core
                 case CommandType.Attack:
                 {
                     LegendCard legend = me.PlayingField[cmd.LegendIndex];
-                    PerformAttack(legend, legend.Attacks[cmd.AttackIndex], cmd.TargetIndex);
+                    PerformAttack(legend, legend.Attacks[cmd.AttackIndex], cmd.TargetIndex, cmd.BurnMask);
                     return;
                 }
             }
@@ -529,10 +530,12 @@ namespace BrawlTCG.Core
             return AttackMode.EnemyLegend;
         }
 
-        void PerformAttack(LegendCard legend, Attack attack, int targetIndex)
+        void PerformAttack(LegendCard legend, Attack attack, int targetIndex, int burnMask)
         {
             Player me = legend.Owner;
             Player enemy = GetOpponent(me);
+            // The chosen weapons, picked out now: the mask refers to the stack as it is before the attack.
+            List<WeaponCard> chosenBurns = burnMask == 0 ? null : MaskedStack(legend, burnMask);
 
             switch (GetAttackMode(legend, attack))
             {
@@ -556,8 +559,17 @@ namespace BrawlTCG.Core
             }
 
             // Weapons are burned once per attack, after the damage has been dealt.
-            BurnWeapons(legend, attack.WeaponOne, attack.WeaponOneBurnAmount);
-            BurnWeapons(legend, attack.WeaponTwo, attack.WeaponTwoBurnAmount);
+            if (chosenBurns != null)
+            {
+                foreach (WeaponCard burned in chosenBurns)
+                    if (legend.StackedCards.Remove(burned))
+                        Discard(legend.Owner, burned);
+            }
+            else
+            {
+                BurnWeapons(legend, attack.WeaponOne, attack.WeaponOneBurnAmount);
+                BurnWeapons(legend, attack.WeaponTwo, attack.WeaponTwoBurnAmount);
+            }
             legend.AttackedThisTurn = true;
 
             ResolveDeaths();
@@ -568,6 +580,136 @@ namespace BrawlTCG.Core
         {
             foreach (WeaponCard burned in legend.BurnWeapon(weapon, amount))
                 Discard(legend.Owner, burned);
+        }
+
+        // ── Choosing which weapons an attack burns ──
+
+        /// <summary>A burn mask can only name the first 31 stacked cards (bit 31 is the sign bit).</summary>
+        const int MaxBurnMaskCards = 31;
+
+        /// <summary>One weapon requirement of an attack that burns: how many weapons it burns and which it can take.</summary>
+        public sealed class BurnSlot
+        {
+            public Weapon Weapon { get; internal set; }
+            /// <summary>How many it burns: the printed burn amount, or fewer if the legend has fewer such weapons.</summary>
+            public int Amount { get; internal set; }
+            /// <summary>Indices into the legend's <see cref="LegendCard.StackedCards"/>, in stack order.</summary>
+            public List<int> Candidates { get; } = new List<int>();
+        }
+
+        /// <summary>
+        /// The attack's burning weapon requirements for this legend, in order. A weapon that fits two requirements
+        /// (only possible with "Any") belongs to the first.
+        /// </summary>
+        public static List<BurnSlot> BurnSlots(LegendCard legend, Attack attack)
+        {
+            var slots = new List<BurnSlot>();
+            var taken = new HashSet<int>();
+            Add(attack.WeaponOne, attack.WeaponOneBurnAmount);
+            if (attack.WeaponTwo != null) Add(attack.WeaponTwo.Value, attack.WeaponTwoBurnAmount);
+            return slots;
+
+            void Add(Weapon weapon, int amount)
+            {
+                if (amount <= 0) return;
+                var slot = new BurnSlot { Weapon = weapon };
+                for (int i = 0; i < legend.StackedCards.Count; i++)
+                    if (legend.StackedCards[i] is WeaponCard w && (weapon == Weapon.Any || w.Weapon == weapon) && taken.Add(i))
+                        slot.Candidates.Add(i);
+                slot.Amount = Math.Min(amount, slot.Candidates.Count);
+                slots.Add(slot);
+            }
+        }
+
+        /// <summary>
+        /// True when the player gets to pick which weapons the attack burns: some requirement has more weapons than it
+        /// burns, and they are not all copies of the same card. (Burning 3 of exactly 3 weapons asks nothing.)
+        /// </summary>
+        public static bool BurnChoiceNeeded(LegendCard legend, Attack attack)
+        {
+            if (legend.StackedCards.Count > MaxBurnMaskCards) return false;
+            return BurnSlots(legend, attack).Any(s =>
+                s.Candidates.Count > s.Amount && s.Candidates.Select(i => legend.StackedCards[i].Id).Distinct().Count() > 1);
+        }
+
+        /// <summary>The weapons burned when the player doesn't choose: the first ones of each requirement.</summary>
+        public static int DefaultBurnMask(LegendCard legend, Attack attack)
+        {
+            int mask = 0;
+            foreach (BurnSlot slot in BurnSlots(legend, attack))
+                foreach (int i in slot.Candidates.Take(slot.Amount))
+                    if (i < MaxBurnMaskCards) mask |= 1 << i;
+            return mask;
+        }
+
+        /// <summary>
+        /// The burn that leaves the legend best off for its next attacks. Used by the bot. One weapon at a time, each
+        /// requirement burns the weapon whose loss costs least:
+        /// 1. first, one that doesn't take away any of the legend's attacks (one it could use before by weapons, but not
+        ///    after; this attack included, so it can be used again);
+        /// 2. then, one that gives the least elemental bonus (off-element, then +1, then the +2 special weapons);
+        /// 3. ties: the first on the stack.
+        /// </summary>
+        public static int SmartBurnMask(LegendCard legend, Attack attack)
+        {
+            var burned = new HashSet<int>();
+            foreach (BurnSlot slot in BurnSlots(legend, attack))
+            {
+                for (int n = 0; n < slot.Amount; n++)
+                {
+                    int usable = UsableAttacks(-1);
+                    int best = slot.Candidates.Where(i => !burned.Contains(i))
+                        .OrderBy(i => usable - UsableAttacks(i))                 // attacks lost by burning it
+                        .ThenBy(i => Bonus((WeaponCard)legend.StackedCards[i]))  // bonus lost by burning it
+                        .First();                                                // stable: ties keep stack order
+                    burned.Add(best);
+                }
+            }
+            int mask = 0;
+            foreach (int i in burned)
+                if (i < MaxBurnMaskCards) mask |= 1 << i;
+            return mask;
+
+            int Bonus(WeaponCard w) => w.Element == legend.Element ? w.ElementalBonus : 0;
+
+            // How many of the legend's attacks meet their weapon requirements once the burned weapons (and `also`) are gone.
+            int UsableAttacks(int also)
+            {
+                var left = new List<WeaponCard>();
+                for (int i = 0; i < legend.StackedCards.Count; i++)
+                    if (i != also && !burned.Contains(i) && legend.StackedCards[i] is WeaponCard w)
+                        left.Add(w);
+                return legend.Attacks.Count(a =>
+                    Has(a.WeaponOne, a.WeaponOneAmount) && (a.WeaponTwo == null || Has(a.WeaponTwo.Value, a.WeaponTwoAmount)));
+
+                bool Has(Weapon weapon, int amount) => left.Count(w => weapon == Weapon.Any || w.Weapon == weapon) >= amount;
+            }
+        }
+
+        /// <summary>0 (the default), or exactly <see cref="BurnSlot.Amount"/> candidates of every burning requirement.</summary>
+        public static bool IsValidBurnMask(LegendCard legend, Attack attack, int mask)
+        {
+            if (mask == 0) return true;
+            if (mask < 0 || legend.StackedCards.Count > MaxBurnMaskCards || mask >> legend.StackedCards.Count != 0) return false;
+            int matched = 0;
+            foreach (BurnSlot slot in BurnSlots(legend, attack))
+            {
+                int picked = slot.Candidates.Count(i => (mask & (1 << i)) != 0);
+                if (picked != slot.Amount) return false;
+                matched += picked;
+            }
+            return matched == CountBits(mask); // nothing picked outside the requirements
+
+            static int CountBits(int m) { int n = 0; for (; m != 0; m &= m - 1) n++; return n; }
+        }
+
+        static List<WeaponCard> MaskedStack(LegendCard legend, int mask)
+        {
+            var cards = new List<WeaponCard>();
+            for (int i = 0; i < legend.StackedCards.Count && i < MaxBurnMaskCards; i++)
+                if ((mask & (1 << i)) != 0 && legend.StackedCards[i] is WeaponCard w)
+                    cards.Add(w);
+            return cards;
         }
 
         // ───────────────────────────── Helpers used by effects ─────────────────────────────

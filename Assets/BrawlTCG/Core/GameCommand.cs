@@ -36,8 +36,14 @@ namespace BrawlTCG.Core
         public int AttackIndex { get; }
         /// <summary>Field index of the target legend; -1 for none. The side is implied by the card / attack.</summary>
         public int TargetIndex { get; }
+        /// <summary>
+        /// Attack: the attacker's stacked cards to burn, as a bitmask of <see cref="LegendCard.StackedCards"/> indices.
+        /// 0 = the default (the first matching weapons). See <see cref="Game.IsValidBurnMask"/>.
+        /// </summary>
+        public int BurnMask { get; }
 
-        GameCommand(CommandType type, int playerIndex, int handIndex = -1, int legendIndex = -1, int attackIndex = -1, int targetIndex = -1)
+        GameCommand(CommandType type, int playerIndex, int handIndex = -1, int legendIndex = -1, int attackIndex = -1, int targetIndex = -1,
+            int burnMask = 0)
         {
             Type = type;
             PlayerIndex = playerIndex;
@@ -45,6 +51,7 @@ namespace BrawlTCG.Core
             LegendIndex = legendIndex;
             AttackIndex = attackIndex;
             TargetIndex = targetIndex;
+            BurnMask = burnMask;
         }
 
         public static GameCommand EndTurn(int player) => new GameCommand(CommandType.EndTurn, player);
@@ -53,7 +60,8 @@ namespace BrawlTCG.Core
         public static GameCommand PlayLegend(int player, int hand) => new GameCommand(CommandType.PlayLegend, player, hand);
         public static GameCommand PlayWeapon(int player, int hand, int legend) => new GameCommand(CommandType.PlayWeapon, player, hand, legendIndex: legend);
         public static GameCommand PlayBattle(int player, int hand, int target) => new GameCommand(CommandType.PlayBattle, player, hand, targetIndex: target);
-        public static GameCommand Attack(int player, int legend, int attack, int target) => new GameCommand(CommandType.Attack, player, legendIndex: legend, attackIndex: attack, targetIndex: target);
+        public static GameCommand Attack(int player, int legend, int attack, int target, int burnMask = 0) =>
+            new GameCommand(CommandType.Attack, player, legendIndex: legend, attackIndex: attack, targetIndex: target, burnMask: burnMask);
         public static GameCommand DiscardCard(int player, int hand) => new GameCommand(CommandType.DiscardCard, player, hand);
         /// <param name="mask">Bit i set = shuffle hand card i back into the deck.</param>
         public static GameCommand RedrawStartingHand(int player, int mask) => new GameCommand(CommandType.RedrawStartingHand, player, targetIndex: mask);
@@ -82,6 +90,7 @@ namespace BrawlTCG.Core
                 LegendIndex.ToString(CultureInfo.InvariantCulture),
                 AttackIndex.ToString(CultureInfo.InvariantCulture),
                 TargetIndex.ToString(CultureInfo.InvariantCulture),
+                BurnMask.ToString(CultureInfo.InvariantCulture),
             });
         }
 
@@ -90,19 +99,19 @@ namespace BrawlTCG.Core
             command = null;
             if (string.IsNullOrEmpty(text)) return false;
             string[] parts = text.Split(',');
-            if (parts.Length != 6) return false;
-            var values = new int[6];
-            for (int i = 0; i < 6; i++)
+            if (parts.Length != 6 && parts.Length != 7) return false; // 6: from before burn choices (BurnMask 0)
+            var values = new int[7];
+            for (int i = 0; i < parts.Length; i++)
             {
                 if (!int.TryParse(parts[i], NumberStyles.Integer, CultureInfo.InvariantCulture, out values[i]))
                     return false;
             }
             if (!Enum.IsDefined(typeof(CommandType), values[0])) return false;
-            command = new GameCommand((CommandType)values[0], values[1], values[2], values[3], values[4], values[5]);
+            command = new GameCommand((CommandType)values[0], values[1], values[2], values[3], values[4], values[5], values[6]);
             return true;
         }
 
-        public override string ToString() => $"{Type}(p{PlayerIndex} h{HandIndex} l{LegendIndex} a{AttackIndex} t{TargetIndex})";
+        public override string ToString() => $"{Type}(p{PlayerIndex} h{HandIndex} l{LegendIndex} a{AttackIndex} t{TargetIndex}" + (BurnMask != 0 ? $" b{BurnMask})" : ")");
 
         /// <summary>Every command the active player could try right now (most will be illegal). For bots and tests.</summary>
         public static IEnumerable<GameCommand> EnumerateCandidates(Game game)

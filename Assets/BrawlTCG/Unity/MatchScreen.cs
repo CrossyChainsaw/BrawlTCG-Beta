@@ -275,6 +275,7 @@ namespace BrawlTCG.UnityApp
             {
                 if (OptionsOpen) { if (esc) CloseOptions(); }
                 else if (PileViewOpen) CloseDiscardPile();
+                else if (_burn != null) CancelBurn();
                 else if (Targeting) { CancelTargeting(); Refresh(); }
                 else if (_detailCard != null) CloseDetail();
                 else if (esc) OpenOptions();
@@ -881,8 +882,7 @@ namespace BrawlTCG.UnityApp
             {
                 if (view.Zone == BoardZone.PlayingField && view.Card is LegendCard target && IsValidAttackTarget(_game.Players[view.PlayerIndex], target))
                 {
-                    int attackerIndex = _targetAttacker.Owner.PlayingField.IndexOf(_targetAttacker);
-                    Submit(GameCommand.Attack(_targetAttacker.Owner.Index, attackerIndex, _targetAttackIndex, view.Index));
+                    SubmitAttack(_targetAttacker, _targetAttackIndex, view.Index);
                 }
                 return;
             }
@@ -1603,7 +1603,7 @@ namespace BrawlTCG.UnityApp
                 StartTargetLine();
                 return;
             }
-            Submit(GameCommand.Attack(legend.Owner.Index, legend.Owner.PlayingField.IndexOf(legend), attackIndex, -1));
+            SubmitAttack(legend, attackIndex, -1);
         }
 
         // ───────────────────────────── Overlays ─────────────────────────────
@@ -1624,6 +1624,7 @@ namespace BrawlTCG.UnityApp
 
         void ResetHandOverlay()
         {
+            _burn = null;
             _handOverlay = false;
             _handTimerLabel = null;
             _opponentHandLabel = null;

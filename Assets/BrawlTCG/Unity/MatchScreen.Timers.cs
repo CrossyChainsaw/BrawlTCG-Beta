@@ -96,6 +96,7 @@ namespace BrawlTCG.UnityApp
         void TurnTimeUp()
         {
             CancelTargeting();
+            if (_burn != null) CloseOverlay(); // was choosing weapons to burn
             UI.Clear(_drag); // a card being dragged when time ran out
             _app.Toast("Time's up!");
             Submit(GameCommand.EndTurn(_game.ActiveIndex));
