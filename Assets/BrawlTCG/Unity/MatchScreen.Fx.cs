@@ -90,8 +90,8 @@ namespace BrawlTCG.UnityApp
             {
                 if (cmd.LegendIndex < 0 || cmd.LegendIndex >= me.PlayingField.Count) return s;
                 s.Attacker = me.PlayingField[cmd.LegendIndex];
-                if (cmd.AttackIndex < 0 || cmd.AttackIndex >= s.Attacker.Attacks.Count) return s;
-                s.Attack = s.Attacker.Attacks[cmd.AttackIndex];
+                if (cmd.AttackIndex < 0 || cmd.AttackIndex >= s.Attacker.AttackCount) return s;
+                s.Attack = s.Attacker.AttackAt(cmd.AttackIndex);
                 s.Mode = _game.GetAttackMode(s.Attacker, s.Attack);
                 Player side = s.Mode == AttackMode.OwnLegend ? me : s.Mode == AttackMode.EnemyLegend ? enemy : null;
                 if (side != null && cmd.TargetIndex >= 0 && cmd.TargetIndex < side.PlayingField.Count) s.Target = side.PlayingField[cmd.TargetIndex];

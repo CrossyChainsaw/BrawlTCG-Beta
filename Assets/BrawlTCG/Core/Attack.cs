@@ -33,11 +33,14 @@ namespace BrawlTCG.Core
         public Func<Game, LegendCard, string> Precondition { get; }
         /// <summary>Short text for what the attack does on top of its damage ("SETS TARGET ON FIRE"), shown with its tags.</summary>
         public string EffectText { get; }
+        /// <summary>Damage that ignores the legend's ATK and gets no elemental bonus (Weapon Throw). Null for normal attacks.</summary>
+        public int? FixedDamage { get; }
 
         public Attack(string name, int attackModifier, Weapon weaponOne, int weaponOneAmount, AttackAction execute,
             int weaponOneBurnAmount = 0, Weapon? weaponTwo = null, int weaponTwoAmount = 0, int weaponTwoBurnAmount = 0,
             bool friendlyFire = false, bool multiHit = false, bool instaEffect = false, bool oneHitKO = false,
-            Func<Game, LegendCard, string> precondition = null, AttackKind kind = AttackKind.Strike, string effectText = null)
+            Func<Game, LegendCard, string> precondition = null, AttackKind kind = AttackKind.Strike, string effectText = null,
+            int? fixedDamage = null)
         {
             Name = name;
             AttackModifier = attackModifier;
@@ -55,6 +58,7 @@ namespace BrawlTCG.Core
             Precondition = precondition;
             Kind = kind;
             EffectText = effectText;
+            FixedDamage = fixedDamage;
         }
 
         public void Execute(LegendCard attacker, object target, Game game)
@@ -83,6 +87,7 @@ namespace BrawlTCG.Core
         /// <summary>Power + modifier, never below zero.</summary>
         public static int CalculateBaseDamage(LegendCard attacker, Attack attack)
         {
+            if (attack.FixedDamage != null) return Math.Max(0, attack.FixedDamage.Value);
             long damage = (long)attacker.Power + attack.AttackModifier;
             return (int)Math.Max(0, Math.Min(int.MaxValue, damage));
         }
@@ -95,7 +100,7 @@ namespace BrawlTCG.Core
         /// </summary>
         public static int CalculateElementalBonus(LegendCard attacker, Attack attack)
         {
-            if (CalculateBaseDamage(attacker, attack) <= 0) return 0;
+            if (attack.FixedDamage != null || CalculateBaseDamage(attacker, attack) <= 0) return 0;
             int bonus = 0;
             bonus += BonusFor(attacker, attack.WeaponOne, attack.WeaponOneAmount);
             if (attack.WeaponTwo != null)

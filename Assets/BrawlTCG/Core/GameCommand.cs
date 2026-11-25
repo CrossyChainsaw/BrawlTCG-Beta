@@ -144,7 +144,7 @@ namespace BrawlTCG.Core
             }
             for (int l = 0; l < me.PlayingField.Count; l++)
             {
-                int attacks = me.PlayingField[l].Attacks.Count;
+                int attacks = me.PlayingField[l].AttackCount;
                 for (int a = 0; a < attacks; a++)
                     for (int t = -1; t < maxTargets; t++)
                         yield return Attack(p, l, a, t);

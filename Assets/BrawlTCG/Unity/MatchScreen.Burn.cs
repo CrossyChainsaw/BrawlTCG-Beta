@@ -27,7 +27,7 @@ namespace BrawlTCG.UnityApp
         void SubmitAttack(LegendCard legend, int attackIndex, int target)
         {
             int player = legend.Owner.Index, index = legend.Owner.PlayingField.IndexOf(legend);
-            Attack attack = legend.Attacks[attackIndex];
+            Attack attack = legend.AttackAt(attackIndex);
             if (!Game.BurnChoiceNeeded(legend, attack))
             {
                 Submit(GameCommand.Attack(player, index, attackIndex, target));
@@ -59,7 +59,7 @@ namespace BrawlTCG.UnityApp
             _burn = b;
 
             LegendCard legend = b.Legend;
-            Attack attack = legend.Attacks[b.AttackIndex];
+            Attack attack = legend.AttackAt(b.AttackIndex);
             List<Game.BurnSlot> slots = Game.BurnSlots(legend, attack);
 
             Theme.Label(dim, legend.Name.ToUpperInvariant() + "  ·  " + attack.Name.ToUpperInvariant(), 18, Theme.Gold,
@@ -121,7 +121,7 @@ namespace BrawlTCG.UnityApp
             if (b == null) return;
             int mask = 0;
             foreach (int i in b.Picked) mask |= 1 << i;
-            if (!Game.IsValidBurnMask(b.Legend, b.Legend.Attacks[b.AttackIndex], mask))
+            if (!Game.IsValidBurnMask(b.Legend, b.Legend.AttackAt(b.AttackIndex), mask))
             {
                 _app.Toast("Pick the weapons to burn first.");
                 return;

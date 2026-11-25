@@ -200,9 +200,9 @@ namespace BrawlTCG.Core
             for (int l = 0; l < me.PlayingField.Count; l++)
             {
                 LegendCard legend = me.PlayingField[l];
-                for (int a = 0; a < legend.Attacks.Count; a++)
+                for (int a = 0; a < legend.AttackCount; a++) // Weapon Throw included
                 {
-                    Attack attack = legend.Attacks[a];
+                    Attack attack = legend.AttackAt(a);
                     if (game.CanUseAttack(legend, attack) != null) continue;
                     // Burn the weapons the legend's attacks need least, then the ones giving the least elemental bonus.
                     int burn = Game.BurnChoiceNeeded(legend, attack) ? Game.SmartBurnMask(legend, attack) : 0;

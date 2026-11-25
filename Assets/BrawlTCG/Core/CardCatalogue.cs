@@ -46,11 +46,11 @@ namespace BrawlTCG.Core
             // Nature legends                                              power hp
             Legend(1000, "Briar Rose", 3, Element.Nature, "BriarRose", 6, 9, Weapon.Spear, Weapon.Greatsword, A(AC.Spear_Stab, AC.Any_BlowAKiss)),
             Legend(1001, "Forest Guardian", 2, Element.Nature, "ElvenhollowMagyar", 1, 13, Weapon.Hammer, Weapon.Greatsword, A(AC.Greatsword_Swing, AC.Greatsword_String)),
-            Legend(1002, "Deathcap", 5, Element.Nature, "DeathCap", 10, 5, Weapon.Spear, Weapon.Orb, A(AC.Spear_Stab, AC.Orb_Throw, AC.DeathCap_Storm)),
+            Legend(1002, "Deathcap", 5, Element.Nature, "DeathCap", 10, 5, Weapon.Spear, Weapon.Orb, A(AC.Spear_Stab, AC.DeathCap_Storm)),
             Legend(1003, "Rayman", 3, Element.Nature, "Rayman", 7, 7, Weapon.Gauntlets, Weapon.Axe, A(AC.Axe_Swing, AC.Gauntlets_Punch, AC.Gauntlets_PowerPunch)),
             Legend(1004, "Kor", 2, Element.Nature, "Kor", 0, 16, Weapon.Gauntlets, Weapon.Hammer, A()),
             Legend(1005, "Yumiko", 4, Element.Nature, "Yumiko", 3, 15, Weapon.Bow, Weapon.Hammer, A(AC.Hammer_Swing, AC.Hammer_Gimp, AC.Yumiko_GrabOrbs)),
-            Legend(1006, "Forest Spirit", 1, Element.Nature, "Forest_Spirit", 3, 1, Weapon.Orb, Weapon.Gauntlets, A(AC.ForestSpirit_Explode, AC.ForestSpirit_Heal)),
+            Legend(1006, "Forest Spirit", 1, Element.Nature, "Forest_Spirit", 4, 1, Weapon.Bow, null, A(AC.ForestSpirit_Explode, AC.ForestSpirit_Heal)),
             Legend(1007, "Demon Bride", 3, Element.Nature, "Demon_Bride", 4, 9, Weapon.Sword, Weapon.Spear, A(AC.Sword_Slash, AC.Any_BlowAKiss)),
             Legend(1008, "Faerie Queen", 3, Element.Nature, "RealQueen", 1, 7, Weapon.Spear, Weapon.Greatsword, A(AC.Spear_Stab, AC.Any_BlowAKiss), whileInPlay: EC.BoostAllNatureLegendsStats_WhileInPlay),
             // Fire legends

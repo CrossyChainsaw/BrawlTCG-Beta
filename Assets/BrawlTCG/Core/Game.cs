@@ -237,8 +237,8 @@ namespace BrawlTCG.Core
                 {
                     if (!InRange(cmd.LegendIndex, me.PlayingField.Count)) return "Invalid legend.";
                     LegendCard legend = me.PlayingField[cmd.LegendIndex];
-                    if (!InRange(cmd.AttackIndex, legend.Attacks.Count)) return "Invalid attack.";
-                    Attack attack = legend.Attacks[cmd.AttackIndex];
+                    if (!InRange(cmd.AttackIndex, legend.AttackCount)) return "Invalid attack.";
+                    Attack attack = legend.AttackAt(cmd.AttackIndex);
                     string error = CanUseAttack(legend, attack);
                     if (error != null) return error;
                     if (!IsValidBurnMask(legend, attack, cmd.BurnMask)) return "Choose which weapons to burn.";
@@ -334,7 +334,7 @@ namespace BrawlTCG.Core
                 case CommandType.Attack:
                 {
                     LegendCard legend = me.PlayingField[cmd.LegendIndex];
-                    PerformAttack(legend, legend.Attacks[cmd.AttackIndex], cmd.TargetIndex, cmd.BurnMask);
+                    PerformAttack(legend, legend.AttackAt(cmd.AttackIndex), cmd.TargetIndex, cmd.BurnMask);
                     return;
                 }
             }

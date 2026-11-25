@@ -37,13 +37,21 @@ namespace BrawlTCG.Core
 
         static readonly AttackAction Default = (attacker, target, attack, game) => DefaultAttack(attacker, target, attack);
 
+        // ───────────── Universal ─────────────
+        /// <summary>
+        /// Every legend can use this besides its own attacks (it is not in <see cref="LegendCard.Attacks"/>; see
+        /// <see cref="LegendCard.AttackAt"/>): 1 damage, whatever the legend's ATK, and burns 1 weapon of any kind.
+        /// </summary>
+        public static readonly Attack WeaponThrow = new Attack("Weapon Throw", 0, Weapon.Any, 1, Default,
+            weaponOneBurnAmount: 1, fixedDamage: 1);
+
         // ───────────── Default weapon attacks ─────────────
         public static readonly Attack Spear_Stab = new Attack("Spear Stab", 0, Weapon.Spear, 1, Default);
         public static readonly Attack Cannon_Blast = new Attack("Cannon Blast", 0, Weapon.Cannon, 1, Default);
         public static readonly Attack Orb_Throw = new Attack("Orb Throw", 3, Weapon.Orb, 1, Default, weaponOneBurnAmount: 1);
         public static readonly Attack Orb_Swing = new Attack("Orb Swing", 0, Weapon.Orb, 1, Default);
-        public static readonly Attack Greatsword_Swing = new Attack("Great Swing", 0, Weapon.Greatsword, 1, Default);
-        public static readonly Attack Greatsword_String = new Attack("Stab, Slice, Swing", 5, Weapon.Greatsword, 3, Default);
+        public static readonly Attack Greatsword_Swing = new Attack("Stab", 0, Weapon.Greatsword, 1, Default);
+        public static readonly Attack Greatsword_String = new Attack("Stab, Slice, Swing", 6, Weapon.Greatsword, 3, Default);
         public static readonly Attack Scythe_Slash = new Attack("Scythe Slash", 0, Weapon.Scythe, 1, Default);
         public static readonly Attack Scythe_Gimp = new Attack("Scythe Gimp", 0, Weapon.Scythe, 3,
             (a, t, atk, g) => OneHitKO(t), weaponOneBurnAmount: 2, oneHitKO: true);

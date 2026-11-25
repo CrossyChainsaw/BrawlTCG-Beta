@@ -212,7 +212,13 @@ namespace BrawlTCG.Core
         public Weapon? SecondaryWeapon { get; }
         public bool IsSingleWeapon => SecondaryWeapon == null;
         public List<Card> StackedCards { get; private set; } = new List<Card>();
+        /// <summary>The attacks printed on the card (Weapon Throw is not one of them).</summary>
         public IReadOnlyList<Attack> Attacks => _attacks;
+        /// <summary>Every attack this legend can use: its printed ones, then Weapon Throw (at <see cref="WeaponThrowIndex"/>).</summary>
+        public int AttackCount => _attacks.Length + 1;
+        public int WeaponThrowIndex => _attacks.Length;
+        /// <summary>Attack <paramref name="index"/> of <see cref="AttackCount"/>: a printed attack, or Weapon Throw.</summary>
+        public Attack AttackAt(int index) => index == _attacks.Length ? AttackCatalogue.WeaponThrow : _attacks[index];
 
         /// <summary>Stunned legends cannot attack and their abilities are off. They can still be attacked and have cards played on them.</summary>
         public bool IsStunned { get; internal set; }

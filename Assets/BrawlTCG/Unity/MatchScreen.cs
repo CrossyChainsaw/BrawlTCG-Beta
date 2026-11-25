@@ -543,7 +543,8 @@ namespace BrawlTCG.UnityApp
             }
         }
 
-        bool CanUseAnyAttack(LegendCard legend) => legend.Attacks.Any(a => _game.CanUseAttack(legend, a) == null);
+        bool CanUseAnyAttack(LegendCard legend) =>
+            Enumerable.Range(0, legend.AttackCount).Any(i => _game.CanUseAttack(legend, legend.AttackAt(i)) == null);
 
         // ── Center strip: turn state, prompts, end turn ──
 
@@ -556,7 +557,7 @@ namespace BrawlTCG.UnityApp
 
             if (Targeting)
             {
-                Attack attack = _targetAttacker.Attacks[_targetAttackIndex];
+                Attack attack = _targetAttacker.AttackAt(_targetAttackIndex);
                 string side = _targetOwnSide ? "one of your legends" : "an enemy legend";
                 Theme.Label(t, attack.Name.ToUpperInvariant(), 28, Theme.Gold, 28, 10, 600, 40, TextAnchor.MiddleLeft, display: true);
                 Theme.Label(t, $"Click {side} to target it.  Right-click or Esc to cancel.", 17, Theme.Text, 28, 48, 700, 30, TextAnchor.MiddleLeft);
@@ -1215,6 +1216,11 @@ namespace BrawlTCG.UnityApp
                 InfoChip(t, $"HP {legend.CurrentHP} / {legend.BaseHealth}", new Color32(214, 40, 62, 255), ix + half + 8, top, half);
                 InfoChip(t, $"{(legend.IsSingleWeapon ? "WEAPON" : "WEAPONS")}  {legend.WeaponText(Pretty)}", new Color(1, 1, 1, 0.12f), ix, top + 44, iw);
 
+                // Weapon Throw, the attack every legend has: under the info chips, next to the card. When crafted / revived
+                // chips leave no room there, it goes after the legend's own attacks instead.
+                bool throwHere = legend.OnPlayingField && top + 92 + WeaponThrowH <= 404;
+                if (throwHere) WeaponThrowButton(t, legend, ix, top + 92, iw);
+
                 float y = 418;
                 Theme.Label(t, "ATTACKS", 16, Theme.Gold, 24, y, 300, 22, display: true);
                 y += 28;
@@ -1226,6 +1232,11 @@ namespace BrawlTCG.UnityApp
                 for (int i = 0; i < legend.Attacks.Count; i++)
                 {
                     AttackRow(t, legend, i, 24, y, W - 48);
+                    y += 82;
+                }
+                if (legend.OnPlayingField && !throwHere)
+                {
+                    AttackRow(t, legend, legend.WeaponThrowIndex, 24, y, W - 48);
                     y += 82;
                 }
 
@@ -1458,7 +1469,7 @@ namespace BrawlTCG.UnityApp
 
         void AttackRow(Transform t, LegendCard legend, int index, float x, float y, float w)
         {
-            Attack attack = legend.Attacks[index];
+            Attack attack = legend.AttackAt(index);
             bool meets = attack.MeetsWeaponRequirements(legend);
             string reason = null;
             if (!meets) reason = "Needs " + RequirementText(attack);
@@ -1531,6 +1542,46 @@ namespace BrawlTCG.UnityApp
             Theme.Label(rt, damageSub, 12, new Color(1, 1, 1, 0.6f * alpha), w - 132, 46, 118, 18, TextAnchor.MiddleRight, display: true);
         }
 
+        const float WeaponThrowH = 58;
+
+        /// <summary>Weapon Throw as a compact button: any legend, 1 damage, burns 1 weapon.</summary>
+        void WeaponThrowButton(Transform t, LegendCard legend, float x, float y, float w)
+        {
+            int index = legend.WeaponThrowIndex;
+            Attack attack = legend.AttackAt(index);
+            string reason;
+            if (!attack.MeetsWeaponRequirements(legend)) reason = "Needs a weapon to throw";
+            else if (!CanControlAttacks(legend)) reason = legend.Owner == _game.ActivePlayer ? null : "Only on its owner's turn";
+            else reason = _game.CanUseAttack(legend, attack);
+            bool usable = reason == null && CanControlAttacks(legend);
+            float alpha = usable ? 1f : 0.55f;
+
+            var row = Theme.RoundedPanel(t, usable ? new Color(1, 1, 1, 0.09f) : new Color(1, 1, 1, 0.035f), x, y, w, WeaponThrowH, 12, "Weapon Throw");
+            Quiet(Theme.RoundedPanel(row.transform, usable ? new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, 0.6f) : new Color(1, 1, 1, 0.1f),
+                0, 0, w, WeaponThrowH, 12, "Line", outline: true));
+            if (usable)
+            {
+                var b = row.gameObject.AddComponent<Button>();
+                b.transition = Selectable.Transition.None;
+                b.onClick.AddListener(() => OnAttackClicked(legend, index));
+                row.gameObject.AddComponent<HoverFx>().Init(row, new Color(1, 1, 1, 0.09f), new Color(1, 1, 1, 0.18f), 1.015f);
+            }
+            else row.raycastTarget = false;
+            Transform rt = row.transform;
+
+            var name = Theme.Label(rt, "WEAPON THROW", 18, new Color(1, 1, 1, alpha), 14, 6, w - 80, 26, TextAnchor.MiddleLeft, display: true);
+            name.raycastTarget = false;
+            Color subColor = reason != null ? new Color32(255, 160, 160, 255) : usable ? ReadyGreen : Theme.TextDim;
+            var sub = Theme.Label(rt, reason ?? "ANY LEGEND  ·  BURNS 1 WEAPON", 12, subColor, 14, 32, w - 80, 20, TextAnchor.MiddleLeft, display: true);
+            sub.verticalOverflow = VerticalWrapMode.Truncate;
+            sub.resizeTextForBestFit = true;
+            sub.resizeTextMinSize = 9;
+            sub.resizeTextMaxSize = 12;
+            sub.raycastTarget = false;
+            Theme.Label(rt, "1", 28, new Color(Theme.Gold.r, Theme.Gold.g, Theme.Gold.b, alpha), w - 64, 2, 50, 36, TextAnchor.MiddleRight, display: true).raycastTarget = false;
+            Theme.Label(rt, "DMG", 11, new Color(1, 1, 1, 0.6f * alpha), w - 74, 36, 60, 16, TextAnchor.MiddleRight, display: true).raycastTarget = false;
+        }
+
         static float RequirementChip(Transform parent, Weapon weapon, int amount, int burn, float x, float alpha)
         {
             var chip = Theme.RoundedPanel(parent, new Color(0, 0, 0, 0.4f), x, 13, 64, 48, 12, "Req " + weapon);
@@ -1579,7 +1630,7 @@ namespace BrawlTCG.UnityApp
                 _app.Toast("It is not your turn!");
                 return;
             }
-            Attack attack = legend.Attacks[attackIndex];
+            Attack attack = legend.AttackAt(attackIndex);
             string error = _game.CanUseAttack(legend, attack);
             if (error != null)
             {
