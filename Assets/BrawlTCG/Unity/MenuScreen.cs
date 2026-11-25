@@ -313,7 +313,7 @@ namespace BrawlTCG.UnityApp
             Theme.AddShadow(name, 3, 0.6f);
 
             string attacks = featured.Attacks.Count == 0 ? "No attacks" : string.Join("  ·  ", featured.Attacks.Select(a => a.Name));
-            Theme.Label(_showcase, $"{featured.Element}  ·  {featured.BaseHealth} HP  ·  {featured.Power} ATT  ·  {featured.PrimaryWeapon} / {featured.SecondaryWeapon}",
+            Theme.Label(_showcase, $"{featured.Element}  ·  {featured.BaseHealth} HP  ·  {featured.Power} ATT  ·  {featured.WeaponText()}",
                 20, Theme.TextDim, 0, 762, 900, 30, TextAnchor.MiddleCenter);
             Theme.Label(_showcase, attacks, 17, Theme.TextFaint, 0, 792, 900, 28, TextAnchor.MiddleCenter);
         }

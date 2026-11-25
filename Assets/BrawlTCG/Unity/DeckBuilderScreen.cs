@@ -388,7 +388,7 @@ namespace BrawlTCG.UnityApp
             float y = 568;
             if (card is LegendCard legend)
             {
-                Theme.Label(t, $"{legend.BaseHealth} HP  ·  {legend.Power} ATK  ·  {Pretty(legend.PrimaryWeapon)} / {Pretty(legend.SecondaryWeapon)}", 15, Theme.TextDim, 20, y, w - 40, 22, TextAnchor.MiddleLeft, display: true);
+                Theme.Label(t, $"{legend.BaseHealth} HP  ·  {legend.Power} ATK  ·  {legend.WeaponText(Pretty)}", 15, Theme.TextDim, 20, y, w - 40, 22, TextAnchor.MiddleLeft, display: true);
                 y += 30;
                 Theme.Label(t, "ATTACKS", 14, Theme.Gold, 20, y, 200, 20, display: true);
                 y += 24;

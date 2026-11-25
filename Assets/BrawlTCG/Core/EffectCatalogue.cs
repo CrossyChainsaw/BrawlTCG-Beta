@@ -449,7 +449,7 @@ namespace BrawlTCG.Core
             });
 
         static bool UsesWeapon(LegendCard legend, Weapon weapon) =>
-            legend.PrimaryWeapon == weapon || legend.SecondaryWeapon == weapon;
+            legend.HasWeapon(weapon);
 
         /// <summary>Art Class: craft 2 random legends that cost 2 or less.</summary>
         public static readonly Effect ArtClass = new Effect(
