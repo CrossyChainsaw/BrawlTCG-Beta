@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.9.0 Beta
+
+Single-weapon legends, choose which weapons an attack burns, and a Weapon Throw every legend can use. **Can't play online with v1.8.x.**
+
+### Weapons and attacks
+
+- **Weapon Throw:** every legend can now throw one of its weapons (any kind) for **1 damage**, whatever its ATK or element. It burns the thrown weapon and uses the legend's attack for the turn. It shows apart from the card's own attacks when you attack.
+- **Choose what burns:** when an attack burns weapons and you have more than one option, a picker asks which ones to burn. It doesn't ask when there's no choice (for example, an attack that burns 3 on a legend holding exactly 3). Esc cancels.
+- **The bot burns smarter:** it keeps weapons its other attacks still need, then the ones with the biggest elemental bonus.
+- **Single-weapon legends:** a legend can now hold just one kind of weapon. Its card shows a single weapon chip.
+
+### Card changes
+
+- **Dander:** Katars only, 5 ATK (was Gauntlets and Katars, 6 ATK).
+- **Ninja Spirit:** Sword only (was Sword and Scythe).
+- **Forest Spirit:** Bow only, 4 ATK (was Orb and Gauntlets, 3 ATK).
+- **Deathcap:** loses Orb Throw.
+- **Great Swing** is renamed **Stab**, and **Stab, Slice, Swing** is now ATK+6 (was +5).
+
 ## v1.8.0 Beta
 
 Four new cards and a new stage, a coin flip for who starts, stage backgrounds, a card grid in the deck builder and Esc to go back. **Can't play online with v1.7.x.**
