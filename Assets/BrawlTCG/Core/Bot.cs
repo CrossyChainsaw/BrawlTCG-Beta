@@ -49,8 +49,9 @@ namespace BrawlTCG.Core
         }
 
         /// <summary>
-        /// When no card in hand can be played, discard one before ending the turn (Normal and Hard): a card it holds
-        /// two or more of, otherwise a random one. Once per turn, never Essence.
+        /// When the hand is full (<see cref="Game.MaxCardsInHand"/>, so it can't draw) and no card in it can be played,
+        /// discard one before ending the turn (Normal and Hard): a card it holds two or more of, otherwise a random one.
+        /// Once per turn; Essence only when nothing else can be discarded.
         /// </summary>
         public bool DiscardWhenStuck { get; set; }
 
@@ -136,19 +137,23 @@ namespace BrawlTCG.Core
         }
 
         /// <summary>
-        /// The bot is done for the turn. With <see cref="DiscardWhenStuck"/>, if none of its cards can be played it first
-        /// discards one it can pay for: one it holds a duplicate of, otherwise a random one.
+        /// The bot is done for the turn. With <see cref="DiscardWhenStuck"/>, if its hand is full and none of its cards can
+        /// be played, it first discards one it can pay for: one it holds a duplicate of, otherwise a random one.
         /// </summary>
         GameCommand EndTurnOrDiscard(Game game, List<GameCommand> moves)
         {
             var endTurn = GameCommand.EndTurn(PlayerIndex);
             if (!DiscardWhenStuck || _discardedTurn == game.TurnNumber) return endTurn;
+            List<Card> hand = game.Players[PlayerIndex].Hand;
+            if (hand.Count < Game.MaxCardsInHand) return endTurn; // it can still draw: not stuck
             if (moves.Any(m => m.Type != CommandType.Attack)) return endTurn; // a card could still be played
 
-            List<Card> hand = game.Players[PlayerIndex].Hand;
-            var options = Enumerable.Range(0, hand.Count)
-                .Where(h => !(hand[h] is EssenceCard) && game.Validate(GameCommand.DiscardCard(PlayerIndex, h)) == null)
+            var payable = Enumerable.Range(0, hand.Count)
+                .Where(h => game.Validate(GameCommand.DiscardCard(PlayerIndex, h)) == null)
                 .ToList();
+            // Keep Essence unless nothing else can go.
+            var options = payable.Where(h => !(hand[h] is EssenceCard)).ToList();
+            if (options.Count == 0) options = payable;
             if (options.Count == 0) return endTurn;
 
             var doubles = options.Where(h => hand.Count(c => c.Id == hand[h].Id) >= 2).ToList();

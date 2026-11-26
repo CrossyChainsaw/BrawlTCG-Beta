@@ -24,7 +24,7 @@ Card rebalance with three new attacks, and the Normal and Hard bots discard when
 
 ### VS BOT
 
-- **The Normal and Hard bots discard when stuck:** if none of their cards can be played, they discard one before ending the turn (once per turn, never Essence): a card they hold two of, otherwise a random one.
+- **The Normal and Hard bots discard when stuck:** when their hand is full (15 cards, so they can't draw) and none of their cards can be played, they discard one before ending the turn, once per turn: a card they hold two of, otherwise a random one. Essence only goes when nothing else can.
 
 ## v1.9.0 Beta
 
