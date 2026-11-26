@@ -42,14 +42,20 @@ namespace BrawlTCG.Core
             switch (level)
             {
                 case Level.Easy: bot.Lookahead = false; break;
-                case Level.Normal: bot.Lookahead = true; break;
-                default: bot.Lookahead = true; bot.Rollouts = true; break;
+                case Level.Normal: bot.Lookahead = true; bot.DiscardWhenStuck = true; break;
+                default: bot.Lookahead = true; bot.Rollouts = true; bot.DiscardWhenStuck = true; break;
             }
             return bot;
         }
 
+        /// <summary>
+        /// When no card in hand can be played, discard one before ending the turn (Normal and Hard): a card it holds
+        /// two or more of, otherwise a random one. Once per turn, never Essence.
+        /// </summary>
+        public bool DiscardWhenStuck { get; set; }
+
         readonly Random _rng;
-        int _movesThisTurn, _turnSeen = -1;
+        int _movesThisTurn, _turnSeen = -1, _discardedTurn = -1;
 
         public Bot(int playerIndex, int seed)
         {
@@ -69,7 +75,7 @@ namespace BrawlTCG.Core
             if (++_movesThisTurn > MaxMovesPerTurn) return GameCommand.EndTurn(PlayerIndex);
 
             List<GameCommand> moves = LegalMoves(game);
-            if (moves.Count == 0) return GameCommand.EndTurn(PlayerIndex);
+            if (moves.Count == 0) return EndTurnOrDiscard(game, moves);
 
             double stay = Evaluate(game, PlayerIndex);
             var scored = new List<(GameCommand cmd, double score, Game after)>(moves.Count);
@@ -79,7 +85,7 @@ namespace BrawlTCG.Core
                 if (copy.TryApply(cmd) != null) continue;
                 scored.Add((cmd, Evaluate(copy, PlayerIndex), copy));
             }
-            if (scored.Count == 0) return GameCommand.EndTurn(PlayerIndex);
+            if (scored.Count == 0) return EndTurnOrDiscard(game, moves);
 
             if (Lookahead)
             {
@@ -100,7 +106,7 @@ namespace BrawlTCG.Core
             }
 
             var top = scored.OrderByDescending(s => s.score).First();
-            if (top.score <= stay + 0.01) return GameCommand.EndTurn(PlayerIndex);
+            if (top.score <= stay + 0.01) return EndTurnOrDiscard(game, moves);
             if (!Rollouts) return top.cmd;
 
             // Which of the good moves holds up best once the turn and the opponent's reply are played out? Every
@@ -127,6 +133,28 @@ namespace BrawlTCG.Core
                 }
             }
             return bestCmd;
+        }
+
+        /// <summary>
+        /// The bot is done for the turn. With <see cref="DiscardWhenStuck"/>, if none of its cards can be played it first
+        /// discards one it can pay for: one it holds a duplicate of, otherwise a random one.
+        /// </summary>
+        GameCommand EndTurnOrDiscard(Game game, List<GameCommand> moves)
+        {
+            var endTurn = GameCommand.EndTurn(PlayerIndex);
+            if (!DiscardWhenStuck || _discardedTurn == game.TurnNumber) return endTurn;
+            if (moves.Any(m => m.Type != CommandType.Attack)) return endTurn; // a card could still be played
+
+            List<Card> hand = game.Players[PlayerIndex].Hand;
+            var options = Enumerable.Range(0, hand.Count)
+                .Where(h => !(hand[h] is EssenceCard) && game.Validate(GameCommand.DiscardCard(PlayerIndex, h)) == null)
+                .ToList();
+            if (options.Count == 0) return endTurn;
+
+            var doubles = options.Where(h => hand.Count(c => c.Id == hand[h].Id) >= 2).ToList();
+            var pool = doubles.Count > 0 ? doubles : options;
+            _discardedTurn = game.TurnNumber;
+            return GameCommand.DiscardCard(PlayerIndex, pool[_rng.Next(pool.Count)]);
         }
 
         /// <summary>Finishes the bot's turn and plays the opponent's reply with plain greedy bots on both sides.</summary>

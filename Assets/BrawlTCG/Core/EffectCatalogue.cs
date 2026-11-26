@@ -289,6 +289,8 @@ namespace BrawlTCG.Core
         public const int MatrixId = 102;
         public const int WorkshopId = 103;
         public const int AtlantisId = 106;
+        public const int SilentGalaxyId = 107;
+        public const int SnowballId = 502;
 
         public static readonly Effect GenerateAndPlayMustafar = new Effect(
             "Set stage to Mustafar",
@@ -488,11 +490,19 @@ namespace BrawlTCG.Core
             (target, card, game, played) => game.GenerateRandomWeaponCards(3, Weapon.Scythe));
 
         public static readonly Effect DidShawWinYet = new Effect(
-            "Craft 3x The Rock",
+            "Craft 2x The Rock",
             (target, card, game, played) =>
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 2; i++)
                     game.GenerateCard(6003); // The Rock
+            });
+
+        /// <summary>Snowman Kor, when eliminated: its owner gets a Snowball, whoever's turn it is.</summary>
+        public static readonly Effect SnowmanKor_Snowball = new Effect(
+            "Craft a Snowball",
+            (target, card, game, played) =>
+            {
+                if (card?.Owner != null) game.GenerateCardFor(card.Owner, SnowballId);
             });
 
         // ───────────── Shared helpers ─────────────

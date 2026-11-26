@@ -90,7 +90,7 @@ namespace BrawlTCG.UnityApp
                 .PlayOn(Revolvers, AstroCommander)
                 .Attack(AstroCommander, "Shot", Raymesis)
                 .Attack(AuroraBrynn, "Spear Stab", KitsuneHattori)
-                .Attack(Heatblast, "Burn", DarkMage)
+                .Attack(Heatblast, "Incinerate", DarkMage)
                 .Attack(IronLady, "Scythe Slash", Yumiko)
                 .PlayOn(Snowball, FoxSpirit)
                 .EndTurn()
