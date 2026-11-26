@@ -22,6 +22,7 @@ namespace BrawlTCG.UnityApp
             [AttackCatalogue.PlagueKnight_GrabHealingPotion] = new[] { 501 },
             [AttackCatalogue.Kaya_CraftSnowball] = new[] { 502 },
             [AttackCatalogue.Kaya_BuildASnowman] = new[] { 7000 },
+            [AttackCatalogue.AstroCommander_Silence] = new[] { EffectCatalogue.SilentGalaxyId },
         };
 
         /// <summary>Cards mentioned by a card's own text (abilities, stage or battle effects).</summary>
@@ -31,7 +32,8 @@ namespace BrawlTCG.UnityApp
             [2003] = new[] { EffectCatalogue.MustafarId },   // Molten Kor: ... Mustafar
             [5002] = new[] { EffectCatalogue.MatrixId },     // Mastermind: ... Matrix
             [518] = new[] { 4004, 3006, 23004, 21000 },      // Witch Party
-            [527] = new[] { 6003 },                          // Did Shaw Win Yet?: 3x The Rock
+            [527] = new[] { 6003 },                          // Did Shaw Win Yet?: 2x The Rock
+            [7000] = new[] { EffectCatalogue.SnowballId },   // Snowman Kor: when eliminated, craft a Snowball
         };
 
         public static int[] For(Attack attack) => attack != null && ByAttack.TryGetValue(attack, out int[] ids) ? ids : null;

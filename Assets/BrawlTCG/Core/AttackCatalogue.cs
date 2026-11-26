@@ -56,7 +56,7 @@ namespace BrawlTCG.Core
         public static readonly Attack Scythe_Gimp = new Attack("Scythe Gimp", 0, Weapon.Scythe, 3,
             (a, t, atk, g) => OneHitKO(t), weaponOneBurnAmount: 2, oneHitKO: true);
         public static readonly Attack Lance_Poke = new Attack("Lance Poke", 0, Weapon.RocketLance, 1, Default);
-        public static readonly Attack Lance_Flamethrower = new Attack("Flamethrower", 4, Weapon.RocketLance, 2, Default);
+        public static readonly Attack Lance_Flamethrower = new Attack("Flamethrower", 3, Weapon.RocketLance, 2, Default);
         public static readonly Attack Hammer_Swing = new Attack("Hammer Swing", 0, Weapon.Hammer, 1, Default);
         public static readonly Attack Hammer_Gimp = new Attack("Hammer Gimp", 0, Weapon.Hammer, 3,
             (a, t, atk, g) => OneHitKO(t), weaponOneBurnAmount: 2, oneHitKO: true);
@@ -69,7 +69,7 @@ namespace BrawlTCG.Core
         public static readonly Attack Blaster_DoubleShot = new Attack("Double Shot", 5, Weapon.Blasters, 2, Default);
 
         // ───────────── Stun ─────────────
-        public static readonly Attack Any_BlowAKiss = new Attack("Blow a Kiss", Status, Weapon.Any, 2,
+        public static readonly Attack Any_BlowAKiss = new Attack("Blow a Kiss", Status, Weapon.Any, 1,
             (a, t, atk, g) => EffectCatalogue.StunLegendCard(t),
             kind: AttackKind.Hex);
         public static readonly Attack Any_Freeze = new Attack("Freeze", 0, Weapon.Any, 1,
@@ -99,7 +99,7 @@ namespace BrawlTCG.Core
         // ───────────── Signature attacks ─────────────
         public static readonly Attack Arcadia_PinkRoses = new Attack("Pink Roses", 4, Weapon.Spear, 1, Default,
             weaponTwo: Weapon.Greatsword, weaponTwoAmount: 1);
-        public static readonly Attack Artemis_IronLady_MeltDown = new Attack("Meltdown", 7, Weapon.Scythe, 1, Default,
+        public static readonly Attack Artemis_IronLady_MeltDown = new Attack("Meltdown", 8, Weapon.Scythe, 1, Default,
             weaponOneBurnAmount: 1, weaponTwo: Weapon.RocketLance, weaponTwoAmount: 1, weaponTwoBurnAmount: 1);
         public static readonly Attack Enchantress_CursePower = new Attack("Curse Att by 3", Status, Weapon.Any, 1,
             (a, t, atk, g) => ModifyStat(t, Stat.Power, -3), weaponOneBurnAmount: 1,
@@ -115,9 +115,22 @@ namespace BrawlTCG.Core
             kind: AttackKind.Boost);
         public static readonly Attack DeathCap_Storm = new Attack("Storm", 0, Weapon.Orb, 3, Default,
             weaponOneBurnAmount: 3, multiHit: true);
-        public static readonly Attack Heatblast_Burn = new Attack("Burn", 0, Weapon.Blasters, 1,
+        public static readonly Attack Heatblast_Incinerate = new Attack("Incinerate", 2, Weapon.Blasters, 1,
             (a, t, atk, g) => DefaultAttack(a, t, atk, burn: true), weaponOneBurnAmount: 1,
             effectText: "SETS TARGET ON FIRE (-1 HP EACH TURN)");
+        public static readonly Attack AstroCommander_Silence = new Attack("Silence", Status, Weapon.Any, 3,
+            (a, t, atk, g) => g.GenerateAndPlayStage(EffectCatalogue.SilentGalaxyId), weaponOneBurnAmount: 3, instaEffect: true,
+            kind: AttackKind.Set);
+        public static readonly Attack DarkMage_CraftScythe = new Attack("Craft Scythe", Status, Weapon.Orb, 1,
+            (a, t, atk, g) => g.GenerateRandomWeaponCards(1, Weapon.Scythe), weaponOneBurnAmount: 1, instaEffect: true,
+            kind: AttackKind.Craft);
+        /// <summary>Raymesis: knocks out the target legend and heals Raymesis to full HP.</summary>
+        public static readonly Attack Raymesis_Devour = new Attack("Devour", 0, Weapon.Any, 3,
+            (a, t, atk, g) =>
+            {
+                OneHitKO(t);
+                a.GainHealth(Math.Max(0, a.BaseHealth - a.CurrentHP));
+            }, weaponOneBurnAmount: 2, oneHitKO: true, effectText: "HEALS TO FULL HP");
         public static readonly Attack MasterThief_GrabBomb = new Attack("Craft Bouncy Bomb", Status, Weapon.Gauntlets, 1,
             (a, t, atk, g) => g.GenerateCard(500), instaEffect: true,
             kind: AttackKind.Craft);
