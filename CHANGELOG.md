@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.10.0 Beta
+
+Card rebalance with three new attacks, and the Normal and Hard bots discard when they're stuck. **Can't play online with v1.9.x.**
+
+### New attacks
+
+- **Raymesis: Devour** (3x any weapon, burns 2): knocks out an enemy legend and heals Raymesis to full HP. Like the Gimps, it can't hit the player.
+- **Astro Commander: Silence** (3x any weapon, burns 3): sets the stage to Silent Galaxy.
+- **Dark Mage: Craft Scythe** (1x Orb, burns it): crafts a random Scythe.
+
+### Card changes
+
+- **Heatblast:** Burn is renamed **Incinerate** and is now ATK+2 (still sets the target on fire). Heatblast also gets **Shot**.
+- **Ulgrim** gets **Lance Poke**.
+- **Faerie Queen** loses Blow a Kiss and gets Greatsword **Stab**.
+- **Blow a Kiss** needs 1 weapon of any kind (was 2). Briar Rose and Demon Bride keep it.
+- **Fury Shang:** 4 ATK / 8 HP (was 6 / 6).
+- **Meltdown** is ATK+8 (was +7).
+- **Flamethrower** is ATK+3 (was +4).
+- **Did Shaw Win Yet?** crafts 2x The Rock (was 3).
+- **Snowman Kor:** when eliminated, its owner gets a Snowball.
+
+### VS BOT
+
+- **The Normal and Hard bots discard when stuck:** if none of their cards can be played, they discard one before ending the turn (once per turn, never Essence): a card they hold two of, otherwise a random one.
+
 ## v1.9.0 Beta
 
 Single-weapon legends, choose which weapons an attack burns, and a Weapon Throw every legend can use. **Can't play online with v1.8.x.**
