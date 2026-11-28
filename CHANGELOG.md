@@ -1,5 +1,41 @@
 # Changelog
 
+## v1.11.0 Beta
+
+A new mechanic, Armor, three new cards, a reward for beating every bot deck, and balance changes. **Can't play online with v1.10.x.**
+
+### Armor
+
+- **New mechanic:** each point of armor blocks one whole hit, whatever the damage, one-hit K.O.s included. It blocks hits from attacks and from damage battle cards (Snowball, Bouncy Bomb, Orb). A blocked hit uses up 1 armor, and a stun that comes with it is blocked too. With no armor left, hits do damage as usual.
+- Burn, stage damage, not being able to draw, Tombstone and Fallout ignore armor.
+- An armored legend shows a shield with its armor count, and **ARMOR** pops up when it blocks a hit.
+
+### New cards
+
+- **Full Armor** (Fire battle card, 5 Essence): gives one of your legends **2 armor**.
+- **Snow Stalker** (Arctic legend, 5 Essence, 8 ATK / 18 HP, Spear and Bow): **Spear Stab**; **Snow Arrow** (2x Bow, ATK-2, stuns the target); **Summon Owl Spirit** (1x Bow, puts an Owl Spirit on your field).
+- **Owl Spirit** (Arctic legend, 2 Essence, 3 ATK / 3 HP, Katars): **Wing Attack** (no weapons needed); **Icicle Throw** (1x Katars, burns it, ATK+5).
+
+### Card changes
+
+- **Forest Spirit** gets **Healing Arrow** (1x Bow): heals one of your legends by its ATK, and the spirit stays.
+- **Final Form Petra** costs **10** (was 9).
+- **Fallout** costs **9** (was 7).
+- **Death's Hour** costs **7** (was 5).
+- **<3** gives **+7 HP** (was +5).
+- **Breaker Shang:** 5 ATK / **3 HP** (was 5 / 4).
+- **The North Wind** is now called **North Wind**.
+
+### In a match
+
+- **Copies left in your deck:** click one of your own cards to see how many copies are still in your deck.
+- **Healing attacks show how much they heal**, and attacks that eliminate the legend using them say so.
+- An attack you can't use yet still shows its effect (like **STUNS TARGET**) next to what it needs.
+
+### VS BOT
+
+- **Beat every bot deck** and a celebration screen marks it. From then on you choose the deck the bot plays.
+
 ## v1.10.0 Beta
 
 Card rebalance with three new attacks, and the Normal and Hard bots discard when they're stuck. **Can't play online with v1.9.x.**
