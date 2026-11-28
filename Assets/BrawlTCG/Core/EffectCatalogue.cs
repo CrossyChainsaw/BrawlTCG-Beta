@@ -311,7 +311,7 @@ namespace BrawlTCG.Core
             (target, card, game, played) =>
             {
                 if (card is BattleCard battle && target is LegendCard legend)
-                    legend.LoseHealth(battle.Damage);
+                    legend.TakeHit(battle.Damage); // armor blocks it like a hit from an attack
             });
 
         public static readonly Effect BattleCardHealWhenPlayed = new Effect(
@@ -475,6 +475,14 @@ namespace BrawlTCG.Core
             (target, card, game, played) =>
             {
                 if (target is LegendCard legend) legend.CureStatuses();
+            });
+
+        /// <summary>Full Armor: the legend gets 2 armor (blocks its next 2 hits from attacks, whatever the damage).</summary>
+        public static readonly Effect FullArmor = new Effect(
+            "Gives a legend 2 armor",
+            (target, card, game, played) =>
+            {
+                if (target is LegendCard legend) legend.GainArmor(2);
             });
 
         public static readonly Effect The_Finger = new Effect(

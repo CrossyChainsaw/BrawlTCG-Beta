@@ -1130,6 +1130,15 @@ namespace BrawlTCG.UnityApp
 
         // ───────────────────────────── Detail panel (DetailedCardControl) ─────────────────────────────
 
+        /// <summary>How many cards with the same id as <paramref name="card"/> are still in its owner's deck.</summary>
+        static int CopiesInDeck(Card card)
+        {
+            int n = 0;
+            foreach (Card c in card.Owner.Deck)
+                if (c.Id == card.Id) n++;
+            return n;
+        }
+
         void CloseDetail()
         {
             _detailCard = null;
@@ -1202,7 +1211,12 @@ namespace BrawlTCG.UnityApp
             name.resizeTextMaxSize = 30;
             string type = card is WeaponCard wc ? $"{card.Type} · {wc.Weapon}" : $"{card.Type} · {card.Element}";
             Theme.Label(t, type.ToUpperInvariant(), 15, CardArt.Accent(card.Element), ix, 150, iw, 20, display: true);
-            Theme.Label(t, $"Cost {card.Cost}" + (card.Owner != null ? $"  ·  {card.Owner.Name}" : ""), 15, Theme.TextDim, ix, 172, iw, 20);
+            // Your own cards: how many copies are still in your deck (never shown for the opponent's cards: hidden info).
+            bool mine = card.Owner != null && card.Owner.Index == _viewer && IsLocallyControlled(card.Owner.Index);
+            string owner = card.Owner == null ? ""
+                : mine ? $"  ·  {CopiesInDeck(card)} left in your deck"
+                : $"  ·  {card.Owner.Name}";
+            Theme.Label(t, $"Cost {card.Cost}" + owner, 15, Theme.TextDim, ix, 172, iw, 20);
 
             // Made during the match (crafted, summoned, set by an effect): say by what.
             float top = 206;
@@ -1313,7 +1327,7 @@ namespace BrawlTCG.UnityApp
             return y + 44;
         }
 
-        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A", FireHex = "#FFA060", SpentHex = "#B4B9D2", WantedHex = "#E8C48C";
+        const string BuffHex = "#8CFFA0", DebuffHex = "#FF8C8C", StatusHex = "#F5C04A", FireHex = "#FFA060", SpentHex = "#B4B9D2", WantedHex = "#E8C48C", ArmorHex = "#96BEEB";
 
         /// <summary>One EFFECTS row: its icon, the full text, and a shorter text for when rows go two to a line.</summary>
         readonly struct EffectRow
@@ -1330,6 +1344,13 @@ namespace BrawlTCG.UnityApp
         List<EffectRow> LegendEffects(LegendCard legend)
         {
             var rows = new List<EffectRow>();
+            if (legend.Armor > 0)
+            {
+                string hits = legend.Armor == 1 ? "the next hit" : $"the next {legend.Armor} hits";
+                rows.Add(new EffectRow(TriggerIcons.EffectIcon.Armor,
+                    Line(ArmorHex, $"Armor {legend.Armor}", null, $"blocks {hits} from attacks and damage cards, whatever the damage"),
+                    Line(ArmorHex, $"Armor {legend.Armor}", null, null)));
+            }
             if (!legend.CanAttack)
             {
                 // Silent Galaxy (non-Cosmic legends) or Leaves From the Vine (everyone).
@@ -1509,7 +1530,10 @@ namespace BrawlTCG.UnityApp
             if (attack.OneHitKO) tags.Add("KNOCK-OUT");
             int burns = attack.WeaponOneBurnAmount + attack.WeaponTwoBurnAmount;
             if (burns > 0) tags.Add($"BURNS {burns} WEAPON{(burns > 1 ? "S" : "")}");
-            string sub = reason ?? (tags.Count > 0 ? string.Join("  ·  ", tags) : "Ready");
+            // A reason it can't be used comes first, but the attack's own effect (STUNS TARGET...) stays visible after it.
+            string sub = reason != null
+                ? (attack.EffectText != null ? $"{reason}  ·  {attack.EffectText}" : reason)
+                : (tags.Count > 0 ? string.Join("  ·  ", tags) : "Ready");
             Color subColor = reason != null ? new Color32(255, 160, 160, 255) : usable ? ReadyGreen : Theme.TextDim;
             var subText = Theme.Label(rt, sub, 14, subColor, ix + 6, 40, w - ix - 120, 24, TextAnchor.MiddleLeft, display: true);
             subText.verticalOverflow = VerticalWrapMode.Truncate;
@@ -1521,6 +1545,7 @@ namespace BrawlTCG.UnityApp
             string damage;
             string damageSub = "DMG";
             if (attack.OneHitKO) { damage = "KO"; damageSub = ""; }
+            else if (attack.HealBonus != null) { damage = "+" + attack.HealAmount(legend); damageSub = "HEAL"; }
             else if (attack.Kind != AttackKind.Strike) { damage = "—"; damageSub = attack.Kind.ToString().ToUpperInvariant(); }
             else
             {
@@ -1959,6 +1984,7 @@ namespace BrawlTCG.UnityApp
             Player loser = winner != null ? _game.GetOpponent(winner) : null;
             bool iWon = !_hotSeat && winner != null && winner.Index == _localIndex;
             StarterDecks.Starter unlocked = UnlockBotDeck(iWon); // saved now, even if the player quits during the animation
+            bool beatAll = unlocked != null && Collection.AllBotDecksUnlocked; // this win completed the collection
             // Let the final blow and the K.O. play out before the result appears.
             GameOverFx(winner, loser, 0.5f);
             string title = _hotSeat || InShowcase ? $"{winner?.Name.ToUpperInvariant()} WINS" : iWon ? "VICTORY" : "DEFEAT";
@@ -1984,7 +2010,8 @@ namespace BrawlTCG.UnityApp
                 // First the victory with one way on, then the reveal on its own screen, then the result again.
                 var dim = ShowOverlay(0.75f);
                 var box = Dialog(dim, title, message, "MATCH OVER");
-                Theme.Cta(box, "SEE YOUR NEW DECK", 190, 296, 420, 76, () => ShowDeckUnlocked(unlocked, ShowResult), 28);
+                Theme.Cta(box, "SEE YOUR NEW DECK", 190, 296, 420, 76,
+                    () => ShowDeckUnlocked(unlocked, beatAll ? () => ShowAllBotDecksBeaten(ShowResult) : (Action)ShowResult), 28);
             });
             Refresh();
         }

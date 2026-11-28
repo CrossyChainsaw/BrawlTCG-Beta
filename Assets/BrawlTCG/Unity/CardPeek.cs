@@ -22,6 +22,7 @@ namespace BrawlTCG.UnityApp
             [AttackCatalogue.PlagueKnight_GrabHealingPotion] = new[] { 501 },
             [AttackCatalogue.Kaya_CraftSnowball] = new[] { 502 },
             [AttackCatalogue.Kaya_BuildASnowman] = new[] { 7000 },
+            [AttackCatalogue.Stalker_SummonOwlSpirit] = new[] { 7003 },
             [AttackCatalogue.AstroCommander_Silence] = new[] { EffectCatalogue.SilentGalaxyId },
         };
 

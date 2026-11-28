@@ -870,7 +870,7 @@ namespace BrawlTCG.Core
                 sb.Append($"P{p.Index}:{p.Health}/{p.MaxHealth} e{p.Essence} pe{p.PlayedEssenceCardThisTurn} d{string.Join(".", p.Deck.Select(c => c.Id))} ");
                 sb.Append($"h{string.Join(".", p.Hand.Select(c => c.Id))} x{string.Join(".", p.DiscardPile.Select(c => c.Id))} es{p.EssenceField.Count} f[");
                 foreach (LegendCard l in p.PlayingField)
-                    sb.Append($"{l.Id}:{l.CurrentHP}/{l.BaseHealth}:{l.Power}:{l.IsStunned}{l.IsBurned}{l.CanAttack}{l.AttackedThisTurn}{l.ReefSavedMaxHP}:{string.Join(".", l.StackedCards.Select(c => c.Id))} ");
+                    sb.Append($"{l.Id}:{l.CurrentHP}/{l.BaseHealth}:{l.Power}:{l.IsStunned}{l.IsBurned}{l.CanAttack}{l.AttackedThisTurn}{l.ReefSavedMaxHP}a{l.Armor}:{string.Join(".", l.StackedCards.Select(c => c.Id))} ");
                 sb.Append("];");
             }
             return sb.ToString();

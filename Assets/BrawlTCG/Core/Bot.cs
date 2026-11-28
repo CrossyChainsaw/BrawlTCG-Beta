@@ -321,6 +321,7 @@ namespace BrawlTCG.Core
         {
             double v = 4; // being on the field (blocks direct hits, uses a slot)
             v += Math.Max(0, l.CurrentHP) * 0.55 + Math.Max(0, l.BaseHealth - l.CurrentHP) * 0.05;
+            v += l.Armor * 2.5; // each point soaks a whole hit
             v += Potential(game, l) * 1.1;
             v += l.StackedWeapons.Count() * 0.4;
             if (l.IsBurned) v -= 1.5;

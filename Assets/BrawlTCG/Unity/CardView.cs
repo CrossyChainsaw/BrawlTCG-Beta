@@ -274,6 +274,7 @@ namespace BrawlTCG.UnityApp
             // Burned: a flame badge in the badge row, left of the ability badges.
             if (card is LegendCard legend && legend.IsBurned) TriggerIcons.PaintBurned(face, card);
             if (card is LegendCard wanted && Game.IsWanted(wanted)) TriggerIcons.PaintWanted(face, card); // #47
+            if (card is LegendCard armored) TriggerIcons.PaintArmor(face, armored);
         }
 
         static void PaintName(RectTransform face, Card card)
@@ -296,7 +297,7 @@ namespace BrawlTCG.UnityApp
             var shine = UI.Panel(fill.transform, Color.white, 0, 0, 54, 27, "Shine");
             shine.sprite = Theme.Gradient(false, 0f, 0.35f);
             shine.raycastTarget = false;
-            var t = Theme.Label(ring.transform, cost.ToString(), 36, Color.white, 0, 0, 64, 64, TextAnchor.MiddleCenter, display: true);
+            var t = Theme.Label(ring.transform, cost.ToString(), cost >= 10 ? 30 : 36, Color.white, 0, 0, 64, 64, TextAnchor.MiddleCenter, display: true); // two digits: a bit smaller
             Theme.AddShadow(t, 2, 0.8f);
         }
 

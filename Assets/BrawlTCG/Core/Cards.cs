@@ -197,12 +197,23 @@ namespace BrawlTCG.Core
 
         readonly int _baseHealth;
         readonly int _basePower;
+        readonly int _baseArmor;
         readonly Attack[] _attacks;
 
         /// <summary>The power printed on the card (before buffs / debuffs).</summary>
         public int PrintedPower => _basePower;
         /// <summary>The health printed on the card (before buffs / debuffs).</summary>
         public int PrintedHealth => _baseHealth;
+        /// <summary>The armor printed on the card.</summary>
+        public int PrintedArmor => _baseArmor;
+
+        /// <summary>
+        /// Armor: each point blocks one whole hit from an attack or a damage battle card (Snowball, Bouncy Bomb, Orb),
+        /// however much damage it deals (a one-hit K.O. too).
+        /// A blocked hit uses up 1 armor and deals no damage, and a stun that comes with the hit is blocked too.
+        /// With no armor left, hits damage the legend normally. Other damage (burn, stages, eliminations) ignores armor.
+        /// </summary>
+        public int Armor { get; internal set; }
 
         public int BaseHealth { get; internal set; }
         public int CurrentHP { get; internal set; }
@@ -249,17 +260,18 @@ namespace BrawlTCG.Core
         public string BurnedBy { get; private set; }
 
         public override CardType Type => CardType.Legend;
-        public override string Description => $"{_baseHealth}hp  {_basePower}att  {WeaponText()}";
+        public override string Description => $"{_baseHealth}hp  {_basePower}att  " + (_baseArmor > 0 ? $"{_baseArmor}armor  " : "") + WeaponText();
 
         public LegendCard(int id, string name, int cost, Element element, string art,
             int power, int health, Weapon primaryWeapon, Weapon? secondaryWeapon,
             Attack[] attacks = null,
             Effect startTurnEffect = null, Effect whenPlayedEffect = null,
-            Effect whenDiscardedEffect = null, Effect whileInPlayEffect = null)
+            Effect whenDiscardedEffect = null, Effect whileInPlayEffect = null, int armor = 0)
             : base(id, name, cost, element, art, startTurnEffect, whenPlayedEffect, whenDiscardedEffect, whileInPlayEffect)
         {
             _basePower = power;
             _baseHealth = health;
+            _baseArmor = Math.Max(0, armor);
             PrimaryWeapon = primaryWeapon;
             SecondaryWeapon = secondaryWeapon == primaryWeapon ? null : secondaryWeapon; // "Sword / Sword" is just a Sword legend
             _attacks = (attacks ?? Array.Empty<Attack>()).Where(a => a != null).ToArray();
@@ -271,6 +283,7 @@ namespace BrawlTCG.Core
             BaseHealth = _baseHealth;
             CurrentHP = _baseHealth;
             Power = _basePower;
+            Armor = _baseArmor;
             StackedCards = new List<Card>();
             IsStunned = false;
             IsBurned = false;
@@ -334,6 +347,29 @@ namespace BrawlTCG.Core
         {
             if (damage <= 0) return;
             CurrentHP = (int)Math.Max(int.MinValue / 2, (long)CurrentHP - damage);
+        }
+
+        /// <summary>
+        /// A hit from an attack. Armor blocks it whole (any amount of damage) and loses 1; without armor it is normal damage.
+        /// Returns true when armor blocked it. A hit that deals no damage doesn't use up armor.
+        /// </summary>
+        public bool TakeHit(int damage)
+        {
+            if (damage <= 0) return false;
+            if (Armor > 0)
+            {
+                Armor--;
+                return true;
+            }
+            LoseHealth(damage);
+            return false;
+        }
+
+        /// <summary>Gives the legend more armor (each point blocks one more hit).</summary>
+        public void GainArmor(int amount)
+        {
+            if (amount <= 0) return;
+            Armor = (int)Math.Min(int.MaxValue / 2, (long)Armor + amount);
         }
 
         /// <summary>Mako's Reef comes into play (or this legend arrives while it is in play): max HP becomes 1 (so HP is 1 too),

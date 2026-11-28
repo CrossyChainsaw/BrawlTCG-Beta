@@ -7,24 +7,32 @@ namespace BrawlTCG.Core
         /// <summary>Status attacks use this modifier so they never deal damage and never hit the player.</summary>
         const int Status = -1000;
 
-        public static void DefaultAttack(LegendCard attacker, object target, Attack attack, bool burn = false)
+        /// <summary>Deals the attack's damage to the target. Returns true when the target's armor blocked the hit.</summary>
+        public static bool DefaultAttack(LegendCard attacker, object target, Attack attack, bool burn = false)
         {
             int damage = Attack.CalculateDamage(attacker, attack);
             if (target is LegendCard legend)
             {
-                legend.LoseHealth(damage);
+                bool blocked = legend.TakeHit(damage); // armor can block it
                 if (burn) legend.SetBurn(true);
+                return blocked;
             }
-            else if (target is Player player)
-            {
+            if (target is Player player)
                 player.LoseHealth(damage);
-            }
+            return false;
+        }
+
+        /// <summary>A hit that also stuns (Freeze, Snow Arrow). When armor blocks the hit, the stun is blocked too.</summary>
+        static void HitAndStun(LegendCard attacker, object target, Attack attack)
+        {
+            if (!DefaultAttack(attacker, target, attack))
+                EffectCatalogue.StunLegendCard(target);
         }
 
         static void OneHitKO(object target)
         {
             if (target is LegendCard legend)
-                legend.LoseHealth(Math.Max(1, legend.CurrentHP));
+                legend.TakeHit(Math.Max(1, legend.CurrentHP)); // armor blocks a one-hit K.O. like any other hit
         }
 
         static void ModifyStat(object target, Stat stat, int amount)
@@ -73,11 +81,7 @@ namespace BrawlTCG.Core
             (a, t, atk, g) => EffectCatalogue.StunLegendCard(t),
             kind: AttackKind.Hex);
         public static readonly Attack Any_Freeze = new Attack("Freeze", 0, Weapon.Any, 1,
-            (a, t, atk, g) =>
-            {
-                DefaultAttack(a, t, atk);
-                EffectCatalogue.StunLegendCard(t);
-            }, effectText: "STUNS TARGET");
+            (a, t, atk, g) => HitAndStun(a, t, atk), effectText: "STUNS TARGET");
 
         // ───────────── Insta effects ─────────────
         public static readonly Attack Any_BurnForThreeCard = new Attack("Draw Three Cards", Status, Weapon.Any, 1,
@@ -152,18 +156,34 @@ namespace BrawlTCG.Core
             {
                 DefaultAttack(a, t, atk);
                 SelfDestruct(a);
-            });
+            }, effectText: "ELIMINATES ITSELF");
+        /// <summary>Forest Spirit's heals: heal one of your legends by ATK (+ the attack's heal bonus), then the spirit is gone.</summary>
+        static void HealAndSelfDestruct(LegendCard attacker, object target, Attack attack)
+        {
+            if (target is LegendCard legend) legend.GainHealth(attack.HealAmount(attacker));
+            SelfDestruct(attacker);
+        }
         public static readonly Attack ForestSpirit_Heal = new Attack("Heal", 0, Weapon.Any, 0,
-            (a, t, atk, g) =>
-            {
-                if (t is LegendCard legend) legend.GainHealth(a.Power);
-                SelfDestruct(a);
-            }, friendlyFire: true,
-            kind: AttackKind.Boost);
+            (a, t, atk, g) => HealAndSelfDestruct(a, t, atk), friendlyFire: true,
+            kind: AttackKind.Boost, effectText: "ELIMINATES ITSELF", healBonus: 0);
+        /// <summary>Forest Spirit's bow heal: heals one of your legends by ATK, and the spirit stays.</summary>
+        public static readonly Attack ForestSpirit_HealingArrow = new Attack("Healing Arrow", 0, Weapon.Bow, 1,
+            (a, t, atk, g) => { if (t is LegendCard legend) legend.GainHealth(atk.HealAmount(a)); },
+            friendlyFire: true, kind: AttackKind.Boost, healBonus: 0);
         // Alpine Kaya: both count as her attack for the turn (insta = no target needed).
         public static readonly Attack Kaya_CraftSnowball = new Attack("Craft Snowball", Status, Weapon.Any, 1,
             (a, t, atk, g) => g.GenerateCard(502), instaEffect: true,
             kind: AttackKind.Craft);
+        // ───────────── Owl Spirit / Snow Stalker ─────────────
+        public static readonly Attack Owl_WingAttack = new Attack("Wing Attack", 0, Weapon.Any, 0, Default);
+        public static readonly Attack Owl_IcicleThrow = new Attack("Icicle Throw", 5, Weapon.Katars, 1, Default, weaponOneBurnAmount: 1);
+        public static readonly Attack Stalker_SnowArrow = new Attack("Snow Arrow", -2, Weapon.Bow, 2,
+            (a, t, atk, g) => HitAndStun(a, t, atk), effectText: "STUNS TARGET");
+        public static readonly Attack Stalker_SummonOwlSpirit = new Attack("Summon Owl Spirit", Status, Weapon.Bow, 1,
+            (a, t, atk, g) => g.GenerateAndPlayLegend(7003), instaEffect: true,
+            precondition: (g, legend) => legend.Owner.PlayingField.Count >= Game.MaxLegendsOnField ? $"Already {Game.MaxLegendsOnField} Legends" : null,
+            kind: AttackKind.Summon);
+
         public static readonly Attack Kaya_BuildASnowman = new Attack("Build a Snowman", Status, Weapon.Any, 2,
             (a, t, atk, g) => g.GenerateAndPlayLegend(7000), weaponOneBurnAmount: 1, instaEffect: true,
             precondition: (g, legend) => legend.Owner.PlayingField.Count >= Game.MaxLegendsOnField ? $"Already {Game.MaxLegendsOnField} Legends" : null,

@@ -106,7 +106,31 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Effects on a legend (detail panel): small inline icons ─────────────
 
-        public enum EffectIcon { NoStrikes, Stunned, Burned, AttackUp, AttackDown, HealthUp, HealthDown, Attacked, Wanted }
+        public enum EffectIcon { NoStrikes, Stunned, Burned, AttackUp, AttackDown, HealthUp, HealthDown, Attacked, Wanted, Armor }
+
+        /// <summary>Steel blue, for armor.</summary>
+        public static readonly Color ArmorColor = new Color32(150, 190, 235, 255);
+
+        /// <summary>Armor on a legend: a steel shield with the armor count on it, at the bottom-left corner of the art.</summary>
+        public static void PaintArmor(RectTransform face, LegendCard legend)
+        {
+            if (legend.Armor <= 0) return;
+            const float s = 50, x = 20, y = 268 - s - 4; // the art window ends at y = 268
+            var holder = UI.Place(UI.Rect("Armor", face), x, y, s, s);
+            var group = holder.gameObject.AddComponent<CanvasGroup>();
+            group.blocksRaycasts = false;
+            group.interactable = false;
+            var rim = UI.Panel(holder, ArmorColor, 0, 0, s, s, "Rim");
+            rim.sprite = Shield;
+            rim.preserveAspect = true;
+            rim.raycastTarget = false;
+            var fill = UI.Panel(holder, new Color(0.08f, 0.11f, 0.22f, 0.95f), 5, 5, s - 10, s - 10, "Fill");
+            fill.sprite = Shield;
+            fill.preserveAspect = true;
+            fill.raycastTarget = false;
+            var n = Theme.Label(holder, legend.Armor.ToString(), 26, Color.white, 0, 2, s, s - 8, TextAnchor.MiddleCenter, display: true);
+            Theme.AddOutline(n, 1.5f, 0.6f);
+        }
 
         public static readonly Color BuffColor = new Color32(110, 220, 130, 255);
         public static readonly Color DebuffColor = new Color32(255, 84, 84, 255);
@@ -127,6 +151,7 @@ namespace BrawlTCG.UnityApp
                 case EffectIcon.HealthUp: c = BuffColor; s = Heart; break;
                 case EffectIcon.HealthDown: c = DebuffColor; s = Heart; break;
                 case EffectIcon.Wanted: c = WantedColor; s = WantedW; pad = 0.17f; break;
+                case EffectIcon.Armor: c = ArmorColor; s = Shield; pad = 0.2f; break;
                 default: c = SpentColor; s = FullSword; pad = 0.18f; break;
             }
             var holder = MiniDisc(parent, "Icon " + kind, c, x, y, size);
@@ -297,7 +322,17 @@ namespace BrawlTCG.UnityApp
 
         // ───────────── Glyphs, drawn once into small textures ─────────────
 
-        static Sprite _bolt, _infinity, _cycle, _skull, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _stunned, _wantedW;
+        static Sprite _bolt, _infinity, _cycle, _skull, _sword, _slash, _hammer, _fullSword, _heart, _flame, _solidFlame, _stunned, _wantedW, _shield;
+
+        /// <summary>Shield (armor): flat top with rounded shoulders, sides that curve in to a point at the bottom.</summary>
+        static Sprite Shield => _shield ??= Glyph((x, y) =>
+        {
+            float u = Mathf.Abs(x - 0.5f);
+            if (y < 0.08f || y > 0.95f) return false;
+            if (y < 0.45f) return u < 0.42f - (y < 0.16f ? (0.16f - y) * 0.9f : 0); // upper body, shoulders bevelled
+            float t = (y - 0.45f) / 0.5f;                                           // 0 at the middle, 1 at the point
+            return u < 0.42f * Mathf.Sqrt(Mathf.Max(0, 1 - t * t));
+        });
 
         /// <summary>
         /// A wild-west "W": thick down-strokes, thin up-strokes, and the heavy slab serifs of a wanted poster, with a
@@ -319,7 +354,7 @@ namespace BrawlTCG.UnityApp
         // No domain reload on Play: the glyph sprites from the previous run are destroyed, so make them again.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetStatics() =>
-            _bolt = _infinity = _cycle = _skull = _sword = _slash = _hammer = _fullSword = _heart = _flame = _solidFlame = _stunned = null;
+            _bolt = _infinity = _cycle = _skull = _sword = _slash = _hammer = _fullSword = _heart = _flame = _solidFlame = _stunned = _shield = null;
 
         /// <summary>Whole sword, tip top-right (ATK changes).</summary>
         static Sprite FullSword => _fullSword ??= Glyph((x, y) => { Vector2 p = SwordSpace(x, y); return Sword(p.x, p.y); });
