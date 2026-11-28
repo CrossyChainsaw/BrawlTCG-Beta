@@ -485,7 +485,8 @@ namespace BrawlTCG.UnityApp
             if (mentioned != null)
                 for (int m = 0; m < mentioned.Length; m++)
                     MentionThumb(rt, mentioned[m], w - 70 - (m + 1) * tw, 3, AttackMentionScale, y + 3);
-            string damage = attack.OneHitKO ? "KO" : attack.AttackModifier <= -1000 ? "—" : Attack.CalculateBaseDamage(legend, attack).ToString();
+            string damage = attack.OneHitKO ? "KO" : attack.HealBonus != null ? "+" + attack.HealAmount(legend)
+                : attack.AttackModifier <= -1000 ? "—" : Attack.CalculateBaseDamage(legend, attack).ToString();
             Theme.Label(rt, damage, 28, Theme.Gold, w - 70, 0, 60, 54, TextAnchor.MiddleRight, display: true);
         }
 

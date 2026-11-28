@@ -10,9 +10,9 @@ namespace BrawlTCG.Core
     {
         static LegendCard Legend(int id, string name, int cost, Element element, string art, int power, int health,
             Weapon primary, Weapon? secondary, Attack[] attacks, Effect whenPlayed = null, Effect whileInPlay = null,
-            Effect whenEliminated = null)
+            Effect whenEliminated = null, int armor = 0)
             => new LegendCard(id, name, cost, element, art, power, health, primary, secondary, attacks,
-                whenPlayedEffect: whenPlayed, whileInPlayEffect: whileInPlay, whenDiscardedEffect: whenEliminated);
+                whenPlayedEffect: whenPlayed, whileInPlayEffect: whileInPlay, whenDiscardedEffect: whenEliminated, armor: armor);
 
         static Attack[] A(params Attack[] attacks) => attacks;
 
@@ -50,7 +50,7 @@ namespace BrawlTCG.Core
             Legend(1003, "Rayman", 3, Element.Nature, "Rayman", 7, 7, Weapon.Gauntlets, Weapon.Axe, A(AC.Axe_Swing, AC.Gauntlets_Punch, AC.Gauntlets_PowerPunch)),
             Legend(1004, "Kor", 2, Element.Nature, "Kor", 0, 16, Weapon.Gauntlets, Weapon.Hammer, A()),
             Legend(1005, "Yumiko", 4, Element.Nature, "Yumiko", 3, 15, Weapon.Bow, Weapon.Hammer, A(AC.Hammer_Swing, AC.Hammer_Gimp, AC.Yumiko_GrabOrbs)),
-            Legend(1006, "Forest Spirit", 1, Element.Nature, "Forest_Spirit", 4, 1, Weapon.Bow, null, A(AC.ForestSpirit_Explode, AC.ForestSpirit_Heal)),
+            Legend(1006, "Forest Spirit", 1, Element.Nature, "Forest_Spirit", 4, 1, Weapon.Bow, null, A(AC.ForestSpirit_Explode, AC.ForestSpirit_Heal, AC.ForestSpirit_HealingArrow)),
             Legend(1007, "Demon Bride", 3, Element.Nature, "Demon_Bride", 4, 9, Weapon.Sword, Weapon.Spear, A(AC.Sword_Slash, AC.Any_BlowAKiss)),
             Legend(1008, "Faerie Queen", 3, Element.Nature, "RealQueen", 1, 7, Weapon.Spear, Weapon.Greatsword, A(AC.Spear_Stab, AC.Greatsword_Swing), whileInPlay: EC.BoostAllNatureLegendsStats_WhileInPlay),
             // Fire legends
@@ -68,7 +68,7 @@ namespace BrawlTCG.Core
             Legend(3002, "Wu Shang", 4, Element.Cosmic, "Spyrox_WuShang", 7, 13, Weapon.Gauntlets, Weapon.Spear, A(AC.Spear_Stab, AC.Gauntlets_Punch, AC.WuShang_DownSig)),
             Legend(3003, "Aurora Brynn", 5, Element.Cosmic, "AuroraBrynn", 10, 16, Weapon.Axe, Weapon.Spear, A(AC.Axe_Swing, AC.Spear_Stab)),
             Legend(3004, "Astro Commander", 4, Element.Cosmic, "AstralCoreAda", 14, 3, Weapon.Blasters, Weapon.Spear, A(AC.Blaster_Shot, AC.AstroCommander_Silence)),
-            Legend(3005, "Breaker Shang", 2, Element.Cosmic, "Breaker_Shang", 5, 4, Weapon.Gauntlets, Weapon.Spear, A(AC.Spear_Stab, AC.Gauntlets_Punch, AC.Any_CraftCosmicCard)),
+            Legend(3005, "Breaker Shang", 2, Element.Cosmic, "Breaker_Shang", 5, 3, Weapon.Gauntlets, Weapon.Spear, A(AC.Spear_Stab, AC.Gauntlets_Punch, AC.Any_CraftCosmicCard)),
             Legend(3006, "Witch Scarlet", 2, Element.Cosmic, "WitchScarlet", 1, 6, Weapon.Hammer, Weapon.RocketLance, A(AC.Hammer_Swing, AC.Lance_Poke, AC.Any_GenerateAndPlayMatrix)),
             // Magic legends
             Legend(4000, "Arcadia", 3, Element.Magic, "FaerieQueen", 6, 8, Weapon.Spear, Weapon.Greatsword, A(AC.Spear_Stab, AC.Greatsword_Swing, AC.Greatsword_String, AC.Arcadia_PinkRoses)),
@@ -84,7 +84,7 @@ namespace BrawlTCG.Core
             Legend(5004, "Hellshot Hattori", 3, Element.Shadow, "Hellshot_Hattori", 8, 6, Weapon.Sword, Weapon.Blasters, A(AC.Sword_Slash, AC.Blaster_Shot, AC.Blaster_DoubleShot)),
             Legend(5005, "Dullahan Jiro", 3, Element.Shadow, "DullahanJiro", 5, 7, Weapon.Sword, Weapon.Scythe, A(AC.Sword_Slash, AC.Scythe_Slash, AC.Jiro_SpawnAndPlayNinjaSpirit)),
             Legend(5006, "Kitsune Hattori", 6, Element.Shadow, "Kitsune", 15, 13, Weapon.Sword, Weapon.Spear, A(AC.Sword_Slash, AC.Spear_Stab)),
-            Legend(5007, "Final Form Petra", 9, Element.Shadow, "FinalFormPetra", 18, 25, Weapon.Gauntlets, Weapon.Orb, A(AC.Gauntlets_Punch, AC.Orb_Swing), whenEliminated: EC.Fallout),
+            Legend(5007, "Final Form Petra", 10, Element.Shadow, "FinalFormPetra", 18, 25, Weapon.Gauntlets, Weapon.Orb, A(AC.Gauntlets_Punch, AC.Orb_Swing), whenEliminated: EC.Fallout),
             // Wild legends
             Legend(6000, "The Minotaur", 5, Element.Wild, "Teros", 10, 15, Weapon.Axe, Weapon.Hammer, A(AC.Axe_Swing, AC.Hammer_Swing)),
             Legend(6001, "Fox Spirit", 2, Element.Wild, "Fox_Spirit", 1, 6, Weapon.Bow, Weapon.Hammer, A(AC.Hammer_Swing, AC.Yumiko_GrabOrbs)),
@@ -94,6 +94,8 @@ namespace BrawlTCG.Core
             Legend(7000, "Snowman Kor", 4, Element.Arctic, "SnowmanKor", 0, 16, Weapon.Gauntlets, Weapon.Hammer, A(AC.Any_Freeze), whenEliminated: EC.SnowmanKor_Snowball),
             Legend(7001, "Atlantean Ada", 2, Element.Arctic, "Atlantean_Ada", 2, 5, Weapon.Blasters, Weapon.Spear, A(AC.Blaster_Shot, AC.Spear_Stab, AC.Ada_SpawnAndPlayAtlantis)),
             Legend(7002, "Alpine Kaya", 4, Element.Arctic, "AlpineKaya", 2, 16, Weapon.Spear, Weapon.Bow, A(AC.Kaya_CraftSnowball, AC.Kaya_BuildASnowman)),
+            Legend(7003, "Owl Spirit", 2, Element.Arctic, "OwlSpirit", 3, 3, Weapon.Katars, null, A(AC.Owl_WingAttack, AC.Owl_IcicleThrow)),
+            Legend(7004, "Snow Stalker", 5, Element.Arctic, "SnowStalker", 8, 18, Weapon.Spear, Weapon.Bow, A(AC.Spear_Stab, AC.Stalker_SnowArrow, AC.Stalker_SummonOwlSpirit)),
 
             // Weapons
             W2(13000, "Axe of Regrowth", Element.Nature, "Axe_of_Regrowth", Weapon.Axe),
@@ -108,7 +110,7 @@ namespace BrawlTCG.Core
             W(15003, "Splish Splash", Element.Arctic, "Splish_Splash", Weapon.Blasters),
             W(15004, "Hardlight Blasters", Element.Cosmic, "HardlightBlasters", Weapon.Blasters),
             W(16000, "Sakura Strike", Element.Nature, "Sakura_Strike", Weapon.Bow),
-            W(16001, "The North Wind", Element.Arctic, "TheNorthWind", Weapon.Bow),
+            W(16001, "North Wind", Element.Arctic, "TheNorthWind", Weapon.Bow),
             W(26000, "Molten Cannon", Element.Fire, "MoltenCannon", Weapon.Cannon),
             W(17000, "Sleight of Hand", Element.Shadow, "Sleight_of_Hand", Weapon.Gauntlets),
             W(17001, "Rippers", Element.Wild, "MordexGaunts", Weapon.Gauntlets),
@@ -158,7 +160,7 @@ namespace BrawlTCG.Core
             new BattleCard(504, "Orb", 0, "When Played: Deals direct damage 1", Element.Magic, "Orb", true, false, false, EC.BattleCardDirectDamageWhenPlayed, damage: 1),
             new BattleCard(505, "Xull's Fury", 3, "When Played: Boosts legend stats +5 Attack", Element.Fire, "XullsFury", false, true, true, EC.BoostHealthAndPower, powerModifier: 5, healthModifier: 0),
             new BattleCard(506, "Chest", 1, "When Played: Craft 2 random cards", Element.Magic, "CardChest", true, false, true, EC.CardChest, targetRequired: false),
-            new BattleCard(507, "<3", 2, "When Played: Boosts legend stats +5 HP", Element.Magic, "Avatar_Heart", true, false, true, EC.BoostHealthAndPower, powerModifier: 0, healthModifier: 5),
+            new BattleCard(507, "<3", 2, "When Played: Boosts legend stats +7 HP", Element.Magic, "Avatar_Heart", true, false, true, EC.BoostHealthAndPower, powerModifier: 0, healthModifier: 7),
             new BattleCard(508, "Fire Nation", 2, "When Played: Boosts all your fire legend stats +2/+2", Element.Fire, "Avatar_Fire", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 2, healthModifier: 2, targetElements: new[] { Element.Fire }, multiTarget: true),
             new BattleCard(509, "Water Tribe", 2, "When Played: Boosts all your Arctic legend stats +2/+2", Element.Arctic, "Avatar_Water", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 2, healthModifier: 2, targetElements: new[] { Element.Arctic }, multiTarget: true),
             new BattleCard(510, "Krabby Patty", 2, "When Played: Fully heals legend", Element.Arctic, "Avatar_Krabby_Patty", true, false, true, EC.BattleCardHealWhenPlayed, healthModifier: 1000),
@@ -173,7 +175,7 @@ namespace BrawlTCG.Core
             new BattleCard(519, "Promotion I", 5, "When Played: Player Max health goes up by 15", Element.Magic, "Avatar_CollectorsPackI", true, false, false, EC.PromotionI, targetRequired: false),
             new BattleCard(520, "Promotion II", 8, "When Played: Player Max health goes up by 25", Element.Magic, "Avatar_CollectorsPack", true, false, false, EC.PromotionII, targetRequired: false),
             new BattleCard(521, "Adrenaline", 2, "When Played: Legend can attack again", Element.Nature, "Adrenaline", true, false, true, EC.Adrenaline),
-            new BattleCard(522, "Death's Hour", 5, "When Played: Every legend's HP becomes 1", Element.Shadow, "DeathsHour", true, false, false, EC.DeathsHour, targetRequired: false),
+            new BattleCard(522, "Death's Hour", 7, "When Played: Every legend's HP becomes 1", Element.Shadow, "DeathsHour", true, false, false, EC.DeathsHour, targetRequired: false),
             new BattleCard(523, "Cursed Kunai", 3, "When Played: Craft a random Katars legend and a random Katars weapon", Element.Shadow, "CursedKunai", true, false, false, EC.CursedKunai, targetRequired: false),
             new BattleCard(524, "Ymir's Breath", 5, "When Played: Stun all opposing legends", Element.Arctic, "YmirsBreath", true, false, false, EC.YmirsBreath, targetRequired: false),
             new BattleCard(525, "Cody Travis", 5, "When Played: A legend's power becomes 0", Element.Wild, "finger", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.The_Finger),
@@ -181,11 +183,12 @@ namespace BrawlTCG.Core
             new BattleCard(527, "Did Shaw Win Yet?", 3, "When Played: Craft 2x The Rock", Element.Wild, "shaw", true, false, false, EC.DidShawWinYet, targetRequired: false),
             new BattleCard(528, "Tombstone", 6, "When Played: Eliminate an opposing legend", Element.Shadow, "Tombstone", oneTimeUse: true, stackable: false, friendlyFire: false, whenPlayedEffect: EC.Tombstone),
             new BattleCard(529, "A-Oooooo", 6, "When Played: Boosts all your Wild legends +4 Attack", Element.Wild, "AOooooo", true, false, true, EC.BoostHealthAndPowerAllYourLegends, powerModifier: 4, healthModifier: 0, targetElements: new[] { Element.Wild }, multiTarget: true),
-            new BattleCard(530, "Fallout", 7, "When Played: Eliminate every legend", Element.Fire, "Fallout", true, false, false, EC.Fallout, targetRequired: false),
+            new BattleCard(530, "Fallout", 9, "When Played: Eliminate every legend", Element.Fire, "Fallout", true, false, false, EC.Fallout, targetRequired: false),
             new BattleCard(531, "Superfan Brynn", 4, "When Played: Boosts all your Spear and Axe legends +2/+2. Craft a random Spear and a random Axe", Element.Arctic, "Avatar_Superfan_Brynn", true, false, true, EC.SuperfanBrynn, powerModifier: 2, healthModifier: 2, targetRequired: false),
             new BattleCard(532, "Art Class", 3, "When Played: Craft 2 random legends that cost 2 or less", Element.Magic, "ArtClass", true, false, false, EC.ArtClass, targetRequired: false),
             new BattleCard(533, "Afterlife", 3, "When Played: Return a legend of your choice from your discard pile to your hand", Element.Shadow, "Afterlife", true, false, false, EC.Afterlife, picksFromDiscard: true),
             new BattleCard(534, "Beta Cupcake", 3, "When Played: Cures a legend of every status effect (stun and burn)", Element.Magic, "BetaCupcake", true, false, true, EC.BetaCupcake),
+            new BattleCard(536, "Full Armor", 5, "When Played: Gives a legend 2 armor. Each armor blocks one hit from an attack, whatever the damage", Element.Fire, "FullArmor", true, false, true, EC.FullArmor),
             new BattleCard(EC.WantedId, "Wanted", 3, "Play on one of your legends. While a Wanted legend is in play, your opponent can only attack Wanted legends", Element.Wild, "Wanted", false, true, true),
         };
 

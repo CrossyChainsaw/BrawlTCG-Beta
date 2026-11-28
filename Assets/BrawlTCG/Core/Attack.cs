@@ -35,12 +35,16 @@ namespace BrawlTCG.Core
         public string EffectText { get; }
         /// <summary>Damage that ignores the legend's ATK and gets no elemental bonus (Weapon Throw). Null for normal attacks.</summary>
         public int? FixedDamage { get; }
+        /// <summary>Healing attacks: they heal the target by the legend's ATK plus this. Null for attacks that don't heal.</summary>
+        public int? HealBonus { get; }
+        /// <summary>How much this attack heals when <paramref name="attacker"/> uses it (0 if it doesn't heal).</summary>
+        public int HealAmount(LegendCard attacker) => HealBonus == null ? 0 : Math.Max(0, attacker.Power + HealBonus.Value);
 
         public Attack(string name, int attackModifier, Weapon weaponOne, int weaponOneAmount, AttackAction execute,
             int weaponOneBurnAmount = 0, Weapon? weaponTwo = null, int weaponTwoAmount = 0, int weaponTwoBurnAmount = 0,
             bool friendlyFire = false, bool multiHit = false, bool instaEffect = false, bool oneHitKO = false,
             Func<Game, LegendCard, string> precondition = null, AttackKind kind = AttackKind.Strike, string effectText = null,
-            int? fixedDamage = null)
+            int? fixedDamage = null, int? healBonus = null)
         {
             Name = name;
             AttackModifier = attackModifier;
@@ -59,6 +63,7 @@ namespace BrawlTCG.Core
             Kind = kind;
             EffectText = effectText;
             FixedDamage = fixedDamage;
+            HealBonus = healBonus;
         }
 
         public void Execute(LegendCard attacker, object target, Game game)

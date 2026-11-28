@@ -37,7 +37,7 @@ namespace BrawlTCG.UnityApp
             public GameCommand Cmd;
             public int Viewer;
             public Dictionary<Card, Placement> Layout;
-            public readonly Dictionary<LegendCard, (int hp, int power)> Legends = new Dictionary<LegendCard, (int, int)>(RefEq<LegendCard>.Instance);
+            public readonly Dictionary<LegendCard, (int hp, int power, int armor)> Legends = new Dictionary<LegendCard, (int, int, int)>(RefEq<LegendCard>.Instance);
             public readonly int[] Hp = new int[2];
             public readonly int[] EssenceCards = new int[2];
             public LegendCard Attacker, Target;
@@ -81,7 +81,7 @@ namespace BrawlTCG.UnityApp
             {
                 s.Hp[p.Index] = p.Health;
                 s.EssenceCards[p.Index] = p.EssenceField.Count;
-                foreach (LegendCard l in p.PlayingField) s.Legends[l] = (l.CurrentHP, l.Power);
+                foreach (LegendCard l in p.PlayingField) s.Legends[l] = (l.CurrentHP, l.Power, l.Armor);
             }
             if (cmd.PlayerIndex < 0 || cmd.PlayerIndex > 1) return s;
             Player me = _game.Players[cmd.PlayerIndex];
@@ -369,7 +369,7 @@ namespace BrawlTCG.UnityApp
             }
 
             // ── Legends: damage, healing, buffs, K.O.s ──
-            foreach (KeyValuePair<LegendCard, (int hp, int power)> kv in s.Legends)
+            foreach (KeyValuePair<LegendCard, (int hp, int power, int armor)> kv in s.Legends)
             {
                 LegendCard l = kv.Key;
                 bool alive = l.OnPlayingField;
@@ -398,6 +398,23 @@ namespace BrawlTCG.UnityApp
 
                 int dHp = l.CurrentHP - kv.Value.hp;
                 int dPow = l.Power - kv.Value.power;
+                int dArmor = l.Armor - kv.Value.armor;
+                if (dArmor < 0)
+                {
+                    // Armor took the hit: a steel flash and "ARMOR" instead of a damage number.
+                    Color steel = TriggerIcons.ArmorColor;
+                    if (!mainHit) Sound(s.Attack != null ? WeaponCue(s.Attacker, s.Attack) : "hit", impact, 0.8f);
+                    CardHit.Apply(view, steel, 0.6f, impact);
+                    Fx.Sparks(_fx, c, steel, 18, 420, impact);
+                    Fx.Float(_top, "ARMOR", c + new Vector2(0, -10), steel, 46, impact + 0.04f, 70);
+                }
+                else if (dArmor > 0)
+                {
+                    Color steel = TriggerIcons.ArmorColor;
+                    Fx.Glow(_fx, c, new Color(steel.r, steel.g, steel.b, 0.6f), 300, impact + 0.3f, 0.5f);
+                    Fx.Float(_top, "+" + dArmor + " ARMOR", c + new Vector2(0, 56), steel, 38, impact + 0.3f, 70);
+                    Sound("buff", impact + 0.3f);
+                }
                 if (dHp < 0)
                 {
                     if (!mainHit) { Fx.Play(_fx, hitClip, c, 280, impact); Shake(0.22f, impact); }
